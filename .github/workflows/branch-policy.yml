@@ -52,12 +52,17 @@ jobs:
             --jq '.[] | [.number, .title] | @tsv')"
 
           if [[ -z "$existing_prs" ]]; then
-            gh pr create \
-              --repo "$GH_REPO" \
-              --head "$head_branch" \
-              --base "$base_branch" \
-              --title "$expected_title" \
-              --body "Pull Request criado automaticamente pelo fluxo de branches."
+            if ! gh pr create \
+                --repo "$GH_REPO" \
+                --head "$head_branch" \
+                --base "$base_branch" \
+                --title "$expected_title" \
+                --body "Pull Request criado automaticamente pelo fluxo de branches."; then
+              echo "ERRO: o GitHub Actions não pôde criar o Pull Request automaticamente." >&2
+              echo "Ative em Settings > Actions > General a opção 'Allow GitHub Actions to create and approve pull requests'." >&2
+              echo "Alternativa: configure um secret de automação com permissão para Pull Requests e use-o como GH_TOKEN." >&2
+              exit 1
+            fi
             exit 0
           fi
 
