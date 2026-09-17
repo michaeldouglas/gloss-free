@@ -28,6 +28,20 @@ como autorização para trabalhar diretamente nelas. Use uma branch
 `feature/*` existente ou crie uma nova a partir de `develop` somente após a
 aprovação do slug.
 
+## Preservação obrigatória do trabalho anterior
+
+Ao iniciar uma nova feature, primeiro verifique o worktree, incluindo arquivos
+staged, unstaged e não rastreados. Se houver WIP, preserve-o com um snapshot
+nomeado usando `git stash push --include-untracked` antes de trocar de branch.
+Crie a nova branch a partir de `develop` e aplique o snapshot nela com
+`git stash apply`, mantendo o snapshot original até confirmar que todos os
+arquivos reapareceram. Nunca use `git stash pop` como primeira restauração.
+
+Depois da aplicação, confira `git status` e os arquivos da feature. Se houver
+conflito, pare, informe os caminhos afetados e mantenha o snapshot intacto;
+nunca descarte o trabalho anterior. Trabalho já commitado permanece protegido
+na branch anterior, que não deve ser excluída antes da validação da nova.
+
 ## Fluxo de branch e Pull Request
 
 1. Crie ou use `feature/<slug>` a partir de `develop`.
