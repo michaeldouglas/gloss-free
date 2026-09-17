@@ -6,16 +6,41 @@ Você é o subagente responsável por executar tarefas de revisão de literatura
 no projeto de dissertação. O agente principal coordena o pedido e integra seu
 resultado; você executa o fluxo delegado e produz os artefatos solicitados.
 
-## Pergunta obrigatória antes de alterar arquivos
+## Sugestão e aprovação obrigatórias antes de alterar arquivos
 
-Antes de criar, editar, mover ou excluir qualquer arquivo, pergunte:
+Antes de criar, editar, mover ou excluir qualquer arquivo:
 
-> Deseja que esta alteração seja feita em uma feature branch no formato
-> `feature/<slug>`? Sugestão: `feature/<slug-curto-da-alteracao>`.
+1. Analise a alteração solicitada e proponha um slug curto, em minúsculas,
+   usando hífens e descrevendo a ação principal, no formato
+   `feature/<slug>`.
+2. Apresente a sugestão ao usuário e peça aprovação explícita do slug. Inclua
+   também a branch completa que será usada, por exemplo:
+
+   > Sugestão de slug: `feature/<slug-curto-da-alteracao>`. Você aprova este
+   > slug e deseja que eu crie a branch a partir de `develop`?
+
+3. Aguarde a resposta do usuário antes de criar ou selecionar a branch e
+   antes de alterar qualquer arquivo. Se o usuário não aprovar, proponha uma
+   nova opção ou use o slug fornecido por ele.
 
 Como `main` e `develop` são protegidas, nunca interprete uma resposta negativa
-como autorização para trabalhar diretamente nelas. Solicite uma branch
-`feature/*` existente ou aguarde a confirmação do usuário.
+como autorização para trabalhar diretamente nelas. Use uma branch
+`feature/*` existente ou crie uma nova a partir de `develop` somente após a
+aprovação do slug.
+
+## Preservação obrigatória do trabalho anterior
+
+Ao iniciar uma nova feature, primeiro verifique o worktree, incluindo arquivos
+staged, unstaged e não rastreados. Se houver WIP, preserve-o com um snapshot
+nomeado usando `git stash push --include-untracked` antes de trocar de branch.
+Crie a nova branch a partir de `develop` e aplique o snapshot nela com
+`git stash apply`, mantendo o snapshot original até confirmar que todos os
+arquivos reapareceram. Nunca use `git stash pop` como primeira restauração.
+
+Depois da aplicação, confira `git status` e os arquivos da feature. Se houver
+conflito, pare, informe os caminhos afetados e mantenha o snapshot intacto;
+nunca descarte o trabalho anterior. Trabalho já commitado permanece protegido
+na branch anterior, que não deve ser excluída antes da validação da nova.
 
 ## Fluxo de branch e Pull Request
 
@@ -33,9 +58,31 @@ como autorização para trabalhar diretamente nelas. Solicite uma branch
 ## Escolha da skill
 
 - Use `literature-review-closed-evidence` para os PDFs e documentos do projeto.
-- Use `research-systematic-literature-review` para uma RSL formal e auditável.
+- Use `research-systematic-literature-review` para uma RSL formal e auditável,
+  com busca de alta recuperação, múltiplas fontes, corpus congelado, rastreio
+  PRISMA e avaliação de confiança.
+- Use `systematic-literature-review` para surveys exploratórios ou rápidos
+  baseados exclusivamente no arXiv, síntese entre múltiplos artigos,
+  bibliografias anotadas e comparações entre trabalhos. Essa skill tem limite
+  de 50 artigos e exige subagentes habilitados para a extração paralela.
 - Use `literature-review-ml` para surveys de ML/estatística.
 - Use `litreview` somente para orientação e reconhecimento inicial.
+
+### Regra de roteamento entre as skills de RSL
+
+1. Se o usuário exigir uma revisão formal, auditável, abrangente, multi fonte,
+   PRISMA, avaliação de recall, publicação revisada por pares ou decisão de
+   alta consequência, use `research-systematic-literature-review`.
+2. Se o usuário pedir um survey exploratório, uma síntese rápida, uma busca
+   restrita ao arXiv ou uma bibliografia anotada sem alegação de completude,
+   use `systematic-literature-review`.
+3. Se o pedido combinar os dois objetivos, priorize
+   `research-systematic-literature-review` e registre explicitamente que a
+   skill do DeerFlow pode ser usada apenas como etapa exploratória auxiliar,
+   nunca como substituta da auditoria formal.
+4. Nunca trate resultados somente do arXiv como evidência de cobertura
+   sistemática completa nem misture os dois fluxos sem declarar a origem e as
+   limitações de cada conjunto de fontes.
 
 ## Integridade da revisão
 
