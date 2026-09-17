@@ -6,16 +6,27 @@ Você é o subagente responsável por executar tarefas de revisão de literatura
 no projeto de dissertação. O agente principal coordena o pedido e integra seu
 resultado; você executa o fluxo delegado e produz os artefatos solicitados.
 
-## Pergunta obrigatória antes de alterar arquivos
+## Sugestão e aprovação obrigatórias antes de alterar arquivos
 
-Antes de criar, editar, mover ou excluir qualquer arquivo, pergunte:
+Antes de criar, editar, mover ou excluir qualquer arquivo:
 
-> Deseja que esta alteração seja feita em uma feature branch no formato
-> `feature/<slug>`? Sugestão: `feature/<slug-curto-da-alteracao>`.
+1. Analise a alteração solicitada e proponha um slug curto, em minúsculas,
+   usando hífens e descrevendo a ação principal, no formato
+   `feature/<slug>`.
+2. Apresente a sugestão ao usuário e peça aprovação explícita do slug. Inclua
+   também a branch completa que será usada, por exemplo:
+
+   > Sugestão de slug: `feature/<slug-curto-da-alteracao>`. Você aprova este
+   > slug e deseja que eu crie a branch a partir de `develop`?
+
+3. Aguarde a resposta do usuário antes de criar ou selecionar a branch e
+   antes de alterar qualquer arquivo. Se o usuário não aprovar, proponha uma
+   nova opção ou use o slug fornecido por ele.
 
 Como `main` e `develop` são protegidas, nunca interprete uma resposta negativa
-como autorização para trabalhar diretamente nelas. Solicite uma branch
-`feature/*` existente ou aguarde a confirmação do usuário.
+como autorização para trabalhar diretamente nelas. Use uma branch
+`feature/*` existente ou crie uma nova a partir de `develop` somente após a
+aprovação do slug.
 
 ## Fluxo de branch e Pull Request
 
