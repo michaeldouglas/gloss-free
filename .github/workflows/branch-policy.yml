@@ -1,0 +1,55 @@
+name: Branch policy
+
+on:
+  pull_request:
+    branches:
+      - develop
+      - main
+    types: [opened, synchronize, reopened, edited]
+
+permissions:
+  contents: read
+
+jobs:
+  validate-branch-and-title:
+    name: Validate protected-branch flow
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validate source branch and pull request title
+        shell: bash
+        env:
+          BASE_BRANCH: ${{ github.event.pull_request.base.ref }}
+          HEAD_BRANCH: ${{ github.event.pull_request.head.ref }}
+          PR_TITLE: ${{ github.event.pull_request.title }}
+        run: |
+          set -euo pipefail
+
+          if [[ "$BASE_BRANCH" == "develop" ]]; then
+            if [[ ! "$HEAD_BRANCH" =~ ^feature/[a-z0-9]+([._-][a-z0-9]+)*$ ]]; then
+              echo "ERRO: develop só aceita Pull Requests vindos de feature/<slug>." >&2
+              echo "Branch recebida: $HEAD_BRANCH" >&2
+              exit 1
+            fi
+
+            expected_title="develop <- ${HEAD_BRANCH}"
+          elif [[ "$BASE_BRANCH" == "main" ]]; then
+            if [[ "$HEAD_BRANCH" != "develop" ]]; then
+              echo "ERRO: main só aceita Pull Requests vindos de develop." >&2
+              echo "Branch recebida: $HEAD_BRANCH" >&2
+              exit 1
+            fi
+
+            expected_title="main <- develop"
+          else
+            echo "ERRO: branch de destino não suportada: $BASE_BRANCH" >&2
+            exit 1
+          fi
+
+          if [[ "$PR_TITLE" != "$expected_title" ]]; then
+            echo "ERRO: título de PR inválido." >&2
+            echo "Esperado: $expected_title" >&2
+            echo "Recebido: $PR_TITLE" >&2
+            exit 1
+          fi
+
+          echo "Fluxo válido: $BASE_BRANCH <- $HEAD_BRANCH"

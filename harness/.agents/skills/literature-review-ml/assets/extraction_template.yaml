@@ -1,0 +1,81 @@
+# Per-paper extraction template for literature-review-ml
+# Copy this file to extracted/{paper_slug}.yaml and fill in.
+# Use [uncertain] for fields you cannot confirm; list them in `uncertain` at the bottom.
+
+# ===== Bibliographic =====
+title: ""                          # Full paper title
+authors: []                        # ["Last, F. M.", ...]
+year: 0
+arxiv_id: ""                       # e.g., "2010.08895" (no version suffix)
+arxiv_version: ""                  # e.g., "v3"
+doi: ""                            # e.g., "10.1038/s42256-021-00302-5"
+venue: ""                          # full venue name
+venue_type: ""                     # conference | journal | workshop | preprint | techreport | thesis
+venue_tier: 0                      # 1, 2, 3 (per references/ml_venues.md)
+pdf_url: ""
+
+# ===== Bibliometrics =====
+citation_count: 0                  # raw (Semantic Scholar)
+influential_citations: 0           # Semantic Scholar metric
+retrieved_date: ""                 # YYYY-MM-DD when above were checked
+
+# ===== Method =====
+problem_setting: ""                # e.g., "operator learning for parametric PDEs"
+method_family: ""                  # e.g., "neural operator (spectral)"
+method_name: ""                    # e.g., "FNO"
+architecture_summary: ""           # 1–3 sentences
+key_contribution: ""               # main novelty in one paragraph
+
+# ===== Empirical evaluation =====
+datasets:                          # list of datasets used
+  - ""
+metrics:                           # list of metrics reported
+  - ""
+baselines:                         # list of baseline methods compared against
+  - ""
+sota_claim: false                  # does the paper claim SOTA?
+benchmark_results:                 # extract headline numbers when reported
+  - dataset: ""
+    metric: ""
+    value: 0.0
+    note: ""                       # e.g., "averaged over 5 seeds"
+
+# ===== Reproducibility (CRITICAL — do not skip) =====
+code_url: ""                       # github / project page; "" if none
+code_license: ""                   # MIT, Apache-2.0, etc.; "" if not stated
+pretrained_checkpoint: false       # are trained weights released?
+hyperparameters_reported: ""       # full | partial | missing
+n_seeds: 0                         # number of random seeds reported
+error_bars_reported: false
+hardware_reported: ""              # e.g., "1xV100", "8xA100"
+training_time_reported: false
+statistical_test_reported: false   # significance tests on differences?
+fair_comparison: ""                # yes | partial | no | unclear
+
+# ===== Theoretical contributions =====
+theoretical_contributions: ""      # "" if purely empirical
+proof_provided: false
+key_theorems: []                   # short list of named theorems
+
+# ===== Notes =====
+limitations_noted: ""              # limitations the authors acknowledge
+follow_up_work: []                 # arxiv_ids of relevant follow-ups
+prior_work_extended: []            # arxiv_ids of papers this extends
+related_to_review_theme: ""        # which theme of our review this paper fits
+
+# ===== Quality assessment (0–3 each; total /18) =====
+reproducibility_score:
+  code: 0                          # 3=public+clean, 2=public+partial, 1=on-request, 0=none
+  hyperparameters: 0               # 3=full+ablation, 2=full, 1=partial, 0=missing
+  seeds: 0                         # 3=≥5+CI, 2=3-5, 1=1-2, 0=none
+  compute: 0                       # 3=hw+time+cost, 2=hw+time, 1=hw, 0=none
+  stats: 0                         # 3=sig+effect, 2=effect, 1=mean, 0=none
+  fair_comparison: 0               # 3=same splits+protocol, 2=same data, 1=different, 0=unclear
+
+# ===== Inclusion decision =====
+decision: ""                       # include | exclude | maybe
+decision_reason: ""
+
+# ===== Uncertainty =====
+# List any field names above where you used [uncertain]
+uncertain: []
