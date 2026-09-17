@@ -1,6 +1,10 @@
 name: Branch policy
 
 on:
+  push:
+    branches:
+      - 'feature/**'
+      - develop
   pull_request:
     branches:
       - develop
@@ -9,18 +13,119 @@ on:
 
 permissions:
   contents: read
+  pull-requests: write
 
 jobs:
-  validate-branch-and-title:
-    name: Validate protected-branch flow
+  ensure-pull-request:
+    name: Create or repair Pull Request
+    if: github.event_name == 'push'
     runs-on: ubuntu-latest
     steps:
-      - name: Validate source branch and pull request title
+      - name: Ensure the expected Pull Request exists
         shell: bash
         env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          PUSH_BRANCH: ${{ github.ref_name }}
+        run: |
+          set -euo pipefail
+
+          if [[ "$PUSH_BRANCH" == "develop" ]]; then
+            head_branch="develop"
+            base_branch="main"
+            expected_title="main <- develop"
+          elif [[ "$PUSH_BRANCH" == feature/* ]]; then
+            head_branch="$PUSH_BRANCH"
+            base_branch="develop"
+            expected_title="develop <- ${head_branch}"
+          else
+            echo "Nenhum Pull Request automático para: $PUSH_BRANCH"
+            exit 0
+          fi
+
+          existing_prs="$(gh pr list \
+            --repo "$GH_REPO" \
+            --head "$head_branch" \
+            --base "$base_branch" \
+            --state open \
+            --json number,title \
+            --jq '.[] | [.number, .title] | @tsv')"
+
+          if [[ -z "$existing_prs" ]]; then
+            if ! gh pr create \
+                --repo "$GH_REPO" \
+                --head "$head_branch" \
+                --base "$base_branch" \
+                --title "$expected_title" \
+                --body "Pull Request criado automaticamente pelo fluxo de branches."; then
+              echo "ERRO: o GitHub Actions não pôde criar o Pull Request automaticamente." >&2
+              echo "Ative em Settings > Actions > General a opção 'Allow GitHub Actions to create and approve pull requests'." >&2
+              echo "Alternativa: configure um secret de automação com permissão para Pull Requests e use-o como GH_TOKEN." >&2
+              exit 1
+            fi
+            exit 0
+          fi
+
+          while IFS=$'\t' read -r pr_number pr_title; do
+            [[ -z "$pr_number" ]] && continue
+            if [[ "$pr_title" != "$expected_title" ]]; then
+              gh pr edit "$pr_number" \
+                --repo "$GH_REPO" \
+                --title "$expected_title"
+            fi
+          done <<< "$existing_prs"
+
+          echo "Pull Request já existente: $existing_prs"
+
+  normalize-pull-request-title:
+    name: Normalize Pull Request title
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repair a title that can be determined from the flow
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
           BASE_BRANCH: ${{ github.event.pull_request.base.ref }}
           HEAD_BRANCH: ${{ github.event.pull_request.head.ref }}
-          PR_TITLE: ${{ github.event.pull_request.title }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          set -euo pipefail
+
+          if [[ "$BASE_BRANCH" == "develop" && "$HEAD_BRANCH" =~ ^feature/[a-z0-9]+([._-][a-z0-9]+)*$ ]]; then
+            expected_title="develop <- ${HEAD_BRANCH}"
+          elif [[ "$BASE_BRANCH" == "main" && "$HEAD_BRANCH" == "develop" ]]; then
+            expected_title="main <- develop"
+          else
+            echo "Fluxo inválido; o job de validação informará o erro."
+            exit 0
+          fi
+
+          current_title="$(gh pr view "$PR_NUMBER" --repo "$GH_REPO" --json title --jq '.title')"
+          if [[ "$current_title" != "$expected_title" ]]; then
+            gh pr edit "$PR_NUMBER" \
+              --repo "$GH_REPO" \
+              --title "$expected_title"
+            echo "Título corrigido para: $expected_title"
+          else
+            echo "Título já está correto: $expected_title"
+          fi
+
+  validate-branch-and-title:
+    name: Validate protected-branch flow
+    if: github.event_name == 'pull_request'
+    needs: normalize-pull-request-title
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validate source branch and Pull Request title
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          BASE_BRANCH: ${{ github.event.pull_request.base.ref }}
+          HEAD_BRANCH: ${{ github.event.pull_request.head.ref }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
         run: |
           set -euo pipefail
 
@@ -45,10 +150,11 @@ jobs:
             exit 1
           fi
 
-          if [[ "$PR_TITLE" != "$expected_title" ]]; then
+          pr_title="$(gh pr view "$PR_NUMBER" --repo "$GH_REPO" --json title --jq '.title')"
+          if [[ "$pr_title" != "$expected_title" ]]; then
             echo "ERRO: título de PR inválido." >&2
             echo "Esperado: $expected_title" >&2
-            echo "Recebido: $PR_TITLE" >&2
+            echo "Recebido: $pr_title" >&2
             exit 1
           fi
 

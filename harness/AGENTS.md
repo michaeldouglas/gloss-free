@@ -60,3 +60,22 @@ Regras obrigatórias:
   para `main`, com o título `main <- develop`.
 - O subagente deve informar no resumo o que foi alterado, a branch utilizada,
   o commit e o Pull Request correspondente.
+
+## Preservação de trabalho ao iniciar uma nova feature
+
+- Antes de trocar de branch ou iniciar uma nova feature, verifique o estado do
+  worktree, incluindo arquivos staged, unstaged e não rastreados.
+- Se houver trabalho em andamento, crie um snapshot recuperável e nomeado com
+  `git stash push --include-untracked` antes da troca de branch. Nunca use
+  `git stash pop` como primeira restauração: aplique o snapshot mantendo-o
+  disponível até a confirmação de que o conteúdo foi preservado.
+- Crie a nova branch a partir de `develop` e restaure o snapshot nela quando o
+  objetivo for continuar o trabalho anterior. Confirme no status e por
+  inspeção dos arquivos que o WIP reapareceu.
+- Se a restauração produzir conflito, pare e informe os arquivos afetados;
+  nunca descarte o snapshot nem resolva o conflito destrutivamente sem
+  autorização.
+- Trabalho já commitado continua preservado na branch anterior; não exclua a
+  branch anterior enquanto a nova ainda não tiver sido validada.
+- Arquivos ignorados (por exemplo, segredos locais) devem ser identificados e
+  relatados sem serem enviados para o remoto ou adicionados ao commit.
