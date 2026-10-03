@@ -7,11 +7,12 @@ requires-python = ">=3.10"
 dependencies = [
     "huggingface_hub>=0.27",
     "python-dotenv>=1.0",
-    "tqdm>=4.66",
+    "rich>=13.7",
+    "typer>=0.12",
 ]
 
 [project.scripts]
-libras-translation = "libras_translation.cli:main"
+libras = "libras_translation.cli:main"
 
 [build-system]
 requires = ["setuptools>=68"]

@@ -26,27 +26,32 @@ Defina `HF_TOKEN` no `.env` com um token Hugging Face de leitura. O arquivo `.en
 
 ## Aquisição de vídeos
 
-O código e os testes de aquisição ficam em `dataset/`; os dados e manifestos ficam em `data/` na raiz do projeto. Ao iniciar sem argumentos em um terminal interativo, a CLI pergunta dataset, ação (baixar ou apenas listar), limite opcional de vídeos, diretório de destino, concorrência e nível de logs. Os padrões são download, sem limite, destino `data/raw/`, quatro downloads simultâneos e logs resumidos. O destino mantém a raiz de cada repositório em `data/raw/<dataset>/`: vídeos em `videos/` e arquivos auxiliares, como anotações, na raiz. A integração usa a biblioteca oficial `huggingface_hub` (a mesma infraestrutura do comando `hf download`), fixa um commit e mantém manifesto rastreável. Os comandos podem ser executados de qualquer diretório após `uv sync`.
+O código e os testes de aquisição ficam em `dataset/`; os dados e manifestos ficam em `data/` na raiz do projeto. A CLI é composta por Typer e Rich e não abre menus nem solicita respostas: cada operação recebe suas opções pela linha de comando, permitindo execução em scripts e terminais não interativos. O destino mantém a raiz de cada repositório em `data/raw/<dataset>/`: vídeos em `videos/` e arquivos auxiliares, como anotações, na raiz. A integração usa a biblioteca oficial `huggingface_hub` (a mesma infraestrutura do comando `hf download`), fixa um commit e mantém manifesto rastreável. Os comandos podem ser executados de qualquer diretório após `uv sync`.
 
 ```powershell
-# Assistente interativo com todas as opções
-uv run python -m libras_translation
+# Ver comandos e opções
+uv run libras --help
+uv run libras data --help
 
-# Ou selecionar explicitamente e listar vídeos/tamanhos sem baixá-los
-uv run python -m libras_translation --dataset all --list-only
+# Listar metadados/tamanhos, sem baixar (pode selecionar um ou todos)
+uv run libras data list --dataset all
+uv run libras data list --dataset minds-libras-raw --show-files
 
-# Testar com até 2 vídeos por dataset
-uv run python -m libras_translation --dataset all --limit 2 --workers 2
+# Testar download limitado; exige seleção explícita do dataset
+uv run libras data download --dataset minds-libras-raw --limit 2 --workers 2
 
-# Download completo dos dois datasets
-uv run python -m libras_translation --dataset all
+# Download completo de um dataset (use --dataset all para ambos)
+uv run libras data download --dataset v-librasil-raw
+uv run libras data download --dataset all
 
 # Retomar uma aquisição interrompida: repetir o mesmo comando
-uv run python -m libras_translation --dataset all
+uv run libras data download --dataset all
 
 # Selecionar dataset, destino e concorrência
-uv run python -m libras_translation --dataset v-librasil-raw --destination E:\dados\libras --workers 4
+uv run libras data download --dataset v-librasil-raw --destination E:\dados\libras --workers 4
 ```
+
+Os comandos retornam `0` quando a operação termina sem falhas, `1` quando ocorre falha de rede/acesso ou de arquivos e `2` quando há opções inválidas ou obrigatórias ausentes. Para apenas ver a ajuda, use `uv run libras --help` ou `uv run libras data download --help`; invocar sem argumentos mostra a ajuda e não inicia downloads.
 
 Cada manifesto em `data/manifests/` registra o repositório, o commit fixado, a data da aquisição, os caminhos remotos e locais, os tamanhos disponíveis e o estado dos vídeos e arquivos auxiliares. A opção `--limit` limita apenas os vídeos para testes; os arquivos auxiliares de metadados do dataset ainda são baixados. Arquivos completos são reutilizados ao retomar.
 
@@ -69,7 +74,7 @@ app/
 │   ├── raw/                 vídeos originais; ignorados pelo Git
 │   └── manifests/           registros versionáveis da aquisição
 ├── .env.example            modelo do token, sem credenciais
-├── pyproject.toml          dependências, build e comando Python
+├── pyproject.toml          dependências, build e comando `libras`
 └── uv.lock                 versões resolvidas das dependências
 ```
 

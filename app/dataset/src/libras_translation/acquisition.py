@@ -12,8 +12,6 @@ from pathlib import Path, PurePosixPath
 from typing import Callable
 
 from huggingface_hub.errors import HfHubHTTPError, RepositoryNotFoundError
-from tqdm import tqdm
-
 from .config import DATASETS
 from .infrastructure.huggingface_client import HuggingFaceClient, RemoteFile
 

@@ -1,158 +1,192 @@
 from __future__ import annotations
 
-import argparse
 import logging
-import sys
 from pathlib import Path
-from typing import Callable
 
+import typer
 from huggingface_hub.errors import HfHubHTTPError, RepositoryNotFoundError
-from tqdm import tqdm
+from rich.console import Console
+from rich.progress import BarColumn, MofNCompleteColumn, Progress, SpinnerColumn, TextColumn, TimeElapsedColumn
+from rich.table import Table
 
-from .config import DATASETS, PROJECT_ROOT, Settings
 from .acquisition import DatasetAcquisition, format_size
+from .config import DATASETS, PROJECT_ROOT, Settings
 from .infrastructure.huggingface_client import HuggingFaceClient
 
+DATASET_CHOICES = (*DATASETS, "all")
+console = Console()
+error_console = Console(stderr=True)
 
-def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(prog="libras-translation", description="Aquisição reproduzível de vídeos de datasets de Libras.")
-    parser.add_argument("--dataset", choices=[*DATASETS, "all"], help="Dataset a processar (obrigatório ao usar flags; sem argumentos, abre o assistente interativo).")
-    parser.add_argument("--destination", type=Path, help="Diretório pai de destino (padrão: <raiz>/data/raw).")
-    parser.add_argument("--workers", type=int, default=4, help="Downloads simultâneos por dataset (padrão: 4).")
-    parser.add_argument("--list-only", action="store_true", help="Lista arquivos e tamanhos sem baixar.")
-    parser.add_argument("--limit", type=int, help="Limita o número de vídeos por dataset, útil para teste.")
-    parser.add_argument("--verbose", action="store_true", help="Exibe detalhes de tentativas e falhas.")
-    return parser
-
-
-def prompt_options(input_fn: Callable[[str], str] = input) -> dict:
-    """Collect the complete acquisition configuration in an interactive run."""
-    options = list(DATASETS)
-    print("Selecione o dataset:")
-    for index, name in enumerate(options, 1):
-        print(f"  {index}. {name}")
-    print(f"  {len(options) + 1}. ambos")
-    dataset_choice = input_fn("Dataset (número ou nome): ").strip()
-    if dataset_choice in options:
-        selected = [dataset_choice]
-    elif dataset_choice.isdigit() and 1 <= int(dataset_choice) <= len(options):
-        selected = [options[int(dataset_choice) - 1]]
-    elif dataset_choice.isdigit() and int(dataset_choice) == len(options) + 1:
-        selected = options
-    else:
-        raise ValueError("Seleção de dataset inválida.")
-
-    print("Ação:")
-    print("  1. Baixar arquivos")
-    print("  2. Apenas listar vídeos e tamanhos")
-    action_choice = input_fn("Ação [1]: ").strip() or "1"
-    if action_choice not in ("1", "2"):
-        raise ValueError("Ação inválida; escolha 1 ou 2.")
-
-    limit_text = input_fn("Limite de vídeos por dataset (Enter = sem limite): ").strip()
-    limit = None
-    if limit_text:
-        try:
-            limit = int(limit_text)
-        except ValueError as exc:
-            raise ValueError("O limite deve ser um número inteiro positivo.") from exc
-        if limit < 1:
-            raise ValueError("O limite deve ser um número inteiro positivo.")
-
-    destination_text = input_fn("Diretório pai de destino (Enter = data/raw do projeto): ").strip()
-    destination = Path(destination_text).expanduser() if destination_text else None
-
-    workers_text = input_fn("Downloads simultâneos [4]: ").strip() or "4"
-    try:
-        workers = int(workers_text)
-    except ValueError as exc:
-        raise ValueError("A concorrência deve ser um número inteiro positivo.") from exc
-    if workers < 1:
-        raise ValueError("A concorrência deve ser um número inteiro positivo.")
-
-    verbose_text = input_fn("Exibir logs detalhados? [s/N]: ").strip().casefold()
-    verbose = verbose_text in {"s", "sim", "y", "yes"}
-    return {
-        "selected": selected,
-        "list_only": action_choice == "2",
-        "limit": limit,
-        "destination": destination,
-        "workers": workers,
-        "verbose": verbose,
-    }
+app = typer.Typer(
+    name="libras",
+    help="Aquisição reproduzível de datasets de Libras.",
+    no_args_is_help=True,
+    add_completion=False,
+)
+data_app = typer.Typer(help="Listagem e aquisição de dados.", no_args_is_help=True)
+app.add_typer(data_app, name="data")
 
 
-def main(argv: list[str] | None = None) -> int:
-    raw_argv = sys.argv[1:] if argv is None else argv
-    args = build_parser().parse_args(raw_argv)
-    if not raw_argv:
-        if not sys.stdin.isatty():
-            print("Erro: execução interativa exige um terminal; informe as opções pela CLI.", file=sys.stderr)
-            return 2
-        try:
-            interactive = prompt_options()
-        except (EOFError, KeyboardInterrupt):
-            print("\nConfiguração cancelada.", file=sys.stderr)
-            return 2
-        except ValueError as exc:
-            print(f"Erro: {exc}", file=sys.stderr)
-            return 2
-        selected = interactive["selected"]
-        list_only = interactive["list_only"]
-        limit = interactive["limit"]
-        destination = interactive["destination"]
-        workers = interactive["workers"]
-        verbose = interactive["verbose"]
-    else:
-        if args.dataset is None:
-            print("Erro: informe --dataset em execução com opções da CLI.", file=sys.stderr)
-            return 2
-        selected = list(DATASETS) if args.dataset == "all" else [args.dataset]
-        list_only = args.list_only
-        limit = args.limit
-        destination = args.destination
-        workers = args.workers
-        verbose = args.verbose
+def _selected_datasets(dataset: str, *, allow_all: bool = True) -> list[str]:
+    if dataset == "all" and allow_all:
+        return list(DATASETS)
+    if dataset not in DATASETS:
+        valid = ", ".join(DATASET_CHOICES if allow_all else DATASETS)
+        raise typer.BadParameter(f"dataset inválido; escolha entre: {valid}")
+    return [dataset]
 
-    logging.basicConfig(level=logging.INFO if verbose else logging.ERROR, format="%(levelname)s: %(message)s")
-    if workers < 1 or (limit is not None and limit < 1):
-        print("Erro: --workers e --limit devem ser positivos.", file=sys.stderr)
-        return 2
-    token = Settings.hf_token()
-    target_parent = (destination or Settings().raw_data_dir).expanduser().resolve()
-    acquisition = DatasetAcquisition(HuggingFaceClient(token), PROJECT_ROOT / "data" / "manifests")
-    total_failures = 0
-    try:
-        for name in selected:
-            if list_only:
-                result = acquisition.run(name, target_parent, list_only=True, limit=limit, workers=workers)
-                print(f"{name} | commit {result['commit']} | {result['listed']} vídeos | {format_size(result['total_bytes'])} conhecidos | {result['unknown_sizes']} sem tamanho")
-                for entry in result["manifest"]["files"].values():
-                    print(f"  {entry['remote_path']} ({format_size(entry['expected_size_bytes'])})")
-            else:
-                with tqdm(desc=name, unit="vídeo") as bar:
-                    result = acquisition.run(name, target_parent, limit=limit, workers=workers,
-                                             progress=lambda _done, _total: bar.update(1))
-                total_failures += result["failed"]
-                print(f"{name}: {result['downloaded']} baixados, {result['skipped']} já existentes, {result['failed']} falhas; commit {result['commit']}; manifesto {result['manifest_path']}")
-    except RepositoryNotFoundError:
-        print("Erro de autenticação/acesso: repositório inexistente, privado ou token sem permissão de leitura. Configure HF_TOKEN e verifique o acesso.", file=sys.stderr)
-        return 1
-    except HfHubHTTPError as exc:
+
+def _acquisition() -> DatasetAcquisition:
+    return DatasetAcquisition(
+        HuggingFaceClient(Settings.hf_token()),
+        PROJECT_ROOT / "data" / "manifests",
+    )
+
+
+def _report_error(dataset: str, exc: Exception) -> None:
+    if isinstance(exc, RepositoryNotFoundError):
+        message = "repositório inexistente/privado ou HF_TOKEN sem permissão de leitura"
+    elif isinstance(exc, HfHubHTTPError):
         code = getattr(exc.response, "status_code", None)
         if code in (401, 403):
-            print("Erro de autenticação/acesso: Hugging Face recusou o acesso. Verifique HF_TOKEN e permissões do dataset.", file=sys.stderr)
+            message = "acesso negado; verifique HF_TOKEN e as permissões"
         else:
-            print(f"Erro de comunicação com Hugging Face (HTTP {code or 'desconhecido'}): {exc}", file=sys.stderr)
-        return 1
-    except (ConnectionError, TimeoutError, OSError) as exc:
-        print(f"Erro de rede ou disco: {exc}", file=sys.stderr)
-        return 1
-    except Exception as exc:
-        print(f"Erro: {type(exc).__name__}: {exc}", file=sys.stderr)
-        return 1
-    return 1 if total_failures else 0
+            message = f"erro HTTP {code or 'desconhecido'}: {exc}"
+    elif isinstance(exc, (ConnectionError, TimeoutError, OSError)):
+        message = f"erro de rede ou armazenamento: {exc}"
+    else:
+        message = f"{type(exc).__name__}: {exc}"
+    error_console.print(f"[red]Falha em {dataset}:[/red] {message}")
+
+
+@data_app.command(
+    "list",
+    help="Lista vídeos e tamanhos sem baixar. Exemplo: libras data list --dataset minds-libras-raw.",
+)
+def list_data(
+    dataset: str = typer.Option(
+        "all", "--dataset", "-d", help="Dataset para listar: " + ", ".join(DATASET_CHOICES)
+    ),
+    limit: int | None = typer.Option(None, "--limit", min=1, help="Limita a quantidade de vídeos listados."),
+    show_files: bool = typer.Option(False, "--show-files", help="Mostra uma tabela com cada caminho remoto."),
+) -> None:
+    """Resolve um commit, lista vídeos e registra o manifesto da listagem."""
+    selected = _selected_datasets(dataset)
+    service = _acquisition()
+    summary = Table(title="Datasets disponíveis", show_lines=False)
+    summary.add_column("Dataset", style="cyan")
+    summary.add_column("Commit", overflow="ellipsis", max_width=12)
+    summary.add_column("Vídeos", justify="right")
+    summary.add_column("Tamanho conhecido", justify="right")
+    summary.add_column("Tamanho desconhecido", justify="right")
+    failed = False
+
+    for name in selected:
+        try:
+            result = service.run(name, Settings().raw_data_dir, list_only=True, limit=limit)
+        except Exception as exc:
+            _report_error(name, exc)
+            failed = True
+            continue
+        summary.add_row(
+            name,
+            result["commit"],
+            str(result["listed"]),
+            format_size(result["total_bytes"]),
+            str(result["unknown_sizes"]),
+        )
+        if show_files:
+            files = Table(title=f"Arquivos de vídeo — {name}")
+            files.add_column("Caminho remoto", style="cyan")
+            files.add_column("Tamanho", justify="right")
+            for entry in result["manifest"]["files"].values():
+                files.add_row(entry["remote_path"], format_size(entry["expected_size_bytes"]))
+            console.print(files)
+
+    console.print(summary)
+    if failed:
+        raise typer.Exit(code=1)
+
+
+@data_app.command(
+    "download",
+    help="Baixa vídeos e arquivos auxiliares, retomando arquivos completos. Exemplo: libras data download --dataset minds-libras-raw --limit 2.",
+)
+def download_data(
+    dataset: str = typer.Option(
+        ..., "--dataset", "-d", help="Dataset para baixar: " + ", ".join(DATASET_CHOICES)
+    ),
+    destination: Path | None = typer.Option(
+        None, "--destination", "--dest", help="Diretório pai (padrão: <raiz do projeto>/data/raw)."
+    ),
+    workers: int = typer.Option(4, "--workers", "-j", min=1, help="Downloads simultâneos (padrão: 4)."),
+    limit: int | None = typer.Option(None, "--limit", min=1, help="Limita vídeos para um teste pequeno."),
+    verbose: bool = typer.Option(False, "--verbose", help="Exibe detalhes de tentativas e falhas."),
+) -> None:
+    """Baixa um dataset escolhido explicitamente; não abre menus interativos."""
+    selected = _selected_datasets(dataset)
+    logging.basicConfig(
+        level=logging.INFO if verbose else logging.ERROR,
+        format="%(levelname)s: %(message)s",
+    )
+    target_parent = (destination or Settings().raw_data_dir).expanduser().resolve()
+    service = _acquisition()
+    summary = Table(title="Resumo da aquisição", show_lines=False)
+    summary.add_column("Dataset", style="cyan")
+    summary.add_column("Novos vídeos", justify="right")
+    summary.add_column("Já existentes", justify="right")
+    summary.add_column("Arquivos auxiliares", justify="right")
+    summary.add_column("Falhas", justify="right")
+    summary.add_column("Commit", overflow="ellipsis", max_width=12)
+    failed = False
+
+    for name in selected:
+        with Progress(
+            SpinnerColumn(),
+            TextColumn("{task.description}"),
+            BarColumn(),
+            MofNCompleteColumn(),
+            TimeElapsedColumn(),
+            console=console,
+            transient=True,
+        ) as progress:
+            task_id = progress.add_task(name, total=None)
+
+            def on_progress(done: int, total: int) -> None:
+                progress.update(task_id, completed=done, total=total)
+
+            try:
+                result = service.run(
+                    name,
+                    target_parent,
+                    limit=limit,
+                    workers=workers,
+                    progress=on_progress,
+                )
+            except Exception as exc:
+                _report_error(name, exc)
+                failed = True
+                continue
+
+        summary.add_row(
+            name,
+            str(result["downloaded"]),
+            str(result["skipped"]),
+            str(result["auxiliary_downloaded"]),
+            str(result["failed"]),
+            result["commit"],
+        )
+        console.print(f"Manifesto: {result['manifest_path']}")
+        failed = failed or result["failed"] > 0
+
+    console.print(summary)
+    if failed:
+        raise typer.Exit(code=1)
+
+
+def main() -> None:
+    app()
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    main()
