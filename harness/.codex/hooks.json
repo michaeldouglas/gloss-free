@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "C:/Users/mdbaa/.local/bin/graphify.EXE hook-check"
+            "command": "C:/Users/mdbaa/AppData/Roaming/uv/tools/graphifyy/Scripts/python.exe -m graphify hook-check"
           }
         ]
       }

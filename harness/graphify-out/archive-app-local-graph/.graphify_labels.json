@@ -1,0 +1,12 @@
+{
+  "0": "DatasetAcquisition",
+  "1": ".run",
+  "2": "acquisition.py",
+  "3": "HuggingFaceClient",
+  "4": "cli.py",
+  "5": "Libras Translation — aquisição de datasets",
+  "6": "FakeClient",
+  "7": "Settings",
+  "8": "infrastructure/__init__.py",
+  "11": "libras-translation"
+}

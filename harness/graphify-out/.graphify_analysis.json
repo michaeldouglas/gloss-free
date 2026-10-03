@@ -1,0 +1,810 @@
+{
+  "communities": {
+    "0": [
+      "harness::agents_skills_intel_openvino_installer_scripts_openvino_installer",
+      "harness::agents_skills_intel_openvino_installer_scripts_openvino_installer_action",
+      "harness::agents_skills_intel_openvino_installer_scripts_openvino_installer_available",
+      "harness::agents_skills_intel_openvino_installer_scripts_openvino_installer_build_actions",
+      "harness::agents_skills_intel_openvino_installer_scripts_openvino_installer_build_report",
+      "harness::agents_skills_intel_openvino_installer_scripts_openvino_installer_compatible",
+      "harness::agents_skills_intel_openvino_installer_scripts_openvino_installer_detect_context",
+      "harness::agents_skills_intel_openvino_installer_scripts_openvino_installer_exact_version",
+      "harness::agents_skills_intel_openvino_installer_scripts_openvino_installer_live_verify",
+      "harness::agents_skills_intel_openvino_installer_scripts_openvino_installer_load_fixture",
+      "harness::agents_skills_intel_openvino_installer_scripts_openvino_installer_main",
+      "harness::agents_skills_intel_openvino_installer_scripts_openvino_installer_normalize_architecture",
+      "harness::agents_skills_intel_openvino_installer_scripts_openvino_installer_package_name",
+      "harness::agents_skills_intel_openvino_installer_scripts_openvino_installer_py_any",
+      "harness::agents_skills_intel_openvino_installer_scripts_openvino_installer_py_namespace",
+      "harness::agents_skills_intel_openvino_installer_scripts_openvino_installer_py_path",
+      "harness::agents_skills_intel_openvino_installer_scripts_openvino_installer_quote",
+      "harness::agents_skills_intel_openvino_installer_scripts_openvino_installer_redact",
+      "harness::agents_skills_intel_openvino_installer_scripts_openvino_installer_render_text",
+      "harness::agents_skills_intel_openvino_installer_scripts_openvino_installer_run_actions",
+      "harness::agents_skills_intel_openvino_installer_scripts_openvino_installer_select_method",
+      "harness::agents_skills_intel_openvino_installer_scripts_openvino_installer_system_method",
+      "harness::agents_skills_intel_openvino_installer_scripts_openvino_installer_tool_map",
+      "harness::agents_skills_intel_openvino_installer_scripts_openvino_installer_verification_from_fixture",
+      "harness::agents_skills_intel_openvino_installer_scripts_openvino_installer_version_note"
+    ],
+    "1": [
+      "harness::agents_skills_research_systematic_literature_review_scripts_review_pack_coverage",
+      "harness::agents_skills_research_systematic_literature_review_scripts_review_pack_coverage_meaningful",
+      "harness::agents_skills_research_systematic_literature_review_scripts_review_pack_coverage_py_any",
+      "harness::agents_skills_research_systematic_literature_review_scripts_review_pack_coverage_split_ids",
+      "harness::agents_skills_research_systematic_literature_review_scripts_review_pack_coverage_unresolved_high_priority_novelty_questions",
+      "harness::agents_skills_research_systematic_literature_review_scripts_review_pack_coverage_validate_coverage_questions",
+      "harness::agents_skills_research_systematic_literature_review_scripts_validate_review_pack",
+      "harness::agents_skills_research_systematic_literature_review_scripts_validate_review_pack_main",
+      "harness::agents_skills_research_systematic_literature_review_scripts_validate_review_pack_parse_non_negative",
+      "harness::agents_skills_research_systematic_literature_review_scripts_validate_review_pack_parse_prisma",
+      "harness::agents_skills_research_systematic_literature_review_scripts_validate_review_pack_parse_table",
+      "harness::agents_skills_research_systematic_literature_review_scripts_validate_review_pack_py_any",
+      "harness::agents_skills_research_systematic_literature_review_scripts_validate_review_pack_py_path",
+      "harness::agents_skills_research_systematic_literature_review_scripts_validate_review_pack_read_json",
+      "harness::agents_skills_research_systematic_literature_review_scripts_validate_review_pack_read_text",
+      "harness::agents_skills_research_systematic_literature_review_scripts_validate_review_pack_require_columns",
+      "harness::agents_skills_research_systematic_literature_review_scripts_validate_review_pack_section",
+      "harness::agents_skills_research_systematic_literature_review_scripts_validate_review_pack_substantive",
+      "harness::agents_skills_research_systematic_literature_review_scripts_validate_review_pack_table_value",
+      "harness::agents_skills_research_systematic_literature_review_scripts_validate_review_pack_validate_evidence",
+      "harness::agents_skills_research_systematic_literature_review_scripts_validate_review_pack_validate_manifest",
+      "harness::agents_skills_research_systematic_literature_review_scripts_validate_review_pack_validate_recall",
+      "harness::agents_skills_research_systematic_literature_review_scripts_validate_review_pack_validate_report",
+      "harness::agents_skills_research_systematic_literature_review_scripts_validate_review_pack_validate_screening",
+      "harness::agents_skills_research_systematic_literature_review_scripts_validate_review_pack_validate_search"
+    ],
+    "2": [
+      "harness::agents_skills_intel_docs_reader_scripts_read_openvino_docs",
+      "harness::agents_skills_intel_docs_reader_scripts_read_openvino_docs_default_cache_dir",
+      "harness::agents_skills_intel_docs_reader_scripts_read_openvino_docs_download",
+      "harness::agents_skills_intel_docs_reader_scripts_read_openvino_docs_ensure_snapshot",
+      "harness::agents_skills_intel_docs_reader_scripts_read_openvino_docs_excerpt",
+      "harness::agents_skills_intel_docs_reader_scripts_read_openvino_docs_extract_archive",
+      "harness::agents_skills_intel_docs_reader_scripts_read_openvino_docs_htmltextparser",
+      "harness::agents_skills_intel_docs_reader_scripts_read_openvino_docs_htmltextparser_handle_data",
+      "harness::agents_skills_intel_docs_reader_scripts_read_openvino_docs_htmltextparser_handle_endtag",
+      "harness::agents_skills_intel_docs_reader_scripts_read_openvino_docs_htmltextparser_handle_starttag",
+      "harness::agents_skills_intel_docs_reader_scripts_read_openvino_docs_htmltextparser_init",
+      "harness::agents_skills_intel_docs_reader_scripts_read_openvino_docs_htmltextparser_text",
+      "harness::agents_skills_intel_docs_reader_scripts_read_openvino_docs_htmltextparser_title",
+      "harness::agents_skills_intel_docs_reader_scripts_read_openvino_docs_inspect_cache",
+      "harness::agents_skills_intel_docs_reader_scripts_read_openvino_docs_main",
+      "harness::agents_skills_intel_docs_reader_scripts_read_openvino_docs_parse_html",
+      "harness::agents_skills_intel_docs_reader_scripts_read_openvino_docs_py_any",
+      "harness::agents_skills_intel_docs_reader_scripts_read_openvino_docs_py_path",
+      "harness::agents_skills_intel_docs_reader_scripts_read_openvino_docs_render_text",
+      "harness::agents_skills_intel_docs_reader_scripts_read_openvino_docs_search_docs",
+      "harness::htmlparser"
+    ],
+    "3": [
+      "harness::agents_skills_intel_hardware_advisor_scripts_hardware_probe",
+      "harness::agents_skills_intel_hardware_advisor_scripts_hardware_probe_collect_additional_configurations",
+      "harness::agents_skills_intel_hardware_advisor_scripts_hardware_probe_collect_live",
+      "harness::agents_skills_intel_hardware_advisor_scripts_hardware_probe_collect_openvino",
+      "harness::agents_skills_intel_hardware_advisor_scripts_hardware_probe_collect_platform",
+      "harness::agents_skills_intel_hardware_advisor_scripts_hardware_probe_configuration",
+      "harness::agents_skills_intel_hardware_advisor_scripts_hardware_probe_device_type",
+      "harness::agents_skills_intel_hardware_advisor_scripts_hardware_probe_has_device_node",
+      "harness::agents_skills_intel_hardware_advisor_scripts_hardware_probe_is_container",
+      "harness::agents_skills_intel_hardware_advisor_scripts_hardware_probe_is_wsl",
+      "harness::agents_skills_intel_hardware_advisor_scripts_hardware_probe_linux_os_release",
+      "harness::agents_skills_intel_hardware_advisor_scripts_hardware_probe_load_fixture",
+      "harness::agents_skills_intel_hardware_advisor_scripts_hardware_probe_main",
+      "harness::agents_skills_intel_hardware_advisor_scripts_hardware_probe_module_status",
+      "harness::agents_skills_intel_hardware_advisor_scripts_hardware_probe_normalize_architecture",
+      "harness::agents_skills_intel_hardware_advisor_scripts_hardware_probe_py_any",
+      "harness::agents_skills_intel_hardware_advisor_scripts_hardware_probe_py_path",
+      "harness::agents_skills_intel_hardware_advisor_scripts_hardware_probe_render_text",
+      "harness::agents_skills_intel_hardware_advisor_scripts_hardware_probe_run_command",
+      "harness::agents_skills_intel_hardware_advisor_scripts_hardware_probe_validate_fixture",
+      "harness::agents_skills_intel_hardware_advisor_scripts_hardware_probe_walk_for_forbidden"
+    ],
+    "4": [
+      "harness::agents_skills_research_systematic_literature_review_scripts_paper_context_artifacts",
+      "harness::agents_skills_research_systematic_literature_review_scripts_paper_context_artifacts_build_parser",
+      "harness::agents_skills_research_systematic_literature_review_scripts_paper_context_artifacts_context_md",
+      "harness::agents_skills_research_systematic_literature_review_scripts_paper_context_artifacts_decision_json",
+      "harness::agents_skills_research_systematic_literature_review_scripts_paper_context_artifacts_evidence_table_md",
+      "harness::agents_skills_research_systematic_literature_review_scripts_paper_context_artifacts_first_table_header",
+      "harness::agents_skills_research_systematic_literature_review_scripts_paper_context_artifacts_init_artifacts",
+      "harness::agents_skills_research_systematic_literature_review_scripts_paper_context_artifacts_is_rating",
+      "harness::agents_skills_research_systematic_literature_review_scripts_paper_context_artifacts_load_json",
+      "harness::agents_skills_research_systematic_literature_review_scripts_paper_context_artifacts_main",
+      "harness::agents_skills_research_systematic_literature_review_scripts_paper_context_artifacts_py_any",
+      "harness::agents_skills_research_systematic_literature_review_scripts_paper_context_artifacts_py_argumentparser",
+      "harness::agents_skills_research_systematic_literature_review_scripts_paper_context_artifacts_py_namespace",
+      "harness::agents_skills_research_systematic_literature_review_scripts_paper_context_artifacts_py_path",
+      "harness::agents_skills_research_systematic_literature_review_scripts_paper_context_artifacts_read_optional",
+      "harness::agents_skills_research_systematic_literature_review_scripts_paper_context_artifacts_refuse_overwrite",
+      "harness::agents_skills_research_systematic_literature_review_scripts_paper_context_artifacts_resolve_out_dir",
+      "harness::agents_skills_research_systematic_literature_review_scripts_paper_context_artifacts_search_log_md",
+      "harness::agents_skills_research_systematic_literature_review_scripts_paper_context_artifacts_section_table_header",
+      "harness::agents_skills_research_systematic_literature_review_scripts_paper_context_artifacts_validate_artifacts"
+    ],
+    "5": [
+      "harness::annotation_tiers",
+      "harness::attack_maintenance_segmentation",
+      "harness::buoy_tiers",
+      "harness::depiction_tiers",
+      "harness::elan",
+      "harness::face_tier",
+      "harness::functional_gloss",
+      "harness::gaze_tier",
+      "harness::gesture_tiers",
+      "harness::gloss_annotation_formalism_v2",
+      "harness::gloss_id",
+      "harness::lexical_sign_tiers",
+      "harness::manual_nonmanual",
+      "harness::mouth_tier",
+      "harness::multichannel_signing",
+      "harness::pointing_tiers",
+      "harness::productive_gloss",
+      "harness::spatial_anchoring",
+      "harness::spatial_syntax",
+      "harness::visuospatial_modality"
+    ],
+    "6": [
+      "harness::agents_skills_litreview_scripts_citation_tracker",
+      "harness::agents_skills_litreview_scripts_citation_tracker_action_close",
+      "harness::agents_skills_litreview_scripts_citation_tracker_action_list",
+      "harness::agents_skills_litreview_scripts_citation_tracker_action_record_cited",
+      "harness::agents_skills_litreview_scripts_citation_tracker_action_record_papers_received",
+      "harness::agents_skills_litreview_scripts_citation_tracker_action_record_search",
+      "harness::agents_skills_litreview_scripts_citation_tracker_action_start",
+      "harness::agents_skills_litreview_scripts_citation_tracker_action_status",
+      "harness::agents_skills_litreview_scripts_citation_tracker_load_session",
+      "harness::agents_skills_litreview_scripts_citation_tracker_main",
+      "harness::agents_skills_litreview_scripts_citation_tracker_now_iso",
+      "harness::agents_skills_litreview_scripts_citation_tracker_now_ts",
+      "harness::agents_skills_litreview_scripts_citation_tracker_py_any",
+      "harness::agents_skills_litreview_scripts_citation_tracker_py_path",
+      "harness::agents_skills_litreview_scripts_citation_tracker_render_list_human",
+      "harness::agents_skills_litreview_scripts_citation_tracker_render_status_human",
+      "harness::agents_skills_litreview_scripts_citation_tracker_save_session",
+      "harness::agents_skills_litreview_scripts_citation_tracker_session_path"
+    ],
+    "7": [
+      "harness::specify_scripts_powershell_common",
+      "harness::specify_scripts_powershell_common_find_specifyroot",
+      "harness::specify_scripts_powershell_common_format_speckitcommand",
+      "harness::specify_scripts_powershell_common_get_currentbranch",
+      "harness::specify_scripts_powershell_common_get_featurepathsenv",
+      "harness::specify_scripts_powershell_common_get_invokeseparator",
+      "harness::specify_scripts_powershell_common_get_normalizedpriority",
+      "harness::specify_scripts_powershell_common_get_python3command",
+      "harness::specify_scripts_powershell_common_get_reporoot",
+      "harness::specify_scripts_powershell_common_get_sortedextensionids",
+      "harness::specify_scripts_powershell_common_resolve_specifyinitdir",
+      "harness::specify_scripts_powershell_common_resolve_template",
+      "harness::specify_scripts_powershell_common_resolve_templatecontent",
+      "harness::specify_scripts_powershell_common_save_featurejson",
+      "harness::specify_scripts_powershell_common_test_dirhasfiles",
+      "harness::specify_scripts_powershell_common_test_fileexists"
+    ],
+    "8": [
+      "harness::agents_skills_research_systematic_literature_review_scripts_init_review_pack",
+      "harness::agents_skills_research_systematic_literature_review_scripts_init_review_pack_evidence",
+      "harness::agents_skills_research_systematic_literature_review_scripts_init_review_pack_inputs",
+      "harness::agents_skills_research_systematic_literature_review_scripts_init_review_pack_main",
+      "harness::agents_skills_research_systematic_literature_review_scripts_init_review_pack_parser",
+      "harness::agents_skills_research_systematic_literature_review_scripts_init_review_pack_protocol",
+      "harness::agents_skills_research_systematic_literature_review_scripts_init_review_pack_py_argumentparser",
+      "harness::agents_skills_research_systematic_literature_review_scripts_init_review_pack_py_namespace",
+      "harness::agents_skills_research_systematic_literature_review_scripts_init_review_pack_recall_audit",
+      "harness::agents_skills_research_systematic_literature_review_scripts_init_review_pack_report",
+      "harness::agents_skills_research_systematic_literature_review_scripts_init_review_pack_require",
+      "harness::agents_skills_research_systematic_literature_review_scripts_init_review_pack_resolve",
+      "harness::agents_skills_research_systematic_literature_review_scripts_init_review_pack_screening",
+      "harness::agents_skills_research_systematic_literature_review_scripts_init_review_pack_search_log",
+      "harness::agents_skills_research_systematic_literature_review_scripts_init_review_pack_slugify"
+    ],
+    "9": [
+      "harness::agents_skills_systematic_literature_review_scripts_arxiv_search",
+      "harness::agents_skills_systematic_literature_review_scripts_arxiv_search_build_parser",
+      "harness::agents_skills_systematic_literature_review_scripts_arxiv_search_build_search_query",
+      "harness::agents_skills_systematic_literature_review_scripts_arxiv_search_main",
+      "harness::agents_skills_systematic_literature_review_scripts_arxiv_search_normalise_arxiv_id",
+      "harness::agents_skills_systematic_literature_review_scripts_arxiv_search_parse_entry",
+      "harness::agents_skills_systematic_literature_review_scripts_arxiv_search_py_any",
+      "harness::agents_skills_systematic_literature_review_scripts_arxiv_search_py_argumentparser",
+      "harness::agents_skills_systematic_literature_review_scripts_arxiv_search_search",
+      "harness::agents_skills_systematic_literature_review_scripts_arxiv_search_urllibrequestsshim",
+      "harness::agents_skills_systematic_literature_review_scripts_arxiv_search_urllibrequestsshim_get",
+      "harness::agents_skills_systematic_literature_review_scripts_arxiv_search_urllibresponse",
+      "harness::agents_skills_systematic_literature_review_scripts_arxiv_search_urllibresponse_init",
+      "harness::agents_skills_systematic_literature_review_scripts_arxiv_search_urllibresponse_raise_for_status"
+    ],
+    "10": [
+      "harness::avatar_1018",
+      "harness::ccd_taal",
+      "harness::fapesp_2024_00914_7",
+      "harness::ipt",
+      "harness::meteor_metric",
+      "harness::project_duration",
+      "harness::rouge_metric",
+      "harness::sedpcd",
+      "harness::semantic_adequacy",
+      "harness::systematic_avatar_evaluation_pending",
+      "harness::translation_pt_libras",
+      "harness::unicamp",
+      "harness::usp"
+    ],
+    "11": [
+      "harness::agents_skills_literature_review_ml_scripts_aggregate",
+      "harness::agents_skills_literature_review_ml_scripts_aggregate_deduplicate",
+      "harness::agents_skills_literature_review_ml_scripts_aggregate_filter_min_citations",
+      "harness::agents_skills_literature_review_ml_scripts_aggregate_filter_year",
+      "harness::agents_skills_literature_review_ml_scripts_aggregate_format_markdown",
+      "harness::agents_skills_literature_review_ml_scripts_aggregate_load_papers",
+      "harness::agents_skills_literature_review_ml_scripts_aggregate_main",
+      "harness::agents_skills_literature_review_ml_scripts_aggregate_merge_records",
+      "harness::agents_skills_literature_review_ml_scripts_aggregate_normalize_arxiv_id",
+      "harness::agents_skills_literature_review_ml_scripts_aggregate_normalize_doi",
+      "harness::agents_skills_literature_review_ml_scripts_aggregate_normalize_title",
+      "harness::agents_skills_literature_review_ml_scripts_aggregate_rank"
+    ],
+    "12": [
+      "harness::anamnesis_4357",
+      "harness::anamnesis_dataset",
+      "harness::deaf_community_evaluation",
+      "harness::eye_tracking_study",
+      "harness::facial_capture",
+      "harness::human_avatar_comparison",
+      "harness::in_car_127_scenarios",
+      "harness::in_car_dataset",
+      "harness::metadata",
+      "harness::parallel_libras_portuguese_corpus",
+      "harness::rgb_video",
+      "harness::vehicle_1349"
+    ],
+    "13": [
+      "harness::bleu4_24_54",
+      "harness::bleu4_text2gloss",
+      "harness::phoenix14t",
+      "harness::sign2gloss",
+      "harness::sign_language_production",
+      "harness::sign_language_recognition",
+      "harness::text2gloss",
+      "harness::translation_libras_pt",
+      "harness::vlibrasbd",
+      "harness::wer_42_92",
+      "harness::wer_45_08",
+      "harness::wer_metric"
+    ],
+    "14": [
+      "harness::clip",
+      "harness::gcn_stgcn",
+      "harness::thesis_cnn",
+      "harness::thesis_computer_vision",
+      "harness::thesis_gcn",
+      "harness::thesis_llm_translation",
+      "harness::thesis_mediapipe",
+      "harness::thesis_multimodal_alignment",
+      "harness::thesis_pose_estimation_tracking",
+      "harness::thesis_spatiotemporal_deep_learning",
+      "harness::thesis_stable_diffusion",
+      "harness::thesis_vllm"
+    ],
+    "15": [
+      "harness::agents_skills_intel_openvino_model_converter_scripts_model_converter",
+      "harness::agents_skills_intel_openvino_model_converter_scripts_model_converter_action",
+      "harness::agents_skills_intel_openvino_model_converter_scripts_model_converter_build_report",
+      "harness::agents_skills_intel_openvino_model_converter_scripts_model_converter_detect_context",
+      "harness::agents_skills_intel_openvino_model_converter_scripts_model_converter_infer_framework",
+      "harness::agents_skills_intel_openvino_model_converter_scripts_model_converter_load_fixture",
+      "harness::agents_skills_intel_openvino_model_converter_scripts_model_converter_main",
+      "harness::agents_skills_intel_openvino_model_converter_scripts_model_converter_py_namespace",
+      "harness::agents_skills_intel_openvino_model_converter_scripts_model_converter_redact",
+      "harness::agents_skills_intel_openvino_model_converter_scripts_model_converter_render"
+    ],
+    "16": [
+      "harness::low_resource_language",
+      "harness::masked_pose_modeling",
+      "harness::materials_corpus",
+      "harness::mslu_method",
+      "harness::sign_text_contrastive",
+      "harness::sl1_5m",
+      "harness::source_gfslt",
+      "harness::source_mslu",
+      "harness::source_proposal",
+      "harness::source_unisign"
+    ],
+    "17": [
+      "harness::agents_skills_research_systematic_literature_review_scripts_prisma_flow_md",
+      "harness::agents_skills_research_systematic_literature_review_scripts_prisma_flow_md_build_parser",
+      "harness::agents_skills_research_systematic_literature_review_scripts_prisma_flow_md_extract_counts",
+      "harness::agents_skills_research_systematic_literature_review_scripts_prisma_flow_md_main",
+      "harness::agents_skills_research_systematic_literature_review_scripts_prisma_flow_md_parse_non_negative_int",
+      "harness::agents_skills_research_systematic_literature_review_scripts_prisma_flow_md_py_argumentparser",
+      "harness::agents_skills_research_systematic_literature_review_scripts_prisma_flow_md_py_path",
+      "harness::agents_skills_research_systematic_literature_review_scripts_prisma_flow_md_render_flow_markdown",
+      "harness::agents_skills_research_systematic_literature_review_scripts_prisma_flow_md_validate_consistency"
+    ],
+    "18": [
+      "harness::agents_skills_intel_hardware_advisor_scripts_report_model",
+      "harness::agents_skills_intel_hardware_advisor_scripts_report_model_build_recommendation",
+      "harness::agents_skills_intel_hardware_advisor_scripts_report_model_build_report",
+      "harness::agents_skills_intel_hardware_advisor_scripts_report_model_evidence",
+      "harness::agents_skills_intel_hardware_advisor_scripts_report_model_fact",
+      "harness::agents_skills_intel_hardware_advisor_scripts_report_model_py_any",
+      "harness::agents_skills_intel_hardware_advisor_scripts_report_model_text",
+      "harness::agents_skills_intel_hardware_advisor_scripts_report_model_validate_report"
+    ],
+    "19": [
+      "harness::agents_skills_literature_review_closed_evidence_scripts_extract_pdf_text",
+      "harness::agents_skills_literature_review_closed_evidence_scripts_extract_pdf_text_clean",
+      "harness::agents_skills_literature_review_closed_evidence_scripts_extract_pdf_text_extract_pdf_text",
+      "harness::agents_skills_literature_review_closed_evidence_scripts_extract_pdf_text_main",
+      "harness::agents_skills_literature_review_closed_evidence_scripts_extract_pdf_text_py_path",
+      "harness::agents_skills_literature_review_closed_evidence_scripts_extract_pdf_text_resolve_source_path",
+      "harness::agents_skills_literature_review_closed_evidence_scripts_extract_pdf_text_safe_name",
+      "harness::agents_skills_literature_review_closed_evidence_scripts_extract_pdf_text_wanted"
+    ],
+    "20": [
+      "harness::avatar_3d",
+      "harness::avatar_videorealistic",
+      "harness::concatenative_synthesis",
+      "harness::gloss2sign",
+      "harness::quaternion_smoothing",
+      "harness::source_report1",
+      "harness::source_report2",
+      "harness::videorealistic_delayed"
+    ],
+    "21": [
+      "harness::bleu_metric",
+      "harness::gloss2text",
+      "harness::sign2text",
+      "harness::sign_language_translation",
+      "harness::source_presentation",
+      "harness::source_proposta_p_dissertacao_mestrado",
+      "harness::thesis_gloss_free_libras_portuguese",
+      "harness::thesis_gloss_intermediate"
+    ],
+    "22": [
+      "harness::csl_news",
+      "harness::generative_pretraining",
+      "harness::mediapipe",
+      "harness::mt5",
+      "harness::pgf_module",
+      "harness::score_aware_sampling",
+      "harness::source_unisign_image",
+      "harness::unisign_method"
+    ],
+    "23": [
+      "harness::agents_skills_literature_review_closed_evidence_scripts_extract_pdf_front_matter",
+      "harness::agents_skills_literature_review_closed_evidence_scripts_extract_pdf_front_matter_clean",
+      "harness::agents_skills_literature_review_closed_evidence_scripts_extract_pdf_front_matter_extract_front_matter",
+      "harness::agents_skills_literature_review_closed_evidence_scripts_extract_pdf_front_matter_main",
+      "harness::agents_skills_literature_review_closed_evidence_scripts_extract_pdf_front_matter_py_path",
+      "harness::agents_skills_literature_review_closed_evidence_scripts_extract_pdf_front_matter_read_front_matter",
+      "harness::agents_skills_literature_review_closed_evidence_scripts_extract_pdf_front_matter_resolve_source_path"
+    ],
+    "24": [
+      "harness::agents_skills_litreview_scripts_framework_recommender",
+      "harness::agents_skills_litreview_scripts_framework_recommender_count_signals",
+      "harness::agents_skills_litreview_scripts_framework_recommender_generate_starter_questions",
+      "harness::agents_skills_litreview_scripts_framework_recommender_main",
+      "harness::agents_skills_litreview_scripts_framework_recommender_py_any",
+      "harness::agents_skills_litreview_scripts_framework_recommender_recommend",
+      "harness::agents_skills_litreview_scripts_framework_recommender_render_human"
+    ],
+    "25": [
+      "harness::assistive_apps",
+      "harness::equipment_storage_challenge",
+      "harness::menu_960",
+      "harness::menu_dataset",
+      "harness::mocap_data",
+      "harness::storage_over_2tb",
+      "harness::web_accessibility_prototype"
+    ],
+    "26": [
+      "harness::agents_skills_literature_review_ml_scripts_search_arxiv",
+      "harness::agents_skills_literature_review_ml_scripts_search_arxiv_build_query",
+      "harness::agents_skills_literature_review_ml_scripts_search_arxiv_fetch_batch",
+      "harness::agents_skills_literature_review_ml_scripts_search_arxiv_filter_by_year",
+      "harness::agents_skills_literature_review_ml_scripts_search_arxiv_main",
+      "harness::agents_skills_literature_review_ml_scripts_search_arxiv_parse_entry"
+    ],
+    "27": [
+      "harness::agents_skills_literature_review_ml_scripts_search_pubmed",
+      "harness::agents_skills_literature_review_ml_scripts_search_pubmed_efetch_batch",
+      "harness::agents_skills_literature_review_ml_scripts_search_pubmed_esearch",
+      "harness::agents_skills_literature_review_ml_scripts_search_pubmed_main",
+      "harness::agents_skills_literature_review_ml_scripts_search_pubmed_parse_xml",
+      "harness::agents_skills_literature_review_ml_scripts_search_pubmed_text"
+    ],
+    "28": [
+      "harness::agents_skills_literature_review_ml_scripts_verify_citations",
+      "harness::agents_skills_literature_review_ml_scripts_verify_citations_consistency_check",
+      "harness::agents_skills_literature_review_ml_scripts_verify_citations_fetch_arxiv_meta",
+      "harness::agents_skills_literature_review_ml_scripts_verify_citations_fetch_crossref_meta",
+      "harness::agents_skills_literature_review_ml_scripts_verify_citations_find_citations",
+      "harness::agents_skills_literature_review_ml_scripts_verify_citations_main"
+    ],
+    "29": [
+      "harness::agents_skills_litreview_scripts_free_search",
+      "harness::agents_skills_litreview_scripts_free_search_get_json",
+      "harness::agents_skills_litreview_scripts_free_search_main",
+      "harness::agents_skills_litreview_scripts_free_search_render_human",
+      "harness::agents_skills_litreview_scripts_free_search_search_openalex",
+      "harness::agents_skills_litreview_scripts_free_search_search_pubmed"
+    ],
+    "30": [
+      "harness::specify_scripts_powershell_create_new_feature",
+      "harness::specify_scripts_powershell_create_new_feature_convertto_cleanbranchname",
+      "harness::specify_scripts_powershell_create_new_feature_get_branchname",
+      "harness::specify_scripts_powershell_create_new_feature_get_fittedbranchname",
+      "harness::specify_scripts_powershell_create_new_feature_get_highestnumberfromspecs",
+      "harness::specify_scripts_powershell_create_new_feature_test_specprefixinuse"
+    ],
+    "31": [
+      "harness::agents_skills_literature_review_closed_evidence_scripts_register_sources",
+      "harness::agents_skills_literature_review_closed_evidence_scripts_register_sources_main",
+      "harness::agents_skills_literature_review_closed_evidence_scripts_register_sources_make_source_id",
+      "harness::agents_skills_literature_review_closed_evidence_scripts_register_sources_py_path",
+      "harness::agents_skills_literature_review_closed_evidence_scripts_register_sources_register_sources"
+    ],
+    "32": [
+      "harness::agents_skills_literature_review_ml_scripts_generate_pdf",
+      "harness::agents_skills_literature_review_ml_scripts_generate_pdf_check_deps",
+      "harness::agents_skills_literature_review_ml_scripts_generate_pdf_generate",
+      "harness::agents_skills_literature_review_ml_scripts_generate_pdf_main",
+      "harness::agents_skills_literature_review_ml_scripts_generate_pdf_py_path"
+    ],
+    "33": [
+      "harness::agents_skills_litreview_scripts_cross_search_aggregator",
+      "harness::agents_skills_litreview_scripts_cross_search_aggregator_aggregate",
+      "harness::agents_skills_litreview_scripts_cross_search_aggregator_main",
+      "harness::agents_skills_litreview_scripts_cross_search_aggregator_py_any",
+      "harness::agents_skills_litreview_scripts_cross_search_aggregator_render_human"
+    ],
+    "34": [
+      "harness::agents_skills_intel_openvino_inference_runner_scripts_inference_runner",
+      "harness::agents_skills_intel_openvino_inference_runner_scripts_inference_runner_context",
+      "harness::agents_skills_intel_openvino_inference_runner_scripts_inference_runner_load",
+      "harness::agents_skills_intel_openvino_inference_runner_scripts_inference_runner_main"
+    ],
+    "35": [
+      "harness::agents_skills_literature_review_closed_evidence_scripts_create_review_matrices",
+      "harness::agents_skills_literature_review_closed_evidence_scripts_create_review_matrices_create_matrices",
+      "harness::agents_skills_literature_review_closed_evidence_scripts_create_review_matrices_main",
+      "harness::agents_skills_literature_review_closed_evidence_scripts_create_review_matrices_py_path"
+    ],
+    "36": [
+      "harness::agents_skills_literature_review_closed_evidence_scripts_validate_citation_ledger",
+      "harness::agents_skills_literature_review_closed_evidence_scripts_validate_citation_ledger_main",
+      "harness::agents_skills_literature_review_closed_evidence_scripts_validate_citation_ledger_py_path",
+      "harness::agents_skills_literature_review_closed_evidence_scripts_validate_citation_ledger_validate"
+    ],
+    "37": [
+      "harness::agents_skills_literature_review_ml_scripts_search_crossref",
+      "harness::agents_skills_literature_review_ml_scripts_search_crossref_fetch_page",
+      "harness::agents_skills_literature_review_ml_scripts_search_crossref_main",
+      "harness::agents_skills_literature_review_ml_scripts_search_crossref_normalize"
+    ],
+    "38": [
+      "harness::agents_skills_literature_review_ml_scripts_search_openalex",
+      "harness::agents_skills_literature_review_ml_scripts_search_openalex_fetch_page",
+      "harness::agents_skills_literature_review_ml_scripts_search_openalex_main",
+      "harness::agents_skills_literature_review_ml_scripts_search_openalex_normalize"
+    ],
+    "39": [
+      "harness::agents_skills_literature_review_ml_scripts_search_semantic_scholar",
+      "harness::agents_skills_literature_review_ml_scripts_search_semantic_scholar_fetch_page",
+      "harness::agents_skills_literature_review_ml_scripts_search_semantic_scholar_main",
+      "harness::agents_skills_literature_review_ml_scripts_search_semantic_scholar_normalize"
+    ],
+    "40": [
+      "harness::agents_skills_intel_openvino_benchmark_scripts_benchmark_runner",
+      "harness::agents_skills_intel_openvino_benchmark_scripts_benchmark_runner_load",
+      "harness::agents_skills_intel_openvino_benchmark_scripts_benchmark_runner_main"
+    ],
+    "41": [
+      "harness::agents_skills_intel_openvino_genai_runner_scripts_genai_runner",
+      "harness::agents_skills_intel_openvino_genai_runner_scripts_genai_runner_load",
+      "harness::agents_skills_intel_openvino_genai_runner_scripts_genai_runner_main"
+    ],
+    "42": [
+      "harness::agents_skills_intel_openvino_model_optimizer_scripts_model_optimizer",
+      "harness::agents_skills_intel_openvino_model_optimizer_scripts_model_optimizer_load",
+      "harness::agents_skills_intel_openvino_model_optimizer_scripts_model_optimizer_main"
+    ],
+    "43": [
+      "harness::agents_skills_intel_openvino_model_server_scripts_model_server",
+      "harness::agents_skills_intel_openvino_model_server_scripts_model_server_load",
+      "harness::agents_skills_intel_openvino_model_server_scripts_model_server_main"
+    ],
+    "44": [
+      "harness::csl_daily"
+    ],
+    "45": [
+      "harness::gfslt_vlp_method"
+    ],
+    "46": [
+      "harness::masked_sentence_learning"
+    ],
+    "47": [
+      "harness::mbarт"
+    ],
+    "48": [
+      "harness::multitask_training"
+    ],
+    "49": [
+      "harness::rtmpose"
+    ],
+    "50": [
+      "harness::specify_scripts_powershell_check_prerequisites"
+    ],
+    "51": [
+      "harness::specify_scripts_powershell_resolve_template"
+    ],
+    "52": [
+      "harness::specify_scripts_powershell_setup_plan"
+    ],
+    "53": [
+      "harness::specify_scripts_powershell_setup_tasks"
+    ],
+    "54": [
+      "app::argumentparser",
+      "app::dataset_src_libras_translation_acquisition",
+      "app::dataset_src_libras_translation_acquisition_atomic_json",
+      "app::dataset_src_libras_translation_acquisition_datasetacquisition",
+      "app::dataset_src_libras_translation_acquisition_datasetacquisition_download_one",
+      "app::dataset_src_libras_translation_acquisition_datasetacquisition_init",
+      "app::dataset_src_libras_translation_acquisition_datasetacquisition_new_or_resume_manifest",
+      "app::dataset_src_libras_translation_acquisition_datasetacquisition_run",
+      "app::dataset_src_libras_translation_acquisition_error_message",
+      "app::dataset_src_libras_translation_acquisition_format_size",
+      "app::dataset_src_libras_translation_acquisition_py_path",
+      "app::dataset_src_libras_translation_cli",
+      "app::dataset_src_libras_translation_cli_build_parser",
+      "app::dataset_src_libras_translation_cli_main",
+      "app::dataset_src_libras_translation_config",
+      "app::dataset_src_libras_translation_config_py_path",
+      "app::dataset_src_libras_translation_config_rationale_31",
+      "app::dataset_src_libras_translation_config_settings",
+      "app::dataset_src_libras_translation_config_settings_hf_token",
+      "app::dataset_src_libras_translation_config_settings_manifests_dir",
+      "app::dataset_src_libras_translation_config_settings_raw_data_dir",
+      "app::dataset_src_libras_translation_infrastructure_huggingface_client",
+      "app::dataset_src_libras_translation_infrastructure_huggingface_client_huggingfaceclient",
+      "app::dataset_src_libras_translation_infrastructure_huggingface_client_huggingfaceclient_download",
+      "app::dataset_src_libras_translation_infrastructure_huggingface_client_huggingfaceclient_init",
+      "app::dataset_src_libras_translation_infrastructure_huggingface_client_huggingfaceclient_list_videos",
+      "app::dataset_src_libras_translation_infrastructure_huggingface_client_huggingfaceclient_resolve_commit",
+      "app::dataset_src_libras_translation_infrastructure_huggingface_client_rationale_15",
+      "app::dataset_src_libras_translation_infrastructure_huggingface_client_remotefile",
+      "app::dataset_src_libras_translation_init",
+      "app::dataset_src_libras_translation_init_rationale_1",
+      "app::dataset_src_libras_translation_main",
+      "app::dataset_tests_test_acquisition",
+      "app::dataset_tests_test_acquisition_acquisitiontests",
+      "app::dataset_tests_test_acquisition_acquisitiontests_test_download_preserves_unicode_path_and_repeat_skips_complete_file",
+      "app::dataset_tests_test_acquisition_acquisitiontests_test_list_only_pins_commit_and_writes_manifest",
+      "app::dataset_tests_test_acquisition_acquisitiontests_test_token_is_loaded_from_project_dotenv_independent_of_current_directory",
+      "app::dataset_tests_test_acquisition_acquisitiontests_test_token_is_read_from_environment_without_logging_it",
+      "app::dataset_tests_test_acquisition_fakeclient",
+      "app::dataset_tests_test_acquisition_fakeclient_download",
+      "app::dataset_tests_test_acquisition_fakeclient_init",
+      "app::dataset_tests_test_acquisition_fakeclient_list_videos",
+      "app::dataset_tests_test_acquisition_fakeclient_resolve_commit",
+      "app::exception"
+    ],
+    "55": [
+      "app::readme",
+      "app::readme_ambiente_no_windows_powershell",
+      "app::readme_aquisição_de_vídeos",
+      "app::readme_estrutura_atual",
+      "app::readme_libras_translation_aquisição_de_datasets"
+    ],
+    "56": [
+      "app::dataset_src_libras_translation_infrastructure_init",
+      "app::dataset_src_libras_translation_infrastructure_init_rationale_1"
+    ],
+    "57": [
+      "app::pkg_libras_translation"
+    ]
+  },
+  "cohesion": {
+    "0": 0.22,
+    "1": 0.21666666666666667,
+    "2": 0.18571428571428572,
+    "3": 0.23333333333333334,
+    "4": 0.24210526315789474,
+    "5": 0.10526315789473684,
+    "6": 0.35947712418300654,
+    "7": 0.225,
+    "8": 0.3047619047619048,
+    "9": 0.2087912087912088,
+    "10": 0.15384615384615385,
+    "11": 0.3181818181818182,
+    "12": 0.19696969696969696,
+    "13": 0.18181818181818182,
+    "14": 0.16666666666666666,
+    "15": 0.3333333333333333,
+    "16": 0.2,
+    "17": 0.3888888888888889,
+    "18": 0.6428571428571429,
+    "19": 0.5,
+    "20": 0.2857142857142857,
+    "21": 0.35714285714285715,
+    "22": 0.25,
+    "23": 0.6190476190476191,
+    "24": 0.5238095238095238,
+    "25": 0.2857142857142857,
+    "26": 0.6,
+    "27": 0.6,
+    "28": 0.6,
+    "29": 0.6666666666666666,
+    "30": 0.4,
+    "31": 0.8,
+    "32": 0.7,
+    "33": 0.7,
+    "34": 0.8333333333333334,
+    "35": 0.8333333333333334,
+    "36": 0.8333333333333334,
+    "37": 0.8333333333333334,
+    "38": 0.8333333333333334,
+    "39": 0.8333333333333334,
+    "40": 1.0,
+    "41": 1.0,
+    "42": 1.0,
+    "43": 1.0,
+    "44": 1.0,
+    "45": 1.0,
+    "46": 1.0,
+    "47": 1.0,
+    "48": 1.0,
+    "49": 1.0,
+    "50": 1.0,
+    "51": 1.0,
+    "52": 1.0,
+    "53": 1.0,
+    "54": 0.08668076109936575,
+    "55": 0.4,
+    "56": 1.0,
+    "57": 1.0
+  },
+  "gods": [
+    {
+      "id": "harness::agents_skills_research_systematic_literature_review_scripts_validate_review_pack_main",
+      "label": "main()",
+      "degree": 14
+    },
+    {
+      "id": "harness::agents_skills_intel_openvino_installer_scripts_openvino_installer_build_report",
+      "label": "_build_report()",
+      "degree": 13
+    },
+    {
+      "id": "app::dataset_src_libras_translation_acquisition_datasetacquisition",
+      "label": "DatasetAcquisition",
+      "degree": 10
+    },
+    {
+      "id": "app::dataset_src_libras_translation_infrastructure_huggingface_client_huggingfaceclient",
+      "label": "HuggingFaceClient",
+      "degree": 10
+    },
+    {
+      "id": "harness::agents_skills_research_systematic_literature_review_scripts_paper_context_artifacts_init_artifacts",
+      "label": "init_artifacts()",
+      "degree": 10
+    },
+    {
+      "id": "harness::agents_skills_litreview_scripts_citation_tracker_main",
+      "label": "main()",
+      "degree": 10
+    },
+    {
+      "id": "harness::agents_skills_research_systematic_literature_review_scripts_init_review_pack_main",
+      "label": "main()",
+      "degree": 10
+    },
+    {
+      "id": "harness::agents_skills_intel_docs_reader_scripts_read_openvino_docs_htmltextparser",
+      "label": "_HtmlTextParser",
+      "degree": 9
+    },
+    {
+      "id": "harness::agents_skills_intel_hardware_advisor_scripts_report_model_build_report",
+      "label": "build_report()",
+      "degree": 9
+    },
+    {
+      "id": "harness::agents_skills_intel_docs_reader_scripts_read_openvino_docs_search_docs",
+      "label": "search_docs()",
+      "degree": 9
+    }
+  ],
+  "surprises": [
+    {
+      "source": "AcquisitionTests",
+      "target": "DatasetAcquisition",
+      "source_files": [
+        "dataset/tests/test_acquisition.py",
+        "dataset/src/libras_translation/acquisition.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "uses",
+      "why": "inferred connection - not explicitly stated in source"
+    },
+    {
+      "source": "AcquisitionTests",
+      "target": "Settings",
+      "source_files": [
+        "dataset/tests/test_acquisition.py",
+        "dataset/src/libras_translation/config.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "uses",
+      "why": "inferred connection - not explicitly stated in source"
+    },
+    {
+      "source": "FakeClient",
+      "target": "RemoteFile",
+      "source_files": [
+        "dataset/tests/test_acquisition.py",
+        "dataset/src/libras_translation/infrastructure/huggingface_client.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "uses",
+      "why": "inferred connection - not explicitly stated in source"
+    },
+    {
+      "source": "main()",
+      "target": "build_report()",
+      "source_files": [
+        ".agents/skills/intel-hardware-advisor/scripts/hardware_probe.py",
+        ".agents/skills/intel-hardware-advisor/scripts/report_model.py"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "main()",
+      "target": "DatasetAcquisition",
+      "source_files": [
+        "dataset/src/libras_translation/cli.py",
+        "dataset/src/libras_translation/acquisition.py"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "cross-file semantic connection"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `CCD-TAAL Relatório Parcial 02` connect `Community 20` to `Community 5`, `Community 10`, `Community 12`, `Community 16`, `Community 22`?",
+      "why": "High betweenness centrality (0.011) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `Tradução gloss-free de Libras para português escrito` connect `Community 21` to `Community 16`, `Community 20`, `Community 13`, `Community 14`?",
+      "why": "High betweenness centrality (0.009) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `Visão computacional aplicada à tradução de Libras` connect `Community 14` to `Community 21`?",
+      "why": "High betweenness centrality (0.007) - this node is a cross-community bridge."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `libras-translation`, `Ambiente no Windows (PowerShell)`, `Aquisição de vídeos` to the rest of the system?",
+      "why": "11 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 5` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.10526315789473684 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 54` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.08668076109936575 - nodes in this community are weakly interconnected."
+    }
+  ]
+}

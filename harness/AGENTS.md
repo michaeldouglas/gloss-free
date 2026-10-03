@@ -2,6 +2,8 @@
 
 This project has a knowledge graph at graphify-out/ with god nodes, community structure, and cross-file relationships.
 
+The canonical Graphify output is `harness/graphify-out/`. The sibling application in `../app/` is represented in this graph under repo `app`; do not keep a second `../app/graphify-out/`. When refreshing application code, merge its extracted graph into this canonical graph and leave the generated output here.
+
 When the user types `/graphify`, use the installed graphify skill or instructions before doing anything else.
 
 Rules:
