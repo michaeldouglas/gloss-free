@@ -1,0 +1,2532 @@
+{
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "failed_sources": [
+    "C:\\Users\\mdbaa\\development\\Dissertacao\\app\\data\\manifests\\v-librasil-raw.json"
+  ],
+  "nodes": [
+    {
+      "id": "dataset_src_libras_translation_init",
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "dataset/src/libras_translation/__init__.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_src_libras_translation_init_rationale_1",
+      "label": "Ferramentas de pesquisa para tradução Gloss-Free de Libras.",
+      "file_type": "rationale",
+      "source_file": "dataset/src/libras_translation/__init__.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_src_libras_translation_main",
+      "label": "__main__.py",
+      "file_type": "code",
+      "source_file": "dataset/src/libras_translation/__main__.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_src_libras_translation_acquisition",
+      "label": "acquisition.py",
+      "file_type": "code",
+      "source_file": "dataset/src/libras_translation/acquisition.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_src_libras_translation_acquisition_format_size",
+      "label": "format_size()",
+      "file_type": "code",
+      "source_file": "dataset/src/libras_translation/acquisition.py",
+      "source_location": "L24",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_src_libras_translation_acquisition_atomic_json",
+      "label": "_atomic_json()",
+      "file_type": "code",
+      "source_file": "dataset/src/libras_translation/acquisition.py",
+      "source_location": "L35",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_src_libras_translation_acquisition_py_path",
+      "label": "Path",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_src_libras_translation_acquisition_error_message",
+      "label": "_error_message()",
+      "file_type": "code",
+      "source_file": "dataset/src/libras_translation/acquisition.py",
+      "source_location": "L51",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_src_libras_translation_acquisition_py_exception",
+      "label": "Exception",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_src_libras_translation_acquisition_datasetacquisition",
+      "label": "DatasetAcquisition",
+      "file_type": "code",
+      "source_file": "dataset/src/libras_translation/acquisition.py",
+      "source_location": "L61",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_src_libras_translation_acquisition_datasetacquisition_init",
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "dataset/src/libras_translation/acquisition.py",
+      "source_location": "L62",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_src_libras_translation_acquisition_datasetacquisition_run",
+      "label": ".run()",
+      "file_type": "code",
+      "source_file": "dataset/src/libras_translation/acquisition.py",
+      "source_location": "L66",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_src_libras_translation_acquisition_datasetacquisition_download_one",
+      "label": "._download_one()",
+      "file_type": "code",
+      "source_file": "dataset/src/libras_translation/acquisition.py",
+      "source_location": "L138",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_src_libras_translation_acquisition_datasetacquisition_new_or_resume_entries",
+      "label": "._new_or_resume_entries()",
+      "file_type": "code",
+      "source_file": "dataset/src/libras_translation/acquisition.py",
+      "source_location": "L165",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_src_libras_translation_acquisition_datasetacquisition_new_or_resume_manifest",
+      "label": "._new_or_resume_manifest()",
+      "file_type": "code",
+      "source_file": "dataset/src/libras_translation/acquisition.py",
+      "source_location": "L179",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_src_libras_translation_cli",
+      "label": "cli.py",
+      "file_type": "code",
+      "source_file": "dataset/src/libras_translation/cli.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_src_libras_translation_cli_selected_datasets",
+      "label": "_selected_datasets()",
+      "file_type": "code",
+      "source_file": "dataset/src/libras_translation/cli.py",
+      "source_location": "L30",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_src_libras_translation_cli_acquisition",
+      "label": "_acquisition()",
+      "file_type": "code",
+      "source_file": "dataset/src/libras_translation/cli.py",
+      "source_location": "L39",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_src_libras_translation_cli_report_error",
+      "label": "_report_error()",
+      "file_type": "code",
+      "source_file": "dataset/src/libras_translation/cli.py",
+      "source_location": "L46",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_src_libras_translation_cli_py_exception",
+      "label": "Exception",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "command",
+      "label": "command",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_src_libras_translation_cli_list_data",
+      "label": "list_data()",
+      "file_type": "code",
+      "source_file": "dataset/src/libras_translation/cli.py",
+      "source_location": "L66",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_src_libras_translation_cli_download_data",
+      "label": "download_data()",
+      "file_type": "code",
+      "source_file": "dataset/src/libras_translation/cli.py",
+      "source_location": "L115",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_src_libras_translation_cli_py_path",
+      "label": "Path",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_src_libras_translation_cli_main",
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "dataset/src/libras_translation/cli.py",
+      "source_location": "L187",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_src_libras_translation_cli_rationale_73",
+      "label": "Resolve um commit, lista vídeos e registra o manifesto da listagem.",
+      "file_type": "rationale",
+      "source_file": "dataset/src/libras_translation/cli.py",
+      "source_location": "L73",
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_src_libras_translation_cli_rationale_126",
+      "label": "Baixa um dataset escolhido explicitamente; não abre menus interativos.",
+      "file_type": "rationale",
+      "source_file": "dataset/src/libras_translation/cli.py",
+      "source_location": "L126",
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_src_libras_translation_config",
+      "label": "config.py",
+      "file_type": "code",
+      "source_file": "dataset/src/libras_translation/config.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_src_libras_translation_config_settings",
+      "label": "Settings",
+      "file_type": "code",
+      "source_file": "dataset/src/libras_translation/config.py",
+      "source_location": "L18",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_src_libras_translation_config_settings_raw_data_dir",
+      "label": ".raw_data_dir()",
+      "file_type": "code",
+      "source_file": "dataset/src/libras_translation/config.py",
+      "source_location": "L22",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_src_libras_translation_config_py_path",
+      "label": "Path",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_src_libras_translation_config_settings_manifests_dir",
+      "label": ".manifests_dir()",
+      "file_type": "code",
+      "source_file": "dataset/src/libras_translation/config.py",
+      "source_location": "L26",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_src_libras_translation_config_settings_hf_token",
+      "label": ".hf_token()",
+      "file_type": "code",
+      "source_file": "dataset/src/libras_translation/config.py",
+      "source_location": "L30",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_src_libras_translation_config_rationale_31",
+      "label": "Read HF_TOKEN populated from the environment or the project .env.",
+      "file_type": "rationale",
+      "source_file": "dataset/src/libras_translation/config.py",
+      "source_location": "L31",
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_src_libras_translation_infrastructure_init",
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "dataset/src/libras_translation/infrastructure/__init__.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_src_libras_translation_infrastructure_init_rationale_1",
+      "label": "Adaptadores externos usados pela aquisição de datasets.",
+      "file_type": "rationale",
+      "source_file": "dataset/src/libras_translation/infrastructure/__init__.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_src_libras_translation_infrastructure_huggingface_client",
+      "label": "huggingface_client.py",
+      "file_type": "code",
+      "source_file": "dataset/src/libras_translation/infrastructure/huggingface_client.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_src_libras_translation_infrastructure_huggingface_client_remotefile",
+      "label": "RemoteFile",
+      "file_type": "code",
+      "source_file": "dataset/src/libras_translation/infrastructure/huggingface_client.py",
+      "source_location": "L9",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_src_libras_translation_infrastructure_huggingface_client_huggingfaceclient",
+      "label": "HuggingFaceClient",
+      "file_type": "code",
+      "source_file": "dataset/src/libras_translation/infrastructure/huggingface_client.py",
+      "source_location": "L14",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_src_libras_translation_infrastructure_huggingface_client_huggingfaceclient_init",
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "dataset/src/libras_translation/infrastructure/huggingface_client.py",
+      "source_location": "L17",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_src_libras_translation_infrastructure_huggingface_client_huggingfaceclient_resolve_commit",
+      "label": ".resolve_commit()",
+      "file_type": "code",
+      "source_file": "dataset/src/libras_translation/infrastructure/huggingface_client.py",
+      "source_location": "L22",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_src_libras_translation_infrastructure_huggingface_client_huggingfaceclient_list_videos",
+      "label": ".list_videos()",
+      "file_type": "code",
+      "source_file": "dataset/src/libras_translation/infrastructure/huggingface_client.py",
+      "source_location": "L28",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_src_libras_translation_infrastructure_huggingface_client_huggingfaceclient_list_repo_files",
+      "label": ".list_repo_files()",
+      "file_type": "code",
+      "source_file": "dataset/src/libras_translation/infrastructure/huggingface_client.py",
+      "source_location": "L31",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_src_libras_translation_infrastructure_huggingface_client_huggingfaceclient_download",
+      "label": ".download()",
+      "file_type": "code",
+      "source_file": "dataset/src/libras_translation/infrastructure/huggingface_client.py",
+      "source_location": "L45",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_src_libras_translation_infrastructure_huggingface_client_rationale_15",
+      "label": "Adaptador pequeno sobre a API oficial do Hugging Face Hub.",
+      "file_type": "rationale",
+      "source_file": "dataset/src/libras_translation/infrastructure/huggingface_client.py",
+      "source_location": "L15",
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_tests_test_acquisition",
+      "label": "test_acquisition.py",
+      "file_type": "code",
+      "source_file": "dataset/tests/test_acquisition.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_tests_test_acquisition_fakeclient",
+      "label": "FakeClient",
+      "file_type": "code",
+      "source_file": "dataset/tests/test_acquisition.py",
+      "source_location": "L14",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_tests_test_acquisition_fakeclient_init",
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "dataset/tests/test_acquisition.py",
+      "source_location": "L15",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_tests_test_acquisition_fakeclient_resolve_commit",
+      "label": ".resolve_commit()",
+      "file_type": "code",
+      "source_file": "dataset/tests/test_acquisition.py",
+      "source_location": "L18",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_tests_test_acquisition_fakeclient_list_videos",
+      "label": ".list_videos()",
+      "file_type": "code",
+      "source_file": "dataset/tests/test_acquisition.py",
+      "source_location": "L21",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_tests_test_acquisition_fakeclient_list_repo_files",
+      "label": ".list_repo_files()",
+      "file_type": "code",
+      "source_file": "dataset/tests/test_acquisition.py",
+      "source_location": "L25",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_tests_test_acquisition_fakeclient_download",
+      "label": ".download()",
+      "file_type": "code",
+      "source_file": "dataset/tests/test_acquisition.py",
+      "source_location": "L34",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_tests_test_acquisition_acquisitiontests",
+      "label": "AcquisitionTests",
+      "file_type": "code",
+      "source_file": "dataset/tests/test_acquisition.py",
+      "source_location": "L41",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_tests_test_acquisition_acquisitiontests_test_token_is_read_from_environment_without_logging_it",
+      "label": ".test_token_is_read_from_environment_without_logging_it()",
+      "file_type": "code",
+      "source_file": "dataset/tests/test_acquisition.py",
+      "source_location": "L42",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_tests_test_acquisition_acquisitiontests_test_token_is_loaded_from_project_dotenv_independent_of_current_directory",
+      "label": ".test_token_is_loaded_from_project_dotenv_independent_of_current_directory()",
+      "file_type": "code",
+      "source_file": "dataset/tests/test_acquisition.py",
+      "source_location": "L47",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_tests_test_acquisition_acquisitiontests_test_list_only_pins_commit_and_writes_manifest",
+      "label": ".test_list_only_pins_commit_and_writes_manifest()",
+      "file_type": "code",
+      "source_file": "dataset/tests/test_acquisition.py",
+      "source_location": "L56",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_tests_test_acquisition_acquisitiontests_test_download_preserves_unicode_path_and_repeat_skips_complete_file",
+      "label": ".test_download_preserves_unicode_path_and_repeat_skips_complete_file()",
+      "file_type": "code",
+      "source_file": "dataset/tests/test_acquisition.py",
+      "source_location": "L70",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_tests_test_acquisition_acquisitiontests_test_limit_restricts_videos_but_keeps_dataset_metadata",
+      "label": ".test_limit_restricts_videos_but_keeps_dataset_metadata()",
+      "file_type": "code",
+      "source_file": "dataset/tests/test_acquisition.py",
+      "source_location": "L83",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_tests_test_cli",
+      "label": "test_cli.py",
+      "file_type": "code",
+      "source_file": "dataset/tests/test_cli.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_tests_test_cli_fakeacquisition",
+      "label": "FakeAcquisition",
+      "file_type": "code",
+      "source_file": "dataset/tests/test_cli.py",
+      "source_location": "L12",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_tests_test_cli_fakeacquisition_init",
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "dataset/tests/test_cli.py",
+      "source_location": "L13",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_tests_test_cli_fakeacquisition_run",
+      "label": ".run()",
+      "file_type": "code",
+      "source_file": "dataset/tests/test_cli.py",
+      "source_location": "L16",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_tests_test_cli_clitests",
+      "label": "CliTests",
+      "file_type": "code",
+      "source_file": "dataset/tests/test_cli.py",
+      "source_location": "L45",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_tests_test_cli_clitests_setup",
+      "label": ".setUp()",
+      "file_type": "code",
+      "source_file": "dataset/tests/test_cli.py",
+      "source_location": "L46",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_tests_test_cli_clitests_test_help_exposes_data_subcommands_and_examples_of_options",
+      "label": ".test_help_exposes_data_subcommands_and_examples_of_options()",
+      "file_type": "code",
+      "source_file": "dataset/tests/test_cli.py",
+      "source_location": "L49",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_tests_test_cli_clitests_test_download_requires_explicit_dataset_without_prompting",
+      "label": ".test_download_requires_explicit_dataset_without_prompting()",
+      "file_type": "code",
+      "source_file": "dataset/tests/test_cli.py",
+      "source_location": "L61",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_tests_test_cli_clitests_test_invoking_without_arguments_shows_help_without_prompting",
+      "label": ".test_invoking_without_arguments_shows_help_without_prompting()",
+      "file_type": "code",
+      "source_file": "dataset/tests/test_cli.py",
+      "source_location": "L66",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_tests_test_cli_clitests_test_invalid_dataset_uses_usage_exit_code",
+      "label": ".test_invalid_dataset_uses_usage_exit_code()",
+      "file_type": "code",
+      "source_file": "dataset/tests/test_cli.py",
+      "source_location": "L72",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_tests_test_cli_clitests_test_list_calls_application_service_and_renders_rich_summary",
+      "label": ".test_list_calls_application_service_and_renders_rich_summary()",
+      "file_type": "code",
+      "source_file": "dataset/tests/test_cli.py",
+      "source_location": "L76",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "dataset_tests_test_cli_clitests_test_download_passes_options_and_renders_summary",
+      "label": ".test_download_passes_options_and_renders_summary()",
+      "file_type": "code",
+      "source_file": "dataset/tests/test_cli.py",
+      "source_location": "L88",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "pkg_libras_translation",
+      "label": "libras-translation",
+      "file_type": "code",
+      "type": "package",
+      "ecosystem": "python",
+      "source_file": "pyproject.toml",
+      "source_location": "L1",
+      "version": "0.1.0",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme",
+      "label": "README.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_libras_translation_aquisição_de_datasets",
+      "label": "Libras Translation — aquisição de datasets",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_ambiente_no_windows_powershell",
+      "label": "Ambiente no Windows (PowerShell)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "README.md",
+      "source_location": "L5",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_aquisição_de_vídeos",
+      "label": "Aquisição de vídeos",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "README.md",
+      "source_location": "L27",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_estrutura_atual",
+      "label": "Estrutura atual",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "README.md",
+      "source_location": "L62",
+      "_origin": "ast"
+    }
+  ],
+  "links": [
+    {
+      "source": "dataset_src_libras_translation_init_rationale_1",
+      "target": "dataset_src_libras_translation_init",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/__init__.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_main",
+      "target": "dataset_src_libras_translation_cli",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/__main__.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_acquisition",
+      "target": "json",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/acquisition.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_acquisition",
+      "target": "logging",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/acquisition.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_acquisition",
+      "target": "os",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/acquisition.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_acquisition",
+      "target": "tempfile",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/acquisition.py",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_acquisition",
+      "target": "threading",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/acquisition.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_acquisition",
+      "target": "time",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/acquisition.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_acquisition",
+      "target": "concurrent_futures",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/acquisition.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_acquisition",
+      "target": "datetime",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/acquisition.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_acquisition",
+      "target": "pathlib",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/acquisition.py",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_acquisition",
+      "target": "typing",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/acquisition.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_acquisition",
+      "target": "huggingface_hub_errors",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/acquisition.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_acquisition",
+      "target": "tqdm",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/acquisition.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_acquisition",
+      "target": "dataset_src_libras_translation_config",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/acquisition.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_acquisition",
+      "target": "dataset_src_libras_translation_infrastructure_huggingface_client",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/acquisition.py",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_acquisition",
+      "target": "dataset_src_libras_translation_acquisition_format_size",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/acquisition.py",
+      "source_location": "L24",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_acquisition",
+      "target": "dataset_src_libras_translation_acquisition_atomic_json",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/acquisition.py",
+      "source_location": "L35",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_acquisition_atomic_json",
+      "target": "dataset_src_libras_translation_acquisition_py_path",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/acquisition.py",
+      "source_location": "L35",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_acquisition",
+      "target": "dataset_src_libras_translation_acquisition_error_message",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/acquisition.py",
+      "source_location": "L51",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_acquisition_error_message",
+      "target": "dataset_src_libras_translation_acquisition_py_exception",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/acquisition.py",
+      "source_location": "L51",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_acquisition",
+      "target": "dataset_src_libras_translation_acquisition_datasetacquisition",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/acquisition.py",
+      "source_location": "L61",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_acquisition_datasetacquisition",
+      "target": "dataset_src_libras_translation_acquisition_datasetacquisition_init",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/acquisition.py",
+      "source_location": "L62",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_acquisition_datasetacquisition_init",
+      "target": "dataset_src_libras_translation_infrastructure_huggingface_client_huggingfaceclient",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/acquisition.py",
+      "source_location": "L62",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_acquisition_datasetacquisition_init",
+      "target": "dataset_src_libras_translation_acquisition_py_path",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/acquisition.py",
+      "source_location": "L62",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_acquisition_datasetacquisition",
+      "target": "dataset_src_libras_translation_acquisition_datasetacquisition_run",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/acquisition.py",
+      "source_location": "L66",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_acquisition_datasetacquisition_run",
+      "target": "dataset_src_libras_translation_acquisition_py_path",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/acquisition.py",
+      "source_location": "L66",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_acquisition_datasetacquisition",
+      "target": "dataset_src_libras_translation_acquisition_datasetacquisition_download_one",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/acquisition.py",
+      "source_location": "L138",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_acquisition_datasetacquisition_download_one",
+      "target": "dataset_src_libras_translation_infrastructure_huggingface_client_remotefile",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/acquisition.py",
+      "source_location": "L138",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_acquisition_datasetacquisition_download_one",
+      "target": "dataset_src_libras_translation_acquisition_py_path",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/acquisition.py",
+      "source_location": "L138",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_acquisition_datasetacquisition",
+      "target": "dataset_src_libras_translation_acquisition_datasetacquisition_new_or_resume_entries",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/acquisition.py",
+      "source_location": "L165",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_acquisition_datasetacquisition_new_or_resume_entries",
+      "target": "dataset_src_libras_translation_infrastructure_huggingface_client_remotefile",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/acquisition.py",
+      "source_location": "L165",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_acquisition_datasetacquisition",
+      "target": "dataset_src_libras_translation_acquisition_datasetacquisition_new_or_resume_manifest",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/acquisition.py",
+      "source_location": "L179",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_acquisition_datasetacquisition_new_or_resume_manifest",
+      "target": "dataset_src_libras_translation_acquisition_py_path",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/acquisition.py",
+      "source_location": "L179",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_acquisition_datasetacquisition_new_or_resume_manifest",
+      "target": "dataset_src_libras_translation_infrastructure_huggingface_client_remotefile",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/acquisition.py",
+      "source_location": "L179",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_acquisition_atomic_json",
+      "target": "dataset_src_libras_translation_acquisition_py_path",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/acquisition.py",
+      "source_location": "L42",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_acquisition_datasetacquisition_run",
+      "target": "dataset_src_libras_translation_acquisition_datasetacquisition_new_or_resume_manifest",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/acquisition.py",
+      "source_location": "L93",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_acquisition_datasetacquisition_run",
+      "target": "dataset_src_libras_translation_acquisition_datasetacquisition_new_or_resume_entries",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/acquisition.py",
+      "source_location": "L94",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_acquisition_datasetacquisition_run",
+      "target": "dataset_src_libras_translation_acquisition_atomic_json",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/acquisition.py",
+      "source_location": "L98",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_acquisition_datasetacquisition_run",
+      "target": "dataset_src_libras_translation_acquisition_error_message",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/acquisition.py",
+      "source_location": "L118",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_cli",
+      "target": "logging",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/cli.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_cli",
+      "target": "pathlib",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/cli.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_cli",
+      "target": "typer",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/cli.py",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_cli",
+      "target": "huggingface_hub_errors",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/cli.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_cli",
+      "target": "rich_console",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/cli.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_cli",
+      "target": "rich_progress",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/cli.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_cli",
+      "target": "rich_table",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/cli.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_cli",
+      "target": "dataset_src_libras_translation_acquisition",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/cli.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_cli",
+      "target": "dataset_src_libras_translation_config",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/cli.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_cli",
+      "target": "dataset_src_libras_translation_infrastructure_huggingface_client",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/cli.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_cli",
+      "target": "dataset_src_libras_translation_cli_selected_datasets",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/cli.py",
+      "source_location": "L30",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_cli",
+      "target": "dataset_src_libras_translation_cli_acquisition",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/cli.py",
+      "source_location": "L39",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_cli_acquisition",
+      "target": "dataset_src_libras_translation_acquisition_datasetacquisition",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/cli.py",
+      "source_location": "L39",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_cli",
+      "target": "dataset_src_libras_translation_cli_report_error",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/cli.py",
+      "source_location": "L46",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_cli_report_error",
+      "target": "dataset_src_libras_translation_cli_py_exception",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/cli.py",
+      "source_location": "L46",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_cli_list_data",
+      "target": "command",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/cli.py",
+      "source_location": "L62",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_cli",
+      "target": "dataset_src_libras_translation_cli_list_data",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/cli.py",
+      "source_location": "L66",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_cli_download_data",
+      "target": "command",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/cli.py",
+      "source_location": "L111",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_cli",
+      "target": "dataset_src_libras_translation_cli_download_data",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/cli.py",
+      "source_location": "L115",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_cli_download_data",
+      "target": "dataset_src_libras_translation_cli_py_path",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/cli.py",
+      "source_location": "L115",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_cli",
+      "target": "dataset_src_libras_translation_cli_main",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/cli.py",
+      "source_location": "L187",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_cli_acquisition",
+      "target": "dataset_src_libras_translation_acquisition_datasetacquisition",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/cli.py",
+      "source_location": "L40",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_cli_list_data",
+      "target": "dataset_src_libras_translation_cli_selected_datasets",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/cli.py",
+      "source_location": "L74",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_cli_list_data",
+      "target": "dataset_src_libras_translation_cli_acquisition",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/cli.py",
+      "source_location": "L75",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_cli_list_data",
+      "target": "dataset_src_libras_translation_cli_report_error",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/cli.py",
+      "source_location": "L88",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_cli_download_data",
+      "target": "dataset_src_libras_translation_cli_selected_datasets",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/cli.py",
+      "source_location": "L127",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_cli_download_data",
+      "target": "dataset_src_libras_translation_cli_acquisition",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/cli.py",
+      "source_location": "L133",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_cli_download_data",
+      "target": "dataset_src_libras_translation_cli_report_error",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/cli.py",
+      "source_location": "L167",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_cli_rationale_73",
+      "target": "dataset_src_libras_translation_cli_list_data",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/cli.py",
+      "source_location": "L73",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_cli_rationale_126",
+      "target": "dataset_src_libras_translation_cli_download_data",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/cli.py",
+      "source_location": "L126",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_config",
+      "target": "os",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/config.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_config",
+      "target": "dataclasses",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/config.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_config",
+      "target": "pathlib",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/config.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_config",
+      "target": "dotenv",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/config.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_config",
+      "target": "dataset_src_libras_translation_config_settings",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/config.py",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_config_settings",
+      "target": "dataset_src_libras_translation_config_settings_raw_data_dir",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/config.py",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_config_settings_raw_data_dir",
+      "target": "dataset_src_libras_translation_config_py_path",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/config.py",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_config_settings",
+      "target": "dataset_src_libras_translation_config_settings_manifests_dir",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/config.py",
+      "source_location": "L26",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_config_settings_manifests_dir",
+      "target": "dataset_src_libras_translation_config_py_path",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/config.py",
+      "source_location": "L26",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_config_settings",
+      "target": "dataset_src_libras_translation_config_settings_hf_token",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/config.py",
+      "source_location": "L30",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_config_rationale_31",
+      "target": "dataset_src_libras_translation_config_settings_hf_token",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/config.py",
+      "source_location": "L31",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_infrastructure_init_rationale_1",
+      "target": "dataset_src_libras_translation_infrastructure_init",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/infrastructure/__init__.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_infrastructure_huggingface_client",
+      "target": "dataclasses",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/infrastructure/huggingface_client.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_infrastructure_huggingface_client",
+      "target": "huggingface_hub",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/infrastructure/huggingface_client.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_infrastructure_huggingface_client",
+      "target": "dataset_src_libras_translation_infrastructure_huggingface_client_remotefile",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/infrastructure/huggingface_client.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_infrastructure_huggingface_client",
+      "target": "dataset_src_libras_translation_infrastructure_huggingface_client_huggingfaceclient",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/infrastructure/huggingface_client.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_infrastructure_huggingface_client_huggingfaceclient",
+      "target": "dataset_src_libras_translation_infrastructure_huggingface_client_huggingfaceclient_init",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/infrastructure/huggingface_client.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_infrastructure_huggingface_client_huggingfaceclient",
+      "target": "dataset_src_libras_translation_infrastructure_huggingface_client_huggingfaceclient_resolve_commit",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/infrastructure/huggingface_client.py",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_infrastructure_huggingface_client_huggingfaceclient",
+      "target": "dataset_src_libras_translation_infrastructure_huggingface_client_huggingfaceclient_list_videos",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/infrastructure/huggingface_client.py",
+      "source_location": "L28",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_infrastructure_huggingface_client_huggingfaceclient_list_videos",
+      "target": "dataset_src_libras_translation_infrastructure_huggingface_client_remotefile",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/infrastructure/huggingface_client.py",
+      "source_location": "L28",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_infrastructure_huggingface_client_huggingfaceclient",
+      "target": "dataset_src_libras_translation_infrastructure_huggingface_client_huggingfaceclient_list_repo_files",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/infrastructure/huggingface_client.py",
+      "source_location": "L31",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_infrastructure_huggingface_client_huggingfaceclient_list_repo_files",
+      "target": "dataset_src_libras_translation_infrastructure_huggingface_client_remotefile",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/infrastructure/huggingface_client.py",
+      "source_location": "L31",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_infrastructure_huggingface_client_huggingfaceclient",
+      "target": "dataset_src_libras_translation_infrastructure_huggingface_client_huggingfaceclient_download",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/infrastructure/huggingface_client.py",
+      "source_location": "L45",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_infrastructure_huggingface_client_huggingfaceclient_list_videos",
+      "target": "dataset_src_libras_translation_infrastructure_huggingface_client_huggingfaceclient_list_repo_files",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/infrastructure/huggingface_client.py",
+      "source_location": "L29",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_infrastructure_huggingface_client_huggingfaceclient_list_repo_files",
+      "target": "dataset_src_libras_translation_infrastructure_huggingface_client_remotefile",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/infrastructure/huggingface_client.py",
+      "source_location": "L42",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_infrastructure_huggingface_client_rationale_15",
+      "target": "dataset_src_libras_translation_infrastructure_huggingface_client_huggingfaceclient",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/infrastructure/huggingface_client.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_tests_test_acquisition",
+      "target": "json",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/tests/test_acquisition.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_tests_test_acquisition",
+      "target": "os",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/tests/test_acquisition.py",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_tests_test_acquisition",
+      "target": "tempfile",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/tests/test_acquisition.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_tests_test_acquisition",
+      "target": "unittest",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/tests/test_acquisition.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_tests_test_acquisition",
+      "target": "pathlib",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/tests/test_acquisition.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_tests_test_acquisition",
+      "target": "unittest_mock",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/tests/test_acquisition.py",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_tests_test_acquisition",
+      "target": "dataset_src_libras_translation_init",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/tests/test_acquisition.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_tests_test_acquisition",
+      "target": "dataset_src_libras_translation_config",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/tests/test_acquisition.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_tests_test_acquisition",
+      "target": "dataset_src_libras_translation_acquisition",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/tests/test_acquisition.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_tests_test_acquisition",
+      "target": "dataset_src_libras_translation_infrastructure_huggingface_client",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/tests/test_acquisition.py",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_tests_test_acquisition",
+      "target": "dataset_tests_test_acquisition_fakeclient",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/tests/test_acquisition.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_tests_test_acquisition_fakeclient",
+      "target": "dataset_tests_test_acquisition_fakeclient_init",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/tests/test_acquisition.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_tests_test_acquisition_fakeclient",
+      "target": "dataset_tests_test_acquisition_fakeclient_resolve_commit",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/tests/test_acquisition.py",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_tests_test_acquisition_fakeclient",
+      "target": "dataset_tests_test_acquisition_fakeclient_list_videos",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/tests/test_acquisition.py",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_tests_test_acquisition_fakeclient",
+      "target": "dataset_tests_test_acquisition_fakeclient_list_repo_files",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/tests/test_acquisition.py",
+      "source_location": "L25",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_tests_test_acquisition_fakeclient",
+      "target": "dataset_tests_test_acquisition_fakeclient_download",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/tests/test_acquisition.py",
+      "source_location": "L34",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_tests_test_acquisition",
+      "target": "dataset_tests_test_acquisition_acquisitiontests",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/tests/test_acquisition.py",
+      "source_location": "L41",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_tests_test_acquisition_acquisitiontests",
+      "target": "dataset_tests_test_acquisition_acquisitiontests_test_token_is_read_from_environment_without_logging_it",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/tests/test_acquisition.py",
+      "source_location": "L42",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_tests_test_acquisition_acquisitiontests",
+      "target": "dataset_tests_test_acquisition_acquisitiontests_test_token_is_loaded_from_project_dotenv_independent_of_current_directory",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/tests/test_acquisition.py",
+      "source_location": "L47",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_tests_test_acquisition_acquisitiontests",
+      "target": "dataset_tests_test_acquisition_acquisitiontests_test_list_only_pins_commit_and_writes_manifest",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/tests/test_acquisition.py",
+      "source_location": "L56",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_tests_test_acquisition_acquisitiontests",
+      "target": "dataset_tests_test_acquisition_acquisitiontests_test_download_preserves_unicode_path_and_repeat_skips_complete_file",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/tests/test_acquisition.py",
+      "source_location": "L70",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_tests_test_acquisition_acquisitiontests",
+      "target": "dataset_tests_test_acquisition_acquisitiontests_test_limit_restricts_videos_but_keeps_dataset_metadata",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/tests/test_acquisition.py",
+      "source_location": "L83",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_tests_test_acquisition_acquisitiontests_test_list_only_pins_commit_and_writes_manifest",
+      "target": "dataset_tests_test_acquisition_fakeclient",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/tests/test_acquisition.py",
+      "source_location": "L59",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_tests_test_acquisition_acquisitiontests_test_download_preserves_unicode_path_and_repeat_skips_complete_file",
+      "target": "dataset_tests_test_acquisition_fakeclient",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/tests/test_acquisition.py",
+      "source_location": "L73",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_tests_test_acquisition_acquisitiontests_test_limit_restricts_videos_but_keeps_dataset_metadata",
+      "target": "dataset_tests_test_acquisition_fakeclient",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/tests/test_acquisition.py",
+      "source_location": "L86",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_tests_test_cli",
+      "target": "unittest",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/tests/test_cli.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_tests_test_cli",
+      "target": "pathlib",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/tests/test_cli.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_tests_test_cli",
+      "target": "unittest_mock",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/tests/test_cli.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_tests_test_cli",
+      "target": "typer_testing",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/tests/test_cli.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_tests_test_cli",
+      "target": "dataset_src_libras_translation_init",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/tests/test_cli.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_tests_test_cli",
+      "target": "dataset_tests_test_cli_fakeacquisition",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/tests/test_cli.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_tests_test_cli_fakeacquisition",
+      "target": "dataset_tests_test_cli_fakeacquisition_init",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/tests/test_cli.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_tests_test_cli_fakeacquisition",
+      "target": "dataset_tests_test_cli_fakeacquisition_run",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/tests/test_cli.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_tests_test_cli",
+      "target": "dataset_tests_test_cli_clitests",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/tests/test_cli.py",
+      "source_location": "L45",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_tests_test_cli_clitests",
+      "target": "dataset_tests_test_cli_clitests_setup",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/tests/test_cli.py",
+      "source_location": "L46",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_tests_test_cli_clitests",
+      "target": "dataset_tests_test_cli_clitests_test_help_exposes_data_subcommands_and_examples_of_options",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/tests/test_cli.py",
+      "source_location": "L49",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_tests_test_cli_clitests",
+      "target": "dataset_tests_test_cli_clitests_test_download_requires_explicit_dataset_without_prompting",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/tests/test_cli.py",
+      "source_location": "L61",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_tests_test_cli_clitests",
+      "target": "dataset_tests_test_cli_clitests_test_invoking_without_arguments_shows_help_without_prompting",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/tests/test_cli.py",
+      "source_location": "L66",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_tests_test_cli_clitests",
+      "target": "dataset_tests_test_cli_clitests_test_invalid_dataset_uses_usage_exit_code",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/tests/test_cli.py",
+      "source_location": "L72",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_tests_test_cli_clitests",
+      "target": "dataset_tests_test_cli_clitests_test_list_calls_application_service_and_renders_rich_summary",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/tests/test_cli.py",
+      "source_location": "L76",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_tests_test_cli_clitests",
+      "target": "dataset_tests_test_cli_clitests_test_download_passes_options_and_renders_summary",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/tests/test_cli.py",
+      "source_location": "L88",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_tests_test_cli_clitests_test_list_calls_application_service_and_renders_rich_summary",
+      "target": "dataset_tests_test_cli_fakeacquisition",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/tests/test_cli.py",
+      "source_location": "L77",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_tests_test_cli_clitests_test_download_passes_options_and_renders_summary",
+      "target": "dataset_tests_test_cli_fakeacquisition",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/tests/test_cli.py",
+      "source_location": "L89",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "pkg_libras_translation",
+      "target": "pkg_huggingface_hub",
+      "relation": "depends_on",
+      "context": "dependency",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "pyproject.toml",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "pkg_libras_translation",
+      "target": "pkg_python_dotenv",
+      "relation": "depends_on",
+      "context": "dependency",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "pyproject.toml",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "pkg_libras_translation",
+      "target": "pkg_rich",
+      "relation": "depends_on",
+      "context": "dependency",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "pyproject.toml",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "pkg_libras_translation",
+      "target": "pkg_typer",
+      "relation": "depends_on",
+      "context": "dependency",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "pyproject.toml",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme",
+      "target": "readme_libras_translation_aquisição_de_datasets",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_libras_translation_aquisição_de_datasets",
+      "target": "readme_ambiente_no_windows_powershell",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_libras_translation_aquisição_de_datasets",
+      "target": "readme_aquisição_de_vídeos",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L27",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_libras_translation_aquisição_de_datasets",
+      "target": "readme_estrutura_atual",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L62",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_main",
+      "target": "dataset_src_libras_translation_cli_main",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/__main__.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_acquisition",
+      "target": "dataset_src_libras_translation_infrastructure_huggingface_client_huggingfaceclient",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/acquisition.py",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_acquisition",
+      "target": "dataset_src_libras_translation_infrastructure_huggingface_client_remotefile",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/acquisition.py",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_cli",
+      "target": "dataset_src_libras_translation_acquisition_datasetacquisition",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/cli.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_cli",
+      "target": "dataset_src_libras_translation_acquisition_format_size",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/cli.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_cli",
+      "target": "dataset_src_libras_translation_config_settings",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/cli.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_cli",
+      "target": "dataset_src_libras_translation_infrastructure_huggingface_client_huggingfaceclient",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/cli.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_cli_acquisition",
+      "target": "dataset_src_libras_translation_infrastructure_huggingface_client_huggingfaceclient",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "dataset/src/libras_translation/cli.py",
+      "source_location": "L41",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_cli_acquisition",
+      "target": "dataset_src_libras_translation_acquisition_datasetacquisition",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "dataset/src/libras_translation/cli.py",
+      "source_location": "L39",
+      "weight": 0.8,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_cli_acquisition",
+      "target": "dataset_src_libras_translation_config_settings",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "dataset/src/libras_translation/cli.py",
+      "source_location": "L41",
+      "weight": 0.8,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_cli_list_data",
+      "target": "dataset_src_libras_translation_config_settings",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "dataset/src/libras_translation/cli.py",
+      "source_location": "L86",
+      "weight": 0.8,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_cli_download_data",
+      "target": "dataset_src_libras_translation_config_settings",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "dataset/src/libras_translation/cli.py",
+      "source_location": "L132",
+      "weight": 0.8,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_tests_test_acquisition_acquisitiontests",
+      "target": "dataset_src_libras_translation_config_settings",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "dataset/tests/test_acquisition.py",
+      "source_location": "L44",
+      "weight": 0.8,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_tests_test_acquisition_acquisitiontests",
+      "target": "dataset_src_libras_translation_acquisition_datasetacquisition",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "dataset/tests/test_acquisition.py",
+      "source_location": "L60",
+      "weight": 0.8,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_tests_test_acquisition_fakeclient",
+      "target": "dataset_src_libras_translation_infrastructure_huggingface_client_remotefile",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "dataset/tests/test_acquisition.py",
+      "source_location": "L23",
+      "weight": 0.8,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_cli_list_data",
+      "target": "dataset_src_libras_translation_acquisition_format_size",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "dataset/src/libras_translation/cli.py",
+      "source_location": "L95",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_tests_test_acquisition_fakeclient_list_videos",
+      "target": "dataset_src_libras_translation_infrastructure_huggingface_client_remotefile",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "dataset/tests/test_acquisition.py",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_tests_test_acquisition_fakeclient_list_repo_files",
+      "target": "dataset_src_libras_translation_infrastructure_huggingface_client_remotefile",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "dataset/tests/test_acquisition.py",
+      "source_location": "L28",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_tests_test_acquisition_acquisitiontests_test_list_only_pins_commit_and_writes_manifest",
+      "target": "dataset_src_libras_translation_acquisition_datasetacquisition",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "dataset/tests/test_acquisition.py",
+      "source_location": "L60",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_tests_test_acquisition_acquisitiontests_test_download_preserves_unicode_path_and_repeat_skips_complete_file",
+      "target": "dataset_src_libras_translation_acquisition_datasetacquisition",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "dataset/tests/test_acquisition.py",
+      "source_location": "L74",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_tests_test_acquisition_acquisitiontests_test_limit_restricts_videos_but_keeps_dataset_metadata",
+      "target": "dataset_src_libras_translation_acquisition_datasetacquisition",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "dataset/tests/test_acquisition.py",
+      "source_location": "L87",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_acquisition_datasetacquisition_new_or_resume_manifest",
+      "target": "dataset_src_libras_translation_acquisition_datasetacquisition_new_or_resume_entries",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "dataset/src/libras_translation/acquisition.py",
+      "source_location": "L188",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_src_libras_translation_cli_acquisition",
+      "target": "dataset_src_libras_translation_config_settings_hf_token",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "dataset/src/libras_translation/cli.py",
+      "source_location": "L41",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_tests_test_acquisition_acquisitiontests_test_token_is_read_from_environment_without_logging_it",
+      "target": "dataset_src_libras_translation_config_settings_hf_token",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "dataset/tests/test_acquisition.py",
+      "source_location": "L44",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "dataset_tests_test_acquisition_acquisitiontests_test_token_is_loaded_from_project_dotenv_independent_of_current_directory",
+      "target": "dataset_src_libras_translation_config_settings_hf_token",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "dataset/tests/test_acquisition.py",
+      "source_location": "L54",
+      "weight": 1.0,
+      "_origin": "ast"
+    }
+  ],
+  "directed": false
+}

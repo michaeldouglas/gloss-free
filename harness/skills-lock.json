@@ -1,6 +1,60 @@
 {
   "version": 1,
   "skills": {
+    "intel-docs-reader": {
+      "source": "michaeldouglas/intel-ai-skills",
+      "sourceType": "github",
+      "skillPath": "skills/intel-docs-reader/SKILL.md",
+      "computedHash": "5ee5db1c7f0eaacf3ebe5ad36649f041340da7c7f8f45ad33a2253045630f467"
+    },
+    "intel-hardware-advisor": {
+      "source": "michaeldouglas/intel-ai-skills",
+      "sourceType": "github",
+      "skillPath": "skills/intel-hardware-advisor/SKILL.md",
+      "computedHash": "d23c3f4e757f948c7afd1820673a610033764c40ee09e635ae549bcd2d64b2a5"
+    },
+    "intel-openvino-benchmark": {
+      "source": "michaeldouglas/intel-ai-skills",
+      "sourceType": "github",
+      "skillPath": "skills/intel-openvino-benchmark/SKILL.md",
+      "computedHash": "1c62b3e2b889c165460157b2abe76984cda5631bc3cc89eec1c85ff5376f4216"
+    },
+    "intel-openvino-genai-runner": {
+      "source": "michaeldouglas/intel-ai-skills",
+      "sourceType": "github",
+      "skillPath": "skills/intel-openvino-genai-runner/SKILL.md",
+      "computedHash": "1f6024e2ed1e63176671d0c69c41b205139bf3ba3d80c7da0d1adb425601c4a3"
+    },
+    "intel-openvino-inference-runner": {
+      "source": "michaeldouglas/intel-ai-skills",
+      "sourceType": "github",
+      "skillPath": "skills/intel-openvino-inference-runner/SKILL.md",
+      "computedHash": "aacdfd95988ea76b7ecef5d2f9a0f305392c1fd3b07d91e14174e2525fef3386"
+    },
+    "intel-openvino-installer": {
+      "source": "michaeldouglas/intel-ai-skills",
+      "sourceType": "github",
+      "skillPath": "skills/intel-openvino-installer/SKILL.md",
+      "computedHash": "10388f6ea869803589f175008580d29053a1d10acb4f5683b87d78f4d93a3031"
+    },
+    "intel-openvino-model-converter": {
+      "source": "michaeldouglas/intel-ai-skills",
+      "sourceType": "github",
+      "skillPath": "skills/intel-openvino-model-converter/SKILL.md",
+      "computedHash": "5cb57e33b3eac922ee01562ff514f5797adfc7df478456cd6131ff7b25b16d58"
+    },
+    "intel-openvino-model-optimizer": {
+      "source": "michaeldouglas/intel-ai-skills",
+      "sourceType": "github",
+      "skillPath": "skills/intel-openvino-model-optimizer/SKILL.md",
+      "computedHash": "04231f1419882c27b0a7431b58db2843a86989b3c91aa73bc1671795e2348d8a"
+    },
+    "intel-openvino-model-server": {
+      "source": "michaeldouglas/intel-ai-skills",
+      "sourceType": "github",
+      "skillPath": "skills/intel-openvino-model-server/SKILL.md",
+      "computedHash": "589847b9cc897abfb89297301bf60c84f4a5288ba61559070b0a435b165c4237"
+    },
     "systematic-literature-review": {
       "source": "bytedance/deer-flow",
       "sourceType": "github",

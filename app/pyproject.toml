@@ -1,7 +1,22 @@
 [project]
-name = "app"
+name = "libras-translation"
 version = "0.1.0"
-description = "Add your description here"
+description = "Aquisição reproduzível de vídeos para pesquisa em tradução Gloss-Free de Libras"
 readme = "README.md"
-requires-python = ">=3.14"
-dependencies = []
+requires-python = ">=3.10"
+dependencies = [
+    "huggingface_hub>=0.27",
+    "python-dotenv>=1.0",
+    "rich>=13.7",
+    "typer>=0.12",
+]
+
+[project.scripts]
+libras = "libras_translation.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["dataset/src"]

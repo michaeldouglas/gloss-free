@@ -1,0 +1,25 @@
+# Large data and generated research artifacts
+/data/raw/**
+!/data/raw/.gitkeep
+
+# Credentials and local environment
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+graphify-out/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.cache/
+.coverage
+htmlcov/
+*.part
+*.tmp
+.DS_Store
+Thumbs.db

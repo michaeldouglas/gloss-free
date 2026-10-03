@@ -1,0 +1,296 @@
+{
+  ".agents/skills/intel-docs-reader/scripts/read_openvino_docs.py": {
+    "mtime": 1789608385.9670525,
+    "seen": 1791042222.595989,
+    "ast_hash": "15026534785c5d59a7283572a638b965",
+    "semantic_hash": "15026534785c5d59a7283572a638b965"
+  },
+  ".agents/skills/intel-hardware-advisor/scripts/hardware_probe.py": {
+    "mtime": 1789608375.6370132,
+    "seen": 1791042222.595993,
+    "ast_hash": "35b0355e91aa965a91f769a06db20d37",
+    "semantic_hash": "35b0355e91aa965a91f769a06db20d37"
+  },
+  ".agents/skills/intel-hardware-advisor/scripts/report_model.py": {
+    "mtime": 1789608375.6370132,
+    "seen": 1791042222.595995,
+    "ast_hash": "23ba6239d215f2263717d2f6dbd9c28f",
+    "semantic_hash": "23ba6239d215f2263717d2f6dbd9c28f"
+  },
+  ".agents/skills/intel-openvino-benchmark/scripts/benchmark_runner.py": {
+    "mtime": 1789608414.4920788,
+    "seen": 1791042222.5959957,
+    "ast_hash": "a5e50718d7f55169d2675ca46d65897a",
+    "semantic_hash": "a5e50718d7f55169d2675ca46d65897a"
+  },
+  ".agents/skills/intel-openvino-genai-runner/scripts/genai_runner.py": {
+    "mtime": 1789608443.4132986,
+    "seen": 1791042222.5959964,
+    "ast_hash": "8b1e4f4c3ecfc8b812d2e9bdee395407",
+    "semantic_hash": "8b1e4f4c3ecfc8b812d2e9bdee395407"
+  },
+  ".agents/skills/intel-openvino-inference-runner/scripts/inference_runner.py": {
+    "mtime": 1789608408.6157277,
+    "seen": 1791042222.595997,
+    "ast_hash": "cd43dbbd49438df6151b6feacaaea9e4",
+    "semantic_hash": "cd43dbbd49438df6151b6feacaaea9e4"
+  },
+  ".agents/skills/intel-openvino-installer/scripts/openvino_installer.py": {
+    "mtime": 1789608394.6708264,
+    "seen": 1791042222.595998,
+    "ast_hash": "5072e254c222ca9536755d038864d8ec",
+    "semantic_hash": "5072e254c222ca9536755d038864d8ec"
+  },
+  ".agents/skills/intel-openvino-model-converter/scripts/model_converter.py": {
+    "mtime": 1789608401.4311357,
+    "seen": 1791042222.5959988,
+    "ast_hash": "1f97d36c07c3e920c59848fd29eca102",
+    "semantic_hash": "1f97d36c07c3e920c59848fd29eca102"
+  },
+  ".agents/skills/intel-openvino-model-optimizer/scripts/model_optimizer.py": {
+    "mtime": 1789608421.4312556,
+    "seen": 1791042222.5959992,
+    "ast_hash": "1444357edc04de484b2a935091db6638",
+    "semantic_hash": "1444357edc04de484b2a935091db6638"
+  },
+  ".agents/skills/intel-openvino-model-server/scripts/model_server.py": {
+    "mtime": 1789608428.6116188,
+    "seen": 1791042222.5959997,
+    "ast_hash": "ba5eb46c17f3e2117422ff8aacbea299",
+    "semantic_hash": "ba5eb46c17f3e2117422ff8aacbea299"
+  },
+  ".agents/skills/literature-review-closed-evidence/scripts/create_review_matrices.py": {
+    "mtime": 1789602126.3439143,
+    "seen": 1791042222.5960004,
+    "ast_hash": "c3d24e9d1c548a4d0136ca92394f470e",
+    "semantic_hash": "c3d24e9d1c548a4d0136ca92394f470e"
+  },
+  ".agents/skills/literature-review-closed-evidence/scripts/extract_pdf_front_matter.py": {
+    "mtime": 1789602126.3459246,
+    "seen": 1791042222.5960014,
+    "ast_hash": "6ae2afb3d7a740053aa263b2a498337b",
+    "semantic_hash": "6ae2afb3d7a740053aa263b2a498337b"
+  },
+  ".agents/skills/literature-review-closed-evidence/scripts/extract_pdf_text.py": {
+    "mtime": 1789602126.3479383,
+    "seen": 1791042222.5960019,
+    "ast_hash": "49d8991d151090975001c85621739da5",
+    "semantic_hash": "49d8991d151090975001c85621739da5"
+  },
+  ".agents/skills/literature-review-closed-evidence/scripts/register_sources.py": {
+    "mtime": 1789602126.3479383,
+    "seen": 1791042222.5960026,
+    "ast_hash": "0e262fe3853200f20c55d2c36e567d9b",
+    "semantic_hash": "0e262fe3853200f20c55d2c36e567d9b"
+  },
+  ".agents/skills/literature-review-closed-evidence/scripts/validate_citation_ledger.py": {
+    "mtime": 1789602126.3499901,
+    "seen": 1791042222.5960033,
+    "ast_hash": "781cfadd1cf81232b681636257cdb36b",
+    "semantic_hash": "781cfadd1cf81232b681636257cdb36b"
+  },
+  ".agents/skills/literature-review-ml/scripts/aggregate.py": {
+    "mtime": 1789602128.670502,
+    "seen": 1791042222.5960035,
+    "ast_hash": "fea461833697895f0fc42a5384a29a4b",
+    "semantic_hash": "fea461833697895f0fc42a5384a29a4b"
+  },
+  ".agents/skills/literature-review-ml/scripts/generate_pdf.py": {
+    "mtime": 1789602128.670502,
+    "seen": 1791042222.5960042,
+    "ast_hash": "836e356be1202c67be8b45258b0ca37d",
+    "semantic_hash": "836e356be1202c67be8b45258b0ca37d"
+  },
+  ".agents/skills/literature-review-ml/scripts/search_arxiv.py": {
+    "mtime": 1789602128.670502,
+    "seen": 1791042222.596005,
+    "ast_hash": "ee1fa225112f4cb3c021eb9cf5b3a5bd",
+    "semantic_hash": "ee1fa225112f4cb3c021eb9cf5b3a5bd"
+  },
+  ".agents/skills/literature-review-ml/scripts/search_crossref.py": {
+    "mtime": 1789602128.670502,
+    "seen": 1791042222.5960054,
+    "ast_hash": "779d593fcf2b45188caf8cf29517f186",
+    "semantic_hash": "779d593fcf2b45188caf8cf29517f186"
+  },
+  ".agents/skills/literature-review-ml/scripts/search_openalex.py": {
+    "mtime": 1789602128.682304,
+    "seen": 1791042222.5960062,
+    "ast_hash": "49e94f0571610d60fa3d5a8dc92e34b0",
+    "semantic_hash": "49e94f0571610d60fa3d5a8dc92e34b0"
+  },
+  ".agents/skills/literature-review-ml/scripts/search_pubmed.py": {
+    "mtime": 1789602128.682304,
+    "seen": 1791042222.5960069,
+    "ast_hash": "238b715afa5bcdf318ee66d27203cd94",
+    "semantic_hash": "238b715afa5bcdf318ee66d27203cd94"
+  },
+  ".agents/skills/literature-review-ml/scripts/search_semantic_scholar.py": {
+    "mtime": 1789602128.682304,
+    "seen": 1791042222.5960073,
+    "ast_hash": "218e828c0e266aa4f9163c81daad1cee",
+    "semantic_hash": "218e828c0e266aa4f9163c81daad1cee"
+  },
+  ".agents/skills/literature-review-ml/scripts/verify_citations.py": {
+    "mtime": 1789602128.682304,
+    "seen": 1791042222.5960085,
+    "ast_hash": "f722a5d6990f583f338591bff21bce74",
+    "semantic_hash": "f722a5d6990f583f338591bff21bce74"
+  },
+  ".agents/skills/litreview/scripts/citation_tracker.py": {
+    "mtime": 1789602121.0895445,
+    "seen": 1791042222.5960093,
+    "ast_hash": "a5e08160c0a47de818d396ce9d864300",
+    "semantic_hash": "a5e08160c0a47de818d396ce9d864300"
+  },
+  ".agents/skills/litreview/scripts/cross_search_aggregator.py": {
+    "mtime": 1789602121.0954342,
+    "seen": 1791042222.5960095,
+    "ast_hash": "908e3ea718ba042f65a61dd934962c95",
+    "semantic_hash": "908e3ea718ba042f65a61dd934962c95"
+  },
+  ".agents/skills/litreview/scripts/framework_recommender.py": {
+    "mtime": 1789602121.0964644,
+    "seen": 1791042222.5960102,
+    "ast_hash": "5504abc1b72bf20fbd07dfe06be25773",
+    "semantic_hash": "5504abc1b72bf20fbd07dfe06be25773"
+  },
+  ".agents/skills/litreview/scripts/free_search.py": {
+    "mtime": 1789602121.0964644,
+    "seen": 1791042222.5960107,
+    "ast_hash": "f66ad98672003fb8b8ffa23ea91b9f49",
+    "semantic_hash": "f66ad98672003fb8b8ffa23ea91b9f49"
+  },
+  ".agents/skills/research-systematic-literature-review/scripts/init_review_pack.py": {
+    "mtime": 1789602132.299034,
+    "seen": 1791042222.5960116,
+    "ast_hash": "5cb8989b62f67113002cc028a9aa84f8",
+    "semantic_hash": "5cb8989b62f67113002cc028a9aa84f8"
+  },
+  ".agents/skills/research-systematic-literature-review/scripts/paper_context_artifacts.py": {
+    "mtime": 1789602132.3002484,
+    "seen": 1791042222.5960124,
+    "ast_hash": "6eae38f15ea3364073a5a94c3c1f588f",
+    "semantic_hash": "6eae38f15ea3364073a5a94c3c1f588f"
+  },
+  ".agents/skills/research-systematic-literature-review/scripts/prisma_flow_md.py": {
+    "mtime": 1789602132.303039,
+    "seen": 1791042222.5960128,
+    "ast_hash": "b04175ab01f0c68d5ed63796a9e9bbdc",
+    "semantic_hash": "b04175ab01f0c68d5ed63796a9e9bbdc"
+  },
+  ".agents/skills/research-systematic-literature-review/scripts/review_pack_coverage.py": {
+    "mtime": 1789602132.303039,
+    "seen": 1791042222.5960133,
+    "ast_hash": "141269b36b1871743daf72472f943151",
+    "semantic_hash": "141269b36b1871743daf72472f943151"
+  },
+  ".agents/skills/research-systematic-literature-review/scripts/validate_review_pack.py": {
+    "mtime": 1789602132.305545,
+    "seen": 1791042222.596014,
+    "ast_hash": "1b33ead1347256ac886eb586fd24a43e",
+    "semantic_hash": "1b33ead1347256ac886eb586fd24a43e"
+  },
+  ".agents/skills/systematic-literature-review/evals/evals.json": {
+    "mtime": 1789607034.1617072,
+    "seen": 1791042222.5960147,
+    "ast_hash": "de4c1bccd506fd6827ed381b8c37c376",
+    "semantic_hash": "de4c1bccd506fd6827ed381b8c37c376"
+  },
+  ".agents/skills/systematic-literature-review/evals/trigger_eval_set.json": {
+    "mtime": 1789607034.1617072,
+    "seen": 1791042222.5960155,
+    "ast_hash": "163b68908396f68d8102e63b42af211e",
+    "semantic_hash": "163b68908396f68d8102e63b42af211e"
+  },
+  ".agents/skills/systematic-literature-review/scripts/arxiv_search.py": {
+    "mtime": 1789607034.1617072,
+    "seen": 1791042222.5960162,
+    "ast_hash": "b2eceb8b7a57e6d9e293ed9079828528",
+    "semantic_hash": "b2eceb8b7a57e6d9e293ed9079828528"
+  },
+  ".codex/hooks.json": {
+    "mtime": 1789518384.9663393,
+    "seen": 1791042222.5960166,
+    "ast_hash": "d8e3e5aeb085285a47b94f4ee0576869",
+    "semantic_hash": "d8e3e5aeb085285a47b94f4ee0576869"
+  },
+  ".specify/init-options.json": {
+    "mtime": 1789606611.6056156,
+    "seen": 1791042222.5960171,
+    "ast_hash": "e793a1922f5abfac9c5fcfef0314ab92",
+    "semantic_hash": "e793a1922f5abfac9c5fcfef0314ab92"
+  },
+  ".specify/integration.json": {
+    "mtime": 1789606611.614943,
+    "seen": 1791042222.5960176,
+    "ast_hash": "44951600f8d587893eee03a66e40f840",
+    "semantic_hash": "44951600f8d587893eee03a66e40f840"
+  },
+  ".specify/integrations/codex.manifest.json": {
+    "mtime": 1789606611.614943,
+    "seen": 1791042222.596018,
+    "ast_hash": "34239cf7d343a771e4c0475caadd4b6f",
+    "semantic_hash": "34239cf7d343a771e4c0475caadd4b6f"
+  },
+  ".specify/integrations/speckit.manifest.json": {
+    "mtime": 1789606611.614943,
+    "seen": 1791042222.596019,
+    "ast_hash": "de04700d055dcc74d973f483f53735d5",
+    "semantic_hash": "de04700d055dcc74d973f483f53735d5"
+  },
+  ".specify/memory/.constitution-template.json": {
+    "mtime": 1789606611.614943,
+    "seen": 1791042222.5960197,
+    "ast_hash": "a877b5d687ea5e2f12abb0e618b87b30",
+    "semantic_hash": "a877b5d687ea5e2f12abb0e618b87b30"
+  },
+  ".specify/scripts/powershell/check-prerequisites.ps1": {
+    "mtime": 1789606611.620951,
+    "seen": 1791042222.5960202,
+    "ast_hash": "1395ef2bea0c47ba32fe63c11800e4c8",
+    "semantic_hash": "1395ef2bea0c47ba32fe63c11800e4c8"
+  },
+  ".specify/scripts/powershell/common.ps1": {
+    "mtime": 1789606611.62287,
+    "seen": 1791042222.596021,
+    "ast_hash": "91636fcca4bee88f07f6120a9632abe0",
+    "semantic_hash": "91636fcca4bee88f07f6120a9632abe0"
+  },
+  ".specify/scripts/powershell/create-new-feature.ps1": {
+    "mtime": 1789606611.624017,
+    "seen": 1791042222.5960221,
+    "ast_hash": "72b4356fee3b4fce27ae6d1eb685e190",
+    "semantic_hash": "72b4356fee3b4fce27ae6d1eb685e190"
+  },
+  ".specify/scripts/powershell/resolve-template.ps1": {
+    "mtime": 1789606611.624017,
+    "seen": 1791042222.5960226,
+    "ast_hash": "b3d684cb832b60f8e24f9bdb2c62407c",
+    "semantic_hash": "b3d684cb832b60f8e24f9bdb2c62407c"
+  },
+  ".specify/scripts/powershell/setup-plan.ps1": {
+    "mtime": 1789606611.624017,
+    "seen": 1791042222.5960233,
+    "ast_hash": "4b0982e8b5e0e02f54bb28e97aa4e089",
+    "semantic_hash": "4b0982e8b5e0e02f54bb28e97aa4e089"
+  },
+  ".specify/scripts/powershell/setup-tasks.ps1": {
+    "mtime": 1789606611.6274981,
+    "seen": 1791042222.5960238,
+    "ast_hash": "be0b843b4302f47ead5e9e59ad5627d4",
+    "semantic_hash": "be0b843b4302f47ead5e9e59ad5627d4"
+  },
+  ".specify/workflows/workflow-registry.json": {
+    "mtime": 1789606611.6327069,
+    "seen": 1791042222.5960243,
+    "ast_hash": "e2c122f39228b664807468dc5068f972",
+    "semantic_hash": "e2c122f39228b664807468dc5068f972"
+  },
+  "skills-lock.json": {
+    "mtime": 1789608444.6439433,
+    "seen": 1791042222.596025,
+    "ast_hash": "57ba4b090b5621616ee46d0af431438b",
+    "semantic_hash": "57ba4b090b5621616ee46d0af431438b"
+  }
+}
