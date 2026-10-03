@@ -3,13 +3,6 @@ model_reasoning_effort = "high"
 model_verbosity = "medium"
 approval_policy = "on-request"
 sandbox_mode = "workspace-write"
-service_tier = "flex"
-
-
-[mcp_servers.github]
-url = "https://api.githubcopilot.com/mcp/"
-bearer_token_env_var = "GITHUB_PERSONAL_ACCESS_TOKEN"
-default_tools_approval_mode = "writes"
 
 
 [agents]

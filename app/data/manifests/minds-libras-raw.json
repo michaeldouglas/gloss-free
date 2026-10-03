@@ -1,0 +1,5607 @@
+{
+  "repo_id": "ibmectech/minds-libras-raw",
+  "commit": "a881a5a4330ec8b00bf6c80618f02fc66345f379",
+  "acquired_at_utc": "2026-10-03T16:53:35.735020+00:00",
+  "files": {
+    "videos/01AcontecerSinalizador01-1.mp4": {
+      "remote_path": "videos/01AcontecerSinalizador01-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 34098608,
+      "status": "pending",
+      "error": null
+    },
+    "videos/01AcontecerSinalizador01-2.mp4": {
+      "remote_path": "videos/01AcontecerSinalizador01-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 41654164,
+      "status": "pending",
+      "error": null
+    },
+    "videos/01AcontecerSinalizador01-3.mp4": {
+      "remote_path": "videos/01AcontecerSinalizador01-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 38923027,
+      "status": "pending",
+      "error": null
+    },
+    "videos/01AcontecerSinalizador01-4.mp4": {
+      "remote_path": "videos/01AcontecerSinalizador01-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 39189987,
+      "status": "pending",
+      "error": null
+    },
+    "videos/01AcontecerSinalizador01-5.mp4": {
+      "remote_path": "videos/01AcontecerSinalizador01-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 42192980,
+      "status": "pending",
+      "error": null
+    },
+    "videos/01AcontecerSinalizador02-1.mp4": {
+      "remote_path": "videos/01AcontecerSinalizador02-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 31721415,
+      "status": "pending",
+      "error": null
+    },
+    "videos/01AcontecerSinalizador02-2.mp4": {
+      "remote_path": "videos/01AcontecerSinalizador02-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 39968606,
+      "status": "pending",
+      "error": null
+    },
+    "videos/01AcontecerSinalizador02-3.mp4": {
+      "remote_path": "videos/01AcontecerSinalizador02-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 35141309,
+      "status": "pending",
+      "error": null
+    },
+    "videos/01AcontecerSinalizador02-4.mp4": {
+      "remote_path": "videos/01AcontecerSinalizador02-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 46076799,
+      "status": "pending",
+      "error": null
+    },
+    "videos/01AcontecerSinalizador02-5.mp4": {
+      "remote_path": "videos/01AcontecerSinalizador02-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 35965163,
+      "status": "pending",
+      "error": null
+    },
+    "videos/01AcontecerSinalizador05-1.mp4": {
+      "remote_path": "videos/01AcontecerSinalizador05-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 55129398,
+      "status": "pending",
+      "error": null
+    },
+    "videos/01AcontecerSinalizador05-2.mp4": {
+      "remote_path": "videos/01AcontecerSinalizador05-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 46287687,
+      "status": "pending",
+      "error": null
+    },
+    "videos/01AcontecerSinalizador05-3.mp4": {
+      "remote_path": "videos/01AcontecerSinalizador05-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 50975254,
+      "status": "pending",
+      "error": null
+    },
+    "videos/01AcontecerSinalizador05-4.mp4": {
+      "remote_path": "videos/01AcontecerSinalizador05-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 53320181,
+      "status": "pending",
+      "error": null
+    },
+    "videos/01AcontecerSinalizador05-5.mp4": {
+      "remote_path": "videos/01AcontecerSinalizador05-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 41343186,
+      "status": "pending",
+      "error": null
+    },
+    "videos/01AcontecerSinalizador06-1.mp4": {
+      "remote_path": "videos/01AcontecerSinalizador06-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 48934454,
+      "status": "pending",
+      "error": null
+    },
+    "videos/01AcontecerSinalizador06-2.mp4": {
+      "remote_path": "videos/01AcontecerSinalizador06-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 67242061,
+      "status": "pending",
+      "error": null
+    },
+    "videos/01AcontecerSinalizador06-3.mp4": {
+      "remote_path": "videos/01AcontecerSinalizador06-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 69464175,
+      "status": "pending",
+      "error": null
+    },
+    "videos/01AcontecerSinalizador06-4.mp4": {
+      "remote_path": "videos/01AcontecerSinalizador06-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 55680754,
+      "status": "pending",
+      "error": null
+    },
+    "videos/01AcontecerSinalizador06-5.mp4": {
+      "remote_path": "videos/01AcontecerSinalizador06-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 48095204,
+      "status": "pending",
+      "error": null
+    },
+    "videos/01AcontecerSinalizador08-1.mp4": {
+      "remote_path": "videos/01AcontecerSinalizador08-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 35964794,
+      "status": "pending",
+      "error": null
+    },
+    "videos/01AcontecerSinalizador08-2.mp4": {
+      "remote_path": "videos/01AcontecerSinalizador08-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 43023952,
+      "status": "pending",
+      "error": null
+    },
+    "videos/01AcontecerSinalizador08-3.mp4": {
+      "remote_path": "videos/01AcontecerSinalizador08-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 35520713,
+      "status": "pending",
+      "error": null
+    },
+    "videos/01AcontecerSinalizador08-4.mp4": {
+      "remote_path": "videos/01AcontecerSinalizador08-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 40918020,
+      "status": "pending",
+      "error": null
+    },
+    "videos/01AcontecerSinalizador08-5.mp4": {
+      "remote_path": "videos/01AcontecerSinalizador08-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 46659490,
+      "status": "pending",
+      "error": null
+    },
+    "videos/01AcontecerSinalizador10-1.mp4": {
+      "remote_path": "videos/01AcontecerSinalizador10-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 41458174,
+      "status": "pending",
+      "error": null
+    },
+    "videos/01AcontecerSinalizador10-2.mp4": {
+      "remote_path": "videos/01AcontecerSinalizador10-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 40639820,
+      "status": "pending",
+      "error": null
+    },
+    "videos/01AcontecerSinalizador10-3.mp4": {
+      "remote_path": "videos/01AcontecerSinalizador10-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 56359830,
+      "status": "pending",
+      "error": null
+    },
+    "videos/01AcontecerSinalizador10-4.mp4": {
+      "remote_path": "videos/01AcontecerSinalizador10-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 42412854,
+      "status": "pending",
+      "error": null
+    },
+    "videos/01AcontecerSinalizador10-5.mp4": {
+      "remote_path": "videos/01AcontecerSinalizador10-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 43689983,
+      "status": "pending",
+      "error": null
+    },
+    "videos/01AcontecerSinalizador11-1.mp4": {
+      "remote_path": "videos/01AcontecerSinalizador11-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 77155312,
+      "status": "pending",
+      "error": null
+    },
+    "videos/01AcontecerSinalizador11-2.mp4": {
+      "remote_path": "videos/01AcontecerSinalizador11-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 70200937,
+      "status": "pending",
+      "error": null
+    },
+    "videos/01AcontecerSinalizador11-3.mp4": {
+      "remote_path": "videos/01AcontecerSinalizador11-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 82838291,
+      "status": "pending",
+      "error": null
+    },
+    "videos/01AcontecerSinalizador11-4.mp4": {
+      "remote_path": "videos/01AcontecerSinalizador11-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 82750741,
+      "status": "pending",
+      "error": null
+    },
+    "videos/01AcontecerSinalizador11-5.mp4": {
+      "remote_path": "videos/01AcontecerSinalizador11-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 52326789,
+      "status": "pending",
+      "error": null
+    },
+    "videos/01AcontecerSinalizador12-1.mp4": {
+      "remote_path": "videos/01AcontecerSinalizador12-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 71746741,
+      "status": "pending",
+      "error": null
+    },
+    "videos/01AcontecerSinalizador12-2.mp4": {
+      "remote_path": "videos/01AcontecerSinalizador12-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 65323010,
+      "status": "pending",
+      "error": null
+    },
+    "videos/01AcontecerSinalizador12-3.mp4": {
+      "remote_path": "videos/01AcontecerSinalizador12-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 83417363,
+      "status": "pending",
+      "error": null
+    },
+    "videos/01AcontecerSinalizador12-4.mp4": {
+      "remote_path": "videos/01AcontecerSinalizador12-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 76586143,
+      "status": "pending",
+      "error": null
+    },
+    "videos/01AcontecerSinalizador12-5.mp4": {
+      "remote_path": "videos/01AcontecerSinalizador12-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 74108098,
+      "status": "pending",
+      "error": null
+    },
+    "videos/02AlunoSinalizador01-1.mp4": {
+      "remote_path": "videos/02AlunoSinalizador01-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 41800203,
+      "status": "pending",
+      "error": null
+    },
+    "videos/02AlunoSinalizador01-2.mp4": {
+      "remote_path": "videos/02AlunoSinalizador01-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 45917910,
+      "status": "pending",
+      "error": null
+    },
+    "videos/02AlunoSinalizador01-3.mp4": {
+      "remote_path": "videos/02AlunoSinalizador01-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 48150111,
+      "status": "pending",
+      "error": null
+    },
+    "videos/02AlunoSinalizador01-4.mp4": {
+      "remote_path": "videos/02AlunoSinalizador01-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 49338461,
+      "status": "pending",
+      "error": null
+    },
+    "videos/02AlunoSinalizador01-5.mp4": {
+      "remote_path": "videos/02AlunoSinalizador01-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 53639967,
+      "status": "pending",
+      "error": null
+    },
+    "videos/02AlunoSinalizador02-1.mp4": {
+      "remote_path": "videos/02AlunoSinalizador02-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 50220030,
+      "status": "pending",
+      "error": null
+    },
+    "videos/02AlunoSinalizador02-2.mp4": {
+      "remote_path": "videos/02AlunoSinalizador02-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 39585225,
+      "status": "pending",
+      "error": null
+    },
+    "videos/02AlunoSinalizador02-3.mp4": {
+      "remote_path": "videos/02AlunoSinalizador02-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 50196493,
+      "status": "pending",
+      "error": null
+    },
+    "videos/02AlunoSinalizador02-4.mp4": {
+      "remote_path": "videos/02AlunoSinalizador02-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 51886374,
+      "status": "pending",
+      "error": null
+    },
+    "videos/02AlunoSinalizador02-5.mp4": {
+      "remote_path": "videos/02AlunoSinalizador02-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 39721395,
+      "status": "pending",
+      "error": null
+    },
+    "videos/02AlunoSinalizador05-1.mp4": {
+      "remote_path": "videos/02AlunoSinalizador05-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 72343207,
+      "status": "pending",
+      "error": null
+    },
+    "videos/02AlunoSinalizador05-2.mp4": {
+      "remote_path": "videos/02AlunoSinalizador05-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 74581272,
+      "status": "pending",
+      "error": null
+    },
+    "videos/02AlunoSinalizador05-3.mp4": {
+      "remote_path": "videos/02AlunoSinalizador05-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 68000557,
+      "status": "pending",
+      "error": null
+    },
+    "videos/02AlunoSinalizador05-4.mp4": {
+      "remote_path": "videos/02AlunoSinalizador05-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 72783564,
+      "status": "pending",
+      "error": null
+    },
+    "videos/02AlunoSinalizador05-5.mp4": {
+      "remote_path": "videos/02AlunoSinalizador05-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 69778995,
+      "status": "pending",
+      "error": null
+    },
+    "videos/02AlunoSinalizador06-1.mp4": {
+      "remote_path": "videos/02AlunoSinalizador06-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 78660679,
+      "status": "pending",
+      "error": null
+    },
+    "videos/02AlunoSinalizador06-2.mp4": {
+      "remote_path": "videos/02AlunoSinalizador06-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 87555276,
+      "status": "pending",
+      "error": null
+    },
+    "videos/02AlunoSinalizador06-3.mp4": {
+      "remote_path": "videos/02AlunoSinalizador06-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 81277913,
+      "status": "pending",
+      "error": null
+    },
+    "videos/02AlunoSinalizador06-4.mp4": {
+      "remote_path": "videos/02AlunoSinalizador06-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 89486291,
+      "status": "pending",
+      "error": null
+    },
+    "videos/02AlunoSinalizador06-5.mp4": {
+      "remote_path": "videos/02AlunoSinalizador06-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 80839899,
+      "status": "pending",
+      "error": null
+    },
+    "videos/02AlunoSinalizador08-1.mp4": {
+      "remote_path": "videos/02AlunoSinalizador08-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 55488050,
+      "status": "pending",
+      "error": null
+    },
+    "videos/02AlunoSinalizador08-2.mp4": {
+      "remote_path": "videos/02AlunoSinalizador08-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 53427789,
+      "status": "pending",
+      "error": null
+    },
+    "videos/02AlunoSinalizador08-3.mp4": {
+      "remote_path": "videos/02AlunoSinalizador08-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 54440486,
+      "status": "pending",
+      "error": null
+    },
+    "videos/02AlunoSinalizador08-4.mp4": {
+      "remote_path": "videos/02AlunoSinalizador08-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 69626429,
+      "status": "pending",
+      "error": null
+    },
+    "videos/02AlunoSinalizador08-5.mp4": {
+      "remote_path": "videos/02AlunoSinalizador08-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 61195612,
+      "status": "pending",
+      "error": null
+    },
+    "videos/02AlunoSinalizador10-1.mp4": {
+      "remote_path": "videos/02AlunoSinalizador10-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 43956309,
+      "status": "pending",
+      "error": null
+    },
+    "videos/02AlunoSinalizador10-2.mp4": {
+      "remote_path": "videos/02AlunoSinalizador10-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 43953384,
+      "status": "pending",
+      "error": null
+    },
+    "videos/02AlunoSinalizador10-3.mp4": {
+      "remote_path": "videos/02AlunoSinalizador10-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 49446817,
+      "status": "pending",
+      "error": null
+    },
+    "videos/02AlunoSinalizador10-4.mp4": {
+      "remote_path": "videos/02AlunoSinalizador10-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 45626412,
+      "status": "pending",
+      "error": null
+    },
+    "videos/02AlunoSinalizador10-5.mp4": {
+      "remote_path": "videos/02AlunoSinalizador10-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 47458119,
+      "status": "pending",
+      "error": null
+    },
+    "videos/02AlunoSinalizador11-1.mp4": {
+      "remote_path": "videos/02AlunoSinalizador11-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 80587381,
+      "status": "pending",
+      "error": null
+    },
+    "videos/02AlunoSinalizador11-2.mp4": {
+      "remote_path": "videos/02AlunoSinalizador11-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 88273848,
+      "status": "pending",
+      "error": null
+    },
+    "videos/02AlunoSinalizador11-3.mp4": {
+      "remote_path": "videos/02AlunoSinalizador11-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 91540159,
+      "status": "pending",
+      "error": null
+    },
+    "videos/02AlunoSinalizador11-4.mp4": {
+      "remote_path": "videos/02AlunoSinalizador11-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 96280855,
+      "status": "pending",
+      "error": null
+    },
+    "videos/02AlunoSinalizador11-5.mp4": {
+      "remote_path": "videos/02AlunoSinalizador11-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 79872474,
+      "status": "pending",
+      "error": null
+    },
+    "videos/02AlunoSinalizador12-1.mp4": {
+      "remote_path": "videos/02AlunoSinalizador12-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 115182216,
+      "status": "pending",
+      "error": null
+    },
+    "videos/02AlunoSinalizador12-2.mp4": {
+      "remote_path": "videos/02AlunoSinalizador12-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 101423593,
+      "status": "pending",
+      "error": null
+    },
+    "videos/02AlunoSinalizador12-3.mp4": {
+      "remote_path": "videos/02AlunoSinalizador12-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 92234193,
+      "status": "pending",
+      "error": null
+    },
+    "videos/02AlunoSinalizador12-4.mp4": {
+      "remote_path": "videos/02AlunoSinalizador12-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 93166823,
+      "status": "pending",
+      "error": null
+    },
+    "videos/02AlunoSinalizador12-5.mp4": {
+      "remote_path": "videos/02AlunoSinalizador12-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 105887553,
+      "status": "pending",
+      "error": null
+    },
+    "videos/03AmareloSinalizador01-1.mp4": {
+      "remote_path": "videos/03AmareloSinalizador01-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 52045711,
+      "status": "pending",
+      "error": null
+    },
+    "videos/03AmareloSinalizador01-2.mp4": {
+      "remote_path": "videos/03AmareloSinalizador01-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 58045602,
+      "status": "pending",
+      "error": null
+    },
+    "videos/03AmareloSinalizador01-3.mp4": {
+      "remote_path": "videos/03AmareloSinalizador01-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 44537871,
+      "status": "pending",
+      "error": null
+    },
+    "videos/03AmareloSinalizador01-4.mp4": {
+      "remote_path": "videos/03AmareloSinalizador01-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 51269599,
+      "status": "pending",
+      "error": null
+    },
+    "videos/03AmareloSinalizador01-5.mp4": {
+      "remote_path": "videos/03AmareloSinalizador01-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 46289898,
+      "status": "pending",
+      "error": null
+    },
+    "videos/03AmareloSinalizador02-1.mp4": {
+      "remote_path": "videos/03AmareloSinalizador02-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 39906006,
+      "status": "pending",
+      "error": null
+    },
+    "videos/03AmareloSinalizador02-2.mp4": {
+      "remote_path": "videos/03AmareloSinalizador02-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 52423582,
+      "status": "pending",
+      "error": null
+    },
+    "videos/03AmareloSinalizador02-3.mp4": {
+      "remote_path": "videos/03AmareloSinalizador02-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 49179809,
+      "status": "pending",
+      "error": null
+    },
+    "videos/03AmareloSinalizador02-4.mp4": {
+      "remote_path": "videos/03AmareloSinalizador02-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 51812321,
+      "status": "pending",
+      "error": null
+    },
+    "videos/03AmareloSinalizador02-5.mp4": {
+      "remote_path": "videos/03AmareloSinalizador02-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 33895275,
+      "status": "pending",
+      "error": null
+    },
+    "videos/03AmareloSinalizador05-1.mp4": {
+      "remote_path": "videos/03AmareloSinalizador05-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 69539905,
+      "status": "pending",
+      "error": null
+    },
+    "videos/03AmareloSinalizador05-2.mp4": {
+      "remote_path": "videos/03AmareloSinalizador05-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 61078082,
+      "status": "pending",
+      "error": null
+    },
+    "videos/03AmareloSinalizador05-3.mp4": {
+      "remote_path": "videos/03AmareloSinalizador05-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 42919268,
+      "status": "pending",
+      "error": null
+    },
+    "videos/03AmareloSinalizador05-4.mp4": {
+      "remote_path": "videos/03AmareloSinalizador05-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 42030840,
+      "status": "pending",
+      "error": null
+    },
+    "videos/03AmareloSinalizador05-5.mp4": {
+      "remote_path": "videos/03AmareloSinalizador05-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 50350802,
+      "status": "pending",
+      "error": null
+    },
+    "videos/03AmareloSinalizador06-1.mp4": {
+      "remote_path": "videos/03AmareloSinalizador06-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 72012898,
+      "status": "pending",
+      "error": null
+    },
+    "videos/03AmareloSinalizador06-2.mp4": {
+      "remote_path": "videos/03AmareloSinalizador06-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 61511529,
+      "status": "pending",
+      "error": null
+    },
+    "videos/03AmareloSinalizador06-3.mp4": {
+      "remote_path": "videos/03AmareloSinalizador06-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 62261398,
+      "status": "pending",
+      "error": null
+    },
+    "videos/03AmareloSinalizador06-4.mp4": {
+      "remote_path": "videos/03AmareloSinalizador06-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 63361358,
+      "status": "pending",
+      "error": null
+    },
+    "videos/03AmareloSinalizador06-5.mp4": {
+      "remote_path": "videos/03AmareloSinalizador06-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 68920656,
+      "status": "pending",
+      "error": null
+    },
+    "videos/03AmareloSinalizador08-1.mp4": {
+      "remote_path": "videos/03AmareloSinalizador08-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 47833770,
+      "status": "pending",
+      "error": null
+    },
+    "videos/03AmareloSinalizador08-2.mp4": {
+      "remote_path": "videos/03AmareloSinalizador08-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 45188499,
+      "status": "pending",
+      "error": null
+    },
+    "videos/03AmareloSinalizador08-3.mp4": {
+      "remote_path": "videos/03AmareloSinalizador08-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 49310466,
+      "status": "pending",
+      "error": null
+    },
+    "videos/03AmareloSinalizador08-4.mp4": {
+      "remote_path": "videos/03AmareloSinalizador08-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 42713761,
+      "status": "pending",
+      "error": null
+    },
+    "videos/03AmareloSinalizador08-5.mp4": {
+      "remote_path": "videos/03AmareloSinalizador08-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 48180440,
+      "status": "pending",
+      "error": null
+    },
+    "videos/03AmareloSinalizador10-1.mp4": {
+      "remote_path": "videos/03AmareloSinalizador10-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 47404287,
+      "status": "pending",
+      "error": null
+    },
+    "videos/03AmareloSinalizador10-2.mp4": {
+      "remote_path": "videos/03AmareloSinalizador10-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 63308008,
+      "status": "pending",
+      "error": null
+    },
+    "videos/03AmareloSinalizador10-3.mp4": {
+      "remote_path": "videos/03AmareloSinalizador10-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 54548066,
+      "status": "pending",
+      "error": null
+    },
+    "videos/03AmareloSinalizador10-4.mp4": {
+      "remote_path": "videos/03AmareloSinalizador10-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 59749675,
+      "status": "pending",
+      "error": null
+    },
+    "videos/03AmareloSinalizador10-5.mp4": {
+      "remote_path": "videos/03AmareloSinalizador10-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 50654162,
+      "status": "pending",
+      "error": null
+    },
+    "videos/03AmareloSinalizador11-1.mp4": {
+      "remote_path": "videos/03AmareloSinalizador11-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 97081956,
+      "status": "pending",
+      "error": null
+    },
+    "videos/03AmareloSinalizador11-2.mp4": {
+      "remote_path": "videos/03AmareloSinalizador11-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 108560557,
+      "status": "pending",
+      "error": null
+    },
+    "videos/03AmareloSinalizador11-3.mp4": {
+      "remote_path": "videos/03AmareloSinalizador11-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 101745658,
+      "status": "pending",
+      "error": null
+    },
+    "videos/03AmareloSinalizador11-4.mp4": {
+      "remote_path": "videos/03AmareloSinalizador11-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 114161979,
+      "status": "pending",
+      "error": null
+    },
+    "videos/03AmareloSinalizador11-5.mp4": {
+      "remote_path": "videos/03AmareloSinalizador11-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 95943580,
+      "status": "pending",
+      "error": null
+    },
+    "videos/03AmareloSinalizador12-1.mp4": {
+      "remote_path": "videos/03AmareloSinalizador12-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 102030818,
+      "status": "pending",
+      "error": null
+    },
+    "videos/03AmareloSinalizador12-2.mp4": {
+      "remote_path": "videos/03AmareloSinalizador12-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 79542663,
+      "status": "pending",
+      "error": null
+    },
+    "videos/03AmareloSinalizador12-3.mp4": {
+      "remote_path": "videos/03AmareloSinalizador12-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 95196059,
+      "status": "pending",
+      "error": null
+    },
+    "videos/03AmareloSinalizador12-4.mp4": {
+      "remote_path": "videos/03AmareloSinalizador12-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 77420517,
+      "status": "pending",
+      "error": null
+    },
+    "videos/03AmareloSinalizador12-5.mp4": {
+      "remote_path": "videos/03AmareloSinalizador12-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 83053262,
+      "status": "pending",
+      "error": null
+    },
+    "videos/04AmericaSinalizador01-1.mp4": {
+      "remote_path": "videos/04AmericaSinalizador01-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 35818301,
+      "status": "pending",
+      "error": null
+    },
+    "videos/04AmericaSinalizador01-2.mp4": {
+      "remote_path": "videos/04AmericaSinalizador01-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 47406659,
+      "status": "pending",
+      "error": null
+    },
+    "videos/04AmericaSinalizador01-3.mp4": {
+      "remote_path": "videos/04AmericaSinalizador01-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 48367146,
+      "status": "pending",
+      "error": null
+    },
+    "videos/04AmericaSinalizador01-4.mp4": {
+      "remote_path": "videos/04AmericaSinalizador01-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 49043217,
+      "status": "pending",
+      "error": null
+    },
+    "videos/04AmericaSinalizador01-5.mp4": {
+      "remote_path": "videos/04AmericaSinalizador01-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 48856666,
+      "status": "pending",
+      "error": null
+    },
+    "videos/04AmericaSinalizador02-1.mp4": {
+      "remote_path": "videos/04AmericaSinalizador02-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 51168956,
+      "status": "pending",
+      "error": null
+    },
+    "videos/04AmericaSinalizador02-2.mp4": {
+      "remote_path": "videos/04AmericaSinalizador02-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 50437714,
+      "status": "pending",
+      "error": null
+    },
+    "videos/04AmericaSinalizador02-3.mp4": {
+      "remote_path": "videos/04AmericaSinalizador02-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 48815232,
+      "status": "pending",
+      "error": null
+    },
+    "videos/04AmericaSinalizador02-4.mp4": {
+      "remote_path": "videos/04AmericaSinalizador02-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 53762266,
+      "status": "pending",
+      "error": null
+    },
+    "videos/04AmericaSinalizador02-5.mp4": {
+      "remote_path": "videos/04AmericaSinalizador02-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 45690106,
+      "status": "pending",
+      "error": null
+    },
+    "videos/04AmericaSinalizador05-1.mp4": {
+      "remote_path": "videos/04AmericaSinalizador05-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 49450031,
+      "status": "pending",
+      "error": null
+    },
+    "videos/04AmericaSinalizador05-2.mp4": {
+      "remote_path": "videos/04AmericaSinalizador05-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 65140834,
+      "status": "pending",
+      "error": null
+    },
+    "videos/04AmericaSinalizador05-3.mp4": {
+      "remote_path": "videos/04AmericaSinalizador05-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 59557545,
+      "status": "pending",
+      "error": null
+    },
+    "videos/04AmericaSinalizador05-4.mp4": {
+      "remote_path": "videos/04AmericaSinalizador05-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 66955642,
+      "status": "pending",
+      "error": null
+    },
+    "videos/04AmericaSinalizador05-5.mp4": {
+      "remote_path": "videos/04AmericaSinalizador05-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 59487344,
+      "status": "pending",
+      "error": null
+    },
+    "videos/04AmericaSinalizador06-1.mp4": {
+      "remote_path": "videos/04AmericaSinalizador06-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 75546653,
+      "status": "pending",
+      "error": null
+    },
+    "videos/04AmericaSinalizador06-2.mp4": {
+      "remote_path": "videos/04AmericaSinalizador06-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 74162817,
+      "status": "pending",
+      "error": null
+    },
+    "videos/04AmericaSinalizador06-3.mp4": {
+      "remote_path": "videos/04AmericaSinalizador06-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 66830634,
+      "status": "pending",
+      "error": null
+    },
+    "videos/04AmericaSinalizador06-4.mp4": {
+      "remote_path": "videos/04AmericaSinalizador06-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 67218507,
+      "status": "pending",
+      "error": null
+    },
+    "videos/04AmericaSinalizador06-5.mp4": {
+      "remote_path": "videos/04AmericaSinalizador06-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 67902820,
+      "status": "pending",
+      "error": null
+    },
+    "videos/04AmericaSinalizador08-1.mp4": {
+      "remote_path": "videos/04AmericaSinalizador08-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 48491426,
+      "status": "pending",
+      "error": null
+    },
+    "videos/04AmericaSinalizador08-2.mp4": {
+      "remote_path": "videos/04AmericaSinalizador08-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 57509867,
+      "status": "pending",
+      "error": null
+    },
+    "videos/04AmericaSinalizador08-3.mp4": {
+      "remote_path": "videos/04AmericaSinalizador08-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 60809697,
+      "status": "pending",
+      "error": null
+    },
+    "videos/04AmericaSinalizador08-4.mp4": {
+      "remote_path": "videos/04AmericaSinalizador08-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 64137604,
+      "status": "pending",
+      "error": null
+    },
+    "videos/04AmericaSinalizador08-5.mp4": {
+      "remote_path": "videos/04AmericaSinalizador08-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 58569918,
+      "status": "pending",
+      "error": null
+    },
+    "videos/04AmericaSinalizador10-1.mp4": {
+      "remote_path": "videos/04AmericaSinalizador10-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 44952570,
+      "status": "pending",
+      "error": null
+    },
+    "videos/04AmericaSinalizador10-2.mp4": {
+      "remote_path": "videos/04AmericaSinalizador10-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 56292085,
+      "status": "pending",
+      "error": null
+    },
+    "videos/04AmericaSinalizador10-3.mp4": {
+      "remote_path": "videos/04AmericaSinalizador10-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 45239082,
+      "status": "pending",
+      "error": null
+    },
+    "videos/04AmericaSinalizador10-4.mp4": {
+      "remote_path": "videos/04AmericaSinalizador10-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 46701976,
+      "status": "pending",
+      "error": null
+    },
+    "videos/04AmericaSinalizador10-5.mp4": {
+      "remote_path": "videos/04AmericaSinalizador10-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 51174953,
+      "status": "pending",
+      "error": null
+    },
+    "videos/04AmericaSinalizador11-1.mp4": {
+      "remote_path": "videos/04AmericaSinalizador11-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 74109061,
+      "status": "pending",
+      "error": null
+    },
+    "videos/04AmericaSinalizador11-2.mp4": {
+      "remote_path": "videos/04AmericaSinalizador11-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 86759061,
+      "status": "pending",
+      "error": null
+    },
+    "videos/04AmericaSinalizador11-3.mp4": {
+      "remote_path": "videos/04AmericaSinalizador11-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 75604454,
+      "status": "pending",
+      "error": null
+    },
+    "videos/04AmericaSinalizador11-4.mp4": {
+      "remote_path": "videos/04AmericaSinalizador11-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 85479866,
+      "status": "pending",
+      "error": null
+    },
+    "videos/04AmericaSinalizador11-5.mp4": {
+      "remote_path": "videos/04AmericaSinalizador11-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 78983910,
+      "status": "pending",
+      "error": null
+    },
+    "videos/04AmericaSinalizador12-1.mp4": {
+      "remote_path": "videos/04AmericaSinalizador12-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 94749201,
+      "status": "pending",
+      "error": null
+    },
+    "videos/04AmericaSinalizador12-2.mp4": {
+      "remote_path": "videos/04AmericaSinalizador12-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 88954351,
+      "status": "pending",
+      "error": null
+    },
+    "videos/04AmericaSinalizador12-3.mp4": {
+      "remote_path": "videos/04AmericaSinalizador12-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 97468675,
+      "status": "pending",
+      "error": null
+    },
+    "videos/04AmericaSinalizador12-4.mp4": {
+      "remote_path": "videos/04AmericaSinalizador12-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 103688175,
+      "status": "pending",
+      "error": null
+    },
+    "videos/04AmericaSinalizador12-5.mp4": {
+      "remote_path": "videos/04AmericaSinalizador12-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 99815335,
+      "status": "pending",
+      "error": null
+    },
+    "videos/05AproveitarSinalizador01-1.mp4": {
+      "remote_path": "videos/05AproveitarSinalizador01-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 36648691,
+      "status": "pending",
+      "error": null
+    },
+    "videos/05AproveitarSinalizador01-2.mp4": {
+      "remote_path": "videos/05AproveitarSinalizador01-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 37479957,
+      "status": "pending",
+      "error": null
+    },
+    "videos/05AproveitarSinalizador01-3.mp4": {
+      "remote_path": "videos/05AproveitarSinalizador01-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 38365791,
+      "status": "pending",
+      "error": null
+    },
+    "videos/05AproveitarSinalizador01-4.mp4": {
+      "remote_path": "videos/05AproveitarSinalizador01-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 36549689,
+      "status": "pending",
+      "error": null
+    },
+    "videos/05AproveitarSinalizador01-5.mp4": {
+      "remote_path": "videos/05AproveitarSinalizador01-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 36151231,
+      "status": "pending",
+      "error": null
+    },
+    "videos/05AproveitarSinalizador02-1.mp4": {
+      "remote_path": "videos/05AproveitarSinalizador02-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 45585872,
+      "status": "pending",
+      "error": null
+    },
+    "videos/05AproveitarSinalizador02-2.mp4": {
+      "remote_path": "videos/05AproveitarSinalizador02-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 30826897,
+      "status": "pending",
+      "error": null
+    },
+    "videos/05AproveitarSinalizador02-3.mp4": {
+      "remote_path": "videos/05AproveitarSinalizador02-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 33072390,
+      "status": "pending",
+      "error": null
+    },
+    "videos/05AproveitarSinalizador02-4.mp4": {
+      "remote_path": "videos/05AproveitarSinalizador02-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 46182711,
+      "status": "pending",
+      "error": null
+    },
+    "videos/05AproveitarSinalizador02-5.mp4": {
+      "remote_path": "videos/05AproveitarSinalizador02-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 56457177,
+      "status": "pending",
+      "error": null
+    },
+    "videos/05AproveitarSinalizador05-1.mp4": {
+      "remote_path": "videos/05AproveitarSinalizador05-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 48278999,
+      "status": "pending",
+      "error": null
+    },
+    "videos/05AproveitarSinalizador05-2.mp4": {
+      "remote_path": "videos/05AproveitarSinalizador05-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 36657712,
+      "status": "pending",
+      "error": null
+    },
+    "videos/05AproveitarSinalizador05-3.mp4": {
+      "remote_path": "videos/05AproveitarSinalizador05-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 46463538,
+      "status": "pending",
+      "error": null
+    },
+    "videos/05AproveitarSinalizador05-4.mp4": {
+      "remote_path": "videos/05AproveitarSinalizador05-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 46021934,
+      "status": "pending",
+      "error": null
+    },
+    "videos/05AproveitarSinalizador05-5.mp4": {
+      "remote_path": "videos/05AproveitarSinalizador05-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 53128239,
+      "status": "pending",
+      "error": null
+    },
+    "videos/05AproveitarSinalizador06-1.mp4": {
+      "remote_path": "videos/05AproveitarSinalizador06-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 40066508,
+      "status": "pending",
+      "error": null
+    },
+    "videos/05AproveitarSinalizador06-2.mp4": {
+      "remote_path": "videos/05AproveitarSinalizador06-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 48621202,
+      "status": "pending",
+      "error": null
+    },
+    "videos/05AproveitarSinalizador06-3.mp4": {
+      "remote_path": "videos/05AproveitarSinalizador06-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 54923762,
+      "status": "pending",
+      "error": null
+    },
+    "videos/05AproveitarSinalizador06-4.mp4": {
+      "remote_path": "videos/05AproveitarSinalizador06-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 40050863,
+      "status": "pending",
+      "error": null
+    },
+    "videos/05AproveitarSinalizador06-5.mp4": {
+      "remote_path": "videos/05AproveitarSinalizador06-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 47766284,
+      "status": "pending",
+      "error": null
+    },
+    "videos/05AproveitarSinalizador08-1.mp4": {
+      "remote_path": "videos/05AproveitarSinalizador08-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 31333489,
+      "status": "pending",
+      "error": null
+    },
+    "videos/05AproveitarSinalizador08-2.mp4": {
+      "remote_path": "videos/05AproveitarSinalizador08-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 34930545,
+      "status": "pending",
+      "error": null
+    },
+    "videos/05AproveitarSinalizador08-3.mp4": {
+      "remote_path": "videos/05AproveitarSinalizador08-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 34223318,
+      "status": "pending",
+      "error": null
+    },
+    "videos/05AproveitarSinalizador08-4.mp4": {
+      "remote_path": "videos/05AproveitarSinalizador08-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 36220151,
+      "status": "pending",
+      "error": null
+    },
+    "videos/05AproveitarSinalizador08-5.mp4": {
+      "remote_path": "videos/05AproveitarSinalizador08-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 44845651,
+      "status": "pending",
+      "error": null
+    },
+    "videos/05AproveitarSinalizador10-1.mp4": {
+      "remote_path": "videos/05AproveitarSinalizador10-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 40536358,
+      "status": "pending",
+      "error": null
+    },
+    "videos/05AproveitarSinalizador10-2.mp4": {
+      "remote_path": "videos/05AproveitarSinalizador10-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 37905194,
+      "status": "pending",
+      "error": null
+    },
+    "videos/05AproveitarSinalizador10-3.mp4": {
+      "remote_path": "videos/05AproveitarSinalizador10-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 44516255,
+      "status": "pending",
+      "error": null
+    },
+    "videos/05AproveitarSinalizador10-4.mp4": {
+      "remote_path": "videos/05AproveitarSinalizador10-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 37961067,
+      "status": "pending",
+      "error": null
+    },
+    "videos/05AproveitarSinalizador10-5.mp4": {
+      "remote_path": "videos/05AproveitarSinalizador10-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 38296065,
+      "status": "pending",
+      "error": null
+    },
+    "videos/05AproveitarSinalizador11-1.mp4": {
+      "remote_path": "videos/05AproveitarSinalizador11-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 69197431,
+      "status": "pending",
+      "error": null
+    },
+    "videos/05AproveitarSinalizador11-2.mp4": {
+      "remote_path": "videos/05AproveitarSinalizador11-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 76797961,
+      "status": "pending",
+      "error": null
+    },
+    "videos/05AproveitarSinalizador11-3.mp4": {
+      "remote_path": "videos/05AproveitarSinalizador11-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 69941150,
+      "status": "pending",
+      "error": null
+    },
+    "videos/05AproveitarSinalizador11-4.mp4": {
+      "remote_path": "videos/05AproveitarSinalizador11-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 74577242,
+      "status": "pending",
+      "error": null
+    },
+    "videos/05AproveitarSinalizador11-5.mp4": {
+      "remote_path": "videos/05AproveitarSinalizador11-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 67092041,
+      "status": "pending",
+      "error": null
+    },
+    "videos/05AproveitarSinalizador12-1.mp4": {
+      "remote_path": "videos/05AproveitarSinalizador12-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 65528880,
+      "status": "pending",
+      "error": null
+    },
+    "videos/05AproveitarSinalizador12-2.mp4": {
+      "remote_path": "videos/05AproveitarSinalizador12-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 56446801,
+      "status": "pending",
+      "error": null
+    },
+    "videos/05AproveitarSinalizador12-3.mp4": {
+      "remote_path": "videos/05AproveitarSinalizador12-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 60641728,
+      "status": "pending",
+      "error": null
+    },
+    "videos/05AproveitarSinalizador12-4.mp4": {
+      "remote_path": "videos/05AproveitarSinalizador12-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 55625989,
+      "status": "pending",
+      "error": null
+    },
+    "videos/05AproveitarSinalizador12-5.mp4": {
+      "remote_path": "videos/05AproveitarSinalizador12-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 52756430,
+      "status": "pending",
+      "error": null
+    },
+    "videos/06BalaSinalizador01-1.mp4": {
+      "remote_path": "videos/06BalaSinalizador01-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 40925908,
+      "status": "pending",
+      "error": null
+    },
+    "videos/06BalaSinalizador01-2.mp4": {
+      "remote_path": "videos/06BalaSinalizador01-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 51935394,
+      "status": "pending",
+      "error": null
+    },
+    "videos/06BalaSinalizador01-3.mp4": {
+      "remote_path": "videos/06BalaSinalizador01-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 39403069,
+      "status": "pending",
+      "error": null
+    },
+    "videos/06BalaSinalizador01-4.mp4": {
+      "remote_path": "videos/06BalaSinalizador01-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 40401698,
+      "status": "pending",
+      "error": null
+    },
+    "videos/06BalaSinalizador01-5.mp4": {
+      "remote_path": "videos/06BalaSinalizador01-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 44042604,
+      "status": "pending",
+      "error": null
+    },
+    "videos/06BalaSinalizador02-1.mp4": {
+      "remote_path": "videos/06BalaSinalizador02-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 45692587,
+      "status": "pending",
+      "error": null
+    },
+    "videos/06BalaSinalizador02-2.mp4": {
+      "remote_path": "videos/06BalaSinalizador02-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 35226451,
+      "status": "pending",
+      "error": null
+    },
+    "videos/06BalaSinalizador02-3.mp4": {
+      "remote_path": "videos/06BalaSinalizador02-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 41376967,
+      "status": "pending",
+      "error": null
+    },
+    "videos/06BalaSinalizador02-4.mp4": {
+      "remote_path": "videos/06BalaSinalizador02-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 39761983,
+      "status": "pending",
+      "error": null
+    },
+    "videos/06BalaSinalizador02-5.mp4": {
+      "remote_path": "videos/06BalaSinalizador02-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 40481176,
+      "status": "pending",
+      "error": null
+    },
+    "videos/06BalaSinalizador05-1.mp4": {
+      "remote_path": "videos/06BalaSinalizador05-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 58126030,
+      "status": "pending",
+      "error": null
+    },
+    "videos/06BalaSinalizador05-2.mp4": {
+      "remote_path": "videos/06BalaSinalizador05-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 53419228,
+      "status": "pending",
+      "error": null
+    },
+    "videos/06BalaSinalizador05-3.mp4": {
+      "remote_path": "videos/06BalaSinalizador05-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 41593155,
+      "status": "pending",
+      "error": null
+    },
+    "videos/06BalaSinalizador05-4.mp4": {
+      "remote_path": "videos/06BalaSinalizador05-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 58106427,
+      "status": "pending",
+      "error": null
+    },
+    "videos/06BalaSinalizador05-5.mp4": {
+      "remote_path": "videos/06BalaSinalizador05-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 57903348,
+      "status": "pending",
+      "error": null
+    },
+    "videos/06BalaSinalizador06-1.mp4": {
+      "remote_path": "videos/06BalaSinalizador06-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 64532443,
+      "status": "pending",
+      "error": null
+    },
+    "videos/06BalaSinalizador06-2.mp4": {
+      "remote_path": "videos/06BalaSinalizador06-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 78391233,
+      "status": "pending",
+      "error": null
+    },
+    "videos/06BalaSinalizador06-3.mp4": {
+      "remote_path": "videos/06BalaSinalizador06-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 60494697,
+      "status": "pending",
+      "error": null
+    },
+    "videos/06BalaSinalizador06-4.mp4": {
+      "remote_path": "videos/06BalaSinalizador06-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 60035947,
+      "status": "pending",
+      "error": null
+    },
+    "videos/06BalaSinalizador06-5.mp4": {
+      "remote_path": "videos/06BalaSinalizador06-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 64784908,
+      "status": "pending",
+      "error": null
+    },
+    "videos/06BalaSinalizador08-1.mp4": {
+      "remote_path": "videos/06BalaSinalizador08-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 51854357,
+      "status": "pending",
+      "error": null
+    },
+    "videos/06BalaSinalizador08-2.mp4": {
+      "remote_path": "videos/06BalaSinalizador08-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 47117843,
+      "status": "pending",
+      "error": null
+    },
+    "videos/06BalaSinalizador08-3.mp4": {
+      "remote_path": "videos/06BalaSinalizador08-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 39976989,
+      "status": "pending",
+      "error": null
+    },
+    "videos/06BalaSinalizador08-4.mp4": {
+      "remote_path": "videos/06BalaSinalizador08-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 56298730,
+      "status": "pending",
+      "error": null
+    },
+    "videos/06BalaSinalizador08-5.mp4": {
+      "remote_path": "videos/06BalaSinalizador08-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 54417230,
+      "status": "pending",
+      "error": null
+    },
+    "videos/06BalaSinalizador10-1.mp4": {
+      "remote_path": "videos/06BalaSinalizador10-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 41796489,
+      "status": "pending",
+      "error": null
+    },
+    "videos/06BalaSinalizador10-2.mp4": {
+      "remote_path": "videos/06BalaSinalizador10-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 49148321,
+      "status": "pending",
+      "error": null
+    },
+    "videos/06BalaSinalizador10-3.mp4": {
+      "remote_path": "videos/06BalaSinalizador10-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 44975983,
+      "status": "pending",
+      "error": null
+    },
+    "videos/06BalaSinalizador10-4.mp4": {
+      "remote_path": "videos/06BalaSinalizador10-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 46565972,
+      "status": "pending",
+      "error": null
+    },
+    "videos/06BalaSinalizador10-5.mp4": {
+      "remote_path": "videos/06BalaSinalizador10-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 42801251,
+      "status": "pending",
+      "error": null
+    },
+    "videos/06BalaSinalizador11-1.mp4": {
+      "remote_path": "videos/06BalaSinalizador11-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 94137700,
+      "status": "pending",
+      "error": null
+    },
+    "videos/06BalaSinalizador11-2.mp4": {
+      "remote_path": "videos/06BalaSinalizador11-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 89151020,
+      "status": "pending",
+      "error": null
+    },
+    "videos/06BalaSinalizador11-3.mp4": {
+      "remote_path": "videos/06BalaSinalizador11-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 84797318,
+      "status": "pending",
+      "error": null
+    },
+    "videos/06BalaSinalizador11-4.mp4": {
+      "remote_path": "videos/06BalaSinalizador11-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 91735727,
+      "status": "pending",
+      "error": null
+    },
+    "videos/06BalaSinalizador11-5.mp4": {
+      "remote_path": "videos/06BalaSinalizador11-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 94712033,
+      "status": "pending",
+      "error": null
+    },
+    "videos/06BalaSinalizador12-1.mp4": {
+      "remote_path": "videos/06BalaSinalizador12-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 61469830,
+      "status": "pending",
+      "error": null
+    },
+    "videos/06BalaSinalizador12-2.mp4": {
+      "remote_path": "videos/06BalaSinalizador12-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 86800636,
+      "status": "pending",
+      "error": null
+    },
+    "videos/06BalaSinalizador12-3.mp4": {
+      "remote_path": "videos/06BalaSinalizador12-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 102716787,
+      "status": "pending",
+      "error": null
+    },
+    "videos/06BalaSinalizador12-4.mp4": {
+      "remote_path": "videos/06BalaSinalizador12-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 90800793,
+      "status": "pending",
+      "error": null
+    },
+    "videos/06BalaSinalizador12-5.mp4": {
+      "remote_path": "videos/06BalaSinalizador12-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 89925098,
+      "status": "pending",
+      "error": null
+    },
+    "videos/07BancoSinalizador01-1.mp4": {
+      "remote_path": "videos/07BancoSinalizador01-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 45174187,
+      "status": "pending",
+      "error": null
+    },
+    "videos/07BancoSinalizador01-2.mp4": {
+      "remote_path": "videos/07BancoSinalizador01-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 46919114,
+      "status": "pending",
+      "error": null
+    },
+    "videos/07BancoSinalizador01-3.mp4": {
+      "remote_path": "videos/07BancoSinalizador01-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 41344557,
+      "status": "pending",
+      "error": null
+    },
+    "videos/07BancoSinalizador01-4.mp4": {
+      "remote_path": "videos/07BancoSinalizador01-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 54454469,
+      "status": "pending",
+      "error": null
+    },
+    "videos/07BancoSinalizador01-5.mp4": {
+      "remote_path": "videos/07BancoSinalizador01-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 45090313,
+      "status": "pending",
+      "error": null
+    },
+    "videos/07BancoSinalizador02-1.mp4": {
+      "remote_path": "videos/07BancoSinalizador02-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 39431780,
+      "status": "pending",
+      "error": null
+    },
+    "videos/07BancoSinalizador02-2.mp4": {
+      "remote_path": "videos/07BancoSinalizador02-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 57179944,
+      "status": "pending",
+      "error": null
+    },
+    "videos/07BancoSinalizador02-3.mp4": {
+      "remote_path": "videos/07BancoSinalizador02-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 40788633,
+      "status": "pending",
+      "error": null
+    },
+    "videos/07BancoSinalizador02-4.mp4": {
+      "remote_path": "videos/07BancoSinalizador02-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 43976655,
+      "status": "pending",
+      "error": null
+    },
+    "videos/07BancoSinalizador02-5.mp4": {
+      "remote_path": "videos/07BancoSinalizador02-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 49843093,
+      "status": "pending",
+      "error": null
+    },
+    "videos/07BancoSinalizador05-1.mp4": {
+      "remote_path": "videos/07BancoSinalizador05-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 58402037,
+      "status": "pending",
+      "error": null
+    },
+    "videos/07BancoSinalizador05-2.mp4": {
+      "remote_path": "videos/07BancoSinalizador05-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 60529662,
+      "status": "pending",
+      "error": null
+    },
+    "videos/07BancoSinalizador05-3.mp4": {
+      "remote_path": "videos/07BancoSinalizador05-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 47441218,
+      "status": "pending",
+      "error": null
+    },
+    "videos/07BancoSinalizador05-4.mp4": {
+      "remote_path": "videos/07BancoSinalizador05-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 56597078,
+      "status": "pending",
+      "error": null
+    },
+    "videos/07BancoSinalizador05-5.mp4": {
+      "remote_path": "videos/07BancoSinalizador05-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 60560774,
+      "status": "pending",
+      "error": null
+    },
+    "videos/07BancoSinalizador06-1.mp4": {
+      "remote_path": "videos/07BancoSinalizador06-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 61098393,
+      "status": "pending",
+      "error": null
+    },
+    "videos/07BancoSinalizador06-2.mp4": {
+      "remote_path": "videos/07BancoSinalizador06-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 64772094,
+      "status": "pending",
+      "error": null
+    },
+    "videos/07BancoSinalizador06-3.mp4": {
+      "remote_path": "videos/07BancoSinalizador06-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 67908247,
+      "status": "pending",
+      "error": null
+    },
+    "videos/07BancoSinalizador06-4.mp4": {
+      "remote_path": "videos/07BancoSinalizador06-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 78813911,
+      "status": "pending",
+      "error": null
+    },
+    "videos/07BancoSinalizador06-5.mp4": {
+      "remote_path": "videos/07BancoSinalizador06-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 66966970,
+      "status": "pending",
+      "error": null
+    },
+    "videos/07BancoSinalizador08-1.mp4": {
+      "remote_path": "videos/07BancoSinalizador08-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 45053257,
+      "status": "pending",
+      "error": null
+    },
+    "videos/07BancoSinalizador08-2.mp4": {
+      "remote_path": "videos/07BancoSinalizador08-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 46299202,
+      "status": "pending",
+      "error": null
+    },
+    "videos/07BancoSinalizador08-3.mp4": {
+      "remote_path": "videos/07BancoSinalizador08-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 42443470,
+      "status": "pending",
+      "error": null
+    },
+    "videos/07BancoSinalizador08-4.mp4": {
+      "remote_path": "videos/07BancoSinalizador08-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 45594620,
+      "status": "pending",
+      "error": null
+    },
+    "videos/07BancoSinalizador08-5.mp4": {
+      "remote_path": "videos/07BancoSinalizador08-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 40832274,
+      "status": "pending",
+      "error": null
+    },
+    "videos/07BancoSinalizador10-1.mp4": {
+      "remote_path": "videos/07BancoSinalizador10-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 38280835,
+      "status": "pending",
+      "error": null
+    },
+    "videos/07BancoSinalizador10-2.mp4": {
+      "remote_path": "videos/07BancoSinalizador10-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 43873720,
+      "status": "pending",
+      "error": null
+    },
+    "videos/07BancoSinalizador10-3.mp4": {
+      "remote_path": "videos/07BancoSinalizador10-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 41204785,
+      "status": "pending",
+      "error": null
+    },
+    "videos/07BancoSinalizador10-4.mp4": {
+      "remote_path": "videos/07BancoSinalizador10-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 39064118,
+      "status": "pending",
+      "error": null
+    },
+    "videos/07BancoSinalizador10-5.mp4": {
+      "remote_path": "videos/07BancoSinalizador10-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 45942130,
+      "status": "pending",
+      "error": null
+    },
+    "videos/07BancoSinalizador11-1.mp4": {
+      "remote_path": "videos/07BancoSinalizador11-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 82866632,
+      "status": "pending",
+      "error": null
+    },
+    "videos/07BancoSinalizador11-2.mp4": {
+      "remote_path": "videos/07BancoSinalizador11-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 91350847,
+      "status": "pending",
+      "error": null
+    },
+    "videos/07BancoSinalizador11-3.mp4": {
+      "remote_path": "videos/07BancoSinalizador11-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 89617528,
+      "status": "pending",
+      "error": null
+    },
+    "videos/07BancoSinalizador11-4.mp4": {
+      "remote_path": "videos/07BancoSinalizador11-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 85738791,
+      "status": "pending",
+      "error": null
+    },
+    "videos/07BancoSinalizador11-5.mp4": {
+      "remote_path": "videos/07BancoSinalizador11-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 89075649,
+      "status": "pending",
+      "error": null
+    },
+    "videos/07BancoSinalizador12-1.mp4": {
+      "remote_path": "videos/07BancoSinalizador12-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 78623606,
+      "status": "pending",
+      "error": null
+    },
+    "videos/07BancoSinalizador12-2.mp4": {
+      "remote_path": "videos/07BancoSinalizador12-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 95215840,
+      "status": "pending",
+      "error": null
+    },
+    "videos/07BancoSinalizador12-3.mp4": {
+      "remote_path": "videos/07BancoSinalizador12-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 76584523,
+      "status": "pending",
+      "error": null
+    },
+    "videos/07BancoSinalizador12-4.mp4": {
+      "remote_path": "videos/07BancoSinalizador12-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 89970198,
+      "status": "pending",
+      "error": null
+    },
+    "videos/07BancoSinalizador12-5.mp4": {
+      "remote_path": "videos/07BancoSinalizador12-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 69307686,
+      "status": "pending",
+      "error": null
+    },
+    "videos/08BanheiroSinalizador01-1.mp4": {
+      "remote_path": "videos/08BanheiroSinalizador01-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 36919436,
+      "status": "pending",
+      "error": null
+    },
+    "videos/08BanheiroSinalizador01-2.mp4": {
+      "remote_path": "videos/08BanheiroSinalizador01-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 47838660,
+      "status": "pending",
+      "error": null
+    },
+    "videos/08BanheiroSinalizador01-3.mp4": {
+      "remote_path": "videos/08BanheiroSinalizador01-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 63105112,
+      "status": "pending",
+      "error": null
+    },
+    "videos/08BanheiroSinalizador01-4.mp4": {
+      "remote_path": "videos/08BanheiroSinalizador01-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 47144361,
+      "status": "pending",
+      "error": null
+    },
+    "videos/08BanheiroSinalizador01-5.mp4": {
+      "remote_path": "videos/08BanheiroSinalizador01-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 46238799,
+      "status": "pending",
+      "error": null
+    },
+    "videos/08BanheiroSinalizador02-1.mp4": {
+      "remote_path": "videos/08BanheiroSinalizador02-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 48270800,
+      "status": "pending",
+      "error": null
+    },
+    "videos/08BanheiroSinalizador02-2.mp4": {
+      "remote_path": "videos/08BanheiroSinalizador02-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 63140379,
+      "status": "pending",
+      "error": null
+    },
+    "videos/08BanheiroSinalizador02-3.mp4": {
+      "remote_path": "videos/08BanheiroSinalizador02-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 41706569,
+      "status": "pending",
+      "error": null
+    },
+    "videos/08BanheiroSinalizador02-4.mp4": {
+      "remote_path": "videos/08BanheiroSinalizador02-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 48258178,
+      "status": "pending",
+      "error": null
+    },
+    "videos/08BanheiroSinalizador02-5.mp4": {
+      "remote_path": "videos/08BanheiroSinalizador02-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 48905892,
+      "status": "pending",
+      "error": null
+    },
+    "videos/08BanheiroSinalizador05-1.mp4": {
+      "remote_path": "videos/08BanheiroSinalizador05-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 56850718,
+      "status": "pending",
+      "error": null
+    },
+    "videos/08BanheiroSinalizador05-2.mp4": {
+      "remote_path": "videos/08BanheiroSinalizador05-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 50289127,
+      "status": "pending",
+      "error": null
+    },
+    "videos/08BanheiroSinalizador05-3.mp4": {
+      "remote_path": "videos/08BanheiroSinalizador05-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 64676035,
+      "status": "pending",
+      "error": null
+    },
+    "videos/08BanheiroSinalizador05-4.mp4": {
+      "remote_path": "videos/08BanheiroSinalizador05-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 53891978,
+      "status": "pending",
+      "error": null
+    },
+    "videos/08BanheiroSinalizador05-5.mp4": {
+      "remote_path": "videos/08BanheiroSinalizador05-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 51072250,
+      "status": "pending",
+      "error": null
+    },
+    "videos/08BanheiroSinalizador06-1.mp4": {
+      "remote_path": "videos/08BanheiroSinalizador06-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 66175912,
+      "status": "pending",
+      "error": null
+    },
+    "videos/08BanheiroSinalizador06-2.mp4": {
+      "remote_path": "videos/08BanheiroSinalizador06-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 80591020,
+      "status": "pending",
+      "error": null
+    },
+    "videos/08BanheiroSinalizador06-3.mp4": {
+      "remote_path": "videos/08BanheiroSinalizador06-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 75674338,
+      "status": "pending",
+      "error": null
+    },
+    "videos/08BanheiroSinalizador06-4.mp4": {
+      "remote_path": "videos/08BanheiroSinalizador06-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 83256823,
+      "status": "pending",
+      "error": null
+    },
+    "videos/08BanheiroSinalizador06-5.mp4": {
+      "remote_path": "videos/08BanheiroSinalizador06-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 74950172,
+      "status": "pending",
+      "error": null
+    },
+    "videos/08BanheiroSinalizador08-1.mp4": {
+      "remote_path": "videos/08BanheiroSinalizador08-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 49195589,
+      "status": "pending",
+      "error": null
+    },
+    "videos/08BanheiroSinalizador08-2.mp4": {
+      "remote_path": "videos/08BanheiroSinalizador08-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 46767839,
+      "status": "pending",
+      "error": null
+    },
+    "videos/08BanheiroSinalizador08-3.mp4": {
+      "remote_path": "videos/08BanheiroSinalizador08-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 46870011,
+      "status": "pending",
+      "error": null
+    },
+    "videos/08BanheiroSinalizador08-4.mp4": {
+      "remote_path": "videos/08BanheiroSinalizador08-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 46493172,
+      "status": "pending",
+      "error": null
+    },
+    "videos/08BanheiroSinalizador08-5.mp4": {
+      "remote_path": "videos/08BanheiroSinalizador08-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 54774582,
+      "status": "pending",
+      "error": null
+    },
+    "videos/08BanheiroSinalizador10-1.mp4": {
+      "remote_path": "videos/08BanheiroSinalizador10-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 37293273,
+      "status": "pending",
+      "error": null
+    },
+    "videos/08BanheiroSinalizador10-2.mp4": {
+      "remote_path": "videos/08BanheiroSinalizador10-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 46548675,
+      "status": "pending",
+      "error": null
+    },
+    "videos/08BanheiroSinalizador10-3.mp4": {
+      "remote_path": "videos/08BanheiroSinalizador10-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 44670441,
+      "status": "pending",
+      "error": null
+    },
+    "videos/08BanheiroSinalizador10-4.mp4": {
+      "remote_path": "videos/08BanheiroSinalizador10-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 37772092,
+      "status": "pending",
+      "error": null
+    },
+    "videos/08BanheiroSinalizador10-5.mp4": {
+      "remote_path": "videos/08BanheiroSinalizador10-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 40462262,
+      "status": "pending",
+      "error": null
+    },
+    "videos/08BanheiroSinalizador11-1.mp4": {
+      "remote_path": "videos/08BanheiroSinalizador11-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 78729971,
+      "status": "pending",
+      "error": null
+    },
+    "videos/08BanheiroSinalizador11-2.mp4": {
+      "remote_path": "videos/08BanheiroSinalizador11-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 81213346,
+      "status": "pending",
+      "error": null
+    },
+    "videos/08BanheiroSinalizador11-3.mp4": {
+      "remote_path": "videos/08BanheiroSinalizador11-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 95174931,
+      "status": "pending",
+      "error": null
+    },
+    "videos/08BanheiroSinalizador11-4.mp4": {
+      "remote_path": "videos/08BanheiroSinalizador11-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 76403958,
+      "status": "pending",
+      "error": null
+    },
+    "videos/08BanheiroSinalizador11-5.mp4": {
+      "remote_path": "videos/08BanheiroSinalizador11-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 79838755,
+      "status": "pending",
+      "error": null
+    },
+    "videos/08BanheiroSinalizador12-1.mp4": {
+      "remote_path": "videos/08BanheiroSinalizador12-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 110084208,
+      "status": "pending",
+      "error": null
+    },
+    "videos/08BanheiroSinalizador12-2.mp4": {
+      "remote_path": "videos/08BanheiroSinalizador12-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 99859927,
+      "status": "pending",
+      "error": null
+    },
+    "videos/08BanheiroSinalizador12-3.mp4": {
+      "remote_path": "videos/08BanheiroSinalizador12-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 93416666,
+      "status": "pending",
+      "error": null
+    },
+    "videos/08BanheiroSinalizador12-4.mp4": {
+      "remote_path": "videos/08BanheiroSinalizador12-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 89728014,
+      "status": "pending",
+      "error": null
+    },
+    "videos/08BanheiroSinalizador12-5.mp4": {
+      "remote_path": "videos/08BanheiroSinalizador12-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 85572360,
+      "status": "pending",
+      "error": null
+    },
+    "videos/09BarulhoSinalizador01-1.mp4": {
+      "remote_path": "videos/09BarulhoSinalizador01-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 42283264,
+      "status": "pending",
+      "error": null
+    },
+    "videos/09BarulhoSinalizador01-2.mp4": {
+      "remote_path": "videos/09BarulhoSinalizador01-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 61919908,
+      "status": "pending",
+      "error": null
+    },
+    "videos/09BarulhoSinalizador01-3.mp4": {
+      "remote_path": "videos/09BarulhoSinalizador01-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 53228475,
+      "status": "pending",
+      "error": null
+    },
+    "videos/09BarulhoSinalizador01-4.mp4": {
+      "remote_path": "videos/09BarulhoSinalizador01-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 51039035,
+      "status": "pending",
+      "error": null
+    },
+    "videos/09BarulhoSinalizador01-5.mp4": {
+      "remote_path": "videos/09BarulhoSinalizador01-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 52746010,
+      "status": "pending",
+      "error": null
+    },
+    "videos/09BarulhoSinalizador02-1.mp4": {
+      "remote_path": "videos/09BarulhoSinalizador02-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 40673870,
+      "status": "pending",
+      "error": null
+    },
+    "videos/09BarulhoSinalizador02-2.mp4": {
+      "remote_path": "videos/09BarulhoSinalizador02-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 39898688,
+      "status": "pending",
+      "error": null
+    },
+    "videos/09BarulhoSinalizador02-3.mp4": {
+      "remote_path": "videos/09BarulhoSinalizador02-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 42777524,
+      "status": "pending",
+      "error": null
+    },
+    "videos/09BarulhoSinalizador02-4.mp4": {
+      "remote_path": "videos/09BarulhoSinalizador02-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 41664194,
+      "status": "pending",
+      "error": null
+    },
+    "videos/09BarulhoSinalizador02-5.mp4": {
+      "remote_path": "videos/09BarulhoSinalizador02-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 41532356,
+      "status": "pending",
+      "error": null
+    },
+    "videos/09BarulhoSinalizador05-1.mp4": {
+      "remote_path": "videos/09BarulhoSinalizador05-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 40157569,
+      "status": "pending",
+      "error": null
+    },
+    "videos/09BarulhoSinalizador05-2.mp4": {
+      "remote_path": "videos/09BarulhoSinalizador05-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 44956230,
+      "status": "pending",
+      "error": null
+    },
+    "videos/09BarulhoSinalizador05-3.mp4": {
+      "remote_path": "videos/09BarulhoSinalizador05-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 49702824,
+      "status": "pending",
+      "error": null
+    },
+    "videos/09BarulhoSinalizador05-4.mp4": {
+      "remote_path": "videos/09BarulhoSinalizador05-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 52474979,
+      "status": "pending",
+      "error": null
+    },
+    "videos/09BarulhoSinalizador05-5.mp4": {
+      "remote_path": "videos/09BarulhoSinalizador05-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 43393451,
+      "status": "pending",
+      "error": null
+    },
+    "videos/09BarulhoSinalizador06-1.mp4": {
+      "remote_path": "videos/09BarulhoSinalizador06-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 64539067,
+      "status": "pending",
+      "error": null
+    },
+    "videos/09BarulhoSinalizador06-2.mp4": {
+      "remote_path": "videos/09BarulhoSinalizador06-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 68584186,
+      "status": "pending",
+      "error": null
+    },
+    "videos/09BarulhoSinalizador06-3.mp4": {
+      "remote_path": "videos/09BarulhoSinalizador06-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 61720392,
+      "status": "pending",
+      "error": null
+    },
+    "videos/09BarulhoSinalizador06-4.mp4": {
+      "remote_path": "videos/09BarulhoSinalizador06-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 73056681,
+      "status": "pending",
+      "error": null
+    },
+    "videos/09BarulhoSinalizador06-5.mp4": {
+      "remote_path": "videos/09BarulhoSinalizador06-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 60756901,
+      "status": "pending",
+      "error": null
+    },
+    "videos/09BarulhoSinalizador08-1.mp4": {
+      "remote_path": "videos/09BarulhoSinalizador08-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 53991947,
+      "status": "pending",
+      "error": null
+    },
+    "videos/09BarulhoSinalizador08-2.mp4": {
+      "remote_path": "videos/09BarulhoSinalizador08-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 67184916,
+      "status": "pending",
+      "error": null
+    },
+    "videos/09BarulhoSinalizador08-3.mp4": {
+      "remote_path": "videos/09BarulhoSinalizador08-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 60529591,
+      "status": "pending",
+      "error": null
+    },
+    "videos/09BarulhoSinalizador08-4.mp4": {
+      "remote_path": "videos/09BarulhoSinalizador08-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 75192414,
+      "status": "pending",
+      "error": null
+    },
+    "videos/09BarulhoSinalizador08-5.mp4": {
+      "remote_path": "videos/09BarulhoSinalizador08-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 70251817,
+      "status": "pending",
+      "error": null
+    },
+    "videos/09BarulhoSinalizador10-1.mp4": {
+      "remote_path": "videos/09BarulhoSinalizador10-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 62157577,
+      "status": "pending",
+      "error": null
+    },
+    "videos/09BarulhoSinalizador10-2.mp4": {
+      "remote_path": "videos/09BarulhoSinalizador10-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 53293809,
+      "status": "pending",
+      "error": null
+    },
+    "videos/09BarulhoSinalizador10-3.mp4": {
+      "remote_path": "videos/09BarulhoSinalizador10-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 60566060,
+      "status": "pending",
+      "error": null
+    },
+    "videos/09BarulhoSinalizador10-4.mp4": {
+      "remote_path": "videos/09BarulhoSinalizador10-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 64374967,
+      "status": "pending",
+      "error": null
+    },
+    "videos/09BarulhoSinalizador10-5.mp4": {
+      "remote_path": "videos/09BarulhoSinalizador10-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 59810484,
+      "status": "pending",
+      "error": null
+    },
+    "videos/09BarulhoSinalizador11-1.mp4": {
+      "remote_path": "videos/09BarulhoSinalizador11-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 87477447,
+      "status": "pending",
+      "error": null
+    },
+    "videos/09BarulhoSinalizador11-2.mp4": {
+      "remote_path": "videos/09BarulhoSinalizador11-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 104644142,
+      "status": "pending",
+      "error": null
+    },
+    "videos/09BarulhoSinalizador11-3.mp4": {
+      "remote_path": "videos/09BarulhoSinalizador11-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 94721136,
+      "status": "pending",
+      "error": null
+    },
+    "videos/09BarulhoSinalizador11-4.mp4": {
+      "remote_path": "videos/09BarulhoSinalizador11-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 92645404,
+      "status": "pending",
+      "error": null
+    },
+    "videos/09BarulhoSinalizador11-5.mp4": {
+      "remote_path": "videos/09BarulhoSinalizador11-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 93602690,
+      "status": "pending",
+      "error": null
+    },
+    "videos/09BarulhoSinalizador12-1.mp4": {
+      "remote_path": "videos/09BarulhoSinalizador12-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 82661451,
+      "status": "pending",
+      "error": null
+    },
+    "videos/09BarulhoSinalizador12-2.mp4": {
+      "remote_path": "videos/09BarulhoSinalizador12-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 80387126,
+      "status": "pending",
+      "error": null
+    },
+    "videos/09BarulhoSinalizador12-3.mp4": {
+      "remote_path": "videos/09BarulhoSinalizador12-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 91000319,
+      "status": "pending",
+      "error": null
+    },
+    "videos/09BarulhoSinalizador12-4.mp4": {
+      "remote_path": "videos/09BarulhoSinalizador12-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 76622426,
+      "status": "pending",
+      "error": null
+    },
+    "videos/09BarulhoSinalizador12-5.mp4": {
+      "remote_path": "videos/09BarulhoSinalizador12-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 90189628,
+      "status": "pending",
+      "error": null
+    },
+    "videos/10CincoSinalizador01-1.mp4": {
+      "remote_path": "videos/10CincoSinalizador01-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 37814464,
+      "status": "pending",
+      "error": null
+    },
+    "videos/10CincoSinalizador01-2.mp4": {
+      "remote_path": "videos/10CincoSinalizador01-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 47803182,
+      "status": "pending",
+      "error": null
+    },
+    "videos/10CincoSinalizador01-3.mp4": {
+      "remote_path": "videos/10CincoSinalizador01-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 49803468,
+      "status": "pending",
+      "error": null
+    },
+    "videos/10CincoSinalizador01-4.mp4": {
+      "remote_path": "videos/10CincoSinalizador01-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 41894963,
+      "status": "pending",
+      "error": null
+    },
+    "videos/10CincoSinalizador01-5.mp4": {
+      "remote_path": "videos/10CincoSinalizador01-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 48356024,
+      "status": "pending",
+      "error": null
+    },
+    "videos/10CincoSinalizador02-1.mp4": {
+      "remote_path": "videos/10CincoSinalizador02-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 40403331,
+      "status": "pending",
+      "error": null
+    },
+    "videos/10CincoSinalizador02-2.mp4": {
+      "remote_path": "videos/10CincoSinalizador02-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 49452100,
+      "status": "pending",
+      "error": null
+    },
+    "videos/10CincoSinalizador02-3.mp4": {
+      "remote_path": "videos/10CincoSinalizador02-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 45949543,
+      "status": "pending",
+      "error": null
+    },
+    "videos/10CincoSinalizador02-4.mp4": {
+      "remote_path": "videos/10CincoSinalizador02-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 45681330,
+      "status": "pending",
+      "error": null
+    },
+    "videos/10CincoSinalizador02-5.mp4": {
+      "remote_path": "videos/10CincoSinalizador02-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 48839445,
+      "status": "pending",
+      "error": null
+    },
+    "videos/10CincoSinalizador05-1.mp4": {
+      "remote_path": "videos/10CincoSinalizador05-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 41822834,
+      "status": "pending",
+      "error": null
+    },
+    "videos/10CincoSinalizador05-2.mp4": {
+      "remote_path": "videos/10CincoSinalizador05-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 49977123,
+      "status": "pending",
+      "error": null
+    },
+    "videos/10CincoSinalizador05-3.mp4": {
+      "remote_path": "videos/10CincoSinalizador05-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 52683700,
+      "status": "pending",
+      "error": null
+    },
+    "videos/10CincoSinalizador05-4.mp4": {
+      "remote_path": "videos/10CincoSinalizador05-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 43156191,
+      "status": "pending",
+      "error": null
+    },
+    "videos/10CincoSinalizador05-5.mp4": {
+      "remote_path": "videos/10CincoSinalizador05-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 54582390,
+      "status": "pending",
+      "error": null
+    },
+    "videos/10CincoSinalizador06-1.mp4": {
+      "remote_path": "videos/10CincoSinalizador06-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 51614228,
+      "status": "pending",
+      "error": null
+    },
+    "videos/10CincoSinalizador06-2.mp4": {
+      "remote_path": "videos/10CincoSinalizador06-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 53023114,
+      "status": "pending",
+      "error": null
+    },
+    "videos/10CincoSinalizador06-3.mp4": {
+      "remote_path": "videos/10CincoSinalizador06-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 53605503,
+      "status": "pending",
+      "error": null
+    },
+    "videos/10CincoSinalizador06-4.mp4": {
+      "remote_path": "videos/10CincoSinalizador06-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 47794827,
+      "status": "pending",
+      "error": null
+    },
+    "videos/10CincoSinalizador06-5.mp4": {
+      "remote_path": "videos/10CincoSinalizador06-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 45592879,
+      "status": "pending",
+      "error": null
+    },
+    "videos/10CincoSinalizador08-1.mp4": {
+      "remote_path": "videos/10CincoSinalizador08-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 41302065,
+      "status": "pending",
+      "error": null
+    },
+    "videos/10CincoSinalizador08-2.mp4": {
+      "remote_path": "videos/10CincoSinalizador08-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 53799484,
+      "status": "pending",
+      "error": null
+    },
+    "videos/10CincoSinalizador08-3.mp4": {
+      "remote_path": "videos/10CincoSinalizador08-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 57255133,
+      "status": "pending",
+      "error": null
+    },
+    "videos/10CincoSinalizador08-4.mp4": {
+      "remote_path": "videos/10CincoSinalizador08-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 47557126,
+      "status": "pending",
+      "error": null
+    },
+    "videos/10CincoSinalizador08-5.mp4": {
+      "remote_path": "videos/10CincoSinalizador08-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 60184168,
+      "status": "pending",
+      "error": null
+    },
+    "videos/10CincoSinalizador10-1.mp4": {
+      "remote_path": "videos/10CincoSinalizador10-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 49320911,
+      "status": "pending",
+      "error": null
+    },
+    "videos/10CincoSinalizador10-2.mp4": {
+      "remote_path": "videos/10CincoSinalizador10-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 59470982,
+      "status": "pending",
+      "error": null
+    },
+    "videos/10CincoSinalizador10-3.mp4": {
+      "remote_path": "videos/10CincoSinalizador10-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 53363396,
+      "status": "pending",
+      "error": null
+    },
+    "videos/10CincoSinalizador10-4.mp4": {
+      "remote_path": "videos/10CincoSinalizador10-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 51327705,
+      "status": "pending",
+      "error": null
+    },
+    "videos/10CincoSinalizador10-5.mp4": {
+      "remote_path": "videos/10CincoSinalizador10-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 61594091,
+      "status": "pending",
+      "error": null
+    },
+    "videos/10CincoSinalizador11-1.mp4": {
+      "remote_path": "videos/10CincoSinalizador11-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 78105435,
+      "status": "pending",
+      "error": null
+    },
+    "videos/10CincoSinalizador11-2.mp4": {
+      "remote_path": "videos/10CincoSinalizador11-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 84733312,
+      "status": "pending",
+      "error": null
+    },
+    "videos/10CincoSinalizador11-3.mp4": {
+      "remote_path": "videos/10CincoSinalizador11-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 90033429,
+      "status": "pending",
+      "error": null
+    },
+    "videos/10CincoSinalizador11-4.mp4": {
+      "remote_path": "videos/10CincoSinalizador11-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 84791425,
+      "status": "pending",
+      "error": null
+    },
+    "videos/10CincoSinalizador11-5.mp4": {
+      "remote_path": "videos/10CincoSinalizador11-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 86693965,
+      "status": "pending",
+      "error": null
+    },
+    "videos/10CincoSinalizador12-1.mp4": {
+      "remote_path": "videos/10CincoSinalizador12-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 78775858,
+      "status": "pending",
+      "error": null
+    },
+    "videos/10CincoSinalizador12-2.mp4": {
+      "remote_path": "videos/10CincoSinalizador12-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 68364324,
+      "status": "pending",
+      "error": null
+    },
+    "videos/10CincoSinalizador12-3.mp4": {
+      "remote_path": "videos/10CincoSinalizador12-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 72825365,
+      "status": "pending",
+      "error": null
+    },
+    "videos/10CincoSinalizador12-4.mp4": {
+      "remote_path": "videos/10CincoSinalizador12-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 60348502,
+      "status": "pending",
+      "error": null
+    },
+    "videos/10CincoSinalizador12-5.mp4": {
+      "remote_path": "videos/10CincoSinalizador12-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 67565424,
+      "status": "pending",
+      "error": null
+    },
+    "videos/11ConhecerSinalizador01-1.mp4": {
+      "remote_path": "videos/11ConhecerSinalizador01-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 37075221,
+      "status": "pending",
+      "error": null
+    },
+    "videos/11ConhecerSinalizador01-2.mp4": {
+      "remote_path": "videos/11ConhecerSinalizador01-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 40310798,
+      "status": "pending",
+      "error": null
+    },
+    "videos/11ConhecerSinalizador01-3.mp4": {
+      "remote_path": "videos/11ConhecerSinalizador01-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 40478492,
+      "status": "pending",
+      "error": null
+    },
+    "videos/11ConhecerSinalizador01-4.mp4": {
+      "remote_path": "videos/11ConhecerSinalizador01-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 38262127,
+      "status": "pending",
+      "error": null
+    },
+    "videos/11ConhecerSinalizador01-5.mp4": {
+      "remote_path": "videos/11ConhecerSinalizador01-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 40685399,
+      "status": "pending",
+      "error": null
+    },
+    "videos/11ConhecerSinalizador02-1.mp4": {
+      "remote_path": "videos/11ConhecerSinalizador02-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 41610537,
+      "status": "pending",
+      "error": null
+    },
+    "videos/11ConhecerSinalizador02-2.mp4": {
+      "remote_path": "videos/11ConhecerSinalizador02-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 54282100,
+      "status": "pending",
+      "error": null
+    },
+    "videos/11ConhecerSinalizador02-3.mp4": {
+      "remote_path": "videos/11ConhecerSinalizador02-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 49857667,
+      "status": "pending",
+      "error": null
+    },
+    "videos/11ConhecerSinalizador02-4.mp4": {
+      "remote_path": "videos/11ConhecerSinalizador02-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 42915249,
+      "status": "pending",
+      "error": null
+    },
+    "videos/11ConhecerSinalizador02-5.mp4": {
+      "remote_path": "videos/11ConhecerSinalizador02-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 41063674,
+      "status": "pending",
+      "error": null
+    },
+    "videos/11ConhecerSinalizador05-1.mp4": {
+      "remote_path": "videos/11ConhecerSinalizador05-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 46184114,
+      "status": "pending",
+      "error": null
+    },
+    "videos/11ConhecerSinalizador05-2.mp4": {
+      "remote_path": "videos/11ConhecerSinalizador05-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 63715505,
+      "status": "pending",
+      "error": null
+    },
+    "videos/11ConhecerSinalizador05-3.mp4": {
+      "remote_path": "videos/11ConhecerSinalizador05-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 45115458,
+      "status": "pending",
+      "error": null
+    },
+    "videos/11ConhecerSinalizador05-4.mp4": {
+      "remote_path": "videos/11ConhecerSinalizador05-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 61966960,
+      "status": "pending",
+      "error": null
+    },
+    "videos/11ConhecerSinalizador05-5.mp4": {
+      "remote_path": "videos/11ConhecerSinalizador05-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 49587606,
+      "status": "pending",
+      "error": null
+    },
+    "videos/11ConhecerSinalizador06-1.mp4": {
+      "remote_path": "videos/11ConhecerSinalizador06-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 63093572,
+      "status": "pending",
+      "error": null
+    },
+    "videos/11ConhecerSinalizador06-2.mp4": {
+      "remote_path": "videos/11ConhecerSinalizador06-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 71302604,
+      "status": "pending",
+      "error": null
+    },
+    "videos/11ConhecerSinalizador06-3.mp4": {
+      "remote_path": "videos/11ConhecerSinalizador06-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 62990229,
+      "status": "pending",
+      "error": null
+    },
+    "videos/11ConhecerSinalizador06-4.mp4": {
+      "remote_path": "videos/11ConhecerSinalizador06-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 69439788,
+      "status": "pending",
+      "error": null
+    },
+    "videos/11ConhecerSinalizador06-5.mp4": {
+      "remote_path": "videos/11ConhecerSinalizador06-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 74026403,
+      "status": "pending",
+      "error": null
+    },
+    "videos/11ConhecerSinalizador08-1.mp4": {
+      "remote_path": "videos/11ConhecerSinalizador08-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 49050565,
+      "status": "pending",
+      "error": null
+    },
+    "videos/11ConhecerSinalizador08-2.mp4": {
+      "remote_path": "videos/11ConhecerSinalizador08-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 57173599,
+      "status": "pending",
+      "error": null
+    },
+    "videos/11ConhecerSinalizador08-3.mp4": {
+      "remote_path": "videos/11ConhecerSinalizador08-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 53016514,
+      "status": "pending",
+      "error": null
+    },
+    "videos/11ConhecerSinalizador08-4.mp4": {
+      "remote_path": "videos/11ConhecerSinalizador08-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 48210319,
+      "status": "pending",
+      "error": null
+    },
+    "videos/11ConhecerSinalizador08-5.mp4": {
+      "remote_path": "videos/11ConhecerSinalizador08-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 47209721,
+      "status": "pending",
+      "error": null
+    },
+    "videos/11ConhecerSinalizador10-1.mp4": {
+      "remote_path": "videos/11ConhecerSinalizador10-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 41170952,
+      "status": "pending",
+      "error": null
+    },
+    "videos/11ConhecerSinalizador10-2.mp4": {
+      "remote_path": "videos/11ConhecerSinalizador10-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 39814687,
+      "status": "pending",
+      "error": null
+    },
+    "videos/11ConhecerSinalizador10-3.mp4": {
+      "remote_path": "videos/11ConhecerSinalizador10-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 43692066,
+      "status": "pending",
+      "error": null
+    },
+    "videos/11ConhecerSinalizador10-4.mp4": {
+      "remote_path": "videos/11ConhecerSinalizador10-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 50283704,
+      "status": "pending",
+      "error": null
+    },
+    "videos/11ConhecerSinalizador10-5.mp4": {
+      "remote_path": "videos/11ConhecerSinalizador10-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 41095415,
+      "status": "pending",
+      "error": null
+    },
+    "videos/11ConhecerSinalizador11-1.mp4": {
+      "remote_path": "videos/11ConhecerSinalizador11-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 88263560,
+      "status": "pending",
+      "error": null
+    },
+    "videos/11ConhecerSinalizador11-2.mp4": {
+      "remote_path": "videos/11ConhecerSinalizador11-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 74244855,
+      "status": "pending",
+      "error": null
+    },
+    "videos/11ConhecerSinalizador11-3.mp4": {
+      "remote_path": "videos/11ConhecerSinalizador11-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 95962020,
+      "status": "pending",
+      "error": null
+    },
+    "videos/11ConhecerSinalizador11-4.mp4": {
+      "remote_path": "videos/11ConhecerSinalizador11-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 87931820,
+      "status": "pending",
+      "error": null
+    },
+    "videos/11ConhecerSinalizador11-5.mp4": {
+      "remote_path": "videos/11ConhecerSinalizador11-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 82963568,
+      "status": "pending",
+      "error": null
+    },
+    "videos/11ConhecerSinalizador12-1.mp4": {
+      "remote_path": "videos/11ConhecerSinalizador12-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 78800755,
+      "status": "pending",
+      "error": null
+    },
+    "videos/11ConhecerSinalizador12-2.mp4": {
+      "remote_path": "videos/11ConhecerSinalizador12-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 87191394,
+      "status": "pending",
+      "error": null
+    },
+    "videos/11ConhecerSinalizador12-3.mp4": {
+      "remote_path": "videos/11ConhecerSinalizador12-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 80547252,
+      "status": "pending",
+      "error": null
+    },
+    "videos/11ConhecerSinalizador12-4.mp4": {
+      "remote_path": "videos/11ConhecerSinalizador12-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 87791540,
+      "status": "pending",
+      "error": null
+    },
+    "videos/11ConhecerSinalizador12-5.mp4": {
+      "remote_path": "videos/11ConhecerSinalizador12-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 83224895,
+      "status": "pending",
+      "error": null
+    },
+    "videos/12EspelhoSinalizador01-1.mp4": {
+      "remote_path": "videos/12EspelhoSinalizador01-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 62794091,
+      "status": "pending",
+      "error": null
+    },
+    "videos/12EspelhoSinalizador01-2.mp4": {
+      "remote_path": "videos/12EspelhoSinalizador01-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 46227151,
+      "status": "pending",
+      "error": null
+    },
+    "videos/12EspelhoSinalizador01-3.mp4": {
+      "remote_path": "videos/12EspelhoSinalizador01-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 47267643,
+      "status": "pending",
+      "error": null
+    },
+    "videos/12EspelhoSinalizador01-4.mp4": {
+      "remote_path": "videos/12EspelhoSinalizador01-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 37688398,
+      "status": "pending",
+      "error": null
+    },
+    "videos/12EspelhoSinalizador01-5.mp4": {
+      "remote_path": "videos/12EspelhoSinalizador01-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 44933299,
+      "status": "pending",
+      "error": null
+    },
+    "videos/12EspelhoSinalizador02-1.mp4": {
+      "remote_path": "videos/12EspelhoSinalizador02-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 47624908,
+      "status": "pending",
+      "error": null
+    },
+    "videos/12EspelhoSinalizador02-2.mp4": {
+      "remote_path": "videos/12EspelhoSinalizador02-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 44665944,
+      "status": "pending",
+      "error": null
+    },
+    "videos/12EspelhoSinalizador02-3.mp4": {
+      "remote_path": "videos/12EspelhoSinalizador02-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 54159767,
+      "status": "pending",
+      "error": null
+    },
+    "videos/12EspelhoSinalizador02-4.mp4": {
+      "remote_path": "videos/12EspelhoSinalizador02-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 53698691,
+      "status": "pending",
+      "error": null
+    },
+    "videos/12EspelhoSinalizador02-5.mp4": {
+      "remote_path": "videos/12EspelhoSinalizador02-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 56470790,
+      "status": "pending",
+      "error": null
+    },
+    "videos/12EspelhoSinalizador05-1.mp4": {
+      "remote_path": "videos/12EspelhoSinalizador05-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 51679231,
+      "status": "pending",
+      "error": null
+    },
+    "videos/12EspelhoSinalizador05-2.mp4": {
+      "remote_path": "videos/12EspelhoSinalizador05-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 54203143,
+      "status": "pending",
+      "error": null
+    },
+    "videos/12EspelhoSinalizador05-3.mp4": {
+      "remote_path": "videos/12EspelhoSinalizador05-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 69410142,
+      "status": "pending",
+      "error": null
+    },
+    "videos/12EspelhoSinalizador05-4.mp4": {
+      "remote_path": "videos/12EspelhoSinalizador05-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 50874946,
+      "status": "pending",
+      "error": null
+    },
+    "videos/12EspelhoSinalizador05-5.mp4": {
+      "remote_path": "videos/12EspelhoSinalizador05-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 51834681,
+      "status": "pending",
+      "error": null
+    },
+    "videos/12EspelhoSinalizador06-1.mp4": {
+      "remote_path": "videos/12EspelhoSinalizador06-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 59250605,
+      "status": "pending",
+      "error": null
+    },
+    "videos/12EspelhoSinalizador06-2.mp4": {
+      "remote_path": "videos/12EspelhoSinalizador06-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 63851525,
+      "status": "pending",
+      "error": null
+    },
+    "videos/12EspelhoSinalizador06-3.mp4": {
+      "remote_path": "videos/12EspelhoSinalizador06-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 66285545,
+      "status": "pending",
+      "error": null
+    },
+    "videos/12EspelhoSinalizador06-4.mp4": {
+      "remote_path": "videos/12EspelhoSinalizador06-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 66578341,
+      "status": "pending",
+      "error": null
+    },
+    "videos/12EspelhoSinalizador06-5.mp4": {
+      "remote_path": "videos/12EspelhoSinalizador06-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 69717655,
+      "status": "pending",
+      "error": null
+    },
+    "videos/12EspelhoSinalizador08-1.mp4": {
+      "remote_path": "videos/12EspelhoSinalizador08-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 57230620,
+      "status": "pending",
+      "error": null
+    },
+    "videos/12EspelhoSinalizador08-2.mp4": {
+      "remote_path": "videos/12EspelhoSinalizador08-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 46556290,
+      "status": "pending",
+      "error": null
+    },
+    "videos/12EspelhoSinalizador08-3.mp4": {
+      "remote_path": "videos/12EspelhoSinalizador08-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 52208160,
+      "status": "pending",
+      "error": null
+    },
+    "videos/12EspelhoSinalizador08-4.mp4": {
+      "remote_path": "videos/12EspelhoSinalizador08-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 43992967,
+      "status": "pending",
+      "error": null
+    },
+    "videos/12EspelhoSinalizador08-5.mp4": {
+      "remote_path": "videos/12EspelhoSinalizador08-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 46511452,
+      "status": "pending",
+      "error": null
+    },
+    "videos/12EspelhoSinalizador10-1.mp4": {
+      "remote_path": "videos/12EspelhoSinalizador10-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 40678052,
+      "status": "pending",
+      "error": null
+    },
+    "videos/12EspelhoSinalizador10-2.mp4": {
+      "remote_path": "videos/12EspelhoSinalizador10-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 49616903,
+      "status": "pending",
+      "error": null
+    },
+    "videos/12EspelhoSinalizador10-3.mp4": {
+      "remote_path": "videos/12EspelhoSinalizador10-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 43077634,
+      "status": "pending",
+      "error": null
+    },
+    "videos/12EspelhoSinalizador10-4.mp4": {
+      "remote_path": "videos/12EspelhoSinalizador10-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 56340816,
+      "status": "pending",
+      "error": null
+    },
+    "videos/12EspelhoSinalizador10-5.mp4": {
+      "remote_path": "videos/12EspelhoSinalizador10-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 63239038,
+      "status": "pending",
+      "error": null
+    },
+    "videos/12EspelhoSinalizador11-1.mp4": {
+      "remote_path": "videos/12EspelhoSinalizador11-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 53101127,
+      "status": "pending",
+      "error": null
+    },
+    "videos/12EspelhoSinalizador11-2.mp4": {
+      "remote_path": "videos/12EspelhoSinalizador11-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 73269694,
+      "status": "pending",
+      "error": null
+    },
+    "videos/12EspelhoSinalizador11-3.mp4": {
+      "remote_path": "videos/12EspelhoSinalizador11-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 94687541,
+      "status": "pending",
+      "error": null
+    },
+    "videos/12EspelhoSinalizador11-4.mp4": {
+      "remote_path": "videos/12EspelhoSinalizador11-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 96118725,
+      "status": "pending",
+      "error": null
+    },
+    "videos/12EspelhoSinalizador11-5.mp4": {
+      "remote_path": "videos/12EspelhoSinalizador11-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 81423235,
+      "status": "pending",
+      "error": null
+    },
+    "videos/12EspelhoSinalizador12-1.mp4": {
+      "remote_path": "videos/12EspelhoSinalizador12-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 78722350,
+      "status": "pending",
+      "error": null
+    },
+    "videos/12EspelhoSinalizador12-2.mp4": {
+      "remote_path": "videos/12EspelhoSinalizador12-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 101096182,
+      "status": "pending",
+      "error": null
+    },
+    "videos/12EspelhoSinalizador12-3.mp4": {
+      "remote_path": "videos/12EspelhoSinalizador12-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 98371604,
+      "status": "pending",
+      "error": null
+    },
+    "videos/12EspelhoSinalizador12-4.mp4": {
+      "remote_path": "videos/12EspelhoSinalizador12-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 97894918,
+      "status": "pending",
+      "error": null
+    },
+    "videos/12EspelhoSinalizador12-5.mp4": {
+      "remote_path": "videos/12EspelhoSinalizador12-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 100442206,
+      "status": "pending",
+      "error": null
+    },
+    "videos/13EsquinaSinalizador01-1.mp4": {
+      "remote_path": "videos/13EsquinaSinalizador01-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 42997442,
+      "status": "pending",
+      "error": null
+    },
+    "videos/13EsquinaSinalizador01-2.mp4": {
+      "remote_path": "videos/13EsquinaSinalizador01-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 36779558,
+      "status": "pending",
+      "error": null
+    },
+    "videos/13EsquinaSinalizador01-3.mp4": {
+      "remote_path": "videos/13EsquinaSinalizador01-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 36635817,
+      "status": "pending",
+      "error": null
+    },
+    "videos/13EsquinaSinalizador01-4.mp4": {
+      "remote_path": "videos/13EsquinaSinalizador01-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 39057386,
+      "status": "pending",
+      "error": null
+    },
+    "videos/13EsquinaSinalizador01-5.mp4": {
+      "remote_path": "videos/13EsquinaSinalizador01-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 37473077,
+      "status": "pending",
+      "error": null
+    },
+    "videos/13EsquinaSinalizador02-1.mp4": {
+      "remote_path": "videos/13EsquinaSinalizador02-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 52113733,
+      "status": "pending",
+      "error": null
+    },
+    "videos/13EsquinaSinalizador02-2.mp4": {
+      "remote_path": "videos/13EsquinaSinalizador02-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 43850438,
+      "status": "pending",
+      "error": null
+    },
+    "videos/13EsquinaSinalizador02-3.mp4": {
+      "remote_path": "videos/13EsquinaSinalizador02-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 62798063,
+      "status": "pending",
+      "error": null
+    },
+    "videos/13EsquinaSinalizador02-4.mp4": {
+      "remote_path": "videos/13EsquinaSinalizador02-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 49318585,
+      "status": "pending",
+      "error": null
+    },
+    "videos/13EsquinaSinalizador02-5.mp4": {
+      "remote_path": "videos/13EsquinaSinalizador02-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 48226682,
+      "status": "pending",
+      "error": null
+    },
+    "videos/13EsquinaSinalizador05-1.mp4": {
+      "remote_path": "videos/13EsquinaSinalizador05-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 61876759,
+      "status": "pending",
+      "error": null
+    },
+    "videos/13EsquinaSinalizador05-2.mp4": {
+      "remote_path": "videos/13EsquinaSinalizador05-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 61764506,
+      "status": "pending",
+      "error": null
+    },
+    "videos/13EsquinaSinalizador05-3.mp4": {
+      "remote_path": "videos/13EsquinaSinalizador05-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 61102794,
+      "status": "pending",
+      "error": null
+    },
+    "videos/13EsquinaSinalizador05-4.mp4": {
+      "remote_path": "videos/13EsquinaSinalizador05-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 63664511,
+      "status": "pending",
+      "error": null
+    },
+    "videos/13EsquinaSinalizador05-5.mp4": {
+      "remote_path": "videos/13EsquinaSinalizador05-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 67574358,
+      "status": "pending",
+      "error": null
+    },
+    "videos/13EsquinaSinalizador06-1.mp4": {
+      "remote_path": "videos/13EsquinaSinalizador06-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 80679898,
+      "status": "pending",
+      "error": null
+    },
+    "videos/13EsquinaSinalizador06-2.mp4": {
+      "remote_path": "videos/13EsquinaSinalizador06-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 81111568,
+      "status": "pending",
+      "error": null
+    },
+    "videos/13EsquinaSinalizador06-3.mp4": {
+      "remote_path": "videos/13EsquinaSinalizador06-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 81290405,
+      "status": "pending",
+      "error": null
+    },
+    "videos/13EsquinaSinalizador06-4.mp4": {
+      "remote_path": "videos/13EsquinaSinalizador06-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 97311589,
+      "status": "pending",
+      "error": null
+    },
+    "videos/13EsquinaSinalizador06-5.mp4": {
+      "remote_path": "videos/13EsquinaSinalizador06-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 74751754,
+      "status": "pending",
+      "error": null
+    },
+    "videos/13EsquinaSinalizador08-1.mp4": {
+      "remote_path": "videos/13EsquinaSinalizador08-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 67509815,
+      "status": "pending",
+      "error": null
+    },
+    "videos/13EsquinaSinalizador08-2.mp4": {
+      "remote_path": "videos/13EsquinaSinalizador08-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 48848479,
+      "status": "pending",
+      "error": null
+    },
+    "videos/13EsquinaSinalizador08-3.mp4": {
+      "remote_path": "videos/13EsquinaSinalizador08-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 51919271,
+      "status": "pending",
+      "error": null
+    },
+    "videos/13EsquinaSinalizador08-4.mp4": {
+      "remote_path": "videos/13EsquinaSinalizador08-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 55066656,
+      "status": "pending",
+      "error": null
+    },
+    "videos/13EsquinaSinalizador08-5.mp4": {
+      "remote_path": "videos/13EsquinaSinalizador08-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 54881104,
+      "status": "pending",
+      "error": null
+    },
+    "videos/13EsquinaSinalizador10-1.mp4": {
+      "remote_path": "videos/13EsquinaSinalizador10-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 45652221,
+      "status": "pending",
+      "error": null
+    },
+    "videos/13EsquinaSinalizador10-2.mp4": {
+      "remote_path": "videos/13EsquinaSinalizador10-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 53518257,
+      "status": "pending",
+      "error": null
+    },
+    "videos/13EsquinaSinalizador10-3.mp4": {
+      "remote_path": "videos/13EsquinaSinalizador10-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 58731937,
+      "status": "pending",
+      "error": null
+    },
+    "videos/13EsquinaSinalizador10-4.mp4": {
+      "remote_path": "videos/13EsquinaSinalizador10-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 44296617,
+      "status": "pending",
+      "error": null
+    },
+    "videos/13EsquinaSinalizador10-5.mp4": {
+      "remote_path": "videos/13EsquinaSinalizador10-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 57832931,
+      "status": "pending",
+      "error": null
+    },
+    "videos/13EsquinaSinalizador11-1.mp4": {
+      "remote_path": "videos/13EsquinaSinalizador11-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 79232638,
+      "status": "pending",
+      "error": null
+    },
+    "videos/13EsquinaSinalizador11-2.mp4": {
+      "remote_path": "videos/13EsquinaSinalizador11-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 72020268,
+      "status": "pending",
+      "error": null
+    },
+    "videos/13EsquinaSinalizador11-3.mp4": {
+      "remote_path": "videos/13EsquinaSinalizador11-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 72933169,
+      "status": "pending",
+      "error": null
+    },
+    "videos/13EsquinaSinalizador11-4.mp4": {
+      "remote_path": "videos/13EsquinaSinalizador11-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 79878808,
+      "status": "pending",
+      "error": null
+    },
+    "videos/13EsquinaSinalizador11-5.mp4": {
+      "remote_path": "videos/13EsquinaSinalizador11-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 80685799,
+      "status": "pending",
+      "error": null
+    },
+    "videos/13EsquinaSinalizador12-1.mp4": {
+      "remote_path": "videos/13EsquinaSinalizador12-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 75456691,
+      "status": "pending",
+      "error": null
+    },
+    "videos/13EsquinaSinalizador12-2.mp4": {
+      "remote_path": "videos/13EsquinaSinalizador12-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 96568012,
+      "status": "pending",
+      "error": null
+    },
+    "videos/13EsquinaSinalizador12-3.mp4": {
+      "remote_path": "videos/13EsquinaSinalizador12-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 107676915,
+      "status": "pending",
+      "error": null
+    },
+    "videos/13EsquinaSinalizador12-4.mp4": {
+      "remote_path": "videos/13EsquinaSinalizador12-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 92657954,
+      "status": "pending",
+      "error": null
+    },
+    "videos/13EsquinaSinalizador12-5.mp4": {
+      "remote_path": "videos/13EsquinaSinalizador12-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 87043856,
+      "status": "pending",
+      "error": null
+    },
+    "videos/14FilhoSinalizador01-1.mp4": {
+      "remote_path": "videos/14FilhoSinalizador01-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 43884523,
+      "status": "pending",
+      "error": null
+    },
+    "videos/14FilhoSinalizador01-2.mp4": {
+      "remote_path": "videos/14FilhoSinalizador01-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 40356439,
+      "status": "pending",
+      "error": null
+    },
+    "videos/14FilhoSinalizador01-3.mp4": {
+      "remote_path": "videos/14FilhoSinalizador01-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 43416645,
+      "status": "pending",
+      "error": null
+    },
+    "videos/14FilhoSinalizador01-4.mp4": {
+      "remote_path": "videos/14FilhoSinalizador01-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 42750952,
+      "status": "pending",
+      "error": null
+    },
+    "videos/14FilhoSinalizador01-5.mp4": {
+      "remote_path": "videos/14FilhoSinalizador01-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 54539918,
+      "status": "pending",
+      "error": null
+    },
+    "videos/14FilhoSinalizador02-1.mp4": {
+      "remote_path": "videos/14FilhoSinalizador02-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 39187895,
+      "status": "pending",
+      "error": null
+    },
+    "videos/14FilhoSinalizador02-2.mp4": {
+      "remote_path": "videos/14FilhoSinalizador02-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 40024463,
+      "status": "pending",
+      "error": null
+    },
+    "videos/14FilhoSinalizador02-3.mp4": {
+      "remote_path": "videos/14FilhoSinalizador02-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 39897273,
+      "status": "pending",
+      "error": null
+    },
+    "videos/14FilhoSinalizador02-4.mp4": {
+      "remote_path": "videos/14FilhoSinalizador02-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 41325679,
+      "status": "pending",
+      "error": null
+    },
+    "videos/14FilhoSinalizador02-5.mp4": {
+      "remote_path": "videos/14FilhoSinalizador02-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 43811708,
+      "status": "pending",
+      "error": null
+    },
+    "videos/14FilhoSinalizador05-1.mp4": {
+      "remote_path": "videos/14FilhoSinalizador05-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 54293304,
+      "status": "pending",
+      "error": null
+    },
+    "videos/14FilhoSinalizador05-2.mp4": {
+      "remote_path": "videos/14FilhoSinalizador05-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 57174320,
+      "status": "pending",
+      "error": null
+    },
+    "videos/14FilhoSinalizador05-3.mp4": {
+      "remote_path": "videos/14FilhoSinalizador05-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 66150423,
+      "status": "pending",
+      "error": null
+    },
+    "videos/14FilhoSinalizador05-4.mp4": {
+      "remote_path": "videos/14FilhoSinalizador05-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 42834626,
+      "status": "pending",
+      "error": null
+    },
+    "videos/14FilhoSinalizador05-5.mp4": {
+      "remote_path": "videos/14FilhoSinalizador05-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 59209887,
+      "status": "pending",
+      "error": null
+    },
+    "videos/14FilhoSinalizador06-1.mp4": {
+      "remote_path": "videos/14FilhoSinalizador06-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 53846818,
+      "status": "pending",
+      "error": null
+    },
+    "videos/14FilhoSinalizador06-2.mp4": {
+      "remote_path": "videos/14FilhoSinalizador06-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 50905469,
+      "status": "pending",
+      "error": null
+    },
+    "videos/14FilhoSinalizador06-3.mp4": {
+      "remote_path": "videos/14FilhoSinalizador06-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 47089987,
+      "status": "pending",
+      "error": null
+    },
+    "videos/14FilhoSinalizador06-4.mp4": {
+      "remote_path": "videos/14FilhoSinalizador06-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 52194100,
+      "status": "pending",
+      "error": null
+    },
+    "videos/14FilhoSinalizador06-5.mp4": {
+      "remote_path": "videos/14FilhoSinalizador06-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 54455719,
+      "status": "pending",
+      "error": null
+    },
+    "videos/14FilhoSinalizador08-1.mp4": {
+      "remote_path": "videos/14FilhoSinalizador08-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 44853317,
+      "status": "pending",
+      "error": null
+    },
+    "videos/14FilhoSinalizador08-2.mp4": {
+      "remote_path": "videos/14FilhoSinalizador08-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 44228698,
+      "status": "pending",
+      "error": null
+    },
+    "videos/14FilhoSinalizador08-3.mp4": {
+      "remote_path": "videos/14FilhoSinalizador08-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 47895658,
+      "status": "pending",
+      "error": null
+    },
+    "videos/14FilhoSinalizador08-4.mp4": {
+      "remote_path": "videos/14FilhoSinalizador08-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 44884156,
+      "status": "pending",
+      "error": null
+    },
+    "videos/14FilhoSinalizador08-5.mp4": {
+      "remote_path": "videos/14FilhoSinalizador08-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 39540882,
+      "status": "pending",
+      "error": null
+    },
+    "videos/14FilhoSinalizador10-1.mp4": {
+      "remote_path": "videos/14FilhoSinalizador10-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 38872326,
+      "status": "pending",
+      "error": null
+    },
+    "videos/14FilhoSinalizador10-2.mp4": {
+      "remote_path": "videos/14FilhoSinalizador10-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 41627159,
+      "status": "pending",
+      "error": null
+    },
+    "videos/14FilhoSinalizador10-3.mp4": {
+      "remote_path": "videos/14FilhoSinalizador10-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 33785556,
+      "status": "pending",
+      "error": null
+    },
+    "videos/14FilhoSinalizador10-4.mp4": {
+      "remote_path": "videos/14FilhoSinalizador10-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 35049821,
+      "status": "pending",
+      "error": null
+    },
+    "videos/14FilhoSinalizador10-5.mp4": {
+      "remote_path": "videos/14FilhoSinalizador10-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 33965351,
+      "status": "pending",
+      "error": null
+    },
+    "videos/14FilhoSinalizador11-1.mp4": {
+      "remote_path": "videos/14FilhoSinalizador11-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 79365340,
+      "status": "pending",
+      "error": null
+    },
+    "videos/14FilhoSinalizador11-2.mp4": {
+      "remote_path": "videos/14FilhoSinalizador11-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 79105122,
+      "status": "pending",
+      "error": null
+    },
+    "videos/14FilhoSinalizador11-3.mp4": {
+      "remote_path": "videos/14FilhoSinalizador11-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 89114314,
+      "status": "pending",
+      "error": null
+    },
+    "videos/14FilhoSinalizador11-4.mp4": {
+      "remote_path": "videos/14FilhoSinalizador11-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 78952829,
+      "status": "pending",
+      "error": null
+    },
+    "videos/14FilhoSinalizador11-5.mp4": {
+      "remote_path": "videos/14FilhoSinalizador11-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 84716619,
+      "status": "pending",
+      "error": null
+    },
+    "videos/14FilhoSinalizador12-1.mp4": {
+      "remote_path": "videos/14FilhoSinalizador12-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 82516980,
+      "status": "pending",
+      "error": null
+    },
+    "videos/14FilhoSinalizador12-2.mp4": {
+      "remote_path": "videos/14FilhoSinalizador12-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 96327236,
+      "status": "pending",
+      "error": null
+    },
+    "videos/14FilhoSinalizador12-3.mp4": {
+      "remote_path": "videos/14FilhoSinalizador12-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 80149952,
+      "status": "pending",
+      "error": null
+    },
+    "videos/14FilhoSinalizador12-4.mp4": {
+      "remote_path": "videos/14FilhoSinalizador12-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 81271940,
+      "status": "pending",
+      "error": null
+    },
+    "videos/14FilhoSinalizador12-5.mp4": {
+      "remote_path": "videos/14FilhoSinalizador12-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 84446387,
+      "status": "pending",
+      "error": null
+    },
+    "videos/15MacaSinalizador01-1.mp4": {
+      "remote_path": "videos/15MacaSinalizador01-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 37807516,
+      "status": "pending",
+      "error": null
+    },
+    "videos/15MacaSinalizador01-2.mp4": {
+      "remote_path": "videos/15MacaSinalizador01-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 35415794,
+      "status": "pending",
+      "error": null
+    },
+    "videos/15MacaSinalizador01-3.mp4": {
+      "remote_path": "videos/15MacaSinalizador01-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 45186030,
+      "status": "pending",
+      "error": null
+    },
+    "videos/15MacaSinalizador01-4.mp4": {
+      "remote_path": "videos/15MacaSinalizador01-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 40400827,
+      "status": "pending",
+      "error": null
+    },
+    "videos/15MacaSinalizador01-5.mp4": {
+      "remote_path": "videos/15MacaSinalizador01-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 44762899,
+      "status": "pending",
+      "error": null
+    },
+    "videos/15MacaSinalizador02-1.mp4": {
+      "remote_path": "videos/15MacaSinalizador02-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 40265546,
+      "status": "pending",
+      "error": null
+    },
+    "videos/15MacaSinalizador02-2.mp4": {
+      "remote_path": "videos/15MacaSinalizador02-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 51953019,
+      "status": "pending",
+      "error": null
+    },
+    "videos/15MacaSinalizador02-3.mp4": {
+      "remote_path": "videos/15MacaSinalizador02-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 54074187,
+      "status": "pending",
+      "error": null
+    },
+    "videos/15MacaSinalizador02-4.mp4": {
+      "remote_path": "videos/15MacaSinalizador02-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 52663597,
+      "status": "pending",
+      "error": null
+    },
+    "videos/15MacaSinalizador02-5.mp4": {
+      "remote_path": "videos/15MacaSinalizador02-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 50598829,
+      "status": "pending",
+      "error": null
+    },
+    "videos/15MacaSinalizador05-1.mp4": {
+      "remote_path": "videos/15MacaSinalizador05-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 47536497,
+      "status": "pending",
+      "error": null
+    },
+    "videos/15MacaSinalizador05-2.mp4": {
+      "remote_path": "videos/15MacaSinalizador05-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 66286444,
+      "status": "pending",
+      "error": null
+    },
+    "videos/15MacaSinalizador05-3.mp4": {
+      "remote_path": "videos/15MacaSinalizador05-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 46154038,
+      "status": "pending",
+      "error": null
+    },
+    "videos/15MacaSinalizador05-4.mp4": {
+      "remote_path": "videos/15MacaSinalizador05-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 67784703,
+      "status": "pending",
+      "error": null
+    },
+    "videos/15MacaSinalizador05-5.mp4": {
+      "remote_path": "videos/15MacaSinalizador05-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 54397747,
+      "status": "pending",
+      "error": null
+    },
+    "videos/15MacaSinalizador06-1.mp4": {
+      "remote_path": "videos/15MacaSinalizador06-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 71470521,
+      "status": "pending",
+      "error": null
+    },
+    "videos/15MacaSinalizador06-2.mp4": {
+      "remote_path": "videos/15MacaSinalizador06-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 68928400,
+      "status": "pending",
+      "error": null
+    },
+    "videos/15MacaSinalizador06-3.mp4": {
+      "remote_path": "videos/15MacaSinalizador06-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 74099293,
+      "status": "pending",
+      "error": null
+    },
+    "videos/15MacaSinalizador06-4.mp4": {
+      "remote_path": "videos/15MacaSinalizador06-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 75324633,
+      "status": "pending",
+      "error": null
+    },
+    "videos/15MacaSinalizador06-5.mp4": {
+      "remote_path": "videos/15MacaSinalizador06-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 73355821,
+      "status": "pending",
+      "error": null
+    },
+    "videos/15MacaSinalizador08-1.mp4": {
+      "remote_path": "videos/15MacaSinalizador08-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 57873133,
+      "status": "pending",
+      "error": null
+    },
+    "videos/15MacaSinalizador08-2.mp4": {
+      "remote_path": "videos/15MacaSinalizador08-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 44000032,
+      "status": "pending",
+      "error": null
+    },
+    "videos/15MacaSinalizador08-3.mp4": {
+      "remote_path": "videos/15MacaSinalizador08-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 58845534,
+      "status": "pending",
+      "error": null
+    },
+    "videos/15MacaSinalizador08-4.mp4": {
+      "remote_path": "videos/15MacaSinalizador08-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 53996533,
+      "status": "pending",
+      "error": null
+    },
+    "videos/15MacaSinalizador08-5.mp4": {
+      "remote_path": "videos/15MacaSinalizador08-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 52889580,
+      "status": "pending",
+      "error": null
+    },
+    "videos/15MacaSinalizador10-1.mp4": {
+      "remote_path": "videos/15MacaSinalizador10-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 46177072,
+      "status": "pending",
+      "error": null
+    },
+    "videos/15MacaSinalizador10-2.mp4": {
+      "remote_path": "videos/15MacaSinalizador10-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 51485107,
+      "status": "pending",
+      "error": null
+    },
+    "videos/15MacaSinalizador10-3.mp4": {
+      "remote_path": "videos/15MacaSinalizador10-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 49270911,
+      "status": "pending",
+      "error": null
+    },
+    "videos/15MacaSinalizador10-4.mp4": {
+      "remote_path": "videos/15MacaSinalizador10-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 48389724,
+      "status": "pending",
+      "error": null
+    },
+    "videos/15MacaSinalizador10-5.mp4": {
+      "remote_path": "videos/15MacaSinalizador10-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 52796327,
+      "status": "pending",
+      "error": null
+    },
+    "videos/15MacaSinalizador11-1.mp4": {
+      "remote_path": "videos/15MacaSinalizador11-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 76846595,
+      "status": "pending",
+      "error": null
+    },
+    "videos/15MacaSinalizador11-2.mp4": {
+      "remote_path": "videos/15MacaSinalizador11-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 94571255,
+      "status": "pending",
+      "error": null
+    },
+    "videos/15MacaSinalizador11-3.mp4": {
+      "remote_path": "videos/15MacaSinalizador11-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 94209052,
+      "status": "pending",
+      "error": null
+    },
+    "videos/15MacaSinalizador11-4.mp4": {
+      "remote_path": "videos/15MacaSinalizador11-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 86987962,
+      "status": "pending",
+      "error": null
+    },
+    "videos/15MacaSinalizador11-5.mp4": {
+      "remote_path": "videos/15MacaSinalizador11-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 87912904,
+      "status": "pending",
+      "error": null
+    },
+    "videos/15MacaSinalizador12-1.mp4": {
+      "remote_path": "videos/15MacaSinalizador12-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 78114611,
+      "status": "pending",
+      "error": null
+    },
+    "videos/15MacaSinalizador12-2.mp4": {
+      "remote_path": "videos/15MacaSinalizador12-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 82325852,
+      "status": "pending",
+      "error": null
+    },
+    "videos/15MacaSinalizador12-3.mp4": {
+      "remote_path": "videos/15MacaSinalizador12-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 79625935,
+      "status": "pending",
+      "error": null
+    },
+    "videos/15MacaSinalizador12-4.mp4": {
+      "remote_path": "videos/15MacaSinalizador12-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 86805032,
+      "status": "pending",
+      "error": null
+    },
+    "videos/15MacaSinalizador12-5.mp4": {
+      "remote_path": "videos/15MacaSinalizador12-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 93208818,
+      "status": "pending",
+      "error": null
+    },
+    "videos/16MedoSinalizador01-1.mp4": {
+      "remote_path": "videos/16MedoSinalizador01-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 36493641,
+      "status": "pending",
+      "error": null
+    },
+    "videos/16MedoSinalizador01-2.mp4": {
+      "remote_path": "videos/16MedoSinalizador01-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 45760081,
+      "status": "pending",
+      "error": null
+    },
+    "videos/16MedoSinalizador01-3.mp4": {
+      "remote_path": "videos/16MedoSinalizador01-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 45411658,
+      "status": "pending",
+      "error": null
+    },
+    "videos/16MedoSinalizador01-4.mp4": {
+      "remote_path": "videos/16MedoSinalizador01-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 49994866,
+      "status": "pending",
+      "error": null
+    },
+    "videos/16MedoSinalizador01-5.mp4": {
+      "remote_path": "videos/16MedoSinalizador01-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 48019806,
+      "status": "pending",
+      "error": null
+    },
+    "videos/16MedoSinalizador02-1.mp4": {
+      "remote_path": "videos/16MedoSinalizador02-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 41645799,
+      "status": "pending",
+      "error": null
+    },
+    "videos/16MedoSinalizador02-2.mp4": {
+      "remote_path": "videos/16MedoSinalizador02-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 55629936,
+      "status": "pending",
+      "error": null
+    },
+    "videos/16MedoSinalizador02-3.mp4": {
+      "remote_path": "videos/16MedoSinalizador02-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 47140282,
+      "status": "pending",
+      "error": null
+    },
+    "videos/16MedoSinalizador02-4.mp4": {
+      "remote_path": "videos/16MedoSinalizador02-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 50450009,
+      "status": "pending",
+      "error": null
+    },
+    "videos/16MedoSinalizador02-5.mp4": {
+      "remote_path": "videos/16MedoSinalizador02-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 37857272,
+      "status": "pending",
+      "error": null
+    },
+    "videos/16MedoSinalizador05-1.mp4": {
+      "remote_path": "videos/16MedoSinalizador05-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 47362941,
+      "status": "pending",
+      "error": null
+    },
+    "videos/16MedoSinalizador05-2.mp4": {
+      "remote_path": "videos/16MedoSinalizador05-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 61547463,
+      "status": "pending",
+      "error": null
+    },
+    "videos/16MedoSinalizador05-3.mp4": {
+      "remote_path": "videos/16MedoSinalizador05-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 50632296,
+      "status": "pending",
+      "error": null
+    },
+    "videos/16MedoSinalizador05-4.mp4": {
+      "remote_path": "videos/16MedoSinalizador05-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 41500600,
+      "status": "pending",
+      "error": null
+    },
+    "videos/16MedoSinalizador05-5.mp4": {
+      "remote_path": "videos/16MedoSinalizador05-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 59207463,
+      "status": "pending",
+      "error": null
+    },
+    "videos/16MedoSinalizador06-1.mp4": {
+      "remote_path": "videos/16MedoSinalizador06-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 55019463,
+      "status": "pending",
+      "error": null
+    },
+    "videos/16MedoSinalizador06-2.mp4": {
+      "remote_path": "videos/16MedoSinalizador06-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 61303817,
+      "status": "pending",
+      "error": null
+    },
+    "videos/16MedoSinalizador06-3.mp4": {
+      "remote_path": "videos/16MedoSinalizador06-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 63935297,
+      "status": "pending",
+      "error": null
+    },
+    "videos/16MedoSinalizador06-4.mp4": {
+      "remote_path": "videos/16MedoSinalizador06-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 61144642,
+      "status": "pending",
+      "error": null
+    },
+    "videos/16MedoSinalizador06-5.mp4": {
+      "remote_path": "videos/16MedoSinalizador06-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 57314104,
+      "status": "pending",
+      "error": null
+    },
+    "videos/16MedoSinalizador08-1.mp4": {
+      "remote_path": "videos/16MedoSinalizador08-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 53573652,
+      "status": "pending",
+      "error": null
+    },
+    "videos/16MedoSinalizador08-2.mp4": {
+      "remote_path": "videos/16MedoSinalizador08-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 49289196,
+      "status": "pending",
+      "error": null
+    },
+    "videos/16MedoSinalizador08-3.mp4": {
+      "remote_path": "videos/16MedoSinalizador08-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 47329844,
+      "status": "pending",
+      "error": null
+    },
+    "videos/16MedoSinalizador08-4.mp4": {
+      "remote_path": "videos/16MedoSinalizador08-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 47250864,
+      "status": "pending",
+      "error": null
+    },
+    "videos/16MedoSinalizador08-5.mp4": {
+      "remote_path": "videos/16MedoSinalizador08-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 57810592,
+      "status": "pending",
+      "error": null
+    },
+    "videos/16MedoSinalizador10-1.mp4": {
+      "remote_path": "videos/16MedoSinalizador10-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 40608383,
+      "status": "pending",
+      "error": null
+    },
+    "videos/16MedoSinalizador10-2.mp4": {
+      "remote_path": "videos/16MedoSinalizador10-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 50633280,
+      "status": "pending",
+      "error": null
+    },
+    "videos/16MedoSinalizador10-3.mp4": {
+      "remote_path": "videos/16MedoSinalizador10-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 43307399,
+      "status": "pending",
+      "error": null
+    },
+    "videos/16MedoSinalizador10-4.mp4": {
+      "remote_path": "videos/16MedoSinalizador10-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 44789508,
+      "status": "pending",
+      "error": null
+    },
+    "videos/16MedoSinalizador10-5.mp4": {
+      "remote_path": "videos/16MedoSinalizador10-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 38579891,
+      "status": "pending",
+      "error": null
+    },
+    "videos/16MedoSinalizador11-1.mp4": {
+      "remote_path": "videos/16MedoSinalizador11-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 79921322,
+      "status": "pending",
+      "error": null
+    },
+    "videos/16MedoSinalizador11-2.mp4": {
+      "remote_path": "videos/16MedoSinalizador11-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 74386478,
+      "status": "pending",
+      "error": null
+    },
+    "videos/16MedoSinalizador11-3.mp4": {
+      "remote_path": "videos/16MedoSinalizador11-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 75912560,
+      "status": "pending",
+      "error": null
+    },
+    "videos/16MedoSinalizador11-4.mp4": {
+      "remote_path": "videos/16MedoSinalizador11-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 71422165,
+      "status": "pending",
+      "error": null
+    },
+    "videos/16MedoSinalizador11-5.mp4": {
+      "remote_path": "videos/16MedoSinalizador11-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 69562195,
+      "status": "pending",
+      "error": null
+    },
+    "videos/16MedoSinalizador12-1.mp4": {
+      "remote_path": "videos/16MedoSinalizador12-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 63289407,
+      "status": "pending",
+      "error": null
+    },
+    "videos/16MedoSinalizador12-2.mp4": {
+      "remote_path": "videos/16MedoSinalizador12-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 77840600,
+      "status": "pending",
+      "error": null
+    },
+    "videos/16MedoSinalizador12-3.mp4": {
+      "remote_path": "videos/16MedoSinalizador12-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 83510435,
+      "status": "pending",
+      "error": null
+    },
+    "videos/16MedoSinalizador12-4.mp4": {
+      "remote_path": "videos/16MedoSinalizador12-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 64872481,
+      "status": "pending",
+      "error": null
+    },
+    "videos/16MedoSinalizador12-5.mp4": {
+      "remote_path": "videos/16MedoSinalizador12-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 76823935,
+      "status": "pending",
+      "error": null
+    },
+    "videos/17RuimSinalizador01-1.mp4": {
+      "remote_path": "videos/17RuimSinalizador01-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 43422900,
+      "status": "pending",
+      "error": null
+    },
+    "videos/17RuimSinalizador01-2.mp4": {
+      "remote_path": "videos/17RuimSinalizador01-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 40200403,
+      "status": "pending",
+      "error": null
+    },
+    "videos/17RuimSinalizador01-3.mp4": {
+      "remote_path": "videos/17RuimSinalizador01-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 46268413,
+      "status": "pending",
+      "error": null
+    },
+    "videos/17RuimSinalizador01-4.mp4": {
+      "remote_path": "videos/17RuimSinalizador01-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 40774431,
+      "status": "pending",
+      "error": null
+    },
+    "videos/17RuimSinalizador01-5.mp4": {
+      "remote_path": "videos/17RuimSinalizador01-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 45136020,
+      "status": "pending",
+      "error": null
+    },
+    "videos/17RuimSinalizador02-1.mp4": {
+      "remote_path": "videos/17RuimSinalizador02-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 42158135,
+      "status": "pending",
+      "error": null
+    },
+    "videos/17RuimSinalizador02-2.mp4": {
+      "remote_path": "videos/17RuimSinalizador02-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 43760649,
+      "status": "pending",
+      "error": null
+    },
+    "videos/17RuimSinalizador02-3.mp4": {
+      "remote_path": "videos/17RuimSinalizador02-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 53479164,
+      "status": "pending",
+      "error": null
+    },
+    "videos/17RuimSinalizador02-4.mp4": {
+      "remote_path": "videos/17RuimSinalizador02-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 53226679,
+      "status": "pending",
+      "error": null
+    },
+    "videos/17RuimSinalizador02-5.mp4": {
+      "remote_path": "videos/17RuimSinalizador02-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 52740278,
+      "status": "pending",
+      "error": null
+    },
+    "videos/17RuimSinalizador05-1.mp4": {
+      "remote_path": "videos/17RuimSinalizador05-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 58917485,
+      "status": "pending",
+      "error": null
+    },
+    "videos/17RuimSinalizador05-2.mp4": {
+      "remote_path": "videos/17RuimSinalizador05-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 55448776,
+      "status": "pending",
+      "error": null
+    },
+    "videos/17RuimSinalizador05-3.mp4": {
+      "remote_path": "videos/17RuimSinalizador05-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 49712672,
+      "status": "pending",
+      "error": null
+    },
+    "videos/17RuimSinalizador05-4.mp4": {
+      "remote_path": "videos/17RuimSinalizador05-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 48153184,
+      "status": "pending",
+      "error": null
+    },
+    "videos/17RuimSinalizador05-5.mp4": {
+      "remote_path": "videos/17RuimSinalizador05-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 46971739,
+      "status": "pending",
+      "error": null
+    },
+    "videos/17RuimSinalizador06-1.mp4": {
+      "remote_path": "videos/17RuimSinalizador06-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 60900262,
+      "status": "pending",
+      "error": null
+    },
+    "videos/17RuimSinalizador06-2.mp4": {
+      "remote_path": "videos/17RuimSinalizador06-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 58406768,
+      "status": "pending",
+      "error": null
+    },
+    "videos/17RuimSinalizador06-3.mp4": {
+      "remote_path": "videos/17RuimSinalizador06-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 51454857,
+      "status": "pending",
+      "error": null
+    },
+    "videos/17RuimSinalizador06-4.mp4": {
+      "remote_path": "videos/17RuimSinalizador06-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 55500650,
+      "status": "pending",
+      "error": null
+    },
+    "videos/17RuimSinalizador06-5.mp4": {
+      "remote_path": "videos/17RuimSinalizador06-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 58141431,
+      "status": "pending",
+      "error": null
+    },
+    "videos/17RuimSinalizador08-1.mp4": {
+      "remote_path": "videos/17RuimSinalizador08-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 57563178,
+      "status": "pending",
+      "error": null
+    },
+    "videos/17RuimSinalizador08-2.mp4": {
+      "remote_path": "videos/17RuimSinalizador08-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 61679978,
+      "status": "pending",
+      "error": null
+    },
+    "videos/17RuimSinalizador08-3.mp4": {
+      "remote_path": "videos/17RuimSinalizador08-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 62485336,
+      "status": "pending",
+      "error": null
+    },
+    "videos/17RuimSinalizador08-4.mp4": {
+      "remote_path": "videos/17RuimSinalizador08-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 50579664,
+      "status": "pending",
+      "error": null
+    },
+    "videos/17RuimSinalizador08-5.mp4": {
+      "remote_path": "videos/17RuimSinalizador08-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 59354344,
+      "status": "pending",
+      "error": null
+    },
+    "videos/17RuimSinalizador10-1.mp4": {
+      "remote_path": "videos/17RuimSinalizador10-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 38757674,
+      "status": "pending",
+      "error": null
+    },
+    "videos/17RuimSinalizador10-2.mp4": {
+      "remote_path": "videos/17RuimSinalizador10-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 50339284,
+      "status": "pending",
+      "error": null
+    },
+    "videos/17RuimSinalizador10-3.mp4": {
+      "remote_path": "videos/17RuimSinalizador10-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 39917845,
+      "status": "pending",
+      "error": null
+    },
+    "videos/17RuimSinalizador10-4.mp4": {
+      "remote_path": "videos/17RuimSinalizador10-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 37975429,
+      "status": "pending",
+      "error": null
+    },
+    "videos/17RuimSinalizador10-5.mp4": {
+      "remote_path": "videos/17RuimSinalizador10-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 63079957,
+      "status": "pending",
+      "error": null
+    },
+    "videos/17RuimSinalizador11-1.mp4": {
+      "remote_path": "videos/17RuimSinalizador11-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 88011264,
+      "status": "pending",
+      "error": null
+    },
+    "videos/17RuimSinalizador11-2.mp4": {
+      "remote_path": "videos/17RuimSinalizador11-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 81986295,
+      "status": "pending",
+      "error": null
+    },
+    "videos/17RuimSinalizador11-3.mp4": {
+      "remote_path": "videos/17RuimSinalizador11-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 80489992,
+      "status": "pending",
+      "error": null
+    },
+    "videos/17RuimSinalizador11-4.mp4": {
+      "remote_path": "videos/17RuimSinalizador11-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 81377691,
+      "status": "pending",
+      "error": null
+    },
+    "videos/17RuimSinalizador11-5.mp4": {
+      "remote_path": "videos/17RuimSinalizador11-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 77352442,
+      "status": "pending",
+      "error": null
+    },
+    "videos/17RuimSinalizador12-1.mp4": {
+      "remote_path": "videos/17RuimSinalizador12-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 64841153,
+      "status": "pending",
+      "error": null
+    },
+    "videos/17RuimSinalizador12-2.mp4": {
+      "remote_path": "videos/17RuimSinalizador12-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 88362112,
+      "status": "pending",
+      "error": null
+    },
+    "videos/17RuimSinalizador12-3.mp4": {
+      "remote_path": "videos/17RuimSinalizador12-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 79595014,
+      "status": "pending",
+      "error": null
+    },
+    "videos/17RuimSinalizador12-4.mp4": {
+      "remote_path": "videos/17RuimSinalizador12-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 77484114,
+      "status": "pending",
+      "error": null
+    },
+    "videos/17RuimSinalizador12-5.mp4": {
+      "remote_path": "videos/17RuimSinalizador12-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 80742276,
+      "status": "pending",
+      "error": null
+    },
+    "videos/18SapoSinalizador01-1.mp4": {
+      "remote_path": "videos/18SapoSinalizador01-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 36898863,
+      "status": "pending",
+      "error": null
+    },
+    "videos/18SapoSinalizador01-2.mp4": {
+      "remote_path": "videos/18SapoSinalizador01-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 43961098,
+      "status": "pending",
+      "error": null
+    },
+    "videos/18SapoSinalizador01-3.mp4": {
+      "remote_path": "videos/18SapoSinalizador01-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 41600972,
+      "status": "pending",
+      "error": null
+    },
+    "videos/18SapoSinalizador01-4.mp4": {
+      "remote_path": "videos/18SapoSinalizador01-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 46462164,
+      "status": "pending",
+      "error": null
+    },
+    "videos/18SapoSinalizador01-5.mp4": {
+      "remote_path": "videos/18SapoSinalizador01-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 42547824,
+      "status": "pending",
+      "error": null
+    },
+    "videos/18SapoSinalizador02-1.mp4": {
+      "remote_path": "videos/18SapoSinalizador02-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 62664262,
+      "status": "pending",
+      "error": null
+    },
+    "videos/18SapoSinalizador02-2.mp4": {
+      "remote_path": "videos/18SapoSinalizador02-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 46640980,
+      "status": "pending",
+      "error": null
+    },
+    "videos/18SapoSinalizador02-3.mp4": {
+      "remote_path": "videos/18SapoSinalizador02-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 53486605,
+      "status": "pending",
+      "error": null
+    },
+    "videos/18SapoSinalizador02-4.mp4": {
+      "remote_path": "videos/18SapoSinalizador02-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 52527434,
+      "status": "pending",
+      "error": null
+    },
+    "videos/18SapoSinalizador02-5.mp4": {
+      "remote_path": "videos/18SapoSinalizador02-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 45590013,
+      "status": "pending",
+      "error": null
+    },
+    "videos/18SapoSinalizador05-1.mp4": {
+      "remote_path": "videos/18SapoSinalizador05-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 75247101,
+      "status": "pending",
+      "error": null
+    },
+    "videos/18SapoSinalizador05-2.mp4": {
+      "remote_path": "videos/18SapoSinalizador05-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 74590210,
+      "status": "pending",
+      "error": null
+    },
+    "videos/18SapoSinalizador05-3.mp4": {
+      "remote_path": "videos/18SapoSinalizador05-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 72196316,
+      "status": "pending",
+      "error": null
+    },
+    "videos/18SapoSinalizador05-4.mp4": {
+      "remote_path": "videos/18SapoSinalizador05-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 61684658,
+      "status": "pending",
+      "error": null
+    },
+    "videos/18SapoSinalizador05-5.mp4": {
+      "remote_path": "videos/18SapoSinalizador05-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 62710924,
+      "status": "pending",
+      "error": null
+    },
+    "videos/18SapoSinalizador06-1.mp4": {
+      "remote_path": "videos/18SapoSinalizador06-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 68560706,
+      "status": "pending",
+      "error": null
+    },
+    "videos/18SapoSinalizador06-2.mp4": {
+      "remote_path": "videos/18SapoSinalizador06-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 73935363,
+      "status": "pending",
+      "error": null
+    },
+    "videos/18SapoSinalizador06-3.mp4": {
+      "remote_path": "videos/18SapoSinalizador06-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 79237156,
+      "status": "pending",
+      "error": null
+    },
+    "videos/18SapoSinalizador06-4.mp4": {
+      "remote_path": "videos/18SapoSinalizador06-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 67544979,
+      "status": "pending",
+      "error": null
+    },
+    "videos/18SapoSinalizador06-5.mp4": {
+      "remote_path": "videos/18SapoSinalizador06-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 70022350,
+      "status": "pending",
+      "error": null
+    },
+    "videos/18SapoSinalizador08-1.mp4": {
+      "remote_path": "videos/18SapoSinalizador08-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 51827359,
+      "status": "pending",
+      "error": null
+    },
+    "videos/18SapoSinalizador08-2.mp4": {
+      "remote_path": "videos/18SapoSinalizador08-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 57492812,
+      "status": "pending",
+      "error": null
+    },
+    "videos/18SapoSinalizador08-3.mp4": {
+      "remote_path": "videos/18SapoSinalizador08-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 72054683,
+      "status": "pending",
+      "error": null
+    },
+    "videos/18SapoSinalizador08-4.mp4": {
+      "remote_path": "videos/18SapoSinalizador08-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 58323338,
+      "status": "pending",
+      "error": null
+    },
+    "videos/18SapoSinalizador08-5.mp4": {
+      "remote_path": "videos/18SapoSinalizador08-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 59825141,
+      "status": "pending",
+      "error": null
+    },
+    "videos/18SapoSinalizador10-1.mp4": {
+      "remote_path": "videos/18SapoSinalizador10-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 56720907,
+      "status": "pending",
+      "error": null
+    },
+    "videos/18SapoSinalizador10-2.mp4": {
+      "remote_path": "videos/18SapoSinalizador10-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 48467106,
+      "status": "pending",
+      "error": null
+    },
+    "videos/18SapoSinalizador10-3.mp4": {
+      "remote_path": "videos/18SapoSinalizador10-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 46102905,
+      "status": "pending",
+      "error": null
+    },
+    "videos/18SapoSinalizador10-4.mp4": {
+      "remote_path": "videos/18SapoSinalizador10-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 48033626,
+      "status": "pending",
+      "error": null
+    },
+    "videos/18SapoSinalizador10-5.mp4": {
+      "remote_path": "videos/18SapoSinalizador10-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 53532987,
+      "status": "pending",
+      "error": null
+    },
+    "videos/18SapoSinalizador11-1.mp4": {
+      "remote_path": "videos/18SapoSinalizador11-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 73719757,
+      "status": "pending",
+      "error": null
+    },
+    "videos/18SapoSinalizador11-2.mp4": {
+      "remote_path": "videos/18SapoSinalizador11-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 86343871,
+      "status": "pending",
+      "error": null
+    },
+    "videos/18SapoSinalizador11-3.mp4": {
+      "remote_path": "videos/18SapoSinalizador11-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 79243672,
+      "status": "pending",
+      "error": null
+    },
+    "videos/18SapoSinalizador11-4.mp4": {
+      "remote_path": "videos/18SapoSinalizador11-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 93801195,
+      "status": "pending",
+      "error": null
+    },
+    "videos/18SapoSinalizador11-5.mp4": {
+      "remote_path": "videos/18SapoSinalizador11-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 89163756,
+      "status": "pending",
+      "error": null
+    },
+    "videos/18SapoSinalizador12-1.mp4": {
+      "remote_path": "videos/18SapoSinalizador12-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 99312235,
+      "status": "pending",
+      "error": null
+    },
+    "videos/18SapoSinalizador12-2.mp4": {
+      "remote_path": "videos/18SapoSinalizador12-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 105054544,
+      "status": "pending",
+      "error": null
+    },
+    "videos/18SapoSinalizador12-3.mp4": {
+      "remote_path": "videos/18SapoSinalizador12-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 93900975,
+      "status": "pending",
+      "error": null
+    },
+    "videos/18SapoSinalizador12-4.mp4": {
+      "remote_path": "videos/18SapoSinalizador12-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 103641429,
+      "status": "pending",
+      "error": null
+    },
+    "videos/18SapoSinalizador12-5.mp4": {
+      "remote_path": "videos/18SapoSinalizador12-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 94522295,
+      "status": "pending",
+      "error": null
+    },
+    "videos/19VacinaSinalizador01-1.mp4": {
+      "remote_path": "videos/19VacinaSinalizador01-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 49602923,
+      "status": "pending",
+      "error": null
+    },
+    "videos/19VacinaSinalizador01-2.mp4": {
+      "remote_path": "videos/19VacinaSinalizador01-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 36779120,
+      "status": "pending",
+      "error": null
+    },
+    "videos/19VacinaSinalizador01-3.mp4": {
+      "remote_path": "videos/19VacinaSinalizador01-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 43447779,
+      "status": "pending",
+      "error": null
+    },
+    "videos/19VacinaSinalizador01-4.mp4": {
+      "remote_path": "videos/19VacinaSinalizador01-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 33093684,
+      "status": "pending",
+      "error": null
+    },
+    "videos/19VacinaSinalizador01-5.mp4": {
+      "remote_path": "videos/19VacinaSinalizador01-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 49837236,
+      "status": "pending",
+      "error": null
+    },
+    "videos/19VacinaSinalizador02-1.mp4": {
+      "remote_path": "videos/19VacinaSinalizador02-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 45072718,
+      "status": "pending",
+      "error": null
+    },
+    "videos/19VacinaSinalizador02-2.mp4": {
+      "remote_path": "videos/19VacinaSinalizador02-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 42353981,
+      "status": "pending",
+      "error": null
+    },
+    "videos/19VacinaSinalizador02-3.mp4": {
+      "remote_path": "videos/19VacinaSinalizador02-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 57257606,
+      "status": "pending",
+      "error": null
+    },
+    "videos/19VacinaSinalizador02-4.mp4": {
+      "remote_path": "videos/19VacinaSinalizador02-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 48412979,
+      "status": "pending",
+      "error": null
+    },
+    "videos/19VacinaSinalizador02-5.mp4": {
+      "remote_path": "videos/19VacinaSinalizador02-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 58352640,
+      "status": "pending",
+      "error": null
+    },
+    "videos/19VacinaSinalizador05-1.mp4": {
+      "remote_path": "videos/19VacinaSinalizador05-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 67685316,
+      "status": "pending",
+      "error": null
+    },
+    "videos/19VacinaSinalizador05-2.mp4": {
+      "remote_path": "videos/19VacinaSinalizador05-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 52733663,
+      "status": "pending",
+      "error": null
+    },
+    "videos/19VacinaSinalizador05-3.mp4": {
+      "remote_path": "videos/19VacinaSinalizador05-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 53749101,
+      "status": "pending",
+      "error": null
+    },
+    "videos/19VacinaSinalizador05-4.mp4": {
+      "remote_path": "videos/19VacinaSinalizador05-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 51723959,
+      "status": "pending",
+      "error": null
+    },
+    "videos/19VacinaSinalizador05-5.mp4": {
+      "remote_path": "videos/19VacinaSinalizador05-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 61223502,
+      "status": "pending",
+      "error": null
+    },
+    "videos/19VacinaSinalizador06-1.mp4": {
+      "remote_path": "videos/19VacinaSinalizador06-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 62066404,
+      "status": "pending",
+      "error": null
+    },
+    "videos/19VacinaSinalizador06-2.mp4": {
+      "remote_path": "videos/19VacinaSinalizador06-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 64587784,
+      "status": "pending",
+      "error": null
+    },
+    "videos/19VacinaSinalizador06-3.mp4": {
+      "remote_path": "videos/19VacinaSinalizador06-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 66749875,
+      "status": "pending",
+      "error": null
+    },
+    "videos/19VacinaSinalizador06-4.mp4": {
+      "remote_path": "videos/19VacinaSinalizador06-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 47791031,
+      "status": "pending",
+      "error": null
+    },
+    "videos/19VacinaSinalizador06-5.mp4": {
+      "remote_path": "videos/19VacinaSinalizador06-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 66789942,
+      "status": "pending",
+      "error": null
+    },
+    "videos/19VacinaSinalizador08-1.mp4": {
+      "remote_path": "videos/19VacinaSinalizador08-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 42352884,
+      "status": "pending",
+      "error": null
+    },
+    "videos/19VacinaSinalizador08-2.mp4": {
+      "remote_path": "videos/19VacinaSinalizador08-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 45835909,
+      "status": "pending",
+      "error": null
+    },
+    "videos/19VacinaSinalizador08-3.mp4": {
+      "remote_path": "videos/19VacinaSinalizador08-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 43500603,
+      "status": "pending",
+      "error": null
+    },
+    "videos/19VacinaSinalizador08-4.mp4": {
+      "remote_path": "videos/19VacinaSinalizador08-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 52210740,
+      "status": "pending",
+      "error": null
+    },
+    "videos/19VacinaSinalizador08-5.mp4": {
+      "remote_path": "videos/19VacinaSinalizador08-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 53942957,
+      "status": "pending",
+      "error": null
+    },
+    "videos/19VacinaSinalizador10-1.mp4": {
+      "remote_path": "videos/19VacinaSinalizador10-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 43519308,
+      "status": "pending",
+      "error": null
+    },
+    "videos/19VacinaSinalizador10-2.mp4": {
+      "remote_path": "videos/19VacinaSinalizador10-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 46152635,
+      "status": "pending",
+      "error": null
+    },
+    "videos/19VacinaSinalizador10-3.mp4": {
+      "remote_path": "videos/19VacinaSinalizador10-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 39765954,
+      "status": "pending",
+      "error": null
+    },
+    "videos/19VacinaSinalizador10-4.mp4": {
+      "remote_path": "videos/19VacinaSinalizador10-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 39621538,
+      "status": "pending",
+      "error": null
+    },
+    "videos/19VacinaSinalizador10-5.mp4": {
+      "remote_path": "videos/19VacinaSinalizador10-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 44416160,
+      "status": "pending",
+      "error": null
+    },
+    "videos/19VacinaSinalizador11-1.mp4": {
+      "remote_path": "videos/19VacinaSinalizador11-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 73104538,
+      "status": "pending",
+      "error": null
+    },
+    "videos/19VacinaSinalizador11-2.mp4": {
+      "remote_path": "videos/19VacinaSinalizador11-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 80201069,
+      "status": "pending",
+      "error": null
+    },
+    "videos/19VacinaSinalizador11-3.mp4": {
+      "remote_path": "videos/19VacinaSinalizador11-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 92077529,
+      "status": "pending",
+      "error": null
+    },
+    "videos/19VacinaSinalizador11-4.mp4": {
+      "remote_path": "videos/19VacinaSinalizador11-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 83820210,
+      "status": "pending",
+      "error": null
+    },
+    "videos/19VacinaSinalizador11-5.mp4": {
+      "remote_path": "videos/19VacinaSinalizador11-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 77319516,
+      "status": "pending",
+      "error": null
+    },
+    "videos/19VacinaSinalizador12-1.mp4": {
+      "remote_path": "videos/19VacinaSinalizador12-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 73601326,
+      "status": "pending",
+      "error": null
+    },
+    "videos/19VacinaSinalizador12-2.mp4": {
+      "remote_path": "videos/19VacinaSinalizador12-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 67742589,
+      "status": "pending",
+      "error": null
+    },
+    "videos/19VacinaSinalizador12-3.mp4": {
+      "remote_path": "videos/19VacinaSinalizador12-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 76583385,
+      "status": "pending",
+      "error": null
+    },
+    "videos/19VacinaSinalizador12-4.mp4": {
+      "remote_path": "videos/19VacinaSinalizador12-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 75539850,
+      "status": "pending",
+      "error": null
+    },
+    "videos/19VacinaSinalizador12-5.mp4": {
+      "remote_path": "videos/19VacinaSinalizador12-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 71106927,
+      "status": "pending",
+      "error": null
+    },
+    "videos/20VontadeSinalizador01-1.mp4": {
+      "remote_path": "videos/20VontadeSinalizador01-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 49184646,
+      "status": "pending",
+      "error": null
+    },
+    "videos/20VontadeSinalizador01-2.mp4": {
+      "remote_path": "videos/20VontadeSinalizador01-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 47127928,
+      "status": "pending",
+      "error": null
+    },
+    "videos/20VontadeSinalizador01-3.mp4": {
+      "remote_path": "videos/20VontadeSinalizador01-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 45127572,
+      "status": "pending",
+      "error": null
+    },
+    "videos/20VontadeSinalizador01-4.mp4": {
+      "remote_path": "videos/20VontadeSinalizador01-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 43694217,
+      "status": "pending",
+      "error": null
+    },
+    "videos/20VontadeSinalizador01-5.mp4": {
+      "remote_path": "videos/20VontadeSinalizador01-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 46391069,
+      "status": "pending",
+      "error": null
+    },
+    "videos/20VontadeSinalizador02-1.mp4": {
+      "remote_path": "videos/20VontadeSinalizador02-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 42935192,
+      "status": "pending",
+      "error": null
+    },
+    "videos/20VontadeSinalizador02-2.mp4": {
+      "remote_path": "videos/20VontadeSinalizador02-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 46244302,
+      "status": "pending",
+      "error": null
+    },
+    "videos/20VontadeSinalizador02-3.mp4": {
+      "remote_path": "videos/20VontadeSinalizador02-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 48351902,
+      "status": "pending",
+      "error": null
+    },
+    "videos/20VontadeSinalizador02-4.mp4": {
+      "remote_path": "videos/20VontadeSinalizador02-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 63384052,
+      "status": "pending",
+      "error": null
+    },
+    "videos/20VontadeSinalizador02-5.mp4": {
+      "remote_path": "videos/20VontadeSinalizador02-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 53041290,
+      "status": "pending",
+      "error": null
+    },
+    "videos/20VontadeSinalizador05-1.mp4": {
+      "remote_path": "videos/20VontadeSinalizador05-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 54068964,
+      "status": "pending",
+      "error": null
+    },
+    "videos/20VontadeSinalizador05-2.mp4": {
+      "remote_path": "videos/20VontadeSinalizador05-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 52436779,
+      "status": "pending",
+      "error": null
+    },
+    "videos/20VontadeSinalizador05-3.mp4": {
+      "remote_path": "videos/20VontadeSinalizador05-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 56601233,
+      "status": "pending",
+      "error": null
+    },
+    "videos/20VontadeSinalizador05-4.mp4": {
+      "remote_path": "videos/20VontadeSinalizador05-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 58564652,
+      "status": "pending",
+      "error": null
+    },
+    "videos/20VontadeSinalizador05-5.mp4": {
+      "remote_path": "videos/20VontadeSinalizador05-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 58770989,
+      "status": "pending",
+      "error": null
+    },
+    "videos/20VontadeSinalizador06-1.mp4": {
+      "remote_path": "videos/20VontadeSinalizador06-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 74664440,
+      "status": "pending",
+      "error": null
+    },
+    "videos/20VontadeSinalizador06-2.mp4": {
+      "remote_path": "videos/20VontadeSinalizador06-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 60383125,
+      "status": "pending",
+      "error": null
+    },
+    "videos/20VontadeSinalizador06-3.mp4": {
+      "remote_path": "videos/20VontadeSinalizador06-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 68964432,
+      "status": "pending",
+      "error": null
+    },
+    "videos/20VontadeSinalizador06-4.mp4": {
+      "remote_path": "videos/20VontadeSinalizador06-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 61951717,
+      "status": "pending",
+      "error": null
+    },
+    "videos/20VontadeSinalizador06-5.mp4": {
+      "remote_path": "videos/20VontadeSinalizador06-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 70601203,
+      "status": "pending",
+      "error": null
+    },
+    "videos/20VontadeSinalizador08-1.mp4": {
+      "remote_path": "videos/20VontadeSinalizador08-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 59915298,
+      "status": "pending",
+      "error": null
+    },
+    "videos/20VontadeSinalizador08-2.mp4": {
+      "remote_path": "videos/20VontadeSinalizador08-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 78380182,
+      "status": "pending",
+      "error": null
+    },
+    "videos/20VontadeSinalizador08-3.mp4": {
+      "remote_path": "videos/20VontadeSinalizador08-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 72025612,
+      "status": "pending",
+      "error": null
+    },
+    "videos/20VontadeSinalizador08-4.mp4": {
+      "remote_path": "videos/20VontadeSinalizador08-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 67505462,
+      "status": "pending",
+      "error": null
+    },
+    "videos/20VontadeSinalizador08-5.mp4": {
+      "remote_path": "videos/20VontadeSinalizador08-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 60463915,
+      "status": "pending",
+      "error": null
+    },
+    "videos/20VontadeSinalizador10-1.mp4": {
+      "remote_path": "videos/20VontadeSinalizador10-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 39719107,
+      "status": "pending",
+      "error": null
+    },
+    "videos/20VontadeSinalizador10-2.mp4": {
+      "remote_path": "videos/20VontadeSinalizador10-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 40797239,
+      "status": "pending",
+      "error": null
+    },
+    "videos/20VontadeSinalizador10-3.mp4": {
+      "remote_path": "videos/20VontadeSinalizador10-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 45501803,
+      "status": "pending",
+      "error": null
+    },
+    "videos/20VontadeSinalizador10-4.mp4": {
+      "remote_path": "videos/20VontadeSinalizador10-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 43462006,
+      "status": "pending",
+      "error": null
+    },
+    "videos/20VontadeSinalizador10-5.mp4": {
+      "remote_path": "videos/20VontadeSinalizador10-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 44377230,
+      "status": "pending",
+      "error": null
+    },
+    "videos/20VontadeSinalizador11-1.mp4": {
+      "remote_path": "videos/20VontadeSinalizador11-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 85105595,
+      "status": "pending",
+      "error": null
+    },
+    "videos/20VontadeSinalizador11-2.mp4": {
+      "remote_path": "videos/20VontadeSinalizador11-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 87377860,
+      "status": "pending",
+      "error": null
+    },
+    "videos/20VontadeSinalizador11-3.mp4": {
+      "remote_path": "videos/20VontadeSinalizador11-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 82016909,
+      "status": "pending",
+      "error": null
+    },
+    "videos/20VontadeSinalizador11-4.mp4": {
+      "remote_path": "videos/20VontadeSinalizador11-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 95387582,
+      "status": "pending",
+      "error": null
+    },
+    "videos/20VontadeSinalizador11-5.mp4": {
+      "remote_path": "videos/20VontadeSinalizador11-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 89818355,
+      "status": "pending",
+      "error": null
+    },
+    "videos/20VontadeSinalizador12-1.mp4": {
+      "remote_path": "videos/20VontadeSinalizador12-1.mp4",
+      "local_path": null,
+      "expected_size_bytes": 77558611,
+      "status": "pending",
+      "error": null
+    },
+    "videos/20VontadeSinalizador12-2.mp4": {
+      "remote_path": "videos/20VontadeSinalizador12-2.mp4",
+      "local_path": null,
+      "expected_size_bytes": 70337000,
+      "status": "pending",
+      "error": null
+    },
+    "videos/20VontadeSinalizador12-3.mp4": {
+      "remote_path": "videos/20VontadeSinalizador12-3.mp4",
+      "local_path": null,
+      "expected_size_bytes": 85031542,
+      "status": "pending",
+      "error": null
+    },
+    "videos/20VontadeSinalizador12-4.mp4": {
+      "remote_path": "videos/20VontadeSinalizador12-4.mp4",
+      "local_path": null,
+      "expected_size_bytes": 64445957,
+      "status": "pending",
+      "error": null
+    },
+    "videos/20VontadeSinalizador12-5.mp4": {
+      "remote_path": "videos/20VontadeSinalizador12-5.mp4",
+      "local_path": null,
+      "expected_size_bytes": 82097217,
+      "status": "pending",
+      "error": null
+    }
+  }
+}

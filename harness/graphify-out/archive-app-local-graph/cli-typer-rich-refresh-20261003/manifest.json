@@ -1,0 +1,74 @@
+{
+  "data/manifests/minds-libras-raw.json": {
+    "mtime": 1791046415.7394042,
+    "seen": 1791048222.1075516,
+    "ast_hash": "f99d436b401ab0f30ce551c6341b5834",
+    "semantic_hash": ""
+  },
+  "dataset/src/libras_translation/__init__.py": {
+    "mtime": 1791043683.5860415,
+    "seen": 1791048222.1075556,
+    "ast_hash": "8fa08098aed0b5ed158d25de7b19cbb0",
+    "semantic_hash": ""
+  },
+  "dataset/src/libras_translation/__main__.py": {
+    "mtime": 1791043683.5860415,
+    "seen": 1791048222.1075573,
+    "ast_hash": "3a7af0b9c2d88b6e1527b7a273baef84",
+    "semantic_hash": ""
+  },
+  "dataset/src/libras_translation/acquisition.py": {
+    "mtime": 1791047343.8445668,
+    "seen": 1791048222.1075585,
+    "ast_hash": "c5f515ccdbe543351f588afd349028c0",
+    "semantic_hash": ""
+  },
+  "dataset/src/libras_translation/cli.py": {
+    "mtime": 1791048090.7233088,
+    "seen": 1791048222.1075592,
+    "ast_hash": "ddd5faac98eae302e0b4fe345dae2cdf",
+    "semantic_hash": ""
+  },
+  "dataset/src/libras_translation/config.py": {
+    "mtime": 1791046232.4276817,
+    "seen": 1791048222.1075597,
+    "ast_hash": "4a69ca1ebd22387591ef30a2648855af",
+    "semantic_hash": ""
+  },
+  "dataset/src/libras_translation/infrastructure/__init__.py": {
+    "mtime": 1791046357.008048,
+    "seen": 1791048222.1075604,
+    "ast_hash": "28309d662c49611188cdcb1bf4950d1e",
+    "semantic_hash": ""
+  },
+  "dataset/src/libras_translation/infrastructure/huggingface_client.py": {
+    "mtime": 1791047343.8432958,
+    "seen": 1791048222.107561,
+    "ast_hash": "5b88727561c9ab7ec17475c31ae633e1",
+    "semantic_hash": ""
+  },
+  "dataset/tests/test_acquisition.py": {
+    "mtime": 1791048090.7179098,
+    "seen": 1791048222.1075618,
+    "ast_hash": "9af1e964abbdbc529fdb1d37925d2efd",
+    "semantic_hash": ""
+  },
+  "dataset/tests/test_cli.py": {
+    "mtime": 1791048136.3801033,
+    "seen": 1791048222.1075625,
+    "ast_hash": "1667919a662b3444ed9b44bc6dca2934",
+    "semantic_hash": ""
+  },
+  "pyproject.toml": {
+    "mtime": 1791048009.3892987,
+    "seen": 1791048222.107563,
+    "ast_hash": "1492fc61354d65b50d9c4c5f767f852f",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1791048136.3721514,
+    "seen": 1791048222.1075637,
+    "ast_hash": "47230ad8e7d087aa768bc27426409bd9",
+    "semantic_hash": ""
+  }
+}
