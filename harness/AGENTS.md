@@ -1,3 +1,7 @@
+## Escopo do projeto
+
+Este harness coordena o repositório da dissertação, cuja raiz é a pasta pai. O diretório `../old/` é legado local, permanece ignorado pelo Git e não deve ser incluído em revisões, commits ou Pull Requests.
+
 ## graphify
 
 This project has a knowledge graph at graphify-out/ with god nodes, community structure, and cross-file relationships.
@@ -45,6 +49,10 @@ escopo, as fontes utilizadas e as limitações da revisão.
 O agente principal deve coordenar as alterações e delegar a execução das
 revisões de literatura ao subagente definido em
 `.codex/agents/literature-review-coordinator.md`.
+
+Antes de alterar arquivos, pergunte ao usuário se deseja trabalhar em uma
+branch de funcionalidade no formato `feature/<slug>`. Registre a branch, o
+commit e o Pull Request correspondente no resumo final.
 
 Antes de qualquer alteração em arquivos, o subagente deve perguntar se o
 usuário deseja trabalhar em uma branch de funcionalidade no formato

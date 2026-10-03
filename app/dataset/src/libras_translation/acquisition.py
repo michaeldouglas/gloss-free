@@ -82,13 +82,18 @@ class DatasetAcquisition:
 
         repo_id = DATASETS[dataset]
         commit = self.client.resolve_commit(repo_id)
-        files = self.client.list_videos(repo_id, commit)
+        repo_files = self.client.list_repo_files(repo_id, commit)
+        files = [file for file in repo_files if file.path.startswith("videos/")]
         if limit is not None:
             files = files[:limit]
+        auxiliary_files = [file for file in repo_files if not file.path.startswith("videos/")]
 
         target_root = destination / dataset
         manifest_path = self.manifests_dir / f"{dataset}.json"
         manifest = self._new_or_resume_manifest(manifest_path, repo_id, commit, files)
+        manifest["auxiliary_files"] = self._new_or_resume_entries(
+            manifest.get("auxiliary_files", {}), auxiliary_files
+        )
         if list_only:
             _atomic_json(manifest_path, manifest)
             return {"dataset": dataset, "repo_id": repo_id, "commit": commit,
@@ -97,13 +102,13 @@ class DatasetAcquisition:
 
         target_root.mkdir(parents=True, exist_ok=True)
         lock = threading.Lock()
-        total = len(files)
+        total = len(files) + len(auxiliary_files)
         done = 0
         failures = 0
         with ThreadPoolExecutor(max_workers=workers) as executor:
             future_files = {
                 executor.submit(self._download_one, repo_id, commit, file, target_root): file
-                for file in files
+                for file in [*files, *auxiliary_files]
             }
             for future in as_completed(future_files):
                 file = future_files[future]
@@ -114,7 +119,8 @@ class DatasetAcquisition:
                     failures += 1
                     LOGGER.error("Falha em %s: %s", file.path, error)
                 with lock:
-                    entry = manifest["files"][file.path]
+                    group = "files" if file.path.startswith("videos/") else "auxiliary_files"
+                    entry = manifest[group][file.path]
                     entry["status"] = state
                     entry["error"] = error
                     entry["local_path"] = str((target_root / PurePosixPath(file.path)).resolve())
@@ -126,6 +132,7 @@ class DatasetAcquisition:
         return {"dataset": dataset, "repo_id": repo_id, "commit": commit,
                 "listed": len(files), "downloaded": sum(v["status"] == "downloaded" for v in manifest["files"].values()),
                 "skipped": sum(v["status"] == "skipped_existing" for v in manifest["files"].values()),
+                "auxiliary_downloaded": sum(v["status"] == "downloaded" for v in manifest["auxiliary_files"].values()),
                 "failed": failures, "manifest_path": str(manifest_path)}
 
     def _download_one(self, repo_id: str, commit: str, file: RemoteFile, target_root: Path) -> str:
@@ -155,15 +162,7 @@ class DatasetAcquisition:
         raise last_error
 
     @staticmethod
-    def _new_or_resume_manifest(path: Path, repo_id: str, commit: str, files: list[RemoteFile]) -> dict:
-        prior = {}
-        if path.exists():
-            try:
-                previous = json.loads(path.read_text(encoding="utf-8"))
-                if previous.get("repo_id") == repo_id and previous.get("commit") == commit:
-                    prior = previous.get("files", {})
-            except (OSError, json.JSONDecodeError):
-                LOGGER.warning("Manifesto anterior inválido; será reconstruído: %s", path)
+    def _new_or_resume_entries(prior: dict, files: list[RemoteFile]) -> dict:
         entries = {}
         for file in files:
             previous_file = prior.get(file.path, {})
@@ -174,5 +173,18 @@ class DatasetAcquisition:
                 "status": previous_file.get("status", "pending"),
                 "error": previous_file.get("error"),
             }
+        return entries
+
+    @staticmethod
+    def _new_or_resume_manifest(path: Path, repo_id: str, commit: str, files: list[RemoteFile]) -> dict:
+        prior = {}
+        if path.exists():
+            try:
+                previous = json.loads(path.read_text(encoding="utf-8"))
+                if previous.get("repo_id") == repo_id and previous.get("commit") == commit:
+                    prior = previous.get("files", {})
+            except (OSError, json.JSONDecodeError):
+                LOGGER.warning("Manifesto anterior inválido; será reconstruído: %s", path)
+        entries = DatasetAcquisition._new_or_resume_entries(prior, files)
         return {"repo_id": repo_id, "commit": commit,
                 "acquired_at_utc": datetime.now(timezone.utc).isoformat(), "files": entries}

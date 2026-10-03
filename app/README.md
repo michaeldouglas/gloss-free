@@ -26,10 +26,13 @@ Defina `HF_TOKEN` no `.env` com um token Hugging Face de leitura. O arquivo `.en
 
 ## Aquisição de vídeos
 
-O código e os testes de aquisição ficam em `dataset/`; os dados e manifestos ficam em `data/` na raiz do projeto. O destino padrão é `data/raw/<dataset>/videos/`. Os comandos usam o módulo da aplicação e podem ser executados de qualquer diretório após `uv sync`.
+O código e os testes de aquisição ficam em `dataset/`; os dados e manifestos ficam em `data/` na raiz do projeto. Ao iniciar sem argumentos em um terminal interativo, a CLI pergunta dataset, ação (baixar ou apenas listar), limite opcional de vídeos, diretório de destino, concorrência e nível de logs. Os padrões são download, sem limite, destino `data/raw/`, quatro downloads simultâneos e logs resumidos. O destino mantém a raiz de cada repositório em `data/raw/<dataset>/`: vídeos em `videos/` e arquivos auxiliares, como anotações, na raiz. A integração usa a biblioteca oficial `huggingface_hub` (a mesma infraestrutura do comando `hf download`), fixa um commit e mantém manifesto rastreável. Os comandos podem ser executados de qualquer diretório após `uv sync`.
 
 ```powershell
-# Listar os vídeos e tamanhos disponíveis, sem baixá-los
+# Assistente interativo com todas as opções
+uv run python -m libras_translation
+
+# Ou selecionar explicitamente e listar vídeos/tamanhos sem baixá-los
 uv run python -m libras_translation --dataset all --list-only
 
 # Testar com até 2 vídeos por dataset
@@ -45,7 +48,9 @@ uv run python -m libras_translation --dataset all
 uv run python -m libras_translation --dataset v-librasil-raw --destination E:\dados\libras --workers 4
 ```
 
-Cada manifesto em `data/manifests/` registra o repositório, o commit fixado, a data da aquisição, os caminhos remotos e locais, os tamanhos disponíveis e o estado de cada arquivo. Arquivos completos são reutilizados ao retomar.
+Cada manifesto em `data/manifests/` registra o repositório, o commit fixado, a data da aquisição, os caminhos remotos e locais, os tamanhos disponíveis e o estado dos vídeos e arquivos auxiliares. A opção `--limit` limita apenas os vídeos para testes; os arquivos auxiliares de metadados do dataset ainda são baixados. Arquivos completos são reutilizados ao retomar.
+
+No MINDS-Libras, isso preserva, quando presentes no commit escolhido, `annotations.csv` e `annotations.py` ao lado de `videos/`. No V-Librasil, preserva `annotations.csv`, `error.csv` e `videos/`. Os nomes e caminhos remotos são mantidos; os scripts de anotação são apenas baixados, nunca executados. O Dataset Viewer indisponível não impede o download dos arquivos originais do repositório.
 
 Os datasets só poderão ser considerados adequados à tradução Gloss-Free depois de examinar suas anotações, pares vídeo-texto e condições de uso. Nenhuma tradução ou rótulo é inferido pelo nome de um arquivo.
 

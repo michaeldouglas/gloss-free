@@ -26,9 +26,11 @@ class HuggingFaceClient:
         return info.sha
 
     def list_videos(self, repo_id: str, commit: str) -> list[RemoteFile]:
+        return [file for file in self.list_repo_files(repo_id, commit) if file.path.startswith("videos/")]
+
+    def list_repo_files(self, repo_id: str, commit: str) -> list[RemoteFile]:
         tree = self._api.list_repo_tree(
             repo_id=repo_id,
-            path_in_repo="videos",
             recursive=True,
             revision=commit,
             repo_type="dataset",
@@ -36,7 +38,7 @@ class HuggingFaceClient:
         files: list[RemoteFile] = []
         for entry in tree:
             path = getattr(entry, "path", "")
-            if path.startswith("videos/") and not path.endswith("/"):
+            if path and not path.endswith("/"):
                 files.append(RemoteFile(path=path, size=getattr(entry, "size", None)))
         return sorted(files, key=lambda item: item.path.casefold())
 
