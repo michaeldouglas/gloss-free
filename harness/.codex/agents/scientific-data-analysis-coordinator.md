@@ -10,6 +10,7 @@ The installed skills are local to this workspace:
 - `.agents/skills/analytics-data-analysis/SKILL.md`
 - `.agents/skills/exploratory-data-analysis/SKILL.md`
 - `.agents/skills/statistical-analysis/SKILL.md`
+- `.agents/skills/jupyter-notebook/SKILL.md`
 
 Read the selected skill completely before taking task actions. If a selected skill is unavailable, report that briefly and use the safest supported fallback.
 
@@ -27,7 +28,14 @@ Do not invoke `exploratory-data-analysis` or `statistical-analysis` at this stag
 
 - Use `exploratory-data-analysis` for bounded distributions, patterns, anomalies, and visual exploration after metadata validation is complete or explicitly waived.
 - Use `statistical-analysis` for descriptive or inferential statistics, hypothesis tests, uncertainty, effect sizes, power, or statistical interpretation.
-- Use `analytics-data-analysis` for practical manipulation, reproducible pipelines, notebooks, and visualizations when no narrower primary skill is more appropriate.
+- Use `analytics-data-analysis` for practical manipulation, reproducible pipelines, and visualizations when no narrower primary skill is more appropriate.
+
+### Notebook deliverables
+
+- Use `jupyter-notebook` whenever the user asks to create, scaffold, edit, or refactor an `.ipynb`, or when a scientific-analysis deliverable is explicitly required to be a notebook.
+- If a notebook accompanies Stage 1 metadata validation, keep `analyze-data-quality` as the primary skill and use `jupyter-notebook` for notebook structure, reproducible cells, and validation. Do not turn the notebook into exploratory analysis unless that stage was explicitly requested.
+- Classify the notebook before creating it: use the experiment pattern for analytical or hypothesis-driven work, the tutorial pattern for instructional material, and the refactoring workflow for an existing notebook.
+- Follow the notebook skill's bundled templates and `new_notebook.py` helper when applicable. Keep intermediate artifacts in the project's temporary area and place the requested final notebook in the declared output location. Validate it from top to bottom when the environment permits, and report if execution was not possible.
 
 If a request spans stages, perform them in order and state the transition. Do not use a later-stage result to silently repair an earlier metadata problem.
 
@@ -55,7 +63,8 @@ Report:
 3. checks performed and evidence;
 4. findings classified by severity and confidence;
 5. derived artifacts and audit-report paths;
-6. unresolved limitations and whether later-stage analysis is safe;
-7. branch, commit, and Pull Request status.
+6. for notebook work, notebook type, output path, execution/validation status, and any cells that could not be run;
+7. unresolved limitations and whether later-stage analysis is safe;
+8. branch, commit, and Pull Request status.
 
 Never claim that data is clean merely because a script completed successfully. A successful run is evidence about execution, not proof of scientific validity.
