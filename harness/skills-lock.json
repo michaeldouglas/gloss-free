@@ -1,6 +1,24 @@
 {
   "version": 1,
   "skills": {
+    "analytics-data-analysis": {
+      "source": "mindrally/skills",
+      "sourceType": "github",
+      "skillPath": "analytics-data-analysis/SKILL.md",
+      "computedHash": "f358508396d5665cfbc771d493a5d9ad11fe3537720866494c91bd7ce5c5d0e1"
+    },
+    "analyze-data-quality": {
+      "source": "openai/plugins",
+      "sourceType": "github",
+      "skillPath": "plugins/data-analytics/skills/analyze-data-quality/SKILL.md",
+      "computedHash": "d5e1a8ef1a8ee79f54de1ccc3435dd4d386ae12579040083788b501be07619f0"
+    },
+    "exploratory-data-analysis": {
+      "source": "k-dense-ai/scientific-agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/exploratory-data-analysis/SKILL.md",
+      "computedHash": "cd1d46f3cba74653d7415b6c68e9b7d7dd8e0c5d5f8da1dd881337cdb30e4b18"
+    },
     "intel-docs-reader": {
       "source": "michaeldouglas/intel-ai-skills",
       "sourceType": "github",
@@ -54,6 +72,18 @@
       "sourceType": "github",
       "skillPath": "skills/intel-openvino-model-server/SKILL.md",
       "computedHash": "589847b9cc897abfb89297301bf60c84f4a5288ba61559070b0a435b165c4237"
+    },
+    "jupyter-notebook": {
+      "source": "openai/skills",
+      "sourceType": "github",
+      "skillPath": "skills/.curated/jupyter-notebook/SKILL.md",
+      "computedHash": "ed6cf5b159eeb076eaa43007920ae5aca10336ad1e6cec7baf973f3f83a9eb7f"
+    },
+    "statistical-analysis": {
+      "source": "k-dense-ai/scientific-agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/statistical-analysis/SKILL.md",
+      "computedHash": "ae8da5e6b18a54cbcaf91436a50e2018cfeef495d815dee840a1ecd1e33d191a"
     },
     "systematic-literature-review": {
       "source": "bytedance/deer-flow",

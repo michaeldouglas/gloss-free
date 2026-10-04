@@ -1,0 +1,4 @@
+interface:
+  display_name: "PDF translation layout"
+  short_description: "Translate PDFs while preserving layout"
+  default_prompt: "Use $pdf-translation-layout to translate the project PDFs while preserving layout and originals."

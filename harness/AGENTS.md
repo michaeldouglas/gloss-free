@@ -44,6 +44,20 @@ Não trate uma orientação inicial, uma revisão baseada apenas no corpus local
 ou uma RSL abrangente como o mesmo tipo de entrega. Registre claramente o
 escopo, as fontes utilizadas e as limitações da revisão.
 
+## Tradução de PDFs com preservação de layout
+
+Para traduzir PDFs do corpus sem perder imagens, colunas, gráficos ou a camada
+de texto selecionável, use a skill local
+`.agents/skills/pdf-translation-layout/SKILL.md` e o subagente
+`.codex/agents/pdf-translation-coordinator.md`. O script reutilizável fica em
+`.agents/skills/pdf-translation-layout/scripts/translate_pdf_layout.py`.
+
+O original deve permanecer intacto. Por padrão, leia `../materiais/en` e grave
+as cópias em `../materiais/pt`. Valide páginas, imagens, extração de texto e
+fragmentos truncados antes de concluir; blocos de matemática, CJK ou símbolos
+que não possam ser representados com segurança devem ser preservados do
+original, não substituídos por `?`.
+
 ## Fluxo Git e subagente de pesquisa
 
 O agente principal deve coordenar as alterações e delegar a execução das

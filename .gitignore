@@ -15,3 +15,8 @@ __pycache__/
 !.env.example
 .DS_Store
 Thumbs.db
+materiais/pt/Li et al. - 2025 - Uni-Sign Toward Unified Sign Language Understanding at Scale.pdf
+materiais/pt/Zhou et al. - 2023 - Gloss-free Sign Language Translation Improving from Visual-Language Pretraining.pdf
+materiais/pt/Zhou et al. - 2024 - Scaling up Multimodal Pre-training for Sign Language Understanding.pdf
+materiais/pt/Zhou_Gloss-Free_Sign_Language_ICCV_2023_supplemental.pdf
+materiais/pt/Zhou_Gloss-Free_Sign_Language_Translation_Improving_from_Visual-Language_Pretraining_ICCV_2023_paper.pdf
