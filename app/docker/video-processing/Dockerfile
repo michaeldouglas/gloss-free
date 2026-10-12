@@ -21,12 +21,12 @@ COPY dataset ./dataset
 
 RUN uv sync --frozen --no-dev
 
-RUN groupadd --gid 10001 video \
-    && useradd --uid 10001 --gid 10001 --create-home --shell /usr/sbin/nologin video \
+RUN groupadd --gid 10001 video_processing \
+    && useradd --uid 10001 --gid 10001 --create-home --shell /usr/sbin/nologin video_processing \
     && mkdir -p /workspace/data/raw /workspace/data/processed /workspace/data/manifests \
-    && chown -R video:video /workspace
+    && chown -R video_processing:video_processing /workspace
 
-USER video
+USER video_processing
 
 HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
     CMD ffprobe -version >/dev/null 2>&1 && python --version >/dev/null 2>&1 || exit 1

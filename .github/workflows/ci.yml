@@ -60,6 +60,7 @@ jobs:
           context: app
           file: app/docker/video-processing/Dockerfile
           push: false
+          load: true
           tags: libras-video-processing:ci
           cache-from: type=gha
           cache-to: type=gha,mode=max
