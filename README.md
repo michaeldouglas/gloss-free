@@ -2,7 +2,7 @@
 
 Projeto de pesquisa para tradução de Libras para português escrito sem glosas,
 com foco em aprendizado profundo, aquisição e análise de vídeos e pipelines
-reproduzíveis para Machine Learning.
+reproduzíveis.
 
 [![CI](https://github.com/michaeldouglas/gloss-free/actions/workflows/ci.yml/badge.svg)](https://github.com/michaeldouglas/gloss-free/actions/workflows/ci.yml)
 
