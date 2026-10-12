@@ -4,6 +4,8 @@ Projeto de pesquisa para tradução de Libras para português escrito sem glosas
 com foco em aprendizado profundo, aquisição e análise de vídeos e pipelines
 reproduzíveis para Machine Learning.
 
+[![CI](https://github.com/michaeldouglas/gloss-free/actions/workflows/ci.yml/badge.svg)](https://github.com/michaeldouglas/gloss-free/actions/workflows/ci.yml)
+
 ## Como o projeto está organizado
 
 ```text
@@ -78,8 +80,36 @@ Use o `harness` para planejar e validar mudanças. A aplicação continua em
 - Antes de mudanças maiores, atualize a especificação correspondente em
   `harness/specs/`.
 
+## Desenvolvimento e validação
+
+Os testes da aplicação e a construção do ambiente Docker são executados
+automaticamente pelo workflow de integração contínua em
+`.github/workflows/ci.yml`. O workflow de branches em
+`.github/workflows/branch-policy.yml` continua separado e cuida apenas da
+governança de branches e Pull Requests.
+
+Para executar as mesmas validações localmente:
+
+```powershell
+cd app
+uv sync --locked
+uv run python -m unittest discover -s dataset/tests -v
+docker compose -f docker/video-processing/compose.yaml config --quiet
+docker compose -f docker/video-processing/compose.yaml build
+```
+
+## Contribuição e citação
+
+Consulte [CONTRIBUTING.md](CONTRIBUTING.md) antes de propor alterações. O
+código-fonte deste projeto está sob a licença [MIT](LICENSE). Vídeos, datasets,
+artigos e outros materiais mantêm as licenças e condições de uso de suas
+fontes originais.
+
+Para citar o software, use o arquivo [CITATION.cff](CITATION.cff).
+
 ## Próximos passos
 
-O próximo passo imediato é consolidar o container de processamento de vídeos
-com FFmpeg e `ffprobe`. A implementação da análise será feita depois dentro da
-aplicação, sem misturar código de execução com os artefatos de governança.
+Os próximos passos são ampliar o processamento de vídeos e documentar os
+experimentos de aprendizado profundo. A implementação da análise permanece em
+`app/`, sem misturar código de execução com os artefatos de governança do
+`harness`.
