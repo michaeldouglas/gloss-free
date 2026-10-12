@@ -1,37 +1,32 @@
 # Specification Quality Checklist: Estruturar Projeto App
 
-**Purpose**: Validar completude e qualidade da especificação da base da aplicação.
+**Purpose**: Validar completude da especificação e o fechamento da feature.
 
-**Created**: 2026-09-16
-
+**Status**: Complete
+**Reviewed**: 2026-10-11
 **Feature**: [spec.md](../spec.md)
 
 ## Content Quality
 
-- [x] Não há detalhes de implementação na especificação.
-- [x] A especificação está focada no valor para o usuário e para o projeto.
-- [x] O texto é compreensível para colaboradores não especializados no harness.
-- [x] Todas as seções obrigatórias estão preenchidas.
+- [x] A especificação está focada no valor e no limite da feature.
+- [x] O texto distingue aplicação, harness e legado.
+- [x] As seções obrigatórias estão preenchidas.
+- [x] O status da feature registra a conclusão.
 
 ## Requirement Completeness
 
-- [x] Não há marcadores `[NEEDS CLARIFICATION]`.
+- [x] Não há marcadores de esclarecimento pendente.
 - [x] Os requisitos são testáveis e não ambíguos.
-- [x] Os critérios de sucesso são mensuráveis.
-- [x] Os critérios de sucesso são independentes da tecnologia.
+- [x] Os critérios de sucesso são verificáveis.
 - [x] Os cenários de aceitação cobrem os fluxos principais.
 - [x] Os casos de borda estão identificados.
-- [x] O escopo está delimitado à base e à separação do projeto.
 - [x] As dependências e premissas estão registradas.
 
-## Feature Readiness
+## Implementation Readiness
 
-- [x] Os requisitos funcionais têm critérios de aceitação relacionados.
-- [x] As histórias cobrem a execução e a orientação do projeto.
-- [x] A feature possui resultados verificáveis.
-- [x] Não há detalhes de implementação vazando para a especificação.
-
-## Notes
-
-- A escolha da ferramenta concreta de execução será registrada no plano após
-  a inspeção do conteúdo atual de `app/`.
+- [x] O plano reflete Python, `uv`, a CLI `libras` e o layout atual.
+- [x] O modelo registra datasets, arquivos remotos e manifestos.
+- [x] O quickstart usa os comandos reais de validação.
+- [x] As tarefas estão registradas em `tasks.md`.
+- [x] Os testes automatizados passaram.
+- [x] Não há trabalho de implementação restante para esta feature.

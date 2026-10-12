@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "Se este projeto for utilizado, cite-o usando estas informações."
+title: "Aprendizado profundo de representações visuais para tradução de Libras para português escrito sem glosas"
+type: software
+authors:
+  - family-names: "Barbosa Araujo"
+    given-names: "Michael Douglas"
+repository-code: "https://github.com/michaeldouglas/gloss-free"
+license: MIT
+version: "0.1.0"
+keywords:
+  - Libras
+  - sign language translation
+  - gloss-free translation
+  - deep learning
+  - video processing

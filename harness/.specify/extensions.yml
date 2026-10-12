@@ -1,0 +1,30 @@
+installed:
+  - harness
+
+settings:
+  auto_execute_hooks: true
+
+hooks:
+  before_implement:
+    - extension: harness
+      command: harness.prepare
+      enabled: true
+      optional: false
+      priority: 10
+      description: Validate the feature branch and Spec Kit artifacts before implementation.
+
+  after_implement:
+    - extension: harness
+      command: harness.verify
+      enabled: true
+      optional: false
+      priority: 10
+      description: Run application tests and verify that implementation tasks are complete.
+
+  after_converge:
+    - extension: harness
+      command: harness.converge
+      enabled: true
+      optional: false
+      priority: 10
+      description: Validate convergence and refresh the canonical Graphify graph.

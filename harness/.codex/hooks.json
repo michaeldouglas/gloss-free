@@ -1,12 +1,91 @@
 {
+  "description": "Project-local Graphify and Spec Kit guardrails for the dissertation harness.",
   "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume|clear|compact",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File .codex/hooks/session-start.ps1",
+            "commandWindows": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File .codex/hooks/session-start.ps1",
+            "statusMessage": "Loading harness conventions",
+            "additionalContextLimit": 1800,
+            "timeout": 15
+          },
+          {
+            "type": "command",
+            "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File .codex/hooks/project-venv-policy.ps1",
+            "commandWindows": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File .codex/hooks/project-venv-policy.ps1",
+            "statusMessage": "Checking application Python environment",
+            "additionalContextLimit": 700,
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File .codex/hooks/user-prompt-context.ps1",
+            "commandWindows": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File .codex/hooks/user-prompt-context.ps1",
+            "statusMessage": "Checking repository context",
+            "additionalContextLimit": 600,
+            "timeout": 10
+          }
+        ]
+      }
+    ],
     "PreToolUse": [
       {
         "matcher": "Bash",
         "hooks": [
           {
             "type": "command",
-            "command": "C:/Users/mdbaa/AppData/Roaming/uv/tools/graphifyy/Scripts/python.exe -m graphify hook-check"
+            "command": "C:/Users/mdbaa/AppData/Roaming/uv/tools/graphifyy/Scripts/python.exe -m graphify hook-check",
+            "statusMessage": "Checking Graphify state"
+          },
+          {
+            "type": "command",
+            "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File .codex/hooks/pre-tool-policy.ps1",
+            "commandWindows": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File .codex/hooks/pre-tool-policy.ps1",
+            "statusMessage": "Checking harness policy",
+            "timeout": 15
+          },
+          {
+            "type": "command",
+            "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File .codex/hooks/project-venv-policy.ps1",
+            "commandWindows": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File .codex/hooks/project-venv-policy.ps1",
+            "statusMessage": "Checking application Python environment",
+            "timeout": 10
+          }
+        ]
+      },
+      {
+        "matcher": "apply_patch|Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File .codex/hooks/pre-tool-policy.ps1",
+            "commandWindows": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File .codex/hooks/pre-tool-policy.ps1",
+            "statusMessage": "Checking edited paths",
+            "timeout": 15
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "apply_patch|Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File .codex/hooks/post-edit-graphify.ps1",
+            "commandWindows": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File .codex/hooks/post-edit-graphify.ps1",
+            "statusMessage": "Refreshing canonical Graphify",
+            "timeout": 180
           }
         ]
       }
