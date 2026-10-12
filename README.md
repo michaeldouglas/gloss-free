@@ -6,6 +6,19 @@ reproduzíveis para Machine Learning.
 
 [![CI](https://github.com/michaeldouglas/gloss-free/actions/workflows/ci.yml/badge.svg)](https://github.com/michaeldouglas/gloss-free/actions/workflows/ci.yml)
 
+<p align="center">
+  <img
+    src="materiais/img/livi.png"
+    alt="Livi, mascote do projeto de tradução de Libras para português escrito"
+    width="280"
+  />
+</p>
+
+### Livi
+
+Livi é a mascote oficial do projeto. Ela representa a conexão entre Libras, visão computacional,
+aprendizado profundo e acessibilidade, valores centrais desta pesquisa.
+
 ## Como o projeto está organizado
 
 ```text
