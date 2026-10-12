@@ -1,39 +1,45 @@
 # Data Model: Estruturar Projeto App
 
-Esta feature não introduz entidades de domínio nem armazenamento persistente.
-O modelo abaixo descreve somente os artefatos e estados necessários para
-validar a separação do projeto.
+Esta feature mantém os artefatos de governança e registra as entidades de
+execução já implementadas para a aquisição reproduzível.
 
-## Artefatos
+## Entidades
 
-### Aplicação
+### Dataset Catalog
 
-- **Localização**: `app/`
-- **Conteúdo**: código executável, metadados do projeto, documentação e
-  verificações da aplicação.
-- **Regra**: não deve conter os artefatos de governança do Spec Kit.
+- **Fonte**: `DATASETS` em `../app/dataset/src/libras_translation/config.py`.
+- **Conteúdo**: nome local e identificador do repositório Hugging Face.
+- **Regra**: datasets desconhecidos são rejeitados pela aplicação.
 
-### Harness
+### Remote File
 
-- **Localização**: `harness/`
-- **Conteúdo**: `.specify/`, `specs/`, instruções e scripts de planejamento.
-- **Regra**: coordena o desenvolvimento, mas não é a raiz de execução da
-  aplicação.
+- **Fonte**: `RemoteFile` em `infrastructure/huggingface_client.py`.
+- **Conteúdo**: caminho remoto e tamanho esperado, quando disponível.
+- **Regra**: caminhos absolutos ou com `..` não podem ser gravados no destino.
 
-### Procedimento de validação
+### Dataset Manifest
 
-- **Entradas**: diretório atual, versão de Python e arquivos do projeto.
-- **Estados**:
-  - `não verificado`: os pré-requisitos ainda não foram conferidos;
-  - `bloqueado`: algum pré-requisito está ausente ou incompatível;
-  - `aprovado`: a entrada da aplicação executou e produziu a saída esperada.
-- **Transições**:
-  - `não verificado` → `bloqueado` quando Python 3.14+ não está disponível;
-  - `não verificado` → `aprovado` quando a execução mínima termina com sucesso;
-  - `bloqueado` → `aprovado` após corrigir o pré-requisito e repetir a validação.
+- **Localização**: `../app/data/manifests/<dataset>.json`.
+- **Conteúdo**: repositório, commit resolvido, data de aquisição, arquivos,
+  caminhos locais, tamanhos esperados, estado e erro.
+- **Estados**: `pending`, `downloaded`, `skipped_existing` e `failed`.
+- **Regra**: atualizações são gravadas atomicamente e podem ser retomadas.
+
+### Acquisition Result
+
+- **Fonte**: retorno de `DatasetAcquisition.run`.
+- **Conteúdo**: dataset, commit, quantidades listadas, baixadas, reutilizadas,
+  auxiliares e falhas.
+- **Regra**: falhas individuais são reportadas sem ocultar o resumo da operação.
+
+## Artefatos de Governança
+
+- `../app/`: aplicação, dados, configuração e testes.
+- `harness/`: `.specify/`, `specs/` e instruções de coordenação.
+- `specs/002-estruturar-projeto-app/tasks.md`: registro das tarefas concluídas.
 
 ## Relacionamentos
 
-`harness/specs/<feature>/spec.md` descreve a necessidade; o plano define a
-validação; `app/` recebe a implementação quando as tarefas forem executadas.
-Nenhuma entidade de negócio é criada nesta feature.
+`Dataset Catalog` identifica o repositório; `Remote File` descreve cada item;
+`Dataset Manifest` registra o estado local de cada item; `Acquisition Result`
+resume a operação apresentada pela CLI.

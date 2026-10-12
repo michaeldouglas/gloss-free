@@ -22,8 +22,13 @@ app = typer.Typer(
     help="Aquisição reproduzível de datasets de Libras.",
     no_args_is_help=True,
     add_completion=False,
+    rich_markup_mode=None,
 )
-data_app = typer.Typer(help="Listagem e aquisição de dados.", no_args_is_help=True)
+data_app = typer.Typer(
+    help="Listagem e aquisição de dados.",
+    no_args_is_help=True,
+    rich_markup_mode=None,
+)
 app.add_typer(data_app, name="data")
 
 

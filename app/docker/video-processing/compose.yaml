@@ -1,0 +1,21 @@
+services:
+  video-processing:
+    build:
+      context: ../..
+      dockerfile: docker/video-processing/Dockerfile
+    image: libras-video-processing:0.1.0
+    working_dir: /workspace/app
+    init: true
+    read_only: true
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    network_mode: none
+    tmpfs:
+      - /tmp:size=1g,mode=1777
+    volumes:
+      - ../../data/raw:/workspace/data/raw:ro
+      - ../../data/processed:/workspace/data/processed
+      - ../../data/manifests:/workspace/data/manifests:ro
+    command: ["ffprobe", "-version"]

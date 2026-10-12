@@ -2,6 +2,12 @@
 
 Este harness coordena o repositório da dissertação, cuja raiz é a pasta pai. O diretório `../old/` é legado local, permanece ignorado pelo Git e não deve ser incluído em revisões, commits ou Pull Requests.
 
+## Arquitetura do aplicativo
+
+O aplicativo em `../app/` segue deliberadamente uma **Flat Architecture híbrida**. A organização deve permanecer pragmática e orientada aos módulos do projeto, com separação pontual de responsabilidades quando isso ajudar a manter o código compreensível.
+
+Essa arquitetura não deve ser reinterpretada ou reestruturada automaticamente como Clean Architecture, arquitetura hexagonal ou outra arquitetura em camadas rígida. A pasta `infrastructure/` pode isolar integrações externas, mas isso não transforma o projeto em uma arquitetura formal de portas e adaptadores.
+
 ## graphify
 
 This project has a knowledge graph at graphify-out/ with god nodes, community structure, and cross-file relationships.
@@ -43,6 +49,41 @@ o fluxo completo da revisão quando um subagente puder fazê-lo.
 Não trate uma orientação inicial, uma revisão baseada apenas no corpus local
 ou uma RSL abrangente como o mesmo tipo de entrega. Registre claramente o
 escopo, as fontes utilizadas e as limitações da revisão.
+
+## Tradução de PDFs com preservação de layout
+
+Para traduzir PDFs do corpus sem perder imagens, colunas, gráficos ou a camada
+de texto selecionável, use a skill local
+`.agents/skills/pdf-translation-layout/SKILL.md` e o subagente
+`.codex/agents/pdf-translation-coordinator.md`. O script reutilizável fica em
+`.agents/skills/pdf-translation-layout/scripts/translate_pdf_layout.py`.
+
+O original deve permanecer intacto. Por padrão, leia `../materiais/en` e grave
+as cópias em `../materiais/pt`. Valide páginas, imagens, extração de texto e
+fragmentos truncados antes de concluir; blocos de matemática, CJK ou símbolos
+que não possam ser representados com segurança devem ser preservados do
+original, não substituídos por `?`.
+
+## Processamento reprodutível de vídeos
+
+Para tarefas de inspeção, validação ou pré-processamento audiovisual, delegue
+ao subagente `.codex/agents/video-processing-specialist.md`. O escopo inclui
+`ffprobe`, FFmpeg, codecs, FPS, resolução, duração, frames, amostragem temporal
+e Docker usado para isolar o pipeline.
+
+Use a skill local `.agents/skills/docker-patterns/SKILL.md` para decisões de
+containerização. A referência upstream de FFmpeg é a skill `video-editing` do
+ECC, disponível em:
+`https://github.com/affaan-m/ECC/blob/main/skills/video-editing/SKILL.md`.
+Ela não deve ser tratada como uma skill separada chamada `ffmpeg`, nem seu
+escopo de edição criativa deve ser aplicado automaticamente a este projeto.
+
+O subagente deve manter `../app/data/raw/` imutável, gravar derivados em área
+separada, produzir JSON/CSV com parâmetros e logs, validar as saídas e
+considerar a preservação de mãos, expressões faciais e contexto corporal em
+vídeos de Libras. A aplicação permanece fora do escopo desta alteração; quando
+for implementada, seus módulos e testes deverão ficar em `../app/` conforme a
+arquitetura flat híbrida existente.
 
 ## Fluxo Git e subagente de pesquisa
 

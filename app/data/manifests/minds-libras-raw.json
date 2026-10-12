@@ -1,7 +1,7 @@
 {
   "repo_id": "ibmectech/minds-libras-raw",
   "commit": "a881a5a4330ec8b00bf6c80618f02fc66345f379",
-  "acquired_at_utc": "2026-10-03T16:53:35.735020+00:00",
+  "acquired_at_utc": "2026-10-04T00:37:41.554967+00:00",
   "files": {
     "videos/01AcontecerSinalizador01-1.mp4": {
       "remote_path": "videos/01AcontecerSinalizador01-1.mp4",
@@ -5600,6 +5600,43 @@
       "remote_path": "videos/20VontadeSinalizador12-5.mp4",
       "local_path": null,
       "expected_size_bytes": 82097217,
+      "status": "pending",
+      "error": null
+    }
+  },
+  "auxiliary_files": {
+    ".gitattributes": {
+      "remote_path": ".gitattributes",
+      "local_path": null,
+      "expected_size_bytes": 2504,
+      "status": "pending",
+      "error": null
+    },
+    "annotations.csv": {
+      "remote_path": "annotations.csv",
+      "local_path": null,
+      "expected_size_bytes": 74754,
+      "status": "pending",
+      "error": null
+    },
+    "annotations.py": {
+      "remote_path": "annotations.py",
+      "local_path": null,
+      "expected_size_bytes": 5488,
+      "status": "pending",
+      "error": null
+    },
+    "README.md": {
+      "remote_path": "README.md",
+      "local_path": null,
+      "expected_size_bytes": 2175,
+      "status": "pending",
+      "error": null
+    },
+    "videos": {
+      "remote_path": "videos",
+      "local_path": null,
+      "expected_size_bytes": null,
       "status": "pending",
       "error": null
     }

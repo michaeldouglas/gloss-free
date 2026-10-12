@@ -1,88 +1,109 @@
 # Implementation Plan: Estruturar Projeto App
 
-**Branch**: `feature/estruturar-projeto-app` | **Date**: 2026-09-16 | **Spec**: [spec.md](spec.md)
-
-**Input**: Feature specification from `/specs/002-estruturar-projeto-app/spec.md`
+**Branch**: `feature/estruturar-projeto-app`
+**Date**: 2026-10-11
+**Spec**: [spec.md](spec.md)
+**Status**: Complete
 
 ## Summary
 
-Estabelecer `app/` como a raiz da aplicação e fornecer uma base mínima,
-executável e documentada para as próximas features. O plano mantém os
-artefatos do Spec Kit em `harness/`, documenta o pré-requisito de Python
-declarado no projeto e cria uma validação de fumaça reproduzível a partir de
-`app/`.
+Estabelecer `../app/` como a raiz da aplicação e registrar a base executável
+que foi implementada para aquisição reproduzível de datasets de Libras. O
+harness permanece responsável pela governança e pelos artefatos do Spec Kit.
 
 ## Technical Context
 
-**Language/Version**: Python >=3.14, conforme `app/pyproject.toml`; o ambiente local verificado possui Python 3.13.7 e não atende ao requisito ainda
-
-**Primary Dependencies**: Nenhuma dependência de runtime declarada; `uv` 0.9.12 está disponível para gerenciamento local
-
-**Storage**: N/A nesta feature de bootstrap
-
-**Testing**: Verificação de fumaça da entrada principal; suíte dedicada será definida quando a primeira funcionalidade de negócio for especificada
-
-**Target Platform**: Ambiente local Windows de desenvolvimento, com execução independente do diretório `harness/`
-
-**Project Type**: Aplicação Python mínima executável localmente
-
-**Performance Goals**: A verificação inicial deve concluir em até 10 segundos após os pré-requisitos estarem disponíveis
-
-**Constraints**: `app/` contém o código da aplicação; `harness/` contém governança e artefatos Spec Kit; `old/` permanece legado ignorado; nenhuma dependência externa é necessária para a base
-
-**Scale/Scope**: Uma base executável, documentação de entrada e uma verificação mínima; sem funcionalidades de negócio nesta feature
+**Language/Version**: Python >=3.10, conforme `../app/pyproject.toml`
+**Primary Dependencies**: `huggingface_hub`, `typer`, `rich`, `python-dotenv`
+e dependências de análise declaradas no projeto
+**Storage**: Arquivos originais em `../app/data/raw/` e manifestos JSON em
+`../app/data/manifests/`
+**Testing**: 11 testes determinísticos com `unittest`; nenhum teste padrão
+realiza download ou exige credenciais
+**Target Platform**: Windows local com PowerShell e `uv`
+**Project Type**: CLI Python para aquisição de datasets
+**Constraints**: `../app/` contém a aplicação; `harness/` contém governança;
+`../old/` permanece fora do escopo; credenciais não podem ser registradas
+**Scale/Scope**: Dois datasets configurados, aquisição retomável, listagem,
+download limitado e download concorrente de arquivos auxiliares
 
 ## Constitution Check
 
-*GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
+*GATE: verified against the ratified constitution before closure.*
 
-O arquivo de constituição ainda contém somente placeholders e não define
-princípios ratificados ou gates executáveis. A feature é limitada à
-organização e validação da base do projeto, sem dependências novas nem
-alteração das regras de branches.
+- Reproducible acquisition: PASS — commits, caminhos e estados são registrados
+  nos manifestos.
+- Explicit boundaries: PASS — aplicação e harness permanecem separados.
+- Testable and safe changes: PASS — 11 testes passam sem rede real.
+- Traceability and preservation: PASS — revisão remota, caminhos e tamanhos
+  esperados são mantidos; gravações de manifestos são atômicas.
+- Maintainable simplicity: PASS — CLI, coordenação, configuração e cliente
+  externo permanecem em módulos separados.
 
-**Gate inicial**: PASS — não há restrição ratificada aplicável.
-
-**Gate pós-design**: PASS — o desenho permanece pequeno, reversível e separado
-do harness.
-
-## Project Structure
-
-### Documentation (this feature)
+## Implemented Structure
 
 ```text
-specs/002-estruturar-projeto-app/
-├── plan.md              # This file ($speckit-plan command output)
-├── research.md          # Phase 0 output ($speckit-plan command)
-├── data-model.md        # Phase 1 output ($speckit-plan command)
-├── quickstart.md        # Phase 1 output ($speckit-plan command)
-├── contracts/           # Phase 1 output ($speckit-plan command)
-└── tasks.md             # Phase 2 output ($speckit-tasks command - NOT created by $speckit-plan)
-```
-
-### Source Code (repository root)
-```text
-app/
-├── README.md                  # Entrada, pré-requisitos e validação
-├── pyproject.toml             # Metadados e requisito de Python
-├── main.py                    # Entrada mínima atual
-└── tests/                     # Verificações da aplicação, quando criadas
+../app/
+├── README.md
+├── pyproject.toml
+├── data/
+│   ├── manifests/
+│   └── raw/
+└── dataset/
+    ├── src/libras_translation/
+    │   ├── cli.py
+    │   ├── config.py
+    │   ├── acquisition.py
+    │   └── infrastructure/huggingface_client.py
+    └── tests/
 
 harness/
-├── .specify/                  # Scripts, templates e configuração do Spec Kit
-└── specs/                     # Especificações e planos das features
+├── .specify/
+└── specs/002-estruturar-projeto-app/
 ```
 
-**Structure Decision**: Manter um projeto Python simples em `app/` e uma área
-de governança separada em `harness/`. A documentação de execução pertence a
-`app/README.md`; o planejamento e os contratos de feature pertencem a
-`harness/specs/`. Não criar `src/`, frontend, backend ou contratos externos
-antes de existir uma necessidade funcional correspondente.
+## Completed Phases
+
+### Phase 0: Boundary and project setup
+
+- Confirmed `../app/` as the application root.
+- Kept Spec Kit artifacts in `harness/`.
+- Preserved the legacy `../old/` exclusion.
+
+### Phase 1: Acquisition foundation
+
+- Added project metadata and the `libras` CLI entry point.
+- Added configuration for project paths, datasets, and `HF_TOKEN`.
+- Added the Hugging Face adapter with explicit dataset revision resolution.
+
+### Phase 2: Acquisition behavior
+
+- Implemented listing without download.
+- Implemented bounded and concurrent downloads.
+- Implemented atomic, resumable JSON manifests.
+- Preserved auxiliary dataset files and Unicode remote paths.
+- Added user-facing error handling and Rich summaries.
+
+### Phase 3: Verification and documentation
+
+- Added acquisition and CLI tests using fakes and temporary directories.
+- Documented setup, commands, data layout, credential handling, and scope.
+- Verified 11 tests and the CLI help output.
+
+## Completion Validation
+
+```text
+uv run python -m unittest discover -s dataset/tests -v
+Ran 11 tests ... OK
+
+uv run libras --help
+Exit code: 0
+```
+
+No implementation task remains for this feature. Further behavior must be
+defined as a new feature specification rather than appended to this bootstrap.
 
 ## Complexity Tracking
 
-> **Fill ONLY if Constitution Check has violations that must be justified**
-
-| Violation | Why Needed | Simpler Alternative Rejected Because |
-|-----------|------------|-------------------------------------|
-| Nenhuma | Não há violação da constituição ratificada. | A estrutura simples atende ao bootstrap. |
+No unresolved constitution violation or unjustified complexity remains in the
+scope of this feature.
