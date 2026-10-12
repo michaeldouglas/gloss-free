@@ -2064,6 +2064,54 @@
       "source_location": "L259"
     },
     {
+      "id": "agents_skills_exploratory_data_analysis_scripts_common_stable_token",
+      "label": "stable_token()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 195,
+      "community_name": "_main",
+      "file_type": "code",
+      "norm_label": "stable_token()",
+      "source_file": ".agents/skills/exploratory-data-analysis/scripts/_common.py",
+      "source_location": "L331"
+    },
+    {
+      "id": "agents_skills_exploratory_data_analysis_scripts_sequence_inspector_build_parser",
+      "label": "build_parser()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 195,
+      "community_name": "_main",
+      "file_type": "code",
+      "norm_label": "build_parser()",
+      "source_file": ".agents/skills/exploratory-data-analysis/scripts/sequence_inspector.py",
+      "source_location": "L31"
+    },
+    {
+      "id": "agents_skills_exploratory_data_analysis_scripts_sequence_inspector_inspect_sequence_file",
+      "label": "inspect_sequence_file()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 195,
+      "community_name": "_main",
+      "file_type": "code",
+      "norm_label": "inspect_sequence_file()",
+      "source_file": ".agents/skills/exploratory-data-analysis/scripts/sequence_inspector.py",
+      "source_location": "L71"
+    },
+    {
+      "id": "agents_skills_exploratory_data_analysis_scripts_sequence_inspector_main",
+      "label": "_main()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 195,
+      "community_name": "_main",
+      "file_type": "code",
+      "norm_label": "_main()",
+      "source_file": ".agents/skills/exploratory-data-analysis/scripts/sequence_inspector.py",
+      "source_location": "L216"
+    },
+    {
       "id": "agents_skills_exploratory_data_analysis_scripts_common_absolute_lexical",
       "label": "_absolute_lexical()",
       "_callable": true,
@@ -3792,54 +3840,6 @@
       "source_location": "L69"
     },
     {
-      "id": "agents_skills_exploratory_data_analysis_scripts_common_stable_token",
-      "label": "stable_token()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 68,
-      "community_name": "_main",
-      "file_type": "code",
-      "norm_label": "stable_token()",
-      "source_file": ".agents/skills/exploratory-data-analysis/scripts/_common.py",
-      "source_location": "L331"
-    },
-    {
-      "id": "agents_skills_exploratory_data_analysis_scripts_sequence_inspector_build_parser",
-      "label": "build_parser()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 68,
-      "community_name": "_main",
-      "file_type": "code",
-      "norm_label": "build_parser()",
-      "source_file": ".agents/skills/exploratory-data-analysis/scripts/sequence_inspector.py",
-      "source_location": "L31"
-    },
-    {
-      "id": "agents_skills_exploratory_data_analysis_scripts_sequence_inspector_inspect_sequence_file",
-      "label": "inspect_sequence_file()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 68,
-      "community_name": "_main",
-      "file_type": "code",
-      "norm_label": "inspect_sequence_file()",
-      "source_file": ".agents/skills/exploratory-data-analysis/scripts/sequence_inspector.py",
-      "source_location": "L71"
-    },
-    {
-      "id": "agents_skills_exploratory_data_analysis_scripts_sequence_inspector_main",
-      "label": "_main()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 68,
-      "community_name": "_main",
-      "file_type": "code",
-      "norm_label": "_main()",
-      "source_file": ".agents/skills/exploratory-data-analysis/scripts/sequence_inspector.py",
-      "source_location": "L216"
-    },
-    {
       "id": "agents_skills_intel_openvino_model_converter_scripts_model_converter_action",
       "label": "action()",
       "_callable": true,
@@ -5077,76 +5077,64 @@
       "source_location": "L142"
     },
     {
-      "id": "agents_skills_litreview_skill_3_4_sentence_recon_summary",
-      "label": "3-4 sentence recon summary",
+      "id": "agents_skills_litreview_references_docx_8_sections_4a_what_the_research_shows",
+      "label": "4a. What the Research Shows",
       "_origin": "ast",
       "community": 103,
-      "community_name": "Checkpoint (grill-me forcing-options moment)",
+      "community_name": "Section 4: Sub-area Guides",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "3-4 sentence recon summary",
-      "source_file": ".agents/skills/litreview/SKILL.md",
-      "source_location": "L144"
+      "norm_label": "4a. what the research shows",
+      "source_file": ".agents/skills/litreview/references/docx_8_sections.md",
+      "source_location": "L74"
     },
     {
-      "id": "agents_skills_litreview_skill_checkpoint_grill_me_forcing_options_moment",
-      "label": "Checkpoint (grill-me forcing-options moment)",
+      "id": "agents_skills_litreview_references_docx_8_sections_4b_key_papers",
+      "label": "4b. Key Papers",
       "_origin": "ast",
       "community": 103,
-      "community_name": "Checkpoint (grill-me forcing-options moment)",
+      "community_name": "Section 4: Sub-area Guides",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "checkpoint (grill-me forcing-options moment)",
-      "source_file": ".agents/skills/litreview/SKILL.md",
-      "source_location": "L140"
+      "norm_label": "4b. key papers",
+      "source_file": ".agents/skills/litreview/references/docx_8_sections.md",
+      "source_location": "L83"
     },
     {
-      "id": "agents_skills_litreview_skill_depth_re_confirmation_forcing_choice",
-      "label": "Depth re-confirmation (forcing choice)",
+      "id": "agents_skills_litreview_references_docx_8_sections_4c_key_search_terms",
+      "label": "4c. Key Search Terms",
       "_origin": "ast",
       "community": 103,
-      "community_name": "Checkpoint (grill-me forcing-options moment)",
+      "community_name": "Section 4: Sub-area Guides",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "depth re-confirmation (forcing choice)",
-      "source_file": ".agents/skills/litreview/SKILL.md",
-      "source_location": "L159"
+      "norm_label": "4c. key search terms",
+      "source_file": ".agents/skills/litreview/references/docx_8_sections.md",
+      "source_location": "L90"
     },
     {
-      "id": "agents_skills_litreview_skill_framework_breakdown_table",
-      "label": "Framework breakdown table",
+      "id": "agents_skills_litreview_references_docx_8_sections_4d_boolean_search_strings",
+      "label": "4d. Boolean Search Strings",
       "_origin": "ast",
       "community": 103,
-      "community_name": "Checkpoint (grill-me forcing-options moment)",
+      "community_name": "Section 4: Sub-area Guides",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "framework breakdown table",
-      "source_file": ".agents/skills/litreview/SKILL.md",
-      "source_location": "L149"
+      "norm_label": "4d. boolean search strings",
+      "source_file": ".agents/skills/litreview/references/docx_8_sections.md",
+      "source_location": "L98"
     },
     {
-      "id": "agents_skills_litreview_skill_sub_area_forcing_options",
-      "label": "Sub-area forcing options",
+      "id": "agents_skills_litreview_references_docx_8_sections_section_4_sub_area_guides",
+      "label": "Section 4: Sub-area Guides",
       "_origin": "ast",
       "community": 103,
-      "community_name": "Checkpoint (grill-me forcing-options moment)",
+      "community_name": "Section 4: Sub-area Guides",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "sub-area forcing options",
-      "source_file": ".agents/skills/litreview/SKILL.md",
-      "source_location": "L167"
-    },
-    {
-      "id": "agents_skills_litreview_skill_why_i_m_asking_the_rationale",
-      "label": "Why I'm asking (the rationale)",
-      "_origin": "ast",
-      "community": 103,
-      "community_name": "Checkpoint (grill-me forcing-options moment)",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "why i'm asking (the rationale)",
-      "source_file": ".agents/skills/litreview/SKILL.md",
-      "source_location": "L174"
+      "norm_label": "section 4: sub-area guides",
+      "source_file": ".agents/skills/litreview/references/docx_8_sections.md",
+      "source_location": "L70"
     },
     {
       "id": "agents_skills_research_systematic_literature_review_references_screening_template",
@@ -5259,7 +5247,7 @@
       "node_kind": "heading",
       "norm_label": "post-execution checks",
       "source_file": ".agents/skills/speckit-constitution/SKILL.md",
-      "source_location": "L145"
+      "source_location": "L147"
     },
     {
       "id": "agents_skills_speckit_constitution_skill_pre_execution_checks",
@@ -6179,13 +6167,25 @@
       "file_type": "document",
       "frontmatter": {
         "name": "speckit-taskstoissues",
-        "description": "Convert existing tasks into actionable, dependency-ordered GitHub issues for the feature based on available design artifacts.",
+        "description": "Deprecated: Convert existing tasks into actionable, dependency-ordered GitHub issues for the feature based on available design artifacts.",
         "compatibility": "Requires spec-kit project structure with .specify/ directory"
       },
       "node_kind": "page",
       "norm_label": "speckit-taskstoissues/skill.md",
       "source_file": ".agents/skills/speckit-taskstoissues/SKILL.md",
       "source_location": "L1"
+    },
+    {
+      "id": "agents_skills_speckit_taskstoissues_skill_deprecation_notice",
+      "label": "Deprecation Notice",
+      "_origin": "ast",
+      "community": 116,
+      "community_name": "speckit-taskstoissues/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "deprecation notice",
+      "source_file": ".agents/skills/speckit-taskstoissues/SKILL.md",
+      "source_location": "L11"
     },
     {
       "id": "agents_skills_speckit_taskstoissues_skill_outline",
@@ -6197,7 +6197,7 @@
       "node_kind": "heading",
       "norm_label": "outline",
       "source_file": ".agents/skills/speckit-taskstoissues/SKILL.md",
-      "source_location": "L55"
+      "source_location": "L63"
     },
     {
       "id": "agents_skills_speckit_taskstoissues_skill_post_execution_checks",
@@ -6209,7 +6209,7 @@
       "node_kind": "heading",
       "norm_label": "post-execution checks",
       "source_file": ".agents/skills/speckit-taskstoissues/SKILL.md",
-      "source_location": "L77"
+      "source_location": "L85"
     },
     {
       "id": "agents_skills_speckit_taskstoissues_skill_pre_execution_checks",
@@ -6221,7 +6221,7 @@
       "node_kind": "heading",
       "norm_label": "pre-execution checks",
       "source_file": ".agents/skills/speckit-taskstoissues/SKILL.md",
-      "source_location": "L19"
+      "source_location": "L27"
     },
     {
       "id": "agents_skills_speckit_taskstoissues_skill_user_input",
@@ -6233,7 +6233,7 @@
       "node_kind": "heading",
       "norm_label": "user input",
       "source_file": ".agents/skills/speckit-taskstoissues/SKILL.md",
-      "source_location": "L11"
+      "source_location": "L19"
     },
     {
       "id": "agents_skills_statistical_analysis_references_assumptions_and_diagnostics_anova",
@@ -7952,100 +7952,48 @@
       "source_location": "L38"
     },
     {
-      "id": "agents_skills_litreview_skill_deep_dive_20_searches",
-      "label": "Deep dive (20 searches)",
+      "id": "codex_hooks_post_edit_graphify",
+      "label": "post-edit-graphify.ps1",
       "_origin": "ast",
       "community": 140,
-      "community_name": "Phase 3: Targeted Searches",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "deep dive (20 searches)",
-      "source_file": ".agents/skills/litreview/SKILL.md",
-      "source_location": "L194"
+      "community_name": "post-edit-graphify.ps1",
+      "file_type": "code",
+      "norm_label": "post-edit-graphify.ps1",
+      "source_file": ".codex/hooks/post-edit-graphify.ps1",
+      "source_location": "L1"
     },
     {
-      "id": "agents_skills_litreview_skill_phase_3_targeted_searches",
-      "label": "Phase 3: Targeted Searches",
+      "id": "codex_hooks_post_edit_graphify_emit_postmessage",
+      "label": "Emit-PostMessage()",
       "_origin": "ast",
       "community": 140,
-      "community_name": "Phase 3: Targeted Searches",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "phase 3: targeted searches",
-      "source_file": ".agents/skills/litreview/SKILL.md",
-      "source_location": "L180"
+      "community_name": "post-edit-graphify.ps1",
+      "file_type": "code",
+      "norm_label": "emit-postmessage()",
+      "source_file": ".codex/hooks/post-edit-graphify.ps1",
+      "source_location": "L3"
     },
     {
-      "id": "agents_skills_litreview_skill_quick_scan_5_searches",
-      "label": "Quick scan (5 searches)",
-      "_origin": "ast",
-      "community": 140,
-      "community_name": "Phase 3: Targeted Searches",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "quick scan (5 searches)",
-      "source_file": ".agents/skills/litreview/SKILL.md",
-      "source_location": "L184"
-    },
-    {
-      "id": "agents_skills_litreview_skill_standard_review_10_searches",
-      "label": "Standard review (10 searches)",
-      "_origin": "ast",
-      "community": 140,
-      "community_name": "Phase 3: Targeted Searches",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "standard review (10 searches)",
-      "source_file": ".agents/skills/litreview/SKILL.md",
-      "source_location": "L188"
-    },
-    {
-      "id": "agents_skills_litreview_skill_phase_0_grill_me_intake_3_forcing_questions_one_at_a_time",
-      "label": "Phase 0: Grill-Me Intake (3 forcing questions, one at a time)",
+      "id": "codex_hooks_pre_tool_policy",
+      "label": "pre-tool-policy.ps1",
       "_origin": "ast",
       "community": 141,
-      "community_name": "Phase 0: Grill-Me Intake (3 forcing questions, one at a time)",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "phase 0: grill-me intake (3 forcing questions, one at a time)",
-      "source_file": ".agents/skills/litreview/SKILL.md",
-      "source_location": "L71"
+      "community_name": "pre-tool-policy.ps1",
+      "file_type": "code",
+      "norm_label": "pre-tool-policy.ps1",
+      "source_file": ".codex/hooks/pre-tool-policy.ps1",
+      "source_location": "L1"
     },
     {
-      "id": "agents_skills_litreview_skill_q1_root_research_question_specificity",
-      "label": "Q1 (root) \u2014 Research question specificity",
+      "id": "codex_hooks_pre_tool_policy_deny",
+      "label": "Deny()",
       "_origin": "ast",
       "community": 141,
-      "community_name": "Phase 0: Grill-Me Intake (3 forcing questions, one at a time)",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "q1 (root) \u2014 research question specificity",
-      "source_file": ".agents/skills/litreview/SKILL.md",
-      "source_location": "L75"
-    },
-    {
-      "id": "agents_skills_litreview_skill_q2_depends_on_q1_framework_hint",
-      "label": "Q2 (depends on Q1) \u2014 Framework hint",
-      "_origin": "ast",
-      "community": 141,
-      "community_name": "Phase 0: Grill-Me Intake (3 forcing questions, one at a time)",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "q2 (depends on q1) \u2014 framework hint",
-      "source_file": ".agents/skills/litreview/SKILL.md",
-      "source_location": "L83"
-    },
-    {
-      "id": "agents_skills_litreview_skill_q3_depends_on_q1_tentative_depth",
-      "label": "Q3 (depends on Q1) \u2014 Tentative depth",
-      "_origin": "ast",
-      "community": 141,
-      "community_name": "Phase 0: Grill-Me Intake (3 forcing questions, one at a time)",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "q3 (depends on q1) \u2014 tentative depth",
-      "source_file": ".agents/skills/litreview/SKILL.md",
-      "source_location": "L99"
+      "community_name": "pre-tool-policy.ps1",
+      "file_type": "code",
+      "norm_label": "deny()",
+      "source_file": ".codex/hooks/pre-tool-policy.ps1",
+      "source_location": "L3"
     },
     {
       "id": "agents_skills_research_systematic_literature_review_references_evidence_table_template",
@@ -8894,54 +8842,6 @@
       "source_location": "L1"
     },
     {
-      "id": "agents_skills_litreview_references_docx_8_sections_4a_what_the_research_shows",
-      "label": "4a. What the Research Shows",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "DOCX Research Guide \u2014 8 Sections + Technical Requirements",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "4a. what the research shows",
-      "source_file": ".agents/skills/litreview/references/docx_8_sections.md",
-      "source_location": "L74"
-    },
-    {
-      "id": "agents_skills_litreview_references_docx_8_sections_4b_key_papers",
-      "label": "4b. Key Papers",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "DOCX Research Guide \u2014 8 Sections + Technical Requirements",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "4b. key papers",
-      "source_file": ".agents/skills/litreview/references/docx_8_sections.md",
-      "source_location": "L83"
-    },
-    {
-      "id": "agents_skills_litreview_references_docx_8_sections_4c_key_search_terms",
-      "label": "4c. Key Search Terms",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "DOCX Research Guide \u2014 8 Sections + Technical Requirements",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "4c. key search terms",
-      "source_file": ".agents/skills/litreview/references/docx_8_sections.md",
-      "source_location": "L90"
-    },
-    {
-      "id": "agents_skills_litreview_references_docx_8_sections_4d_boolean_search_strings",
-      "label": "4d. Boolean Search Strings",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "DOCX Research Guide \u2014 8 Sections + Technical Requirements",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "4d. boolean search strings",
-      "source_file": ".agents/skills/litreview/references/docx_8_sections.md",
-      "source_location": "L98"
-    },
-    {
       "id": "agents_skills_litreview_references_docx_8_sections_anti_patterns",
       "label": "Anti-Patterns",
       "_origin": "ast",
@@ -8978,42 +8878,6 @@
       "source_location": "L1"
     },
     {
-      "id": "agents_skills_litreview_references_docx_8_sections_docx_technical_requirements",
-      "label": "DOCX Technical Requirements",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "DOCX Research Guide \u2014 8 Sections + Technical Requirements",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "docx technical requirements",
-      "source_file": ".agents/skills/litreview/references/docx_8_sections.md",
-      "source_location": "L188"
-    },
-    {
-      "id": "agents_skills_litreview_references_docx_8_sections_hyperlinks_full_url_hyperlink_style",
-      "label": "Hyperlinks (full URL, \"Hyperlink\" style)",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "DOCX Research Guide \u2014 8 Sections + Technical Requirements",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "hyperlinks (full url, \"hyperlink\" style)",
-      "source_file": ".agents/skills/litreview/references/docx_8_sections.md",
-      "source_location": "L211"
-    },
-    {
-      "id": "agents_skills_litreview_references_docx_8_sections_lists_never_unicode_bullets",
-      "label": "Lists (NEVER unicode bullets)",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "DOCX Research Guide \u2014 8 Sections + Technical Requirements",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "lists (never unicode bullets)",
-      "source_file": ".agents/skills/litreview/references/docx_8_sections.md",
-      "source_location": "L201"
-    },
-    {
       "id": "agents_skills_litreview_references_docx_8_sections_operational_checklist",
       "label": "Operational Checklist",
       "_origin": "ast",
@@ -9024,18 +8888,6 @@
       "norm_label": "operational checklist",
       "source_file": ".agents/skills/litreview/references/docx_8_sections.md",
       "source_location": "L257"
-    },
-    {
-      "id": "agents_skills_litreview_references_docx_8_sections_page_setup",
-      "label": "Page setup",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "DOCX Research Guide \u2014 8 Sections + Technical Requirements",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "page setup",
-      "source_file": ".agents/skills/litreview/references/docx_8_sections.md",
-      "source_location": "L192"
     },
     {
       "id": "agents_skills_litreview_references_docx_8_sections_section_1_topic_overview",
@@ -9072,18 +8924,6 @@
       "norm_label": "section 3: how the field got here",
       "source_file": ".agents/skills/litreview/references/docx_8_sections.md",
       "source_location": "L51"
-    },
-    {
-      "id": "agents_skills_litreview_references_docx_8_sections_section_4_sub_area_guides",
-      "label": "Section 4: Sub-area Guides",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "DOCX Research Guide \u2014 8 Sections + Technical Requirements",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "section 4: sub-area guides",
-      "source_file": ".agents/skills/litreview/references/docx_8_sections.md",
-      "source_location": "L70"
     },
     {
       "id": "agents_skills_litreview_references_docx_8_sections_section_5_key_research_groups",
@@ -9134,18 +8974,6 @@
       "source_location": "L157"
     },
     {
-      "id": "agents_skills_litreview_references_docx_8_sections_tables_dual_widths",
-      "label": "Tables (dual widths)",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "DOCX Research Guide \u2014 8 Sections + Technical Requirements",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "tables (dual widths)",
-      "source_file": ".agents/skills/litreview/references/docx_8_sections.md",
-      "source_location": "L220"
-    },
-    {
       "id": "agents_skills_litreview_references_docx_8_sections_the_core_frame",
       "label": "The Core Frame",
       "_origin": "ast",
@@ -9156,18 +8984,6 @@
       "norm_label": "the core frame",
       "source_file": ".agents/skills/litreview/references/docx_8_sections.md",
       "source_location": "L5"
-    },
-    {
-      "id": "agents_skills_litreview_references_docx_8_sections_validation",
-      "label": "Validation",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "DOCX Research Guide \u2014 8 Sections + Technical Requirements",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "validation",
-      "source_file": ".agents/skills/litreview/references/docx_8_sections.md",
-      "source_location": "L235"
     },
     {
       "id": "agents_skills_intel_docs_reader_scripts_read_openvino_docs",
@@ -9269,6 +9085,38 @@
       "source_location": "L1"
     },
     {
+      "id": "agents_skills_harness_converge_skill",
+      "label": "harness-converge/SKILL.md",
+      "_origin": "ast",
+      "community": 188,
+      "community_name": "harness-converge/SKILL.md",
+      "file_type": "document",
+      "frontmatter": {
+        "name": "harness-converge",
+        "description": "Validate a converged Spec Kit feature and refresh the canonical Graphify graph."
+      },
+      "node_kind": "page",
+      "norm_label": "harness-converge/skill.md",
+      "source_file": ".agents/skills/harness-converge/SKILL.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "agents_skills_harness_prepare_skill",
+      "label": "harness-prepare/SKILL.md",
+      "_origin": "ast",
+      "community": 189,
+      "community_name": "harness-prepare/SKILL.md",
+      "file_type": "document",
+      "frontmatter": {
+        "name": "harness-prepare",
+        "description": "Validate the current feature branch and Spec Kit artifacts before implementation begins."
+      },
+      "node_kind": "page",
+      "norm_label": "harness-prepare/skill.md",
+      "source_file": ".agents/skills/harness-prepare/SKILL.md",
+      "source_location": "L1"
+    },
+    {
       "id": "agents_skills_research_systematic_literature_review_scripts_paper_context_artifacts",
       "label": "paper_context_artifacts.py",
       "_origin": "ast",
@@ -9322,6 +9170,569 @@
       "norm_label": "path",
       "source_file": "",
       "source_location": ""
+    },
+    {
+      "id": "agents_skills_harness_verify_skill",
+      "label": "harness-verify/SKILL.md",
+      "_origin": "ast",
+      "community": 190,
+      "community_name": "harness-verify/SKILL.md",
+      "file_type": "document",
+      "frontmatter": {
+        "name": "harness-verify",
+        "description": "Run the harness implementation quality gate, including the application test suite and Spec Kit task completion check."
+      },
+      "node_kind": "page",
+      "norm_label": "harness-verify/skill.md",
+      "source_file": ".agents/skills/harness-verify/SKILL.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "codex_hooks_session_start",
+      "label": "session-start.ps1",
+      "_origin": "ast",
+      "community": 191,
+      "community_name": "session-start.ps1",
+      "file_type": "code",
+      "norm_label": "session-start.ps1",
+      "source_file": ".codex/hooks/session-start.ps1",
+      "source_location": "L1"
+    },
+    {
+      "id": "codex_hooks_user_prompt_context",
+      "label": "user-prompt-context.ps1",
+      "_origin": "ast",
+      "community": 192,
+      "community_name": "user-prompt-context.ps1",
+      "file_type": "code",
+      "norm_label": "user-prompt-context.ps1",
+      "source_file": ".codex/hooks/user-prompt-context.ps1",
+      "source_location": "L1"
+    },
+    {
+      "id": "codex_hooks_verify_harness",
+      "label": "verify-harness.ps1",
+      "_origin": "ast",
+      "community": 193,
+      "community_name": "verify-harness.ps1",
+      "file_type": "code",
+      "norm_label": "verify-harness.ps1",
+      "source_file": ".codex/hooks/verify-harness.ps1",
+      "source_location": "L1"
+    },
+    {
+      "id": "agents_skills_docker_patterns_skill",
+      "label": "docker-patterns/SKILL.md",
+      "_origin": "ast",
+      "community": 194,
+      "community_name": "Docker Patterns",
+      "file_type": "document",
+      "frontmatter": {
+        "name": "docker-patterns",
+        "description": "Docker and Docker Compose patterns for local development, hardened CLI installer harnesses, container security, networking, volumes, and multi-service orchestration. Use when creating or reviewing Dockerfiles and Compose services, testing installers across Linux distributions, or planning accurate native macOS and Windows validation."
+      },
+      "node_kind": "page",
+      "norm_label": "docker-patterns/skill.md",
+      "source_file": ".agents/skills/docker-patterns/SKILL.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "agents_skills_docker_patterns_skill_anti_patterns",
+      "label": "Anti-Patterns",
+      "_origin": "ast",
+      "community": 194,
+      "community_name": "Docker Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "anti-patterns",
+      "source_file": ".agents/skills/docker-patterns/SKILL.md",
+      "source_location": "L539"
+    },
+    {
+      "id": "agents_skills_docker_patterns_skill_authenticate_codex_inside_the_networked_session",
+      "label": "Authenticate Codex Inside the Networked Session",
+      "_origin": "ast",
+      "community": 194,
+      "community_name": "Docker Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "authenticate codex inside the networked session",
+      "source_file": ".agents/skills/docker-patterns/SKILL.md",
+      "source_location": "L421"
+    },
+    {
+      "id": "agents_skills_docker_patterns_skill_common_commands",
+      "label": "Common Commands",
+      "_origin": "ast",
+      "community": 194,
+      "community_name": "Docker Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "common commands",
+      "source_file": ".agents/skills/docker-patterns/SKILL.md",
+      "source_location": "L499"
+    },
+    {
+      "id": "agents_skills_docker_patterns_skill_common_patterns",
+      "label": "Common Patterns",
+      "_origin": "ast",
+      "community": 194,
+      "community_name": "Docker Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "common patterns",
+      "source_file": ".agents/skills/docker-patterns/SKILL.md",
+      "source_location": "L200"
+    },
+    {
+      "id": "agents_skills_docker_patterns_skill_compose_security",
+      "label": "Compose Security",
+      "_origin": "ast",
+      "community": 194,
+      "community_name": "Docker Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "compose security",
+      "source_file": ".agents/skills/docker-patterns/SKILL.md",
+      "source_location": "L233"
+    },
+    {
+      "id": "agents_skills_docker_patterns_skill_container_security",
+      "label": "Container Security",
+      "_origin": "ast",
+      "community": 194,
+      "community_name": "Docker Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "container security",
+      "source_file": ".agents/skills/docker-patterns/SKILL.md",
+      "source_location": "L216"
+    },
+    {
+      "id": "agents_skills_docker_patterns_skill_custom_networks",
+      "label": "Custom Networks",
+      "_origin": "ast",
+      "community": 194,
+      "community_name": "Docker Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "custom networks",
+      "source_file": ".agents/skills/docker-patterns/SKILL.md",
+      "source_location": "L154"
+    },
+    {
+      "id": "agents_skills_docker_patterns_skill_debugging",
+      "label": "Debugging",
+      "_origin": "ast",
+      "community": 194,
+      "community_name": "Docker Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "debugging",
+      "source_file": ".agents/skills/docker-patterns/SKILL.md",
+      "source_location": "L497"
+    },
+    {
+      "id": "agents_skills_docker_patterns_skill_debugging_network_issues",
+      "label": "Debugging Network Issues",
+      "_origin": "ast",
+      "community": 194,
+      "community_name": "Docker Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "debugging network issues",
+      "source_file": ".agents/skills/docker-patterns/SKILL.md",
+      "source_location": "L525"
+    },
+    {
+      "id": "agents_skills_docker_patterns_skill_development_vs_production_dockerfile",
+      "label": "Development vs Production Dockerfile",
+      "_origin": "ast",
+      "community": 194,
+      "community_name": "Docker Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "development vs production dockerfile",
+      "source_file": ".agents/skills/docker-patterns/SKILL.md",
+      "source_location": "L72"
+    },
+    {
+      "id": "agents_skills_docker_patterns_skill_docker_compose_for_local_development",
+      "label": "Docker Compose for Local Development",
+      "_origin": "ast",
+      "community": 194,
+      "community_name": "Docker Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "docker compose for local development",
+      "source_file": ".agents/skills/docker-patterns/SKILL.md",
+      "source_location": "L10"
+    },
+    {
+      "id": "agents_skills_docker_patterns_skill_docker_patterns",
+      "label": "Docker Patterns",
+      "_origin": "ast",
+      "community": 194,
+      "community_name": "Docker Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "docker patterns",
+      "source_file": ".agents/skills/docker-patterns/SKILL.md",
+      "source_location": "L6"
+    },
+    {
+      "id": "agents_skills_docker_patterns_skill_dockerfile_hardening",
+      "label": "Dockerfile Hardening",
+      "_origin": "ast",
+      "community": 194,
+      "community_name": "Docker Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "dockerfile hardening",
+      "source_file": ".agents/skills/docker-patterns/SKILL.md",
+      "source_location": "L218"
+    },
+    {
+      "id": "agents_skills_docker_patterns_skill_dockerignore",
+      "label": ".dockerignore",
+      "_origin": "ast",
+      "community": 194,
+      "community_name": "Docker Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": ".dockerignore",
+      "source_file": ".agents/skills/docker-patterns/SKILL.md",
+      "source_location": "L479"
+    },
+    {
+      "id": "agents_skills_docker_patterns_skill_enforce_the_isolation_contract",
+      "label": "Enforce the Isolation Contract",
+      "_origin": "ast",
+      "community": 194,
+      "community_name": "Docker Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "enforce the isolation contract",
+      "source_file": ".agents/skills/docker-patterns/SKILL.md",
+      "source_location": "L288"
+    },
+    {
+      "id": "agents_skills_docker_patterns_skill_exercise_the_ecc_plugin_setup_harness",
+      "label": "Exercise the ECC Plugin Setup Harness",
+      "_origin": "ast",
+      "community": 194,
+      "community_name": "Docker Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "exercise the ecc plugin setup harness",
+      "source_file": ".agents/skills/docker-patterns/SKILL.md",
+      "source_location": "L310"
+    },
+    {
+      "id": "agents_skills_docker_patterns_skill_exposing_only_what_s_needed",
+      "label": "Exposing Only What's Needed",
+      "_origin": "ast",
+      "community": 194,
+      "community_name": "Docker Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "exposing only what's needed",
+      "source_file": ".agents/skills/docker-patterns/SKILL.md",
+      "source_location": "L176"
+    },
+    {
+      "id": "agents_skills_docker_patterns_skill_hardened_cli_installer_harnesses",
+      "label": "Hardened CLI Installer Harnesses",
+      "_origin": "ast",
+      "community": 194,
+      "community_name": "Docker Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "hardened cli installer harnesses",
+      "source_file": ".agents/skills/docker-patterns/SKILL.md",
+      "source_location": "L275"
+    },
+    {
+      "id": "agents_skills_docker_patterns_skill_networking",
+      "label": "Networking",
+      "_origin": "ast",
+      "community": 194,
+      "community_name": "Docker Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "networking",
+      "source_file": ".agents/skills/docker-patterns/SKILL.md",
+      "source_location": "L143"
+    },
+    {
+      "id": "agents_skills_docker_patterns_skill_override_files",
+      "label": "Override Files",
+      "_origin": "ast",
+      "community": 194,
+      "community_name": "Docker Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "override files",
+      "source_file": ".agents/skills/docker-patterns/SKILL.md",
+      "source_location": "L110"
+    },
+    {
+      "id": "agents_skills_docker_patterns_skill_respect_the_platform_boundary",
+      "label": "Respect the Platform Boundary",
+      "_origin": "ast",
+      "community": 194,
+      "community_name": "Docker Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "respect the platform boundary",
+      "source_file": ".agents/skills/docker-patterns/SKILL.md",
+      "source_location": "L279"
+    },
+    {
+      "id": "agents_skills_docker_patterns_skill_secret_management",
+      "label": "Secret Management",
+      "_origin": "ast",
+      "community": 194,
+      "community_name": "Docker Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "secret management",
+      "source_file": ".agents/skills/docker-patterns/SKILL.md",
+      "source_location": "L250"
+    },
+    {
+      "id": "agents_skills_docker_patterns_skill_service_discovery",
+      "label": "Service Discovery",
+      "_origin": "ast",
+      "community": 194,
+      "community_name": "Docker Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "service discovery",
+      "source_file": ".agents/skills/docker-patterns/SKILL.md",
+      "source_location": "L145"
+    },
+    {
+      "id": "agents_skills_docker_patterns_skill_standard_web_app_stack",
+      "label": "Standard Web App Stack",
+      "_origin": "ast",
+      "community": 194,
+      "community_name": "Docker Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "standard web app stack",
+      "source_file": ".agents/skills/docker-patterns/SKILL.md",
+      "source_location": "L12"
+    },
+    {
+      "id": "agents_skills_docker_patterns_skill_start_open_reconnect_and_clean_up_a_named_session",
+      "label": "Start, Open, Reconnect, and Clean Up a Named Session",
+      "_origin": "ast",
+      "community": 194,
+      "community_name": "Docker Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "start, open, reconnect, and clean up a named session",
+      "source_file": ".agents/skills/docker-patterns/SKILL.md",
+      "source_location": "L363"
+    },
+    {
+      "id": "agents_skills_docker_patterns_skill_volume_strategies",
+      "label": "Volume Strategies",
+      "_origin": "ast",
+      "community": 194,
+      "community_name": "Docker Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "volume strategies",
+      "source_file": ".agents/skills/docker-patterns/SKILL.md",
+      "source_location": "L186"
+    },
+    {
+      "id": "agents_skills_exploratory_data_analysis_scripts_sequence_inspector",
+      "label": "sequence_inspector.py",
+      "_origin": "ast",
+      "community": 195,
+      "community_name": "_main",
+      "file_type": "code",
+      "norm_label": "sequence_inspector.py",
+      "source_file": ".agents/skills/exploratory-data-analysis/scripts/sequence_inspector.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "agents_skills_exploratory_data_analysis_scripts_sequence_inspector_py_any",
+      "label": "Any",
+      "_origin": "ast",
+      "community": 195,
+      "community_name": "_main",
+      "file_type": "code",
+      "norm_label": "any",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "agents_skills_exploratory_data_analysis_scripts_sequence_inspector_py_argumentparser",
+      "label": "ArgumentParser",
+      "_origin": "ast",
+      "community": 195,
+      "community_name": "_main",
+      "file_type": "code",
+      "norm_label": "argumentparser",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "agents_skills_exploratory_data_analysis_scripts_sequence_inspector_py_path",
+      "label": "Path",
+      "_origin": "ast",
+      "community": 195,
+      "community_name": "_main",
+      "file_type": "code",
+      "norm_label": "path",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "agents_skills_exploratory_data_analysis_scripts_common_rationale_332",
+      "label": "Return a deterministic pseudonymous token; this is not anonymization.",
+      "_origin": "ast",
+      "community": 195,
+      "community_name": "_main",
+      "file_type": "rationale",
+      "norm_label": "return a deterministic pseudonymous token; this is not anonymization.",
+      "source_file": ".agents/skills/exploratory-data-analysis/scripts/_common.py",
+      "source_location": "L332"
+    },
+    {
+      "id": "agents_skills_exploratory_data_analysis_scripts_sequence_inspector_rationale_78",
+      "label": "Inspect records with Biopython's streaming low-level parsers.",
+      "_origin": "ast",
+      "community": 195,
+      "community_name": "_main",
+      "file_type": "rationale",
+      "norm_label": "inspect records with biopython's streaming low-level parsers.",
+      "source_file": ".agents/skills/exploratory-data-analysis/scripts/sequence_inspector.py",
+      "source_location": "L78"
+    },
+    {
+      "id": "codex_agents_video_processing_specialist",
+      "label": "video-processing-specialist.md",
+      "_origin": "ast",
+      "community": 196,
+      "community_name": "Video Processing Specialist",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "video-processing-specialist.md",
+      "source_file": ".codex/agents/video-processing-specialist.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "codex_agents_video_processing_specialist_crit\u00e9rios_de_delega\u00e7\u00e3o",
+      "label": "Crit\u00e9rios de delega\u00e7\u00e3o",
+      "_origin": "ast",
+      "community": 196,
+      "community_name": "Video Processing Specialist",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "criterios de delegacao",
+      "source_file": ".codex/agents/video-processing-specialist.md",
+      "source_location": "L10"
+    },
+    {
+      "id": "codex_agents_video_processing_specialist_entrega_obrigat\u00f3ria",
+      "label": "Entrega obrigat\u00f3ria",
+      "_origin": "ast",
+      "community": 196,
+      "community_name": "Video Processing Specialist",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "entrega obrigatoria",
+      "source_file": ".codex/agents/video-processing-specialist.md",
+      "source_location": "L111"
+    },
+    {
+      "id": "codex_agents_video_processing_specialist_limites_do_reposit\u00f3rio",
+      "label": "Limites do reposit\u00f3rio",
+      "_origin": "ast",
+      "community": 196,
+      "community_name": "Video Processing Specialist",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "limites do repositorio",
+      "source_file": ".codex/agents/video-processing-specialist.md",
+      "source_location": "L92"
+    },
+    {
+      "id": "codex_agents_video_processing_specialist_papel",
+      "label": "Papel",
+      "_origin": "ast",
+      "community": 196,
+      "community_name": "Video Processing Specialist",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "papel",
+      "source_file": ".codex/agents/video-processing-specialist.md",
+      "source_location": "L3"
+    },
+    {
+      "id": "codex_agents_video_processing_specialist_protocolo_antes_de_alterar_arquivos",
+      "label": "Protocolo antes de alterar arquivos",
+      "_origin": "ast",
+      "community": 196,
+      "community_name": "Video Processing Specialist",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "protocolo antes de alterar arquivos",
+      "source_file": ".codex/agents/video-processing-specialist.md",
+      "source_location": "L101"
+    },
+    {
+      "id": "codex_agents_video_processing_specialist_regras_t\u00e9cnicas",
+      "label": "Regras t\u00e9cnicas",
+      "_origin": "ast",
+      "community": 196,
+      "community_name": "Video Processing Specialist",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "regras tecnicas",
+      "source_file": ".codex/agents/video-processing-specialist.md",
+      "source_location": "L43"
+    },
+    {
+      "id": "codex_agents_video_processing_specialist_skills_e_fontes",
+      "label": "Skills e fontes",
+      "_origin": "ast",
+      "community": 196,
+      "community_name": "Video Processing Specialist",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "skills e fontes",
+      "source_file": ".codex/agents/video-processing-specialist.md",
+      "source_location": "L26"
+    },
+    {
+      "id": "codex_agents_video_processing_specialist_valida\u00e7\u00e3o_m\u00ednima",
+      "label": "Valida\u00e7\u00e3o m\u00ednima",
+      "_origin": "ast",
+      "community": 196,
+      "community_name": "Video Processing Specialist",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "validacao minima",
+      "source_file": ".codex/agents/video-processing-specialist.md",
+      "source_location": "L74"
+    },
+    {
+      "id": "codex_agents_video_processing_specialist_video_processing_specialist",
+      "label": "Video Processing Specialist",
+      "_origin": "ast",
+      "community": 196,
+      "community_name": "Video Processing Specialist",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "video processing specialist",
+      "source_file": ".codex/agents/video-processing-specialist.md",
+      "source_location": "L1"
     },
     {
       "id": "agents_skills_exploratory_data_analysis_scripts_common",
@@ -11965,7 +12376,7 @@
       "node_kind": "heading",
       "norm_label": "5. assign severity",
       "source_file": ".agents/skills/speckit-converge/SKILL.md",
-      "source_location": "L171"
+      "source_location": "L177"
     },
     {
       "id": "agents_skills_speckit_converge_skill_6_present_the_in_session_findings_summary",
@@ -11977,7 +12388,7 @@
       "node_kind": "heading",
       "norm_label": "6. present the in-session findings summary",
       "source_file": ".agents/skills/speckit-converge/SKILL.md",
-      "source_location": "L181"
+      "source_location": "L187"
     },
     {
       "id": "agents_skills_speckit_converge_skill_7_append_convergence_tasks_or_report_converged",
@@ -11989,7 +12400,7 @@
       "node_kind": "heading",
       "norm_label": "7. append convergence tasks (or report converged)",
       "source_file": ".agents/skills/speckit-converge/SKILL.md",
-      "source_location": "L199"
+      "source_location": "L205"
     },
     {
       "id": "agents_skills_speckit_converge_skill_8_provide_next_actions_handoff",
@@ -12001,7 +12412,7 @@
       "node_kind": "heading",
       "norm_label": "8. provide next actions (handoff)",
       "source_file": ".agents/skills/speckit-converge/SKILL.md",
-      "source_location": "L231"
+      "source_location": "L237"
     },
     {
       "id": "agents_skills_speckit_converge_skill_9_check_for_extension_hooks",
@@ -12013,7 +12424,7 @@
       "node_kind": "heading",
       "norm_label": "9. check for extension hooks",
       "source_file": ".agents/skills/speckit-converge/SKILL.md",
-      "source_location": "L239"
+      "source_location": "L245"
     },
     {
       "id": "agents_skills_speckit_converge_skill_convergence_findings",
@@ -12025,7 +12436,7 @@
       "node_kind": "heading",
       "norm_label": "convergence findings",
       "source_file": ".agents/skills/speckit-converge/SKILL.md",
-      "source_location": "L185"
+      "source_location": "L191"
     },
     {
       "id": "agents_skills_speckit_converge_skill_execution_steps",
@@ -13413,6 +13824,18 @@
       "source_location": "L96"
     },
     {
+      "id": "agents_skills_litreview_skill_3_4_sentence_recon_summary",
+      "label": "3-4 sentence recon summary",
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "Litreview \u2014 Academic Literature Orientation",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "3-4 sentence recon summary",
+      "source_file": ".agents/skills/litreview/SKILL.md",
+      "source_location": "L144"
+    },
+    {
       "id": "agents_skills_litreview_skill_agent_integrity_rules_research_pack_convention",
       "label": "Agent Integrity Rules (Research-Pack Convention)",
       "_origin": "ast",
@@ -13437,6 +13860,18 @@
       "source_location": "L267"
     },
     {
+      "id": "agents_skills_litreview_skill_checkpoint_grill_me_forcing_options_moment",
+      "label": "Checkpoint (grill-me forcing-options moment)",
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "Litreview \u2014 Academic Literature Orientation",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "checkpoint (grill-me forcing-options moment)",
+      "source_file": ".agents/skills/litreview/SKILL.md",
+      "source_location": "L140"
+    },
+    {
       "id": "agents_skills_litreview_skill_cross_search_intelligence",
       "label": "Cross-Search Intelligence",
       "_origin": "ast",
@@ -13447,6 +13882,30 @@
       "norm_label": "cross-search intelligence",
       "source_file": ".agents/skills/litreview/SKILL.md",
       "source_location": "L203"
+    },
+    {
+      "id": "agents_skills_litreview_skill_deep_dive_20_searches",
+      "label": "Deep dive (20 searches)",
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "Litreview \u2014 Academic Literature Orientation",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "deep dive (20 searches)",
+      "source_file": ".agents/skills/litreview/SKILL.md",
+      "source_location": "L194"
+    },
+    {
+      "id": "agents_skills_litreview_skill_depth_re_confirmation_forcing_choice",
+      "label": "Depth re-confirmation (forcing choice)",
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "Litreview \u2014 Academic Literature Orientation",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "depth re-confirmation (forcing choice)",
+      "source_file": ".agents/skills/litreview/SKILL.md",
+      "source_location": "L159"
     },
     {
       "id": "agents_skills_litreview_skill_docx_technical_requirements",
@@ -13471,6 +13930,18 @@
       "norm_label": "error handling",
       "source_file": ".agents/skills/litreview/SKILL.md",
       "source_location": "L59"
+    },
+    {
+      "id": "agents_skills_litreview_skill_framework_breakdown_table",
+      "label": "Framework breakdown table",
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "Litreview \u2014 Academic Literature Orientation",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "framework breakdown table",
+      "source_file": ".agents/skills/litreview/SKILL.md",
+      "source_location": "L149"
     },
     {
       "id": "agents_skills_litreview_skill_free_lane_url_templates_exact",
@@ -13509,6 +13980,18 @@
       "source_location": "L242"
     },
     {
+      "id": "agents_skills_litreview_skill_phase_0_grill_me_intake_3_forcing_questions_one_at_a_time",
+      "label": "Phase 0: Grill-Me Intake (3 forcing questions, one at a time)",
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "Litreview \u2014 Academic Literature Orientation",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "phase 0: grill-me intake (3 forcing questions, one at a time)",
+      "source_file": ".agents/skills/litreview/SKILL.md",
+      "source_location": "L71"
+    },
+    {
       "id": "agents_skills_litreview_skill_phase_1_initial_reconnaissance",
       "label": "Phase 1: Initial Reconnaissance",
       "_origin": "ast",
@@ -13533,6 +14016,18 @@
       "source_location": "L130"
     },
     {
+      "id": "agents_skills_litreview_skill_phase_3_targeted_searches",
+      "label": "Phase 3: Targeted Searches",
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "Litreview \u2014 Academic Literature Orientation",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "phase 3: targeted searches",
+      "source_file": ".agents/skills/litreview/SKILL.md",
+      "source_location": "L180"
+    },
+    {
       "id": "agents_skills_litreview_skill_phase_4_docx_research_guide",
       "label": "Phase 4: DOCX Research Guide",
       "_origin": "ast",
@@ -13543,6 +14038,54 @@
       "norm_label": "phase 4: docx research guide",
       "source_file": ".agents/skills/litreview/SKILL.md",
       "source_location": "L213"
+    },
+    {
+      "id": "agents_skills_litreview_skill_q1_root_research_question_specificity",
+      "label": "Q1 (root) \u2014 Research question specificity",
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "Litreview \u2014 Academic Literature Orientation",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "q1 (root) \u2014 research question specificity",
+      "source_file": ".agents/skills/litreview/SKILL.md",
+      "source_location": "L75"
+    },
+    {
+      "id": "agents_skills_litreview_skill_q2_depends_on_q1_framework_hint",
+      "label": "Q2 (depends on Q1) \u2014 Framework hint",
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "Litreview \u2014 Academic Literature Orientation",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "q2 (depends on q1) \u2014 framework hint",
+      "source_file": ".agents/skills/litreview/SKILL.md",
+      "source_location": "L83"
+    },
+    {
+      "id": "agents_skills_litreview_skill_q3_depends_on_q1_tentative_depth",
+      "label": "Q3 (depends on Q1) \u2014 Tentative depth",
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "Litreview \u2014 Academic Literature Orientation",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "q3 (depends on q1) \u2014 tentative depth",
+      "source_file": ".agents/skills/litreview/SKILL.md",
+      "source_location": "L99"
+    },
+    {
+      "id": "agents_skills_litreview_skill_quick_scan_5_searches",
+      "label": "Quick scan (5 searches)",
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "Litreview \u2014 Academic Literature Orientation",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "quick scan (5 searches)",
+      "source_file": ".agents/skills/litreview/SKILL.md",
+      "source_location": "L184"
     },
     {
       "id": "agents_skills_litreview_skill_references",
@@ -13569,6 +14112,30 @@
       "source_location": "L18"
     },
     {
+      "id": "agents_skills_litreview_skill_standard_review_10_searches",
+      "label": "Standard review (10 searches)",
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "Litreview \u2014 Academic Literature Orientation",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "standard review (10 searches)",
+      "source_file": ".agents/skills/litreview/SKILL.md",
+      "source_location": "L188"
+    },
+    {
+      "id": "agents_skills_litreview_skill_sub_area_forcing_options",
+      "label": "Sub-area forcing options",
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "Litreview \u2014 Academic Literature Orientation",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "sub-area forcing options",
+      "source_file": ".agents/skills/litreview/SKILL.md",
+      "source_location": "L167"
+    },
+    {
       "id": "agents_skills_litreview_skill_tooling",
       "label": "Tooling",
       "_origin": "ast",
@@ -13579,6 +14146,18 @@
       "norm_label": "tooling",
       "source_file": ".agents/skills/litreview/SKILL.md",
       "source_location": "L252"
+    },
+    {
+      "id": "agents_skills_litreview_skill_why_i_m_asking_the_rationale",
+      "label": "Why I'm asking (the rationale)",
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "Litreview \u2014 Academic Literature Orientation",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "why i'm asking (the rationale)",
+      "source_file": ".agents/skills/litreview/SKILL.md",
+      "source_location": "L174"
     },
     {
       "id": "agents_skills_exploratory_data_analysis_scripts_eda_analyzer",
@@ -16234,7 +16813,7 @@
       "node_kind": "heading",
       "norm_label": "done when",
       "source_file": ".agents/skills/speckit-tasks/SKILL.md",
-      "source_location": "L210"
+      "source_location": "L211"
     },
     {
       "id": "agents_skills_speckit_tasks_skill_mandatory_post_execution_hooks",
@@ -16270,7 +16849,7 @@
       "node_kind": "heading",
       "norm_label": "phase structure",
       "source_file": ".agents/skills/speckit-tasks/SKILL.md",
-      "source_location": "L201"
+      "source_location": "L202"
     },
     {
       "id": "agents_skills_speckit_tasks_skill_pre_execution_checks",
@@ -16612,7 +17191,19 @@
       "node_kind": "heading",
       "norm_label": "core principles",
       "source_file": ".specify/memory/constitution.md",
-      "source_location": "L4"
+      "source_location": "L13"
+    },
+    {
+      "id": "specify_memory_constitution_development_workflow_and_quality_gates",
+      "label": "Development Workflow and Quality Gates",
+      "_origin": "ast",
+      "community": 64,
+      "community_name": "Core Principles",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "development workflow and quality gates",
+      "source_file": ".specify/memory/constitution.md",
+      "source_location": "L85"
     },
     {
       "id": "specify_memory_constitution_governance",
@@ -16624,103 +17215,91 @@
       "node_kind": "heading",
       "norm_label": "governance",
       "source_file": ".specify/memory/constitution.md",
-      "source_location": "L43"
+      "source_location": "L103"
     },
     {
-      "id": "specify_memory_constitution_principle_1_name",
-      "label": "[PRINCIPLE_1_NAME]",
+      "id": "specify_memory_constitution_i_reproducible_data_acquisition",
+      "label": "I. Reproducible Data Acquisition",
       "_origin": "ast",
       "community": 64,
       "community_name": "Core Principles",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "[principle_1_name]",
+      "norm_label": "i. reproducible data acquisition",
       "source_file": ".specify/memory/constitution.md",
-      "source_location": "L6"
+      "source_location": "L15"
     },
     {
-      "id": "specify_memory_constitution_principle_2_name",
-      "label": "[PRINCIPLE_2_NAME]",
+      "id": "specify_memory_constitution_ii_explicit_application_boundaries",
+      "label": "II. Explicit Application Boundaries",
       "_origin": "ast",
       "community": 64,
       "community_name": "Core Principles",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "[principle_2_name]",
-      "source_file": ".specify/memory/constitution.md",
-      "source_location": "L11"
-    },
-    {
-      "id": "specify_memory_constitution_principle_3_name",
-      "label": "[PRINCIPLE_3_NAME]",
-      "_origin": "ast",
-      "community": 64,
-      "community_name": "Core Principles",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "[principle_3_name]",
-      "source_file": ".specify/memory/constitution.md",
-      "source_location": "L16"
-    },
-    {
-      "id": "specify_memory_constitution_principle_4_name",
-      "label": "[PRINCIPLE_4_NAME]",
-      "_origin": "ast",
-      "community": 64,
-      "community_name": "Core Principles",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "[principle_4_name]",
-      "source_file": ".specify/memory/constitution.md",
-      "source_location": "L21"
-    },
-    {
-      "id": "specify_memory_constitution_principle_5_name",
-      "label": "[PRINCIPLE_5_NAME]",
-      "_origin": "ast",
-      "community": 64,
-      "community_name": "Core Principles",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "[principle_5_name]",
+      "norm_label": "ii. explicit application boundaries",
       "source_file": ".specify/memory/constitution.md",
       "source_location": "L26"
     },
     {
-      "id": "specify_memory_constitution_project_name_constitution",
-      "label": "[PROJECT_NAME] Constitution",
+      "id": "specify_memory_constitution_iii_testable_and_safe_changes",
+      "label": "III. Testable and Safe Changes",
       "_origin": "ast",
       "community": 64,
       "community_name": "Core Principles",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "[project_name] constitution",
-      "source_file": ".specify/memory/constitution.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "specify_memory_constitution_section_2_name",
-      "label": "[SECTION_2_NAME]",
-      "_origin": "ast",
-      "community": 64,
-      "community_name": "Core Principles",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "[section_2_name]",
-      "source_file": ".specify/memory/constitution.md",
-      "source_location": "L31"
-    },
-    {
-      "id": "specify_memory_constitution_section_3_name",
-      "label": "[SECTION_3_NAME]",
-      "_origin": "ast",
-      "community": 64,
-      "community_name": "Core Principles",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "[section_3_name]",
+      "norm_label": "iii. testable and safe changes",
       "source_file": ".specify/memory/constitution.md",
       "source_location": "L37"
+    },
+    {
+      "id": "specify_memory_constitution_iv_traceability_and_preservation",
+      "label": "IV. Traceability and Preservation",
+      "_origin": "ast",
+      "community": 64,
+      "community_name": "Core Principles",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "iv. traceability and preservation",
+      "source_file": ".specify/memory/constitution.md",
+      "source_location": "L49"
+    },
+    {
+      "id": "specify_memory_constitution_libras_translation_data_acquisition_constitution",
+      "label": "Libras Translation Data Acquisition Constitution",
+      "_origin": "ast",
+      "community": 64,
+      "community_name": "Core Principles",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "libras translation data acquisition constitution",
+      "source_file": ".specify/memory/constitution.md",
+      "source_location": "L11"
+    },
+    {
+      "id": "specify_memory_constitution_project_constraints",
+      "label": "Project Constraints",
+      "_origin": "ast",
+      "community": 64,
+      "community_name": "Core Principles",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "project constraints",
+      "source_file": ".specify/memory/constitution.md",
+      "source_location": "L72"
+    },
+    {
+      "id": "specify_memory_constitution_v_maintainable_simplicity",
+      "label": "V. Maintainable Simplicity",
+      "_origin": "ast",
+      "community": 64,
+      "community_name": "Core Principles",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "v. maintainable simplicity",
+      "source_file": ".specify/memory/constitution.md",
+      "source_location": "L60"
     },
     {
       "id": "specify_templates_constitution_template",
@@ -16976,70 +17555,76 @@
       "source_location": "L74"
     },
     {
-      "id": "agents_skills_exploratory_data_analysis_scripts_sequence_inspector",
-      "label": "sequence_inspector.py",
+      "id": "agents_skills_litreview_references_docx_8_sections_docx_technical_requirements",
+      "label": "DOCX Technical Requirements",
       "_origin": "ast",
       "community": 68,
-      "community_name": "_main",
-      "file_type": "code",
-      "norm_label": "sequence_inspector.py",
-      "source_file": ".agents/skills/exploratory-data-analysis/scripts/sequence_inspector.py",
-      "source_location": "L1"
+      "community_name": "DOCX Technical Requirements",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "docx technical requirements",
+      "source_file": ".agents/skills/litreview/references/docx_8_sections.md",
+      "source_location": "L188"
     },
     {
-      "id": "agents_skills_exploratory_data_analysis_scripts_sequence_inspector_py_any",
-      "label": "Any",
+      "id": "agents_skills_litreview_references_docx_8_sections_hyperlinks_full_url_hyperlink_style",
+      "label": "Hyperlinks (full URL, \"Hyperlink\" style)",
       "_origin": "ast",
       "community": 68,
-      "community_name": "_main",
-      "file_type": "code",
-      "norm_label": "any",
-      "source_file": "",
-      "source_location": ""
+      "community_name": "DOCX Technical Requirements",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "hyperlinks (full url, \"hyperlink\" style)",
+      "source_file": ".agents/skills/litreview/references/docx_8_sections.md",
+      "source_location": "L211"
     },
     {
-      "id": "agents_skills_exploratory_data_analysis_scripts_sequence_inspector_py_argumentparser",
-      "label": "ArgumentParser",
+      "id": "agents_skills_litreview_references_docx_8_sections_lists_never_unicode_bullets",
+      "label": "Lists (NEVER unicode bullets)",
       "_origin": "ast",
       "community": 68,
-      "community_name": "_main",
-      "file_type": "code",
-      "norm_label": "argumentparser",
-      "source_file": "",
-      "source_location": ""
+      "community_name": "DOCX Technical Requirements",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "lists (never unicode bullets)",
+      "source_file": ".agents/skills/litreview/references/docx_8_sections.md",
+      "source_location": "L201"
     },
     {
-      "id": "agents_skills_exploratory_data_analysis_scripts_sequence_inspector_py_path",
-      "label": "Path",
+      "id": "agents_skills_litreview_references_docx_8_sections_page_setup",
+      "label": "Page setup",
       "_origin": "ast",
       "community": 68,
-      "community_name": "_main",
-      "file_type": "code",
-      "norm_label": "path",
-      "source_file": "",
-      "source_location": ""
+      "community_name": "DOCX Technical Requirements",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "page setup",
+      "source_file": ".agents/skills/litreview/references/docx_8_sections.md",
+      "source_location": "L192"
     },
     {
-      "id": "agents_skills_exploratory_data_analysis_scripts_common_rationale_332",
-      "label": "Return a deterministic pseudonymous token; this is not anonymization.",
+      "id": "agents_skills_litreview_references_docx_8_sections_tables_dual_widths",
+      "label": "Tables (dual widths)",
       "_origin": "ast",
       "community": 68,
-      "community_name": "_main",
-      "file_type": "rationale",
-      "norm_label": "return a deterministic pseudonymous token; this is not anonymization.",
-      "source_file": ".agents/skills/exploratory-data-analysis/scripts/_common.py",
-      "source_location": "L332"
+      "community_name": "DOCX Technical Requirements",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "tables (dual widths)",
+      "source_file": ".agents/skills/litreview/references/docx_8_sections.md",
+      "source_location": "L220"
     },
     {
-      "id": "agents_skills_exploratory_data_analysis_scripts_sequence_inspector_rationale_78",
-      "label": "Inspect records with Biopython's streaming low-level parsers.",
+      "id": "agents_skills_litreview_references_docx_8_sections_validation",
+      "label": "Validation",
       "_origin": "ast",
       "community": 68,
-      "community_name": "_main",
-      "file_type": "rationale",
-      "norm_label": "inspect records with biopython's streaming low-level parsers.",
-      "source_file": ".agents/skills/exploratory-data-analysis/scripts/sequence_inspector.py",
-      "source_location": "L78"
+      "community_name": "DOCX Technical Requirements",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "validation",
+      "source_file": ".agents/skills/litreview/references/docx_8_sections.md",
+      "source_location": "L235"
     },
     {
       "id": "agents_skills_intel_openvino_model_converter_scripts_model_converter",
@@ -18441,7 +19026,7 @@
       "label": "002-estruturar-projeto-app/checklists/requirements.md",
       "_origin": "ast",
       "community": 8,
-      "community_name": "Implementation Plan: Estruturar Projeto App",
+      "community_name": "Tasks: Estruturar Projeto App",
       "file_type": "document",
       "node_kind": "page",
       "norm_label": "002-estruturar-projeto-app/checklists/requirements.md",
@@ -18453,7 +19038,7 @@
       "label": "Content Quality",
       "_origin": "ast",
       "community": 8,
-      "community_name": "Implementation Plan: Estruturar Projeto App",
+      "community_name": "Tasks: Estruturar Projeto App",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "content quality",
@@ -18461,35 +19046,23 @@
       "source_location": "L9"
     },
     {
-      "id": "specs_002_estruturar_projeto_app_checklists_requirements_feature_readiness",
-      "label": "Feature Readiness",
+      "id": "specs_002_estruturar_projeto_app_checklists_requirements_implementation_readiness",
+      "label": "Implementation Readiness",
       "_origin": "ast",
       "community": 8,
-      "community_name": "Implementation Plan: Estruturar Projeto App",
+      "community_name": "Tasks: Estruturar Projeto App",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "feature readiness",
+      "norm_label": "implementation readiness",
       "source_file": "specs/002-estruturar-projeto-app/checklists/requirements.md",
-      "source_location": "L27"
-    },
-    {
-      "id": "specs_002_estruturar_projeto_app_checklists_requirements_notes",
-      "label": "Notes",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "Implementation Plan: Estruturar Projeto App",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "notes",
-      "source_file": "specs/002-estruturar-projeto-app/checklists/requirements.md",
-      "source_location": "L34"
+      "source_location": "L25"
     },
     {
       "id": "specs_002_estruturar_projeto_app_checklists_requirements_requirement_completeness",
       "label": "Requirement Completeness",
       "_origin": "ast",
       "community": 8,
-      "community_name": "Implementation Plan: Estruturar Projeto App",
+      "community_name": "Tasks: Estruturar Projeto App",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "requirement completeness",
@@ -18501,7 +19074,7 @@
       "label": "Specification Quality Checklist: Estruturar Projeto App",
       "_origin": "ast",
       "community": 8,
-      "community_name": "Implementation Plan: Estruturar Projeto App",
+      "community_name": "Tasks: Estruturar Projeto App",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "specification quality checklist: estruturar projeto app",
@@ -18513,7 +19086,7 @@
       "label": "002-estruturar-projeto-app/plan.md",
       "_origin": "ast",
       "community": 8,
-      "community_name": "Implementation Plan: Estruturar Projeto App",
+      "community_name": "Tasks: Estruturar Projeto App",
       "file_type": "document",
       "node_kind": "page",
       "norm_label": "002-estruturar-projeto-app/plan.md",
@@ -18521,47 +19094,59 @@
       "source_location": "L1"
     },
     {
+      "id": "specs_002_estruturar_projeto_app_plan_completed_phases",
+      "label": "Completed Phases",
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "Tasks: Estruturar Projeto App",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "completed phases",
+      "source_file": "specs/002-estruturar-projeto-app/plan.md",
+      "source_location": "L65"
+    },
+    {
+      "id": "specs_002_estruturar_projeto_app_plan_completion_validation",
+      "label": "Completion Validation",
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "Tasks: Estruturar Projeto App",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "completion validation",
+      "source_file": "specs/002-estruturar-projeto-app/plan.md",
+      "source_location": "L93"
+    },
+    {
       "id": "specs_002_estruturar_projeto_app_plan_complexity_tracking",
       "label": "Complexity Tracking",
       "_origin": "ast",
       "community": 8,
-      "community_name": "Implementation Plan: Estruturar Projeto App",
+      "community_name": "Tasks: Estruturar Projeto App",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "complexity tracking",
       "source_file": "specs/002-estruturar-projeto-app/plan.md",
-      "source_location": "L82"
+      "source_location": "L106"
     },
     {
       "id": "specs_002_estruturar_projeto_app_plan_constitution_check",
       "label": "Constitution Check",
       "_origin": "ast",
       "community": 8,
-      "community_name": "Implementation Plan: Estruturar Projeto App",
+      "community_name": "Tasks: Estruturar Projeto App",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "constitution check",
       "source_file": "specs/002-estruturar-projeto-app/plan.md",
-      "source_location": "L35"
-    },
-    {
-      "id": "specs_002_estruturar_projeto_app_plan_documentation_this_feature",
-      "label": "Documentation (this feature)",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "Implementation Plan: Estruturar Projeto App",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "documentation (this feature)",
-      "source_file": "specs/002-estruturar-projeto-app/plan.md",
-      "source_location": "L51"
+      "source_location": "L30"
     },
     {
       "id": "specs_002_estruturar_projeto_app_plan_implementation_plan_estruturar_projeto_app",
       "label": "Implementation Plan: Estruturar Projeto App",
       "_origin": "ast",
       "community": 8,
-      "community_name": "Implementation Plan: Estruturar Projeto App",
+      "community_name": "Tasks: Estruturar Projeto App",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "implementation plan: estruturar projeto app",
@@ -18569,59 +19154,95 @@
       "source_location": "L1"
     },
     {
-      "id": "specs_002_estruturar_projeto_app_plan_project_structure",
-      "label": "Project Structure",
+      "id": "specs_002_estruturar_projeto_app_plan_implemented_structure",
+      "label": "Implemented Structure",
       "_origin": "ast",
       "community": 8,
-      "community_name": "Implementation Plan: Estruturar Projeto App",
+      "community_name": "Tasks: Estruturar Projeto App",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "project structure",
+      "norm_label": "implemented structure",
       "source_file": "specs/002-estruturar-projeto-app/plan.md",
-      "source_location": "L49"
+      "source_location": "L43"
     },
     {
-      "id": "specs_002_estruturar_projeto_app_plan_source_code_repository_root",
-      "label": "Source Code (repository root)",
+      "id": "specs_002_estruturar_projeto_app_plan_phase_0_boundary_and_project_setup",
+      "label": "Phase 0: Boundary and project setup",
       "_origin": "ast",
       "community": 8,
-      "community_name": "Implementation Plan: Estruturar Projeto App",
+      "community_name": "Tasks: Estruturar Projeto App",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "source code (repository root)",
+      "norm_label": "phase 0: boundary and project setup",
       "source_file": "specs/002-estruturar-projeto-app/plan.md",
-      "source_location": "L63"
+      "source_location": "L67"
+    },
+    {
+      "id": "specs_002_estruturar_projeto_app_plan_phase_1_acquisition_foundation",
+      "label": "Phase 1: Acquisition foundation",
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "Tasks: Estruturar Projeto App",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "phase 1: acquisition foundation",
+      "source_file": "specs/002-estruturar-projeto-app/plan.md",
+      "source_location": "L73"
+    },
+    {
+      "id": "specs_002_estruturar_projeto_app_plan_phase_2_acquisition_behavior",
+      "label": "Phase 2: Acquisition behavior",
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "Tasks: Estruturar Projeto App",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "phase 2: acquisition behavior",
+      "source_file": "specs/002-estruturar-projeto-app/plan.md",
+      "source_location": "L79"
+    },
+    {
+      "id": "specs_002_estruturar_projeto_app_plan_phase_3_verification_and_documentation",
+      "label": "Phase 3: Verification and documentation",
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "Tasks: Estruturar Projeto App",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "phase 3: verification and documentation",
+      "source_file": "specs/002-estruturar-projeto-app/plan.md",
+      "source_location": "L87"
     },
     {
       "id": "specs_002_estruturar_projeto_app_plan_summary",
       "label": "Summary",
       "_origin": "ast",
       "community": 8,
-      "community_name": "Implementation Plan: Estruturar Projeto App",
+      "community_name": "Tasks: Estruturar Projeto App",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "summary",
       "source_file": "specs/002-estruturar-projeto-app/plan.md",
-      "source_location": "L7"
+      "source_location": "L8"
     },
     {
       "id": "specs_002_estruturar_projeto_app_plan_technical_context",
       "label": "Technical Context",
       "_origin": "ast",
       "community": 8,
-      "community_name": "Implementation Plan: Estruturar Projeto App",
+      "community_name": "Tasks: Estruturar Projeto App",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "technical context",
       "source_file": "specs/002-estruturar-projeto-app/plan.md",
-      "source_location": "L15"
+      "source_location": "L14"
     },
     {
       "id": "specs_002_estruturar_projeto_app_research",
       "label": "002-estruturar-projeto-app/research.md",
       "_origin": "ast",
       "community": 8,
-      "community_name": "Implementation Plan: Estruturar Projeto App",
+      "community_name": "Tasks: Estruturar Projeto App",
       "file_type": "document",
       "node_kind": "page",
       "norm_label": "002-estruturar-projeto-app/research.md",
@@ -18630,46 +19251,58 @@
     },
     {
       "id": "specs_002_estruturar_projeto_app_research_decision_manter_app_separado_do_harness",
-      "label": "Decision: Manter `app/` separado do harness",
+      "label": "Decision: Manter `../app/` separado do harness",
       "_origin": "ast",
       "community": 8,
-      "community_name": "Implementation Plan: Estruturar Projeto App",
+      "community_name": "Tasks: Estruturar Projeto App",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "decision: manter `app/` separado do harness",
+      "norm_label": "decision: manter `../app/` separado do harness",
       "source_file": "specs/002-estruturar-projeto-app/research.md",
       "source_location": "L7"
     },
     {
-      "id": "specs_002_estruturar_projeto_app_research_decision_preservar_a_configura\u00e7\u00e3o_python_existente_nesta_feature",
-      "label": "Decision: Preservar a configura\u00e7\u00e3o Python existente nesta feature",
+      "id": "specs_002_estruturar_projeto_app_research_decision_manter_testes_determin\u00edsticos_com_unittest",
+      "label": "Decision: Manter testes determin\u00edsticos com `unittest`",
       "_origin": "ast",
       "community": 8,
-      "community_name": "Implementation Plan: Estruturar Projeto App",
+      "community_name": "Tasks: Estruturar Projeto App",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "decision: preservar a configuracao python existente nesta feature",
+      "norm_label": "decision: manter testes deterministicos com `unittest`",
       "source_file": "specs/002-estruturar-projeto-app/research.md",
-      "source_location": "L25"
+      "source_location": "L33"
     },
     {
-      "id": "specs_002_estruturar_projeto_app_research_decision_usar_uma_verifica\u00e7\u00e3o_de_fuma\u00e7a_m\u00ednima",
-      "label": "Decision: Usar uma verifica\u00e7\u00e3o de fuma\u00e7a m\u00ednima",
+      "id": "specs_002_estruturar_projeto_app_research_decision_preservar_o_projeto_python_existente",
+      "label": "Decision: Preservar o projeto Python existente",
       "_origin": "ast",
       "community": 8,
-      "community_name": "Implementation Plan: Estruturar Projeto App",
+      "community_name": "Tasks: Estruturar Projeto App",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "decision: usar uma verificacao de fumaca minima",
+      "norm_label": "decision: preservar o projeto python existente",
       "source_file": "specs/002-estruturar-projeto-app/research.md",
-      "source_location": "L44"
+      "source_location": "L16"
+    },
+    {
+      "id": "specs_002_estruturar_projeto_app_research_decision_usar_a_integra\u00e7\u00e3o_oficial_do_hugging_face",
+      "label": "Decision: Usar a integra\u00e7\u00e3o oficial do Hugging Face",
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "Tasks: Estruturar Projeto App",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "decision: usar a integracao oficial do hugging face",
+      "source_file": "specs/002-estruturar-projeto-app/research.md",
+      "source_location": "L25"
     },
     {
       "id": "specs_002_estruturar_projeto_app_research_research_estruturar_projeto_app",
       "label": "Research: Estruturar Projeto App",
       "_origin": "ast",
       "community": 8,
-      "community_name": "Implementation Plan: Estruturar Projeto App",
+      "community_name": "Tasks: Estruturar Projeto App",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "research: estruturar projeto app",
@@ -18681,7 +19314,7 @@
       "label": "002-estruturar-projeto-app/spec.md",
       "_origin": "ast",
       "community": 8,
-      "community_name": "Implementation Plan: Estruturar Projeto App",
+      "community_name": "Tasks: Estruturar Projeto App",
       "file_type": "document",
       "node_kind": "page",
       "norm_label": "002-estruturar-projeto-app/spec.md",
@@ -18693,31 +19326,31 @@
       "label": "Assumptions",
       "_origin": "ast",
       "community": 8,
-      "community_name": "Implementation Plan: Estruturar Projeto App",
+      "community_name": "Tasks: Estruturar Projeto App",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "assumptions",
       "source_file": "specs/002-estruturar-projeto-app/spec.md",
-      "source_location": "L108"
+      "source_location": "L114"
     },
     {
       "id": "specs_002_estruturar_projeto_app_spec_edge_cases",
       "label": "Edge Cases",
       "_origin": "ast",
       "community": 8,
-      "community_name": "Implementation Plan: Estruturar Projeto App",
+      "community_name": "Tasks: Estruturar Projeto App",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "edge cases",
       "source_file": "specs/002-estruturar-projeto-app/spec.md",
-      "source_location": "L60"
+      "source_location": "L66"
     },
     {
       "id": "specs_002_estruturar_projeto_app_spec_feature_specification_estruturar_projeto_app",
       "label": "Feature Specification: Estruturar Projeto App",
       "_origin": "ast",
       "community": 8,
-      "community_name": "Implementation Plan: Estruturar Projeto App",
+      "community_name": "Tasks: Estruturar Projeto App",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "feature specification: estruturar projeto app",
@@ -18729,96 +19362,228 @@
       "label": "Functional Requirements",
       "_origin": "ast",
       "community": 8,
-      "community_name": "Implementation Plan: Estruturar Projeto App",
+      "community_name": "Tasks: Estruturar Projeto App",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "functional requirements",
       "source_file": "specs/002-estruturar-projeto-app/spec.md",
-      "source_location": "L71"
+      "source_location": "L77"
     },
     {
       "id": "specs_002_estruturar_projeto_app_spec_key_entities",
       "label": "Key Entities",
       "_origin": "ast",
       "community": 8,
-      "community_name": "Implementation Plan: Estruturar Projeto App",
+      "community_name": "Tasks: Estruturar Projeto App",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "key entities",
       "source_file": "specs/002-estruturar-projeto-app/spec.md",
-      "source_location": "L86"
+      "source_location": "L92"
     },
     {
       "id": "specs_002_estruturar_projeto_app_spec_measurable_outcomes",
       "label": "Measurable Outcomes",
       "_origin": "ast",
       "community": 8,
-      "community_name": "Implementation Plan: Estruturar Projeto App",
+      "community_name": "Tasks: Estruturar Projeto App",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "measurable outcomes",
       "source_file": "specs/002-estruturar-projeto-app/spec.md",
-      "source_location": "L97"
+      "source_location": "L103"
     },
     {
       "id": "specs_002_estruturar_projeto_app_spec_requirements_mandatory",
       "label": "Requirements *(mandatory)*",
       "_origin": "ast",
       "community": 8,
-      "community_name": "Implementation Plan: Estruturar Projeto App",
+      "community_name": "Tasks: Estruturar Projeto App",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "requirements *(mandatory)*",
       "source_file": "specs/002-estruturar-projeto-app/spec.md",
-      "source_location": "L69"
+      "source_location": "L75"
     },
     {
       "id": "specs_002_estruturar_projeto_app_spec_success_criteria_mandatory",
       "label": "Success Criteria *(mandatory)*",
       "_origin": "ast",
       "community": 8,
-      "community_name": "Implementation Plan: Estruturar Projeto App",
+      "community_name": "Tasks: Estruturar Projeto App",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "success criteria *(mandatory)*",
       "source_file": "specs/002-estruturar-projeto-app/spec.md",
-      "source_location": "L95"
+      "source_location": "L101"
     },
     {
       "id": "specs_002_estruturar_projeto_app_spec_user_scenarios_testing_mandatory",
       "label": "User Scenarios & Testing *(mandatory)*",
       "_origin": "ast",
       "community": 8,
-      "community_name": "Implementation Plan: Estruturar Projeto App",
+      "community_name": "Tasks: Estruturar Projeto App",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "user scenarios & testing *(mandatory)*",
       "source_file": "specs/002-estruturar-projeto-app/spec.md",
-      "source_location": "L11"
+      "source_location": "L17"
     },
     {
       "id": "specs_002_estruturar_projeto_app_spec_user_story_1_executar_a_base_do_aplicativo_priority_p1",
       "label": "User Story 1 - Executar a base do aplicativo (Priority: P1)",
       "_origin": "ast",
       "community": 8,
-      "community_name": "Implementation Plan: Estruturar Projeto App",
+      "community_name": "Tasks: Estruturar Projeto App",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "user story 1 - executar a base do aplicativo (priority: p1)",
       "source_file": "specs/002-estruturar-projeto-app/spec.md",
-      "source_location": "L13"
+      "source_location": "L19"
     },
     {
       "id": "specs_002_estruturar_projeto_app_spec_user_story_2_identificar_claramente_os_limites_do_projeto_priority_p2",
       "label": "User Story 2 - Identificar claramente os limites do projeto (Priority: P2)",
       "_origin": "ast",
       "community": 8,
-      "community_name": "Implementation Plan: Estruturar Projeto App",
+      "community_name": "Tasks: Estruturar Projeto App",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "user story 2 - identificar claramente os limites do projeto (priority: p2)",
       "source_file": "specs/002-estruturar-projeto-app/spec.md",
-      "source_location": "L38"
+      "source_location": "L44"
+    },
+    {
+      "id": "specs_002_estruturar_projeto_app_tasks",
+      "label": "tasks.md",
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "Tasks: Estruturar Projeto App",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "tasks.md",
+      "source_file": "specs/002-estruturar-projeto-app/tasks.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "specs_002_estruturar_projeto_app_tasks_closure",
+      "label": "Closure",
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "Tasks: Estruturar Projeto App",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "closure",
+      "source_file": "specs/002-estruturar-projeto-app/tasks.md",
+      "source_location": "L63"
+    },
+    {
+      "id": "specs_002_estruturar_projeto_app_tasks_dependencies",
+      "label": "Dependencies",
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "Tasks: Estruturar Projeto App",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "dependencies",
+      "source_file": "specs/002-estruturar-projeto-app/tasks.md",
+      "source_location": "L41"
+    },
+    {
+      "id": "specs_002_estruturar_projeto_app_tasks_independent_test_criteria",
+      "label": "Independent Test Criteria",
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "Tasks: Estruturar Projeto App",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "independent test criteria",
+      "source_file": "specs/002-estruturar-projeto-app/tasks.md",
+      "source_location": "L57"
+    },
+    {
+      "id": "specs_002_estruturar_projeto_app_tasks_parallel_opportunities",
+      "label": "Parallel Opportunities",
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "Tasks: Estruturar Projeto App",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "parallel opportunities",
+      "source_file": "specs/002-estruturar-projeto-app/tasks.md",
+      "source_location": "L50"
+    },
+    {
+      "id": "specs_002_estruturar_projeto_app_tasks_phase_1_setup",
+      "label": "Phase 1: Setup",
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "Tasks: Estruturar Projeto App",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "phase 1: setup",
+      "source_file": "specs/002-estruturar-projeto-app/tasks.md",
+      "source_location": "L11"
+    },
+    {
+      "id": "specs_002_estruturar_projeto_app_tasks_phase_2_foundational",
+      "label": "Phase 2: Foundational",
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "Tasks: Estruturar Projeto App",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "phase 2: foundational",
+      "source_file": "specs/002-estruturar-projeto-app/tasks.md",
+      "source_location": "L16"
+    },
+    {
+      "id": "specs_002_estruturar_projeto_app_tasks_phase_3_user_story_1_executar_a_base_do_aplicativo",
+      "label": "Phase 3: User Story 1 \u2014 Executar a base do aplicativo",
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "Tasks: Estruturar Projeto App",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "phase 3: user story 1 \u2014 executar a base do aplicativo",
+      "source_file": "specs/002-estruturar-projeto-app/tasks.md",
+      "source_location": "L22"
+    },
+    {
+      "id": "specs_002_estruturar_projeto_app_tasks_phase_4_user_story_2_identificar_os_limites_do_projeto",
+      "label": "Phase 4: User Story 2 \u2014 Identificar os limites do projeto",
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "Tasks: Estruturar Projeto App",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "phase 4: user story 2 \u2014 identificar os limites do projeto",
+      "source_file": "specs/002-estruturar-projeto-app/tasks.md",
+      "source_location": "L29"
+    },
+    {
+      "id": "specs_002_estruturar_projeto_app_tasks_phase_5_polish_and_closure",
+      "label": "Phase 5: Polish and Closure",
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "Tasks: Estruturar Projeto App",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "phase 5: polish and closure",
+      "source_file": "specs/002-estruturar-projeto-app/tasks.md",
+      "source_location": "L35"
+    },
+    {
+      "id": "specs_002_estruturar_projeto_app_tasks_tasks_estruturar_projeto_app",
+      "label": "Tasks: Estruturar Projeto App",
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "Tasks: Estruturar Projeto App",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "tasks: estruturar projeto app",
+      "source_file": "specs/002-estruturar-projeto-app/tasks.md",
+      "source_location": "L1"
     },
     {
       "id": "agents_skills_literature_review_closed_evidence_scripts_extract_pdf_front_matter",
@@ -19288,6 +20053,18 @@
       "source_location": "L1"
     },
     {
+      "id": "agents_arquitetura_do_aplicativo",
+      "label": "Arquitetura do aplicativo",
+      "_origin": "ast",
+      "community": 86,
+      "community_name": "AGENTS.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "arquitetura do aplicativo",
+      "source_file": "AGENTS.md",
+      "source_location": "L5"
+    },
+    {
       "id": "agents_escopo_do_projeto",
       "label": "Escopo do projeto",
       "_origin": "ast",
@@ -19309,7 +20086,7 @@
       "node_kind": "heading",
       "norm_label": "fluxo git e subagente de pesquisa",
       "source_file": "AGENTS.md",
-      "source_location": "L61"
+      "source_location": "L88"
     },
     {
       "id": "agents_graphify",
@@ -19321,7 +20098,7 @@
       "node_kind": "heading",
       "norm_label": "graphify",
       "source_file": "AGENTS.md",
-      "source_location": "L5"
+      "source_location": "L11"
     },
     {
       "id": "agents_preserva\u00e7\u00e3o_de_trabalho_ao_iniciar_uma_nova_feature",
@@ -19333,7 +20110,19 @@
       "node_kind": "heading",
       "norm_label": "preservacao de trabalho ao iniciar uma nova feature",
       "source_file": "AGENTS.md",
-      "source_location": "L88"
+      "source_location": "L115"
+    },
+    {
+      "id": "agents_processamento_reprodut\u00edvel_de_v\u00eddeos",
+      "label": "Processamento reprodut\u00edvel de v\u00eddeos",
+      "_origin": "ast",
+      "community": 86,
+      "community_name": "AGENTS.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "processamento reprodutivel de videos",
+      "source_file": "AGENTS.md",
+      "source_location": "L67"
     },
     {
       "id": "agents_skills_locais_de_revis\u00e3o_de_literatura",
@@ -19345,7 +20134,7 @@
       "node_kind": "heading",
       "norm_label": "skills locais de revisao de literatura",
       "source_file": "AGENTS.md",
-      "source_location": "L20"
+      "source_location": "L26"
     },
     {
       "id": "agents_tradu\u00e7\u00e3o_de_pdfs_com_preserva\u00e7\u00e3o_de_layout",
@@ -19357,7 +20146,7 @@
       "node_kind": "heading",
       "norm_label": "traducao de pdfs com preservacao de layout",
       "source_file": "AGENTS.md",
-      "source_location": "L47"
+      "source_location": "L53"
     },
     {
       "id": "agents_skills_literature_review_ml_scripts_verify_citations",
@@ -20332,7 +21121,7 @@
       "label": "002-estruturar-projeto-app/data-model.md",
       "_origin": "ast",
       "community": 95,
-      "community_name": "Artefatos",
+      "community_name": "Entidades",
       "file_type": "document",
       "node_kind": "page",
       "norm_label": "002-estruturar-projeto-app/data-model.md",
@@ -20340,35 +21129,35 @@
       "source_location": "L1"
     },
     {
-      "id": "specs_002_estruturar_projeto_app_data_model_aplica\u00e7\u00e3o",
-      "label": "Aplica\u00e7\u00e3o",
+      "id": "specs_002_estruturar_projeto_app_data_model_acquisition_result",
+      "label": "Acquisition Result",
       "_origin": "ast",
       "community": 95,
-      "community_name": "Artefatos",
+      "community_name": "Entidades",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "aplicacao",
+      "norm_label": "acquisition result",
       "source_file": "specs/002-estruturar-projeto-app/data-model.md",
-      "source_location": "L9"
+      "source_location": "L28"
     },
     {
-      "id": "specs_002_estruturar_projeto_app_data_model_artefatos",
-      "label": "Artefatos",
+      "id": "specs_002_estruturar_projeto_app_data_model_artefatos_de_governan\u00e7a",
+      "label": "Artefatos de Governan\u00e7a",
       "_origin": "ast",
       "community": 95,
-      "community_name": "Artefatos",
+      "community_name": "Entidades",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "artefatos",
+      "norm_label": "artefatos de governanca",
       "source_file": "specs/002-estruturar-projeto-app/data-model.md",
-      "source_location": "L7"
+      "source_location": "L35"
     },
     {
       "id": "specs_002_estruturar_projeto_app_data_model_data_model_estruturar_projeto_app",
       "label": "Data Model: Estruturar Projeto App",
       "_origin": "ast",
       "community": 95,
-      "community_name": "Artefatos",
+      "community_name": "Entidades",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "data model: estruturar projeto app",
@@ -20376,40 +21165,64 @@
       "source_location": "L1"
     },
     {
-      "id": "specs_002_estruturar_projeto_app_data_model_harness",
-      "label": "Harness",
+      "id": "specs_002_estruturar_projeto_app_data_model_dataset_catalog",
+      "label": "Dataset Catalog",
       "_origin": "ast",
       "community": 95,
-      "community_name": "Artefatos",
+      "community_name": "Entidades",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "harness",
+      "norm_label": "dataset catalog",
       "source_file": "specs/002-estruturar-projeto-app/data-model.md",
-      "source_location": "L16"
+      "source_location": "L8"
     },
     {
-      "id": "specs_002_estruturar_projeto_app_data_model_procedimento_de_valida\u00e7\u00e3o",
-      "label": "Procedimento de valida\u00e7\u00e3o",
+      "id": "specs_002_estruturar_projeto_app_data_model_dataset_manifest",
+      "label": "Dataset Manifest",
       "_origin": "ast",
       "community": 95,
-      "community_name": "Artefatos",
+      "community_name": "Entidades",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "procedimento de validacao",
+      "norm_label": "dataset manifest",
       "source_file": "specs/002-estruturar-projeto-app/data-model.md",
-      "source_location": "L23"
+      "source_location": "L20"
+    },
+    {
+      "id": "specs_002_estruturar_projeto_app_data_model_entidades",
+      "label": "Entidades",
+      "_origin": "ast",
+      "community": 95,
+      "community_name": "Entidades",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "entidades",
+      "source_file": "specs/002-estruturar-projeto-app/data-model.md",
+      "source_location": "L6"
     },
     {
       "id": "specs_002_estruturar_projeto_app_data_model_relacionamentos",
       "label": "Relacionamentos",
       "_origin": "ast",
       "community": 95,
-      "community_name": "Artefatos",
+      "community_name": "Entidades",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "relacionamentos",
       "source_file": "specs/002-estruturar-projeto-app/data-model.md",
-      "source_location": "L35"
+      "source_location": "L41"
+    },
+    {
+      "id": "specs_002_estruturar_projeto_app_data_model_remote_file",
+      "label": "Remote File",
+      "_origin": "ast",
+      "community": 95,
+      "community_name": "Entidades",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "remote file",
+      "source_file": "specs/002-estruturar-projeto-app/data-model.md",
+      "source_location": "L14"
     },
     {
       "id": "specs_002_estruturar_projeto_app_quickstart",
@@ -20424,28 +21237,52 @@
       "source_location": "L1"
     },
     {
-      "id": "specs_002_estruturar_projeto_app_quickstart_executar_a_verifica\u00e7\u00e3o_m\u00ednima",
-      "label": "Executar a verifica\u00e7\u00e3o m\u00ednima",
+      "id": "specs_002_estruturar_projeto_app_quickstart_baixar_uma_amostra_limitada",
+      "label": "Baixar uma amostra limitada",
       "_origin": "ast",
       "community": 96,
       "community_name": "Quickstart: Estruturar Projeto App",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "executar a verificacao minima",
+      "norm_label": "baixar uma amostra limitada",
       "source_file": "specs/002-estruturar-projeto-app/quickstart.md",
-      "source_location": "L14"
+      "source_location": "L45"
     },
     {
-      "id": "specs_002_estruturar_projeto_app_quickstart_falhas_esperadas",
-      "label": "Falhas esperadas",
+      "id": "specs_002_estruturar_projeto_app_quickstart_limites_do_projeto",
+      "label": "Limites do projeto",
       "_origin": "ast",
       "community": 96,
       "community_name": "Quickstart: Estruturar Projeto App",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "falhas esperadas",
+      "norm_label": "limites do projeto",
       "source_file": "specs/002-estruturar-projeto-app/quickstart.md",
-      "source_location": "L43"
+      "source_location": "L57"
+    },
+    {
+      "id": "specs_002_estruturar_projeto_app_quickstart_listar_um_dataset_sem_baixar_v\u00eddeos",
+      "label": "Listar um dataset sem baixar v\u00eddeos",
+      "_origin": "ast",
+      "community": 96,
+      "community_name": "Quickstart: Estruturar Projeto App",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "listar um dataset sem baixar videos",
+      "source_file": "specs/002-estruturar-projeto-app/quickstart.md",
+      "source_location": "L37"
+    },
+    {
+      "id": "specs_002_estruturar_projeto_app_quickstart_preparar_o_ambiente",
+      "label": "Preparar o ambiente",
+      "_origin": "ast",
+      "community": 96,
+      "community_name": "Quickstart: Estruturar Projeto App",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "preparar o ambiente",
+      "source_file": "specs/002-estruturar-projeto-app/quickstart.md",
+      "source_location": "L11"
     },
     {
       "id": "specs_002_estruturar_projeto_app_quickstart_pr\u00e9_requisitos",
@@ -20460,18 +21297,6 @@
       "source_location": "L3"
     },
     {
-      "id": "specs_002_estruturar_projeto_app_quickstart_pr\u00f3xima_fase",
-      "label": "Pr\u00f3xima fase",
-      "_origin": "ast",
-      "community": 96,
-      "community_name": "Quickstart: Estruturar Projeto App",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "proxima fase",
-      "source_file": "specs/002-estruturar-projeto-app/quickstart.md",
-      "source_location": "L52"
-    },
-    {
       "id": "specs_002_estruturar_projeto_app_quickstart_quickstart_estruturar_projeto_app",
       "label": "Quickstart: Estruturar Projeto App",
       "_origin": "ast",
@@ -20484,14 +21309,26 @@
       "source_location": "L1"
     },
     {
-      "id": "specs_002_estruturar_projeto_app_quickstart_validar_a_separa\u00e7\u00e3o_dos_diret\u00f3rios",
-      "label": "Validar a separa\u00e7\u00e3o dos diret\u00f3rios",
+      "id": "specs_002_estruturar_projeto_app_quickstart_validar_a_su\u00edte_local",
+      "label": "Validar a su\u00edte local",
       "_origin": "ast",
       "community": 96,
       "community_name": "Quickstart: Estruturar Projeto App",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "validar a separacao dos diretorios",
+      "norm_label": "validar a suite local",
+      "source_file": "specs/002-estruturar-projeto-app/quickstart.md",
+      "source_location": "L20"
+    },
+    {
+      "id": "specs_002_estruturar_projeto_app_quickstart_verificar_a_cli",
+      "label": "Verificar a CLI",
+      "_origin": "ast",
+      "community": 96,
+      "community_name": "Quickstart: Estruturar Projeto App",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "verificar a cli",
       "source_file": "specs/002-estruturar-projeto-app/quickstart.md",
       "source_location": "L30"
     },
@@ -28493,29 +29330,40 @@
     },
     {
       "source": "agents",
+      "target": "agents_graphify",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "AGENTS.md",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "agents",
+      "target": "agents_preserva\u00e7\u00e3o_de_trabalho_ao_iniciar_uma_nova_feature",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "AGENTS.md",
+      "source_location": "L115",
+      "weight": 1.0
+    },
+    {
+      "source": "agents",
       "target": "agents_skills_locais_de_revis\u00e3o_de_literatura",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L20",
+      "source_location": "L26",
       "weight": 1.0
     },
     {
       "source": "agents",
-      "target": "agents_tradu\u00e7\u00e3o_de_pdfs_com_preserva\u00e7\u00e3o_de_layout",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "AGENTS.md",
-      "source_location": "L47",
-      "weight": 1.0
-    },
-    {
-      "source": "agents",
-      "target": "agents_graphify",
+      "target": "agents_arquitetura_do_aplicativo",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -28526,18 +29374,29 @@
     },
     {
       "source": "agents",
-      "target": "agents_fluxo_git_e_subagente_de_pesquisa",
+      "target": "agents_tradu\u00e7\u00e3o_de_pdfs_com_preserva\u00e7\u00e3o_de_layout",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L61",
+      "source_location": "L53",
       "weight": 1.0
     },
     {
       "source": "agents",
-      "target": "agents_preserva\u00e7\u00e3o_de_trabalho_ao_iniciar_uma_nova_feature",
+      "target": "agents_processamento_reprodut\u00edvel_de_v\u00eddeos",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "AGENTS.md",
+      "source_location": "L67",
+      "weight": 1.0
+    },
+    {
+      "source": "agents",
+      "target": "agents_fluxo_git_e_subagente_de_pesquisa",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -28907,6 +29766,292 @@
       "confidence_score": 1.0,
       "source_file": ".agents/skills/analyze-data-quality/SKILL.md",
       "source_location": "L92",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_skills_docker_patterns_skill",
+      "target": "agents_skills_docker_patterns_skill_docker_patterns",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/docker-patterns/SKILL.md",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_skills_docker_patterns_skill_container_security",
+      "target": "agents_skills_docker_patterns_skill_dockerfile_hardening",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/docker-patterns/SKILL.md",
+      "source_location": "L218",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_skills_docker_patterns_skill_container_security",
+      "target": "agents_skills_docker_patterns_skill_compose_security",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/docker-patterns/SKILL.md",
+      "source_location": "L233",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_skills_docker_patterns_skill_container_security",
+      "target": "agents_skills_docker_patterns_skill_secret_management",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/docker-patterns/SKILL.md",
+      "source_location": "L250",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_skills_docker_patterns_skill_debugging",
+      "target": "agents_skills_docker_patterns_skill_common_commands",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/docker-patterns/SKILL.md",
+      "source_location": "L499",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_skills_docker_patterns_skill_debugging",
+      "target": "agents_skills_docker_patterns_skill_debugging_network_issues",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/docker-patterns/SKILL.md",
+      "source_location": "L525",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_skills_docker_patterns_skill_docker_compose_for_local_development",
+      "target": "agents_skills_docker_patterns_skill_override_files",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/docker-patterns/SKILL.md",
+      "source_location": "L110",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_skills_docker_patterns_skill_docker_compose_for_local_development",
+      "target": "agents_skills_docker_patterns_skill_standard_web_app_stack",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/docker-patterns/SKILL.md",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_skills_docker_patterns_skill_docker_compose_for_local_development",
+      "target": "agents_skills_docker_patterns_skill_development_vs_production_dockerfile",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/docker-patterns/SKILL.md",
+      "source_location": "L72",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_skills_docker_patterns_skill_docker_patterns",
+      "target": "agents_skills_docker_patterns_skill_docker_compose_for_local_development",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/docker-patterns/SKILL.md",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_skills_docker_patterns_skill_docker_patterns",
+      "target": "agents_skills_docker_patterns_skill_networking",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/docker-patterns/SKILL.md",
+      "source_location": "L143",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_skills_docker_patterns_skill_docker_patterns",
+      "target": "agents_skills_docker_patterns_skill_volume_strategies",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/docker-patterns/SKILL.md",
+      "source_location": "L186",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_skills_docker_patterns_skill_docker_patterns",
+      "target": "agents_skills_docker_patterns_skill_container_security",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/docker-patterns/SKILL.md",
+      "source_location": "L216",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_skills_docker_patterns_skill_docker_patterns",
+      "target": "agents_skills_docker_patterns_skill_hardened_cli_installer_harnesses",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/docker-patterns/SKILL.md",
+      "source_location": "L275",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_skills_docker_patterns_skill_docker_patterns",
+      "target": "agents_skills_docker_patterns_skill_dockerignore",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/docker-patterns/SKILL.md",
+      "source_location": "L479",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_skills_docker_patterns_skill_docker_patterns",
+      "target": "agents_skills_docker_patterns_skill_debugging",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/docker-patterns/SKILL.md",
+      "source_location": "L497",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_skills_docker_patterns_skill_docker_patterns",
+      "target": "agents_skills_docker_patterns_skill_anti_patterns",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/docker-patterns/SKILL.md",
+      "source_location": "L539",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_skills_docker_patterns_skill_hardened_cli_installer_harnesses",
+      "target": "agents_skills_docker_patterns_skill_respect_the_platform_boundary",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/docker-patterns/SKILL.md",
+      "source_location": "L279",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_skills_docker_patterns_skill_hardened_cli_installer_harnesses",
+      "target": "agents_skills_docker_patterns_skill_enforce_the_isolation_contract",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/docker-patterns/SKILL.md",
+      "source_location": "L288",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_skills_docker_patterns_skill_hardened_cli_installer_harnesses",
+      "target": "agents_skills_docker_patterns_skill_exercise_the_ecc_plugin_setup_harness",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/docker-patterns/SKILL.md",
+      "source_location": "L310",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_skills_docker_patterns_skill_hardened_cli_installer_harnesses",
+      "target": "agents_skills_docker_patterns_skill_start_open_reconnect_and_clean_up_a_named_session",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/docker-patterns/SKILL.md",
+      "source_location": "L363",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_skills_docker_patterns_skill_hardened_cli_installer_harnesses",
+      "target": "agents_skills_docker_patterns_skill_authenticate_codex_inside_the_networked_session",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/docker-patterns/SKILL.md",
+      "source_location": "L421",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_skills_docker_patterns_skill_networking",
+      "target": "agents_skills_docker_patterns_skill_service_discovery",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/docker-patterns/SKILL.md",
+      "source_location": "L145",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_skills_docker_patterns_skill_networking",
+      "target": "agents_skills_docker_patterns_skill_custom_networks",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/docker-patterns/SKILL.md",
+      "source_location": "L154",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_skills_docker_patterns_skill_networking",
+      "target": "agents_skills_docker_patterns_skill_exposing_only_what_s_needed",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/docker-patterns/SKILL.md",
+      "source_location": "L176",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_skills_docker_patterns_skill_volume_strategies",
+      "target": "agents_skills_docker_patterns_skill_common_patterns",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/docker-patterns/SKILL.md",
+      "source_location": "L200",
       "weight": 1.0
     },
     {
@@ -39070,7 +40215,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": ".agents/skills/speckit-constitution/SKILL.md",
-      "source_location": "L145",
+      "source_location": "L147",
       "weight": 1.0
     },
     {
@@ -39119,17 +40264,6 @@
     },
     {
       "source": "agents_skills_speckit_converge_skill",
-      "target": "agents_skills_speckit_converge_skill_convergence_findings",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": ".agents/skills/speckit-converge/SKILL.md",
-      "source_location": "L185",
-      "weight": 1.0
-    },
-    {
-      "source": "agents_skills_speckit_converge_skill",
       "target": "agents_skills_speckit_converge_skill_pre_execution_checks",
       "relation": "contains",
       "_origin": "ast",
@@ -39137,6 +40271,17 @@
       "confidence_score": 1.0,
       "source_file": ".agents/skills/speckit-converge/SKILL.md",
       "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_skills_speckit_converge_skill",
+      "target": "agents_skills_speckit_converge_skill_convergence_findings",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/speckit-converge/SKILL.md",
+      "source_location": "L191",
       "weight": 1.0
     },
     {
@@ -39180,7 +40325,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": ".agents/skills/speckit-converge/SKILL.md",
-      "source_location": "L199",
+      "source_location": "L205",
       "weight": 1.0
     },
     {
@@ -39191,7 +40336,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": ".agents/skills/speckit-converge/SKILL.md",
-      "source_location": "L231",
+      "source_location": "L237",
       "weight": 1.0
     },
     {
@@ -39202,7 +40347,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": ".agents/skills/speckit-converge/SKILL.md",
-      "source_location": "L239",
+      "source_location": "L245",
       "weight": 1.0
     },
     {
@@ -39246,7 +40391,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": ".agents/skills/speckit-converge/SKILL.md",
-      "source_location": "L171",
+      "source_location": "L177",
       "weight": 1.0
     },
     {
@@ -39257,7 +40402,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": ".agents/skills/speckit-converge/SKILL.md",
-      "source_location": "L181",
+      "source_location": "L187",
       "weight": 1.0
     },
     {
@@ -39609,7 +40754,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": ".agents/skills/speckit-tasks/SKILL.md",
-      "source_location": "L210",
+      "source_location": "L211",
       "weight": 1.0
     },
     {
@@ -39664,12 +40809,12 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": ".agents/skills/speckit-tasks/SKILL.md",
-      "source_location": "L201",
+      "source_location": "L202",
       "weight": 1.0
     },
     {
       "source": "agents_skills_speckit_taskstoissues_skill",
-      "target": "agents_skills_speckit_taskstoissues_skill_user_input",
+      "target": "agents_skills_speckit_taskstoissues_skill_deprecation_notice",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -39680,7 +40825,7 @@
     },
     {
       "source": "agents_skills_speckit_taskstoissues_skill",
-      "target": "agents_skills_speckit_taskstoissues_skill_pre_execution_checks",
+      "target": "agents_skills_speckit_taskstoissues_skill_user_input",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -39691,13 +40836,24 @@
     },
     {
       "source": "agents_skills_speckit_taskstoissues_skill",
+      "target": "agents_skills_speckit_taskstoissues_skill_pre_execution_checks",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/speckit-taskstoissues/SKILL.md",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_skills_speckit_taskstoissues_skill",
       "target": "agents_skills_speckit_taskstoissues_skill_outline",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": ".agents/skills/speckit-taskstoissues/SKILL.md",
-      "source_location": "L55",
+      "source_location": "L63",
       "weight": 1.0
     },
     {
@@ -39708,7 +40864,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": ".agents/skills/speckit-taskstoissues/SKILL.md",
-      "source_location": "L77",
+      "source_location": "L85",
       "weight": 1.0
     },
     {
@@ -42066,19 +43222,129 @@
       "weight": 1.0
     },
     {
-      "source": "specify_memory_constitution",
-      "target": "specify_memory_constitution_project_name_constitution",
+      "source": "codex_agents_video_processing_specialist",
+      "target": "codex_agents_video_processing_specialist_video_processing_specialist",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": ".specify/memory/constitution.md",
+      "source_file": ".codex/agents/video-processing-specialist.md",
       "source_location": "L1",
       "weight": 1.0
     },
     {
-      "source": "specify_memory_constitution_core_principles",
-      "target": "specify_memory_constitution_principle_2_name",
+      "source": "codex_agents_video_processing_specialist_video_processing_specialist",
+      "target": "codex_agents_video_processing_specialist_crit\u00e9rios_de_delega\u00e7\u00e3o",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".codex/agents/video-processing-specialist.md",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "codex_agents_video_processing_specialist_video_processing_specialist",
+      "target": "codex_agents_video_processing_specialist_protocolo_antes_de_alterar_arquivos",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".codex/agents/video-processing-specialist.md",
+      "source_location": "L101",
+      "weight": 1.0
+    },
+    {
+      "source": "codex_agents_video_processing_specialist_video_processing_specialist",
+      "target": "codex_agents_video_processing_specialist_entrega_obrigat\u00f3ria",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".codex/agents/video-processing-specialist.md",
+      "source_location": "L111",
+      "weight": 1.0
+    },
+    {
+      "source": "codex_agents_video_processing_specialist_video_processing_specialist",
+      "target": "codex_agents_video_processing_specialist_skills_e_fontes",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".codex/agents/video-processing-specialist.md",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "codex_agents_video_processing_specialist_video_processing_specialist",
+      "target": "codex_agents_video_processing_specialist_papel",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".codex/agents/video-processing-specialist.md",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "codex_agents_video_processing_specialist_video_processing_specialist",
+      "target": "codex_agents_video_processing_specialist_regras_t\u00e9cnicas",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".codex/agents/video-processing-specialist.md",
+      "source_location": "L43",
+      "weight": 1.0
+    },
+    {
+      "source": "codex_agents_video_processing_specialist_video_processing_specialist",
+      "target": "codex_agents_video_processing_specialist_valida\u00e7\u00e3o_m\u00ednima",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".codex/agents/video-processing-specialist.md",
+      "source_location": "L74",
+      "weight": 1.0
+    },
+    {
+      "source": "codex_agents_video_processing_specialist_video_processing_specialist",
+      "target": "codex_agents_video_processing_specialist_limites_do_reposit\u00f3rio",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".codex/agents/video-processing-specialist.md",
+      "source_location": "L92",
+      "weight": 1.0
+    },
+    {
+      "source": "codex_hooks_post_edit_graphify",
+      "target": "codex_hooks_post_edit_graphify_emit_postmessage",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".codex/hooks/post-edit-graphify.ps1",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "codex_hooks_pre_tool_policy",
+      "target": "codex_hooks_pre_tool_policy_deny",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".codex/hooks/pre-tool-policy.ps1",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "specify_memory_constitution",
+      "target": "specify_memory_constitution_libras_translation_data_acquisition_constitution",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -42089,29 +43355,18 @@
     },
     {
       "source": "specify_memory_constitution_core_principles",
-      "target": "specify_memory_constitution_principle_3_name",
+      "target": "specify_memory_constitution_i_reproducible_data_acquisition",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": ".specify/memory/constitution.md",
-      "source_location": "L16",
+      "source_location": "L15",
       "weight": 1.0
     },
     {
       "source": "specify_memory_constitution_core_principles",
-      "target": "specify_memory_constitution_principle_4_name",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": ".specify/memory/constitution.md",
-      "source_location": "L21",
-      "weight": 1.0
-    },
-    {
-      "source": "specify_memory_constitution_core_principles",
-      "target": "specify_memory_constitution_principle_5_name",
+      "target": "specify_memory_constitution_ii_explicit_application_boundaries",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -42122,29 +43377,7 @@
     },
     {
       "source": "specify_memory_constitution_core_principles",
-      "target": "specify_memory_constitution_principle_1_name",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": ".specify/memory/constitution.md",
-      "source_location": "L6",
-      "weight": 1.0
-    },
-    {
-      "source": "specify_memory_constitution_project_name_constitution",
-      "target": "specify_memory_constitution_section_2_name",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": ".specify/memory/constitution.md",
-      "source_location": "L31",
-      "weight": 1.0
-    },
-    {
-      "source": "specify_memory_constitution_project_name_constitution",
-      "target": "specify_memory_constitution_section_3_name",
+      "target": "specify_memory_constitution_iii_testable_and_safe_changes",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -42154,25 +43387,69 @@
       "weight": 1.0
     },
     {
-      "source": "specify_memory_constitution_project_name_constitution",
-      "target": "specify_memory_constitution_core_principles",
+      "source": "specify_memory_constitution_core_principles",
+      "target": "specify_memory_constitution_iv_traceability_and_preservation",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": ".specify/memory/constitution.md",
-      "source_location": "L4",
+      "source_location": "L49",
       "weight": 1.0
     },
     {
-      "source": "specify_memory_constitution_project_name_constitution",
+      "source": "specify_memory_constitution_core_principles",
+      "target": "specify_memory_constitution_v_maintainable_simplicity",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".specify/memory/constitution.md",
+      "source_location": "L60",
+      "weight": 1.0
+    },
+    {
+      "source": "specify_memory_constitution_libras_translation_data_acquisition_constitution",
       "target": "specify_memory_constitution_governance",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": ".specify/memory/constitution.md",
-      "source_location": "L43",
+      "source_location": "L103",
+      "weight": 1.0
+    },
+    {
+      "source": "specify_memory_constitution_libras_translation_data_acquisition_constitution",
+      "target": "specify_memory_constitution_core_principles",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".specify/memory/constitution.md",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "specify_memory_constitution_libras_translation_data_acquisition_constitution",
+      "target": "specify_memory_constitution_project_constraints",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".specify/memory/constitution.md",
+      "source_location": "L72",
+      "weight": 1.0
+    },
+    {
+      "source": "specify_memory_constitution_libras_translation_data_acquisition_constitution",
+      "target": "specify_memory_constitution_development_workflow_and_quality_gates",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".specify/memory/constitution.md",
+      "source_location": "L85",
       "weight": 1.0
     },
     {
@@ -43530,24 +44807,13 @@
     },
     {
       "source": "specs_002_estruturar_projeto_app_checklists_requirements_specification_quality_checklist_estruturar_projeto_app",
-      "target": "specs_002_estruturar_projeto_app_checklists_requirements_feature_readiness",
+      "target": "specs_002_estruturar_projeto_app_checklists_requirements_implementation_readiness",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "specs/002-estruturar-projeto-app/checklists/requirements.md",
-      "source_location": "L27",
-      "weight": 1.0
-    },
-    {
-      "source": "specs_002_estruturar_projeto_app_checklists_requirements_specification_quality_checklist_estruturar_projeto_app",
-      "target": "specs_002_estruturar_projeto_app_checklists_requirements_notes",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "specs/002-estruturar-projeto-app/checklists/requirements.md",
-      "source_location": "L34",
+      "source_location": "L25",
       "weight": 1.0
     },
     {
@@ -43573,41 +44839,8 @@
       "weight": 1.0
     },
     {
-      "source": "specs_002_estruturar_projeto_app_data_model_artefatos",
-      "target": "specs_002_estruturar_projeto_app_data_model_harness",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "specs/002-estruturar-projeto-app/data-model.md",
-      "source_location": "L16",
-      "weight": 1.0
-    },
-    {
-      "source": "specs_002_estruturar_projeto_app_data_model_artefatos",
-      "target": "specs_002_estruturar_projeto_app_data_model_procedimento_de_valida\u00e7\u00e3o",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "specs/002-estruturar-projeto-app/data-model.md",
-      "source_location": "L23",
-      "weight": 1.0
-    },
-    {
-      "source": "specs_002_estruturar_projeto_app_data_model_artefatos",
-      "target": "specs_002_estruturar_projeto_app_data_model_aplica\u00e7\u00e3o",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "specs/002-estruturar-projeto-app/data-model.md",
-      "source_location": "L9",
-      "weight": 1.0
-    },
-    {
       "source": "specs_002_estruturar_projeto_app_data_model_data_model_estruturar_projeto_app",
-      "target": "specs_002_estruturar_projeto_app_data_model_relacionamentos",
+      "target": "specs_002_estruturar_projeto_app_data_model_artefatos_de_governan\u00e7a",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -43618,13 +44851,68 @@
     },
     {
       "source": "specs_002_estruturar_projeto_app_data_model_data_model_estruturar_projeto_app",
-      "target": "specs_002_estruturar_projeto_app_data_model_artefatos",
+      "target": "specs_002_estruturar_projeto_app_data_model_relacionamentos",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "specs/002-estruturar-projeto-app/data-model.md",
-      "source_location": "L7",
+      "source_location": "L41",
+      "weight": 1.0
+    },
+    {
+      "source": "specs_002_estruturar_projeto_app_data_model_data_model_estruturar_projeto_app",
+      "target": "specs_002_estruturar_projeto_app_data_model_entidades",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "specs/002-estruturar-projeto-app/data-model.md",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "specs_002_estruturar_projeto_app_data_model_entidades",
+      "target": "specs_002_estruturar_projeto_app_data_model_remote_file",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "specs/002-estruturar-projeto-app/data-model.md",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "specs_002_estruturar_projeto_app_data_model_entidades",
+      "target": "specs_002_estruturar_projeto_app_data_model_dataset_manifest",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "specs/002-estruturar-projeto-app/data-model.md",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "specs_002_estruturar_projeto_app_data_model_entidades",
+      "target": "specs_002_estruturar_projeto_app_data_model_acquisition_result",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "specs/002-estruturar-projeto-app/data-model.md",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "specs_002_estruturar_projeto_app_data_model_entidades",
+      "target": "specs_002_estruturar_projeto_app_data_model_dataset_catalog",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "specs/002-estruturar-projeto-app/data-model.md",
+      "source_location": "L8",
       "weight": 1.0
     },
     {
@@ -43639,47 +44927,47 @@
       "weight": 1.0
     },
     {
-      "source": "specs_002_estruturar_projeto_app_plan_implementation_plan_estruturar_projeto_app",
-      "target": "specs_002_estruturar_projeto_app_plan_technical_context",
+      "source": "specs_002_estruturar_projeto_app_plan_completed_phases",
+      "target": "specs_002_estruturar_projeto_app_plan_phase_0_boundary_and_project_setup",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "specs/002-estruturar-projeto-app/plan.md",
-      "source_location": "L15",
+      "source_location": "L67",
       "weight": 1.0
     },
     {
-      "source": "specs_002_estruturar_projeto_app_plan_implementation_plan_estruturar_projeto_app",
-      "target": "specs_002_estruturar_projeto_app_plan_constitution_check",
+      "source": "specs_002_estruturar_projeto_app_plan_completed_phases",
+      "target": "specs_002_estruturar_projeto_app_plan_phase_1_acquisition_foundation",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "specs/002-estruturar-projeto-app/plan.md",
-      "source_location": "L35",
+      "source_location": "L73",
       "weight": 1.0
     },
     {
-      "source": "specs_002_estruturar_projeto_app_plan_implementation_plan_estruturar_projeto_app",
-      "target": "specs_002_estruturar_projeto_app_plan_project_structure",
+      "source": "specs_002_estruturar_projeto_app_plan_completed_phases",
+      "target": "specs_002_estruturar_projeto_app_plan_phase_2_acquisition_behavior",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "specs/002-estruturar-projeto-app/plan.md",
-      "source_location": "L49",
+      "source_location": "L79",
       "weight": 1.0
     },
     {
-      "source": "specs_002_estruturar_projeto_app_plan_implementation_plan_estruturar_projeto_app",
-      "target": "specs_002_estruturar_projeto_app_plan_summary",
+      "source": "specs_002_estruturar_projeto_app_plan_completed_phases",
+      "target": "specs_002_estruturar_projeto_app_plan_phase_3_verification_and_documentation",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "specs/002-estruturar-projeto-app/plan.md",
-      "source_location": "L7",
+      "source_location": "L87",
       "weight": 1.0
     },
     {
@@ -43690,29 +44978,73 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "specs/002-estruturar-projeto-app/plan.md",
-      "source_location": "L82",
+      "source_location": "L106",
       "weight": 1.0
     },
     {
-      "source": "specs_002_estruturar_projeto_app_plan_project_structure",
-      "target": "specs_002_estruturar_projeto_app_plan_documentation_this_feature",
+      "source": "specs_002_estruturar_projeto_app_plan_implementation_plan_estruturar_projeto_app",
+      "target": "specs_002_estruturar_projeto_app_plan_technical_context",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "specs/002-estruturar-projeto-app/plan.md",
-      "source_location": "L51",
+      "source_location": "L14",
       "weight": 1.0
     },
     {
-      "source": "specs_002_estruturar_projeto_app_plan_project_structure",
-      "target": "specs_002_estruturar_projeto_app_plan_source_code_repository_root",
+      "source": "specs_002_estruturar_projeto_app_plan_implementation_plan_estruturar_projeto_app",
+      "target": "specs_002_estruturar_projeto_app_plan_constitution_check",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "specs/002-estruturar-projeto-app/plan.md",
-      "source_location": "L63",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "specs_002_estruturar_projeto_app_plan_implementation_plan_estruturar_projeto_app",
+      "target": "specs_002_estruturar_projeto_app_plan_implemented_structure",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "specs/002-estruturar-projeto-app/plan.md",
+      "source_location": "L43",
+      "weight": 1.0
+    },
+    {
+      "source": "specs_002_estruturar_projeto_app_plan_implementation_plan_estruturar_projeto_app",
+      "target": "specs_002_estruturar_projeto_app_plan_completed_phases",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "specs/002-estruturar-projeto-app/plan.md",
+      "source_location": "L65",
+      "weight": 1.0
+    },
+    {
+      "source": "specs_002_estruturar_projeto_app_plan_implementation_plan_estruturar_projeto_app",
+      "target": "specs_002_estruturar_projeto_app_plan_summary",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "specs/002-estruturar-projeto-app/plan.md",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "specs_002_estruturar_projeto_app_plan_implementation_plan_estruturar_projeto_app",
+      "target": "specs_002_estruturar_projeto_app_plan_completion_validation",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "specs/002-estruturar-projeto-app/plan.md",
+      "source_location": "L93",
       "weight": 1.0
     },
     {
@@ -43728,13 +45060,24 @@
     },
     {
       "source": "specs_002_estruturar_projeto_app_quickstart_quickstart_estruturar_projeto_app",
-      "target": "specs_002_estruturar_projeto_app_quickstart_executar_a_verifica\u00e7\u00e3o_m\u00ednima",
+      "target": "specs_002_estruturar_projeto_app_quickstart_preparar_o_ambiente",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "specs/002-estruturar-projeto-app/quickstart.md",
-      "source_location": "L14",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "specs_002_estruturar_projeto_app_quickstart_quickstart_estruturar_projeto_app",
+      "target": "specs_002_estruturar_projeto_app_quickstart_validar_a_su\u00edte_local",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "specs/002-estruturar-projeto-app/quickstart.md",
+      "source_location": "L20",
       "weight": 1.0
     },
     {
@@ -43750,7 +45093,7 @@
     },
     {
       "source": "specs_002_estruturar_projeto_app_quickstart_quickstart_estruturar_projeto_app",
-      "target": "specs_002_estruturar_projeto_app_quickstart_validar_a_separa\u00e7\u00e3o_dos_diret\u00f3rios",
+      "target": "specs_002_estruturar_projeto_app_quickstart_verificar_a_cli",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -43761,24 +45104,35 @@
     },
     {
       "source": "specs_002_estruturar_projeto_app_quickstart_quickstart_estruturar_projeto_app",
-      "target": "specs_002_estruturar_projeto_app_quickstart_falhas_esperadas",
+      "target": "specs_002_estruturar_projeto_app_quickstart_listar_um_dataset_sem_baixar_v\u00eddeos",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "specs/002-estruturar-projeto-app/quickstart.md",
-      "source_location": "L43",
+      "source_location": "L37",
       "weight": 1.0
     },
     {
       "source": "specs_002_estruturar_projeto_app_quickstart_quickstart_estruturar_projeto_app",
-      "target": "specs_002_estruturar_projeto_app_quickstart_pr\u00f3xima_fase",
+      "target": "specs_002_estruturar_projeto_app_quickstart_baixar_uma_amostra_limitada",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "specs/002-estruturar-projeto-app/quickstart.md",
-      "source_location": "L52",
+      "source_location": "L45",
+      "weight": 1.0
+    },
+    {
+      "source": "specs_002_estruturar_projeto_app_quickstart_quickstart_estruturar_projeto_app",
+      "target": "specs_002_estruturar_projeto_app_quickstart_limites_do_projeto",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "specs/002-estruturar-projeto-app/quickstart.md",
+      "source_location": "L57",
       "weight": 1.0
     },
     {
@@ -43794,7 +45148,18 @@
     },
     {
       "source": "specs_002_estruturar_projeto_app_research_research_estruturar_projeto_app",
-      "target": "specs_002_estruturar_projeto_app_research_decision_preservar_a_configura\u00e7\u00e3o_python_existente_nesta_feature",
+      "target": "specs_002_estruturar_projeto_app_research_decision_preservar_o_projeto_python_existente",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "specs/002-estruturar-projeto-app/research.md",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "specs_002_estruturar_projeto_app_research_research_estruturar_projeto_app",
+      "target": "specs_002_estruturar_projeto_app_research_decision_usar_a_integra\u00e7\u00e3o_oficial_do_hugging_face",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -43805,13 +45170,13 @@
     },
     {
       "source": "specs_002_estruturar_projeto_app_research_research_estruturar_projeto_app",
-      "target": "specs_002_estruturar_projeto_app_research_decision_usar_uma_verifica\u00e7\u00e3o_de_fuma\u00e7a_m\u00ednima",
+      "target": "specs_002_estruturar_projeto_app_research_decision_manter_testes_determin\u00edsticos_com_unittest",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "specs/002-estruturar-projeto-app/research.md",
-      "source_location": "L44",
+      "source_location": "L33",
       "weight": 1.0
     },
     {
@@ -43838,13 +45203,24 @@
     },
     {
       "source": "specs_002_estruturar_projeto_app_spec_feature_specification_estruturar_projeto_app",
+      "target": "specs_002_estruturar_projeto_app_spec_success_criteria_mandatory",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "specs/002-estruturar-projeto-app/spec.md",
+      "source_location": "L101",
+      "weight": 1.0
+    },
+    {
+      "source": "specs_002_estruturar_projeto_app_spec_feature_specification_estruturar_projeto_app",
       "target": "specs_002_estruturar_projeto_app_spec_assumptions",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "specs/002-estruturar-projeto-app/spec.md",
-      "source_location": "L108",
+      "source_location": "L114",
       "weight": 1.0
     },
     {
@@ -43855,7 +45231,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "specs/002-estruturar-projeto-app/spec.md",
-      "source_location": "L11",
+      "source_location": "L17",
       "weight": 1.0
     },
     {
@@ -43866,18 +45242,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "specs/002-estruturar-projeto-app/spec.md",
-      "source_location": "L69",
-      "weight": 1.0
-    },
-    {
-      "source": "specs_002_estruturar_projeto_app_spec_feature_specification_estruturar_projeto_app",
-      "target": "specs_002_estruturar_projeto_app_spec_success_criteria_mandatory",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "specs/002-estruturar-projeto-app/spec.md",
-      "source_location": "L95",
+      "source_location": "L75",
       "weight": 1.0
     },
     {
@@ -43888,7 +45253,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "specs/002-estruturar-projeto-app/spec.md",
-      "source_location": "L71",
+      "source_location": "L77",
       "weight": 1.0
     },
     {
@@ -43899,7 +45264,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "specs/002-estruturar-projeto-app/spec.md",
-      "source_location": "L86",
+      "source_location": "L92",
       "weight": 1.0
     },
     {
@@ -43910,7 +45275,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "specs/002-estruturar-projeto-app/spec.md",
-      "source_location": "L97",
+      "source_location": "L103",
       "weight": 1.0
     },
     {
@@ -43921,7 +45286,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "specs/002-estruturar-projeto-app/spec.md",
-      "source_location": "L13",
+      "source_location": "L19",
       "weight": 1.0
     },
     {
@@ -43932,7 +45297,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "specs/002-estruturar-projeto-app/spec.md",
-      "source_location": "L38",
+      "source_location": "L44",
       "weight": 1.0
     },
     {
@@ -43943,7 +45308,117 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "specs/002-estruturar-projeto-app/spec.md",
-      "source_location": "L60",
+      "source_location": "L66",
+      "weight": 1.0
+    },
+    {
+      "source": "specs_002_estruturar_projeto_app_tasks",
+      "target": "specs_002_estruturar_projeto_app_tasks_tasks_estruturar_projeto_app",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "specs/002-estruturar-projeto-app/tasks.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "specs_002_estruturar_projeto_app_tasks_tasks_estruturar_projeto_app",
+      "target": "specs_002_estruturar_projeto_app_tasks_phase_1_setup",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "specs/002-estruturar-projeto-app/tasks.md",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "specs_002_estruturar_projeto_app_tasks_tasks_estruturar_projeto_app",
+      "target": "specs_002_estruturar_projeto_app_tasks_phase_2_foundational",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "specs/002-estruturar-projeto-app/tasks.md",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "specs_002_estruturar_projeto_app_tasks_tasks_estruturar_projeto_app",
+      "target": "specs_002_estruturar_projeto_app_tasks_phase_3_user_story_1_executar_a_base_do_aplicativo",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "specs/002-estruturar-projeto-app/tasks.md",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "specs_002_estruturar_projeto_app_tasks_tasks_estruturar_projeto_app",
+      "target": "specs_002_estruturar_projeto_app_tasks_phase_4_user_story_2_identificar_os_limites_do_projeto",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "specs/002-estruturar-projeto-app/tasks.md",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "specs_002_estruturar_projeto_app_tasks_tasks_estruturar_projeto_app",
+      "target": "specs_002_estruturar_projeto_app_tasks_phase_5_polish_and_closure",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "specs/002-estruturar-projeto-app/tasks.md",
+      "source_location": "L35",
+      "weight": 1.0
+    },
+    {
+      "source": "specs_002_estruturar_projeto_app_tasks_tasks_estruturar_projeto_app",
+      "target": "specs_002_estruturar_projeto_app_tasks_dependencies",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "specs/002-estruturar-projeto-app/tasks.md",
+      "source_location": "L41",
+      "weight": 1.0
+    },
+    {
+      "source": "specs_002_estruturar_projeto_app_tasks_tasks_estruturar_projeto_app",
+      "target": "specs_002_estruturar_projeto_app_tasks_parallel_opportunities",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "specs/002-estruturar-projeto-app/tasks.md",
+      "source_location": "L50",
+      "weight": 1.0
+    },
+    {
+      "source": "specs_002_estruturar_projeto_app_tasks_tasks_estruturar_projeto_app",
+      "target": "specs_002_estruturar_projeto_app_tasks_independent_test_criteria",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "specs/002-estruturar-projeto-app/tasks.md",
+      "source_location": "L57",
+      "weight": 1.0
+    },
+    {
+      "source": "specs_002_estruturar_projeto_app_tasks_tasks_estruturar_projeto_app",
+      "target": "specs_002_estruturar_projeto_app_tasks_closure",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "specs/002-estruturar-projeto-app/tasks.md",
+      "source_location": "L63",
       "weight": 1.0
     },
     {
@@ -45098,7 +46573,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "specs/002-estruturar-projeto-app/plan.md",
-      "source_location": "L3",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
@@ -45110,6 +46585,28 @@
       "confidence_score": 1.0,
       "source_file": "specs/002-estruturar-projeto-app/research.md",
       "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "specs_002_estruturar_projeto_app_tasks",
+      "target": "specs_002_estruturar_projeto_app_spec",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "specs/002-estruturar-projeto-app/tasks.md",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "specs_002_estruturar_projeto_app_tasks",
+      "target": "specs_002_estruturar_projeto_app_plan",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "specs/002-estruturar-projeto-app/tasks.md",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
@@ -46724,5 +48221,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "87be6ef34b12fda8554afcee62fdbfa0ce000055"
+  "built_at_commit": "a0e2d69b3588675aeaaaa5b006da23b5d2c606d3"
 }

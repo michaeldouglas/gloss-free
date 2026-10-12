@@ -13,6 +13,12 @@
       "skillPath": "plugins/data-analytics/skills/analyze-data-quality/SKILL.md",
       "computedHash": "d5e1a8ef1a8ee79f54de1ccc3435dd4d386ae12579040083788b501be07619f0"
     },
+    "docker-patterns": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "skillPath": "skills/docker-patterns/SKILL.md",
+      "computedHash": "2518afd6ae1e1b91d7f8d2f8d9b7145fb08ec640b9624e3dffc0a21289417245"
+    },
     "exploratory-data-analysis": {
       "source": "k-dense-ai/scientific-agent-skills",
       "sourceType": "github",

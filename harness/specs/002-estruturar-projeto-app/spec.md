@@ -4,9 +4,15 @@
 
 **Created**: 2026-09-16
 
-**Status**: Draft
+**Status**: Complete
+
+**Completed**: 2026-10-11
 
 **Input**: User description: "A pasta `C:\Users\mdbaa\development\Dissertacao\app` será onde ficará o projeto. Continuar o Spec Kit considerando essa pasta como o projeto da aplicação."
+
+**Completion Evidence**: The application root is documented, the `libras` CLI
+is executable, the dataset acquisition component and its tests are present, and
+11 deterministic tests pass without real network access.
 
 ## User Scenarios & Testing *(mandatory)*
 

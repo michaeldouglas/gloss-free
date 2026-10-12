@@ -1,16 +1,16 @@
-# Graph Report - harness  (2026-10-04)
+# Graph Report - harness  (2026-10-11)
 
 ## Corpus Check
-- 173 files · ~136,732 words
+- 184 files · ~143,288 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1758 nodes · 2274 edges · 188 communities (145 shown, 43 thin omitted)
+- 1827 nodes · 2334 edges · 197 communities (154 shown, 43 thin omitted)
 - Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 136 edges (avg confidence: 0.87)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `87be6ef3`
+- Built from commit: `a0e2d69b`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -23,7 +23,7 @@
 - Literature Review (ML / Statistics)
 - hardware_probe.py
 - Statistical Reporting Standards
-- Implementation Plan: Estruturar Projeto App
+- Tasks: Estruturar Projeto App
 - 1. Comparing Groups
 - Research Systematic Literature Review
 - Tasks: [FEATURE NAME]
@@ -83,7 +83,7 @@
 - Core Principles
 - inspect_manifest
 - _main
-- _main
+- DOCX Technical Requirements
 - model_converter.py
 - Supplemental Gap Search
 - Framework Selection — PICO, SPIDER, Decomposition, Hybrid
@@ -110,7 +110,7 @@
 - speckit-implement/SKILL.md
 - PDF Translation Coordinator
 - Quickstart de Validação: Padronizar Aprovação de Slug
-- Artefatos
+- Entidades
 - Quickstart: Estruturar Projeto App
 - Intel Hardware Advisor
 - Intel OpenVINO Installer
@@ -118,7 +118,7 @@
 - register_sources.py
 - search_pubmed.py
 - Anti-Patterns
-- Checkpoint (grill-me forcing-options moment)
+- Section 4: Sub-area Guides
 - Screening Template
 - speckit-constitution/SKILL.md
 - Example Report Templates
@@ -154,8 +154,6 @@
 - search_openalex.py
 - search_semantic_scholar.py
 - Cross-Search Intelligence
-- Phase 3: Targeted Searches
-- Phase 0: Grill-Me Intake (3 forcing questions, one at a time)
 - Evidence Table Template
 - Common Assumptions Across Tests
 - Effect Sizes
@@ -198,6 +196,9 @@
 - app::typing
 - app::unittest
 - app::unittest_mock
+- Docker Patterns
+- _main
+- Video Processing Specialist
 
 ## God Nodes (most connected - your core abstractions)
 1. `CliError` - 41 edges
@@ -226,7 +227,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (188 total, 43 thin omitted)
+## Communities (197 total, 43 thin omitted)
 
 ### Community 0 - "ValueError"
 Cohesion: 0.10
@@ -260,9 +261,9 @@ Nodes (33): collect_additional_configurations(), collect_live(), collect_openvin
 Cohesion: 0.06
 Nodes (34): Additional Resources, Always Report, ANOVA, Assumption Checks, Bayesian Statistics, Checklist for Statistical Reporting, Chi-Square Tests, Common Mistakes to Avoid (+26 more)
 
-### Community 8 - "Implementation Plan: Estruturar Projeto App"
-Cohesion: 0.06
-Nodes (28): Content Quality, Feature Readiness, Notes, Requirement Completeness, Specification Quality Checklist: Estruturar Projeto App, Complexity Tracking, Constitution Check, Documentation (this feature) (+20 more)
+### Community 8 - "Tasks: Estruturar Projeto App"
+Cohesion: 0.04
+Nodes (42): Content Quality, Implementation Readiness, Requirement Completeness, Specification Quality Checklist: Estruturar Projeto App, Completed Phases, Completion Validation, Complexity Tracking, Constitution Check (+34 more)
 
 ### Community 9 - "1. Comparing Groups"
 Cohesion: 0.07
@@ -297,8 +298,8 @@ Cohesion: 0.08
 Nodes (23): Accessibility in Visualizations, Analytics and Data Analysis, Analytics Implementation, Code Organization, Core Dependencies, Data Analysis with Pandas, Data Manipulation Best Practices, Data Validation (+15 more)
 
 ### Community 17 - "DOCX Research Guide — 8 Sections + Technical Requirements"
-Cohesion: 0.09
-Nodes (23): 4a. What the Research Shows, 4b. Key Papers, 4c. Key Search Terms, 4d. Boolean Search Strings, Anti-Patterns, Citations (7 sources), DOCX Research Guide — 8 Sections + Technical Requirements, DOCX Technical Requirements (+15 more)
+Cohesion: 0.17
+Nodes (12): Anti-Patterns, Citations (7 sources), DOCX Research Guide — 8 Sections + Technical Requirements, Operational Checklist, Section 1: Topic Overview, Section 2: Start Here — Priority Reading Order, Section 3: How the Field Got Here, Section 5: Key Research Groups (+4 more)
 
 ### Community 18 - "read_openvino_docs.py"
 Cohesion: 0.17
@@ -385,8 +386,8 @@ Cohesion: 0.14
 Nodes (13): Appropriate next checks, Authoritative sources, Bioinformatics and Genomics Formats, EDA rigor for genomic data, Exact capability matrix, FASTA, FASTQ, H5AD, Loom, and Matrix Market (+5 more)
 
 ### Community 41 - "Litreview — Academic Literature Orientation"
-Cohesion: 0.14
-Nodes (14): Agent Integrity Rules (Research-Pack Convention), Anti-Patterns To Reject, Cross-Search Intelligence, DOCX Technical Requirements, Error Handling, Free-lane URL templates (exact), Litreview — Academic Literature Orientation, Output (+6 more)
+Cohesion: 0.07
+Nodes (28): 3-4 sentence recon summary, Agent Integrity Rules (Research-Pack Convention), Anti-Patterns To Reject, Checkpoint (grill-me forcing-options moment), Cross-Search Intelligence, Deep dive (20 searches), Depth re-confirmation (forcing choice), DOCX Technical Requirements (+20 more)
 
 ### Community 42 - "eda_analyzer.py"
 Cohesion: 0.26
@@ -470,7 +471,7 @@ Nodes (11): Bayesian Statistical Analysis, Correlation with uncertainty in locat
 
 ### Community 64 - "Core Principles"
 Cohesion: 0.18
-Nodes (10): Core Principles, Governance, [PRINCIPLE_1_NAME], [PRINCIPLE_2_NAME], [PRINCIPLE_3_NAME], [PRINCIPLE_4_NAME], [PRINCIPLE_5_NAME], [PROJECT_NAME] Constitution (+2 more)
+Nodes (10): Core Principles, Development Workflow and Quality Gates, Governance, I. Reproducible Data Acquisition, II. Explicit Application Boundaries, III. Testable and Safe Changes, IV. Traceability and Preservation, Libras Translation Data Acquisition Constitution (+2 more)
 
 ### Community 65 - "Core Principles"
 Cohesion: 0.18
@@ -484,9 +485,9 @@ Nodes (9): build_parser(), capability_matrix(), inspect_manifest(), _main(), Any
 Cohesion: 0.24
 Nodes (9): markdown_scalar(), Bound and neutralize an explicitly requested untrusted identifier., Return a bounded scalar that cannot introduce Markdown structure., sanitize_identifier(), build_parser(), _main(), ArgumentParser, Fill only trusted scalar placeholders in the bundled template. (+1 more)
 
-### Community 68 - "_main"
-Cohesion: 0.24
-Nodes (9): Return a deterministic pseudonymous token; this is not anonymization., stable_token(), build_parser(), inspect_sequence_file(), _main(), Any, ArgumentParser, Path (+1 more)
+### Community 68 - "DOCX Technical Requirements"
+Cohesion: 0.33
+Nodes (6): DOCX Technical Requirements, Hyperlinks (full URL, "Hyperlink" style), Lists (NEVER unicode bullets), Page setup, Tables (dual widths), Validation
 
 ### Community 69 - "model_converter.py"
 Cohesion: 0.33
@@ -557,8 +558,8 @@ Cohesion: 0.25
 Nodes (7): Decisão: implementar a regra nas instruções do subagente, Decisão: manter a política de branches existente, Decisão: normalizar slugs inválidos e pedir aprovação da versão normalizada, Decisão: usar uma confirmação explícita do slug antes de qualquer mutação, Decisões, Escopo da pesquisa, Research: Padronizar Aprovação de Slug
 
 ### Community 86 - "AGENTS.md"
-Cohesion: 0.29
-Nodes (6): Escopo do projeto, Fluxo Git e subagente de pesquisa, graphify, Preservação de trabalho ao iniciar uma nova feature, Skills locais de revisão de literatura, Tradução de PDFs com preservação de layout
+Cohesion: 0.22
+Nodes (8): Arquitetura do aplicativo, Escopo do projeto, Fluxo Git e subagente de pesquisa, graphify, Preservação de trabalho ao iniciar uma nova feature, Processamento reprodutível de vídeos, Skills locais de revisão de literatura, Tradução de PDFs com preservação de layout
 
 ### Community 87 - "verify_citations.py"
 Cohesion: 0.48
@@ -592,13 +593,13 @@ Nodes (6): Before mutation, Execution, PDF Translation Coordinator, Role, Scope,
 Cohesion: 0.29
 Nodes (6): Cenário 1 — sugestão antes da alteração, Cenário 2 — rejeição e nova proposta, Cenário 3 — integridade dos artefatos, Critério de conclusão, Pré-requisitos, Quickstart de Validação: Padronizar Aprovação de Slug
 
-### Community 95 - "Artefatos"
-Cohesion: 0.29
-Nodes (6): Aplicação, Artefatos, Data Model: Estruturar Projeto App, Harness, Procedimento de validação, Relacionamentos
+### Community 95 - "Entidades"
+Cohesion: 0.22
+Nodes (8): Acquisition Result, Artefatos de Governança, Data Model: Estruturar Projeto App, Dataset Catalog, Dataset Manifest, Entidades, Relacionamentos, Remote File
 
 ### Community 96 - "Quickstart: Estruturar Projeto App"
-Cohesion: 0.29
-Nodes (6): Executar a verificação mínima, Falhas esperadas, Pré-requisitos, Próxima fase, Quickstart: Estruturar Projeto App, Validar a separação dos diretórios
+Cohesion: 0.22
+Nodes (8): Baixar uma amostra limitada, Limites do projeto, Listar um dataset sem baixar vídeos, Preparar o ambiente, Pré-requisitos, Quickstart: Estruturar Projeto App, Validar a suíte local, Verificar a CLI
 
 ### Community 97 - "Intel Hardware Advisor"
 Cohesion: 0.33
@@ -624,9 +625,9 @@ Nodes (5): efetch_batch(), esearch(), main(), parse_xml(), _text()
 Cohesion: 0.33
 Nodes (6): Anti-Patterns, Defaulting to PICO without justification, Forcing the framework to fit, Hybrid for everything, Ignoring the recommender's recommendation, Picking framework before reading Q1
 
-### Community 103 - "Checkpoint (grill-me forcing-options moment)"
-Cohesion: 0.33
-Nodes (6): 3-4 sentence recon summary, Checkpoint (grill-me forcing-options moment), Depth re-confirmation (forcing choice), Framework breakdown table, Sub-area forcing options, Why I'm asking (the rationale)
+### Community 103 - "Section 4: Sub-area Guides"
+Cohesion: 0.40
+Nodes (5): 4a. What the Research Shows, 4b. Key Papers, 4c. Key Search Terms, 4d. Boolean Search Strings, Section 4: Sub-area Guides
 
 ### Community 104 - "Screening Template"
 Cohesion: 0.33
@@ -673,8 +674,8 @@ Cohesion: 0.40
 Nodes (4): Non-obvious implementation rules, PDF translation with layout preservation, Required outcome, Workflow
 
 ### Community 116 - "speckit-taskstoissues/SKILL.md"
-Cohesion: 0.40
-Nodes (4): Outline, Post-Execution Checks, Pre-Execution Checks, User Input
+Cohesion: 0.33
+Nodes (5): Deprecation Notice, Outline, Post-Execution Checks, Pre-Execution Checks, User Input
 
 ### Community 117 - "Test-Specific Assumptions"
 Cohesion: 0.40
@@ -764,14 +765,6 @@ Nodes (3): fetch_page(), main(), normalize()
 Cohesion: 0.50
 Nodes (4): Cross-Search Intelligence, Tracker 1: Repeat-Hit Papers (foundational signal), Tracker 2: Recurring Authors (dominant research group signal), Tracker 3: Citation-Per-Year (seminal-work heuristic)
 
-### Community 140 - "Phase 3: Targeted Searches"
-Cohesion: 0.50
-Nodes (4): Deep dive (20 searches), Phase 3: Targeted Searches, Quick scan (5 searches), Standard review (10 searches)
-
-### Community 141 - "Phase 0: Grill-Me Intake (3 forcing questions, one at a time)"
-Cohesion: 0.50
-Nodes (4): Phase 0: Grill-Me Intake (3 forcing questions, one at a time), Q1 (root) — Research question specificity, Q2 (depends on Q1) — Framework hint, Q3 (depends on Q1) — Tentative depth
-
 ### Community 142 - "Evidence Table Template"
 Cohesion: 0.50
 Nodes (3): Evidence Table Template, Extraction guidance, Extraction matrix
@@ -788,8 +781,20 @@ Nodes (4): Calculating Effect Sizes, Confidence Intervals for Effect Sizes, Effe
 Cohesion: 0.67
 Nodes (3): Bundled Resources, References (`references/`), Scripts (`scripts/`)
 
+### Community 194 - "Docker Patterns"
+Cohesion: 0.07
+Nodes (26): Anti-Patterns, Authenticate Codex Inside the Networked Session, Common Commands, Common Patterns, Compose Security, Container Security, Custom Networks, Debugging (+18 more)
+
+### Community 195 - "_main"
+Cohesion: 0.24
+Nodes (9): Return a deterministic pseudonymous token; this is not anonymization., stable_token(), build_parser(), inspect_sequence_file(), _main(), Any, ArgumentParser, Path (+1 more)
+
+### Community 196 - "Video Processing Specialist"
+Cohesion: 0.20
+Nodes (9): Critérios de delegação, Entrega obrigatória, Limites do repositório, Papel, Protocolo antes de alterar arquivos, Regras técnicas, Skills e fontes, Validação mínima (+1 more)
+
 ## Knowledge Gaps
-- **851 isolated node(s):** `Workflow: Exploratory Data Analysis Pipeline`, `Key Principles`, `Quick Start Example`, `Data Manipulation Best Practices`, `Performance Optimization` (+846 more)
+- **898 isolated node(s):** `Workflow: Exploratory Data Analysis Pipeline`, `Key Principles`, `Quick Start Example`, `Data Manipulation Best Practices`, `Performance Optimization` (+893 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **43 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -797,11 +802,11 @@ Nodes (3): Bundled Resources, References (`references/`), Scripts (`scripts/`)
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `CliError` connect `CliError` to `ValueError`, `_tabular.py`, `inspect_manifest`, `_main`, `_main`, `_capabilities.py`, `display_identifier`, `eda_analyzer.py`, `_main`, `bounded_file_limit`?**
-  _High betweenness centrality (0.023) - this node is a cross-community bridge._
+  _High betweenness centrality (0.022) - this node is a cross-community bridge._
 - **Why does `_load_fixture()` connect `openvino_installer.py` to `ValueError`?**
   _High betweenness centrality (0.006) - this node is a cross-community bridge._
 - **Why does `report()` connect `bounded_file_limit` to `ValueError`, `inspect_manifest`, `_main`, `_main`, `eda_analyzer.py`, `_main`?**
-  _High betweenness centrality (0.005) - this node is a cross-community bridge._
+  _High betweenness centrality (0.004) - this node is a cross-community bridge._
 - **Are the 22 inferred relationships involving `CliError` (e.g. with `preflight_npz()` and `suffix_key()`) actually correct?**
   _`CliError` has 22 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 26 inferred relationships involving `ValueError` (e.g. with `_download()` and `ensure_snapshot()`) actually correct?**
@@ -809,4 +814,4 @@ _Questions this graph is uniquely positioned to answer:_
 - **Are the 8 inferred relationships involving `checked_input_file()` (e.g. with `_main()` and `_main()`) actually correct?**
   _`checked_input_file()` has 8 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `Workflow: Exploratory Data Analysis Pipeline`, `Key Principles`, `Quick Start Example` to the rest of the system?**
-  _851 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _898 weakly-connected nodes found - possible documentation gaps or missing edges._
