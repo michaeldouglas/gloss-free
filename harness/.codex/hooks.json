@@ -12,6 +12,14 @@
             "statusMessage": "Loading harness conventions",
             "additionalContextLimit": 1800,
             "timeout": 15
+          },
+          {
+            "type": "command",
+            "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File .codex/hooks/project-venv-policy.ps1",
+            "commandWindows": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File .codex/hooks/project-venv-policy.ps1",
+            "statusMessage": "Checking application Python environment",
+            "additionalContextLimit": 700,
+            "timeout": 10
           }
         ]
       }
@@ -45,6 +53,13 @@
             "commandWindows": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File .codex/hooks/pre-tool-policy.ps1",
             "statusMessage": "Checking harness policy",
             "timeout": 15
+          },
+          {
+            "type": "command",
+            "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File .codex/hooks/project-venv-policy.ps1",
+            "commandWindows": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File .codex/hooks/project-venv-policy.ps1",
+            "statusMessage": "Checking application Python environment",
+            "timeout": 10
           }
         ]
       },

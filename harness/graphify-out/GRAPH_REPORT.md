@@ -1,16 +1,16 @@
 # Graph Report - harness  (2026-10-11)
 
 ## Corpus Check
-- 184 files · ~143,288 words
+- 185 files · ~143,676 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1827 nodes · 2334 edges · 197 communities (154 shown, 43 thin omitted)
+- 1830 nodes · 2336 edges · 198 communities (155 shown, 43 thin omitted)
 - Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 136 edges (avg confidence: 0.87)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `a0e2d69b`
+- Built from commit: `01a1c50c`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -227,7 +227,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (197 total, 43 thin omitted)
+## Communities (198 total, 43 thin omitted)
 
 ### Community 0 - "ValueError"
 Cohesion: 0.10

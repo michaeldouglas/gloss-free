@@ -210,9 +210,9 @@
     "semantic_hash": "b2eceb8b7a57e6d9e293ed9079828528"
   },
   ".codex/hooks.json": {
-    "mtime": 1791771746.5430574,
-    "seen": 1791771830.9301271,
-    "ast_hash": "053e2c7e8ef35e21fc0a48d7c4641e01",
+    "mtime": 1791773350.2757246,
+    "seen": 1791773383.5647469,
+    "ast_hash": "ef91b6b01cd006b4adbd8eb6c62c76a1",
     "semantic_hash": ""
   },
   ".specify/init-options.json": {
@@ -1191,6 +1191,12 @@
     "mtime": 1791772756.1190095,
     "seen": 1791772777.4495156,
     "ast_hash": "6999a60eb54d9171ed47653fbe88e0ae",
+    "semantic_hash": ""
+  },
+  ".codex/hooks/project-venv-policy.ps1": {
+    "mtime": 1791773350.271676,
+    "seen": 1791773383.564756,
+    "ast_hash": "b9ea693369bbc75ccc2f3e32691f7143",
     "semantic_hash": ""
   }
 }

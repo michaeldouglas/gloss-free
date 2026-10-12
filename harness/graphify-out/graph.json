@@ -9735,6 +9735,39 @@
       "source_location": "L1"
     },
     {
+      "id": "codex_hooks_project_venv_policy",
+      "label": "project-venv-policy.ps1",
+      "_origin": "ast",
+      "community": 197,
+      "community_name": "project-venv-policy.ps1",
+      "file_type": "code",
+      "norm_label": "project-venv-policy.ps1",
+      "source_file": ".codex/hooks/project-venv-policy.ps1",
+      "source_location": "L1"
+    },
+    {
+      "id": "codex_hooks_project_venv_policy_deny",
+      "label": "Deny()",
+      "_origin": "ast",
+      "community": 197,
+      "community_name": "project-venv-policy.ps1",
+      "file_type": "code",
+      "norm_label": "deny()",
+      "source_file": ".codex/hooks/project-venv-policy.ps1",
+      "source_location": "L12"
+    },
+    {
+      "id": "codex_hooks_project_venv_policy_write_context",
+      "label": "Write-Context()",
+      "_origin": "ast",
+      "community": 197,
+      "community_name": "project-venv-policy.ps1",
+      "file_type": "code",
+      "norm_label": "write-context()",
+      "source_file": ".codex/hooks/project-venv-policy.ps1",
+      "source_location": "L3"
+    },
+    {
       "id": "agents_skills_exploratory_data_analysis_scripts_common",
       "label": "_common.py",
       "_origin": "ast",
@@ -43343,6 +43376,28 @@
       "weight": 1.0
     },
     {
+      "source": "codex_hooks_project_venv_policy",
+      "target": "codex_hooks_project_venv_policy_deny",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".codex/hooks/project-venv-policy.ps1",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "codex_hooks_project_venv_policy",
+      "target": "codex_hooks_project_venv_policy_write_context",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".codex/hooks/project-venv-policy.ps1",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
       "source": "specify_memory_constitution",
       "target": "specify_memory_constitution_libras_translation_data_acquisition_constitution",
       "relation": "contains",
@@ -48221,5 +48276,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "a0e2d69b3588675aeaaaa5b006da23b5d2c606d3"
+  "built_at_commit": "01a1c50c59e50ac966dc6b4db897f8c21efd4d04"
 }

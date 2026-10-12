@@ -288,9 +288,9 @@
     "semantic_hash": "e2c122f39228b664807468dc5068f972"
   },
   "skills-lock.json": {
-    "mtime": 1791143258.3279567,
-    "seen": 1791143418.0052176,
-    "ast_hash": "1e521002b86a270262eca854a20b1785",
+    "mtime": 1791772351.9137042,
+    "seen": 1791772777.4494073,
+    "ast_hash": "4e9b12fdea8dee92214f2c9c46c6a778",
     "semantic_hash": ""
   },
   ".agents/skills/exploratory-data-analysis/scripts/__init__.py": {
@@ -990,9 +990,9 @@
     "semantic_hash": ""
   },
   "AGENTS.md": {
-    "mtime": 1791151538.018748,
-    "seen": 1791152144.196287,
-    "ast_hash": "6cc0614014f66dbcd0d25ab3299c1d13",
+    "mtime": 1791772756.1215017,
+    "seen": 1791772777.4495249,
+    "ast_hash": "0e3b35df1eb699b2e593f31a23512a6b",
     "semantic_hash": ""
   },
   "specs/001-padronizar-aprovacao-slug/checklists/requirements.md": {
@@ -1179,6 +1179,18 @@
     "mtime": 1791771181.4322205,
     "seen": 1791771830.9304082,
     "ast_hash": "8994310f1cc299860eb7b17818366fa3",
+    "semantic_hash": ""
+  },
+  ".agents/skills/docker-patterns/SKILL.md": {
+    "mtime": 1791772348.814893,
+    "seen": 1791772777.4494133,
+    "ast_hash": "4bc44bf437d697f6135b9139b9c099cd",
+    "semantic_hash": ""
+  },
+  ".codex/agents/video-processing-specialist.md": {
+    "mtime": 1791772756.1190095,
+    "seen": 1791772777.4495156,
+    "ast_hash": "6999a60eb54d9171ed47653fbe88e0ae",
     "semantic_hash": ""
   }
 }

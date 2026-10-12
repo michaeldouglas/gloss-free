@@ -1,11 +1,11 @@
 # Graph Report - harness  (2026-10-11)
 
 ## Corpus Check
-- 182 files · ~140,087 words
+- 184 files · ~143,288 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1789 nodes · 2298 edges · 194 communities (151 shown, 43 thin omitted)
+- 1827 nodes · 2334 edges · 197 communities (154 shown, 43 thin omitted)
 - Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 136 edges (avg confidence: 0.87)
 - Token cost: 0 input · 0 output
 
@@ -196,6 +196,9 @@
 - app::typing
 - app::unittest
 - app::unittest_mock
+- Docker Patterns
+- _main
+- Video Processing Specialist
 
 ## God Nodes (most connected - your core abstractions)
 1. `CliError` - 41 edges
@@ -224,15 +227,15 @@
 ## Import Cycles
 - None detected.
 
-## Communities (194 total, 43 thin omitted)
+## Communities (197 total, 43 thin omitted)
 
 ### Community 0 - "ValueError"
 Cohesion: 0.10
 Nodes (45): evidence(), Inputs, main(), parser(), protocol(), ArgumentParser, Namespace, recall_audit() (+37 more)
 
 ### Community 1 - "_tabular.py"
-Cohesion: 0.10
-Nodes (27): finite_number(), Parse a finite decimal number without evaluating expressions., audit_distributions(), audit_missingness_and_leakage(), ColumnAccumulator, delimiter_for_path(), _distribution_report(), is_missing() (+19 more)
+Cohesion: 0.07
+Nodes (38): finite_number(), Parse a finite decimal number without evaluating expressions., audit_distributions(), audit_missingness_and_leakage(), ColumnAccumulator, delimiter_for_path(), _distribution_report(), is_missing() (+30 more)
 
 ### Community 2 - "CliError"
 Cohesion: 0.13
@@ -367,8 +370,8 @@ Cohesion: 0.13
 Nodes (14): Authoritative sources, Design, leakage, and inference, Distribution and outlier sensitivity, Exact capability boundary, HDF5 and related containers, Identification formats, Missingness, censoring, and limits, mzIdentML (+6 more)
 
 ### Community 37 - "_capabilities.py"
-Cohesion: 0.13
-Nodes (20): automated_capability_rows(), capability_for_path(), _first_nonempty_text_byte(), preflight_npz(), Any, Path, Return a registered compound or simple suffix, failing closed otherwise., Return a copy of the closed capability entry for a path. (+12 more)
+Cohesion: 0.21
+Nodes (13): automated_capability_rows(), capability_for_path(), _first_nonempty_text_byte(), preflight_npz(), Any, Path, Return a registered compound or simple suffix, failing closed otherwise., Return a copy of the closed capability entry for a path. (+5 more)
 
 ### Community 38 - "display_identifier"
 Cohesion: 0.28
@@ -395,8 +398,8 @@ Cohesion: 0.15
 Nodes (12): Corpus Adequacy Assessment, Corpus Snapshot, Coverage By Review Need, Date, Judgment, Need 1, Need 2, Need 3 (+4 more)
 
 ### Community 44 - "aggregate.py"
-Cohesion: 0.13
-Nodes (23): _parse_time(), deduplicate(), filter_min_citations(), filter_year(), format_markdown(), load_papers(), main(), merge_records() (+15 more)
+Cohesion: 0.28
+Nodes (12): deduplicate(), filter_min_citations(), filter_year(), format_markdown(), load_papers(), main(), merge_records(), normalize_arxiv_id() (+4 more)
 
 ### Community 45 - "Feature Specification: [FEATURE NAME]"
 Cohesion: 0.15
@@ -475,8 +478,8 @@ Cohesion: 0.18
 Nodes (10): Core Principles, Governance, [PRINCIPLE_1_NAME], [PRINCIPLE_2_NAME], [PRINCIPLE_3_NAME], [PRINCIPLE_4_NAME], [PRINCIPLE_5_NAME], [PROJECT_NAME] Constitution (+2 more)
 
 ### Community 66 - "inspect_manifest"
-Cohesion: 0.23
-Nodes (11): build_parser(), capability_matrix(), inspect_manifest(), _main(), Any, ArgumentParser, Path, Build a redacted manifest from a previously checked local file. (+3 more)
+Cohesion: 0.29
+Nodes (9): build_parser(), capability_matrix(), inspect_manifest(), _main(), Any, ArgumentParser, Path, Build a redacted manifest from a previously checked local file. (+1 more)
 
 ### Community 67 - "_main"
 Cohesion: 0.24
@@ -555,8 +558,8 @@ Cohesion: 0.25
 Nodes (7): Decisão: implementar a regra nas instruções do subagente, Decisão: manter a política de branches existente, Decisão: normalizar slugs inválidos e pedir aprovação da versão normalizada, Decisão: usar uma confirmação explícita do slug antes de qualquer mutação, Decisões, Escopo da pesquisa, Research: Padronizar Aprovação de Slug
 
 ### Community 86 - "AGENTS.md"
-Cohesion: 0.25
-Nodes (7): Arquitetura do aplicativo, Escopo do projeto, Fluxo Git e subagente de pesquisa, graphify, Preservação de trabalho ao iniciar uma nova feature, Skills locais de revisão de literatura, Tradução de PDFs com preservação de layout
+Cohesion: 0.22
+Nodes (8): Arquitetura do aplicativo, Escopo do projeto, Fluxo Git e subagente de pesquisa, graphify, Preservação de trabalho ao iniciar uma nova feature, Processamento reprodutível de vídeos, Skills locais de revisão de literatura, Tradução de PDFs com preservação de layout
 
 ### Community 87 - "verify_citations.py"
 Cohesion: 0.48
@@ -778,20 +781,32 @@ Nodes (4): Calculating Effect Sizes, Confidence Intervals for Effect Sizes, Effe
 Cohesion: 0.67
 Nodes (3): Bundled Resources, References (`references/`), Scripts (`scripts/`)
 
+### Community 194 - "Docker Patterns"
+Cohesion: 0.07
+Nodes (26): Anti-Patterns, Authenticate Codex Inside the Networked Session, Common Commands, Common Patterns, Compose Security, Container Security, Custom Networks, Debugging (+18 more)
+
+### Community 195 - "_main"
+Cohesion: 0.24
+Nodes (9): Return a deterministic pseudonymous token; this is not anonymization., stable_token(), build_parser(), inspect_sequence_file(), _main(), Any, ArgumentParser, Path (+1 more)
+
+### Community 196 - "Video Processing Specialist"
+Cohesion: 0.20
+Nodes (9): Critérios de delegação, Entrega obrigatória, Limites do repositório, Papel, Protocolo antes de alterar arquivos, Regras técnicas, Skills e fontes, Validação mínima (+1 more)
+
 ## Knowledge Gaps
-- **870 isolated node(s):** `Workflow: Exploratory Data Analysis Pipeline`, `Key Principles`, `Quick Start Example`, `Data Manipulation Best Practices`, `Performance Optimization` (+865 more)
+- **898 isolated node(s):** `Workflow: Exploratory Data Analysis Pipeline`, `Key Principles`, `Quick Start Example`, `Data Manipulation Best Practices`, `Performance Optimization` (+893 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **43 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `CliError` connect `CliError` to `ValueError`, `_tabular.py`, `inspect_manifest`, `_main`, `_capabilities.py`, `display_identifier`, `eda_analyzer.py`, `_main`, `bounded_file_limit`?**
+- **Why does `CliError` connect `CliError` to `ValueError`, `_tabular.py`, `inspect_manifest`, `_main`, `_main`, `_capabilities.py`, `display_identifier`, `eda_analyzer.py`, `_main`, `bounded_file_limit`?**
   _High betweenness centrality (0.022) - this node is a cross-community bridge._
 - **Why does `_load_fixture()` connect `openvino_installer.py` to `ValueError`?**
   _High betweenness centrality (0.006) - this node is a cross-community bridge._
-- **Why does `report()` connect `bounded_file_limit` to `ValueError`, `inspect_manifest`, `_main`, `_capabilities.py`, `eda_analyzer.py`, `_main`?**
-  _High betweenness centrality (0.005) - this node is a cross-community bridge._
+- **Why does `report()` connect `bounded_file_limit` to `ValueError`, `inspect_manifest`, `_main`, `_main`, `eda_analyzer.py`, `_main`?**
+  _High betweenness centrality (0.004) - this node is a cross-community bridge._
 - **Are the 22 inferred relationships involving `CliError` (e.g. with `preflight_npz()` and `suffix_key()`) actually correct?**
   _`CliError` has 22 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 26 inferred relationships involving `ValueError` (e.g. with `_download()` and `ensure_snapshot()`) actually correct?**
@@ -799,4 +814,4 @@ _Questions this graph is uniquely positioned to answer:_
 - **Are the 8 inferred relationships involving `checked_input_file()` (e.g. with `_main()` and `_main()`) actually correct?**
   _`checked_input_file()` has 8 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `Workflow: Exploratory Data Analysis Pipeline`, `Key Principles`, `Quick Start Example` to the rest of the system?**
-  _870 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _898 weakly-connected nodes found - possible documentation gaps or missing edges._
