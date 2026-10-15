@@ -1,6 +1,8 @@
 # Large data and generated research artifacts
 /data/raw/**
 !/data/raw/.gitkeep
+/data/processed/**
+!/data/processed/.gitkeep
 
 # Credentials and local environment
 .env

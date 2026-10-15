@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import unittest
 from pathlib import Path
+from tempfile import TemporaryDirectory
 from unittest.mock import patch
 
 from typer.testing import CliRunner
@@ -101,6 +102,84 @@ class CliTests(unittest.TestCase):
         self.assertEqual(service.calls[0][1], target.resolve())
         self.assertEqual(service.calls[0][2]["limit"], 2)
         self.assertEqual(service.calls[0][2]["workers"], 3)
+
+    def test_validate_metadata_renders_summary_and_uses_explicit_output(self):
+        payload = {
+            "summary": {
+                "videos_seen": 3,
+                "videos_ok": 2,
+                "videos_with_probe_error": 1,
+                "fps_rate_matches": 1,
+                "fps_frame_count_matches": 1,
+                "fps_inconclusive": 1,
+            }
+        }
+        with TemporaryDirectory() as temporary_directory:
+            output = Path(temporary_directory) / "metadata-validation"
+            with patch.object(cli, "validate_dataset", return_value=payload) as validator:
+                result = self.invoke(
+                    [
+                        "video",
+                        "validate-metadata",
+                        "--dataset",
+                        "v-librasil-raw",
+                        "--output",
+                        str(output),
+                        "--fps-tolerance",
+                        "0.02",
+                    ]
+                )
+
+        self.assertEqual(result.exit_code, 0, result.output)
+        self.assertIn("Vídeos vistos", result.output)
+        self.assertIn("Resultados:", result.output)
+        self.assertEqual(validator.call_args.kwargs["dataset"], "v-librasil-raw")
+        self.assertEqual(validator.call_args.args[2], output.resolve())
+        self.assertEqual(validator.call_args.kwargs["fps_tolerance"], 0.02)
+
+    def test_validate_metadata_returns_nonzero_for_input_or_tool_failure(self):
+        with patch.object(cli, "validate_dataset", side_effect=OSError("ffprobe ausente")):
+            result = self.invoke(
+                [
+                    "video",
+                    "validate-metadata",
+                    "--dataset",
+                    "v-librasil-raw",
+                ]
+            )
+
+        self.assertEqual(result.exit_code, 1, result.output)
+        self.assertIn("ffprobe ausente", result.output)
+
+    def test_validate_quality_emits_decision_and_returns_nonzero_for_no_go(self):
+        payload = {
+            "summary": {
+                "decision": "NO-GO",
+                "counts": {"CRITICAL": 1, "ERROR": 0, "WARNING": 0, "INFO": 0},
+                "artifacts": {"manifest": "manifest.parquet"},
+            }
+        }
+        with TemporaryDirectory() as temporary_directory:
+            root = Path(temporary_directory)
+            with patch.object(cli, "validate_dataset"), patch.object(
+                cli, "generate_validation_artifacts_from_file", return_value={"summary": payload["summary"]}
+            ) as generator:
+                result = self.invoke(
+                    [
+                        "video",
+                        "validate-quality",
+                        "--dataset",
+                        "v-librasil-raw",
+                        "--metadata-output",
+                        str(root / "technical"),
+                        "--output-root",
+                        str(root / "quality"),
+                    ]
+                )
+
+        self.assertEqual(result.exit_code, 2, result.output)
+        self.assertIn("NO-GO", result.output)
+        self.assertEqual(generator.call_args.kwargs["dataset"], "v-librasil-raw")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,23 @@
+{
+  "streams": [
+    {
+      "index": 0,
+      "codec_type": "video",
+      "codec_name": "h264",
+      "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+      "width": 160,
+      "height": 120,
+      "avg_frame_rate": "25/1",
+      "r_frame_rate": "25/1",
+      "time_base": "1/12800",
+      "nb_frames": "50",
+      "duration": "2.000000"
+    }
+  ],
+  "format": {
+    "filename": "valid.mp4",
+    "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+    "duration": "2.000000",
+    "size": "12345"
+  }
+}

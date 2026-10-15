@@ -1,0 +1,17 @@
+{
+  "streams": [
+    {
+      "index": 0,
+      "codec_type": "video",
+      "codec_name": "vp9",
+      "width": 320,
+      "height": 240,
+      "avg_frame_rate": "24/1",
+      "r_frame_rate": "24/1"
+    }
+  ],
+  "format": {
+    "format_name": "matroska,webm",
+    "duration": "1.500000"
+  }
+}

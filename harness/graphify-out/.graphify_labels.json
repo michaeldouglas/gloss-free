@@ -67,7 +67,7 @@
   "65": "Core Principles",
   "66": "inspect_manifest",
   "67": "_main",
-  "68": "DOCX Technical Requirements",
+  "68": "Implementation Plan: Validar Metadados Técnicos de Vídeo",
   "69": "model_converter.py",
   "70": "Supplemental Gap Search",
   "71": "Framework Selection — PICO, SPIDER, Decomposition, Hybrid",
@@ -102,7 +102,7 @@
   "100": "register_sources.py",
   "101": "search_pubmed.py",
   "102": "Anti-Patterns",
-  "103": "Section 4: Sub-area Guides",
+  "103": "Tasks: Validar Metadados Técnicos de Vídeo",
   "104": "Screening Template",
   "105": "speckit-constitution/SKILL.md",
   "106": "Example Report Templates",
@@ -194,7 +194,12 @@
   "192": "user-prompt-context.ps1",
   "193": "verify-harness.ps1",
   "194": "Docker Patterns",
-  "195": "_main",
+  "195": "Research: Validar Metadados Técnicos de Vídeo",
   "196": "Video Processing Specialist",
-  "197": "project-venv-policy.ps1"
+  "197": "project-venv-policy.ps1",
+  "198": "DOCX Technical Requirements",
+  "199": "Section 4: Sub-area Guides",
+  "200": "Data Model: Validar Metadados Técnicos de Vídeo",
+  "201": "Quickstart: Validar Metadados Técnicos de Vídeo",
+  "202": "Validation Command Contract"
 }
