@@ -180,7 +180,7 @@ Parquet sem alteração dos arquivos brutos.
   flags de existência/leitura, validade do nome, validade técnica, status e
   notas de validação, sem alterar `data/raw/`.
 - **FR-018**: A decisão MUST ser `NO-GO` quando houver pelo menos um problema
-  `CRITICAL` ou `ERROR`, mesmo que todos os artefatos de evidência sejam
+  `CRITICAL` ou `ERROR`, mesmo que cada artefato de evidência seja
   gravados.
 
 ### Key Entities
