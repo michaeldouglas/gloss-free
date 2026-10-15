@@ -51,7 +51,64 @@ uv run libras data download --dataset all
 uv run libras data download --dataset v-librasil-raw --destination E:\dados\libras --workers 4
 ```
 
+## Validar metadados técnicos dos vídeos
+
+A validação compara `width`, `height` e `fps` do CSV com os valores observados
+nos vídeos reais. Ela também registra duração, codec, taxa média e nominal,
+quantidade de frames e as hipóteses independentes para interpretar `fps` como
+taxa de quadros ou quantidade de frames:
+
+```powershell
+docker compose -f docker/video-processing/compose.yaml build
+docker compose -f docker/video-processing/compose.yaml run --rm -T video-processing `
+  python -m libras_translation.cli video validate-metadata `
+  --dataset v-librasil-raw
+```
+
+Os resultados são derivados e ficam em
+`data/processed/metadata-validation/v-librasil-raw/`. O JSON
+`metadata_validation.json` é a fonte de verdade; os CSVs são projeções para
+inspeção no notebook. A coluna original `fps` não é renomeada nem alterada.
+Vídeos e CSVs em `data/raw/` são montados como somente leitura e não são
+corrigidos, renomeados ou removidos.
+
 Os comandos retornam `0` quando a operação termina sem falhas, `1` quando ocorre falha de rede/acesso ou de arquivos e `2` quando há opções inválidas ou obrigatórias ausentes. Para apenas ver a ajuda, use `uv run libras --help` ou `uv run libras data download --help`; invocar sem argumentos mostra a ajuda e não inicia downloads.
+
+## Proveniência, decisão e manifest validado
+
+Depois da validação da convenção de nomes, execute a etapa de qualidade para
+reconciliar `annotations.csv`, `error.csv` e `videos/`:
+
+```powershell
+uv run libras video validate-quality --dataset v-librasil-raw
+uv run libras video validate-quality --dataset minds-libras-raw
+```
+
+No V-LIBRASIL, `error.csv` é obrigatório para a proveniência. A etapa verifica
+se cada exceção também está em `annotations.csv`, se o arquivo físico existe,
+se o motivo é compatível com o estado observado e se há arquivos ausentes que
+não foram registrados como exceção. Ausências silenciosas não são promovidas a
+exceções conhecidas.
+
+Os artefatos derivados ficam em `data/processed/metadata-validation/`:
+
+```text
+reports/
+├── metadata_validation_report.md
+├── metadata_issues.csv
+└── metadata_summary.json
+manifests/
+├── v_librasil_validated.parquet
+└── minds_libras_validated.parquet
+```
+
+O relatório usa `CRITICAL`, `ERROR`, `WARNING` e `INFO`. A decisão é `NO-GO`
+quando existe pelo menos um problema `CRITICAL` ou `ERROR`; o comando retorna
+código 2 nessa situação, mas ainda grava todos os artefatos. O manifest Parquet
+é derivado, pode conter metadados observados como `actual_width`,
+`actual_height`, `actual_fps`, `actual_frame_count`, `actual_duration`,
+`file_exists`, `file_readable`, `filename_valid`, `metadata_valid`,
+`validation_status` e `validation_notes`, e nunca altera `data/raw/`.
 
 Cada manifesto em `data/manifests/` registra o repositório, o commit fixado, a data da aquisição, os caminhos remotos e locais, os tamanhos disponíveis e o estado dos vídeos e arquivos auxiliares. A opção `--limit` limita apenas os vídeos para testes; os arquivos auxiliares de metadados do dataset ainda são baixados. Arquivos completos são reutilizados ao retomar.
 
@@ -68,10 +125,14 @@ app/
 │   │   ├── cli.py           interface de linha de comando
 │   │   ├── config.py        raiz, caminhos e token
 │   │   ├── acquisition.py   coordenação e manifesto
+│   │   ├── video_metadata.py inspeção shell-free via ffprobe
+│   │   ├── metadata_validation.py comparação e relatórios derivados
+│   │   ├── dataset_quality_validation.py proveniência, decisão e manifest Parquet
 │   │   └── infrastructure/ cliente do Hugging Face Hub
 │   └── tests/               testes do componente sem downloads reais
 ├── data/                    dados fora do código
 │   ├── raw/                 vídeos originais; ignorados pelo Git
+│   ├── processed/            resultados derivados de validação
 │   └── manifests/           registros versionáveis da aquisição
 ├── .env.example            modelo do token, sem credenciais
 ├── pyproject.toml          dependências, build e comando `libras`

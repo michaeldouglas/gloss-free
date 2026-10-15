@@ -1,16 +1,16 @@
-# Graph Report - harness  (2026-10-11)
+# Graph Report - harness  (2026-10-14)
 
 ## Corpus Check
-- 185 files · ~143,676 words
+- 193 files · ~149,601 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1830 nodes · 2336 edges · 198 communities (155 shown, 43 thin omitted)
+- 1913 nodes · 2413 edges · 203 communities (160 shown, 43 thin omitted)
 - Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 136 edges (avg confidence: 0.87)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `01a1c50c`
+- Built from commit: `cfd28878`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -83,7 +83,7 @@
 - Core Principles
 - inspect_manifest
 - _main
-- DOCX Technical Requirements
+- Implementation Plan: Validar Metadados Técnicos de Vídeo
 - model_converter.py
 - Supplemental Gap Search
 - Framework Selection — PICO, SPIDER, Decomposition, Hybrid
@@ -118,7 +118,7 @@
 - register_sources.py
 - search_pubmed.py
 - Anti-Patterns
-- Section 4: Sub-area Guides
+- Tasks: Validar Metadados Técnicos de Vídeo
 - Screening Template
 - speckit-constitution/SKILL.md
 - Example Report Templates
@@ -197,8 +197,13 @@
 - app::unittest
 - app::unittest_mock
 - Docker Patterns
-- _main
+- Research: Validar Metadados Técnicos de Vídeo
 - Video Processing Specialist
+- DOCX Technical Requirements
+- Section 4: Sub-area Guides
+- Data Model: Validar Metadados Técnicos de Vídeo
+- Quickstart: Validar Metadados Técnicos de Vídeo
+- Validation Command Contract
 
 ## God Nodes (most connected - your core abstractions)
 1. `CliError` - 41 edges
@@ -227,15 +232,15 @@
 ## Import Cycles
 - None detected.
 
-## Communities (198 total, 43 thin omitted)
+## Communities (203 total, 43 thin omitted)
 
 ### Community 0 - "ValueError"
 Cohesion: 0.10
 Nodes (45): evidence(), Inputs, main(), parser(), protocol(), ArgumentParser, Namespace, recall_audit() (+37 more)
 
 ### Community 1 - "_tabular.py"
-Cohesion: 0.07
-Nodes (38): finite_number(), Parse a finite decimal number without evaluating expressions., audit_distributions(), audit_missingness_and_leakage(), ColumnAccumulator, delimiter_for_path(), _distribution_report(), is_missing() (+30 more)
+Cohesion: 0.10
+Nodes (27): finite_number(), Parse a finite decimal number without evaluating expressions., audit_distributions(), audit_missingness_and_leakage(), ColumnAccumulator, delimiter_for_path(), _distribution_report(), is_missing() (+19 more)
 
 ### Community 2 - "CliError"
 Cohesion: 0.13
@@ -326,8 +331,8 @@ Cohesion: 0.11
 Nodes (17): 1. Frame The Review, 2. Register Sources, 3. Triage Sources, 4. Assess Corpus Adequacy, 5. Extract Evidence, 6. Code And Synthesize, 7. Draft The Report, 8. Audit Citations (+9 more)
 
 ### Community 26 - "citation_tracker.py"
-Cohesion: 0.36
-Nodes (17): action_close(), action_list(), action_record_cited(), action_record_papers_received(), action_record_search(), action_start(), action_status(), load_session() (+9 more)
+Cohesion: 0.16
+Nodes (28): _parse_time(), build_query(), fetch_batch(), filter_by_year(), main(), parse_entry(), action_close(), action_list() (+20 more)
 
 ### Community 27 - "Exploratory Data Analysis Report"
 Cohesion: 0.12
@@ -370,8 +375,8 @@ Cohesion: 0.13
 Nodes (14): Authoritative sources, Design, leakage, and inference, Distribution and outlier sensitivity, Exact capability boundary, HDF5 and related containers, Identification formats, Missingness, censoring, and limits, mzIdentML (+6 more)
 
 ### Community 37 - "_capabilities.py"
-Cohesion: 0.21
-Nodes (13): automated_capability_rows(), capability_for_path(), _first_nonempty_text_byte(), preflight_npz(), Any, Path, Return a registered compound or simple suffix, failing closed otherwise., Return a copy of the closed capability entry for a path. (+5 more)
+Cohesion: 0.13
+Nodes (20): automated_capability_rows(), capability_for_path(), _first_nonempty_text_byte(), preflight_npz(), Any, Path, Return a registered compound or simple suffix, failing closed otherwise., Return a copy of the closed capability entry for a path. (+12 more)
 
 ### Community 38 - "display_identifier"
 Cohesion: 0.28
@@ -478,16 +483,16 @@ Cohesion: 0.18
 Nodes (10): Core Principles, Governance, [PRINCIPLE_1_NAME], [PRINCIPLE_2_NAME], [PRINCIPLE_3_NAME], [PRINCIPLE_4_NAME], [PRINCIPLE_5_NAME], [PROJECT_NAME] Constitution (+2 more)
 
 ### Community 66 - "inspect_manifest"
-Cohesion: 0.29
-Nodes (9): build_parser(), capability_matrix(), inspect_manifest(), _main(), Any, ArgumentParser, Path, Build a redacted manifest from a previously checked local file. (+1 more)
+Cohesion: 0.23
+Nodes (11): build_parser(), capability_matrix(), inspect_manifest(), _main(), Any, ArgumentParser, Path, Build a redacted manifest from a previously checked local file. (+3 more)
 
 ### Community 67 - "_main"
 Cohesion: 0.24
 Nodes (9): markdown_scalar(), Bound and neutralize an explicitly requested untrusted identifier., Return a bounded scalar that cannot introduce Markdown structure., sanitize_identifier(), build_parser(), _main(), ArgumentParser, Fill only trusted scalar placeholders in the bundled template. (+1 more)
 
-### Community 68 - "DOCX Technical Requirements"
-Cohesion: 0.33
-Nodes (6): DOCX Technical Requirements, Hyperlinks (full URL, "Hyperlink" style), Lists (NEVER unicode bullets), Page setup, Tables (dual widths), Validation
+### Community 68 - "Implementation Plan: Validar Metadados Técnicos de Vídeo"
+Cohesion: 0.06
+Nodes (30): Content Quality, Feature Readiness, Notes, Requirement Completeness, Specification Quality Checklist: Validar Metadados Técnicos de Vídeo, Application, Complexity Tracking, Constitution Check (+22 more)
 
 ### Community 69 - "model_converter.py"
 Cohesion: 0.33
@@ -625,9 +630,9 @@ Nodes (5): efetch_batch(), esearch(), main(), parse_xml(), _text()
 Cohesion: 0.33
 Nodes (6): Anti-Patterns, Defaulting to PICO without justification, Forcing the framework to fit, Hybrid for everything, Ignoring the recommender's recommendation, Picking framework before reading Q1
 
-### Community 103 - "Section 4: Sub-area Guides"
-Cohesion: 0.40
-Nodes (5): 4a. What the Research Shows, 4b. Key Papers, 4c. Key Search Terms, 4d. Boolean Search Strings, Section 4: Sub-area Guides
+### Community 103 - "Tasks: Validar Metadados Técnicos de Vídeo"
+Cohesion: 0.14
+Nodes (13): Dependencies & Execution Order, Implementation for User Story 1, Implementation Strategy, Parallel Opportunities, Phase 1: Setup (Shared Infrastructure), Phase 2: Foundational (Blocking Prerequisites), Phase 3: User Story 1 - Conferir os metadados reais dos vídeos (Priority: P1) 🎯 MVP, Phase 4: User Story 2 - Descobrir o significado da coluna `fps` (Priority: P1) (+5 more)
 
 ### Community 104 - "Screening Template"
 Cohesion: 0.33
@@ -785,27 +790,47 @@ Nodes (3): Bundled Resources, References (`references/`), Scripts (`scripts/`)
 Cohesion: 0.07
 Nodes (26): Anti-Patterns, Authenticate Codex Inside the Networked Session, Common Commands, Common Patterns, Compose Security, Container Security, Custom Networks, Debugging (+18 more)
 
-### Community 195 - "_main"
-Cohesion: 0.24
-Nodes (9): Return a deterministic pseudonymous token; this is not anonymization., stable_token(), build_parser(), inspect_sequence_file(), _main(), Any, ArgumentParser, Path (+1 more)
+### Community 195 - "Research: Validar Metadados Técnicos de Vídeo"
+Cohesion: 0.25
+Nodes (7): Decision 1: Preserve multiple frame-rate signals, Decision 2: Treat frame count as nullable and auditable, Decision 3: Keep inspection separate from notebook presentation, Decision 4: Classify FPS hypotheses independently, Decision 5: Failure isolation and stream ambiguity, Decision 6: Toolchain traceability, Research: Validar Metadados Técnicos de Vídeo
 
 ### Community 196 - "Video Processing Specialist"
 Cohesion: 0.20
 Nodes (9): Critérios de delegação, Entrega obrigatória, Limites do repositório, Papel, Protocolo antes de alterar arquivos, Regras técnicas, Skills e fontes, Validação mínima (+1 more)
 
+### Community 198 - "DOCX Technical Requirements"
+Cohesion: 0.33
+Nodes (6): DOCX Technical Requirements, Hyperlinks (full URL, "Hyperlink" style), Lists (NEVER unicode bullets), Page setup, Tables (dual widths), Validation
+
+### Community 199 - "Section 4: Sub-area Guides"
+Cohesion: 0.40
+Nodes (5): 4a. What the Research Shows, 4b. Key Papers, 4c. Key Search Terms, 4d. Boolean Search Strings, Section 4: Sub-area Guides
+
+### Community 200 - "Data Model: Validar Metadados Técnicos de Vídeo"
+Cohesion: 0.20
+Nodes (9): CSV Video Record, Data Model: Validar Metadados Técnicos de Vídeo, FPS Hypothesis Summary, Metadata Comparison, Observed Video Metadata, Output Artifacts, Provenance Issue, Validated Manifest (+1 more)
+
+### Community 201 - "Quickstart: Validar Metadados Técnicos de Vídeo"
+Cohesion: 0.20
+Nodes (9): Executar a validação, Executar testes determinísticos, Ler os resultados, Preparar e validar o contêiner, Pré-requisitos, Quickstart: Validar Metadados Técnicos de Vídeo, Validar proveniência e gerar manifest, Verificação desta feature (+1 more)
+
+### Community 202 - "Validation Command Contract"
+Cohesion: 0.25
+Nodes (7): Command, Exit behavior, Inputs, Notebook usage, Outputs, Quality and provenance command, Validation Command Contract
+
 ## Knowledge Gaps
-- **898 isolated node(s):** `Workflow: Exploratory Data Analysis Pipeline`, `Key Principles`, `Quick Start Example`, `Data Manipulation Best Practices`, `Performance Optimization` (+893 more)
+- **959 isolated node(s):** `Workflow: Exploratory Data Analysis Pipeline`, `Key Principles`, `Quick Start Example`, `Data Manipulation Best Practices`, `Performance Optimization` (+954 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **43 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `CliError` connect `CliError` to `ValueError`, `_tabular.py`, `inspect_manifest`, `_main`, `_main`, `_capabilities.py`, `display_identifier`, `eda_analyzer.py`, `_main`, `bounded_file_limit`?**
-  _High betweenness centrality (0.022) - this node is a cross-community bridge._
+- **Why does `CliError` connect `CliError` to `ValueError`, `_tabular.py`, `inspect_manifest`, `_main`, `_capabilities.py`, `display_identifier`, `eda_analyzer.py`, `_main`, `bounded_file_limit`?**
+  _High betweenness centrality (0.021) - this node is a cross-community bridge._
 - **Why does `_load_fixture()` connect `openvino_installer.py` to `ValueError`?**
-  _High betweenness centrality (0.006) - this node is a cross-community bridge._
-- **Why does `report()` connect `bounded_file_limit` to `ValueError`, `inspect_manifest`, `_main`, `_main`, `eda_analyzer.py`, `_main`?**
+  _High betweenness centrality (0.005) - this node is a cross-community bridge._
+- **Why does `report()` connect `bounded_file_limit` to `ValueError`, `inspect_manifest`, `_main`, `_capabilities.py`, `eda_analyzer.py`, `_main`?**
   _High betweenness centrality (0.004) - this node is a cross-community bridge._
 - **Are the 22 inferred relationships involving `CliError` (e.g. with `preflight_npz()` and `suffix_key()`) actually correct?**
   _`CliError` has 22 INFERRED edges - model-reasoned connections that need verification._
@@ -814,4 +839,4 @@ _Questions this graph is uniquely positioned to answer:_
 - **Are the 8 inferred relationships involving `checked_input_file()` (e.g. with `_main()` and `_main()`) actually correct?**
   _`checked_input_file()` has 8 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `Workflow: Exploratory Data Analysis Pipeline`, `Key Principles`, `Quick Start Example` to the rest of the system?**
-  _898 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _959 weakly-connected nodes found - possible documentation gaps or missing edges._
