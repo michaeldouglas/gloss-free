@@ -26,6 +26,10 @@ class Settings:
     def manifests_dir(self) -> Path:
         return self.project_root / "data" / "manifests"
 
+    @property
+    def processed_data_dir(self) -> Path:
+        return self.project_root / "data" / "processed"
+
     @staticmethod
     def hf_token() -> str | None:
         """Read HF_TOKEN populated from the environment or the project .env."""
