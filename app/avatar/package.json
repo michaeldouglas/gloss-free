@@ -2,7 +2,7 @@
   "name": "libras-avatar",
   "version": "0.1.0",
   "private": true,
-  "description": "Base web e desktop para o avatar 3D da dissertação de Libras.",
+  "description": "Personagem 2D vetorial articulada para a dissertação de Libras.",
   "type": "commonjs",
   "main": "dist-electron/electron/main/main.js",
   "packageManager": "npm@11.11.0",
@@ -22,18 +22,13 @@
     "package:desktop": "npm run build && electron-builder"
   },
   "dependencies": {
-    "@pixiv/three-vrm": "3.5.5",
-    "@react-three/drei": "10.7.9",
-    "@react-three/fiber": "9.8.2",
     "react": "19.3.1",
-    "react-dom": "19.3.1",
-    "three": "0.186.1"
+    "react-dom": "19.3.1"
   },
   "devDependencies": {
     "@types/node": "26.6.5",
     "@types/react": "19.3.0",
     "@types/react-dom": "19.3.0",
-    "@types/three": "0.186.0",
     "@vitejs/plugin-react": "6.1.2",
     "concurrently": "10.0.6",
     "cross-env": "10.1.0",

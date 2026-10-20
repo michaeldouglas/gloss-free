@@ -1,87 +1,57 @@
-import { AvatarCanvas } from "../avatar/components/avatar-canvas";
-import type { LiviAvatarDiagnostics } from "../avatar/components/LiviAvatar";
-import { AvatarFilePicker } from "../components/avatar-file-picker";
-import { useAvatarRuntime } from "../hooks/use-avatar-runtime";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { createLiviJavaScriptApi } from "../avatar/avatar-api";
+import { Livi2DController } from "../avatar/2d/livi-controller";
+import { LiviAvatar2D } from "../avatar/components/livi-avatar-2d";
+import { LiviControls } from "../avatar/components/livi-controls";
+import type { LiviJavaScriptApi } from "../avatar/avatar-api";
 import "./app.css";
 
 function App() {
-  const { controller, model, isLoading, error, loadAvatar } = useAvatarRuntime();
-  const [diagnostics, setDiagnostics] = useState<LiviAvatarDiagnostics | null>(null);
+  const [controller] = useState(() => new Livi2DController());
+
+  useEffect(() => {
+    const livi = createLiviJavaScriptApi(controller);
+    window.livi = livi;
+    window.avatar = livi;
+    return () => {
+      delete window.livi;
+      delete window.avatar;
+    };
+  }, [controller]);
 
   return (
     <main className="app-shell">
       <header className="app-header">
         <div>
-          <p className="eyebrow">Dissertação · módulo de avatar</p>
-          <h1>Libras Avatar</h1>
+          <p className="eyebrow">Dissertação · personagem articulada</p>
+          <h1>Livi 2D</h1>
           <p className="subtitle">
-            Base modular para visualização, controle e futura execução de sequências em Libras.
+            Uma personagem vetorial controlada por TypeScript, preparada para receber poses, expressões e sequências de Libras.
           </p>
         </div>
-        <span className="status-badge">{window.desktop?.isDesktop ? "Electron" : "Web"}</span>
+        <div className="status-stack">
+          <span className="status-badge">SVG + React</span>
+          <span className="status-badge status-badge--quiet">procedural</span>
+        </div>
       </header>
 
-      <section className="workspace" aria-label="Área de trabalho do avatar">
-        <AvatarCanvas
-          className="avatar-canvas"
-          controller={controller}
-          model={model}
-          onDiagnostics={setDiagnostics}
-        />
-
-        <aside className="control-panel">
-          <div>
-            <p className="panel-label">Estado do avatar</p>
-            <h2>{model ? "Avatar carregado" : "avatar.glb carregado"}</h2>
-            <p className="panel-description">
-              O modelo principal é carregado de <code>/avatars/avatar.glb</code>.
-            </p>
-          </div>
-
-          <AvatarFilePicker
-            disabled={isLoading}
-            onSelect={(file) => {
-              setDiagnostics(null);
-              void loadAvatar({ kind: "file", file });
-            }}
-          />
-
-          {isLoading ? <p className="feedback feedback--info">Carregando modelo…</p> : null}
-          {error ? <p className="feedback feedback--error">{error}</p> : null}
-          {diagnostics || model ? (
-            <dl className="model-details">
-              <div>
-                <dt>Formato</dt>
-                <dd>{model?.format.toUpperCase() ?? "GLB"}</dd>
-              </div>
-              <div>
-                <dt>Origem</dt>
-                <dd>{model?.sourceName ?? "/avatars/avatar.glb"}</dd>
-              </div>
-              {diagnostics ? <>
-                <div><dt>Nodes</dt><dd>{diagnostics.nodes}</dd></div>
-                <div><dt>Meshes</dt><dd>{diagnostics.meshes}</dd></div>
-                <div><dt>Materials</dt><dd>{diagnostics.materials}</dd></div>
-                <div><dt>Textures</dt><dd>{diagnostics.textures}</dd></div>
-                <div><dt>Bones / skins</dt><dd>{diagnostics.bones} / {diagnostics.skins}</dd></div>
-                <div><dt>Animations</dt><dd>{diagnostics.animations}</dd></div>
-              </> : null}
-            </dl>
-          ) : null}
-
-          <div className="architecture-note">
-            <p className="panel-label">Próximas camadas</p>
-            <ul>
-              <li>mapeamento humanoide VRM</li>
-              <li>poses de mãos e dedos</li>
-              <li>expressões e animações temporais</li>
-            </ul>
-          </div>
-        </aside>
+      <section className="workspace" aria-label="Área de trabalho da Livi">
+        <LiviAvatar2D controller={controller} className="livi-stage" />
+        <LiviControls controller={controller} />
       </section>
+
+      <footer className="api-footer">
+        <span>API:</span> <code>window.livi.setPose(...)</code> <code>window.livi.moveHand(...)</code> <code>window.livi.sign("hello")</code>
+      </footer>
     </main>
   );
 }
 
 export default App;
+
+declare global {
+  interface Window {
+    livi?: LiviJavaScriptApi;
+    avatar?: LiviJavaScriptApi;
+  }
+}

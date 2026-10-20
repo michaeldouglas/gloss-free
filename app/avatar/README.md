@@ -1,7 +1,10 @@
-# Libras Avatar
+# Livi 2D
 
-Base web e desktop para o avatar humano 3D da dissertação. O projeto fica
-isolado em `app/avatar` e não altera o módulo Python existente em `app/`.
+Aplicação web da personagem Livi, uma figura vetorial articulada para
+experimentos de animação procedural e futura execução de sinais de Libras.
+
+O runtime usa React, TypeScript e SVG, sem backend, banco de dados ou assets
+binários de personagem.
 
 ## Executar
 
@@ -12,48 +15,91 @@ npm install
 npm run dev
 ```
 
-Para executar a mesma interface em Electron durante o desenvolvimento:
-
-```powershell
-npm run dev:electron
-```
+Abra o endereço informado pelo Vite, normalmente
+`http://127.0.0.1:8080/`.
 
 Validações e build:
 
 ```powershell
 npm run typecheck
 npm test
-npm run build
+npm run build:web
 ```
 
-O pacote desktop pode ser produzido com `npm run package:desktop`. Os
-artefatos compilados ficam em `dist/`, `dist-electron/` e `release/`; todos
-estão ignorados pelo Git.
+O comando `npm run build` continua disponível para gerar também os artefatos
+Electron herdados do projeto, mas a personagem e a interface web não dependem
+do Electron.
 
-## Arquitetura
+## Controle por JavaScript/TypeScript
 
-`src/` é o runtime compartilhável da aplicação. Ele não importa Electron:
+Depois que a aplicação carrega, a API fica exposta no console do navegador:
 
-- `src/avatar/loaders/` abstrai o carregamento de VRM 1.0, GLB e GLTF;
-- `src/avatar/controllers/` contém controle de ossos, mãos, dedos,
-  expressões e reprodução temporal sem dependência de uma interface específica;
-- `src/avatar/animation/` contém o timeline determinístico para futuras
-  sequências de Libras;
-- `src/avatar/components/` contém a cena Three.js/R3F;
-- `src/services/` coordena carregamento e ciclo de vida do runtime;
-- `src/hooks/` conecta o runtime às interfaces React.
+```js
+window.livi.setPose({
+  headRotation: -8,
+  arms: {
+    right: { upperArm: -55, forearm: 18, wrist: -12 },
+  },
+  legs: {
+    left: { thigh: -10, shin: 8 },
+  },
+});
 
-`electron/` contém somente a janela desktop e o preload seguro. A comunicação
-entre Electron e o renderer é mínima e feita com `contextIsolation`,
-`sandbox` e `contextBridge`. A interface web continua funcionando sem Electron.
+window.livi.setHandShape("right", "point");
+window.livi.setFingerCurl("right", "middle", 0.8);
+window.livi.setFingerJointRotation("right", "index", "middle", 48);
+window.livi.setPartTransform("rightHand", {
+  x: 14,
+  y: -8,
+  rotation: 22,
+  scaleX: 1.2,
+});
+window.livi.moveHand("right", { x: 310, y: 300 });
+window.livi.setExpression("smile", 0.8);
+window.livi.setExpression("browLeft", -0.7);
+window.livi.lookAt(0.6, -0.2);
+window.livi.blink("left");
+window.livi.sign("hello");
+```
 
-Os arquivos de avatar futuros devem ser colocados em `public/avatars/` quando
-forem assets versionáveis. O carregador também aceita arquivos escolhidos pelo
-usuário, sem exigir que o modelo seja incluído agora.
+`window.avatar` aponta para a mesma API por compatibilidade com o protótipo
+anterior. A API inclui:
 
-## Decisões de compatibilidade
+- `setPose(...)` para aplicar vários segmentos de uma vez;
+- `setSegmentRotation(...)` para tronco, cabeça, braços, antebraços, pulsos,
+  coxas, canelas e tornozelos;
+- `setPartTransform(...)` para mover, rotacionar e redimensionar cada grupo SVG
+  do corpo;
+- `setHandShape(...)`, `setFingerCurl(...)` e `setFingerJointRotation(...)`
+  para controlar cada dedo e cada uma de suas juntas (base, meio, ponta e
+  abertura lateral);
+- `moveHand(...)` para resolver a posição da mão usando dois segmentos;
+- `setExpression(...)`, `lookAt(...)` e `blink(...)` para controlar a face,
+  incluindo boca, bochechas, sobrancelhas e olhos;
+- `execute(...)` para reproduzir keyframes interpolados;
+- `sign(...)` para acessar coreografias de demonstração até que o vocabulário
+  de Libras validado seja conectado.
 
-As dependências foram fixadas em versões estáveis consultadas no registry npm.
-O Vite 8 requer Node 20.19+ ou 22.12+; este ambiente usa Node 24.11.1. R3F,
-Drei e `@pixiv/three-vrm` compartilham Three.js como dependência explícita,
-mantendo uma única versão no projeto.
+## Organização
+
+- `src/avatar/2d/livi-types.ts`: estado, poses, keyframes e contratos da API;
+- `src/avatar/2d/livi-controller.ts`: controlador procedural, IK planar,
+  interpolação e coreografias;
+- `src/avatar/components/livi-avatar-2d.tsx`: árvore SVG articulada;
+- `src/avatar/components/livi-controls.tsx`: painel para inspecionar e
+  controlar corpo, braços, mãos, dedos, pernas e expressão;
+- `src/avatar/animation/sequence-player.ts`: timeline renderer-independent
+  preservada para futuras sequências mais complexas.
+
+Cada parte da personagem possui um grupo SVG identificável por `data-part` e
+as articulações das mãos por `data-finger`, permitindo que novas camadas de
+animação sejam adicionadas sem trocar o renderer.
+
+## Camada visual
+
+O rig e o estado continuam independentes da arte. A camada SVG atual apresenta
+a Livi da cintura para cima, com rosto adulto, cabelo castanho em camadas,
+blazer azul, mangas contínuas e mãos desenhadas como formas sobrepostas para
+que as juntas internas não apareçam como peças. O componente aceita
+`debug={true}` quando for necessário exibir os pontos básicos do rig; o padrão
+é `debug={false}`.

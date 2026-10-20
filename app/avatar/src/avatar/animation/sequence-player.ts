@@ -36,7 +36,7 @@ function sampleTrack(track: TimelineTrack, time: number): number {
 
 /**
  * Deterministic, renderer-independent timeline playback for future Libras
- * sequences. It intentionally knows nothing about React, Three.js or Electron.
+ * sequences. It intentionally knows nothing about React, SVG or Electron.
  */
 export class TimelinePlayer {
   private sequence: AvatarSequence | null = null;
