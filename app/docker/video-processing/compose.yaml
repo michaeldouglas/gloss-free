@@ -15,7 +15,7 @@ services:
     tmpfs:
       - /tmp:size=1g,mode=1777
     volumes:
-      - ../../data/raw:/workspace/data/raw:ro
-      - ../../data/processed:/workspace/data/processed
-      - ../../data/manifests:/workspace/data/manifests:ro
+      - ../../data/raw:/workspace/app/data/raw:ro
+      - ../../data/processed:/workspace/app/data/processed
+      - ../../data/manifests:/workspace/app/data/manifests:ro
     command: ["ffprobe", "-version"]

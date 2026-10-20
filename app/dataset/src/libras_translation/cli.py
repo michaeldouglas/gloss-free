@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import logging
 from pathlib import Path
 
@@ -11,7 +12,9 @@ from rich.table import Table
 
 from .acquisition import DatasetAcquisition, format_size
 from .config import DATASETS, PROJECT_ROOT, Settings
+from .dataset_quality_validation import generate_validation_artifacts_from_file
 from .infrastructure.huggingface_client import HuggingFaceClient
+from .metadata_validation import DEFAULT_FPS_TOLERANCE, validate_dataset
 
 DATASET_CHOICES = (*DATASETS, "all")
 console = Console()
@@ -30,6 +33,12 @@ data_app = typer.Typer(
     rich_markup_mode=None,
 )
 app.add_typer(data_app, name="data")
+video_app = typer.Typer(
+    help="Inspeção e validação de metadados de vídeos.",
+    no_args_is_help=True,
+    rich_markup_mode=None,
+)
+app.add_typer(video_app, name="video")
 
 
 def _selected_datasets(dataset: str, *, allow_all: bool = True) -> list[str]:
@@ -187,6 +196,144 @@ def download_data(
     console.print(summary)
     if failed:
         raise typer.Exit(code=1)
+
+
+@video_app.command(
+    "validate-metadata",
+    help="Compara os metadados do CSV com os valores observados nos vídeos.",
+)
+def validate_video_metadata(
+    dataset: str = typer.Option(
+        ..., "--dataset", "-d", help="Dataset configurado para validar: " + ", ".join(DATASETS)
+    ),
+    annotations: Path = typer.Option(
+        Path("annotations.csv"),
+        "--annotations",
+        help="CSV relativo ao diretório do dataset ou caminho absoluto.",
+    ),
+    exceptions: Path = typer.Option(
+        Path("error.csv"),
+        "--exceptions",
+        help="CSV opcional de exceções relativo ao dataset ou caminho absoluto.",
+    ),
+    output: Path | None = typer.Option(
+        None,
+        "--output",
+        help="Diretório dos resultados derivados; por padrão, data/processed/metadata-validation/<dataset>.",
+    ),
+    ffprobe_executable: str = typer.Option(
+        "ffprobe",
+        "--ffprobe-executable",
+        help="Executável ffprobe disponível no ambiente de execução.",
+    ),
+    fps_tolerance: float = typer.Option(
+        DEFAULT_FPS_TOLERANCE,
+        "--fps-tolerance",
+        min=0,
+        help="Tolerância absoluta para comparar taxas de quadros.",
+    ),
+) -> None:
+    """Gera a fonte JSON e projeções tabulares da validação de um dataset."""
+    selected = _selected_datasets(dataset, allow_all=False)
+    name = selected[0]
+    settings = Settings()
+    dataset_root = settings.raw_data_dir / name
+    annotations_path = annotations if annotations.is_absolute() else dataset_root / annotations
+    exceptions_path = exceptions if exceptions.is_absolute() else dataset_root / exceptions
+    output_dir = output or settings.processed_data_dir / "metadata-validation" / name
+
+    try:
+        payload = validate_dataset(
+            annotations_path,
+            dataset_root / "videos",
+            output_dir,
+            dataset=name,
+            exceptions_csv=exceptions_path if exceptions_path.is_file() else None,
+            ffprobe_executable=ffprobe_executable,
+            fps_tolerance=fps_tolerance,
+        )
+    except (OSError, ValueError) as exc:
+        _report_error(name, exc)
+        raise typer.Exit(code=1) from exc
+
+    summary = payload["summary"]
+    table = Table(title=f"Validação de metadados — {name}", show_lines=False)
+    table.add_column("Métrica", style="cyan")
+    table.add_column("Quantidade", justify="right")
+    table.add_row("Vídeos vistos", str(summary["videos_seen"]))
+    table.add_row("Inspeções OK", str(summary["videos_ok"]))
+    table.add_row("Erros de inspeção", str(summary["videos_with_probe_error"]))
+    table.add_row("FPS como taxa", str(summary["fps_rate_matches"]))
+    table.add_row("FPS como frames", str(summary["fps_frame_count_matches"]))
+    table.add_row("FPS inconclusivo", str(summary["fps_inconclusive"]))
+    console.print(table)
+    console.print(f"Resultados: {output_dir}")
+
+
+@video_app.command(
+    "validate-quality",
+    help="Valida a proveniência, classifica problemas e gera o manifest Parquet derivado.",
+)
+def validate_dataset_quality(
+    dataset: str = typer.Option(
+        ..., "--dataset", "-d", help="Dataset configurado para validar: " + ", ".join(DATASETS)
+    ),
+    metadata_output: Path | None = typer.Option(
+        None,
+        "--metadata-output",
+        help="Diretório existente da validação técnica; por padrão, o diretório derivado do dataset.",
+    ),
+    output_root: Path | None = typer.Option(
+        None,
+        "--output-root",
+        help="Raiz para reports/ e manifests/; por padrão, data/processed/metadata-validation/.",
+    ),
+    fps_tolerance: float = typer.Option(
+        DEFAULT_FPS_TOLERANCE,
+        "--fps-tolerance",
+        min=0,
+        help="Tolerância usada caso a validação técnica ainda precise ser executada.",
+    ),
+) -> None:
+    """Gera evidências de proveniência e uma decisão GO/NO-GO."""
+
+    selected = _selected_datasets(dataset, allow_all=False)
+    name = selected[0]
+    settings = Settings()
+    dataset_root = settings.raw_data_dir / name
+    technical_output = (metadata_output or settings.processed_data_dir / "metadata-validation" / name).resolve()
+    metadata_json = technical_output / "metadata_validation.json"
+    derived_root = (output_root or settings.processed_data_dir / "metadata-validation").resolve()
+
+    try:
+        if not metadata_json.is_file():
+            annotations_path = dataset_root / "annotations.csv"
+            exceptions_path = dataset_root / "error.csv"
+            validate_dataset(
+                annotations_path,
+                dataset_root / "videos",
+                technical_output,
+                dataset=name,
+                exceptions_csv=exceptions_path if exceptions_path.is_file() else None,
+                fps_tolerance=fps_tolerance,
+            )
+        result = generate_validation_artifacts_from_file(
+            dataset=name,
+            dataset_root=dataset_root,
+            metadata_json=metadata_json,
+            output_root=derived_root,
+        )
+    except (OSError, ValueError, RuntimeError, json.JSONDecodeError) as exc:
+        _report_error(name, exc)
+        raise typer.Exit(code=1) from exc
+
+    summary = result["summary"]
+    console.print(f"Decisão de qualidade — {name}: {summary['decision']}")
+    console.print(f"Relatório: {derived_root / 'reports' / 'metadata_validation_report.md'}")
+    console.print(f"Issues: {derived_root / 'reports' / 'metadata_issues.csv'}")
+    console.print(f"Manifest: {derived_root / 'manifests' / Path(summary['artifacts']['manifest']).name}")
+    if summary["decision"] != "GO":
+        raise typer.Exit(code=2)
 
 
 def main() -> None:

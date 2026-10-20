@@ -23,7 +23,7 @@ RUN uv sync --frozen --no-dev
 
 RUN groupadd --gid 10001 video_processing \
     && useradd --uid 10001 --gid 10001 --create-home --shell /usr/sbin/nologin video_processing \
-    && mkdir -p /workspace/data/raw /workspace/data/processed /workspace/data/manifests \
+    && mkdir -p /workspace/app/data/raw /workspace/app/data/processed /workspace/app/data/manifests \
     && chown -R video_processing:video_processing /workspace
 
 USER video_processing
