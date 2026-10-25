@@ -3,10 +3,21 @@
 ## CSV Video Record
 
 - **Source**: `annotations.csv` or `error.csv` under a dataset raw directory.
-- **Fields**: source file, row number, `video_name`, `class`, `user_id`,
-  `width`, `height`, `fps` and any available identifier.
+- **Fields**: source file, row number, `video_id`, `video_name`, `class`,
+  `user_id`, `width`, `height`, `fps` and any available identifier.
 - **Rules**: original values remain strings in the raw source; numeric parsing
   for comparison may yield a null value and must be reported.
+
+### Dataset-specific physical key
+
+- **V-LIBRASIL**: `video_name` is the physical filename/key used to join the
+  CSV with `videos/`.
+- **MINDS-Libras**: `video_id` is the physical filename/key used to join the
+  CSV with `videos/`. `video_name` is retained as a descriptive, human-readable
+  name and is analyzed separately; it is not used as the filesystem key.
+- **Preservation**: neither field is overwritten or replaced. The selected
+  physical key is recorded in the validation JSON, issues summary and
+  validated manifest.
 
 ## Observed Video Metadata
 
@@ -21,7 +32,9 @@
 ## Metadata Comparison
 
 - **Relationship**: zero or one CSV record is matched to one physical video by
-  `video_name`; a missing side remains represented in the result.
+  the dataset-specific physical key; a missing side remains represented in the
+  result. The key is `video_name` for V-LIBRASIL and `video_id` for
+  MINDS-Libras.
 - **Fields**: expected CSV values, observed values, `width_status`,
   `height_status`, `fps_as_rate_status`, `fps_as_frame_count_status`,
   `fps_interpretation`, `overall_status`, source and error.
@@ -77,7 +90,8 @@ never overwritten by validation.
 
 One derived Parquet row represents each union member of the annotation,
 exception, physical-video and technical-result keys. Original CSV columns are
-preserved when available and may be accompanied by `actual_width`,
+preserved when available, including both `video_id` and `video_name` when
+present, and may be accompanied by `actual_width`,
 `actual_height`, `actual_fps`, `actual_frame_count`, `actual_duration`,
 `file_exists`, `file_readable`, `filename_valid`, `metadata_valid`,
 `validation_status` and `validation_notes`.

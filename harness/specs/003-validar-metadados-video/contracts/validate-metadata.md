@@ -11,6 +11,14 @@ the derived output directory, the `ffprobe` executable and an FPS tolerance.
 Relative dataset paths resolve below `data/raw/<dataset>/`; output defaults to
 `data/processed/metadata-validation/<dataset>/`.
 
+The CSV-to-filesystem join uses the dataset's declared physical key:
+
+- V-LIBRASIL: `annotations.video_name` ↔ physical filename;
+- MINDS-Libras: `annotations.video_id` ↔ physical filename.
+
+For MINDS-Libras, `video_name` remains an original descriptive field and is
+validated separately from the physical-file relationship.
+
 ## Inputs
 
 - A configured dataset name.
@@ -23,7 +31,8 @@ Relative dataset paths resolve below `data/raw/<dataset>/`; output defaults to
 - `metadata_validation.json`: source of truth for the run, per-file results,
   comparisons, summaries and toolchain information.
 - `video_metadata.csv`: one row per physical or referenced video with observed
-  values and probe status.
+  values and probe status, preserving `video_id` and `video_name` when
+  available.
 - `metadata_comparison.csv`: one row per joined or unmatched record with CSV
   values, observed values and comparison statuses.
 - `fps_hypotheses_summary.csv`: aggregate evidence for the FPS hypotheses.
@@ -64,7 +73,8 @@ The command writes the following derived artifacts below
 - `reports/metadata_issues.csv`: one row per classified issue with severity,
   code, source and evidence;
 - `reports/metadata_summary.json`: machine-readable counts, source paths and
-  `GO`/`NO-GO` decision;
+  `GO`/`NO-GO` decision, including key reconciliation and MINDS-Libras
+  descriptive-name analysis;
 - `manifests/v_librasil_validated.parquet` or
   `manifests/minds_libras_validated.parquet`: derived rows with original
   values plus observed metadata and validation flags.

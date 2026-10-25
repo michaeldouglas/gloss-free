@@ -1,0 +1,33 @@
+# Relatório da execução — minds-libras-raw
+
+- Executado em: 2026-10-25T10:22:44.647529-03:00
+- Dataset: `minds-libras-raw`
+- Decisão da validação de qualidade: **GO**
+
+## Controle utilizado
+
+- Aquisição habilitada: `True`
+- Download forçado: `False`
+- Build Docker forçado: `False`
+- Validação técnica habilitada: `True`
+- Validação de qualidade habilitada: `True`
+- Reexecução forçada: `False`
+
+## Resultado técnico
+
+- Resumo: `dataset=minds-libras-raw, videos_seen=800, videos_ok=800, videos_partial=0, videos_with_probe_error=0, width_matches=800, height_matches=800, fps_rate_matches=0, fps_frame_count_matches=800, fps_none_matches=0, fps_inconclusive=0, fps_hypothesis_counts={'frame_count': 800}, dataset_fps_interpretation=frame_count, fps_tolerance=0.01`
+- Hipóteses de `fps`:
+```text
+ hypothesis  count
+frame_count    800
+```
+
+## Issues e proveniência
+
+- Severidades: `CRITICAL=0, ERROR=0, WARNING=0, INFO=1`
+- Relatórios técnicos: `c:\Users\mdbaa\development\Dissertacao\app\data\processed\metadata-validation\minds-libras-raw\reports`
+- Manifest validado: `c:\Users\mdbaa\development\Dissertacao\app\data\processed\metadata-validation\minds-libras-raw\manifests\minds_libras_validated.parquet`
+
+## Observação
+
+Este resumo é derivado. Os arquivos em `app/data/raw/` permanecem fora do fluxo de escrita.
