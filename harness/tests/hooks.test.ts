@@ -2,17 +2,18 @@ import { afterEach, describe, expect, test } from "bun:test";
 import { mkdtemp, mkdir, rm, writeFile } from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
-import type { CommandResult } from "../lib/process.ts";
-import { handlePostToolUse, isRelevantEdit } from "../hooks/post-tool-use.ts";
-import { buildShowroom } from "../scripts/build-showroom.ts";
-import { refreshArchitecture } from "../scripts/refresh-architecture.ts";
-import { resolveTemplateContent } from "../lib/spec-kit.ts";
+import type { CommandResult } from "../core/lib/process.ts";
+import { handlePostToolUse, isRelevantEdit } from "../core/hooks/post-tool-use.ts";
+import { buildShowroom } from "../core/scripts/build-showroom.ts";
+import { refreshArchitecture } from "../core/scripts/refresh-architecture.ts";
+import { resolveTemplateContent } from "../core/lib/spec-kit.ts";
+import { createHarnessPaths, findHarnessRoot, getHarnessPaths } from "../core/lib/paths.ts";
 
 const root = path.resolve(import.meta.dir, "..");
 const tempDirs: string[] = [];
 
 async function runHook(name: string, event?: unknown): Promise<{ stdout: string; stderr: string; exitCode: number }> {
-  const child = Bun.spawn(["bun", "run", path.join(root, "hooks", `${name}.ts`)], {
+  const child = Bun.spawn(["bun", "run", path.join(root, "core", "hooks", `${name}.ts`)], {
     cwd: root,
     stdin: "pipe",
     stdout: "pipe",
@@ -69,10 +70,41 @@ describe("Codex hook protocol", () => {
   });
 });
 
+describe("Harness paths", () => {
+  test("discovers the harness independently of cwd and exposes repository roots", () => {
+    const paths = getHarnessPaths(path.join(root, "tests"));
+    expect(paths.harnessRoot).toBe(root);
+    expect(paths.coreRoot).toBe(path.join(root, "core"));
+    expect(paths.hooksRoot).toBe(path.join(root, "core", "hooks"));
+    expect(paths.scriptsRoot).toBe(path.join(root, "core", "scripts"));
+    expect(paths.libRoot).toBe(path.join(root, "core", "lib"));
+    expect(paths.assetsRoot).toBe(path.join(root, "core", "assets"));
+    expect(paths.repositoryRoot).toBe(path.resolve(root, ".."));
+    expect(paths.appRoot).toBe(path.resolve(root, "..", "app"));
+    expect(paths.graphifyGraph).toBe(path.join(root, "graphify-out", "graph.json"));
+    expect(paths.metadataValidationRoot).toBe(path.join(paths.appRoot, "data", "processed", "metadata-validation"));
+    expect(findHarnessRoot(path.join(root, "specs", "003-validar-metadados-video"))).toBe(root);
+  });
+
+  test("keeps injected fixture paths absolute and cwd-independent", () => {
+    const fixture = path.join(os.tmpdir(), "harness-fixture-root");
+    const paths = createHarnessPaths(fixture);
+    expect(path.isAbsolute(paths.harnessRoot)).toBe(true);
+    expect(paths.repositoryRoot).toBe(path.resolve(fixture, ".."));
+    expect(paths.docsRoot).toBe(path.join(paths.repositoryRoot, "docs"));
+  });
+});
+
 describe("PostToolUse orchestration", () => {
   test("recognizes relevant paths and refreshes each downstream artifact once", async () => {
-    expect(isRelevantEdit("*** Update File: scripts/build-showroom.ts")).toBe(true);
-    expect(isRelevantEdit("*** Update File: assets/showroom.css")).toBe(true);
+    expect(isRelevantEdit("*** Update File: core/scripts/build-showroom.ts")).toBe(true);
+    expect(isRelevantEdit("*** Update File: core/assets/showroom.css")).toBe(true);
+    expect(isRelevantEdit("*** Update File: harness/core/scripts/build-showroom.ts")).toBe(true);
+    expect(isRelevantEdit("*** Update File: C:/work/Dissertacao/harness/core/scripts/build-showroom.ts")).toBe(true);
+    expect(isRelevantEdit("*** Update File: C:/work/Dissertacao/app/dataset/src/libras_translation/cli.py")).toBe(true);
+    expect(isRelevantEdit("*** Move to: core/scripts/build-showroom.ts")).toBe(true);
+    expect(isRelevantEdit("", "core/scripts/build-showroom.ts")).toBe(true);
+    expect(isRelevantEdit("", "notes/unrelated.txt")).toBe(false);
     expect(isRelevantEdit("*** Update File: package.json")).toBe(true);
     expect(isRelevantEdit("*** Update File: README.md")).toBe(false);
     const temp = await mkdtemp(path.join(os.tmpdir(), "harness-post-hook-"));
@@ -89,16 +121,27 @@ describe("PostToolUse orchestration", () => {
     const originalWrite = process.stdout.write;
     process.stdout.write = ((chunk: string | Uint8Array) => { output += String(chunk); return true; }) as typeof process.stdout.write;
     try {
-      await handlePostToolUse({ tool_input: { command: "*** Update File: scripts/build-showroom.ts" } }, harnessRoot, fakeRunner);
+      await handlePostToolUse({ tool_input: { command: "*** Update File: core/scripts/build-showroom.ts" } }, harnessRoot, fakeRunner);
     } finally {
       process.stdout.write = originalWrite;
     }
     expect(commands.map((item) => item.command)).toEqual(["graphify", "bun", "bun"]);
-    expect(commands[1].args).toContain("scripts/refresh-architecture.ts");
-    expect(commands[2].args).toContain("scripts/build-showroom.ts");
+    expect(commands[1].args).toContain("core/scripts/refresh-architecture.ts");
+    expect(commands[2].args).toContain("core/scripts/build-showroom.ts");
     const payload = JSON.parse(output);
     expect(payload.hookSpecificOutput.hookEventName).toBe("PostToolUse");
     expect(payload.systemMessage).toContain("Canonical Graphify");
+
+    commands.length = 0;
+    let filePathOutput = "";
+    process.stdout.write = ((chunk: string | Uint8Array) => { filePathOutput += String(chunk); return true; }) as typeof process.stdout.write;
+    try {
+      await handlePostToolUse({ tool_input: { file_path: "core/scripts/build-showroom.ts" } }, harnessRoot, fakeRunner);
+    } finally {
+      process.stdout.write = originalWrite;
+    }
+    expect(commands).toHaveLength(3);
+    expect(JSON.parse(filePathOutput).hookSpecificOutput.hookEventName).toBe("PostToolUse");
   });
 });
 
@@ -111,14 +154,14 @@ describe("showroom generation", () => {
     await mkdir(path.join(harness, "artifacts", "reports"), { recursive: true });
     await mkdir(path.join(harness, "artifacts", "architecture", "html"), { recursive: true });
     await mkdir(path.join(temp, "app", "data", "processed", "metadata-validation", "demo", "reports"), { recursive: true });
-    await mkdir(path.join(harness, "assets"), { recursive: true });
+    await mkdir(path.join(harness, "core", "assets"), { recursive: true });
     await mkdir(path.join(docs, "assets"), { recursive: true });
     await mkdir(path.join(docs, "architecture"), { recursive: true });
     await writeFile(path.join(harness, "artifacts", "reports", "latest.json"), JSON.stringify({ dataset: "demo", decision: "GO", quality_counts: { INFO: 2 }, technical_summary: { videos_seen: 5 } }));
     await writeFile(path.join(harness, "artifacts", "reports", "latest.md"), "Relatório de teste");
     await writeFile(path.join(harness, "artifacts", "architecture", "html", "pipeline.html"), "<h1>Pipeline</h1>");
     await writeFile(path.join(temp, "app", "data", "processed", "metadata-validation", "demo", "reports", "metadata_summary.json"), JSON.stringify({ dataset: "demo", decision: "GO", counts: { physical_videos: 5, annotations: 5, manifest_rows: 5, issues: 0, by_severity: { INFO: 0 } }, key_reconciliation: { matched: 5, missing: 0, extra: 0, filesystem_key_column: "video_id" } }));
-    await writeFile(path.join(harness, "assets", "showroom.css"), "body{}");
+    await writeFile(path.join(harness, "core", "assets", "showroom.css"), "body{}");
     await writeFile(path.join(docs, "assets", "style.css"), "stale-style");
     await writeFile(path.join(docs, "architecture", "old.html"), "old");
     const result = await buildShowroom(temp);
@@ -155,6 +198,24 @@ describe("Archify refresh orchestration", () => {
     expect(calls[1].args).toContain("finalize");
     expect(result.record.outputs[0].result_tail).toEqual(["validated", "rendered"]);
     expect(JSON.parse(await Bun.file(path.join(harness, "artifacts", "architecture", "architecture-refresh.json")).text()).dataset).toBe("test-dataset");
+  });
+
+  test("keeps a browser-only Archify failure as an explicit warning", async () => {
+    const temp = await mkdtemp(path.join(os.tmpdir(), "harness-archify-browser-warning-"));
+    tempDirs.push(temp);
+    const harness = path.join(temp, "harness");
+    const candidate = path.join(harness, "artifacts", "architecture", "source", "flow.architecture.json");
+    await mkdir(path.dirname(candidate), { recursive: true });
+    await mkdir(path.join(harness, ".agents", "skills", "archify", "bin"), { recursive: true });
+    await writeFile(candidate, "{}\n");
+    await writeFile(path.join(harness, ".agents", "skills", "archify", "bin", "archify.mjs"), "// test stub\n");
+    const fakeRunner = async (command: string): Promise<CommandResult> => command === "git"
+      ? { exitCode: 0, stdout: harness, stderr: "" }
+      : { exitCode: 1, stdout: JSON.stringify({ gates: { validate: "pass", deliver: "pass", check: "pass", "browser-check": "fail" } }), stderr: "" };
+    const result = await refreshArchitecture(harness, "browser-warning", fakeRunner);
+    expect(result.exitCode).toBe(0);
+    expect(result.record.status).toBe("completed_with_warnings");
+    expect(result.record.warnings?.[0]).toContain("browser-check");
   });
 });
 

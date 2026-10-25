@@ -1,6 +1,6 @@
 {
   "schema_version": "showroom.v1",
-  "generated_at": "2026-10-25T15:04:28.271042+00:00",
+  "generated_at": "2026-10-25T16:46:26.423Z",
   "latest": {
     "schema_version": "execution-report.v1",
     "dataset": "minds-libras-raw",
@@ -30,7 +30,8 @@
       "WARNING": 0,
       "INFO": 1
     },
-    "report": "c:\\Users\\mdbaa\\development\\Dissertacao\\harness\\artifacts\\reports\\executions\\minds-libras-raw_20261025_102244.md"
+    "report": "harness/artifacts/reports/executions/minds-libras-raw_20261025_102244.md",
+    "showroom": "docs"
   },
   "datasets": [
     {
@@ -66,12 +67,7 @@
         "ERROR": 9,
         "WARNING": 0,
         "INFO": 0
-      },
-      "matched": null,
-      "missing": null,
-      "extra": null,
-      "key_column": null,
-      "fps": null
+      }
     }
   ],
   "architecture": [

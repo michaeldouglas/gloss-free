@@ -7,14 +7,14 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bun run hooks/session-start.ts",
+            "command": "bun run core/hooks/session-start.ts",
             "statusMessage": "Loading harness conventions",
             "additionalContextLimit": 1800,
             "timeout": 15
           },
           {
             "type": "command",
-            "command": "bun run hooks/project-venv-policy.ts",
+            "command": "bun run core/hooks/project-venv-policy.ts",
             "statusMessage": "Checking application Python environment",
             "additionalContextLimit": 700,
             "timeout": 10
@@ -27,7 +27,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bun run hooks/user-prompt-context.ts",
+            "command": "bun run core/hooks/user-prompt-context.ts",
             "statusMessage": "Checking repository context",
             "additionalContextLimit": 600,
             "timeout": 10
@@ -41,13 +41,13 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bun run hooks/pre-tool-policy.ts",
+            "command": "bun run core/hooks/pre-tool-policy.ts",
             "statusMessage": "Checking harness policy",
             "timeout": 15
           },
           {
             "type": "command",
-            "command": "bun run hooks/project-venv-policy.ts",
+            "command": "bun run core/hooks/project-venv-policy.ts",
             "statusMessage": "Checking application Python environment",
             "timeout": 10
           }
@@ -58,7 +58,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bun run hooks/pre-tool-policy.ts",
+            "command": "bun run core/hooks/pre-tool-policy.ts",
             "statusMessage": "Checking edited paths",
             "timeout": 15
           }
@@ -71,7 +71,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bun run hooks/post-tool-use.ts",
+            "command": "bun run core/hooks/post-tool-use.ts",
             "statusMessage": "Refreshing canonical Graphify",
             "timeout": 180
           }
