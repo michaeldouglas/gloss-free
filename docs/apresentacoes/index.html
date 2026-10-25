@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Apresentações datadas sobre o progresso e as evidências da pesquisa em tradução de Libras.">
+  <title>Apresentações da pesquisa · Libras</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <style>
+    :root { color-scheme: light; --navy:#12304a; --blue:#2563eb; --teal:#0f8f8a; --purple:#6b5bb8; --ink:#183248; --muted:#526a7d; --paper:#f7f9fc; --line:#d8e2ec; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--paper); color:var(--ink); font:1rem/1.6 system-ui,-apple-system,"Segoe UI",sans-serif; }
+    a { color:#174db8; text-underline-offset:.18em; }
+    a:focus-visible { outline:3px solid var(--purple); outline-offset:3px; border-radius:.2rem; }
+    .skip { position:absolute; left:-9999px; top:auto; }
+    .skip:focus { left:1rem; top:1rem; z-index:10; background:white; padding:.75rem 1rem; }
+    main { width:min(72rem,calc(100% - 2.5rem)); margin:clamp(2rem,7vw,6rem) auto; }
+    .eyebrow { color:var(--teal); font-size:.85rem; font-weight:750; letter-spacing:.12em; text-transform:uppercase; }
+    h1,h2,h3 { color:var(--navy); font-family:Georgia,"Times New Roman",serif; line-height:1.12; }
+    h1 { max-width:15ch; margin:.35rem 0 1rem; font-size:clamp(2.5rem,6vw,4.7rem); }
+    .intro { max-width:56rem; color:var(--muted); font-size:1.15rem; }
+    .current { margin:2.5rem 0 4rem; padding:clamp(1.5rem,4vw,3rem); border:1px solid var(--line); border-top:5px solid var(--teal); border-radius:1.25rem; background:white; box-shadow:0 1rem 3rem rgba(18,48,74,.08); }
+    .current h2 { margin:.25rem 0 .5rem; font-size:clamp(1.6rem,3vw,2.4rem); }
+    .current p { max-width:52rem; color:var(--muted); }
+    .primary { display:inline-flex; min-height:3rem; align-items:center; justify-content:center; gap:.5rem; margin-top:.75rem; padding:.75rem 1.1rem; border-radius:.65rem; background:var(--navy); color:white; font-weight:750; text-decoration:none; }
+    .primary:hover { background:#1d4667; }
+    .secondary { margin-left:1rem; font-weight:650; }
+    .history-heading { display:flex; align-items:end; justify-content:space-between; gap:1rem; margin-bottom:1rem; }
+    .history-heading h2 { margin:0; font-size:2rem; }
+    .history-heading p { margin:0; color:var(--muted); }
+    .release-list { display:grid; gap:1rem; margin:0; padding:0; list-style:none; }
+    .release-card { display:flex; justify-content:space-between; gap:2rem; align-items:center; padding:1.35rem 1.5rem; border:1px solid var(--line); border-radius:.9rem; background:#fff; }
+    .release-copy time { color:var(--purple); font-size:.9rem; font-weight:750; }
+    .release-copy h3 { margin:.2rem 0; font-size:1.4rem; }
+    .release-copy p { margin:0; color:var(--muted); }
+    .release-actions { display:flex; flex-wrap:wrap; gap:.75rem; flex:0 0 auto; }
+    .release-actions a { min-width:3.3rem; min-height:2.75rem; display:inline-flex; align-items:center; justify-content:center; padding:.5rem .75rem; border:1px solid var(--line); border-radius:.55rem; font-weight:700; text-decoration:none; }
+    .release-actions a:hover { border-color:var(--teal); background:#eef9f8; }
+    .footer-note { margin-top:2.5rem; padding-top:1rem; border-top:1px solid var(--line); color:var(--muted); font-size:.9rem; }
+    @media (max-width:700px) { .release-card,.history-heading { align-items:flex-start; flex-direction:column; } .release-actions { width:100%; } .secondary { display:block; margin:1rem 0 0; } }
+    @media (prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto !important; transition:none !important; animation:none !important; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+  <main id="conteudo">
+    <p class="eyebrow">Pesquisa em tradução de Libras</p>
+    <h1>Progresso da pesquisa</h1>
+    <p class="intro">Versões datadas para compartilhar o que foi realizado, quais evidências estão disponíveis e quais questões seguem abertas. Cada apresentação identifica a data dos dados usados.</p>
+    <section class="current" aria-labelledby="current-title">
+      <p class="eyebrow">Apresentação mais recente · 2026-10-25</p>
+      <h2 id="current-title">Progresso da pesquisa — validação dos dados</h2>
+      <p>Aquisição reproduzível, validação técnica dos metadados e proveniência dos datasets para a pesquisa de tradução de Libras sem glosas.</p>
+      <a class="primary" href="latest.pptx" download>Baixar o PPTX mais recente</a>
+      <a class="secondary" href="2026-10-25-baseline/index.html">Abrir versão HTML</a>
+    </section>
+    <section aria-labelledby="history-title">
+      <div class="history-heading"><h2 id="history-title">Versões anteriores</h2><p>Selecione pela data do checkpoint.</p></div>
+      <ol class="release-list"><li class="release-card"><p>Esta é a primeira versão arquivada. Novos checkpoints aparecerão aqui.</p></li></ol>
+    </section>
+    <p class="footer-note">As apresentações são sínteses derivadas. Consulte os relatórios e a seção de validação para detalhes metodológicos e evidências completas.</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,119 @@
+{
+  "schema_version": "research-presentation-evidence.v1",
+  "release_id": "2026-10-25-baseline",
+  "release_date": "2026-10-25",
+  "title": "Progresso da pesquisa — validação dos dados",
+  "summary": "Aquisição reproduzível, validação técnica dos metadados e proveniência dos datasets para a pesquisa de tradução de Libras sem glosas.",
+  "prepared_at_utc": "2026-10-25T19:25:38.466Z",
+  "feature_progress": {
+    "feature_id": "003-validar-metadados-video",
+    "spec_status": "Draft",
+    "tasks_complete": 24,
+    "tasks_total": 24,
+    "sources": [
+      {
+        "path": "harness/specs/003-validar-metadados-video/spec.md",
+        "sha256": "e04b54d9d8248fa75a754c2ead82eb3375b2dd9c305aca6f8f5d209e183301d0"
+      },
+      {
+        "path": "harness/specs/003-validar-metadados-video/tasks.md",
+        "sha256": "5919692425c37503d7ff7b9975c83a84919c45d008667b5a3a63142b8a6921bf"
+      }
+    ]
+  },
+  "datasets": [
+    {
+      "schema_version": "dataset-validation-summary.v1",
+      "dataset": "minds-libras-raw",
+      "generated_at_utc": "2026-10-25T12:36:34.431024+00:00",
+      "decision": "GO",
+      "counts": {
+        "annotations": 800,
+        "exceptions": 0,
+        "physical_videos": 800,
+        "manifest_rows": 800,
+        "issues": 1,
+        "by_severity": {
+          "CRITICAL": 0,
+          "ERROR": 0,
+          "WARNING": 0,
+          "INFO": 1
+        },
+        "provenance": {}
+      },
+      "key_reconciliation": {
+        "csv_records": 800,
+        "matched": 800,
+        "missing": 0,
+        "extra": 0,
+        "filesystem_key_column": "video_id"
+      },
+      "source_record": {
+        "path": "app/data/processed/metadata-validation/minds-libras-raw/reports/metadata_summary.json",
+        "sha256": "c719934143bc44e87af77b84ab69cb59f8e48688aeb8530e53f354ed10c58548"
+      }
+    },
+    {
+      "schema_version": "dataset-validation-summary.v1",
+      "dataset": "v-librasil-raw",
+      "generated_at_utc": "2026-10-15T01:16:19.099697+00:00",
+      "decision": "NO-GO",
+      "counts": {
+        "annotations": 4086,
+        "exceptions": 3,
+        "physical_videos": 4086,
+        "manifest_rows": 4089,
+        "issues": 12,
+        "by_severity": {
+          "CRITICAL": 3,
+          "ERROR": 9,
+          "WARNING": 0,
+          "INFO": 0
+        },
+        "provenance": {
+          "error_rows": 3,
+          "error_in_annotations": 0,
+          "error_with_physical_file": 0,
+          "error_missing_file": 3
+        }
+      },
+      "key_reconciliation": {},
+      "source_record": {
+        "path": "app/data/processed/metadata-validation/reports/metadata_summary.json",
+        "sha256": "488ca8711c22e603aa365ca40e2e981ce9a59ab35574dc8a0acdf8b3179d0bd4"
+      }
+    }
+  ],
+  "latest_execution": {
+    "dataset": "minds-libras-raw",
+    "executed_at": "2026-10-25T10:22:44.647529-03:00",
+    "decision": "GO",
+    "technical_summary": {
+      "videos_seen": 800,
+      "videos_ok": 800,
+      "videos_partial": 0,
+      "videos_with_probe_error": 0,
+      "width_matches": 800,
+      "height_matches": 800,
+      "fps_rate_matches": 0,
+      "fps_frame_count_matches": 800,
+      "fps_none_matches": 0,
+      "fps_inconclusive": 0,
+      "fps_tolerance": 0.01,
+      "fps_hypothesis_counts": {
+        "frame_count": 800
+      },
+      "dataset_fps_interpretation": "frame_count"
+    },
+    "quality_counts": {
+      "CRITICAL": 0,
+      "ERROR": 0,
+      "WARNING": 0,
+      "INFO": 1
+    },
+    "source_record": {
+      "path": "harness/artifacts/reports/latest.json",
+      "sha256": "0ba4993a9dfc366adca8fe92d0b062a1d437b6a1a27c3756a636d79bb15ff8aa"
+    }
+  }
+}

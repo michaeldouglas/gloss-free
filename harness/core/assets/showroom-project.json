@@ -1,18 +1,13 @@
 {
-  "schema_version": "showroom-project.v1",
-  "title": "Aprendizagem profunda de representações visuais para tradução de Libras em português escrito sem uso de glosas",
-  "summary": "A dissertação investiga a tradução de vídeos de Libras para português escrito sem uma etapa intermediária de glosas.",
-  "motivation": "O projeto estuda como representações visuais e temporais podem apoiar a tradução automática de Libras para português escrito.",
+  "schema_version": "showroom-project.v2",
+  "title": "Aprendizado profundo de representações visuais para tradução de Libras para português escrito sem glosas",
+  "summary": "Projeto de pesquisa para tradução de Libras para português escrito sem glosas, com foco em aprendizado profundo, aquisição e análise de vídeos e pipelines reproduzíveis.",
+  "researchFocus": "Investigar representações visuais aprendidas por modelos profundos para apoiar a tradução de Libras para português escrito sem glosas.",
+  "validationPurpose": "Antes de avaliar modelos, esta etapa confere se as dimensões, a informação temporal, os arquivos e as anotações dos datasets são coerentes o bastante para sustentar experimentos reproduzíveis.",
+  "interpretationLimit": "GO e NO-GO resumem critérios de integridade e proveniência dos dados. Eles não medem qualidade linguística, qualidade de tradução nem desempenho de modelos.",
   "pipeline": [
-    { "title": "Vídeo em Libras", "detail": "frames RGB e pontos-chave" },
-    { "title": "Representação visual", "detail": "espaço, movimento e contexto" },
-    { "title": "Português escrito", "detail": "tradução direta" }
-  ],
-  "methodology": "Design Science Research",
-  "evaluationMetrics": ["BLEU", "ROUGE"],
-  "approachTitle": "Combinar informação visual e movimento do sinal.",
-  "approachSummary": "O projeto investiga representações espaço-temporais e estratégias de pré-treinamento para relacionar sinais visuais ao texto.",
-  "inputs": ["RGB", "mãos", "corpo", "face"],
-  "learning": "relações espaciais e temporais",
-  "evaluation": "BLEU, ROUGE e comparação entre estratégias"
+    { "title": "Vídeos de Libras", "detail": "dados de entrada" },
+    { "title": "Representações visuais", "detail": "aprendizado profundo" },
+    { "title": "Português escrito", "detail": "tradução sem glosas" }
+  ]
 }

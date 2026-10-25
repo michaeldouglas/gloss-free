@@ -37,7 +37,13 @@ describe("Codex hook protocol", () => {
     expect(result.stderr).toBe("");
     const payload = JSON.parse(result.stdout);
     expect(payload.hookSpecificOutput.hookEventName).toBe("SessionStart");
-    expect(payload.hookSpecificOutput.additionalContext).toContain("feature/validar-metadados-video");
+    const context = payload.hookSpecificOutput.additionalContext as string;
+    expect(context).toContain("Protected branches: make changes only on an existing 'feature/*' branch");
+    const branchProcess = Bun.spawn(["git", "-C", path.resolve(root, ".."), "branch", "--show-current"], { cwd: root, stdout: "pipe", stderr: "ignore" });
+    const branch = (await new Response(branchProcess.stdout).text()).trim();
+    await branchProcess.exited;
+    if (branch) expect(context).toContain(`Current branch: ${branch}.`);
+    else expect(context).not.toContain("Current branch:");
   });
 
   test("UserPromptSubmit stays silent unless the prompt concerns the repository", async () => {
@@ -146,7 +152,7 @@ describe("PostToolUse orchestration", () => {
 });
 
 describe("showroom generation", () => {
-  test("builds the dashboard from derived summaries and copies architecture HTML", async () => {
+  test("builds a science-linked dashboard and report from derived evidence", async () => {
     const temp = await mkdtemp(path.join(os.tmpdir(), "harness-showroom-"));
     tempDirs.push(temp);
     const harness = path.join(temp, "harness");
@@ -157,9 +163,28 @@ describe("showroom generation", () => {
     await mkdir(path.join(harness, "core", "assets"), { recursive: true });
     await mkdir(path.join(docs, "assets"), { recursive: true });
     await mkdir(path.join(docs, "architecture"), { recursive: true });
-    await writeFile(path.join(harness, "artifacts", "reports", "latest.json"), JSON.stringify({ dataset: "demo", decision: "GO", quality_counts: { INFO: 2 }, technical_summary: { videos_seen: 5 } }));
+    await writeFile(path.join(harness, "artifacts", "reports", "latest.json"), JSON.stringify({
+      dataset: "demo",
+      decision: "GO",
+      quality_counts: { INFO: 2 },
+      technical_summary: {
+        videos_seen: 5,
+        videos_ok: 5,
+        videos_with_probe_error: 0,
+        width_matches: 5,
+        height_matches: 5,
+        dataset_fps_interpretation: "frame_count",
+        fps_frame_count_matches: 5,
+        fps_rate_matches: 0,
+      },
+    }));
     await writeFile(path.join(harness, "artifacts", "reports", "latest.md"), "Relatório de teste");
-    await writeFile(path.join(harness, "core", "assets", "showroom-project.json"), await readFile(path.join(root, "core", "assets", "showroom-project.json"), "utf8"));
+    const projectConfig = await readFile(path.join(root, "core", "assets", "showroom-project.json"), "utf8");
+    const project = JSON.parse(projectConfig);
+    expect(project.researchFocus).toBe("Investigar representações visuais aprendidas por modelos profundos para apoiar a tradução de Libras para português escrito sem glosas.");
+    expect(project.validationPurpose).toBe("Antes de avaliar modelos, esta etapa confere se as dimensões, a informação temporal, os arquivos e as anotações dos datasets são coerentes o bastante para sustentar experimentos reproduzíveis.");
+    expect(project.interpretationLimit).toBe("GO e NO-GO resumem critérios de integridade e proveniência dos dados. Eles não medem qualidade linguística, qualidade de tradução nem desempenho de modelos.");
+    await writeFile(path.join(harness, "core", "assets", "showroom-project.json"), projectConfig);
     await writeFile(path.join(harness, "artifacts", "architecture", "html", "pipeline.html"), "<h1>Pipeline</h1>");
     await writeFile(path.join(temp, "app", "data", "processed", "metadata-validation", "demo", "reports", "metadata_summary.json"), JSON.stringify({ dataset: "demo", decision: "GO", counts: { physical_videos: 5, annotations: 5, manifest_rows: 5, issues: 0, by_severity: { INFO: 0 } }, key_reconciliation: { matched: 5, missing: 0, extra: 0, filesystem_key_column: "video_id" } }));
     await writeFile(path.join(harness, "core", "assets", "showroom.css"), "body{}");
@@ -167,7 +192,34 @@ describe("showroom generation", () => {
     await writeFile(path.join(docs, "architecture", "old.html"), "old");
     const result = await buildShowroom(temp);
     expect(result).toMatchObject({ datasets: 1, architecture_files: 1 });
-    expect(await Bun.file(path.join(docs, "index.html")).text()).toContain("Libras Research Showroom");
+    const homepage = await Bun.file(path.join(docs, "index.html")).text();
+    const latestReport = await Bun.file(path.join(docs, "reports", "latest.html")).text();
+    expect(homepage).toContain("Libras Research Showroom");
+    expect(homepage).toContain("<h2>Foco científico</h2>");
+    expect(homepage).toContain(project.researchFocus);
+    expect(homepage).toContain("Papel desta etapa");
+    expect(homepage).toContain(project.validationPurpose);
+    expect(homepage).toContain(project.interpretationLimit);
+    expect(homepage).toContain('href="validation/index.html"');
+    expect(homepage).toContain('href="reports/latest.html"');
+    expect(homepage).toContain("1 GO");
+    expect(homepage).toContain('class="skip-link" href="#main-content"');
+    expect(homepage).toContain('aria-current="page"');
+    expect(homepage).not.toContain('class="section-kicker"');
+    expect(latestReport).toContain("O que esta validação permite concluir");
+    expect(latestReport).toContain(project.researchFocus);
+    expect(latestReport).toContain(project.validationPurpose);
+    expect(latestReport).toContain(project.interpretationLimit);
+    expect(latestReport).toContain("demo");
+    expect(latestReport).toContain("GO");
+    expect(latestReport).toContain("Relatório de teste");
+    expect(latestReport).toContain("Ver o texto original do relatório");
+    expect(latestReport).toContain('href="../validation/index.html"');
+    expect(latestReport).toContain("<dt>Vídeos examinados</dt><dd>5</dd>");
+    expect(latestReport).toContain("<dt>Vídeos aprovados</dt><dd>5</dd>");
+    expect(latestReport).toContain("frame_count");
+    expect(latestReport).toContain('<strong>2</strong><span>INFO</span>');
+    expect(latestReport).toContain('aria-current="page"');
     expect(await Bun.file(path.join(docs, "datasets", "index.html")).text()).toContain("demo");
     expect(await Bun.file(path.join(docs, "architecture", "pipeline.html")).text()).toContain("Pipeline");
     expect(await Bun.file(path.join(docs, "architecture", "old.html")).exists()).toBe(false);
