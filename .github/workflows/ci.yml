@@ -15,6 +15,30 @@ permissions:
   contents: read
 
 jobs:
+  harness:
+    name: Bun harness
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: harness
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Install Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version-file: harness/.bun-version
+
+      - name: Install harness dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Check harness infrastructure
+        run: bun run check
+
+      - name: Run harness tests
+        run: bun test
+
   tests:
     name: Python tests
     runs-on: ubuntu-latest

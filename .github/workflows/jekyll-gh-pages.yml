@@ -7,7 +7,10 @@ on:
     paths:
       - "docs/**"
       - "harness/artifacts/**"
-      - "harness/scripts/build-showroom.ts"
+      - "harness/core/scripts/build-showroom.ts"
+      - "harness/core/assets/showroom.css"
+      - "harness/.bun-version"
+      - "harness/package.json"
       - "app/data/processed/metadata-validation/**"
   workflow_dispatch:
 
@@ -30,7 +33,27 @@ jobs:
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
-      - name: Build Jekyll site from docs
+      - name: Install Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version-file: harness/.bun-version
+
+      - name: Install harness dependencies
+        working-directory: harness
+        run: bun install --frozen-lockfile
+
+      - name: Validate harness before publishing
+        working-directory: harness
+        run: bun run check
+
+      - name: Regenerate showroom
+        working-directory: harness
+        run: bun run core/scripts/build-showroom.ts --repo-root ..
+
+      - name: Verify generated showroom
+        run: test -s docs/index.html && test -s docs/data/showroom.json
+
+      - name: Build Jekyll site from regenerated docs
         uses: actions/jekyll-build-pages@v1
         with:
           source: ./docs

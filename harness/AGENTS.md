@@ -10,7 +10,7 @@ Essa arquitetura não deve ser reinterpretada ou reestruturada automaticamente c
 
 ## Runtime da infraestrutura
 
-Hooks e automações do harness ficam em TypeScript e são executados com Bun. Os entrypoints do Codex estão em `hooks/`; módulos compartilhados ficam em `lib/`; scripts de infraestrutura e Spec Kit ficam em `scripts/`. Use `bun run ...`, `bun test` e `bun run check`. Não reintroduza wrappers PowerShell ou Node.js para lógica do harness. Módulos internos empacotados por ferramentas locais, como o Archify, podem manter o formato upstream, mas devem ser chamados pelo harness via Bun.
+Hooks e automações do harness ficam em TypeScript e são executados com Bun. Os entrypoints do Codex estão em `core/hooks/`; módulos compartilhados ficam em `core/lib/`; scripts de infraestrutura e Spec Kit ficam em `core/scripts/`. Use `bun run ...`, `bun test` e `bun run check`. Não reintroduza wrappers PowerShell ou Node.js para lógica do harness. Módulos internos empacotados por ferramentas locais, como o Archify, podem manter o formato upstream, mas devem ser chamados pelo harness via Bun.
 
 Python permanece no aplicativo para processamento de datasets e vídeo, EDA, estatística, ML, treinamento, inferência e avaliação. Execute comandos do aplicativo a partir de `../app/` usando `uv run ...`; não converta o código científico para TypeScript.
 

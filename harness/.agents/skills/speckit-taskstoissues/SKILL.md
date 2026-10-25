@@ -62,7 +62,7 @@ You **MUST** consider the user input before proceeding (if not empty).
 
 ## Outline
 
-1. Run `bun run scripts/speckit/check-prerequisites.ts --json --require-tasks --include-tasks` from repo root and parse FEATURE_DIR and AVAILABLE_DOCS list. All paths must be absolute.
+1. Run `bun run core/scripts/speckit/check-prerequisites.ts --json --require-tasks --include-tasks` from repo root and parse FEATURE_DIR and AVAILABLE_DOCS list. All paths must be absolute.
 1. **IF EXISTS**: Load `.specify/memory/constitution.md` for project principles and governance constraints.
 1. From the executed script, extract the path to **tasks**.
 1. Get the Git remote by running:

@@ -60,7 +60,7 @@ Note: This clarification workflow is expected to run (and be completed) BEFORE i
 
 Execution steps:
 
-1. Run `bun run scripts/speckit/check-prerequisites.ts --json --paths-only` from repo root **once**. Parse minimal JSON payload fields:
+1. Run `bun run core/scripts/speckit/check-prerequisites.ts --json --paths-only` from repo root **once**. Parse minimal JSON payload fields:
    - `FEATURE_DIR`
    - `FEATURE_SPEC`
    - (Optionally capture `IMPL_PLAN`, `TASKS` for future chained flows.)
