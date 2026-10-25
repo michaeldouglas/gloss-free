@@ -121,7 +121,7 @@ Fala sugerida: “O importante aqui é que a mesma verificação pode ser repeti
 </div>
 
 <div class="two-column">
-  <p><strong>{{ $fmt($mind?.key_reconciliation?.missing) }} ausentes</strong> · <strong>{{ $fmt($mind?.key_reconciliation?.extra) }} extras</strong><br>O resumo registra {{ $fmt($mind?.counts.by_severity.CRITICAL) }} CRITICAL, {{ $fmt($mind?.counts.by_severity.ERROR) }} ERROR e {{ $fmt($mind?.counts.by_severity.WARNING) }} WARNING.</p>
+  <p><strong>{{ $fmt($mind?.key_reconciliation?.missing) }} ausentes</strong> · <strong>{{ $fmt($mind?.key_reconciliation?.extra) }} extras</strong><br>O resumo registra {{ $fmt($mind?.counts.by_severity.CRITICAL) }} CRITICAL, {{ $fmt($mind?.counts.by_severity.ERROR) }} ERROR, {{ $fmt($mind?.counts.by_severity.WARNING) }} WARNING e {{ $fmt($mind?.counts.by_severity.INFO) }} INFO.</p>
   <div class="evidence-panel">
     <DecisionBadge :decision="$mind?.decision || 'UNKNOWN'" />
     <p>GO significa que os critérios desta auditoria de integridade foram atendidos. Não é um resultado de tradução.</p>
