@@ -74,7 +74,7 @@ jobs:
         run: bun run core/scripts/build-presentations.ts --repo-root .. --site-base /gloss-free/
 
       - name: Verify generated showroom
-        run: test -s docs/index.html && test -s docs/reports/latest.html && test -s docs/data/showroom.json && test -s docs/apresentacoes/index.html && test -s docs/apresentacoes/latest.pptx
+        run: test -s docs/index.html && test -s docs/reports/latest.html && test -s docs/data/showroom.json && test -s docs/apresentacoes/index.html && test -s docs/apresentacoes/latest.pdf
 
       - name: Build Jekyll site from regenerated docs
         uses: actions/jekyll-build-pages@v1

@@ -1,6 +1,6 @@
 {
   "schema_version": "showroom.v1",
-  "generated_at": "2026-10-25T19:38:26.326Z",
+  "generated_at": "2026-10-25T21:29:32.258Z",
   "latest": {
     "schema_version": "execution-report.v1",
     "dataset": "minds-libras-raw",
@@ -73,5 +73,5 @@
   "architecture": [
     "libras-data-pipeline.html"
   ],
-  "scope": "Validação dos datasets e evidências disponíveis no projeto"
+  "scope": "Pesquisa, validação dos datasets e evidências disponíveis no projeto"
 }

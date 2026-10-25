@@ -6,7 +6,7 @@
   "status": "fail",
   "visualReview": "not-requested",
   "provenance": "current",
-  "deliveryReceiptId": "95311c5f-e73f-4416-b671-0abae93794e4",
+  "deliveryReceiptId": "0e15165a-747a-4af5-96d8-60e81f233d43",
   "artifact": {
     "path": "C:\\Users\\mdbaa\\development\\Dissertacao\\harness\\artifacts\\architecture\\html\\libras-data-pipeline.html",
     "sha256": "51007bd8b06d4d99b7ea9cb4498caa24914f40c346c8fa3284979aea56cb016f",
@@ -22,18 +22,18 @@
   },
   "diagnostics": [
     {
-      "code": "viewer/temp-cleanup-incomplete",
+      "code": "viewer/chrome-startup-timeout",
       "severity": "error",
-      "message": "Browser cleanup could not safely finish; inspect the reported retained path.",
+      "message": "Chrome did not finish its initial DevTools handshake within the startup window.",
       "subject": {
         "artifact": "C:\\Users\\mdbaa\\development\\Dissertacao\\harness\\artifacts\\architecture\\html\\libras-data-pipeline.html"
       },
       "evidence": {
-        "reason": "Chrome did not exit; retained temporary profile \"C:\\Users\\mdbaa\\AppData\\Local\\Temp\\archify-visual-check-profile-usEh63\".",
-        "retainedDirectory": "C:\\Users\\mdbaa\\AppData\\Local\\Temp\\archify-visual-check-profile-usEh63"
+        "reason": "Chrome DevTools protocol timeout failed: Target.getTargets: timed out after 90000ms [ERR_CHROME_CDP_TIMEOUT]\nChrome process: still running.\nChrome stderr:\n[2932:32148:1025/182046.877:ERROR:google_apis\\gcm\\engine\\registration_request.cc:291] Registration response error message: PHONE_REGISTRATION_ERROR\r\n[2932:32148:1025/182046.901:ERROR:google_apis\\gcm\\engine\\registration_request.cc:291] Registration response error message: PHONE_REGISTRATION_ERROR\r\n[2932:32148:1025/182046.923:ERROR:google_apis\\gcm\\engine\\registration_request.cc:291] Registration response error message: PHONE_REGISTRATION_ERROR\r\n[2932:32148:1025/182047.026:ERROR:google_apis\\gcm\\engine\\mcs_client.cc:702]   Error code: 401  Error message: Authentication Failed: wrong_secret\r\n[2932:32148:1025/182047.026:ERROR:google_apis\\gcm\\engine\\mcs_client.cc:704] Failed to log in to GCM, resetting connection.\r\nCreated TensorFlow Lite XNNPACK delegate for CPU.\r\n[2932:2136:1025/182059.491:ERROR:chrome\\updater\\ipc\\update_service_dialer_win.cc:76] Failed to open named pipe server process 23060: Access is denied. (0x5)\r\n[2932:20804:1025/182059.576:ERROR:chrome\\updater\\ipc\\update_service_dialer_win.cc:76] Failed to open named pipe server process 32452: Access is denied. (0x5)\r\n[2932:2136:1025/182101.689:ERROR:chrome\\updater\\ipc\\update_service_dialer_win.cc:76] Failed to open named pipe server process 24528: Access is denied. (0x5)\r\n[2932:20804:1025/182101.690:ERROR:chrome\\updater\\ipc\\update_service_dialer_win.cc:76] Failed to open named pipe server process 24528: Access is denied. (0x5)\r\n[2932:2136:1025/182101.779:ERROR:chrome\\updater\\ipc\\update_service_dialer_win.cc:76] Failed to open named pipe server process 15704: Access is denied. (0x5)\r\n[2932:20804:1025/182101.873:ERROR:chrome\\updater\\ipc\\update_service_dialer_win.cc:76] Failed to open named pipe server process 13024: Access is denied. (0x5)\r\n[2932:32148:1025/182111.959:ERROR:google_apis\\gcm\\engine\\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT\nWindows browser startup may have relaunched before connecting to the DevTools pipe. Retry from a non-elevated PowerShell opened normally, outside an elevated or compatibility-mode parent. Archify does not disable browser de-elevation or the sandbox to preserve pipe handles.\nChrome transport: Node v24.3.0, libuv 1.51.1-dev, win32; pid=2932, exitCode=null, signalCode=null.\nChrome read pipe: readable=true, ended=false, destroyed=false, receivedBytes=0, messages=0, bufferedBytes=0.\nChrome write pipe: writable=true, ended=false, destroyed=false, completedWrites=0, writtenBytes=0, bufferedBytes=50."
       },
       "supportedFixes": [
-        "resolve the reported process or filesystem failure; verify directory ownership before manual cleanup"
+        "do not edit or simplify the artifact because this is a browser-startup failure",
+        "retry browser-check once after host load subsides; if it repeats, stop and report the environment failure"
       ]
     }
   ],
@@ -64,5 +64,5 @@
     "receipt": "libras-data-pipeline.browser-check.json",
     "files": []
   },
-  "error": "Chrome did not exit; retained temporary profile \"C:\\Users\\mdbaa\\AppData\\Local\\Temp\\archify-visual-check-profile-usEh63\"."
+  "error": "Chrome DevTools protocol timeout failed: Target.getTargets: timed out after 90000ms [ERR_CHROME_CDP_TIMEOUT]\nChrome process: still running.\nChrome stderr:\n[2932:32148:1025/182046.877:ERROR:google_apis\\gcm\\engine\\registration_request.cc:291] Registration response error message: PHONE_REGISTRATION_ERROR\r\n[2932:32148:1025/182046.901:ERROR:google_apis\\gcm\\engine\\registration_request.cc:291] Registration response error message: PHONE_REGISTRATION_ERROR\r\n[2932:32148:1025/182046.923:ERROR:google_apis\\gcm\\engine\\registration_request.cc:291] Registration response error message: PHONE_REGISTRATION_ERROR\r\n[2932:32148:1025/182047.026:ERROR:google_apis\\gcm\\engine\\mcs_client.cc:702]   Error code: 401  Error message: Authentication Failed: wrong_secret\r\n[2932:32148:1025/182047.026:ERROR:google_apis\\gcm\\engine\\mcs_client.cc:704] Failed to log in to GCM, resetting connection.\r\nCreated TensorFlow Lite XNNPACK delegate for CPU.\r\n[2932:2136:1025/182059.491:ERROR:chrome\\updater\\ipc\\update_service_dialer_win.cc:76] Failed to open named pipe server process 23060: Access is denied. (0x5)\r\n[2932:20804:1025/182059.576:ERROR:chrome\\updater\\ipc\\update_service_dialer_win.cc:76] Failed to open named pipe server process 32452: Access is denied. (0x5)\r\n[2932:2136:1025/182101.689:ERROR:chrome\\updater\\ipc\\update_service_dialer_win.cc:76] Failed to open named pipe server process 24528: Access is denied. (0x5)\r\n[2932:20804:1025/182101.690:ERROR:chrome\\updater\\ipc\\update_service_dialer_win.cc:76] Failed to open named pipe server process 24528: Access is denied. (0x5)\r\n[2932:2136:1025/182101.779:ERROR:chrome\\updater\\ipc\\update_service_dialer_win.cc:76] Failed to open named pipe server process 15704: Access is denied. (0x5)\r\n[2932:20804:1025/182101.873:ERROR:chrome\\updater\\ipc\\update_service_dialer_win.cc:76] Failed to open named pipe server process 13024: Access is denied. (0x5)\r\n[2932:32148:1025/182111.959:ERROR:google_apis\\gcm\\engine\\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT\nWindows browser startup may have relaunched before connecting to the DevTools pipe. Retry from a non-elevated PowerShell opened normally, outside an elevated or compatibility-mode parent. Archify does not disable browser de-elevation or the sandbox to preserve pipe handles.\nChrome transport: Node v24.3.0, libuv 1.51.1-dev, win32; pid=2932, exitCode=null, signalCode=null.\nChrome read pipe: readable=true, ended=false, destroyed=false, receivedBytes=0, messages=0, bufferedBytes=0.\nChrome write pipe: writable=true, ended=false, destroyed=false, completedWrites=0, writtenBytes=0, bufferedBytes=50."
 }

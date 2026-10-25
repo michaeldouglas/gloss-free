@@ -53,8 +53,8 @@ runtime do harness e do código em `../app/`. Não leia dados brutos no Slidev:
 use snapshots públicos versionados em `artifacts/reports/publications/`,
 gerados com `core/scripts/prepare-presentation-release.ts`. Cada snapshot é
 uma projeção com origens relativas; preserve as datas e limitações das
-evidências e não substitua versões já publicadas. HTML, PDF e PPTX publicados
-são saídas derivadas em `../docs/apresentacoes/`, construídas por
+evidências e não substitua versões já publicadas. HTML e PDF publicados são
+saídas derivadas em `../docs/apresentacoes/`, construídas por
 `core/scripts/build-presentations.ts` antes do Pages/Jekyll.
 
 ## Skills locais de revisão de literatura

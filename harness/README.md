@@ -78,8 +78,9 @@ bun run core/scripts/prepare-presentation-release.ts --id 2026-11-15-reuniao-ori
 
 Depois, crie `presentations/decks/<id>/release.json` e `slides.md`, cite as
 fontes nas lâminas e mantenha versões anteriores imutáveis. O build processa
-todas as versões do índice e atualiza `../docs/apresentacoes/latest.pptx` para
-a versão mais recente:
+todas as versões do índice e atualiza `../docs/apresentacoes/latest.pdf` para
+a versão mais recente. O catálogo abre a apresentação HTML mais recente como
+ação principal:
 
 ```text
 cd presentations
@@ -87,10 +88,30 @@ bun install --frozen-lockfile
 bun run build
 ```
 
-O catálogo em `../docs/apresentacoes/` oferece o PPTX mais recente como ação
-principal e permite selecionar versões pelo checkpoint. O HTML e o PDF ficam
-disponíveis como formatos complementares. O workflow do Pages gera showroom,
-apresentações e exports antes do build Jekyll.
+No build local, a base padrão é `/docs/`, adequada quando o servidor estático
+usa a raiz do repositório. Abra
+`http://127.0.0.1:5500/docs/apresentacoes/` nesse caso. Se o servidor usar
+`docs/` como raiz, gere com `bun run ../core/scripts/build-presentations.ts
+--site-base /` e abra `/apresentacoes/`. O workflow do GitHub Pages informa
+`--site-base /gloss-free/`, que é o prefixo usado no endereço publicado.
+
+Para revisar uma apresentação no servidor interativo do Slidev, use o snapshot
+mais recente; uma versão específica pode ser selecionada pelo identificador:
+
+```text
+bun run dev
+bun run dev -- --id 2026-10-25-baseline
+```
+
+O preview serve as lâminas com os mesmos componentes, estilos e dados
+congelados usados na exportação. As rotas de apresentação e de apresentador do
+Slidev ficam disponíveis durante essa sessão.
+
+O catálogo em `../docs/apresentacoes/` abre a apresentação HTML mais recente
+como ação principal e permite selecionar versões anteriores pelo checkpoint.
+O PDF fica disponível para download como formato complementar. Não é gerada
+versão PPTX. O workflow do Pages gera showroom, apresentações e exports antes
+do build Jekyll.
 
 ## Estrutura preservada
 

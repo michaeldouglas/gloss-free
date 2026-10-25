@@ -19,8 +19,8 @@ selectable: true
     <circle cx="8" cy="39" r="4" fill="currentColor" />
     <circle cx="57" cy="41" r="4" fill="currentColor" />
   </svg>
-  <p class="slide-kicker">Atualização para discussão com pesquisadores</p>
   <h1>Progresso da pesquisa</h1>
+  <p class="cover-audience">Atualização para discussão com pesquisadores</p>
   <p class="slide-subtitle">Aprendizado profundo de representações visuais para tradução de Libras para português escrito sem glosas</p>
   <div class="cover-accent"></div>
   <p class="cover-meta">Retrato de evidências · {{ $date($release.release_date) }}</p>
@@ -32,8 +32,6 @@ Não há resultados de treinamento ou de qualidade de tradução nesta etapa.
 -->
 
 ---
-
-<p class="slide-kicker">Resumo do avanço</p>
 
 # A base empírica está sendo auditada antes dos experimentos
 
@@ -48,8 +46,6 @@ Não há resultados de treinamento ou de qualidade de tradução nesta etapa.
 <SourceNote source="artifacts/reports/publications/2026-10-25-baseline.json" detail="síntese derivada; veja a data própria de cada dataset" />
 
 ---
-
-<p class="slide-kicker">Pergunta e etapa</p>
 
 # O que estamos preparando para investigar?
 
@@ -68,8 +64,6 @@ flowchart LR
 <p class="source-note">Etapa atual: aquisição e validação dos dados. EDA aprofundada, treinamento e avaliação de tradução ainda não estão representados como resultados.</p>
 
 ---
-
-<p class="slide-kicker">Por que validar primeiro?</p>
 
 # Um campo chamado `fps` pode ter mais de uma interpretação
 
@@ -93,8 +87,6 @@ flowchart LR
 
 ---
 
-<p class="slide-kicker">Evidência técnica · {{ $latest.dataset }}</p>
-
 # A inspeção técnica dos metadados foi concluída
 
 <div class="slide-grid">
@@ -104,15 +96,13 @@ flowchart LR
 </div>
 
 <div class="evidence-panel" style="margin-top:1.1rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem">
-  <div><h2 style="margin-bottom:.25rem">Resultado do resumo de qualidade</h2><p style="margin:0">{{ $fmt($mind?.counts.issues) }} ocorrência INFO; nenhum CRITICAL ou ERROR.</p></div>
+  <div><h2 style="margin-bottom:.25rem">Resultado do resumo de qualidade</h2><p style="margin:0">{{ $fmt($mind?.counts.issues) }} ocorrências: {{ $fmt($mind?.counts.by_severity.CRITICAL) }} CRITICAL · {{ $fmt($mind?.counts.by_severity.ERROR) }} ERROR · {{ $fmt($mind?.counts.by_severity.WARNING) }} WARNING · {{ $fmt($mind?.counts.by_severity.INFO) }} INFO.</p></div>
   <DecisionBadge :decision="$mind?.decision || 'UNKNOWN'" />
 </div>
 
 <SourceNote :source="`MINDS-Libras · resumo de qualidade ${$evidenceDateMind}`" :detail="`inspeção técnica resumida na execução de ${$date($latest.executed_at)}`" />
 
 ---
-
-<p class="slide-kicker">Achado sobre a informação temporal</p>
 
 # Como o campo `fps` se relaciona com os vídeos?
 
@@ -136,9 +126,7 @@ flowchart LR
 
 ---
 
-<p class="slide-kicker">Evidência de proveniência · V-LIBRASIL</p>
-
-# O resumo disponível ainda aponta pendências de proveniência
+# Resumo de proveniência do V-LIBRASIL
 
 <div class="slide-grid">
   <MetricCard label="Vídeos físicos" :value="$fmt($vlibrasil?.counts.physical_videos)" :detail="`Resumo de qualidade gerado em ${$evidenceDateVlibrasil}.`" accent="blue" />
@@ -154,8 +142,6 @@ flowchart LR
 <SourceNote source="V-LIBRASIL · metadata_summary.json" :detail="`evidência de ${$evidenceDateVlibrasil}; não comparar como se tivesse sido gerada junto ao MINDS`" />
 
 ---
-
-<p class="slide-kicker">Leitura conjunta</p>
 
 # Os datasets estão em estados de validação diferentes
 
@@ -177,8 +163,6 @@ flowchart LR
 <p class="source-note">GO/NO-GO resume os critérios técnicos e de proveniência registrados em cada dataset. As datas diferem.</p>
 
 ---
-
-<p class="slide-kicker">Limites da conclusão</p>
 
 # O que já sabemos — e o que ainda não foi medido
 
@@ -205,9 +189,7 @@ flowchart LR
 
 ---
 
-<p class="slide-kicker">Estado de execução da feature</p>
-
-# A implementação tem tarefas marcadas como concluídas; a especificação segue Draft
+# Estado de implementação e estado formal da feature
 
 <div class="slide-grid">
   <MetricCard label="Tarefas concluídas" :value="`${$fmt($progress.tasks_complete)} / ${$fmt($progress.tasks_total)}`" detail="Checkboxes de tasks.md no snapshot desta apresentação." accent="teal" />
@@ -218,8 +200,6 @@ flowchart LR
 <p class="source-note">O estado dos documentos Spec Kit é apresentado literalmente: conclusão das tarefas não altera automaticamente o status formal do spec.</p>
 
 ---
-
-<p class="slide-kicker">Próximas decisões</p>
 
 # Próxima conversa: fechar as pendências antes de ampliar as conclusões
 
@@ -237,8 +217,6 @@ flowchart LR
 <p class="source-note">Detalhes: <a href="../../reports/latest.html">relatório mais recente</a> · <a href="../../validation/index.html">evidências dos datasets</a>.</p>
 
 ---
-
-<p class="slide-kicker">Rastreabilidade</p>
 
 # Evidências que sustentam este retrato
 

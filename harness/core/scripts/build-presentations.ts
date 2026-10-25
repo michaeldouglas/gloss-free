@@ -19,18 +19,23 @@ function escapeHtml(value: unknown): string {
   return String(value ?? "").replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#39;");
 }
 
+function slideEntry(id: string, title: string): string {
+  return `---\ntheme: default\ntitle: ${JSON.stringify(title)}\nauthor: Pesquisa em tradução de Libras\naspectRatio: 16/9\ncolorSchema: light\nfonts:\n  sans: Atkinson Hyperlegible\n  serif: Crimson Pro\n  mono: Fira Code\n  provider: none\ntransition: fade\nselectable: true\ntwoslash: false\nrouterMode: hash\nhtmlAttrs:\n  lang: pt-BR\nsrc: ./decks/${id}/slides.md\n---\n`;
+}
+
 function parseArgs(argv: string[]): { repoRoot: string; siteBase: string; preview: boolean; releaseId?: string } {
   let repoRoot = defaultPaths.repositoryRoot;
-  let siteBase = "/gloss-free/";
+  let siteBase = "/docs/";
   let preview = false;
   let releaseId: string | undefined;
   for (let index = 2; index < argv.length; index += 1) {
+    if (argv[index] === "--") continue;
     if (argv[index] === "--repo-root") repoRoot = path.resolve(argv[++index] ?? repoRoot);
     else if (argv[index] === "--site-base") siteBase = argv[++index] ?? siteBase;
     else if (argv[index] === "--preview") preview = true;
     else if (argv[index] === "--id") releaseId = argv[++index];
     else if (argv[index] === "--help" || argv[index] === "-h") {
-      process.stdout.write("Usage: bun run core/scripts/build-presentations.ts [--repo-root <project-root>] [--site-base /gloss-free/] [--preview [--id <release-id>]]\n");
+      process.stdout.write("Usage: bun run core/scripts/build-presentations.ts [--repo-root <project-root>] [--site-base /docs/] [--preview [--id <release-id>]]\n");
       process.exit(0);
     } else throw new Error(`Opção desconhecida: ${argv[index]}`);
   }
@@ -61,7 +66,6 @@ function catalogHtml(latest: JsonObject, releases: JsonObject[]): string {
         <p>${escapeHtml(release.summary)}</p>
       </div>
       <div class="release-actions">
-        <a href="${escapeHtml(release.id)}/presentation.pptx" download aria-label="Baixar PPTX da versão ${escapeHtml(release.release_date)}">PPTX</a>
         <a href="${escapeHtml(release.id)}/presentation.pdf" download aria-label="Baixar PDF da versão ${escapeHtml(release.release_date)}">PDF</a>
         <a href="${escapeHtml(release.id)}/index.html" aria-label="Abrir apresentação HTML da versão ${escapeHtml(release.release_date)}">HTML</a>
       </div>
@@ -119,8 +123,8 @@ function catalogHtml(latest: JsonObject, releases: JsonObject[]): string {
       <p class="eyebrow">Apresentação mais recente · ${escapeHtml(latest.release_date)}</p>
       <h2 id="current-title">${escapeHtml(latest.title)}</h2>
       <p>${escapeHtml(latest.summary)}</p>
-      <a class="primary" href="latest.pptx" download>Baixar o PPTX mais recente</a>
-      <a class="secondary" href="${escapeHtml(latest.id)}/index.html">Abrir versão HTML</a>
+      <a class="primary" href="${escapeHtml(latest.id)}/index.html">Abrir a apresentação mais recente</a>
+      <a class="secondary" href="latest.pdf" download>Baixar PDF</a>
     </section>
     <section aria-labelledby="history-title">
       <div class="history-heading"><h2 id="history-title">Versões anteriores</h2><p>Selecione pela data do checkpoint.</p></div>
@@ -159,10 +163,9 @@ async function build(): Promise<void> {
     if (snapshot.schema_version !== "research-presentation-evidence.v1" || snapshot.release_id !== entry.id) throw new Error(`Snapshot incompatível com ${entry.id}.`);
     const entryFile = path.join(presentationsRoot, `.entry-${entry.id}.md`);
     const evidenceFile = path.join(presentationsRoot, "evidence.generated.json");
-    const entryContents = `---\ntheme: default\ntitle: ${JSON.stringify(entry.title)}\nauthor: Pesquisa em tradução de Libras\naspectRatio: 16/9\ncolorSchema: light\nfonts:\n  sans: Atkinson Hyperlegible\n  serif: Crimson Pro\n  mono: Fira Code\n  provider: none\ntransition: fade\nselectable: true\ntwoslash: false\n---\n\n---\nsrc: ./decks/${entry.id}/slides.md\n---\n`;
     try {
       await writeFile(evidenceFile, `${JSON.stringify(snapshot, null, 2)}\n`, "utf8");
-      await writeFile(entryFile, entryContents, "utf8");
+      await writeFile(entryFile, slideEntry(entry.id, entry.title), "utf8");
       await runSlidev([path.basename(entryFile), "--open"], presentationsRoot);
     } finally {
       await rm(entryFile, { force: true });
@@ -192,20 +195,18 @@ async function build(): Promise<void> {
     const outputDir = path.join(publicRoot, entry.id);
     const entryFile = path.join(presentationsRoot, `.entry-${entry.id}.md`);
     const generatedEvidenceFile = path.join(presentationsRoot, "evidence.generated.json");
-    const entryContents = `---\ntheme: default\ntitle: ${JSON.stringify(entry.title)}\nauthor: Pesquisa em tradução de Libras\naspectRatio: 16/9\ncolorSchema: light\nfonts:\n  sans: Atkinson Hyperlegible\n  serif: Crimson Pro\n  mono: Fira Code\n  provider: none\ntransition: fade\nselectable: true\ntwoslash: false\n---\n\n---\nsrc: ./decks/${entry.id}/slides.md\n---\n`;
     const relativeEntry = path.basename(entryFile);
     try {
       await writeFile(generatedEvidenceFile, `${JSON.stringify(snapshot, null, 2)}\n`, "utf8");
-      await writeFile(entryFile, entryContents, "utf8");
+      await writeFile(entryFile, slideEntry(entry.id, entry.title), "utf8");
       await rm(outputDir, { recursive: true, force: true });
       await mkdir(outputDir, { recursive: true });
       const slideBase = `${siteBase}apresentacoes/${entry.id}/`;
       const exportBase = path.join(outputDir, "presentation");
       const browserPath = process.env.SLIDEV_CHROMIUM_PATH ? ["--executable-path", process.env.SLIDEV_CHROMIUM_PATH] : [];
       await runSlidev(["build", relativeEntry, "--out", outputDir, "--base", slideBase, "--without-notes"], presentationsRoot);
-      await runSlidev(["export", relativeEntry, "--format", "pptx", "--output", exportBase, "--with-clicks", "false", ...browserPath], presentationsRoot);
       await runSlidev(["export", relativeEntry, "--format", "pdf", "--output", exportBase, "--with-clicks", "false", "--with-toc", ...browserPath], presentationsRoot);
-      for (const required of ["index.html", "presentation.pptx", "presentation.pdf"]) {
+      for (const required of ["index.html", "presentation.pdf"]) {
         if (!(await Bun.file(path.join(outputDir, required)).exists())) throw new Error(`A exportação ${entry.id} não produziu ${required}.`);
       }
       built.push({ id: entry.id, output: outputDir });
@@ -217,10 +218,10 @@ async function build(): Promise<void> {
   }
 
   const latest = releases[0];
-  const latestOutput = path.join(publicRoot, latest.id, "presentation.pptx");
-  await copyFile(latestOutput, path.join(publicRoot, "latest.pptx"));
+  const latestOutput = path.join(publicRoot, latest.id, "presentation.pdf");
+  await copyFile(latestOutput, path.join(publicRoot, "latest.pdf"));
   await writeFile(path.join(publicRoot, "index.html"), catalogHtml(latest, releases), "utf8");
-  const buildSummary = { catalog: path.join(publicRoot, "index.html"), latest_pptx: path.join(publicRoot, "latest.pptx"), releases: built.map(({ id }) => id) };
+  const buildSummary = { catalog: path.join(publicRoot, "index.html"), latest_html: path.join(publicRoot, latest.id, "index.html"), latest_pdf: path.join(publicRoot, "latest.pdf"), releases: built.map(({ id }) => id) };
   process.stdout.write(`${JSON.stringify(buildSummary)}\n`);
 }
 

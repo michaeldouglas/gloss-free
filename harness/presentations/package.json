@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "slidev decks/2026-10-25-baseline/slides.md",
+    "dev": "bun run ../core/scripts/build-presentations.ts --preview",
     "build": "bun run ../core/scripts/build-presentations.ts"
   },
   "devDependencies": {
