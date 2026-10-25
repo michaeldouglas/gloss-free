@@ -22,7 +22,7 @@ try {
 $command = [string]$event.tool_input.command
 if (-not $command) { exit 0 }
 
-$relevant = $command -match '(?im)^\*\*\*\s+(?:Update|Add|Delete)\s+File:\s+(?:\.\.[/\\]app[/\\]|specs[/\\]|\.specify[/\\]|\.agents[/\\]|\.codex[/\\]|AGENTS\.md)'
+$relevant = $command -match '(?im)^\*\*\*\s+(?:Update|Add|Delete)\s+File:\s+(?:\.\.[/\\]app[/\\]|specs[/\\]|\.specify[/\\]|\.agents[/\\]|\.codex[/\\]|artifacts[/\\](?:architecture|reports)[/\\]|scripts[/\\]build_showroom\.py|AGENTS\.md)'
 if (-not $relevant) { exit 0 }
 
 $root = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
@@ -58,4 +58,16 @@ if (Test-Path -LiteralPath $architectureScript) {
     }
 }
 
-Emit-PostMessage "Graphify was incrementally refreshed after the relevant edit. The canonical output remains harness/graphify-out/. $architectureMessage" 'Canonical Graphify and architecture state refreshed.'
+$showroomMessage = 'Showroom refresh skipped; the generator is unavailable.'
+$showroomScript = Join-Path $root 'harness/scripts/build_showroom.py'
+$uv = Get-Command uv -ErrorAction SilentlyContinue
+if (Test-Path -LiteralPath $showroomScript -and $null -ne $uv) {
+    $null = @(& $uv.Source run --project (Join-Path $root 'app') python $showroomScript --repo-root $root 2>&1 | Out-String)
+    if ($LASTEXITCODE -eq 0) {
+        $showroomMessage = 'Showroom atualizado em docs/ a partir dos artefatos derivados.'
+    } else {
+        $showroomMessage = 'Showroom refresh falhou; execute o notebook ou revise o gerador.'
+    }
+}
+
+Emit-PostMessage "Graphify was incrementally refreshed after the relevant edit. The canonical output remains harness/graphify-out/. $architectureMessage $showroomMessage" 'Canonical Graphify, architecture and showroom state refreshed.'
