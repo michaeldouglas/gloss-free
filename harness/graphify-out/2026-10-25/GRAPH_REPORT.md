@@ -1,11 +1,11 @@
 # Graph Report - harness  (2026-10-25)
 
 ## Corpus Check
-- 706 files · ~2,102,530 words
+- 706 files · ~2,102,717 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 17076 nodes · 44904 edges · 688 communities (637 shown, 51 thin omitted)
+- 17077 nodes · 44906 edges · 683 communities (632 shown, 51 thin omitted)
 - Extraction: 81% EXTRACTED · 19% INFERRED · 0% AMBIGUOUS · INFERRED: 8621 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
@@ -52,7 +52,7 @@
 - Microscopy and Scientific Imaging Formats
 - Exploratory Data Analysis
 - Execution Steps
-- route-quality.mjs
+- dataflow-compiler.mjs
 - Proteomics and Metabolomics Formats
 - display_identifier
 - Statistical Analysis
@@ -213,10 +213,10 @@
 - hooks.test.ts
 - chunk-OHNBJXQ2-DaDYlfgg.js
 - initGlobalBar
-- render-erd.mjs
+- constructor
 - chunk-II7VFZ6N-DAmTOYV2.js
 - render-lifecycle.mjs
-- parse
+- func3
 - generated-validators.mjs
 - properties
 - spec-kit.ts
@@ -244,7 +244,7 @@
 - path-semantics.mjs
 - properties
 - brand-marks.mjs
-- render-architecture.mjs
+- render-erd.mjs
 - citation_tracker.py
 - properties
 - YAYTP6L5.js
@@ -297,9 +297,9 @@
 - required
 - properties
 - datetime
-- gc
+- V
 - Authoring contract
-- repository-evidence.mjs
+- sources.mjs
 - properties
 - required
 - modern-screenshot.umd.js
@@ -352,7 +352,7 @@
 - waterfall.schema.json
 - generate-validators.mjs
 - Archify
-- rx
+- ad
 - Session Handoff Protocol
 - $ref
 - required
@@ -398,7 +398,7 @@
 - Built-in Components
 - initPageChat
 - impeccable/SKILL.md
-- dc
+- n
 - build-showroom.ts
 - usecaseDiagram-WIC6AC6W-eKah0XPF.js
 - artifacts/README.md
@@ -408,7 +408,7 @@
 - core.py
 - enum
 - enum
-- lines
+- properties
 - mainPath
 - meta
 - meta
@@ -419,7 +419,7 @@
 - enum
 - enum
 - meta
-- of
+- dc
 - DOCX Technical Requirements
 - data-storytelling — detailed patterns and worked examples
 - Authoring defaults
@@ -427,7 +427,7 @@
 - project-inventory.ts
 - Execution Waterfall Renderer
 - Project Session Management Skill
-- labelSegment
+- Mt
 - enum
 - enum
 - meta
@@ -437,10 +437,10 @@
 - n
 - live.md
 - via
-- t
+- shortcuts-DNVANo7H.js
 - cli.mjs
 - via
-- em
+- pb
 - Built-in Layouts
 - slides.md
 - start
@@ -449,18 +449,18 @@
 - search
 - chunk-VFTINRM2-D1PLwKSP.js
 - vennDiagram-UQOODVD3-Zam_uJrZ.js
-- shortcuts-DNVANo7H.js
+- setup
 - archify.mjs
 - labelSegment
 - dagre-WMVPSHVI-CFMM0grN.js
 - row
 - search_stack
 - Contrato científico do showroom
-- erDiagram-VZDIDQZ7-CI6jIzSw.js
+- mindmap-definition-JMILJEOR-DpvErTeT.js
 - _select_palette_for_mode
 - fn
 - enum
-- constructor
+- join
 - brand-marks/README.md
 - pele/README.md
 - manifest.json
@@ -491,13 +491,13 @@
 - animate.md
 - Handle `generate`
 - CatalogRefreshTest
-- M
+- has
 - onAnnotDown
 - .toString
 - elk-V4PLJRSU-BPyaOoU3.js
 - New visual work
 - optimize.md
-- prepare.mjs
+- values
 - Impeccable Asset Producer
 - Pre-Delivery Checklist (canonical — the only one)
 - Quick Reference
@@ -509,9 +509,9 @@
 - Generate Combined Critique Report
 - polish.md
 - quieter.md
-- wy
+- ec
 - presentations/package.json
-- U
+- gc
 - Init flow
 - Design Engineering
 - Common Cognitive Load Violations
@@ -550,15 +550,15 @@
 - Impeccable Documenter
 - Region map
 - Web Interface Guidelines
-- j
+- i
 - chunk-GBM4U3XT-BLNtb0L5.js
 - Core Philosophy
 - Debugging Animations
 - Heuristics Scoring Guide
 - architectureDiagram-X7FUPT5M-COs9MoIY.js
 - Animations
-- concat
-- pe
+- visit
+- So
 - Diagnostic Scan
 - showToast
 - CLI Commands
@@ -569,8 +569,8 @@
 - LA
 - Hosting & Deployment
 - build-presentations.ts
-- B
-- create
+- f_
+- M
 - Slidev Markdown Syntax
 - Adaptation Strategies
 - Slidev Skills for Claude Code
@@ -610,7 +610,7 @@
 - Integrated Editor
 - Notes Auto Ruby
 - chunk-LJKG65JO-Cw2eiejW.js
-- output-path.mjs
+- Jt
 - sequenceDiagram-HDG3M3BC-C-XH1nJC.js
 - detect_domain
 - classDiagram-v2-K6ZTA64I-Cr8vKybp.js
@@ -629,41 +629,41 @@
 - a
 - katex-SWIXSOGD-RbLBhLZk.js
 - quadrantDiagram-2IDJRW6B-CTnr6__e.js
-- li
+- col
 - required
-- ss
+- point
 - performSelfAnalysis
 - chunk-PIRVTUE5-DxeGTFAp.js
 - defineRule
 - checkIsTarget
-- properties
+- viewBox
 - vy
 - register
 - finalize
-- sources.mjs
+- validate45
 - collectValue
 - Y
 - htmlBuilder
-- cose-bilkent-7SFLS5CW--3U2wuqy.js
-- forEach
+- "../../node_modules/.pnpm/layout-base@1.0.2/node_modules/layout-base/layout-base.js"
+- flatMap
 - fetch
 - captureElementToBlob
-- om
+- col
 - s
 - diagrams.mjs
 - resolveLiveInjectionAnchor
-- chunk-7JZUCHNI-Dy_dI4Az.js
-- n
-- Ha
+- check-infrastructure.ts
+- r
+- lo
 - SlideWrapper-kXUqpAiV.js
 - enum
 - nodeSources
 - chunk-UETRLHRR-DkQUTw0g.js
 - expandOnce
-- cb
+- js
 - handler
-- enum
-- viewBox
+- validate20
+- height
 - syncEditBadgeHitProxies
 - slide-bottom.vue
 - pad
@@ -678,20 +678,15 @@
 - Frontmatter Merging
 - Eject Theme
 - enum
-- enum
 - at
 - toCol
 - Operate
-- row
 - portableOutputPath
 - width
 - row
 - stage
-- label
 - vite.config.ts
 - width
-- Wt
-- labelSegment
 - viewBox
 - col
 
@@ -722,7 +717,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (688 total, 51 thin omitted)
+## Communities (683 total, 51 thin omitted)
 
 ### Community 0 - "ValueError"
 Cohesion: 0.22
@@ -790,7 +785,7 @@ Nodes (26): Dependencies & Execution Order, Format: `[ID] [P?] [Story] Descripti
 
 ### Community 16 - "workflow-compiler.mjs"
 Cohesion: 0.06
-Nodes (76): clone(), diagnostic(), expandableViewBox(), legacyLayoutProbe(), legacyRequirementProbe(), migrateWorkflowDocument(), requiredViewBoxFrom(), result() (+68 more)
+Nodes (78): clone(), diagnostic(), expandableViewBox(), legacyLayoutProbe(), legacyRequirementProbe(), migrateWorkflowDocument(), requiredViewBoxFrom(), result() (+70 more)
 
 ### Community 17 - "speckit-analyze/SKILL.md"
 Cohesion: 0.08
@@ -868,9 +863,9 @@ Nodes (15): 1. Confirm authorization and root, 2. Manifest before content analys
 Cohesion: 0.12
 Nodes (15): 1. Initialize Convergence Context, 2. Load Artifacts (Progressive Disclosure), 3. Build the Intent Inventory, 4. Assess the Codebase and Classify Findings, 5. Assign Severity, 6. Present the In-Session Findings Summary, 7. Append Convergence Tasks (or report converged), 8. Provide Next Actions (Handoff) (+7 more)
 
-### Community 37 - "route-quality.mjs"
-Cohesion: 0.12
-Nodes (27): boundsForPoints(), boundsForRects(), cleanRouteDetourProblems(), collinearOverlap(), DEFAULTS, emptyControlPointClearance(), expandedRect(), inferredSide() (+19 more)
+### Community 37 - "dataflow-compiler.mjs"
+Cohesion: 0.09
+Nodes (61): busRouteConflict(), compileDataflow(), attempt(), build(), compactCorridors(), crossingFlows(), detourFor(), endpointStubs() (+53 more)
 
 ### Community 38 - "Proteomics and Metabolomics Formats"
 Cohesion: 0.13
@@ -1170,7 +1165,7 @@ Nodes (6): Bayesian Analysis, Example Report Templates, Independent T-Test, Mult
 
 ### Community 114 - ""../../node_modules/.pnpm/elkjs@0.9.3/node_modules/elkjs/lib/elk.bundled.js""
 Cohesion: 0.01
-Nodes (264): Bs(), Ea(), Hs(), Ms(), Od(), Pd(), Za(), Ro() (+256 more)
+Nodes (290): Au(), Bs(), Ea(), Hs(), Ms(), Pd(), Za(), Oi() (+282 more)
 
 ### Community 115 - "Entidades"
 Cohesion: 0.33
@@ -1293,8 +1288,8 @@ Cohesion: 0.83
 Nodes (3): fetch_page(), main(), normalize()
 
 ### Community 146 - "zd"
-Cohesion: 0.06
-Nodes (43): Tf(), a7e(), art(), bqe(), cae(), ch(), dge(), ds() (+35 more)
+Cohesion: 0.08
+Nodes (33): cct(), ck(), dge(), eit(), es(), f0e(), fg(), fi() (+25 more)
 
 ### Community 147 - "Evidence Table Template"
 Cohesion: 0.50
@@ -1314,7 +1309,7 @@ Nodes (3): Bundled Resources, References (`references/`), Scripts (`scripts/`)
 
 ### Community 155 - "geometry.mjs"
 Cohesion: 0.05
-Nodes (138): slideTitleOffRoutes(), validateArchitecture(), connectionEndpointSide(), busRouteConflict(), validateClassDiagram(), compileDataflow(), attempt(), build() (+130 more)
+Nodes (108): boundaryRect(), rectContains(), slideTitleOffRoutes(), validateArchitecture(), connectionEndpointSide(), validateClassDiagram(), validateDataflow(), validateEr() (+100 more)
 
 ### Community 190 - "package.json"
 Cohesion: 0.25
@@ -1326,19 +1321,19 @@ Nodes (25): acceptedDomAlreadyClean(), applyOriginalAttrsToSvelteAnchor(), clear
 
 ### Community 195 - "compileWorkflowInternal"
 Cohesion: 0.05
-Nodes (132): predictedFixedWidthOverflow(), workflow(), anchor(), joinRoutePoints(), variantAccent(), nodeCardStyle(), compileWorkflowInternal(), acceptsFix() (+124 more)
+Nodes (136): { ports, pathFor, inferredSides, connectionEndpointSide }, withDiagnosticRecordingSuppressed(), workflow(), anchor(), defaultFromSide(), defaultToSide(), joinRoutePoints(), legacyDefaultFromSide() (+128 more)
 
 ### Community 197 - "shiki-DSwSl4kt.js"
 Cohesion: 0.01
-Nodes (355): jp(), so(), e(), _a(), aa(), ac(), activated(), Ad() (+347 more)
+Nodes (424): Bf(), Ff(), Gf(), Nf(), jp(), e(), _a(), aa() (+416 more)
 
 ### Community 198 - "render-waterfall.mjs"
 Cohesion: 0.04
 Nodes (50): axisLabels, buildLayoutReport(), byId, children, cliArgs, details, { diagram: wf, template, outPath, sourceEvidence }, __dirname (+42 more)
 
 ### Community 199 - "hooks.test.ts"
-Cohesion: 0.09
-Nodes (34): appGraphPath, CommandRunner, handlePostToolUse(), isRelevantEdit(), commandText, destructive, lines, paths (+26 more)
+Cohesion: 0.10
+Nodes (31): appGraphPath, CommandRunner, handlePostToolUse(), isRelevantEdit(), commandText, destructive, lines, paths (+23 more)
 
 ### Community 200 - "chunk-OHNBJXQ2-DaDYlfgg.js"
 Cohesion: 0.01
@@ -1348,25 +1343,25 @@ Nodes (299): $a(), Cs(), Kl(), createHTML(), createScriptURL(), kn(), W(), Zt() 
 Cohesion: 0.09
 Nodes (40): agentHasWorkInFlight(), agentStatusText(), barPaletteForTheme(), brandMarkSvg(), buildDesignHeader(), cursorForInsertAxis(), designPanelCss(), detectPageTheme() (+32 more)
 
-### Community 202 - "render-erd.mjs"
-Cohesion: 0.04
-Nodes (81): bandedLayout(), DEFAULT_ER_GRID, entityHeight(), erGridLayout(), gridColumn(), resolvedEntityWidth(), resolveEntityPos(), validateErGridPlacement() (+73 more)
+### Community 202 - "constructor"
+Cohesion: 0.06
+Nodes (48): allElements(), ao(), bo(), Co(), constructor(), cs(), dn(), ds() (+40 more)
 
 ### Community 203 - "chunk-II7VFZ6N-DAmTOYV2.js"
 Cohesion: 0.01
-Nodes (188): addHiddenNodes(), al(), appendChild(), appendChildren(), AT_LEAST_ONE(), AT_LEAST_ONE1(), AT_LEAST_ONE2(), AT_LEAST_ONE3() (+180 more)
+Nodes (216): addHiddenNodes(), al(), appendChild(), appendChildren(), AT_LEAST_ONE(), AT_LEAST_ONE1(), AT_LEAST_ONE2(), AT_LEAST_ONE3() (+208 more)
 
 ### Community 204 - "render-lifecycle.mjs"
-Cohesion: 0.05
-Nodes (56): assignArcLevels(), assignTracks(), bracketOf, brackets, bracketTargets, canvasWidth, countCrossings(), depth (+48 more)
+Cohesion: 0.06
+Nodes (55): assignArcLevels(), assignTracks(), bracketOf, brackets, bracketTargets, canvasWidth, countCrossings(), depth (+47 more)
 
-### Community 205 - "parse"
-Cohesion: 0.08
-Nodes (50): qd(), cleanup(), enterRCDATA(), fastForwardTo(), finish(), handleAttrNameEnd(), handleAttrStart(), handleInAttrValue() (+42 more)
+### Community 205 - "func3"
+Cohesion: 0.10
+Nodes (34): func3(), validate27(), validate28(), validate30(), validate31(), validate33(), validate34(), validate36() (+26 more)
 
 ### Community 206 - "generated-validators.mjs"
 Cohesion: 0.03
-Nodes (114): func3(), pattern10, pattern11, pattern12, pattern13, pattern133, pattern14, pattern15 (+106 more)
+Nodes (73): pattern10, pattern11, pattern12, pattern13, pattern133, pattern14, pattern15, pattern16 (+65 more)
 
 ### Community 207 - "properties"
 Cohesion: 0.11
@@ -1381,20 +1376,20 @@ Cohesion: 0.07
 Nodes (66): addNodeMarker(), addState(), annotateArchitectureSideSvg(), architectureDeltaChangeRows(), ArchitectureDeltaError, BOUNDARY_FIELDS, boundaryChangeMap(), boundaryElements() (+58 more)
 
 ### Community 210 - "Z"
-Cohesion: 0.01
-Nodes (272): Z(), _3e(), ac(), aie(), am(), aoe(), ape(), ate() (+264 more)
+Cohesion: 0.02
+Nodes (227): Nd(), Z(), a6e(), aie(), aj(), ao(), aoe(), ape() (+219 more)
 
 ### Community 211 - "visual-check.mjs"
 Cohesion: 0.07
-Nodes (60): appendEvidenceCleanupWarning(), appendEvidencePublicationFailure(), baseReceipt(), beginVisualEvidenceWrite(), browserEnvironment(), CHROME_NO_SANDBOX_ENV, CHROME_STARTUP_TIMEOUT_MS, ChromeVisualBrowser (+52 more)
+Nodes (60): appendEvidenceCleanupWarning(), appendEvidencePublicationFailure(), baseReceipt(), beginVisualEvidenceWrite(), browserEnvironment(), CAPTURE_VIEWPORTS, CHROME_NO_SANDBOX_ENV, CHROME_STARTUP_TIMEOUT_MS (+52 more)
 
 ### Community 212 - "build_report"
 Cohesion: 0.38
 Nodes (10): build_recommendation(), build_report(), _evidence(), _fact(), Any, Stable report model and conservative recommendation policy for the skill., Build a deterministic report from live or fixture-shaped collector data., Return guidance only when evidence supports a bounded conclusion. (+2 more)
 
 ### Community 213 - "atomic-output.mjs"
-Cohesion: 0.13
-Nodes (53): captureOwnedDeliverySidecars(), stagePreviewCommit(), beginBuild(), commitCandidate(), args, backupOwnedPublishedEntry(), restoreOwnedBackup(), unlinkOwnedEntry() (+45 more)
+Cohesion: 0.10
+Nodes (57): captureOwnedDeliverySidecars(), args, backupOwnedPublishedEntry(), readRegularFileContents(), regularFileEvidence(), bytes, candidate, capture (+49 more)
 
 ### Community 214 - "live-browser.js"
 Cohesion: 0.03
@@ -1402,7 +1397,7 @@ Nodes (138): addManualContextText(), applyGlobalBarLabelState(), applyLiveBarPre
 
 ### Community 215 - "vue-Cc_VwK2l.js"
 Cohesion: 0.03
-Nodes (279): Mn(), Eo(), jo(), kt(), lt(), ni(), no(), rt() (+271 more)
+Nodes (267): Mn(), cc(), Eo(), jo(), lt(), Mo(), ni(), no() (+259 more)
 
 ### Community 216 - "connectSSE"
 Cohesion: 0.06
@@ -1410,7 +1405,7 @@ Nodes (83): applyParamDefaults(), applyParamValue(), applyPlaceholderDimensions(
 
 ### Community 217 - "check-render-output.mjs"
 Cohesion: 0.04
-Nodes (73): DECLARED_WIDE_READER_CONTRACT, DECLARED_WIDE_READER_MAX_WIDTH, DECLARED_WIDE_READER_RATIO, DECLARED_WIDE_REFERENCE_BODY_HORIZONTAL_PX, DECLARED_WIDE_REFERENCE_DIAGRAM_HORIZONTAL_PX, declaredWideReadabilityBudget(), describeFixedWidthOverflow(), DESKTOP_FIXED_VERTICAL_CHROME_PX (+65 more)
+Nodes (76): DECLARED_WIDE_READER_CONTRACT, DECLARED_WIDE_READER_MAX_WIDTH, DECLARED_WIDE_READER_RATIO, DECLARED_WIDE_REFERENCE_BODY_HORIZONTAL_PX, DECLARED_WIDE_REFERENCE_DIAGRAM_HORIZONTAL_PX, declaredWideReadabilityBudget(), describeFixedWidthOverflow(), DESKTOP_FIXED_VERTICAL_CHROME_PX (+68 more)
 
 ### Community 218 - "properties"
 Cohesion: 0.04
@@ -1418,31 +1413,31 @@ Nodes (49): $ref, type, type, maximum, minimum, type, $ref, minimum (+41 more)
 
 ### Community 219 - "finalize.mjs"
 Cohesion: 0.09
-Nodes (50): childPath, normalize(), startDeliveryUpdateCheck(), unavailable(), allChecksPassed(), browserEvidence(), captureReceipt(), compactFinalizeReceipt() (+42 more)
+Nodes (49): childPath, normalize(), startDeliveryUpdateCheck(), unavailable(), allChecksPassed(), browserEvidence(), captureReceipt(), compactFinalizeReceipt() (+41 more)
 
 ### Community 220 - "properties"
 Cohesion: 0.04
-Nodes (45): $ref, type, type, type, $ref, $ref, minimum, type (+37 more)
+Nodes (48): $ref, type, type, type, $ref, $ref, $ref, $ref (+40 more)
 
 ### Community 221 - "id"
-Cohesion: 0.07
-Nodes (45): $ref, properties, $ref, properties, type, properties, properties, properties (+37 more)
+Cohesion: 0.09
+Nodes (36): $ref, properties, $ref, properties, type, properties, properties, properties (+28 more)
 
 ### Community 222 - "createRouter"
-Cohesion: 0.13
-Nodes (45): createRouter(), alignFacingPorts(), automaticEndpoint(), cachePath(), candidateSidePairs(), collinearBacktrack(), collinearOverlapLength(), computePath() (+37 more)
+Cohesion: 0.12
+Nodes (48): createRouter(), alignFacingPorts(), automaticEndpoint(), cachePath(), candidateSidePairs(), collinearBacktrack(), collinearOverlapLength(), computePath() (+40 more)
 
 ### Community 223 - "properties"
 Cohesion: 0.05
 Nodes (44): $ref, $ref, $ref, $ref, $ref, properties, auto, orthogonal-h (+36 more)
 
 ### Community 224 - "preview.mjs"
-Cohesion: 0.09
-Nodes (38): failureDetails(), launchTarget(), launchTimeout(), openArtifact(), OPENERS, openLoopbackUrl(), atomicOutputError(), atomicOutputFailure() (+30 more)
+Cohesion: 0.11
+Nodes (39): failureDetails(), launchTarget(), launchTimeout(), openArtifact(), OPENERS, openLoopbackUrl(), atomicOutputError(), atomicOutputFailure() (+31 more)
 
 ### Community 225 - "$defs"
 Cohesion: 0.04
-Nodes (48): allOf, properties, required, type, additionalProperties, type, additionalProperties, type (+40 more)
+Nodes (45): allOf, properties, required, type, additionalProperties, type, additionalProperties, type (+37 more)
 
 ### Community 226 - "properties"
 Cohesion: 0.06
@@ -1450,35 +1445,35 @@ Nodes (43): items, maxItems, minItems, type, items, maxItems, minItems, type (+3
 
 ### Community 228 - "chunk-DLUCIBNR-1Od4TNCr.js"
 Cohesion: 0.02
-Nodes (87): de(), fe(), he(), J(), me(), pe(), q(), TODO: We should probably remove this in a future release. (+79 more)
+Nodes (102): de(), fe(), he(), J(), me(), pe(), q(), TODO: We should probably remove this in a future release. (+94 more)
 
 ### Community 229 - "UKSIWDDN.js"
 Cohesion: 0.09
 Nodes (54): D(), expect(), fail(), H(), j(), S(), take(), text() (+46 more)
 
 ### Community 230 - "path-semantics.mjs"
-Cohesion: 0.15
-Nodes (39): visualEvidenceOwnershipMatches(), absolutePath(), compareFutureLocations(), compareKnownEntries(), compareUnmaterializedNames(), containedBy(), futureWindowsNameRisk(), hasStableIdentity() (+31 more)
+Cohesion: 0.10
+Nodes (56): visualEvidenceOwnershipMatches(), authoredOutputDiagnostic(), nativeOutputDiagnostic(), OutputPathError, pathIsInside(), rejectWindowsIpcShare(), resolveNativeOutputDirectory(), throwNativeOutputDiagnostic() (+48 more)
 
 ### Community 231 - "properties"
 Cohesion: 0.05
-Nodes (37): maximum, minimum, type, $ref, type, $ref, $ref, type (+29 more)
+Nodes (39): $ref, type, $ref, $ref, type, properties, minLength, type (+31 more)
 
 ### Community 232 - "brand-marks.mjs"
 Cohesion: 0.10
 Nodes (36): asUrl(), BASIC_HTML_REFERENCES, beforeDeadline(), captureBrandReference(), captureRemoteBrand(), captureTimeoutMilliseconds(), checkedFetch(), COLLECTIONS (+28 more)
 
-### Community 233 - "render-architecture.mjs"
+### Community 233 - "render-erd.mjs"
 Cohesion: 0.02
-Nodes (201): DEFAULT_GRID, gridLayout(), resolveComponentPos(), validateGridPlacement(), architectureLegendEntries, autoViewBoxFor(), boundaryLabelWidth(), boundaryRect() (+193 more)
+Nodes (229): DEFAULT_GRID, gridLayout(), resolveComponentPos(), validateGridPlacement(), architectureLegendEntries, autoViewBoxFor(), boundaryLabelWidth(), buildLayoutReport() (+221 more)
 
 ### Community 234 - "citation_tracker.py"
 Cohesion: 0.36
 Nodes (17): action_close(), action_list(), action_record_cited(), action_record_papers_received(), action_record_search(), action_start(), action_status(), load_session() (+9 more)
 
 ### Community 235 - "properties"
-Cohesion: 0.05
-Nodes (42): description, maximum, minimum, multipleOf, type, $ref, $ref, $ref (+34 more)
+Cohesion: 0.06
+Nodes (36): $ref, $ref, $ref, properties, minLength, type, $ref, type (+28 more)
 
 ### Community 236 - "YAYTP6L5.js"
 Cohesion: 0.11
@@ -1497,12 +1492,12 @@ Cohesion: 0.18
 Nodes (10): additionalProperties, $id, diagram_type, meta, schema_version, required, $schema, title (+2 more)
 
 ### Community 240 - "render-class.mjs"
-Cohesion: 0.05
-Nodes (61): attributeText(), autoViewBox(), bands, busGroups, busPaths, cliArgs, compartments(), connectionEndpointSide() (+53 more)
+Cohesion: 0.04
+Nodes (75): attributeText(), autoViewBox(), bands, buildLayoutReport(), busGroups, busPaths, cliArgs, compartments() (+67 more)
 
 ### Community 241 - "index-iXOycd7m.js"
 Cohesion: 0.03
-Nodes (174): _a(), add(), addIn(), Ai(), Ao(), arc(), as(), at() (+166 more)
+Nodes (208): _a(), add(), addIn(), Ai(), Ao(), arc(), as(), at() (+200 more)
 
 ### Community 242 - "setLiveState"
 Cohesion: 0.09
@@ -1522,19 +1517,19 @@ Nodes (35): $t(), f(), l(), i(), o(), r(), t(), u() (+27 more)
 
 ### Community 246 - "$defs"
 Cohesion: 0.07
-Nodes (26): oneOf, $defs, brandMark, id, locale, point, qualityProfile, relationshipWidth (+18 more)
+Nodes (27): oneOf, $defs, brandMark, id, legendMode, locale, nodeIcon, qualityProfile (+19 more)
 
 ### Community 247 - "properties"
-Cohesion: 0.09
-Nodes (22): $ref, $ref, properties, type, animation, locale, output, quality_profile (+14 more)
+Cohesion: 0.07
+Nodes (28): $ref, $ref, properties, type, animation, locale, output, quality_profile (+20 more)
 
 ### Community 248 - "render.mjs"
-Cohesion: 0.14
-Nodes (21): row(), layoutExplainerPanels(), finish(), css, dictionaries, escape(), icons, js (+13 more)
+Cohesion: 0.07
+Nodes (40): checkExplainerHtml(), decode(), decodeURIComponentSafe(), isExplainerHtml(), scanHtml(), fileName(), parseExplainerDiff(), fail() (+32 more)
 
 ### Community 249 - "enum"
-Cohesion: 0.10
-Nodes (25): enum, componentType, nodeIcon, active, decision, external, failure, neutral (+17 more)
+Cohesion: 0.09
+Nodes (27): enum, enum, animation, componentType, active, decision, external, failure (+19 more)
 
 ### Community 250 - "Harness da dissertação"
 Cohesion: 0.29
@@ -1581,8 +1576,8 @@ Cohesion: 0.08
 Nodes (25): minimum, type, items, minItems, type, $ref, properties, $ref (+17 more)
 
 ### Community 261 - "explainer.schema.json"
-Cohesion: 0.15
-Nodes (12): additionalProperties, $id, diagram_type, meta, schema_version, required, $schema, title (+4 more)
+Cohesion: 0.08
+Nodes (24): additionalProperties, const, $id, diagram_type, meta, schema_version, additionalProperties, type (+16 more)
 
 ### Community 262 - "properties"
 Cohesion: 0.08
@@ -1613,8 +1608,8 @@ Cohesion: 0.09
 Nodes (22): repository, enum, link_mode, provider, revision, url, enum, additionalProperties (+14 more)
 
 ### Community 269 - "properties"
-Cohesion: 0.07
-Nodes (28): $ref, $ref, properties, $ref, animation, locale, output, quality_profile (+20 more)
+Cohesion: 0.09
+Nodes (22): $ref, $ref, properties, $ref, animation, locale, output, quality_profile (+14 more)
 
 ### Community 270 - "properties"
 Cohesion: 0.09
@@ -1653,8 +1648,8 @@ Cohesion: 0.10
 Nodes (19): additionalProperties, $defs, side, $id, bottom, diagram_type, left, meta (+11 more)
 
 ### Community 279 - "a"
-Cohesion: 0.05
-Nodes (161): Ic(), g(), jt(), _8e(), _9e(), a(), a5e(), a8e() (+153 more)
+Cohesion: 0.04
+Nodes (197): Bo(), Ps(), Rs(), g(), _3e(), _8e(), _9e(), a() (+189 more)
 
 ### Community 280 - "Session Management Best Practices"
 Cohesion: 0.06
@@ -1680,21 +1675,21 @@ Nodes (19): type, $ref, properties, change, default, enum, minLength, type (+11 
 Cohesion: 0.24
 Nodes (11): _parse_time(), build_query(), fetch_batch(), filter_by_year(), main(), parse_entry(), aggregate(), main() (+3 more)
 
-### Community 286 - "gc"
-Cohesion: 0.02
-Nodes (147): Eu(), Io(), V(), aft(), ah(), ahe(), ait(), aje() (+139 more)
+### Community 286 - "V"
+Cohesion: 0.03
+Nodes (125): Eu(), V(), a9e(), aft(), age(), ap(), b2e(), bde() (+117 more)
 
 ### Community 287 - "Authoring contract"
 Cohesion: 0.11
 Nodes (18): Authoring contract, Composition repair, Engineering profile default, Executable geometry rules, Explicit `via` coordinates, Hand-placed fallback, Label repair, Language consistency (+10 more)
 
-### Community 288 - "repository-evidence.mjs"
-Cohesion: 0.25
-Nodes (16): EVIDENCE_NODE_COLLECTIONS, evidenceFailure(), evidenceNodes(), gitValue(), hasRepositoryEvidence(), prefetchBlobs(), readBatchObjects(), runGit() (+8 more)
+### Community 288 - "sources.mjs"
+Cohesion: 0.15
+Nodes (31): chartFromData(), compileExplainerChart(), pieLegend(), deriveRepository(), digest(), fail(), gitBytes(), imageMime() (+23 more)
 
 ### Community 289 - "properties"
 Cohesion: 0.11
-Nodes (18): $ref, minItems, type, type, const, output, title, additionalProperties (+10 more)
+Nodes (18): type, $ref, minItems, type, const, output, title, additionalProperties (+10 more)
 
 ### Community 290 - "required"
 Cohesion: 0.14
@@ -1750,7 +1745,7 @@ Nodes (5): Controle utilizado, Issues e proveniência, Observação, Relatório 
 
 ### Community 303 - "required"
 Cohesion: 0.17
-Nodes (15): items, type, items, items, additionalProperties, required, type, from (+7 more)
+Nodes (15): items, items, items, type, additionalProperties, required, type, from (+7 more)
 
 ### Community 304 - "properties"
 Cohesion: 0.13
@@ -1900,9 +1895,9 @@ Nodes (10): ajv, diagramTypes, __dirname, output, portableOutputWrappers, RESERV
 Cohesion: 0.18
 Nodes (11): Archify, Choose the artifact, Delivery, Existing candidate handoff, Mermaid input, Native diagram authoring, Optional viewer capabilities, Output (+3 more)
 
-### Community 341 - "rx"
-Cohesion: 0.09
-Nodes (31): au(), bde(), bz(), cr(), cw(), cz(), dze(), ei() (+23 more)
+### Community 341 - "ad"
+Cohesion: 0.05
+Nodes (59): ad(), au(), ax(), bg(), bz(), cz(), d2e(), dze() (+51 more)
 
 ### Community 342 - "Session Handoff Protocol"
 Cohesion: 0.06
@@ -1993,8 +1988,8 @@ Cohesion: 0.40
 Nodes (5): enum, level, note, open-question, warning
 
 ### Community 364 - "k"
-Cohesion: 0.04
-Nodes (106): Be(), _6e(), aat(), aet(), ai(), b4e(), b7e(), b9e() (+98 more)
+Cohesion: 0.02
+Nodes (168): Be(), _4e(), aat(), abe(), ah(), ait(), ale(), att() (+160 more)
 
 ### Community 365 - "wraps"
 Cohesion: 0.25
@@ -2062,7 +2057,7 @@ Nodes (6): Design rules, Input, Layout, Legend and state marks, Lifecycle Render
 
 ### Community 381 - "chunk-6NZQATR6-DvoMvPU_.js"
 Cohesion: 0.01
-Nodes (80): Aa(), ac(), B(), Bc(), bd(), $c(), children(), Cl() (+72 more)
+Nodes (79): Aa(), ac(), B(), Bc(), bd(), $c(), children(), Cl() (+71 more)
 
 ### Community 382 - "Event Timeline Renderer"
 Cohesion: 0.33
@@ -2084,17 +2079,17 @@ Nodes (56): armPageChatForTyping(), attachSteerFocusDebug(), attachSteerFocusGua
 Cohesion: 0.06
 Nodes (32): Assess Adaptation Challenge, Implement & Verify, Recommended Actions, Recommended Actions, Craft (deprecated alias), Monorepo notes, Opting out of the boot check, Step 1: Run the pass (+24 more)
 
-### Community 387 - "dc"
-Cohesion: 0.04
-Nodes (82): Qu(), _4e(), _5e(), a1e(), abe(), ave(), c3e(), c8e() (+74 more)
+### Community 387 - "n"
+Cohesion: 0.15
+Nodes (24): ar(), cm(), Ir(), i(), l(), c(), Mf(), Mu() (+16 more)
 
 ### Community 388 - "build-showroom.ts"
-Cohesion: 0.18
-Nodes (30): assertShowroomNarrative(), buildShowroom(), collectPublishedSummaries(), collectSummaries(), countLabel(), datasetDashboardCard(), datasetLabel(), date() (+22 more)
+Cohesion: 0.17
+Nodes (31): assertShowroomNarrative(), buildShowroom(), collectPublishedSummaries(), collectSummaries(), countLabel(), datasetDashboardCard(), datasetLabel(), date() (+23 more)
 
 ### Community 389 - "usecaseDiagram-WIC6AC6W-eKah0XPF.js"
 Cohesion: 0.02
-Nodes (118): Ln(), Jn(), an(), AT_LEAST_ONE(), AT_LEAST_ONE1(), AT_LEAST_ONE2(), AT_LEAST_ONE3(), AT_LEAST_ONE4() (+110 more)
+Nodes (121): Ln(), Jn(), an(), AT_LEAST_ONE(), AT_LEAST_ONE1(), AT_LEAST_ONE2(), AT_LEAST_ONE3(), AT_LEAST_ONE4() (+113 more)
 
 ### Community 391 - "create-new-feature.ts"
 Cohesion: 0.12
@@ -2120,9 +2115,9 @@ Nodes (6): enum, fromCardinality, toCardinality, enum, many, one
 Cohesion: 0.33
 Nodes (6): auto, orthogonal-h, orthogonal-v, straight, route, enum
 
-### Community 397 - "lines"
-Cohesion: 0.33
-Nodes (6): items, maxItems, minItems, prefixItems, type, lines
+### Community 397 - "properties"
+Cohesion: 0.11
+Nodes (18): source, items, maxItems, minItems, prefixItems, type, $ref, lines (+10 more)
 
 ### Community 398 - "mainPath"
 Cohesion: 0.33
@@ -2138,7 +2133,7 @@ Nodes (6): output, title, additionalProperties, required, type, meta
 
 ### Community 401 - "i"
 Cohesion: 0.02
-Nodes (148): Au(), Oi(), _2e(), adt(), af(), ak(), aye(), bc() (+140 more)
+Nodes (191): Od(), Ro(), _2e(), ac(), af(), ak(), am(), aqe() (+183 more)
 
 ### Community 402 - "meta"
 Cohesion: 0.33
@@ -2164,9 +2159,9 @@ Nodes (6): blueprint, classic, editorial, signal-flow, visual_preset, enum
 Cohesion: 0.33
 Nodes (6): output, title, additionalProperties, required, type, meta
 
-### Community 408 - "of"
-Cohesion: 0.07
-Nodes (48): atLeastOneSepFirstInternalRecord(), a0e(), a3e(), a4e(), ag(), aut(), ba(), but() (+40 more)
+### Community 408 - "dc"
+Cohesion: 0.03
+Nodes (87): Qu(), Tf(), atLeastOneSepFirstInternalRecord(), _1e(), a0e(), a1e(), a3e(), ag() (+79 more)
 
 ### Community 409 - "DOCX Technical Requirements"
 Cohesion: 0.33
@@ -2196,9 +2191,9 @@ Nodes (4): Execution Waterfall Renderer, Input, Layout, Tested size
 Cohesion: 0.12
 Nodes (16): Automation Commands, Bundled Resources, Context Management, Creating SESSION.md for New Project, Expected Uncommitted Files (CRITICAL), Git Checkpoint Format, Integration with project-planning, Phases vs Sessions (+8 more)
 
-### Community 416 - "labelSegment"
-Cohesion: 0.67
-Nodes (3): minimum, type, labelSegment
+### Community 416 - "Mt"
+Cohesion: 0.17
+Nodes (20): Et(), Mt(), an(), At(), bt(), cn(), Dt(), fn() (+12 more)
 
 ### Community 417 - "enum"
 Cohesion: 0.40
@@ -2226,7 +2221,7 @@ Nodes (5): 4a. What the Research Shows, 4b. Key Papers, 4c. Key Search Terms, 4d
 
 ### Community 423 - "n"
 Cohesion: 0.03
-Nodes (129): aa(), ACTION(), after(), alternatives(), assign(), assignWithoutOverride(), ay(), ba() (+121 more)
+Nodes (149): aa(), ACTION(), after(), alternatives(), as(), assign(), assignWithoutOverride(), ay() (+141 more)
 
 ### Community 424 - "live.md"
 Cohesion: 0.06
@@ -2236,21 +2231,21 @@ Nodes (33): Apply at system scale, Audit before choosing, Choose a strategy, Con
 Cohesion: 0.50
 Nodes (4): $ref, via, items, type
 
-### Community 426 - "t"
-Cohesion: 0.08
-Nodes (113): bi(), bt(), callHook(), ct(), ds(), et(), fc(), fs() (+105 more)
+### Community 426 - "shortcuts-DNVANo7H.js"
+Cohesion: 0.05
+Nodes (145): bt(), Do(), et(), fc(), ie(), K(), ko(), t() (+137 more)
 
 ### Community 427 - "cli.mjs"
-Cohesion: 0.05
-Nodes (81): __dirname, applyLocaleTranslations(), isFilesystemError(), loadDiagram(), loadDiagramWithBrandMarks(), outputPathGuards, RELATIONSHIP_COLLECTIONS, SEMANTIC_COLLECTIONS (+73 more)
+Cohesion: 0.03
+Nodes (104): __dirname, applyLocaleTranslations(), isFilesystemError(), loadDiagram(), loadDiagramWithBrandMarks(), outputPathGuards, RELATIONSHIP_COLLECTIONS, SEMANTIC_COLLECTIONS (+96 more)
 
 ### Community 428 - "via"
 Cohesion: 0.50
 Nodes (4): $ref, via, items, type
 
-### Community 429 - "em"
-Cohesion: 0.06
-Nodes (46): Bo(), bwe(), df(), dwe(), edt(), em(), ert(), eve() (+38 more)
+### Community 429 - "pb"
+Cohesion: 0.10
+Nodes (21): am(), Yh(), d3e(), dd(), df(), dk(), fw(), gd() (+13 more)
 
 ### Community 430 - "Built-in Layouts"
 Cohesion: 0.07
@@ -2266,7 +2261,7 @@ Nodes (4): start, description, minimum, type
 
 ### Community 433 - "md-B-SsjALw.js"
 Cohesion: 0.04
-Nodes (73): lr(), Y(), aa(), Ai(), at(), bi(), bt(), clear() (+65 more)
+Nodes (74): lr(), Y(), _i(), aa(), Ai(), at(), bi(), bt() (+66 more)
 
 ### Community 434 - "bias"
 Cohesion: 0.50
@@ -2277,16 +2272,16 @@ Cohesion: 0.08
 Nodes (10): Resolve a deprecated in-domain alias, or expose a cross-domain redirect., Main search function with auto-domain detection, search(), _style_search_destination(), TestSearchDomains, read_rows(), TestStyleTaxonomy, read_rows() (+2 more)
 
 ### Community 436 - "chunk-VFTINRM2-D1PLwKSP.js"
-Cohesion: 0.04
-Nodes (115): Ge(), i(), insert(), n(), Qe(), r(), setData(), t() (+107 more)
+Cohesion: 0.03
+Nodes (128): Ge(), i(), insert(), n(), Qe(), r(), setData(), t() (+120 more)
 
 ### Community 437 - "vennDiagram-UQOODVD3-Zam_uJrZ.js"
-Cohesion: 0.12
-Nodes (40): Me(), He(), Ae(), C(), A(), F(), ce(), de() (+32 more)
+Cohesion: 0.09
+Nodes (57): B(), Fe(), Le(), Me(), Oe(), Pe(), v(), Ae() (+49 more)
 
-### Community 438 - "shortcuts-DNVANo7H.js"
-Cohesion: 0.02
-Nodes (177): Br(), Dr(), er(), Gr(), t(), init(), Je(), ie() (+169 more)
+### Community 438 - "setup"
+Cohesion: 0.03
+Nodes (107): Br(), er(), Gr(), t(), Kr(), mc(), qe(), qr() (+99 more)
 
 ### Community 439 - "archify.mjs"
 Cohesion: 0.06
@@ -2298,7 +2293,7 @@ Nodes (3): minimum, type, labelSegment
 
 ### Community 441 - "dagre-WMVPSHVI-CFMM0grN.js"
 Cohesion: 0.05
-Nodes (113): f(), Jt(), Kt(), l(), Qe(), v(), A(), Bt() (+105 more)
+Nodes (112): f(), Kt(), l(), Qe(), St(), Ut(), v(), A() (+104 more)
 
 ### Community 442 - "row"
 Cohesion: 0.67
@@ -2312,9 +2307,9 @@ Nodes (10): _exact_stack_identifier(), _project_row(), Resolve a standalone API 
 Cohesion: 0.33
 Nodes (5): Apresentação visual, Conteúdo obrigatório, Contrato científico do showroom, Fontes de verdade, Revisão de afirmações
 
-### Community 445 - "erDiagram-VZDIDQZ7-CI6jIzSw.js"
-Cohesion: 0.05
-Nodes (40): b(), f(), g(), h(), s(), m(), o(), O() (+32 more)
+### Community 445 - "mindmap-definition-JMILJEOR-DpvErTeT.js"
+Cohesion: 0.09
+Nodes (27): b(), f(), g(), h(), s(), m(), o(), O() (+19 more)
 
 ### Community 446 - "_select_palette_for_mode"
 Cohesion: 0.11
@@ -2322,15 +2317,15 @@ Nodes (14): _contrast_ratio(), _derive_dark_palette(), _palette_is_dark(), WCAG 
 
 ### Community 447 - "fn"
 Cohesion: 0.10
-Nodes (42): bg(), Bh(), cg(), dirty(), Dt(), eg(), et(), fg() (+34 more)
+Nodes (42): bg(), Bh(), cg(), Da(), dirty(), eg(), et(), fg() (+34 more)
 
 ### Community 448 - "enum"
 Cohesion: 0.50
 Nodes (4): enum, kind, region, security-group
 
-### Community 449 - "constructor"
-Cohesion: 0.04
-Nodes (78): ao(), av(), bo(), Br(), buildAlternationAmbiguityError(), buildAlternationPrefixAmbiguityError(), buildEarlyExitMessage(), buildMismatchTokenMessage() (+70 more)
+### Community 449 - "join"
+Cohesion: 0.06
+Nodes (47): av(), Br(), buildAlternationAmbiguityError(), buildAlternationPrefixAmbiguityError(), buildEarlyExitMessage(), buildMismatchTokenMessage(), buildNoViableAltMessage(), ca() (+39 more)
 
 ### Community 454 - "Data Storytelling"
 Cohesion: 0.18
@@ -2346,7 +2341,7 @@ Nodes (9): Blocked or Paused, Bug Fix During Verification, Context Full Mid-Phas
 
 ### Community 457 - "chunk-VTNK77LY-BvwWh2gb.js"
 Cohesion: 0.04
-Nodes (67): ut(), begin(), blockquote(), blockTokens(), br(), checkbox(), code(), codespan() (+59 more)
+Nodes (69): ut(), begin(), blockquote(), blockTokens(), br(), checkbox(), code(), codespan() (+61 more)
 
 ### Community 458 - "Frontend Design"
 Cohesion: 0.29
@@ -2377,8 +2372,8 @@ Cohesion: 0.08
 Nodes (23): Component translation rules, Narrative mapping, Pitfalls, Scan mode (approach C: auto-extract, then confirm descriptive language), Schema, Seed mode, Step 1: Find the design assets, Step 1: Route through new-work's workshop (+15 more)
 
 ### Community 465 - "visit"
-Cohesion: 0.04
-Nodes (99): accDescrStatement(), accTitleStatement(), actorDeclarationOnly(), actorDraft(), actorItem(), actorName(), actorOccurrence(), actorStatement() (+91 more)
+Cohesion: 0.05
+Nodes (88): accDescrStatement(), accTitleStatement(), actorDeclarationOnly(), actorDraft(), actorItem(), actorName(), actorOccurrence(), actorStatement() (+80 more)
 
 ### Community 466 - "onboard.md"
 Cohesion: 0.09
@@ -2406,7 +2401,7 @@ Nodes (17): Before Delivering App UI, Example Workflow, If a search returns 0 re
 
 ### Community 472 - "tn"
 Cohesion: 0.09
-Nodes (62): h(), r(), P(), Pa(), an(), A(), b(), C() (+54 more)
+Nodes (64): h(), Q(), r(), P(), Pa(), an(), A(), b() (+56 more)
 
 ### Community 473 - "actOnAgentTarget"
 Cohesion: 0.19
@@ -2432,9 +2427,9 @@ Nodes (14): Accessibility and control, Choose material by meaning, Find the job,
 Cohesion: 0.12
 Nodes (16): 1. Read the screenshot (if present), 2. Wrap the element, 3. Load the action's reference, 4. Plan three variants: identity first, then mode, then axes, 5. Apply the freeform prompt (if present), 6. Deliver variants, 7. Parameters (composition-sized, 0-4 per variant), 8. Signal done (+8 more)
 
-### Community 480 - "M"
-Cohesion: 0.03
-Nodes (117): add(), addAstNodeRegionWithAssignmentsTo(), cacheForContext(), cancelWrite(), checkSourceFrameTypes(), clear(), cn(), constructInfix() (+109 more)
+### Community 480 - "has"
+Cohesion: 0.04
+Nodes (84): add(), addAstNodeRegionWithAssignmentsTo(), cacheForContext(), checkSourceFrameTypes(), clear(), cn(), construct(), constructInfix() (+76 more)
 
 ### Community 481 - "onAnnotDown"
 Cohesion: 0.18
@@ -2442,11 +2437,11 @@ Nodes (18): beginEditPin(), buildAnnotationsForCapture(), buildPinElement(), can
 
 ### Community 482 - ".toString"
 Cohesion: 0.04
-Nodes (76): a(), addDocument(), bc(), build(), buildDocuments(), buildEmptyAlternationError(), buildKeywordTokens(), buildTerminalTokens() (+68 more)
+Nodes (80): addDocument(), B(), build(), buildDocuments(), buildKeywordTokens(), buildTerminalToken(), buildTerminalTokens(), buildTokens() (+72 more)
 
 ### Community 483 - "elk-V4PLJRSU-BPyaOoU3.js"
 Cohesion: 0.04
-Nodes (92): At(), Es(), Rt(), Ut(), Qt(), Ae(), an(), at() (+84 more)
+Nodes (96): At(), Es(), Qt(), Ae(), an(), at(), bt(), cn() (+88 more)
 
 ### Community 484 - "New visual work"
 Cohesion: 0.14
@@ -2456,9 +2451,9 @@ Nodes (14): 1. Decide what is already true, 2. Ask what will change the work, 3.
 Cohesion: 0.14
 Nodes (13): Animation Performance, Assess Performance Issues, Core Web Vitals Optimization, Cumulative Layout Shift (CLS < 0.1), Interaction to Next Paint (INP < 200ms), Largest Contentful Paint (LCP < 2.5s), Loading Performance, Network Optimization (+5 more)
 
-### Community 486 - "prepare.mjs"
+### Community 486 - "values"
 Cohesion: 0.12
-Nodes (29): checkExplainerHtml(), decode(), decodeURIComponentSafe(), isExplainerHtml(), scanHtml(), packPageBundle(), swap(), unpackPageBundle() (+21 more)
+Nodes (18): all(), bv(), collectValues(), dv(), ev(), fv(), mv(), nv() (+10 more)
 
 ### Community 487 - "Impeccable Asset Producer"
 Cohesion: 0.15
@@ -2504,17 +2499,17 @@ Nodes (10): 1. Establish the system, 2. Gather the evidence, 3. Triage, 4. Polis
 Cohesion: 0.18
 Nodes (10): Assess Current State, Color Refinement, Composition Refinement, Motion Reduction, Plan Refinement, Refine the Design, Simplification, Verify Quality (+2 more)
 
-### Community 498 - "wy"
+### Community 498 - "ec"
 Cohesion: 0.03
-Nodes (83): El(), Fd(), am(), Yh(), Dl(), kl(), alt(), bdt() (+75 more)
+Nodes (73): El(), Fd(), Os(), alt(), are(), b3e(), b6e(), bl() (+65 more)
 
 ### Community 499 - "presentations/package.json"
 Cohesion: 0.11
 Nodes (18): @fontsource/atkinson-hyperlegible, @fontsource/crimson-pro, playwright-chromium, dependencies, @fontsource/atkinson-hyperlegible, @fontsource/crimson-pro, playwright-chromium, @slidev/theme-default (+10 more)
 
-### Community 500 - "U"
+### Community 500 - "gc"
 Cohesion: 0.02
-Nodes (127): Nd(), U(), _7e(), act(), age(), ant(), aot(), ast() (+119 more)
+Nodes (241): As(), Ic(), Io(), U(), _5e(), _6e(), _7e(), a5e() (+233 more)
 
 ### Community 501 - "Init flow"
 Cohesion: 0.20
@@ -2565,8 +2560,8 @@ Cohesion: 0.12
 Nodes (16): $clicks, Composables, Conditional Rendering Examples, $frontmatter, Global Context & API, Lifecycle Hooks, $nav, $page (+8 more)
 
 ### Community 513 - "LA_FAST"
-Cohesion: 0.04
-Nodes (71): Zc(), addToResyncTokens(), atLeastOneInternalLogic(), atLeastOneSepFirstInternalLogic(), attemptInRepetitionRecovery(), BACKTRACK(), buildFullFollowKeyStack(), buildLookaheadForAlternation() (+63 more)
+Cohesion: 0.05
+Nodes (67): Zc(), addToResyncTokens(), atLeastOneInternalLogic(), atLeastOneSepFirstInternalLogic(), attemptInRepetitionRecovery(), BACKTRACK(), buildFullFollowKeyStack(), canPerformInRuleRecovery() (+59 more)
 
 ### Community 514 - "Generate Report"
 Cohesion: 0.29
@@ -2625,8 +2620,8 @@ Cohesion: 0.33
 Nodes (6): Damping at boundaries, Friction instead of hard stops, Gesture and Drag Interactions, Momentum-based dismissal, Multi-touch protection, Pointer capture for drag
 
 ### Community 528 - "swimlanes-7KI25NP3-B2B6gYJ_.js"
-Cohesion: 0.08
-Nodes (104): De(), Et(), Mt(), St(), Fn(), K(), A(), ae() (+96 more)
+Cohesion: 0.12
+Nodes (80): De(), Fn(), K(), A(), ae(), b(), be(), bn() (+72 more)
 
 ### Community 529 - "viewBox"
 Cohesion: 0.33
@@ -2664,13 +2659,13 @@ Nodes (4): Containment, Painted material, Region map, What varies independently
 Cohesion: 0.40
 Nodes (4): Guidelines Source, How It Works, Usage, Web Interface Guidelines
 
-### Community 541 - "j"
-Cohesion: 0.03
-Nodes (127): Os(), a9e(), ad(), ale(), ax(), b1e(), b5e(), b6e() (+119 more)
+### Community 541 - "i"
+Cohesion: 0.21
+Nodes (12): ensureBeforeEOL(), getEOLCharacters(), getLineOffsets(), getLineRange(), getText(), getUpdatedText(), i(), i() (+4 more)
 
 ### Community 543 - "chunk-GBM4U3XT-BLNtb0L5.js"
 Cohesion: 0.04
-Nodes (52): a(), Am(), bh(), ch(), Dm(), Em(), fh(), fn() (+44 more)
+Nodes (50): Am(), au(), bh(), ch(), Dm(), Em(), fh(), gh() (+42 more)
 
 ### Community 544 - "Core Philosophy"
 Cohesion: 0.50
@@ -2692,13 +2687,13 @@ Nodes (37): clear(), constructor(), de(), fe(), ge(), e(), getConfig(), getConfi
 Cohesion: 0.12
 Nodes (15): Animations, Built-in Transitions, Click Animations, Click Positioning, CSS Classes, Custom Click Count, Custom Transitions, Default Animation CSS (+7 more)
 
-### Community 549 - "concat"
-Cohesion: 0.08
-Nodes (43): buildLeftRecursionError(), _c(), checkIsTarget(), concat(), oo(), vc(), visit(), visitAlternation() (+35 more)
+### Community 549 - "visit"
+Cohesion: 0.09
+Nodes (29): checkIsTarget(), oo(), visit(), visitAlternation(), visitAlternative(), visitChildren(), visitDisjunction(), visitEndAnchor() (+21 more)
 
-### Community 550 - "pe"
-Cohesion: 0.29
-Nodes (12): be(), _e(), a(), G(), K(), me(), pe(), m() (+4 more)
+### Community 550 - "So"
+Cohesion: 0.22
+Nodes (9): jo(), n(), po(), So(), r(), To(), n(), yo() (+1 more)
 
 ### Community 551 - "Diagnostic Scan"
 Cohesion: 0.33
@@ -2740,13 +2735,13 @@ Nodes (13): Base Path, Build for Production, Custom Dockerfile, Docker, GitHub A
 Cohesion: 0.31
 Nodes (10): build(), catalogHtml(), defaultPaths, escapeHtml(), isObject(), JsonObject, parseArgs(), readJson() (+2 more)
 
-### Community 561 - "B"
-Cohesion: 0.04
-Nodes (56): ai(), all(), allElements(), B(), bn(), ci(), collectValues(), count() (+48 more)
+### Community 561 - "f_"
+Cohesion: 0.06
+Nodes (32): ai(), bn(), ci(), createDescription(), createInfoDescriptions(), createScope(), documentationLinkRenderer(), ee() (+24 more)
 
-### Community 562 - "create"
-Cohesion: 0.04
-Nodes (55): awaitBuilderState(), awaitDocumentState(), Bb(), create(), createAsync(), createLangiumDocument(), createTextDocumentGetter(), Eb() (+47 more)
+### Community 562 - "M"
+Cohesion: 0.07
+Nodes (43): a(), awaitBuilderState(), awaitDocumentState(), cancelWrite(), dispose(), end(), enqueue(), error() (+35 more)
 
 ### Community 563 - "Slidev Markdown Syntax"
 Cohesion: 0.17
@@ -2802,11 +2797,11 @@ Nodes (6): Browse Icons, Icons, Installation, Popular Collections, Styling, Usag
 
 ### Community 576 - "xychartDiagram-CU35J34J-D3_rp0jc.js"
 Cohesion: 0.08
-Nodes (45): Q(), pt(), alignTo(), build(), C(), calculateHorizontalSpace(), calculateOffsetByRotation(), calculateSpace() (+37 more)
+Nodes (44): pt(), alignTo(), build(), C(), calculateHorizontalSpace(), calculateOffsetByRotation(), calculateSpace(), calculateSpaceIfDrawnHorizontally() (+36 more)
 
 ### Community 577 - "Ia"
-Cohesion: 0.09
-Nodes (20): Aa(), Ae(), Da(), De(), Ge(), He(), o(), Ia() (+12 more)
+Cohesion: 0.08
+Nodes (22): Aa(), Ae(), Da(), De(), Ge(), He(), o(), Ia() (+14 more)
 
 ### Community 578 - "Generate PDF when Building"
 Cohesion: 0.33
@@ -2902,11 +2897,11 @@ Nodes (4): Configuration, Example, Notes Auto Ruby, Use Case
 
 ### Community 601 - "chunk-LJKG65JO-Cw2eiejW.js"
 Cohesion: 0.06
-Nodes (38): addLink(), addNodeFromVertex(), addSingleLink(), addSubGraph(), addVertex(), clear(), constructor(), countChar() (+30 more)
+Nodes (37): addLink(), addNodeFromVertex(), addSingleLink(), addSubGraph(), addVertex(), clear(), constructor(), countChar() (+29 more)
 
-### Community 602 - "output-path.mjs"
-Cohesion: 0.24
-Nodes (17): authoredOutputDiagnostic(), nativeOutputDiagnostic(), OutputPathError, pathIsInside(), rejectWindowsIpcShare(), resolveNativeOutputDirectory(), throwNativeOutputDiagnostic(), validateAuthoredOutputPath() (+9 more)
+### Community 602 - "Jt"
+Cohesion: 0.25
+Nodes (8): Jt(), Rt(), Wt(), Yt(), ct(), ot(), st(), xt()
 
 ### Community 603 - "sequenceDiagram-HDG3M3BC-C-XH1nJC.js"
 Cohesion: 0.08
@@ -2930,7 +2925,7 @@ Nodes (3): Comps, Directions, Read
 
 ### Community 608 - "render-sequence.mjs"
 Cohesion: 0.07
-Nodes (49): arrowClass, automaticHeight, compositionFrames, contentBottom, __dirname, layout, legacySegmentLabelBox(), LEGEND_CATALOG (+41 more)
+Nodes (49): ensureAutoLegendFits(), renderLegend(), autoViewBox(), legendLayout(), arrowClass, automaticHeight, compositionFrames, contentBottom (+41 more)
 
 ### Community 609 - "peekChar"
 Cohesion: 0.11
@@ -2946,23 +2941,23 @@ Nodes (6): viewBox, items, maxItems, minItems, prefixItems, type
 
 ### Community 612 - "stateDiagram-v2-MYRXERYP-BFCpBCKR.js"
 Cohesion: 0.07
-Nodes (30): Te(), Oe(), addDescription(), addLink(), addRelation(), addRelationObjs(), addState(), addStyleClass() (+22 more)
+Nodes (30): Ee(), Te(), addDescription(), addLink(), addRelation(), addRelationObjs(), addState(), addStyleClass() (+22 more)
 
 ### Community 613 - "sankeyDiagram-KZ7VQICK-Du2Lcx6L.js"
 Cohesion: 0.09
 Nodes (35): ae(), ce(), D(), E(), F(), H(), I(), ie() (+27 more)
 
 ### Community 614 - "Vt"
-Cohesion: 0.15
-Nodes (16): dn(), dt(), gn(), hn(), Ht(), I(), jt(), kt() (+8 more)
+Cohesion: 0.09
+Nodes (25): ae(), buildUnableToPopLexerModeMessage(), buildUnexpectedCharactersMessage(), computeNewColumn(), dn(), dt(), gn(), handleModes() (+17 more)
 
 ### Community 615 - "peekChar"
 Cohesion: 0.12
 Nodes (45): alternative(), assertion(), atom(), atomEscape(), bi(), characterClass(), characterClassEscape(), classAtom() (+37 more)
 
 ### Community 616 - "ra"
-Cohesion: 0.17
-Nodes (16): Ar(), computeRuleType(), cr(), ea(), Fn(), fr(), getNameNode(), ia() (+8 more)
+Cohesion: 0.11
+Nodes (24): Ar(), computeRuleType(), cr(), DEFINE_RULE(), ea(), Fn(), fr(), getNameNode() (+16 more)
 
 ### Community 617 - ".generate"
 Cohesion: 0.16
@@ -2973,24 +2968,24 @@ Cohesion: 0.08
 Nodes (44): a(), Ze(), a(), accept(), Ar(), bn(), br(), buildDuplicateFoundError() (+36 more)
 
 ### Community 619 - "katex-SWIXSOGD-RbLBhLZk.js"
-Cohesion: 0.07
-Nodes (17): An(), bn(), extend(), getAttribute(), hasClass(), havingBaseSizing(), havingBaseStyle(), havingSize() (+9 more)
+Cohesion: 0.06
+Nodes (22): An(), bn(), endGroup(), endGroups(), extend(), formatUnsupportedCmd(), formLigatures(), get() (+14 more)
 
 ### Community 620 - "quadrantDiagram-2IDJRW6B-CTnr6__e.js"
 Cohesion: 0.09
 Nodes (28): A(), build(), C(), calculateSpace(), clear(), constructor(), D(), E() (+20 more)
 
-### Community 621 - "li"
-Cohesion: 0.22
-Nodes (9): expandMacro(), expandMacroAsText(), get(), _getExpansion(), lex(), li(), S(), x() (+1 more)
+### Community 621 - "col"
+Cohesion: 0.33
+Nodes (6): description, maximum, minimum, multipleOf, type, col
 
 ### Community 622 - "required"
 Cohesion: 0.24
 Nodes (10): items, additionalProperties, required, type, id, label, items, type (+2 more)
 
-### Community 623 - "ss"
-Cohesion: 0.17
-Nodes (16): et(), i(), gs(), lc(), oc(), Os(), ps(), r() (+8 more)
+### Community 623 - "point"
+Cohesion: 0.33
+Nodes (6): point, items, maxItems, minItems, prefixItems, type
 
 ### Community 624 - "performSelfAnalysis"
 Cohesion: 0.08
@@ -2998,7 +2993,7 @@ Nodes (29): Ai(), atLeastOneInternalRecord(), atLeastOneSepFirstInternalRecord()
 
 ### Community 625 - "chunk-PIRVTUE5-DxeGTFAp.js"
 Cohesion: 0.04
-Nodes (71): pe(), calculate(), constructor(), updateColors(), C(), d(), el(), f() (+63 more)
+Nodes (67): pe(), calculate(), constructor(), updateColors(), C(), d(), el(), f() (+59 more)
 
 ### Community 626 - "defineRule"
 Cohesion: 0.22
@@ -3006,87 +3001,87 @@ Nodes (9): buildDuplicateRuleNameError(), cstFinallyStateUpdate(), cstInvocation
 
 ### Community 627 - "checkIsTarget"
 Cohesion: 0.13
-Nodes (25): r(), checkIsTarget(), $e(), Je(), nt(), Qe(), tt(), updateExpectedNext() (+17 more)
+Nodes (26): r(), checkIsTarget(), $e(), Je(), nt(), Qe(), startWalking(), tt() (+18 more)
 
-### Community 628 - "properties"
-Cohesion: 0.12
-Nodes (17): additionalProperties, required, type, const, additionalProperties, type, properties, answer (+9 more)
+### Community 628 - "viewBox"
+Cohesion: 0.33
+Nodes (6): viewBox, items, maxItems, minItems, prefixItems, type
 
 ### Community 629 - "vy"
-Cohesion: 0.06
-Nodes (41): addExportedSymbol(), addLocalSymbol(), buildKeywordPattern(), buildKeywordToken(), cb(), collectExportedSymbols(), collectExportedSymbolsForNode(), collectLocalSymbols() (+33 more)
+Cohesion: 0.07
+Nodes (39): addExportedSymbol(), addLocalSymbol(), cb(), collectExportedSymbols(), collectExportedSymbolsForNode(), collectLocalSymbols(), createDescriptions(), fy() (+31 more)
 
 ### Community 630 - "register"
-Cohesion: 0.12
-Nodes (33): addEntry(), AT(), ax(), BT(), cy(), DE(), DT(), ensureBeforeEOL() (+25 more)
+Cohesion: 0.13
+Nodes (31): addEntry(), AT(), ax(), BT(), cy(), DE(), DT(), fE() (+23 more)
 
 ### Community 631 - "finalize"
 Cohesion: 0.12
 Nodes (27): zo(), applyActorProperty(), applyClassDefinitions(), applyClassesAndStyles(), applyDeclarationMetadata(), applyMetadataAssignments(), applyStandaloneElementMetadata(), collectBoundary() (+19 more)
 
-### Community 632 - "sources.mjs"
-Cohesion: 0.19
-Nodes (22): chartFromData(), compileExplainerChart(), pieLegend(), fileName(), parseExplainerDiff(), fail(), finishHunk(), startFile() (+14 more)
+### Community 632 - "validate45"
+Cohesion: 0.50
+Nodes (4): validate45(), validate46(), validate48(), validate50()
 
 ### Community 633 - "collectValue"
-Cohesion: 0.33
-Nodes (9): collect(), collectArray(), collectObject(), collectValue(), consumeLiteral(), consumeNumber(), deletePointerSubtree(), readString() (+1 more)
+Cohesion: 0.29
+Nodes (10): Ao(), collect(), collectArray(), collectObject(), collectValue(), consumeLiteral(), consumeNumber(), deletePointerSubtree() (+2 more)
 
 ### Community 634 - "Y"
-Cohesion: 0.24
-Nodes (24): ag(), Bg(), Cg(), Dg(), Eg(), Fg(), Hg(), Ig() (+16 more)
+Cohesion: 0.21
+Nodes (26): ag(), Bg(), Cg(), Dg(), Eg(), Fg(), Hg(), Ig() (+18 more)
 
 ### Community 635 - "htmlBuilder"
 Cohesion: 0.11
-Nodes (26): b(), constructor(), f(), feed(), Fi(), fontMetrics(), getColor(), havingCrampedStyle() (+18 more)
+Nodes (27): b(), constructor(), f(), feed(), Fi(), fontMetrics(), getColor(), havingCrampedStyle() (+19 more)
 
-### Community 636 - "cose-bilkent-7SFLS5CW--3U2wuqy.js"
-Cohesion: 0.18
+### Community 636 - ""../../node_modules/.pnpm/layout-base@1.0.2/node_modules/layout-base/layout-base.js""
+Cohesion: 0.16
 Nodes (22): d(), f(), g(), h(), m(), "../../node_modules/.pnpm/cose-base@1.0.3/node_modules/cose-base/cose-base.js"(), a(), o() (+14 more)
 
-### Community 637 - "forEach"
-Cohesion: 0.05
-Nodes (54): ac(), accept(), as(), buildDuplicateFoundError(), buildEmptyRepetitionError(), buildNamespaceConflictError(), buildTooManyAlternativesError(), cc() (+46 more)
+### Community 637 - "flatMap"
+Cohesion: 0.09
+Nodes (31): ac(), accept(), bc(), buildDuplicateFoundError(), buildEmptyAlternationError(), buildEmptyRepetitionError(), buildLookaheadForAlternation(), buildLookaheadForOptional() (+23 more)
 
 ### Community 638 - "fetch"
-Cohesion: 0.27
-Nodes (18): ai(), consume(), consumeSpaces(), expect(), fetch(), formatUnsupportedCmd(), formLigatures(), handleSupSubscript() (+10 more)
+Cohesion: 0.24
+Nodes (22): ai(), beginGroup(), callFunction(), consume(), consumeSpaces(), expect(), fetch(), handleInfixNodes() (+14 more)
 
 ### Community 639 - "captureElementToBlob"
 Cohesion: 0.12
 Nodes (20): averageRgb01(), captureChromeNodes(), captureElementFromRenderedAncestor(), captureElementToBlob(), compileShader(), cssColorToRgb01(), dominantRgb01(), findBackdropAncestor() (+12 more)
 
-### Community 640 - "om"
-Cohesion: 0.07
-Nodes (51): As(), al(), bg(), brt(), c5e(), cde(), cet(), ct() (+43 more)
+### Community 640 - "col"
+Cohesion: 0.50
+Nodes (4): maximum, minimum, type, col
 
 ### Community 641 - "s"
-Cohesion: 0.18
-Nodes (20): au(), b(), du(), fu(), ju(), ku(), lh(), s() (+12 more)
+Cohesion: 0.24
+Nodes (16): b(), du(), fu(), lh(), s(), C(), D(), E() (+8 more)
 
 ### Community 642 - "diagrams.mjs"
-Cohesion: 0.14
-Nodes (27): attrs(), changesPreview(), compileExplainerDiagram(), decode(), duplicateCheck(), fail(), freezeBytes(), inferredId() (+19 more)
+Cohesion: 0.11
+Nodes (40): attrs(), changesPreview(), compileExplainerDiagram(), decode(), duplicateCheck(), fail(), freezeBytes(), inferredId() (+32 more)
 
 ### Community 643 - "resolveLiveInjectionAnchor"
 Cohesion: 0.16
 Nodes (19): buildSvelteExpressionTextMap(), buildSveltePropValuesFromLiveElement(), buildSveltePropValuesV2(), cloneWithoutElements(), collectTextNodes(), collectVisibleTexts(), cssEscapeIdent(), elementMatchesOriginalMarkup() (+11 more)
 
-### Community 644 - "chunk-7JZUCHNI-Dy_dI4Az.js"
-Cohesion: 0.29
-Nodes (15): arcTo(), build(), lineTo(), measureText(), moveTo(), renderChoice(), renderDiagram(), renderExpression() (+7 more)
+### Community 644 - "check-infrastructure.ts"
+Cohesion: 0.50
+Nodes (3): config, configPath, errors
 
-### Community 645 - "n"
-Cohesion: 0.12
-Nodes (45): ar(), c(), cm(), cu(), b(), d(), f(), g() (+37 more)
+### Community 645 - "r"
+Cohesion: 0.17
+Nodes (26): a(), c(), cu(), b(), d(), f(), g(), h() (+18 more)
 
-### Community 646 - "Ha"
-Cohesion: 0.14
-Nodes (12): Bo(), eo(), Ga(), Ha(), r(), Ja(), n(), lo() (+4 more)
+### Community 646 - "lo"
+Cohesion: 0.21
+Nodes (8): eo(), Ga(), Ja(), n(), lo(), oo(), n(), ro()
 
 ### Community 647 - "SlideWrapper-kXUqpAiV.js"
 Cohesion: 0.04
-Nodes (76): K(), ot(), qe(), Ye(), $e(), u(), a(), acceptsInput() (+68 more)
+Nodes (78): ct(), ht(), st(), ut(), vt(), yt(), it(), mn() (+70 more)
 
 ### Community 648 - "enum"
 Cohesion: 0.33
@@ -3101,24 +3096,24 @@ Cohesion: 0.29
 Nodes (14): b(), c(), d(), f(), g(), h(), l(), m() (+6 more)
 
 ### Community 651 - "expandOnce"
-Cohesion: 0.29
-Nodes (13): consumeArg(), consumeArgs(), countExpansion(), expandAfterFuture(), expandNextToken(), expandOnce(), expandTokens(), future() (+5 more)
+Cohesion: 0.24
+Nodes (15): consumeArg(), consumeArgs(), countExpansion(), expandAfterFuture(), expandMacro(), expandMacroAsText(), expandNextToken(), expandOnce() (+7 more)
 
-### Community 652 - "cb"
-Cohesion: 0.13
-Nodes (23): Ps(), Rs(), a_e(), at(), cb(), d5e(), eft(), eot() (+15 more)
+### Community 652 - "js"
+Cohesion: 0.08
+Nodes (39): a4e(), a_e(), aet(), art(), b9e(), bze(), cne(), e1e() (+31 more)
 
 ### Community 653 - "handler"
 Cohesion: 0.15
-Nodes (16): beginGroup(), callFunction(), ci(), endGroup(), endGroups(), er(), handleInfixNodes(), handler() (+8 more)
+Nodes (14): ci(), er(), _getExpansion(), handler(), has(), lex(), $n(), Pt() (+6 more)
 
-### Community 654 - "enum"
-Cohesion: 0.40
-Nodes (5): legendMode, auto, enum, all, hidden
+### Community 654 - "validate20"
+Cohesion: 0.67
+Nodes (3): validate20(), validate22(), validate24()
 
-### Community 655 - "viewBox"
-Cohesion: 0.33
-Nodes (6): viewBox, items, maxItems, minItems, prefixItems, type
+### Community 655 - "height"
+Cohesion: 0.67
+Nodes (3): minimum, type, height
 
 ### Community 656 - "syncEditBadgeHitProxies"
 Cohesion: 0.27
@@ -3133,16 +3128,16 @@ Cohesion: 0.67
 Nodes (3): minimum, type, pad
 
 ### Community 659 - "parseGroupOfType"
-Cohesion: 0.31
-Nodes (9): parseArgumentGroup(), parseArguments(), parseColorGroup(), parseGroupOfType(), parseSizeGroup(), parseStringGroup(), parseUrlGroup(), setCatcode() (+1 more)
+Cohesion: 0.43
+Nodes (7): parseArguments(), parseColorGroup(), parseGroupOfType(), parseSizeGroup(), parseStringGroup(), parseUrlGroup(), setCatcode()
 
 ### Community 660 - "t"
-Cohesion: 0.08
-Nodes (30): go(), is(), n(), jo(), n(), n(), Ko(), n() (+22 more)
+Cohesion: 0.07
+Nodes (41): Bo(), et(), i(), go(), gs(), Ha(), r(), is() (+33 more)
 
 ### Community 661 - "$ref"
-Cohesion: 0.09
-Nodes (22): properties, items, maxItems, minItems, type, items, maxItems, minItems (+14 more)
+Cohesion: 0.07
+Nodes (27): additionalProperties, properties, required, type, items, maxItems, minItems, type (+19 more)
 
 ### Community 662 - "viewBox"
 Cohesion: 0.33
@@ -3176,10 +3171,6 @@ Nodes (4): Command, Eject Theme, Result, Use Case
 Cohesion: 0.33
 Nodes (6): side, bottom, left, right, top, enum
 
-### Community 670 - "enum"
-Cohesion: 0.50
-Nodes (4): enum, animation, none, trace
-
 ### Community 671 - "at"
 Cohesion: 0.50
 Nodes (4): description, pattern, type, at
@@ -3191,10 +3182,6 @@ Nodes (4): toCol, maximum, minimum, type
 ### Community 673 - "Operate"
 Cohesion: 0.50
 Nodes (3): Comps, Directions, Operate
-
-### Community 674 - "row"
-Cohesion: 0.67
-Nodes (3): row, minimum, type
 
 ### Community 675 - "portableOutputPath"
 Cohesion: 0.33
@@ -3212,21 +3199,9 @@ Nodes (4): row, maximum, minimum, type
 Cohesion: 0.67
 Nodes (3): stage, minimum, type
 
-### Community 680 - "label"
-Cohesion: 0.67
-Nodes (3): minLength, type, label
-
 ### Community 683 - "width"
 Cohesion: 0.50
 Nodes (4): width, minimum, $ref, type
-
-### Community 684 - "Wt"
-Cohesion: 0.50
-Nodes (4): Qt(), Wt(), Yt(), Zt()
-
-### Community 685 - "labelSegment"
-Cohesion: 0.67
-Nodes (3): minimum, type, labelSegment
 
 ### Community 686 - "viewBox"
 Cohesion: 0.33
@@ -3244,11 +3219,11 @@ Nodes (3): minimum, type, col
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `transition()` connect `render-lifecycle.mjs` to `index-iXOycd7m.js`?**
+- **Why does `transition()` connect `index-iXOycd7m.js` to `render-lifecycle.mjs`?**
   _High betweenness centrality (0.122) - this node is a cross-community bridge._
-- **Why does `"../../node_modules/.pnpm/elkjs@0.9.3/node_modules/elkjs/lib/elk.bundled.js"()` connect `"../../node_modules/.pnpm/elkjs@0.9.3/node_modules/elkjs/lib/elk.bundled.js"` to `om`, `LA_FAST`, `s`, `dc`, `n`, `Ha`, `forEach`, `usecaseDiagram-WIC6AC6W-eKah0XPF.js`, `cb`, `handler`, `swimlanes-7KI25NP3-B2B6gYJ_.js`, `i`, `zd`, `t`, `a`, `of`, `j`, `gc`, `chunk-GBM4U3XT-BLNtb0L5.js`, `concat`, `n`, `t`, `em`, `LA`, `B`, `create`, `md-B-SsjALw.js`, `chunk-VFTINRM2-D1PLwKSP.js`, `shortcuts-DNVANo7H.js`, `dagre-WMVPSHVI-CFMM0grN.js`, `fn`, `Ia`, `constructor`, `shiki-DSwSl4kt.js`, `chunk-OHNBJXQ2-DaDYlfgg.js`, `chunk-II7VFZ6N-DAmTOYV2.js`, `parse`, `Z`, `rx`, `vue-Cc_VwK2l.js`, `tn`, `M`, `peekChar`, `.toString`, `elk-V4PLJRSU-BPyaOoU3.js`, `chunk-DLUCIBNR-1Od4TNCr.js`, `Vt`, `ra`, `a`, `katex-SWIXSOGD-RbLBhLZk.js`, `k`, `chunk-PIRVTUE5-DxeGTFAp.js`, `wy`, `index-iXOycd7m.js`, `U`, `vy`, `register`, `Y`, `htmlBuilder`, `chunk-6NZQATR6-DvoMvPU_.js`?**
-  _High betweenness centrality (0.120) - this node is a cross-community bridge._
-- **Why does `asArray()` connect `geometry.mjs` to `render-sequence.mjs`, `compileWorkflowInternal`, `route-quality.mjs`, `render-waterfall.mjs`, `render-architecture.mjs`, `render-erd.mjs`, `render-lifecycle.mjs`, `render-class.mjs`, `workflow-compiler.mjs`?**
+- **Why does `"../../node_modules/.pnpm/elkjs@0.9.3/node_modules/elkjs/lib/elk.bundled.js"()` connect `"../../node_modules/.pnpm/elkjs@0.9.3/node_modules/elkjs/lib/elk.bundled.js"` to `LA_FAST`, `n`, `r`, `lo`, `flatMap`, `usecaseDiagram-WIC6AC6W-eKah0XPF.js`, `js`, `handler`, `swimlanes-7KI25NP3-B2B6gYJ_.js`, `i`, `zd`, `t`, `a`, `dc`, `V`, `chunk-GBM4U3XT-BLNtb0L5.js`, `Mt`, `So`, `n`, `shortcuts-DNVANo7H.js`, `pb`, `LA`, `md-B-SsjALw.js`, `M`, `chunk-VFTINRM2-D1PLwKSP.js`, `setup`, `dagre-WMVPSHVI-CFMM0grN.js`, `fn`, `Ia`, `join`, `shiki-DSwSl4kt.js`, `chunk-OHNBJXQ2-DaDYlfgg.js`, `constructor`, `chunk-II7VFZ6N-DAmTOYV2.js`, `Z`, `ad`, `vue-Cc_VwK2l.js`, `tn`, `Jt`, `has`, `peekChar`, `.toString`, `elk-V4PLJRSU-BPyaOoU3.js`, `chunk-DLUCIBNR-1Od4TNCr.js`, `stateDiagram-v2-MYRXERYP-BFCpBCKR.js`, `ra`, `a`, `katex-SWIXSOGD-RbLBhLZk.js`, `k`, `chunk-PIRVTUE5-DxeGTFAp.js`, `ec`, `index-iXOycd7m.js`, `gc`, `register`, `Y`, `htmlBuilder`, `chunk-6NZQATR6-DvoMvPU_.js`?**
+  _High betweenness centrality (0.119) - this node is a cross-community bridge._
+- **Why does `asArray()` connect `geometry.mjs` to `render-sequence.mjs`, `compileWorkflowInternal`, `dataflow-compiler.mjs`, `render-waterfall.mjs`, `render-erd.mjs`, `cli.mjs`, `render-lifecycle.mjs`, `render-class.mjs`, `workflow-compiler.mjs`, `check-render-output.mjs`?**
   _High betweenness centrality (0.015) - this node is a cross-community bridge._
 - **Are the 2325 inferred relationships involving `"../../node_modules/.pnpm/elkjs@0.9.3/node_modules/elkjs/lib/elk.bundled.js"()` (e.g. with `$a()` and `Aa()`) actually correct?**
   _`"../../node_modules/.pnpm/elkjs@0.9.3/node_modules/elkjs/lib/elk.bundled.js"()` has 2325 INFERRED edges - model-reasoned connections that need verification._

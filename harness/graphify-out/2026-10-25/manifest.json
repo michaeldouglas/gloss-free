@@ -2622,15 +2622,15 @@
     "semantic_hash": ""
   },
   "tests/hooks.test.ts": {
-    "mtime": 1792966517.6529045,
-    "seen": 1792966709.2362568,
-    "ast_hash": "cef30464e6ef2f0a2a3d7bedba7255e5",
+    "mtime": 1792966879.4840877,
+    "seen": 1792967259.5203717,
+    "ast_hash": "70a343da13a43777ac346520ab477a7d",
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1792965937.3832703,
-    "seen": 1792966154.0448937,
-    "ast_hash": "340c92d5df1b210a87ad8acc6dd8f4aa",
+    "mtime": 1792966879.4860892,
+    "seen": 1792967259.591521,
+    "ast_hash": "0a9dbc10ecba2873a9fd1cc99e1b2972",
     "semantic_hash": ""
   },
   "core/hooks/post-tool-use.ts": {
@@ -2688,9 +2688,9 @@
     "semantic_hash": ""
   },
   "core/scripts/build-showroom.ts": {
-    "mtime": 1792966517.6513999,
-    "seen": 1792966709.2201843,
-    "ast_hash": "1ca108b1a84815bbc6a2c018ffdfa7e7",
+    "mtime": 1792966894.812996,
+    "seen": 1792967259.4801602,
+    "ast_hash": "4c6015a544b489a96763acf06e4a16ab",
     "semantic_hash": ""
   },
   "core/scripts/check-infrastructure.ts": {
@@ -2748,9 +2748,9 @@
     "semantic_hash": ""
   },
   "core/assets/showroom-project.json": {
-    "mtime": 1792965759.1246262,
-    "seen": 1792966153.9831533,
-    "ast_hash": "5c60ff632dfa9aeaf77da15ec734d980",
+    "mtime": 1792966879.4816477,
+    "seen": 1792967259.4773169,
+    "ast_hash": "79dda0e95d9e6a54519c3a36e1a3eee4",
     "semantic_hash": ""
   },
   "core/assets/showroom-report-contract.md": {

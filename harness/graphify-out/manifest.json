@@ -2382,33 +2382,33 @@
     "semantic_hash": ""
   },
   "artifacts/architecture/architecture-refresh.json": {
-    "mtime": 1792966496.4516325,
-    "seen": 1792966709.2173662,
-    "ast_hash": "7b465b8bb7e166a1cea45e9f76de624e",
+    "mtime": 1792967673.4462,
+    "seen": 1792968209.9243166,
+    "ast_hash": "7c9cd6697eae71f53c8f92339573a5e3",
     "semantic_hash": ""
   },
   "artifacts/architecture/html/libras-data-pipeline.browser-check.json": {
-    "mtime": 1792966496.209507,
-    "seen": 1792966709.2173696,
-    "ast_hash": "ea88b66188332e277c40eb676797d616",
+    "mtime": 1792967670.9590628,
+    "seen": 1792968209.9243202,
+    "ast_hash": "631cc46b977ff007e7bc4f3f401b7209",
     "semantic_hash": ""
   },
   "artifacts/architecture/html/libras-data-pipeline.delivery.json": {
-    "mtime": 1792966405.0659804,
-    "seen": 1792966709.2173715,
-    "ast_hash": "d0ac9c318962a827eb50630696dba2d7",
+    "mtime": 1792967576.1113,
+    "seen": 1792968209.9243224,
+    "ast_hash": "4b14f35728a4270223187fb61f3e8314",
     "semantic_hash": ""
   },
   "artifacts/architecture/html/libras-data-pipeline.finalize-summary.json": {
-    "mtime": 1792966496.3423235,
-    "seen": 1792966709.2173736,
-    "ast_hash": "ac49c0a96b4ddead4239432242b6efcf",
+    "mtime": 1792967672.548847,
+    "seen": 1792968209.9243236,
+    "ast_hash": "c26fe99d4d9e176d6887ff8f446436fa",
     "semantic_hash": ""
   },
   "artifacts/architecture/html/libras-data-pipeline.finalize.json": {
-    "mtime": 1792966496.2642384,
-    "seen": 1792966709.2173753,
-    "ast_hash": "b6cb7e10c03ac4f8004b7b43b3f7a4b7",
+    "mtime": 1792967672.0190024,
+    "seen": 1792968209.9243245,
+    "ast_hash": "33e7c5ff03e9e60d4acc4d6c7db29b32",
     "semantic_hash": ""
   },
   "artifacts/architecture/html/libras-data-pipeline.review-2/libras-data-pipeline.finalize-summary.json": {
@@ -2454,14 +2454,14 @@
     "semantic_hash": ""
   },
   "artifacts/reports/latest.json": {
-    "mtime": 1792946541.6267784,
-    "seen": 1792946568.6829355,
-    "ast_hash": "7eb69c34052f6b70a8a66f131c37ab0b",
+    "mtime": 1792967572.1465409,
+    "seen": 1792968209.9257064,
+    "ast_hash": "90e61b59e8bc422c36975f024ae48696",
     "semantic_hash": ""
   },
   "artifacts/architecture/html/libras-data-pipeline.html": {
-    "mtime": 1792966404.849471,
-    "seen": 1792966709.270105,
+    "mtime": 1792967575.8083098,
+    "seen": 1792968209.9992328,
     "ast_hash": "b42117b1a1dc761efa0d4fe58471615b",
     "semantic_hash": ""
   },
@@ -2484,9 +2484,9 @@
     "semantic_hash": ""
   },
   "artifacts/reports/latest.md": {
-    "mtime": 1792946541.6313772,
-    "seen": 1792946568.6833959,
-    "ast_hash": "198427116e321827dd369b7769d1492d",
+    "mtime": 1792967572.1395197,
+    "seen": 1792968209.9997988,
+    "ast_hash": "f6a64038f8b5103eee4f36200a2c05b6",
     "semantic_hash": ""
   },
   "artifacts/architecture/html/libras-data-pipeline.review-3/visual-check/libras-data-pipeline.visual-check.1440x900.dark.png": {
@@ -3318,9 +3318,9 @@
     "semantic_hash": ""
   },
   "core/scripts/build-presentations.ts": {
-    "mtime": 1792960520.8341098,
-    "seen": 1792960704.2885904,
-    "ast_hash": "dd94051728ec1fd1a119dd293a35c985",
+    "mtime": 1792967801.4442112,
+    "seen": 1792968209.9272478,
+    "ast_hash": "03a34415828a7623e97451b649add43c",
     "semantic_hash": ""
   },
   "core/scripts/prepare-presentation-release.ts": {
@@ -3708,9 +3708,9 @@
     "semantic_hash": ""
   },
   "artifacts/reports/publications/index.json": {
-    "mtime": 1792956338.465723,
-    "seen": 1792956426.1515667,
-    "ast_hash": "3d96dc4cf31f0f76cf822eca33e2a074",
+    "mtime": 1792967679.1000428,
+    "seen": 1792968209.9258673,
+    "ast_hash": "887cf43461e57365efa734b24770d9a5",
     "semantic_hash": ""
   },
   "presentations/docs/apresentacoes/2026-10-25-baseline/assets/SlideWrapper-kXUqpAiV.js": {
@@ -4452,9 +4452,9 @@
     "semantic_hash": ""
   },
   "presentations/setup/main.ts": {
-    "mtime": 1792956906.2002096,
-    "seen": 1792956972.336541,
-    "ast_hash": "6ff70d1138138ad97dfb83c9029aaf73",
+    "mtime": 1792967845.9734652,
+    "seen": 1792968209.9508862,
+    "ast_hash": "cea06017a57a6af20ad636fd6cdbe235",
     "semantic_hash": ""
   },
   "presentations/docs/apresentacoes/2026-10-25-baseline/404.html": {
@@ -4491,6 +4491,30 @@
     "mtime": 1792960511.5764506,
     "seen": 1792960704.3380456,
     "ast_hash": "a391a0f65b616d82c46d4b76ed3f58e0",
+    "semantic_hash": ""
+  },
+  "artifacts/reports/publications/2026-10-25-progresso.json": {
+    "mtime": 1792967679.1000428,
+    "seen": 1792968209.9258647,
+    "ast_hash": "be719c216e243cbc279a9ddf3aa1e6ab",
+    "semantic_hash": ""
+  },
+  "presentations/decks/2026-10-25-progresso/release.json": {
+    "mtime": 1792967837.3710697,
+    "seen": 1792968209.93061,
+    "ast_hash": "d41fa39237bd1c4f96be731efdc1b10b",
+    "semantic_hash": ""
+  },
+  "artifacts/reports/executions/minds-libras-raw_20261025_193252.md": {
+    "mtime": 1792967572.1385028,
+    "seen": 1792968209.9997962,
+    "ast_hash": "f6a64038f8b5103eee4f36200a2c05b6",
+    "semantic_hash": ""
+  },
+  "presentations/decks/2026-10-25-progresso/slides.md": {
+    "mtime": 1792967837.3710697,
+    "seen": 1792968210.000109,
+    "ast_hash": "b510f3b0fdcae797ba48fb098b7bf116",
     "semantic_hash": ""
   }
 }
