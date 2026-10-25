@@ -1,4 +1,5 @@
 import { afterEach, describe, expect, test } from "bun:test";
+import { createHash } from "node:crypto";
 import { mkdtemp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
@@ -181,10 +182,29 @@ describe("showroom generation", () => {
     await writeFile(path.join(harness, "artifacts", "reports", "latest.md"), "Relatório de teste");
     const projectConfig = await readFile(path.join(root, "core", "assets", "showroom-project.json"), "utf8");
     const project = JSON.parse(projectConfig);
+    const fixtureVideo = Buffer.from("fixture video bytes");
+    const fixturePoster = Buffer.from("fixture poster bytes");
+    const fixtureSample = {
+      dataset: "demo",
+      label: "Sinal de demonstração",
+      filename: "demo.mp4",
+      publicPath: "media/validation/demo/demo.mp4",
+      posterPath: "media/validation/demo/demo.mp4.poster.jpg",
+      posterSha256: createHash("sha256").update(fixturePoster).digest("hex"),
+      posterTimestamp: "00:00:01.0",
+      sourceLabel: "Dataset de teste",
+      sourceUrl: "https://example.org/dataset/demo.mp4",
+      sourceRevision: "0123456789abcdef0123456789abcdef01234567",
+      sha256: createHash("sha256").update(fixtureVideo).digest("hex"),
+    };
+    project.mediaSamples = [fixtureSample];
     expect(project.researchFocus).toBe("Investigar representações visuais aprendidas por modelos profundos para apoiar a tradução de Libras para português escrito sem glosas.");
     expect(project.validationPurpose).toBe("Antes de avaliar modelos, esta etapa confere se as dimensões, a informação temporal, os arquivos e as anotações dos datasets são coerentes o bastante para sustentar experimentos reproduzíveis.");
     expect(project.interpretationLimit).toBe("GO e NO-GO resumem critérios de integridade e proveniência dos dados. Eles não medem qualidade linguística, qualidade de tradução nem desempenho de modelos.");
-    await writeFile(path.join(harness, "core", "assets", "showroom-project.json"), projectConfig);
+    await mkdir(path.join(docs, "media", "validation", "demo"), { recursive: true });
+    await writeFile(path.join(docs, fixtureSample.publicPath), fixtureVideo);
+    await writeFile(path.join(docs, fixtureSample.posterPath), fixturePoster);
+    await writeFile(path.join(harness, "core", "assets", "showroom-project.json"), JSON.stringify(project));
     await writeFile(path.join(harness, "artifacts", "architecture", "html", "pipeline.html"), "<h1>Pipeline</h1>");
     await writeFile(path.join(temp, "app", "data", "processed", "metadata-validation", "demo", "reports", "metadata_summary.json"), JSON.stringify({ dataset: "demo", decision: "GO", counts: { physical_videos: 5, annotations: 5, manifest_rows: 5, issues: 1, by_severity: { INFO: 1 } }, key_reconciliation: { matched: 5, missing: 0, extra: 0, filesystem_key_column: "video_id" } }));
     await writeFile(path.join(harness, "core", "assets", "showroom.css"), "body{}");
@@ -194,6 +214,7 @@ describe("showroom generation", () => {
     expect(result).toMatchObject({ datasets: 1, architecture_files: 1 });
     const homepage = await Bun.file(path.join(docs, "index.html")).text();
     const latestReport = await Bun.file(path.join(docs, "reports", "latest.html")).text();
+    const validation = await Bun.file(path.join(docs, "validation", "index.html")).text();
     expect(homepage).toContain("Pesquisa de tradução de Libras");
     expect(homepage).toContain("O problema e o objetivo científico");
     expect(homepage).toContain("Tradução de Libras para português escrito");
@@ -211,6 +232,23 @@ describe("showroom generation", () => {
     expect(homepage).toContain('href="reports/latest.html"');
     expect(homepage).toContain("1 GO");
     expect(homepage).toContain("1 apontamento na auditoria");
+    expect(validation).toContain('controls preload="none" playsinline');
+    expect(validation).toContain('src="../media/validation/demo/demo.mp4"');
+    expect(validation).toContain('poster="../media/validation/demo/demo.mp4.poster.jpg"');
+    expect(validation).toContain('aria-describedby="sample-demo-description"');
+    expect(validation).toContain("Sinal de demonstração");
+    expect(validation).toContain("Dataset de teste");
+    expect((validation.match(/<video\b/g) ?? []).length).toBe(1);
+    expect(validation).toContain('class="sample-player"');
+    expect(validation).toContain('class="sample-play-button" type="button" aria-label="Reproduzir');
+    expect(validation).toContain('data-sample-play hidden');
+    expect(validation).toContain('video.play().catch');
+    expect(validation).toContain('button.hidden = !video.paused && !video.ended;');
+    expect(validation).toContain("A decisão GO refere-se à integridade");
+    expect(await Bun.file(path.join(docs, fixtureSample.publicPath)).text()).toBe(fixtureVideo.toString());
+    expect(await Bun.file(path.join(docs, fixtureSample.posterPath)).text()).toBe(fixturePoster.toString());
+    const publishedData = JSON.parse(await Bun.file(path.join(docs, "data", "showroom.json")).text());
+    expect(publishedData.media_samples[0]).toMatchObject({ dataset: "demo", sha256: fixtureSample.sha256, size_bytes: fixtureVideo.byteLength, poster_sha256: fixtureSample.posterSha256, poster_timestamp: fixtureSample.posterTimestamp, poster_size_bytes: fixturePoster.byteLength });
     expect(homepage).toContain('class="skip-link" href="#main-content"');
     expect(homepage).toContain('aria-current="page"');
     expect(homepage).not.toContain('class="section-kicker"');

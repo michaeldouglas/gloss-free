@@ -1,6 +1,6 @@
 {
   "schema_version": "showroom.v1",
-  "generated_at": "2026-10-25T21:29:32.258Z",
+  "generated_at": "2026-10-25T22:21:38.233Z",
   "latest": {
     "schema_version": "execution-report.v1",
     "dataset": "minds-libras-raw",
@@ -72,6 +72,42 @@
   ],
   "architecture": [
     "libras-data-pipeline.html"
+  ],
+  "media_samples": [
+    {
+      "dataset": "minds-libras-raw",
+      "label": "Sinal “Acontecer” · Sinalizador 01",
+      "filename": "01AcontecerSinalizador01-1.mp4",
+      "public_path": "media/validation/minds-libras-raw/01AcontecerSinalizador01-1.mp4",
+      "poster_path": "media/validation/minds-libras-raw/01AcontecerSinalizador01-1.mp4.poster.jpg",
+      "poster_url": "../media/validation/minds-libras-raw/01AcontecerSinalizador01-1.mp4.poster.jpg",
+      "poster_sha256": "78F57FCEB9F1DAB401FBDFB682438E0B43B87B8A1CDB54976CD7356CC5A15D6E",
+      "poster_timestamp": "00:00:02.2",
+      "poster_size_bytes": 40285,
+      "source_label": "MINDS-Libras · IBMEC São Paulo",
+      "source_url": "https://huggingface.co/datasets/ibmectech/minds-libras-raw/blob/a881a5a4330ec8b00bf6c80618f02fc66345f379/videos/01AcontecerSinalizador01-1.mp4",
+      "source_revision": "a881a5a4330ec8b00bf6c80618f02fc66345f379",
+      "sha256": "6C0B90502582B92E677F79648FEA524BAE365637FC071A1A893E083F7C0BC724",
+      "size_bytes": 34098608
+    },
+    {
+      "dataset": "v-librasil-raw",
+      "label": "Sinal “Abacaxi” · Articulador 1",
+      "filename": "Abacaxi_Articulador1.mp4",
+      "public_path": "media/validation/v-librasil-raw/Abacaxi_Articulador1.mp4",
+      "poster_path": "media/validation/v-librasil-raw/Abacaxi_Articulador1.mp4.poster.jpg",
+      "poster_url": "../media/validation/v-librasil-raw/Abacaxi_Articulador1.mp4.poster.jpg",
+      "poster_sha256": "828ED354C2B149D123C69D711C58A9A0C2C4054418576C03BD3C677880F9A06E",
+      "poster_timestamp": "00:00:01.5",
+      "poster_size_bytes": 30903,
+      "source_label": "V-LIBRASIL · UFPE",
+      "source_url": "https://libras.cin.ufpe.br/sign/817",
+      "source_revision": "d2d3e5e95574c4e0c5c20a7d82a24d52063e12d5",
+      "sha256": "7880B246D7F0F415B9CCC911AED546990F8455FBE130F8DC1EE2484601BEA53E",
+      "size_bytes": 4742515,
+      "mirror_label": "Cópia de aquisição no Hugging Face",
+      "mirror_url": "https://huggingface.co/datasets/ibmectech/v-librasil-raw/blob/d2d3e5e95574c4e0c5c20a7d82a24d52063e12d5/videos/Abacaxi_Articulador1.mp4"
+    }
   ],
   "scope": "Pesquisa, validação dos datasets e evidências disponíveis no projeto"
 }
