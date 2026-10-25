@@ -2382,33 +2382,33 @@
     "semantic_hash": ""
   },
   "artifacts/architecture/architecture-refresh.json": {
-    "mtime": 1792946535.068563,
-    "seen": 1792946568.682907,
-    "ast_hash": "2572939a29a53db2c5a1ae298fcd5a66",
+    "mtime": 1792948556.3401668,
+    "seen": 1792948632.9710164,
+    "ast_hash": "df9d23333eaca45bc4cd6c2e806d53b0",
     "semantic_hash": ""
   },
   "artifacts/architecture/html/libras-data-pipeline.browser-check.json": {
-    "mtime": 1792946534.8445578,
-    "seen": 1792946568.6829123,
-    "ast_hash": "8e6291173b7d789a30fa976d441bc231",
+    "mtime": 1792948556.1453836,
+    "seen": 1792948632.971018,
+    "ast_hash": "203cfc5ddbea07bd2bb0ebd91eeb09de",
     "semantic_hash": ""
   },
   "artifacts/architecture/html/libras-data-pipeline.delivery.json": {
-    "mtime": 1792946443.911455,
-    "seen": 1792946568.6829147,
-    "ast_hash": "210b925c70b2d1ae9d3658cf0bc241ed",
+    "mtime": 1792948465.1379755,
+    "seen": 1792948632.9710188,
+    "ast_hash": "d064253fd2b61acb67bc387c131c32cf",
     "semantic_hash": ""
   },
   "artifacts/architecture/html/libras-data-pipeline.finalize-summary.json": {
-    "mtime": 1792946534.9764297,
-    "seen": 1792946568.6829166,
-    "ast_hash": "4224a28956bce09b78ff3e5a435c0571",
+    "mtime": 1792948556.2599628,
+    "seen": 1792948632.9710195,
+    "ast_hash": "55c328418567f0ee23a45e0136510c91",
     "semantic_hash": ""
   },
   "artifacts/architecture/html/libras-data-pipeline.finalize.json": {
-    "mtime": 1792946534.8998833,
-    "seen": 1792946568.6829183,
-    "ast_hash": "52faad08595fe4973d4c06a103e85579",
+    "mtime": 1792948556.2012205,
+    "seen": 1792948632.9710202,
+    "ast_hash": "13dc3dd796418221092705c98ad2972f",
     "semantic_hash": ""
   },
   "artifacts/architecture/html/libras-data-pipeline.review-2/libras-data-pipeline.finalize-summary.json": {
@@ -2460,8 +2460,8 @@
     "semantic_hash": ""
   },
   "artifacts/architecture/html/libras-data-pipeline.html": {
-    "mtime": 1792946443.743334,
-    "seen": 1792946568.6833868,
+    "mtime": 1792948464.94195,
+    "seen": 1792948632.9711788,
     "ast_hash": "b42117b1a1dc761efa0d4fe58471615b",
     "semantic_hash": ""
   },
@@ -2622,9 +2622,9 @@
     "semantic_hash": ""
   },
   "tests/hooks.test.ts": {
-    "mtime": 1792946032.3498435,
-    "seen": 1792946064.1342587,
-    "ast_hash": "2273c2d3b46662b2bbb33b21dba6bd1c",
+    "mtime": 1792947632.2751718,
+    "seen": 1792947650.342529,
+    "ast_hash": "094dd7bb15e5dd8453881c05c429e320",
     "semantic_hash": ""
   },
   "README.md": {
@@ -2634,9 +2634,9 @@
     "semantic_hash": ""
   },
   "core/hooks/post-tool-use.ts": {
-    "mtime": 1792946078.4033716,
-    "seen": 1792946107.0392244,
-    "ast_hash": "72b0cc95431975efb39d935312b573cf",
+    "mtime": 1792947343.6938415,
+    "seen": 1792947363.6254814,
+    "ast_hash": "9a9ed67e14d78f73599e353f6d1e2cfb",
     "semantic_hash": ""
   },
   "core/hooks/pre-tool-policy.ts": {
@@ -2688,9 +2688,9 @@
     "semantic_hash": ""
   },
   "core/scripts/build-showroom.ts": {
-    "mtime": 1792945972.338243,
-    "seen": 1792946022.0266364,
-    "ast_hash": "1242a3d4dbed61ac8f69323317cbd743",
+    "mtime": 1792948614.7528381,
+    "seen": 1792948632.9710367,
+    "ast_hash": "1958e2576d2cc675e284d8413637f8a1",
     "semantic_hash": ""
   },
   "core/scripts/check-infrastructure.ts": {
@@ -2700,9 +2700,9 @@
     "semantic_hash": ""
   },
   "core/scripts/refresh-architecture.ts": {
-    "mtime": 1792945707.420689,
-    "seen": 1792945948.1786578,
-    "ast_hash": "83d4ae927b0069f89813746f6909b3f6",
+    "mtime": 1792947770.3272471,
+    "seen": 1792947789.8152895,
+    "ast_hash": "b997fb2729a09bf1a33055c5d5cc7523",
     "semantic_hash": ""
   },
   "core/scripts/speckit/check-prerequisites.ts": {
@@ -2745,6 +2745,12 @@
     "mtime": 1792945707.420689,
     "seen": 1792945948.178662,
     "ast_hash": "8bbb1a6447a99f65d189b3a276a3f42b",
+    "semantic_hash": ""
+  },
+  "core/assets/showroom-project.json": {
+    "mtime": 1792947495.4193058,
+    "seen": 1792947515.722812,
+    "ast_hash": "a755dbb8bce598cf19cfc89b5731bd6a",
     "semantic_hash": ""
   }
 }
