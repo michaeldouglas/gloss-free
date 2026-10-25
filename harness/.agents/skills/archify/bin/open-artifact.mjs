@@ -15,20 +15,10 @@ const OPENERS = {
     args: (target) => [target],
   },
   win32: {
-    command: 'powershell.exe',
-    method: 'powershell',
-    // PowerShell cold starts can approach five seconds on hosted Windows
-    // runners. Keep the launch bounded without treating normal startup as a
-    // timeout.
-    timeoutMs: 15000,
-    // Keep the command constant and pass the target through a child-only
-    // environment variable. Paths are never interpolated into executable source.
-    args: () => [
-      '-NoProfile',
-      '-NonInteractive',
-      '-Command',
-      'Start-Process -FilePath $env:ARCHIFY_OPEN_TARGET',
-    ],
+    command: 'explorer.exe',
+    method: 'explorer',
+    timeoutMs: 5000,
+    args: (target) => [target],
   },
 };
 
@@ -100,12 +90,6 @@ function launchTarget(target, options = {}) {
       timeout: timeoutMs,
       windowsHide: true,
     };
-    if (platform === 'win32') {
-      spawnOptions.env = {
-        ...process.env,
-        ARCHIFY_OPEN_TARGET: target,
-      };
-    }
     result = spawn(opener.command, opener.args(target), spawnOptions);
   } catch (error) {
     result = { error };

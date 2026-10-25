@@ -13,7 +13,7 @@ Analyze the project and produce a useful HTML file. The report should help someo
 Run the bundled inventory script, then turn findings into a standalone HTML report:
 
 ```bash
-node scripts/project-inventory.mjs --root /path/to/project --out .scratch/project-inventory.json
+bun run scripts/project-inventory.ts --root /path/to/project --out .scratch/project-inventory.json
 ```
 
 Default report path: `.scratch/project-architecture-report.html`.
@@ -22,7 +22,7 @@ Default report path: `.scratch/project-architecture-report.html`.
 
 1. Define scope and report path. If none given, inspect current repo and write `.scratch/project-architecture-report.html`.
 2. Read local truth: `AGENTS.md`, `CLAUDE.md`, `README.md`, `CONTEXT.md`, ADRs, manifests, env examples, CI, tests, deploy config, docs, and ticket/PRD artifacts.
-3. Run `project-inventory.mjs`. Add project-native maps when available: route list, DB schema, OpenAPI/GraphQL schema, migration history, package graph, test graph, build graph, and generated clients.
+3. Run `project-inventory.ts` with Bun. Add project-native maps when available: route list, DB schema, OpenAPI/GraphQL schema, migration history, package graph, test graph, build graph, and generated clients.
 4. When useful, split broad analysis into independent sub-agent questions: structure/deps, runtime flows, data/storage, UI/API surfaces, tests/tooling, and risk/gap detection. Parent agent owns final report and resolves conflicts.
 5. Trace flows from entrypoints to state and side effects: user flows, request flows, background jobs, CLI commands, auth/session paths, storage writes, external APIs, and error paths.
 6. Identify dependencies: runtime, dev/build, internal packages, generated code, external services, browser/runtime assumptions, env vars, and hidden operational coupling.

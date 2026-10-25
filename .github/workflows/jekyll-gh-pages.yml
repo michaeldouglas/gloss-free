@@ -7,7 +7,7 @@ on:
     paths:
       - "docs/**"
       - "harness/artifacts/**"
-      - "harness/scripts/build_showroom.py"
+      - "harness/scripts/build-showroom.ts"
       - "app/data/processed/metadata-validation/**"
   workflow_dispatch:
 

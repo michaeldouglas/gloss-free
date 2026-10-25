@@ -1,7 +1,8 @@
-#!/usr/bin/env node
-
 import fs from "node:fs/promises";
 import path from "node:path";
+
+type FileRecord = { path: string; name: string; ext: string; size: number };
+type Options = { root: string; out: string; maxFiles: number; maxReadBytes: number };
 
 const ignoredDirs = new Set([
   ".git",
@@ -40,7 +41,7 @@ const symbolExts = new Set([
   ".vue",
 ]);
 
-function parseArgs(argv) {
+function parseArgs(argv: string[]): Options {
   const options = {
     root: process.cwd(),
     out: "",
@@ -54,7 +55,7 @@ function parseArgs(argv) {
     else if (arg === "--out") options.out = argv[++i];
     else if (arg === "--max-files") options.maxFiles = Number(argv[++i]);
     else if (arg === "--help" || arg === "-h") {
-      console.log("Usage: node project-inventory.mjs --root /path [--out file]");
+      console.log("Usage: bun run project-inventory.ts --root /path [--out file]");
       process.exit(0);
     } else {
       throw new Error(`Unknown option: ${arg}`);
@@ -65,7 +66,7 @@ function parseArgs(argv) {
   return options;
 }
 
-async function exists(filePath) {
+async function exists(filePath: string): Promise<boolean> {
   try {
     await fs.access(filePath);
     return true;
@@ -74,7 +75,7 @@ async function exists(filePath) {
   }
 }
 
-async function walk(root, options) {
+async function walk(root: string, options: Options): Promise<{ files: FileRecord[]; dirs: string[] }> {
   const files = [];
   const dirs = [];
 
@@ -108,7 +109,7 @@ async function walk(root, options) {
   return { files, dirs };
 }
 
-function groupBy(items, keyFn) {
+function groupBy<T>(items: T[], keyFn: (item: T) => string): Map<string, T[]> {
   const groups = new Map();
   for (const item of items) {
     const key = keyFn(item);
@@ -118,7 +119,7 @@ function groupBy(items, keyFn) {
   return groups;
 }
 
-function extensionSummary(files) {
+function extensionSummary(files: FileRecord[]) {
   return [...groupBy(files, (file) => file.ext).entries()]
     .map(([ext, group]) => ({
       ext,
@@ -128,13 +129,13 @@ function extensionSummary(files) {
     .sort((a, b) => b.count - a.count || a.ext.localeCompare(b.ext));
 }
 
-function topDirs(files) {
+function topDirs(files: FileRecord[]) {
   return [...groupBy(files, (file) => (file.path.includes("/") ? file.path.split("/")[0] : ".")).entries()]
     .map(([dir, group]) => ({ dir, files: group.length }))
     .sort((a, b) => b.files - a.files || a.dir.localeCompare(b.dir));
 }
 
-function extractSymbols(content, ext) {
+function extractSymbols(content: string, ext: string) {
   const patterns = [];
 
   if ([".js", ".jsx", ".mjs", ".ts", ".tsx", ".svelte", ".vue"].includes(ext)) {
@@ -188,7 +189,7 @@ function extractSymbols(content, ext) {
   return symbols;
 }
 
-async function collectSymbols(root, files, options) {
+async function collectSymbols(root: string, files: FileRecord[], options: Options) {
   const result = [];
   for (const file of files) {
     if (!symbolExts.has(file.ext) || file.size > options.maxReadBytes) continue;
@@ -199,11 +200,11 @@ async function collectSymbols(root, files, options) {
   return result;
 }
 
-async function readJson(filePath) {
+async function readJson(filePath: string): Promise<any> {
   return JSON.parse(await fs.readFile(filePath, "utf8"));
 }
 
-async function collectPackageJson(root, files) {
+async function collectPackageJson(root: string, files: FileRecord[]) {
   const packageFiles = files.filter((file) => file.name === "package.json");
   const packages = [];
 
@@ -228,7 +229,7 @@ async function collectPackageJson(root, files) {
   return packages;
 }
 
-function likelyEntrypoints(files) {
+function likelyEntrypoints(files: FileRecord[]) {
   const entryPattern = /(^|\/)(app|main|index|server|route|routes|api|cli|worker|middleware|handler)\.[A-Za-z0-9]+$/i;
   return files
     .filter((file) => entryPattern.test(file.path))
@@ -237,7 +238,7 @@ function likelyEntrypoints(files) {
     .slice(0, 200);
 }
 
-async function collectManifests(root, files) {
+async function collectManifests(root: string, files: FileRecord[]) {
   const names = new Set([
     "AGENTS.md",
     "CLAUDE.md",

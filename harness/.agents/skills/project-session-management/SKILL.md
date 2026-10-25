@@ -238,6 +238,6 @@ Offer: "Would you like me to create SESSION.md to track progress through these p
 
 **Templates**: SESSION.md.template, checkpoint-commit-format.md, CLAUDE-session-snippet.md
 
-**Scripts**: resume.sh (show current state)
+**Scripts**: Run `bun run scripts/resume.ts` from the project root to show the current state.
 
 **References**: session-handoff-protocol.md, best-practices.md

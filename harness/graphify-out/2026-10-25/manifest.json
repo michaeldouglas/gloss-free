@@ -2460,33 +2460,33 @@
     "semantic_hash": ""
   },
   "artifacts/architecture/architecture-refresh.json": {
-    "mtime": 1792940466.2707837,
-    "seen": 1792940574.140197,
-    "ast_hash": "e7e5d165fa0521eaae09ff1d621c071e",
+    "mtime": 1792940655.030082,
+    "seen": 1792940716.8830287,
+    "ast_hash": "6c7e23cf8d8c1a649a553664648692ac",
     "semantic_hash": ""
   },
   "artifacts/architecture/html/libras-data-pipeline.browser-check.json": {
-    "mtime": 1792940465.6597545,
-    "seen": 1792940574.140199,
-    "ast_hash": "e0c4dc2c73df8b59abfa52ae7a1e0ad4",
+    "mtime": 1792940652.384971,
+    "seen": 1792940716.883031,
+    "ast_hash": "0e4d697415e39f42a5b14c199d87b319",
     "semantic_hash": ""
   },
   "artifacts/architecture/html/libras-data-pipeline.delivery.json": {
-    "mtime": 1792940462.7259178,
-    "seen": 1792940574.1401994,
-    "ast_hash": "8f9b37b644cdd0332e74799c99fb9f6e",
+    "mtime": 1792940649.5952885,
+    "seen": 1792940716.8830318,
+    "ast_hash": "68a1362f041debefd9ecdeae6c272f36",
     "semantic_hash": ""
   },
   "artifacts/architecture/html/libras-data-pipeline.finalize-summary.json": {
-    "mtime": 1792940466.0372498,
-    "seen": 1792940574.1402004,
-    "ast_hash": "ef7b5d5fb50ca96a9da8c8febdb9a7de",
+    "mtime": 1792940654.7005403,
+    "seen": 1792940716.8830328,
+    "ast_hash": "936c615ebbcf9e1686104cd30081dfe7",
     "semantic_hash": ""
   },
   "artifacts/architecture/html/libras-data-pipeline.finalize.json": {
-    "mtime": 1792940465.9647474,
-    "seen": 1792940574.1402013,
-    "ast_hash": "6cd663a0926b84be564da4d6c84d134d",
+    "mtime": 1792940654.3479242,
+    "seen": 1792940716.8830342,
+    "ast_hash": "6b3288caf960b9c71368485961fdb844",
     "semantic_hash": ""
   },
   "artifacts/architecture/html/libras-data-pipeline.review-2/libras-data-pipeline.finalize-summary.json": {
@@ -2538,8 +2538,8 @@
     "semantic_hash": ""
   },
   "artifacts/architecture/html/libras-data-pipeline.html": {
-    "mtime": 1792940462.54332,
-    "seen": 1792940574.1403453,
+    "mtime": 1792940649.4209945,
+    "seen": 1792940716.8832233,
     "ast_hash": "b42117b1a1dc761efa0d4fe58471615b",
     "semantic_hash": ""
   },
@@ -2610,9 +2610,9 @@
     "semantic_hash": ""
   },
   "scripts/build_showroom.py": {
-    "mtime": 1792940551.7356548,
-    "seen": 1792940574.1402097,
-    "ast_hash": "ec1e625a8b41d893642846f49e2311e7",
+    "mtime": 1792940607.9804444,
+    "seen": 1792940646.0910528,
+    "ast_hash": "d0a13efe99cc4b307833bb3f30c0790e",
     "semantic_hash": ""
   },
   ".agents/skills/data-storytelling/SKILL.md": {

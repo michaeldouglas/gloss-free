@@ -5,9 +5,8 @@ description: Run the harness implementation quality gate, including the applicat
 
 Run the project-local validation from the harness repository root:
 
-```powershell
-$root = (Get-Location).Path
-& (Join-Path $root '.codex/hooks/verify-harness.ps1') -Mode verify
+```bash
+bun run scripts/verify-harness.ts verify
 ```
 
 Do not modify files, change branches, commit, or invoke an MCP server. Report the command result and any remaining task or test failures.

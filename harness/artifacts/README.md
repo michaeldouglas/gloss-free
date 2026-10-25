@@ -13,7 +13,7 @@ artifacts/
 ```
 
 O showroom público é uma camada derivada em `../docs/`. O gerador
-`scripts/build_showroom.py` lê estes artefatos e os resumos de validação em
+`scripts/build-showroom.ts` (executado com Bun) lê estes artefatos e os resumos de validação em
 `../app/data/processed/metadata-validation/`; ele não copia nem publica
 `../app/data/raw/`.
 
