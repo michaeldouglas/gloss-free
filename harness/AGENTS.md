@@ -8,6 +8,12 @@ O aplicativo em `../app/` segue deliberadamente uma **Flat Architecture híbrida
 
 Essa arquitetura não deve ser reinterpretada ou reestruturada automaticamente como Clean Architecture, arquitetura hexagonal ou outra arquitetura em camadas rígida. A pasta `infrastructure/` pode isolar integrações externas, mas isso não transforma o projeto em uma arquitetura formal de portas e adaptadores.
 
+## Runtime da infraestrutura
+
+Hooks e automações do harness ficam em TypeScript e são executados com Bun. Os entrypoints do Codex estão em `hooks/`; módulos compartilhados ficam em `lib/`; scripts de infraestrutura e Spec Kit ficam em `scripts/`. Use `bun run ...`, `bun test` e `bun run check`. Não reintroduza wrappers PowerShell ou Node.js para lógica do harness. Módulos internos empacotados por ferramentas locais, como o Archify, podem manter o formato upstream, mas devem ser chamados pelo harness via Bun.
+
+Python permanece no aplicativo para processamento de datasets e vídeo, EDA, estatística, ML, treinamento, inferência e avaliação. Execute comandos do aplicativo a partir de `../app/` usando `uv run ...`; não converta o código científico para TypeScript.
+
 ## graphify
 
 This project has a knowledge graph at graphify-out/ with god nodes, community structure, and cross-file relationships.

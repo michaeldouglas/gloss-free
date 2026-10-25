@@ -33,7 +33,7 @@
     "browserCheckReceipt": "C:\\Users\\mdbaa\\development\\Dissertacao\\harness\\artifacts\\architecture\\html\\libras-data-pipeline.browser-check.json"
   },
   "visualReview": "not-requested",
-  "durationMs": 8625,
+  "durationMs": 5831,
   "browserCheck": {
     "requested": true,
     "ran": true
