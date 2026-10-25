@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "test": "bun test",
-    "check": "bun run scripts/check-infrastructure.ts"
+    "check": "bun run core/scripts/check-infrastructure.ts"
   },
   "dependencies": {}
 }

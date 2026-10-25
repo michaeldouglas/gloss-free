@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "ok": true,
+  "ok": false,
   "command": "finalize",
-  "status": "pass",
+  "status": "fail",
   "type": "architecture",
   "quality": "showcase",
   "specification": {
@@ -19,12 +19,29 @@
     "validate": "pass",
     "deliver": "pass",
     "check": "pass",
-    "browser-check": "pass"
+    "browser-check": "fail"
   },
-  "diagnostics": [],
+  "failedStage": "browser-check",
+  "diagnostics": [
+    {
+      "code": "viewer/chrome-startup-timeout",
+      "severity": "error",
+      "message": "Chrome did not finish its initial DevTools handshake within the startup window.",
+      "subject": {
+        "artifact": "C:\\Users\\mdbaa\\development\\Dissertacao\\harness\\artifacts\\architecture\\html\\libras-data-pipeline.html"
+      },
+      "evidence": {
+        "reason": "Chrome DevTools protocol timeout failed: Target.getTargets: timed out after 90000ms [ERR_CHROME_CDP_TIMEOUT]\nChrome process: still running.\nChrome stderr:\n[2932:32148:1025/182046.877:ERROR:google_apis\\gcm\\engine\\registration_request.cc:291] Registration response error message: PHONE_REGISTRATION_ERROR\r\n[2932:32148:1025/182046.901:ERROR:google_apis\\gcm\\engine\\registration_request.cc:291] Registration response error message: PHONE_REGISTRATION_ERROR\r\n[2932:32148:1025/182046.923:ERROR:google_apis\\gcm\\engine\\registration_request.cc:291] Registration response error message: PHONE_REGISTRATION_ERROR\r\n[2932:32148:1025/182047.026:ERROR:google_apis\\gcm\\engine\\mcs_client.cc:702]   Error code: 401  Error message: Authentication Failed: wrong_secret\r\n[2932:32148:1025/182047.026:ERROR:google_apis\\gcm\\engine\\mcs_client.cc:704] Failed to log in to GCM, resetting connection.\r\nCreated TensorFlow Lite XNNPACK delegate for CPU.\r\n[2932:2136:1025/182059.491:ERROR:chrome\\updater\\ipc\\update_service_dialer_win.cc:76] Failed to open named pipe server process 23060: Access is denied. (0x5)\r\n[2932:20804:1025/182059.576:ERROR:chrome\\updater\\ipc\\update_service_dialer_win.cc:76] Failed to open named pipe server process 32452: Access is denied. (0x5)\r\n[2932:2136:1025/182101.689:ERROR:chrome\\updater\\ipc\\update_service_dialer_win.cc:76] Failed to open named pipe server process 24528: Access is denied. (0x5)\r\n[2932:20804:1025/182101.690:ERROR:chrome\\updater\\ipc\\update_service_dialer_win.cc:76] Failed to open named pipe server process 24528: Access is denied. (0x5)\r\n[2932:2136:1025/182101.779:ERROR:chrome\\updater\\ipc\\update_service_dialer_win.cc:76] Failed to open named pipe server process 15704: Access is denied. (0x5)\r\n[2932:20804:1025/182101.873:ERROR:chrome\\updater\\ipc\\update_service_dialer_win.cc:76] Failed to open named pipe server process 13024: Access is denied. (0x5)\r\n[2932:32148:1025/182111.959:ERROR:google_apis\\gcm\\engine\\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT\nWindows browser startup may have relaunched before connecting to the DevTools pipe. Retry from a non-elevated PowerShell opened normally, outside an elevated or compatibility-mode parent. Archify does not disable browser de-elevation or the sandbox to preserve pipe handles.\nChrome transport: Node v24.3.0, libuv 1.51.1-dev, win32; pid=2932, exitCode=null, signalCode=null.\nChrome read pipe: readable=true, ended=false, destroyed=false, receivedBytes=0, messages=0, bufferedBytes=0.\nChrome write pipe: writable=true, ended=false, destroyed=false, completedWrites=0, writtenBytes=0, bufferedBytes=50."
+      },
+      "supportedFixes": [
+        "do not edit or simplify the artifact because this is a browser-startup failure",
+        "retry browser-check once after host load subsides; if it repeats, stop and report the environment failure"
+      ]
+    }
+  ],
   "diagnosticSummary": {
-    "total": 0,
-    "shown": 0,
+    "total": 1,
+    "shown": 1,
     "truncated": false
   },
   "evidence": {
@@ -33,151 +50,9 @@
     "browserCheckReceipt": "C:\\Users\\mdbaa\\development\\Dissertacao\\harness\\artifacts\\architecture\\html\\libras-data-pipeline.browser-check.json"
   },
   "visualReview": "not-requested",
-  "durationMs": 5831,
+  "durationMs": 92828,
   "browserCheck": {
     "requested": true,
-    "ran": true
-  },
-  "visualReviewRecommendation": {
-    "action": "inspect-route-readability",
-    "signals": {
-      "resolvedCrossovers": 2,
-      "routesOverSuggestedBends": 5
-    },
-    "reason": "Automated gates passed, but crossings or detours still need perceptual review before claiming visual quality.",
-    "affectedRoutes": {
-      "crossings": [
-        {
-          "left": {
-            "id": "docker-to-raw",
-            "from": "video-processing",
-            "to": "raw-datasets",
-            "label": "monta somente leitura",
-            "collectionIndex": 5,
-            "artifactIndex": 6
-          },
-          "right": {
-            "id": "docker-to-quality",
-            "from": "video-processing",
-            "to": "quality-validator",
-            "label": "executa validate-quality",
-            "collectionIndex": 8,
-            "artifactIndex": 9
-          },
-          "point": [
-            527,
-            398
-          ],
-          "sharedNode": "video-processing"
-        },
-        {
-          "left": {
-            "id": "docker-to-quality",
-            "from": "video-processing",
-            "to": "quality-validator",
-            "label": "executa validate-quality",
-            "collectionIndex": 8,
-            "artifactIndex": 9
-          },
-          "right": {
-            "id": "metadata-to-quality",
-            "from": "metadata-validator",
-            "to": "quality-validator",
-            "label": "metadata JSON",
-            "collectionIndex": 9,
-            "artifactIndex": 10
-          },
-          "point": [
-            867,
-            337
-          ],
-          "sharedNode": "quality-validator"
-        }
-      ],
-      "detours": [
-        {
-          "relationship": {
-            "id": "docker-to-raw",
-            "from": "video-processing",
-            "to": "raw-datasets",
-            "label": "monta somente leitura",
-            "collectionIndex": 5,
-            "artifactIndex": 6
-          },
-          "bends": 3,
-          "stretch": 1.194
-        },
-        {
-          "relationship": {
-            "id": "docker-to-metadata",
-            "from": "video-processing",
-            "to": "metadata-validator",
-            "label": "executa validate-metadata",
-            "collectionIndex": 6,
-            "artifactIndex": 7
-          },
-          "bends": 3,
-          "stretch": 1.314
-        },
-        {
-          "relationship": {
-            "id": "docker-to-quality",
-            "from": "video-processing",
-            "to": "quality-validator",
-            "label": "executa validate-quality",
-            "collectionIndex": 8,
-            "artifactIndex": 9
-          },
-          "bends": 4,
-          "stretch": 1.328,
-          "directCorridorBlockers": [
-            {
-              "id": "metadata-validator",
-              "label": "Validação técnica",
-              "box": [
-                650,
-                300,
-                180,
-                74
-              ]
-            }
-          ]
-        },
-        {
-          "relationship": {
-            "id": "metadata-to-quality",
-            "from": "metadata-validator",
-            "to": "quality-validator",
-            "label": "metadata JSON",
-            "collectionIndex": 9,
-            "artifactIndex": 10
-          },
-          "bends": 3,
-          "stretch": 1.314
-        },
-        {
-          "relationship": {
-            "id": "quality-to-derived",
-            "from": "quality-validator",
-            "to": "derived-artifacts",
-            "label": "reports + manifests",
-            "collectionIndex": 10,
-            "artifactIndex": 11
-          },
-          "bends": 3,
-          "stretch": 1.327
-        }
-      ],
-      "truncated": false
-    },
-    "hints": [
-      "video-processing → raw-datasets and video-processing → quality-validator cross next to video-processing: move node raw-datasets or quality-validator so the two reach video-processing from different sides (for example one level with it, one directly above or below it).",
-      "video-processing → quality-validator and metadata-validator → quality-validator cross next to quality-validator: move node video-processing or metadata-validator so the two reach quality-validator from different sides (for example one level with it, one directly above or below it).",
-      "video-processing → raw-datasets needs 3 bends: move node video-processing or raw-datasets so they share a row or column with matching centers, or sit diagonally with a clear corner.",
-      "video-processing → metadata-validator needs 3 bends: move node video-processing or metadata-validator so they share a row or column with matching centers, or sit diagonally with a clear corner.",
-      "metadata-validator → quality-validator needs 3 bends: move node metadata-validator or quality-validator so they share a row or column with matching centers, or sit diagonally with a clear corner.",
-      "quality-validator → derived-artifacts needs 3 bends: move node quality-validator or derived-artifacts so they share a row or column with matching centers, or sit diagonally with a clear corner."
-    ],
-    "repair": "Trace these relationships at the desktop viewport. For Architecture, use references/architecture-layout-repair.md: reflow a blocked main path or tangled connected scene, and repair an isolated defect locally only when the surrounding composition is accepted. Preserve all semantic content and user-fixed geometry. Rerun finalize once after the edit."
+    "ran": false
   }
 }

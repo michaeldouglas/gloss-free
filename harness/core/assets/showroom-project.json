@@ -1,0 +1,31 @@
+{
+  "schema_version": "showroom-project.v3",
+  "title": "Aprendizado profundo de representações visuais para tradução de Libras para português escrito sem glosas",
+  "displayTitle": "Tradução de Libras para português escrito",
+  "summary": "Uma dissertação sobre como aprender representações visuais de vídeos em Libras para produzir texto em português sem depender de glosas como etapa intermediária.",
+  "problemContext": "A pesquisa investiga a tradução entre uma língua visual-gestual registrada em vídeo e o português escrito. A proposta situa esse problema em tecnologias assistivas e acessibilidade em Libras, com foco em métodos de visão computacional.",
+  "researchFocus": "Investigar representações visuais aprendidas por modelos profundos para apoiar a tradução de Libras para português escrito sem glosas.",
+  "glossFreeExplanation": "Neste contexto, ‘sem glosas’ significa estudar a tradução do vídeo em Libras para texto em português sem exigir uma sequência de glosas como anotação intermediária. Isso define a formulação da tarefa; não afirma que um modelo de tradução já tenha sido implementado neste projeto.",
+  "validationPurpose": "Antes de avaliar modelos, esta etapa confere se as dimensões, a informação temporal, os arquivos e as anotações dos datasets são coerentes o bastante para sustentar experimentos reproduzíveis.",
+  "interpretationLimit": "GO e NO-GO resumem critérios de integridade e proveniência dos dados. Eles não medem qualidade linguística, qualidade de tradução nem desempenho de modelos.",
+  "plannedMethodology": [
+    { "title": "Analisar o movimento", "detail": "A proposta prevê investigar pistas visuais de mãos, face e corpo em vídeos de Libras." },
+    { "title": "Aprender representações visuais", "detail": "A proposta lista métodos espaciais e temporais de deep learning e modelos multimodais como frentes a estudar, sem fixar uma arquitetura final." },
+    { "title": "Relacionar vídeo e texto", "detail": "A meta é apoiar a tradução para português escrito sem glosas; ainda não há resultados de tradução publicados nos relatórios atuais." }
+  ],
+  "proposalReference": {
+    "label": "Proposta de dissertação",
+    "date": "06/08/2026",
+    "href": "https://github.com/michaeldouglas/gloss-free/blob/main/materiais/pt/Proposta_p_Dissertacao_Mestrado.pdf"
+  },
+  "nextStep": "Ampliar o processamento de vídeos e documentar os experimentos de aprendizado profundo.",
+  "glossFreeReference": {
+    "label": "Zhou et al., Gloss-Free Sign Language Translation: Improving from Visual-Language Pretraining, ICCV 2023",
+    "href": "https://arxiv.org/abs/2307.14768"
+  },
+  "pipeline": [
+    { "title": "Vídeos de Libras", "detail": "Entrada visual" },
+    { "title": "Representações visuais", "detail": "Aprendizado profundo" },
+    { "title": "Português escrito", "detail": "Saída da tradução" }
+  ]
+}

@@ -27,5 +27,6 @@
     "WARNING": 0,
     "INFO": 1
   },
-  "report": "c:\\Users\\mdbaa\\development\\Dissertacao\\harness\\artifacts\\reports\\executions\\minds-libras-raw_20261025_102244.md"
+  "report": "harness/artifacts/reports/executions/minds-libras-raw_20261025_102244.md",
+  "showroom": "docs"
 }
