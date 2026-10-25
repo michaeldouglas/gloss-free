@@ -7,7 +7,7 @@ type RefreshRecord = {
   schema_version: string;
   dataset: string;
   executed_at: string;
-  status: "pending" | "completed" | "completed_with_warnings" | "failed";
+  status: "pending" | "skipped" | "completed" | "completed_with_warnings" | "failed";
   candidates: string[];
   outputs: Array<{ candidate: string; html: string; result_tail: string[] }>;
   warnings?: string[];
@@ -38,6 +38,24 @@ function isBrowserOnlyFailure(result: CommandResult): boolean {
     && gates?.["browser-check"] === "fail";
 }
 
+function escapeRegExp(value: string): string {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function normalizeMachinePaths(value: string, repositoryRoot: string): string {
+  const roots = new Set([
+    repositoryRoot,
+    repositoryRoot.replaceAll("\\", "/"),
+    repositoryRoot.replaceAll("\\", "\\\\"),
+  ]);
+  let normalized = value;
+  for (const root of roots) {
+    if (!root) continue;
+    normalized = normalized.replace(new RegExp(escapeRegExp(root), "gi"), ".");
+  }
+  return normalized;
+}
+
 export async function refreshArchitecture(harnessRoot: string, dataset = "unknown", run: ArchitectureRunner = runCommand): Promise<{ exitCode: number; record: RefreshRecord }> {
   const paths = createHarnessPaths(harnessRoot);
   const architectureRoot = paths.architectureRoot;
@@ -60,12 +78,14 @@ export async function refreshArchitecture(harnessRoot: string, dataset = "unknow
       .map((entry) => entry.name)
       .sort();
     if (!record.candidates.length) {
+      record.status = "skipped";
       record.reason = "Nenhum candidato Archify em artifacts/architecture/source.";
       await saveStatus();
       return { exitCode: 0, record };
     }
     const archifyCli = path.join(harnessRoot, ".agents", "skills", "archify", "bin", "archify.mjs");
     if (!(await Bun.file(archifyCli).exists())) {
+      record.status = "skipped";
       record.reason = "A CLI local do Archify não está disponível.";
       await saveStatus();
       return { exitCode: 0, record };
@@ -78,17 +98,21 @@ export async function refreshArchitecture(harnessRoot: string, dataset = "unknow
       const slug = candidateName.replace(/\.architecture\.json$/, "");
       const candidatePath = path.join(sourceRoot, candidateName);
       const outputPath = path.join(htmlRoot, `${slug}.html`);
-      const result = await run("bun", ["run", archifyCli, "finalize", "architecture", candidatePath, outputPath, "--repo-root", repositoryRoot, "--quality", "showcase", "--json"], { cwd: harnessRoot, quiet: true });
-      const tail = `${result.stdout}\n${result.stderr}`.trim().split(/\r?\n/).slice(-5);
+      const candidateArg = path.relative(harnessRoot, candidatePath).split(path.sep).join("/");
+      const outputArg = path.relative(harnessRoot, outputPath).split(path.sep).join("/");
+      const result = await run("bun", ["run", archifyCli, "finalize", "architecture", candidateArg, outputArg, "--repo-root", repositoryRoot, "--quality", "showcase", "--json"], { cwd: harnessRoot, quiet: true });
+      const tail = `${result.stdout}\n${result.stderr}`.trim().split(/\r?\n/).slice(-5)
+        .map((line) => normalizeMachinePaths(line, paths.repositoryRoot));
+      const relativeOutputPath = path.relative(repositoryRoot, outputPath).split(path.sep).join("/");
       if (isBrowserOnlyFailure(result)) {
         hadWarnings = true;
         record.warnings ??= [];
         record.warnings.push(`${candidateName}: validação, entrega e checagem passaram; browser-check falhou por indisponibilidade do Chrome/DevTools.`);
-        record.outputs.push({ candidate: candidateName, html: outputPath, result_tail: tail });
+        record.outputs.push({ candidate: candidateName, html: relativeOutputPath, result_tail: tail });
         continue;
       }
       if (result.exitCode !== 0) throw new Error(`Archify falhou para ${candidateName} com código ${result.exitCode}.`);
-      record.outputs.push({ candidate: candidateName, html: outputPath, result_tail: tail });
+      record.outputs.push({ candidate: candidateName, html: relativeOutputPath, result_tail: tail });
     }
     record.status = hadWarnings ? "completed_with_warnings" : "completed";
     if (hadWarnings) record.reason = "Archify gerou e validou os diagramas, mas a evidência browser-check não pôde ser concluída neste ambiente.";

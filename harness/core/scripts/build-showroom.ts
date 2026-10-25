@@ -3,6 +3,20 @@ import { mkdir, readdir, readFile, stat, writeFile, rm, copyFile } from "node:fs
 import { createHarnessPaths, getHarnessPaths } from "../lib/paths.ts";
 
 type JsonObject = Record<string, any>;
+type ShowroomProject = {
+  schema_version: "showroom-project.v1";
+  title: string;
+  summary: string;
+  motivation: string;
+  pipeline: Array<{ title: string; detail: string }>;
+  methodology: string;
+  evaluationMetrics: string[];
+  approachTitle: string;
+  approachSummary: string;
+  inputs: string[];
+  learning: string;
+  evaluation: string;
+};
 const severities = ["CRITICAL", "ERROR", "WARNING", "INFO"] as const;
 const defaultPaths = getHarnessPaths();
 const harnessRoot = defaultPaths.harnessRoot;
@@ -10,8 +24,37 @@ const harnessRoot = defaultPaths.harnessRoot;
 function esc(value: unknown): string {
   return String(value ?? "").replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#x27;");
 }
-async function loadJson(file: string, fallback: JsonObject = {}): Promise<JsonObject> {
-  try { return JSON.parse(await readFile(file, "utf8")); } catch { return fallback; }
+function isObject(value: unknown): value is JsonObject {
+  return value !== null && typeof value === "object" && !Array.isArray(value);
+}
+async function loadJson(file: string): Promise<JsonObject> {
+  let value: unknown;
+  try { value = JSON.parse(await readFile(file, "utf8")); }
+  catch (error) { throw new Error(`Não foi possível ler JSON válido em ${file}: ${error instanceof Error ? error.message : String(error)}`); }
+  if (!isObject(value)) throw new Error(`O JSON em ${file} precisa conter um objeto.`);
+  return value;
+}
+function validateProjectMetadata(value: JsonObject): ShowroomProject {
+  if (value.schema_version !== "showroom-project.v1") throw new Error("Metadado do showroom precisa usar schema_version showroom-project.v1.");
+  const requiredStrings = ["title", "summary", "motivation", "methodology", "approachTitle", "approachSummary", "learning", "evaluation"];
+  for (const key of requiredStrings) if (typeof value[key] !== "string" || !value[key].trim()) throw new Error(`Metadado do showroom inválido: '${key}' precisa ser texto não vazio.`);
+  if (!Array.isArray(value.pipeline) || value.pipeline.length === 0 || !value.pipeline.every((item) => isObject(item) && typeof item.title === "string" && typeof item.detail === "string")) throw new Error("Metadado do showroom inválido: 'pipeline' precisa conter etapas com title e detail.");
+  if (!Array.isArray(value.evaluationMetrics) || value.evaluationMetrics.length === 0 || !value.evaluationMetrics.every((item) => typeof item === "string" && item.trim())) throw new Error("Metadado do showroom inválido: 'evaluationMetrics' precisa conter métricas textuais.");
+  if (!Array.isArray(value.inputs) || value.inputs.length === 0 || !value.inputs.every((item) => typeof item === "string" && item.trim())) throw new Error("Metadado do showroom inválido: 'inputs' precisa conter entradas textuais.");
+  return value as ShowroomProject;
+}
+function validateExecutionReport(latest: JsonObject): void {
+  if (latest.schema_version !== undefined && latest.schema_version !== "execution-report.v1") throw new Error(`Schema de relatório não suportado: ${String(latest.schema_version)}.`);
+  if (typeof latest.dataset !== "string" || !latest.dataset.trim()) throw new Error("artifacts/reports/latest.json precisa informar dataset.");
+  if (typeof latest.decision !== "string" || !latest.decision.trim()) throw new Error("artifacts/reports/latest.json precisa informar decision.");
+  if (!isObject(latest.technical_summary) || typeof latest.technical_summary.videos_seen !== "number") throw new Error("artifacts/reports/latest.json precisa conter technical_summary.videos_seen numérico.");
+  if (!isObject(latest.quality_counts)) throw new Error("artifacts/reports/latest.json precisa conter quality_counts como objeto.");
+}
+function validateDatasetSummary(item: JsonObject, file: string): void {
+  if (item.schema_version !== undefined && item.schema_version !== "dataset-validation-summary.v1") throw new Error(`${file} usa um schema não suportado: ${String(item.schema_version)}.`);
+  if (typeof item.dataset !== "string" || !item.dataset.trim()) throw new Error(`${file} precisa informar dataset.`);
+  if (typeof item.decision !== "string" || !item.decision.trim()) throw new Error(`${file} precisa informar decision.`);
+  if (!isObject(item.counts) || !isObject(item.counts.by_severity)) throw new Error(`${file} precisa conter counts.by_severity.`);
 }
 async function writeText(file: string, content: string): Promise<void> {
   await mkdir(path.dirname(file), { recursive: true });
@@ -37,7 +80,7 @@ function page(title: string, body: string, prefix = ""): string {
   return `<!doctype html>
 <html lang="pt-BR"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Aprendizagem profunda de representações visuais para tradução de Libras em português escrito sem uso de glosas.">
+<meta name="description" content="Showroom do projeto de dissertação sobre Libras.">
 <title>${esc(title)} · Libras Research Showroom</title>
 <link rel="stylesheet" href="${prefix}assets/style.css">
 </head><body>
@@ -54,11 +97,19 @@ async function collectSummaries(metadataRoot: string): Promise<Map<string, JsonO
   const found = new Map<string, JsonObject>();
   for (const entry of await readdir(metadataRoot, { withFileTypes: true }).catch(() => [])) {
     if (!entry.isDirectory()) continue;
-    const item = await loadJson(path.join(metadataRoot, entry.name, "reports", "metadata_summary.json"));
-    if (item.dataset) found.set(item.dataset, item);
+    const file = path.join(metadataRoot, entry.name, "reports", "metadata_summary.json");
+    if (!(await Bun.file(file).exists())) continue;
+    const item = await loadJson(file);
+    validateDatasetSummary(item, file);
+    found.set(item.dataset, item);
   }
-  const legacy = await loadJson(path.join(metadataRoot, "reports", "metadata_summary.json"));
-  if (legacy.dataset && !found.has(legacy.dataset)) found.set(legacy.dataset, legacy);
+  const legacyPath = path.join(metadataRoot, "reports", "metadata_summary.json");
+  if (await Bun.file(legacyPath).exists()) {
+    const legacy = await loadJson(legacyPath);
+    validateDatasetSummary(legacy, legacyPath);
+    if (!found.has(legacy.dataset)) found.set(legacy.dataset, legacy);
+  }
+  if (!found.size) throw new Error(`Nenhum metadata_summary.json válido encontrado em ${metadataRoot}.`);
   return found;
 }
 function makeView(dataset: string, summary: JsonObject, latest: JsonObject): JsonObject {
@@ -120,9 +171,14 @@ export async function buildShowroom(repoRoot: string): Promise<JsonObject> {
   const artifacts = paths.artifactsRoot;
   const metadata = paths.metadataValidationRoot;
   const docs = paths.docsRoot;
-  const latest = await loadJson(path.join(artifacts, "reports", "latest.json"));
+  const project = validateProjectMetadata(await loadJson(path.join(paths.assetsRoot, "showroom-project.json")));
+  const latest = await loadJson(path.join(paths.reportsRoot, "latest.json"));
+  validateExecutionReport(latest);
+  const reportText = await readFile(path.join(paths.reportsRoot, "latest.md"), "utf8");
+  if (!reportText.trim()) throw new Error("artifacts/reports/latest.md está vazio.");
   const summaries = await collectSummaries(metadata);
   const datasetItems = [...summaries.entries()].sort(([a], [b]) => a.localeCompare(b)).map(([name, item]) => makeView(name, item, latest));
+  if (!datasetItems.some((item) => item.dataset === latest.dataset)) throw new Error(`O dataset '${latest.dataset}' de latest.json não possui metadata_summary correspondente.`);
   const architectureSource = paths.architectureHtmlRoot;
   const architectureFiles = (await readdir(architectureSource, { withFileTypes: true }).catch(() => []))
     .filter((entry) => entry.isFile() && entry.name.endsWith(".html")).map((entry) => entry.name).sort();
@@ -131,9 +187,7 @@ export async function buildShowroom(repoRoot: string): Promise<JsonObject> {
   for (const old of await readdir(publicArchitecture).catch(() => [])) if (old.endsWith(".html")) await rm(path.join(publicArchitecture, old));
   for (const name of architectureFiles) await copyFile(path.join(architectureSource, name), path.join(publicArchitecture, name));
 
-  let reportText = "Relatório ainda não gerado.";
-  try { reportText = await readFile(path.join(artifacts, "reports", "latest.md"), "utf8"); } catch { /* no report yet */ }
-  const siteData = { schema_version: "showroom.v1", generated_at: new Date().toISOString(), latest, datasets: datasetItems, architecture: architectureFiles, scope: "Etapa 1 — validação dos metadados existentes" };
+  const siteData = { schema_version: "showroom.v1", generated_at: new Date().toISOString(), latest, datasets: datasetItems, architecture: architectureFiles, scope: "Validação dos datasets e evidências disponíveis no projeto" };
   await writeText(path.join(docs, "data", "showroom.json"), JSON.stringify(siteData, null, 2));
   const current = latest.dataset ?? datasetItems[0]?.dataset ?? "nenhum dataset";
   const technical = latest.technical_summary ?? {};
@@ -144,15 +198,15 @@ export async function buildShowroom(repoRoot: string): Promise<JsonObject> {
   const noGoCount = datasetItems.filter((item) => item.decision === "NO-GO").length;
   const severityTotals = Object.fromEntries(severities.map((name) => [name, datasetItems.reduce((sum, item) => sum + Number(item.severity?.[name] || 0), 0)]));
   const auditCards = datasetItems.map(datasetDashboardCard).join("") || '<p class="empty">Ainda não há relatórios de validação para exibir.</p>';
-  const researchTitle = "Aprendizagem profunda de representações visuais para tradução de Libras em português escrito sem uso de glosas";
-  const researchSummary = "A pesquisa investiga como traduzir vídeos de Libras diretamente para português escrito, sem uma etapa intermediária de glosas. A proposta combina frames RGB e pontos-chave de mãos, corpo e face para aprender relações visuais e temporais.";
-  const home = `<section class="project-hero"><div class="project-copy"><p class="eyebrow">Projeto de dissertação · Libras → português escrito</p><h1>${esc(researchTitle)}</h1><p class="hero-lede">${researchSummary}</p><div class="hero-actions"><a class="button button-primary" href="architecture/index.html">Explorar a arquitetura</a><a class="button button-quiet" href="datasets/index.html">Ver os datasets</a></div></div>
-  <div class="research-path" aria-label="Fluxo de pesquisa proposto"><p class="path-heading">Tradução direta, sem glosas</p><div class="path-step"><span class="path-icon">◉</span><div><strong>Vídeo em Libras</strong><small>frames RGB e pontos-chave</small></div></div><span class="path-connector"></span><div class="path-step"><span class="path-icon path-icon-middle">⌁</span><div><strong>Representação visual</strong><small>espaço, movimento e contexto</small></div></div><span class="path-connector"></span><div class="path-step"><span class="path-icon path-icon-end">Aa</span><div><strong>Português escrito</strong><small>tradução gloss-free</small></div></div></div></section>
-<section class="research-context"><div><p class="section-kicker">Por que esta pesquisa?</p><p>A produção manual de glosas exige tempo e limita a escala. A tradução direta pode reduzir essa dependência e apoiar tecnologias de acessibilidade para a comunidade surda.</p></div><div class="context-meta"><span>Design Science Research</span><span>BLEU · ROUGE</span></div></section>
-<section class="dashboard section"><div class="section-heading"><div><p class="section-kicker">Retrato dos dados</p><h2>O que já temos</h2></div><a class="text-link" href="datasets/index.html">Detalhes dos datasets</a></div><div class="dashboard-metrics">${metric("datasets catalogados", datasetItems.length)}${metric("vídeos físicos registrados", totalVideos)}${metric("linhas nos manifests", totalManifestRows)}<div class="metric decision-metric"><strong>${goCount} GO <span>·</span> ${noGoCount} NO-GO</strong><span>decisões dos relatórios disponíveis</span></div></div><div class="dashboard-note"><strong>${Object.values(severityTotals).reduce((a, b) => a + Number(b), 0)} ocorrências</strong> registradas nos relatórios. As auditorias foram geradas em datas diferentes; cada cartão informa a data da própria evidência.</div></section>
+  const flowIcons = ["◉", "⌁", "Aa"];
+  const pipeline = project.pipeline.map((step, index) => `<div class="path-step"><span class="path-icon ${index === 1 ? "path-icon-middle" : index === project.pipeline.length - 1 ? "path-icon-end" : ""}">${esc(flowIcons[index] ?? "•")}</span><div><strong>${esc(step.title)}</strong><small>${esc(step.detail)}</small></div></div>`).join('<span class="path-connector"></span>');
+  const validationSummary = `Resultados derivados: ${goCount} GO e ${noGoCount} NO-GO, conforme os metadata_summary.json publicados.`;
+  const home = `<section class="project-hero"><div class="project-copy"><p class="eyebrow">Projeto de dissertação · Libras → português escrito</p><h1>${esc(project.title)}</h1><p class="hero-lede">${esc(project.summary)}</p><div class="hero-actions"><a class="button button-primary" href="architecture/index.html">Explorar a arquitetura</a><a class="button button-quiet" href="datasets/index.html">Ver os datasets</a></div></div>
+  <div class="research-path" aria-label="Fluxo de pesquisa proposto"><p class="path-heading">Fluxo de pesquisa</p>${pipeline}</div></section>
+<section class="research-context"><div><p class="section-kicker">Contexto da pesquisa</p><p>${esc(project.motivation)}</p></div><div class="context-meta"><span>${esc(project.methodology)}</span><span>${project.evaluationMetrics.map(esc).join(" · ")}</span></div></section>
+<section class="dashboard section"><div class="section-heading"><div><p class="section-kicker">Retrato dos dados</p><h2>O que já temos</h2></div><a class="text-link" href="datasets/index.html">Detalhes dos datasets</a></div><div class="dashboard-metrics">${metric("datasets catalogados", datasetItems.length)}${metric("vídeos físicos registrados", totalVideos)}${metric("linhas nos manifests", totalManifestRows)}<div class="metric decision-metric"><strong>${goCount} GO <span>·</span> ${noGoCount} NO-GO</strong><span>decisões dos relatórios disponíveis</span></div></div><div class="dashboard-note"><strong>${Object.values(severityTotals).reduce((a, b) => a + Number(b), 0)} ocorrências</strong> registradas nos relatórios. ${esc(validationSummary)} As auditorias foram geradas em datas diferentes; cada cartão informa a data da própria evidência.</div></section>
 <section class="section"><div class="section-heading"><div><p class="section-kicker">Auditorias disponíveis</p><h2>Um dataset por vez</h2></div><a class="text-link" href="validation/index.html">Abrir resultados completos</a></div><div class="audit-grid">${auditCards}</div></section>
-<section class="section"><div class="section-heading"><div><p class="section-kicker">O que estamos fazendo</p><h2>Da base de dados à avaliação</h2></div></div><div class="progress-rail"><article class="progress-item completed"><span class="progress-state">Concluído</span><h3>Aquisição e organização</h3><p>Downloads reproduzíveis e inventários para V-LIBRASIL e MINDS-Libras.</p></article><article class="progress-item active"><span class="progress-state">Etapa atual</span><h3>Validação dos metadados</h3><p>MINDS-Libras passou. A auditoria de V-LIBRASIL ainda tem inconsistências a revisar.</p></article><article class="progress-item planned"><span class="progress-state">Planejado</span><h3>Modelos e comparação</h3><p>Explorar representações multimodais e avaliar traduções com BLEU e ROUGE.</p></article></div></section>
-<section class="section research-plan"><div><p class="section-kicker">Abordagem investigada</p><h2>Combinar o que o vídeo mostra e como o sinal se move.</h2><p>O plano considera Transformers espaço-temporais e pré-treinamento visual-linguagem para relacionar sinais visuais ao texto. Essa fase ainda não foi iniciada.</p></div><div class="method-list"><div><strong>Entradas</strong><span>RGB · mãos · corpo · face</span></div><div><strong>Aprendizado</strong><span>relações espaciais e temporais</span></div><div><strong>Avaliação</strong><span>BLEU · ROUGE · comparação entre estratégias</span></div></div></section>
+<section class="section research-plan"><div><p class="section-kicker">Abordagem investigada</p><h2>${esc(project.approachTitle)}</h2><p>${esc(project.approachSummary)}</p></div><div class="method-list"><div><strong>Entradas</strong><span>${project.inputs.map(esc).join(" · ")}</span></div><div><strong>Aprendizado</strong><span>${esc(project.learning)}</span></div><div><strong>Avaliação</strong><span>${esc(project.evaluation)}</span></div></div></section>
 <section class="section next-section"><div class="section-heading"><div><p class="section-kicker">Explore o projeto</p><h2>Entre pelos resultados ou pelo sistema.</h2></div></div><div class="next-grid"><a href="architecture/index.html"><strong>Arquitetura</strong><span>Como o pipeline de aquisição e validação se conecta.</span></a><a href="validation/index.html"><strong>Validação</strong><span>Chaves, vídeos, metadados técnicos e questões em aberto.</span></a><a href="executions/index.html"><strong>Execuções</strong><span>Relatórios e histórico das rodadas registradas.</span></a></div></section>`;
   await writeText(path.join(docs, "index.html"), page("Início", home));
 

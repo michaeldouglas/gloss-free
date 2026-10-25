@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, test } from "bun:test";
-import { mkdtemp, mkdir, rm, writeFile } from "node:fs/promises";
+import { mkdtemp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
 import type { CommandResult } from "../core/lib/process.ts";
@@ -159,6 +159,7 @@ describe("showroom generation", () => {
     await mkdir(path.join(docs, "architecture"), { recursive: true });
     await writeFile(path.join(harness, "artifacts", "reports", "latest.json"), JSON.stringify({ dataset: "demo", decision: "GO", quality_counts: { INFO: 2 }, technical_summary: { videos_seen: 5 } }));
     await writeFile(path.join(harness, "artifacts", "reports", "latest.md"), "Relatório de teste");
+    await writeFile(path.join(harness, "core", "assets", "showroom-project.json"), await readFile(path.join(root, "core", "assets", "showroom-project.json"), "utf8"));
     await writeFile(path.join(harness, "artifacts", "architecture", "html", "pipeline.html"), "<h1>Pipeline</h1>");
     await writeFile(path.join(temp, "app", "data", "processed", "metadata-validation", "demo", "reports", "metadata_summary.json"), JSON.stringify({ dataset: "demo", decision: "GO", counts: { physical_videos: 5, annotations: 5, manifest_rows: 5, issues: 0, by_severity: { INFO: 0 } }, key_reconciliation: { matched: 5, missing: 0, extra: 0, filesystem_key_column: "video_id" } }));
     await writeFile(path.join(harness, "core", "assets", "showroom.css"), "body{}");

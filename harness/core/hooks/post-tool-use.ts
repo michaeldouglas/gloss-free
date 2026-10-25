@@ -34,7 +34,7 @@ export async function handlePostToolUse(event: HookEvent, root: string, run: Com
     hookSpecificOutput: { hookEventName: "PostToolUse", additionalContext: message },
   });
   if (!(await Bun.file(paths.graphifyGraph).exists())) {
-    emitMessage("Relevant files changed, but the canonical Graphify graph does not exist yet. Run graphify . before relying on graph queries.", "Graphify refresh skipped: canonical graph is missing.");
+    emitMessage("Relevant files changed, but the canonical Graphify graph does not exist yet. Run graphify update . before relying on graph queries.", "Graphify refresh skipped: canonical graph is missing.");
     return;
   }
   try {
@@ -50,10 +50,21 @@ export async function handlePostToolUse(event: HookEvent, root: string, run: Com
     return;
   }
   const architecture = await run("bun", ["run", "core/scripts/refresh-architecture.ts", "--dataset", "code-edit"], { cwd: root, quiet: true }).catch(() => null);
-  const architectureMessage = architecture?.exitCode === 0 ? "Archify refresh checked; generated diagrams remain under harness/artifacts/architecture/." : "Archify refresh failed; inspect artifacts/architecture/architecture-refresh.json.";
+  let architectureMessage = "Archify refresh failed; inspect artifacts/architecture/architecture-refresh.json.";
+  if (architecture?.exitCode === 0) {
+    try {
+      const receipt = await Bun.file(path.join(paths.architectureRoot, "architecture-refresh.json")).json() as { status?: string; reason?: string; warnings?: string[] };
+      if (receipt.status === "completed_with_warnings") architectureMessage = `Archify generated diagrams with warning: ${receipt.warnings?.[0] ?? receipt.reason ?? "inspect the architecture refresh receipt."}`;
+      else if (receipt.status === "skipped") architectureMessage = `Archify was skipped: ${receipt.reason ?? "no architecture candidate was available."}`;
+      else if (receipt.status === "completed") architectureMessage = "Archify validated and rendered the existing architecture model.";
+      else architectureMessage = `Archify returned success with receipt status '${receipt.status ?? "unknown"}'; inspect the architecture refresh receipt.`;
+    } catch {
+      architectureMessage = "Archify command returned success, but its receipt could not be read.";
+    }
+  }
   const projectRoot = paths.repositoryRoot;
   const showroom = await run("bun", ["run", "core/scripts/build-showroom.ts", "--repo-root", projectRoot], { cwd: root, quiet: true }).catch(() => null);
-  const showroomMessage = showroom?.exitCode === 0 ? "Showroom atualizado em docs/ a partir dos artefatos derivados." : "Showroom refresh falhou; execute o notebook ou revise o gerador.";
+  const showroomMessage = showroom?.exitCode === 0 ? "Showroom atualizado em docs/ a partir dos artefatos derivados." : "Showroom refresh falhou; valide os reports e execute bun run core/scripts/build-showroom.ts --repo-root .. manualmente.";
   emitMessage(`Graphify was incrementally refreshed after the relevant edit. The canonical output remains harness/graphify-out/. ${architectureMessage} ${showroomMessage}`, "Canonical Graphify, architecture and showroom state refreshed.");
 }
 

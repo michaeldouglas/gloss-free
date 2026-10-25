@@ -9,6 +9,7 @@ on:
       - "harness/artifacts/**"
       - "harness/core/scripts/build-showroom.ts"
       - "harness/core/assets/showroom.css"
+      - "harness/core/assets/showroom-project.json"
       - "harness/.bun-version"
       - "harness/package.json"
       - "app/data/processed/metadata-validation/**"
