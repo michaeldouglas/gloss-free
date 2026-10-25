@@ -14,6 +14,23 @@ Hooks e automações do harness ficam em TypeScript e são executados com Bun. O
 
 Python permanece no aplicativo para processamento de datasets e vídeo, EDA, estatística, ML, treinamento, inferência e avaliação. Execute comandos do aplicativo a partir de `../app/` usando `uv run ...`; não converta o código científico para TypeScript.
 
+## Narrativa científica do showroom
+
+Toda geração de `../docs/` deve preservar o contrato em `core/assets/showroom-report-contract.md`. A configuração `core/assets/showroom-project.json` mantém o foco científico, a finalidade da etapa atual e os limites de interpretação; os resultados da execução devem continuar vindo dos reports e resumos técnicos, sem números ou conclusões duplicados manualmente. O build do showroom valida a presença dessa narrativa e dos links para os detalhes e deve falhar se o contrato não for atendido.
+
+Antes de alterar afirmações científicas, confira as fontes indicadas no contrato. Para novas interpretações de resultados ou mudanças de etapa, coordene com `.codex/agents/scientific-data-analysis-coordinator.md` e use somente as skills adequadas à etapa. Delegue ao especialista de vídeo apenas conclusões que dependam de inspeção audiovisual; envolva revisão de literatura somente quando houver afirmações baseadas em literatura externa. Não execute esses agentes como etapa automática para renderizar dados já validados.
+
+## Design visual do showroom
+
+Quando a tarefa alterar a aparência, hierarquia, navegação ou legibilidade de `docs/`, use as skills locais de forma complementar e na ordem adequada ao trabalho:
+
+1. `ui-ux-pro-max` (`.agents/skills/ui-ux-pro-max/SKILL.md`) é a referência principal para escolher direção visual, tipografia, paleta, espaçamento e padrões de leitura. Trate o showroom como relatório científico/documentação, com foco em compreensão e leitura responsiva; detecte a stack real (HTML/CSS estático) e não introduza framework ou dependências por conveniência.
+2. `impeccable` (`.agents/skills/impeccable/SKILL.md`) orienta crítica e refinamento da interface existente. Para um ajuste pontual, preserve identidade, conteúdo e comportamento existentes; siga o carregamento de contexto e leia `reference/craft-floor.md` imediatamente antes de editar UI. Use o modo `Read` para páginas de relatório/documentação.
+3. `web-design-guidelines` (`.agents/skills/web-design-guidelines/SKILL.md`) faz a revisão final de acessibilidade, responsividade e qualidade técnica. Antes de cada auditoria, busque as regras atualizadas na fonte indicada pela própria skill e registre achados com arquivo e linha.
+4. `emil-design-eng` (`.agents/skills/emil-design-eng/SKILL.md`) só entra quando a mudança realmente precisar de animação ou microinteração. Não adicione movimento decorativo ao relatório por padrão; qualquer movimento deve respeitar `prefers-reduced-motion`.
+
+Não execute as quatro skills em toda regeneração: a atualização rotineira de dados continua usando `bun run core/scripts/build-showroom.ts`. Em trabalho visual, edite as fontes (`core/scripts/build-showroom.ts` e `core/assets/showroom.css`), regenere `../docs/` e confira o resultado renderizado; não edite manualmente as páginas geradas. Preserve integralmente o contrato científico e não altere o significado de métricas, decisões ou conclusões para obter efeito visual. Não mantenha sistemas de tokens concorrentes; se uma reformulação visual ampla exigir documentação persistente, escolha uma única fonte visual canônica e reconcilie nela as recomendações das skills.
+
 ## graphify
 
 This project has a knowledge graph at graphify-out/ with god nodes, community structure, and cross-file relationships.
@@ -28,6 +45,17 @@ Rules:
 - If graphify-out/wiki/index.md exists, use it for broad navigation instead of raw source browsing.
 - Read graphify-out/GRAPH_REPORT.md only for broad architecture review or when query/path/explain do not surface enough context.
 - After modifying code, run `graphify update .` to keep the graph current (AST-only, no API cost).
+
+## Apresentações científicas
+
+Apresentações ficam em `presentations/`, como pacote Slidev separado do
+runtime do harness e do código em `../app/`. Não leia dados brutos no Slidev:
+use snapshots públicos versionados em `artifacts/reports/publications/`,
+gerados com `core/scripts/prepare-presentation-release.ts`. Cada snapshot é
+uma projeção com origens relativas; preserve as datas e limitações das
+evidências e não substitua versões já publicadas. HTML e PDF publicados são
+saídas derivadas em `../docs/apresentacoes/`, construídas por
+`core/scripts/build-presentations.ts` antes do Pages/Jekyll.
 
 ## Skills locais de revisão de literatura
 

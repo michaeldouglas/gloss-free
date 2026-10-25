@@ -1,0 +1,6 @@
+node_modules/
+.slidev/
+dist/
+decks/*/evidence.generated.json
+evidence.generated.json
+.entry-*.md

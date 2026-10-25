@@ -10,6 +10,10 @@ on:
       - "harness/core/scripts/build-showroom.ts"
       - "harness/core/assets/showroom.css"
       - "harness/core/assets/showroom-project.json"
+      - "harness/core/assets/showroom-report-contract.md"
+      - "harness/core/scripts/prepare-presentation-release.ts"
+      - "harness/core/scripts/build-presentations.ts"
+      - "harness/presentations/**"
       - "harness/.bun-version"
       - "harness/package.json"
       - "app/data/processed/metadata-validation/**"
@@ -47,12 +51,30 @@ jobs:
         working-directory: harness
         run: bun run check
 
+      - name: Test harness and showroom narrative contract
+        working-directory: harness
+        run: bun test
+
+      - name: Install Slidev dependencies
+        working-directory: harness/presentations
+        env:
+          PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: "1"
+        run: bun install --frozen-lockfile
+
+      - name: Install Chromium for Slidev exports
+        working-directory: harness/presentations
+        run: bun run playwright install --with-deps chromium
+
       - name: Regenerate showroom
         working-directory: harness
         run: bun run core/scripts/build-showroom.ts --repo-root ..
 
+      - name: Build presentation catalog and exports
+        working-directory: harness
+        run: bun run core/scripts/build-presentations.ts --repo-root .. --site-base /gloss-free/
+
       - name: Verify generated showroom
-        run: test -s docs/index.html && test -s docs/data/showroom.json
+        run: test -s docs/index.html && test -s docs/reports/latest.html && test -s docs/data/showroom.json && test -s docs/apresentacoes/index.html && test -s docs/apresentacoes/latest.pdf
 
       - name: Build Jekyll site from regenerated docs
         uses: actions/jekyll-build-pages@v1

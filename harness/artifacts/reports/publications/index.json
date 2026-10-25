@@ -1,0 +1,13 @@
+{
+  "schema_version": "research-presentation-index.v1",
+  "latest_release": "2026-10-25-baseline",
+  "releases": [
+    {
+      "id": "2026-10-25-baseline",
+      "release_date": "2026-10-25",
+      "title": "Progresso da pesquisa — validação dos dados",
+      "summary": "Aquisição reproduzível, validação técnica dos metadados e proveniência dos datasets para a pesquisa de tradução de Libras sem glosas.",
+      "snapshot": "2026-10-25-baseline.json"
+    }
+  ]
+}
