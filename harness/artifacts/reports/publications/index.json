@@ -1,7 +1,14 @@
 {
   "schema_version": "research-presentation-index.v1",
-  "latest_release": "2026-10-25-baseline",
+  "latest_release": "2026-10-25-progresso",
   "releases": [
+    {
+      "id": "2026-10-25-progresso",
+      "release_date": "2026-10-25",
+      "title": "O que fizemos até agora — e o que falta medir",
+      "summary": "Antes de avaliar uma tradução, conferimos se os vídeos, as anotações e as listas de arquivos dos dois datasets se correspondem. O MINDS-Libras passou na auditoria registrada; o relatório de 14/10 do V-LIBRASIL ainda aponta pendências. Ainda não há métrica de tradução.",
+      "snapshot": "2026-10-25-progresso.json"
+    },
     {
       "id": "2026-10-25-baseline",
       "release_date": "2026-10-25",

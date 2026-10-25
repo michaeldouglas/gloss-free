@@ -1,7 +1,7 @@
 {
   "schema_version": "execution-report.v1",
   "dataset": "minds-libras-raw",
-  "executed_at": "2026-10-25T10:22:44.647529-03:00",
+  "executed_at": "2026-10-25T19:32:52.126186-03:00",
   "decision": "GO",
   "technical_summary": {
     "dataset": "minds-libras-raw",
@@ -27,6 +27,6 @@
     "WARNING": 0,
     "INFO": 1
   },
-  "report": "harness/artifacts/reports/executions/minds-libras-raw_20261025_102244.md",
+  "report": "harness/artifacts/reports/executions/minds-libras-raw_20261025_193252.md",
   "showroom": "docs"
 }
