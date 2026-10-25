@@ -5,6 +5,9 @@ const formatNumber = (value: number | null | undefined): string => new Intl.Numb
 const formatDate = (value: string | null | undefined): string => value
   ? new Intl.DateTimeFormat("pt-BR", { dateStyle: "long", timeZone: "UTC" }).format(new Date(value))
   : "data não registrada";
+const formatDateTime = (value: string | null | undefined): string => value
+  ? new Intl.DateTimeFormat("pt-BR", { dateStyle: "short", timeStyle: "short", timeZone: "America/Sao_Paulo" }).format(new Date(value))
+  : "data não registrada";
 
 export default defineAppSetup(({ app }) => {
   const mind = evidence.datasets.find((item) => item.dataset === "minds-libras-raw");
@@ -18,6 +21,8 @@ export default defineAppSetup(({ app }) => {
     $progress: evidence.feature_progress,
     $fmt: formatNumber,
     $date: formatDate,
+    $dateTime: formatDateTime,
+    $dateTime: formatDateTime,
     $evidenceDateMind: formatDate(mind?.generated_at_utc),
     $evidenceDateVlibrasil: formatDate(vlibrasil?.generated_at_utc),
   });

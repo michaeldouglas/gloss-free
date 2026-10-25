@@ -52,6 +52,14 @@ harness e os resumos técnicos disponíveis em `../app/data/processed/`. A
 publicação deve gerar e validar o showroom antes de enviar o conteúdo de
 `../docs/` ao GitHub Pages.
 
+A validação publica uma amostra de vídeo por dataset em
+../docs/media/validation/. Os arquivos permanecem cópias exatas e rastreáveis
+por revisão e SHA-256 em core/assets/showroom-project.json; os originais em
+../app/data/raw/ não são modificados. Cada player usa um frame do próprio vídeo
+como poster; timestamp e SHA-256 da imagem também ficam no metadata e são
+validados a cada build. Só acrescente novas amostras quando o uso para
+publicação web estiver autorizado.
+
 ## Apresentações científicas
 
 As apresentações usam Slidev em um pacote próprio em `presentations/`, com
