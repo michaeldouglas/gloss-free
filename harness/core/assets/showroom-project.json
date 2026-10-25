@@ -1,5 +1,5 @@
 {
-  "schema_version": "showroom-project.v3",
+  "schema_version": "showroom-project.v5",
   "title": "Aprendizado profundo de representações visuais para tradução de Libras para português escrito sem glosas",
   "displayTitle": "Tradução de Libras para português escrito",
   "summary": "Uma dissertação sobre como aprender representações visuais de vídeos em Libras para produzir texto em português sem depender de glosas como etapa intermediária.",
@@ -9,9 +9,18 @@
   "validationPurpose": "Antes de avaliar modelos, esta etapa confere se as dimensões, a informação temporal, os arquivos e as anotações dos datasets são coerentes o bastante para sustentar experimentos reproduzíveis.",
   "interpretationLimit": "GO e NO-GO resumem critérios de integridade e proveniência dos dados. Eles não medem qualidade linguística, qualidade de tradução nem desempenho de modelos.",
   "plannedMethodology": [
-    { "title": "Analisar o movimento", "detail": "A proposta prevê investigar pistas visuais de mãos, face e corpo em vídeos de Libras." },
-    { "title": "Aprender representações visuais", "detail": "A proposta lista métodos espaciais e temporais de deep learning e modelos multimodais como frentes a estudar, sem fixar uma arquitetura final." },
-    { "title": "Relacionar vídeo e texto", "detail": "A meta é apoiar a tradução para português escrito sem glosas; ainda não há resultados de tradução publicados nos relatórios atuais." }
+    {
+      "title": "Analisar o movimento",
+      "detail": "A proposta prevê investigar pistas visuais de mãos, face e corpo em vídeos de Libras."
+    },
+    {
+      "title": "Aprender representações visuais",
+      "detail": "A proposta lista métodos espaciais e temporais de deep learning e modelos multimodais como frentes a estudar, sem fixar uma arquitetura final."
+    },
+    {
+      "title": "Relacionar vídeo e texto",
+      "detail": "A meta é apoiar a tradução para português escrito sem glosas; ainda não há resultados de tradução publicados nos relatórios atuais."
+    }
   ],
   "proposalReference": {
     "label": "Proposta de dissertação",
@@ -24,8 +33,47 @@
     "href": "https://arxiv.org/abs/2307.14768"
   },
   "pipeline": [
-    { "title": "Vídeos de Libras", "detail": "Entrada visual" },
-    { "title": "Representações visuais", "detail": "Aprendizado profundo" },
-    { "title": "Português escrito", "detail": "Saída da tradução" }
+    {
+      "title": "Vídeos de Libras",
+      "detail": "Entrada visual"
+    },
+    {
+      "title": "Representações visuais",
+      "detail": "Aprendizado profundo"
+    },
+    {
+      "title": "Português escrito",
+      "detail": "Saída da tradução"
+    }
+  ],
+  "mediaSamples": [
+    {
+      "dataset": "minds-libras-raw",
+      "label": "Sinal “Acontecer” · Sinalizador 01",
+      "filename": "01AcontecerSinalizador01-1.mp4",
+      "publicPath": "media/validation/minds-libras-raw/01AcontecerSinalizador01-1.mp4",
+      "posterPath": "media/validation/minds-libras-raw/01AcontecerSinalizador01-1.mp4.poster.jpg",
+      "posterSha256": "78F57FCEB9F1DAB401FBDFB682438E0B43B87B8A1CDB54976CD7356CC5A15D6E",
+      "posterTimestamp": "00:00:02.2",
+      "sourceLabel": "MINDS-Libras · IBMEC São Paulo",
+      "sourceUrl": "https://huggingface.co/datasets/ibmectech/minds-libras-raw/blob/a881a5a4330ec8b00bf6c80618f02fc66345f379/videos/01AcontecerSinalizador01-1.mp4",
+      "sourceRevision": "a881a5a4330ec8b00bf6c80618f02fc66345f379",
+      "sha256": "6C0B90502582B92E677F79648FEA524BAE365637FC071A1A893E083F7C0BC724"
+    },
+    {
+      "dataset": "v-librasil-raw",
+      "label": "Sinal “Abacaxi” · Articulador 1",
+      "filename": "Abacaxi_Articulador1.mp4",
+      "publicPath": "media/validation/v-librasil-raw/Abacaxi_Articulador1.mp4",
+      "posterPath": "media/validation/v-librasil-raw/Abacaxi_Articulador1.mp4.poster.jpg",
+      "posterSha256": "828ED354C2B149D123C69D711C58A9A0C2C4054418576C03BD3C677880F9A06E",
+      "posterTimestamp": "00:00:01.5",
+      "sourceLabel": "V-LIBRASIL · UFPE",
+      "sourceUrl": "https://libras.cin.ufpe.br/sign/817",
+      "mirrorLabel": "Cópia de aquisição no Hugging Face",
+      "mirrorUrl": "https://huggingface.co/datasets/ibmectech/v-librasil-raw/blob/d2d3e5e95574c4e0c5c20a7d82a24d52063e12d5/videos/Abacaxi_Articulador1.mp4",
+      "sourceRevision": "d2d3e5e95574c4e0c5c20a7d82a24d52063e12d5",
+      "sha256": "7880B246D7F0F415B9CCC911AED546990F8455FBE130F8DC1EE2484601BEA53E"
+    }
   ]
 }

@@ -1,10 +1,27 @@
 import path from "node:path";
+import { createHash } from "node:crypto";
 import { mkdir, readdir, readFile, writeFile, rm, copyFile } from "node:fs/promises";
 import { createHarnessPaths, getHarnessPaths } from "../lib/paths.ts";
 
 type JsonObject = Record<string, any>;
+type MediaSample = {
+  dataset: string;
+  label: string;
+  filename: string;
+  publicPath: string;
+  posterPath: string;
+  posterSha256: string;
+  posterTimestamp: string;
+  sourceLabel: string;
+  sourceUrl: string;
+  sourceRevision: string;
+  sha256: string;
+  mirrorLabel?: string;
+  mirrorUrl?: string;
+};
+type PublishedMediaSample = MediaSample & { href: string; sizeBytes: number; posterHref: string; posterSizeBytes: number };
 type ShowroomProject = {
-  schema_version: "showroom-project.v3";
+  schema_version: "showroom-project.v5";
   title: string;
   displayTitle: string;
   summary: string;
@@ -17,6 +34,7 @@ type ShowroomProject = {
   proposalReference: { label: string; date: string; href: string };
   glossFreeReference: { label: string; href: string };
   nextStep: string;
+  mediaSamples: MediaSample[];
   pipeline: Array<{ title: string; detail: string }>;
 };
 const severities = ["CRITICAL", "ERROR", "WARNING", "INFO"] as const;
@@ -37,15 +55,37 @@ async function loadJson(file: string): Promise<JsonObject> {
   return value;
 }
 function validateProjectMetadata(value: JsonObject): ShowroomProject {
-  if (value.schema_version !== "showroom-project.v3") throw new Error("Metadado do showroom precisa usar schema_version showroom-project.v3.");
+  if (value.schema_version !== "showroom-project.v5") throw new Error("Metadado do showroom precisa usar schema_version showroom-project.v5.");
   const requiredStrings = ["title", "displayTitle", "summary", "problemContext", "researchFocus", "glossFreeExplanation", "validationPurpose", "interpretationLimit", "nextStep"];
   for (const key of requiredStrings) if (typeof value[key] !== "string" || !value[key].trim()) throw new Error(`Metadado do showroom inválido: '${key}' precisa ser texto não vazio.`);
   if (!Array.isArray(value.plannedMethodology) || !value.plannedMethodology.length || !value.plannedMethodology.every((item) => isObject(item) && typeof item.title === "string" && typeof item.detail === "string")) throw new Error("Metadado do showroom inválido: 'plannedMethodology' precisa conter etapas documentadas.");
   for (const key of ["proposalReference", "glossFreeReference"]) if (!isObject(value[key]) || typeof value[key].label !== "string" || typeof value[key].href !== "string") throw new Error(`Metadado do showroom inválido: '${key}' precisa informar label e href.`);
+  if (!Array.isArray(value.mediaSamples) || !value.mediaSamples.length || !value.mediaSamples.every((item) => isObject(item) && ["dataset", "label", "filename", "publicPath", "posterPath", "posterSha256", "posterTimestamp", "sourceLabel", "sourceUrl", "sourceRevision", "sha256"].every((key) => typeof item[key] === "string" && item[key].trim()) && /^[a-f0-9]{64}$/i.test(item.sha256) && /^[a-f0-9]{64}$/i.test(item.posterSha256) && (!item.mirrorUrl || typeof item.mirrorLabel === "string"))) throw new Error("Metadado do showroom inválido: 'mediaSamples' precisa identificar arquivos públicos com origem, revisão e SHA-256.");
+  if (new Set(value.mediaSamples.map((item: JsonObject) => item.dataset)).size !== value.mediaSamples.length) throw new Error("Metadado do showroom inválido: cada dataset pode ter apenas uma amostra de vídeo.");
   if (!Array.isArray(value.pipeline) || value.pipeline.length === 0 || !value.pipeline.every((item) => isObject(item) && typeof item.title === "string" && typeof item.detail === "string")) throw new Error("Metadado do showroom inválido: 'pipeline' precisa conter etapas com title e detail.");
   return value as ShowroomProject;
 }
-function validateExecutionReport(latest: JsonObject): void {
+async function validatePublishedMediaAsset(docsRoot: string, dataset: string, publicPath: string, expectedSha256: string, assetKind: string): Promise<{ publicPath: string; href: string; sizeBytes: number }> {
+  const normalizedPath = publicPath.replaceAll("\\", "/");
+  if (path.posix.isAbsolute(normalizedPath) || normalizedPath.split("/").includes("..") || !normalizedPath.startsWith("media/validation/")) throw new Error("Caminho público de " + assetKind + " inválido: " + publicPath);
+  const absoluteDocs = path.resolve(docsRoot);
+  const filePath = path.resolve(absoluteDocs, ...normalizedPath.split("/"));
+  const relativePath = path.relative(absoluteDocs, filePath);
+  if (relativePath.startsWith("..") || path.isAbsolute(relativePath)) throw new Error("A amostra precisa permanecer dentro de docs/: " + publicPath);
+  const contents = await readFile(filePath).catch((error) => { throw new Error("O arquivo " + assetKind + " da amostra " + dataset + " não está disponível em docs/: " + (error instanceof Error ? error.message : String(error))); });
+  const digest = createHash("sha256").update(contents).digest("hex");
+  if (digest.toLowerCase() !== expectedSha256.toLowerCase()) throw new Error("SHA-256 divergente para o " + assetKind + " da amostra " + dataset + ".");
+  return { publicPath: normalizedPath, href: path.posix.relative("validation", normalizedPath), sizeBytes: contents.byteLength };
+}
+async function validatePublishedMediaSamples(docsRoot: string, samples: MediaSample[]): Promise<PublishedMediaSample[]> {
+  const published: PublishedMediaSample[] = [];
+  for (const sample of samples) {
+    const video = await validatePublishedMediaAsset(docsRoot, sample.dataset, sample.publicPath, sample.sha256, "vídeo");
+    const poster = await validatePublishedMediaAsset(docsRoot, sample.dataset, sample.posterPath, sample.posterSha256, "poster");
+    published.push({ ...sample, publicPath: video.publicPath, href: video.href, sizeBytes: video.sizeBytes, posterPath: poster.publicPath, posterHref: poster.href, posterSizeBytes: poster.sizeBytes });
+  }
+  return published;
+}function validateExecutionReport(latest: JsonObject): void {
   if (latest.schema_version !== undefined && latest.schema_version !== "execution-report.v1") throw new Error(`Schema de relatório não suportado: ${String(latest.schema_version)}.`);
   if (typeof latest.dataset !== "string" || !latest.dataset.trim()) throw new Error("artifacts/reports/latest.json precisa informar dataset.");
   if (typeof latest.decision !== "string" || !latest.decision.trim()) throw new Error("artifacts/reports/latest.json precisa informar decision.");
@@ -92,10 +132,32 @@ function datasetLabel(dataset: unknown): string {
   if (value === "v-librasil-raw") return "V-LIBRASIL";
   return esc(value);
 }
+function validationMediaSection(item: JsonObject, sample: PublishedMediaSample): string {
+  const id = `sample-${String(item.dataset).replace(/[^a-zA-Z0-9_-]/g, "-")}`;
+  const interpretation = `A decisão ${item.decision} refere-se à integridade e à proveniência do dataset. Esta amostra não representa aprovação individual para experimentos nem resultado de tradução.`;
+  const playLabel = `Reproduzir ${sample.label}`;
+  const mirrorLink = sample.mirrorUrl ? ` · <a href="${esc(sample.mirrorUrl)}">${esc(sample.mirrorLabel ?? "Espelho de aquisição")}</a>` : "";
+  return `<section class="validation-sample" aria-labelledby="${id}-title"><h3 id="${id}-title">Amostra de vídeo · ${datasetLabel(item.dataset)}</h3><figure><div class="sample-player"><video id="${id}-video" controls preload="none" playsinline poster="${esc(sample.posterHref)}" aria-labelledby="${id}-title" aria-describedby="${id}-description"><source src="${esc(sample.href)}" type="video/mp4">Seu navegador não reproduz vídeo MP4. <a href="${esc(sample.href)}">Abrir o arquivo de vídeo</a>.</video><button class="sample-play-button" type="button" aria-label="${esc(playLabel)}" aria-controls="${id}-video" data-sample-play hidden><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5.25v13.5L19 12 8 5.25Z"/></svg></button></div><figcaption><span>${esc(sample.label)} · <code>${esc(sample.filename)}</code></span><a href="${esc(sample.href)}" download>Baixar MP4</a></figcaption></figure><p id="${id}-description" class="sample-note">${esc(interpretation)}</p><p class="sample-attribution">Fonte: <a href="${esc(sample.sourceUrl)}">${esc(sample.sourceLabel)}</a> · revisão <code title="${esc(sample.sourceRevision)}">${esc(sample.sourceRevision.slice(0, 7))}</code>${mirrorLink}</p></section>`;
+}
 function statusClass(value: unknown): string {
   return ({ GO: "good", PASS: "good", PARTIAL: "warn", "NO-GO": "bad", FAIL: "bad" } as Record<string, string>)[String(value)] ?? "neutral";
 }
 function page(title: string, body: string, prefix = "", currentPage = ""): string {
+  const validationPlayerScript = currentPage === "validation" ? `<script>
+document.querySelectorAll("[data-sample-play]").forEach((button) => {
+  const player = button.closest(".sample-player");
+  const video = player?.querySelector("video");
+  if (!player || !(video instanceof HTMLVideoElement)) return;
+  const syncButton = () => { button.hidden = !video.paused && !video.ended; };
+  button.addEventListener("click", () => {
+    void video.play().catch(() => { button.hidden = false; });
+  });
+  video.addEventListener("play", syncButton);
+  video.addEventListener("pause", syncButton);
+  video.addEventListener("ended", syncButton);
+  button.hidden = false;
+});
+</script>` : "";
   const technicalNavigation = [
     ["architecture", "Arquitetura", "architecture/index.html"],
     ["datasets", "Datasets", "datasets/index.html"],
@@ -129,7 +191,7 @@ function page(title: string, body: string, prefix = "", currentPage = ""): strin
 <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
 <header class="topbar"><a class="brand" href="${prefix}index.html"${currentPage === "home" ? ' aria-current="page"' : ""}><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M4 20c5 0 5-9 11-9s6 10 13 10"/><circle cx="5" cy="20" r="2"/><circle cx="27" cy="21" r="2"/></svg><span>Pesquisa em tradução de Libras</span></a>
 <nav aria-label="Navegação principal">${navLinks}</nav></header>
-<main id="main-content" tabindex="-1">${body}</main><footer class="footer">Portal de pesquisa · os vídeos originais não são publicados aqui</footer>
+<main id="main-content" tabindex="-1">${body}</main><footer class="footer">Portal de pesquisa · duas amostras de vídeo são publicadas; os demais vídeos ficam fora do portal</footer>${validationPlayerScript}
 </body></html>`;
 }
 function severityGrid(values: JsonObject): string {
@@ -279,12 +341,18 @@ export async function buildShowroom(repoRoot: string): Promise<JsonObject> {
   const metadata = paths.metadataValidationRoot;
   const docs = paths.docsRoot;
   const project = validateProjectMetadata(await loadJson(path.join(paths.assetsRoot, "showroom-project.json")));
+  const mediaSamples = await validatePublishedMediaSamples(paths.docsRoot, project.mediaSamples);
   const latest = await loadJson(path.join(paths.reportsRoot, "latest.json"));
   validateExecutionReport(latest);
   const reportText = await readFile(path.join(paths.reportsRoot, "latest.md"), "utf8");
   if (!reportText.trim()) throw new Error("artifacts/reports/latest.md está vazio.");
   const summaries = await collectPublishedSummaries(paths.reportsRoot) ?? await collectSummaries(metadata);
   const datasetItems = [...summaries.entries()].sort(([a], [b]) => a.localeCompare(b)).map(([name, item]) => makeView(name, item, latest));
+  const sampleDatasets = new Set(mediaSamples.map((sample) => sample.dataset));
+  const datasetNames = new Set(datasetItems.map((item) => item.dataset));
+  const datasetsWithoutSamples = datasetItems.filter((item) => !sampleDatasets.has(item.dataset)).map((item) => item.dataset);
+  const samplesWithoutDatasets = mediaSamples.filter((sample) => !datasetNames.has(sample.dataset)).map((sample) => sample.dataset);
+  if (datasetsWithoutSamples.length || samplesWithoutDatasets.length) throw new Error(`Amostras de vídeo precisam corresponder a cada dataset publicado. Sem amostra: ${datasetsWithoutSamples.join(", ") || "nenhum"}; sem relatório: ${samplesWithoutDatasets.join(", ") || "nenhum"}.`);
   if (!datasetItems.some((item) => item.dataset === latest.dataset)) throw new Error(`O dataset '${latest.dataset}' de latest.json não possui metadata_summary correspondente.`);
   const architectureSource = paths.architectureHtmlRoot;
   const architectureFiles = (await readdir(architectureSource, { withFileTypes: true }).catch(() => []))
@@ -294,7 +362,7 @@ export async function buildShowroom(repoRoot: string): Promise<JsonObject> {
   for (const old of await readdir(publicArchitecture).catch(() => [])) if (old.endsWith(".html")) await rm(path.join(publicArchitecture, old));
   for (const name of architectureFiles) await copyFile(path.join(architectureSource, name), path.join(publicArchitecture, name));
 
-  const siteData = { schema_version: "showroom.v1", generated_at: new Date().toISOString(), latest, datasets: datasetItems, architecture: architectureFiles, scope: "Pesquisa, validação dos datasets e evidências disponíveis no projeto" };
+  const siteData = { schema_version: "showroom.v1", generated_at: new Date().toISOString(), latest, datasets: datasetItems, architecture: architectureFiles, media_samples: mediaSamples.map(({ dataset, label, filename, publicPath, posterPath, posterHref, posterSha256, posterTimestamp, posterSizeBytes, sourceLabel, sourceUrl, sourceRevision, sha256, sizeBytes, mirrorLabel, mirrorUrl }) => ({ dataset, label, filename, public_path: publicPath, poster_path: posterPath, poster_url: posterHref, poster_sha256: posterSha256, poster_timestamp: posterTimestamp, poster_size_bytes: posterSizeBytes, source_label: sourceLabel, source_url: sourceUrl, source_revision: sourceRevision, sha256, size_bytes: sizeBytes, ...(mirrorUrl ? { mirror_label: mirrorLabel, mirror_url: mirrorUrl } : {}) })), scope: "Pesquisa, validação dos datasets e evidências disponíveis no projeto" };
   await writeText(path.join(docs, "data", "showroom.json"), JSON.stringify(siteData, null, 2));
   const current = latest.dataset ?? datasetItems[0]?.dataset ?? "nenhum dataset";
   const technical = latest.technical_summary ?? {};
@@ -324,27 +392,32 @@ export async function buildShowroom(repoRoot: string): Promise<JsonObject> {
 <section class="section dataset-section" id="datasets" aria-labelledby="datasets-title"><div class="section-heading"><div><h2 id="datasets-title">Datasets e evidências disponíveis</h2><p class="section-intro">${esc(validationSummary)} Há ${number(totalVideos)} arquivos de vídeo registrados nos resumos; essa contagem não significa aprovação para experimentos.</p></div><a class="text-link" href="validation/index.html">Abrir todas as auditorias</a></div><details class="definition-note"><summary>Como interpretar GO, NO-GO e manifest</summary><dl><div><dt>GO</dt><dd>O relatório não encontrou ocorrências CRITICAL ou ERROR segundo os critérios configurados. Não mede qualidade de tradução.</dd></div><div><dt>NO-GO</dt><dd>O relatório encontrou ocorrências CRITICAL ou ERROR que precisam ser revistas.</dd></div><div><dt>Manifest</dt><dd>Inventário derivado de registros e arquivos validados; não substitui os dados originais.</dd></div></dl></details><div class="audit-grid">${auditCards}</div></section>
 <section class="section experiment-status" id="experimentos" aria-labelledby="experiments-title"><h2 id="experiments-title">Experimentos e resultados de tradução</h2><p>Os relatórios atualmente publicados documentam qualidade e proveniência dos dados. Eles não apresentam baselines, comparação entre modelos nem métricas de tradução. Por isso, GO e NO-GO não são apresentados como resultados científicos do modelo.</p><p>O relatório da execução mais recente está disponível para consulta, com os parâmetros e os limites da evidência.</p><a class="text-link" href="reports/latest.html">Ler o relatório técnico mais recente</a></section>
 <section class="section progress-section" id="andamento" aria-labelledby="progress-title"><div class="section-heading"><div><h2 id="progress-title">Evolução documentada</h2><p class="section-intro">Histórico das auditorias publicadas, ordenado pela data de cada evidência.</p></div><a class="text-link" href="executions/index.html">Ver execuções</a></div><ol class="milestone-list">${auditHistory}</ol><p class="next-step"><strong>Próxima frente registrada no README:</strong> ${esc(project.nextStep)}</p></section>
-<section class="section technical-section" id="tecnico" aria-labelledby="technical-title"><h2 id="technical-title">Acompanhamento técnico</h2><p>Relatórios, auditorias e diagramas detalhados ficam nesta área; os dados originais permanecem fora do showroom.</p><ul class="artifact-list">${technicalLinks}</ul></section>`;
+<section class="section technical-section" id="tecnico" aria-labelledby="technical-title"><h2 id="technical-title">Acompanhamento técnico</h2><p>Relatórios, auditorias e diagramas detalhados ficam nesta área. A validação publica uma amostra identificada de cada dataset; os demais vídeos permanecem fora do showroom.</p><ul class="artifact-list">${technicalLinks}</ul></section>`;
   const latestReportPage = page("Relatório", reportPage(latest, reportText, project), "../", "reports");
   assertShowroomNarrative(page("Início", home, "", "home"), latestReportPage, project, latest, reportText);
   await writeText(path.join(docs, "index.html"), page("Início", home, "", "home"));
 
   const archLinks = architectureFiles.map((name) => `<li><a href="${esc(name)}">${esc(path.parse(name).name.replaceAll("-", " "))}</a><span>HTML Archify</span></li>`).join("") || '<li class="empty">A arquitetura ainda não foi publicada.</li>';
-  const architecture = `<section class="page-intro"><h1>Arquitetura do pipeline</h1><p>O diagrama Archify mostra o caminho principal entre pesquisador, CLI, aquisição, processamento audiovisual, validações e artefatos derivados.</p></section><section class="section feature-panel"><div><h2>Diagramas disponíveis</h2><p>Os arquivos são gerados a partir dos candidatos versionados em <code>harness/artifacts/architecture/source/</code>.</p></div><ul class="artifact-list">${archLinks}</ul></section><section class="section note"><strong>Como ler:</strong> a arquitetura representa componentes e responsabilidades; ela não substitui os relatórios nem publica os vídeos originais.</section>`;
+  const architecture = `<section class="page-intro"><h1>Arquitetura do pipeline</h1><p>O diagrama Archify mostra o caminho principal entre pesquisador, CLI, aquisição, processamento audiovisual, validações e artefatos derivados.</p></section><section class="section feature-panel"><div><h2>Diagramas disponíveis</h2><p>Os arquivos são gerados a partir dos candidatos versionados em <code>harness/artifacts/architecture/source/</code>.</p></div><ul class="artifact-list">${archLinks}</ul></section><section class="section note"><strong>Como ler:</strong> a arquitetura representa componentes e responsabilidades; ela não substitui os relatórios. As amostras de vídeo ficam identificadas na página de validação.</section>`;
   await writeText(path.join(docs, "architecture", "index.html"), page("Arquitetura", architecture, "../", "architecture"));
 
   const rows = datasetItems.map((item) => `<tr><th scope="row">${esc(item.dataset)}</th><td>${number(item.videos)}</td><td>${number(item.annotations)}</td><td>${number(item.matched)}</td><td>${number(item.missing)}</td><td>${number(item.extra)}</td><td><span class="status ${statusClass(item.decision)}">${esc(item.decision)}</span></td></tr>`).join("") || '<tr><td colspan="7" class="empty">Nenhum dataset validado foi publicado.</td></tr>';
   const datasets = `<section class="page-intro"><h1>Datasets e evidências disponíveis</h1><p>Esta página resume datasets com evidência derivada no projeto. Quantidade não significa qualidade; a reconciliação e os critérios da validação estão detalhados em cada resultado.</p></section><section class="section table-section"><div class="table-wrap" role="region" aria-label="Tabela de datasets e reconciliação" tabindex="0"><table><caption>Inventário de datasets com resumos técnicos publicados</caption><thead><tr><th scope="col">Dataset</th><th scope="col">Vídeos</th><th scope="col">CSV</th><th scope="col">Correspondentes</th><th scope="col">Ausentes</th><th scope="col">Extras</th><th scope="col">Decisão</th></tr></thead><tbody>${rows}</tbody></table></div></section>`;
   await writeText(path.join(docs, "datasets", "index.html"), page("Datasets", datasets, "../", "datasets"));
 
-  const validationCards = datasetItems.map((item) => `<article class="validation-card" id="${esc(item.dataset)}"><div class="card-top"><code class="dataset-id">${esc(item.dataset)}</code><span class="status ${statusClass(item.decision)}">${esc(item.decision)}</span></div><h2>Reconciliação e qualidade</h2><div class="severity-grid">${severityGrid(item.severity)}</div><dl class="detail-list"><div><dt>Chave física</dt><dd>${esc(item.key_column || "não informada")}</dd></div><div><dt>Correspondentes</dt><dd>${number(item.matched)}</dd></div><div><dt>Ausentes</dt><dd>${number(item.missing)}</dd></div><div><dt>Extras</dt><dd>${number(item.extra)}</dd></div><div><dt>Manifest</dt><dd>${number(item.manifest_rows)}</dd></div><div><dt>FPS</dt><dd>${esc(item.fps || "não investigado")}</dd></div></dl><p class="muted">Evidência gerada em ${date(item.generated_at)}.</p></article>`).join("") || '<p class="empty">Nenhum resultado de validação foi publicado.</p>';
+  const sampleByDataset = new Map(mediaSamples.map((sample) => [sample.dataset, sample] as const));
+  const validationCards = datasetItems.map((item) => {
+    const sample = sampleByDataset.get(item.dataset);
+    const sampleHtml = sample ? validationMediaSection(item, sample) : "";
+    return `<article class="validation-card" id="${esc(item.dataset)}"><div class="card-top"><code class="dataset-id">${esc(item.dataset)}</code><span class="status ${statusClass(item.decision)}">${esc(item.decision)}</span></div><h2>Reconciliação e qualidade</h2><div class="severity-grid">${severityGrid(item.severity)}</div><dl class="detail-list"><div><dt>Chave física</dt><dd>${esc(item.key_column || "não informada")}</dd></div><div><dt>Correspondentes</dt><dd>${number(item.matched)}</dd></div><div><dt>Ausentes</dt><dd>${number(item.missing)}</dd></div><div><dt>Extras</dt><dd>${number(item.extra)}</dd></div><div><dt>Manifest</dt><dd>${number(item.manifest_rows)}</dd></div><div><dt>FPS</dt><dd>${esc(item.fps || "não investigado")}</dd></div></dl>${sampleHtml}<p class="muted">Evidência gerada em ${date(item.generated_at)}.</p></article>`;
+  }).join("") || '<p class="empty">Nenhum resultado de validação foi publicado.</p>';
   const validation = `<section class="page-intro"><h1>Validação dos metadados</h1><p>A Etapa 1 verifica identidade dos arquivos, correspondência com o CSV e metadados técnicos. EDA, balanceamento e treinamento permanecem fora deste showroom.</p></section><section class="section latest-banner"><div><h2>Execução mais recente</h2><p>${esc(current)} · ${timeElement(latest.executed_at)} · decisão <strong>${esc(latest.decision ?? "—")}</strong></p></div><div class="severity-grid" aria-label="Issues por severidade">${severityGrid(quality)}</div></section><section class="section validation-grid">${validationCards}</section><section class="section note"><strong>FPS observado:</strong> ${esc(technical.dataset_fps_interpretation ?? "sem conclusão registrada")}. Correspondências com contagem de frames: ${number(technical.fps_frame_count_matches)}; com taxa real: ${number(technical.fps_rate_matches)}.</section><section class="section"><a class="button button-primary" href="../reports/latest.html">Ler o resumo completo</a></section>`;
   await writeText(path.join(docs, "validation", "index.html"), page("Validação", validation, "../", "validation"));
 
   const executionDir = path.join(artifacts, "reports", "executions");
   const executionFiles = (await readdir(executionDir, { withFileTypes: true }).catch(() => [])).filter((entry) => entry.isFile() && entry.name.endsWith(".md")).map((entry) => entry.name).sort().reverse();
   const executionRows = executionFiles.map((name) => `<tr><th scope="row"><code>${esc(path.parse(name).name)}</code></th><td>Resumo local mantido no harness; conteúdo não publicado nesta página.</td></tr>`).join("") || '<tr><td colspan="2" class="empty">Nenhuma execução histórica registrada.</td></tr>';
-  const executions = `<section class="page-intro"><h1>Histórico de execuções</h1><p>O harness preserva resumos por execução. Esta página lista os registros locais e destaca o estado mais recente; os arquivos originais e o histórico bruto não são publicados aqui.</p></section><section class="section latest-banner"><div><h2>Estado mais recente</h2><p>${esc(current)} · ${timeElement(latest.executed_at)} · ${esc(latest.decision ?? "sem decisão")}</p></div><a class="button button-primary" href="../reports/latest.html">Abrir relatório atual</a></section><section class="section table-section"><h2>Registros locais</h2><div class="table-wrap" role="region" aria-label="Registros locais de execução" tabindex="0"><table><caption>Arquivos de histórico registrados no harness</caption><thead><tr><th scope="col">Execução</th><th scope="col">Disponibilidade</th></tr></thead><tbody>${executionRows}</tbody></table></div></section><section class="section note">Os vídeos e os arquivos originais permanecem fora do showroom.</section>`;
+  const executions = `<section class="page-intro"><h1>Histórico de execuções</h1><p>O harness preserva resumos por execução. Esta página lista os registros locais e destaca o estado mais recente; os arquivos originais e o histórico bruto não são publicados aqui.</p></section><section class="section latest-banner"><div><h2>Estado mais recente</h2><p>${esc(current)} · ${timeElement(latest.executed_at)} · ${esc(latest.decision ?? "sem decisão")}</p></div><a class="button button-primary" href="../reports/latest.html">Abrir relatório atual</a></section><section class="section table-section"><h2>Registros locais</h2><div class="table-wrap" role="region" aria-label="Registros locais de execução" tabindex="0"><table><caption>Arquivos de histórico registrados no harness</caption><thead><tr><th scope="col">Execução</th><th scope="col">Disponibilidade</th></tr></thead><tbody>${executionRows}</tbody></table></div></section><section class="section note">O showroom publica somente as duas amostras identificadas na página de validação; o restante dos vídeos e arquivos brutos permanece fora do portal.</section>`;
   await writeText(path.join(docs, "executions", "index.html"), page("Execuções", executions, "../", "executions"));
   await writeText(path.join(docs, "reports", "latest.html"), latestReportPage);
   await writeText(path.join(docs, "_config.yml"), "title: Pesquisa de tradução de Libras\ndescription: Portal científico da dissertação sobre representações visuais para tradução de Libras em português escrito.\nmarkdown: kramdown\nplugins: []\n");

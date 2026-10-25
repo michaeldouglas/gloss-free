@@ -109,7 +109,7 @@ function catalogHtml(latest: JsonObject, releases: JsonObject[]): string {
     .release-actions a { min-width:3.3rem; min-height:2.75rem; display:inline-flex; align-items:center; justify-content:center; padding:.5rem .75rem; border:1px solid var(--line); border-radius:.55rem; font-weight:700; text-decoration:none; }
     .release-actions a:hover { border-color:var(--teal); background:#eef9f8; }
     .footer-note { margin-top:2.5rem; padding-top:1rem; border-top:1px solid var(--line); color:var(--muted); font-size:.9rem; }
-    @media (max-width:700px) { .release-card,.history-heading { align-items:flex-start; flex-direction:column; } .release-actions { width:100%; } .secondary { display:block; margin:1rem 0 0; } }
+    @media (max-width:700px) { .release-card,.history-heading { align-items:flex-start; flex-direction:column; } .release-actions { width:100%; } .secondary { display:block; margin:1rem 0 0; } .current-outline { grid-template-columns:1fr; gap:.55rem; } }
     @media (prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto !important; transition:none !important; animation:none !important; } }
   </style>
 </head>
@@ -117,12 +117,17 @@ function catalogHtml(latest: JsonObject, releases: JsonObject[]): string {
   <a class="skip" href="#conteudo">Pular para o conteúdo</a>
   <main id="conteudo">
     <p class="eyebrow">Pesquisa em tradução de Libras</p>
-    <h1>Progresso da pesquisa</h1>
-    <p class="intro">Versões datadas para compartilhar o que foi realizado, quais evidências estão disponíveis e quais questões seguem abertas. Cada apresentação identifica a data dos dados usados.</p>
+    <h1>O que já fizemos até agora</h1>
+    <p class="intro">Comece pela pergunta da pesquisa. A versão mais recente conta o que foi verificado nos datasets, o que os relatórios permitem afirmar e o que ainda falta medir antes dos experimentos.</p>
     <section class="current" aria-labelledby="current-title">
       <p class="eyebrow">Apresentação mais recente · ${escapeHtml(latest.release_date)}</p>
       <h2 id="current-title">${escapeHtml(latest.title)}</h2>
       <p>${escapeHtml(latest.summary)}</p>
+      <ul class="current-outline" aria-label="Conteúdo da apresentação mais recente">
+        <li><strong>A pergunta</strong>Da Libras em vídeo ao português escrito, sem glosas.</li>
+        <li><strong>O que verificamos</strong>Correspondência entre arquivos, anotações e listas dos datasets.</li>
+        <li><strong>O que vem depois</strong>As pendências que antecedem a análise e os experimentos.</li>
+      </ul>
       <a class="primary" href="${escapeHtml(latest.id)}/index.html">Abrir a apresentação mais recente</a>
       <a class="secondary" href="latest.pdf" download>Baixar PDF</a>
     </section>
@@ -130,7 +135,7 @@ function catalogHtml(latest: JsonObject, releases: JsonObject[]): string {
       <div class="history-heading"><h2 id="history-title">Versões anteriores</h2><p>Selecione pela data do checkpoint.</p></div>
       <ol class="release-list">${archive || '<li class="release-card"><p>Esta é a primeira versão arquivada. Novos checkpoints aparecerão aqui.</p></li>'}</ol>
     </section>
-    <p class="footer-note">As apresentações são sínteses derivadas. Consulte os relatórios e a seção de validação para detalhes metodológicos e evidências completas.</p>
+    <p class="footer-note">A apresentação resume o checkpoint. <a href="../validation/index.html">A auditoria</a> e <a href="../reports/latest.html">o relatório técnico</a> guardam os detalhes e as fontes.</p>
   </main>
 </body>
 </html>`;

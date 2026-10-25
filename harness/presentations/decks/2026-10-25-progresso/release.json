@@ -1,0 +1,8 @@
+{
+  "schema_version": "presentation-release.v1",
+  "id": "2026-10-25-progresso",
+  "release_date": "2026-10-25",
+  "title": "O que fizemos até agora — e o que falta medir",
+  "summary": "Antes de avaliar uma tradução, conferimos se os vídeos, as anotações e as listas de arquivos dos dois datasets se correspondem. O MINDS-Libras passou na auditoria registrada; o relatório de 14/10 do V-LIBRASIL ainda aponta pendências. Ainda não há métrica de tradução.",
+  "snapshot_path": "harness/artifacts/reports/publications/2026-10-25-progresso.json"
+}

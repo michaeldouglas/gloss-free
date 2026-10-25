@@ -1,6 +1,6 @@
 # Relatório da execução — minds-libras-raw
 
-- Executado em: 2026-10-25T10:22:44.647529-03:00
+- Executado em: 2026-10-25T19:32:52.126186-03:00
 - Dataset: `minds-libras-raw`
 - Decisão da validação de qualidade: **GO**
 
@@ -27,6 +27,7 @@ frame_count    800
 - Severidades: `CRITICAL=0, ERROR=0, WARNING=0, INFO=1`
 - Relatórios técnicos: `app/data/processed/metadata-validation/minds-libras-raw/reports`
 - Manifest validado: `app/data/processed/metadata-validation/minds-libras-raw/manifests/minds_libras_validated.parquet`
+- Showroom: `docs`
 
 ## Observação
 
