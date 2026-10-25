@@ -73,8 +73,8 @@ the filename-convention section.
 **Independent Test**: Execute the relevant notebook cells with generated
 fixture outputs and confirm that detail and summary tables render in order.
 
-- [x] T014 [US3] Add a notebook helper that invokes the existing Docker Compose service with an argument list and reads derived CSV/JSON results in `../app/notebooks/dataset/01_inventario_v-librasil.ipynb`.
-- [x] T015 [US3] Insert the `Validação dos metadados técnicos CSV × vídeo real` markdown and result tables immediately before `Validação da convenção do nome do arquivo` in `../app/notebooks/dataset/01_inventario_v-librasil.ipynb`.
+- [x] T014 [US3] Add a notebook helper that invokes the existing Docker Compose service with an argument list and reads derived CSV/JSON results in `../app/notebooks/dataset/01_preparacao_inventario_validacao_datasets.ipynb`.
+- [x] T015 [US3] Insert the `Validação dos metadados técnicos CSV × vídeo real` markdown and result tables immediately before `Validação da convenção do nome do arquivo` in `../app/notebooks/dataset/01_preparacao_inventario_validacao_datasets.ipynb`.
 - [x] T016 [US3] Add notebook validation instructions, failure visibility and raw-data preservation notes to `../app/docker/video-processing/README.md` and `../app/README.md`.
 
 **Checkpoint**: The notebook calls the reusable command, displays the result
@@ -104,7 +104,7 @@ produce explicit evidence and derived manifests for both configured datasets.
   dataset-specific validated Parquet manifests without modifying
   `../app/data/raw/`.
 - [x] T024 Insert the provenance/decision section after the filename
-  convention in `../app/notebooks/dataset/01_inventario_v-librasil.ipynb` and
+  convention in `../app/notebooks/dataset/01_preparacao_inventario_validacao_datasets.ipynb` and
   update the contract, quickstart and README documentation.
 
 ## Dependencies & Execution Order

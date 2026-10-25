@@ -56,7 +56,7 @@ eles não baixam datasets, não usam credenciais e não leem o corpus bruto.
 
 ## Visualizar no notebook
 
-Abra `notebooks/dataset/01_inventario_v-librasil.ipynb` a partir da raiz de
+Abra `notebooks/dataset/01_preparacao_inventario_validacao_datasets.ipynb` a partir da raiz de
 `app/` e execute as células em ordem. A seção **Validação dos metadados
 técnicos CSV × vídeo real** aparece depois de **Validação CSV × filesystem** e
 antes de **Validação da convenção do nome do arquivo**.

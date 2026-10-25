@@ -110,7 +110,7 @@ class DatasetQualityValidationTests(unittest.TestCase):
             payload = self._technical_result(
                 root,
                 "minds-libras-raw",
-                annotations="video_name,width,height,fps\nvalid_Articulador1.mp4,160,120,25\n",
+                annotations="video_id,video_name,width,height,fps\nvalid_Articulador1.mp4,valid_Articulador1.mp4,160,120,25\n",
             )
             (root / "minds-libras-raw" / "videos" / "extra.mp4").unlink()
             (root / "minds-libras-raw" / "videos" / "broken.mp4").unlink()
@@ -124,6 +124,58 @@ class DatasetQualityValidationTests(unittest.TestCase):
             self.assertEqual(result["summary"]["decision"], "GO")
             self.assertTrue(any(issue["code"] == "error_csv_absent" for issue in result["issues"]))
             self.assertTrue((root / "quality" / "manifests" / "minds_libras_validated.parquet").is_file())
+
+    def test_minds_joins_by_video_id_and_reports_descriptive_name_relation(self):
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            root = Path(temporary_directory)
+            dataset_root = root / "minds-libras-raw"
+            videos = dataset_root / "videos"
+            videos.mkdir(parents=True)
+            physical_name = "01AcontecerSinalizador01-1.mp4"
+            (videos / physical_name).write_bytes(b"valid")
+            (dataset_root / "annotations.csv").write_text(
+                "video_id,video_name,class,user_id,width,height,fps\n"
+                f"{physical_name},Acontecer_Sinalizador01-1.mp4,Acontecer,Sinalizador01,160,120,50\n",
+                encoding="utf-8",
+            )
+            payload = validate_dataset(
+                dataset_root / "annotations.csv",
+                videos,
+                root / "technical",
+                dataset="minds-libras-raw",
+                probe_function=fake_probe,
+                tool_runner=lambda *args, **kwargs: type(
+                    "Completed", (), {"returncode": 0, "stdout": "ffprobe fixture", "stderr": ""}
+                )(),
+            )
+
+            result = generate_validation_artifacts(
+                dataset="minds-libras-raw",
+                dataset_root=dataset_root,
+                metadata_payload=payload,
+                output_root=root / "quality",
+            )
+
+            self.assertEqual(result["summary"]["decision"], "GO")
+            reconciliation = result["summary"]["key_reconciliation"]
+            self.assertEqual(reconciliation["filesystem_key_column"], "video_id")
+            self.assertEqual(reconciliation["csv_records"], 1)
+            self.assertEqual(reconciliation["physical_files"], 1)
+            self.assertEqual(reconciliation["matched"], 1)
+            self.assertEqual(reconciliation["missing"], 0)
+            self.assertEqual(reconciliation["extra"], 0)
+            self.assertEqual(result["summary"]["video_name_analysis"]["relation_counts"], {"deterministic_prefix_and_separator": 1})
+            codes = {issue["code"] for issue in result["issues"]}
+            self.assertNotIn("silent_missing_file", codes)
+            self.assertNotIn("unregistered_physical_file", codes)
+            self.assertNotIn("filename_invalid", codes)
+            import pandas as pd
+
+            manifest = pd.read_parquet(root / "quality" / "manifests" / "minds_libras_validated.parquet")
+            self.assertEqual(len(manifest), 1)
+            self.assertEqual(manifest.iloc[0]["video_id"], physical_name)
+            self.assertEqual(manifest.iloc[0]["video_name"], "Acontecer_Sinalizador01-1.mp4")
+            self.assertEqual(manifest.iloc[0]["filesystem_key_column"], "video_id")
 
     def test_error_reason_is_flagged_when_zero_marker_has_a_readable_file(self):
         with tempfile.TemporaryDirectory() as temporary_directory:

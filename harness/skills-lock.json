@@ -13,6 +13,12 @@
       "skillPath": "plugins/data-analytics/skills/analyze-data-quality/SKILL.md",
       "computedHash": "d5e1a8ef1a8ee79f54de1ccc3435dd4d386ae12579040083788b501be07619f0"
     },
+    "archify": {
+      "source": "tt-a1i/archify",
+      "sourceType": "github",
+      "skillPath": "archify/SKILL.md",
+      "computedHash": "e9ef0923cda908886e667eb48e36b29e81d0a7a7b9fe2bc05f3779be271e5119"
+    },
     "docker-patterns": {
       "source": "affaan-m/ecc",
       "sourceType": "github",
