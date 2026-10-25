@@ -1,0 +1,199 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Aquisição e validação de datasets de Libras",
+    "output": "artifacts/architecture/html/libras-data-pipeline.html",
+    "quality_profile": "showcase",
+    "repository": {
+      "url": "https://github.com/michaeldouglas/gloss-free.git",
+      "provider": "github",
+      "link_mode": "web",
+      "revision": "ff10875537fd99af0855a632aa9d4fee3ab5784b"
+    }
+  },
+  "components": [
+    {
+      "id": "researcher",
+      "type": "external",
+      "label": "Pesquisador",
+      "sublabel": "Operador do fluxo",
+      "icon": "person",
+      "pos": [40, 300],
+      "size": [130, 64]
+    },
+    {
+      "id": "libras-cli",
+      "type": "backend",
+      "label": "CLI libras",
+      "sublabel": "Typer + Rich",
+      "tag": "controle",
+      "sources": [
+        { "path": "app/dataset/src/libras_translation/cli.py", "line": 23, "end_line": 41, "label": "comandos" },
+        { "path": "app/dataset/src/libras_translation/cli.py", "line": 125, "end_line": 143, "label": "aquisição" },
+        { "path": "app/dataset/src/libras_translation/cli.py", "line": 201, "end_line": 243, "label": "metadados" }
+      ],
+      "pos": [220, 300],
+      "size": [160, 70]
+    },
+    {
+      "id": "huggingface",
+      "type": "external",
+      "label": "Hugging Face Hub",
+      "sublabel": "Dataset remoto",
+      "icon": "cloud",
+      "sources": [
+        { "path": "app/dataset/src/libras_translation/infrastructure/huggingface_client.py", "line": 14, "end_line": 26, "label": "commit" },
+        { "path": "app/dataset/src/libras_translation/infrastructure/huggingface_client.py", "line": 31, "end_line": 50, "label": "árvore e download" }
+      ],
+      "pos": [20, 100],
+      "size": [170, 64]
+    },
+    {
+      "id": "acquisition-manifests",
+      "type": "database",
+      "label": "Manifestos de aquisição",
+      "sublabel": "data/manifests/*.json",
+      "icon": "database",
+      "sources": [
+        { "path": "app/dataset/src/libras_translation/cli.py", "line": 53, "end_line": 57, "label": "destino" },
+        { "path": "app/dataset/src/libras_translation/acquisition.py", "line": 89, "end_line": 99, "label": "manifesto" },
+        { "path": "app/dataset/src/libras_translation/acquisition.py", "line": 120, "end_line": 125, "label": "estado" }
+      ],
+      "pos": [180, 500],
+      "size": [190, 70]
+    },
+    {
+      "id": "raw-datasets",
+      "type": "database",
+      "label": "Datasets originais",
+      "sublabel": "data/raw/<dataset>",
+      "icon": "database",
+      "sources": [
+        { "path": "app/dataset/src/libras_translation/config.py", "line": 21, "end_line": 31, "label": "armazenamento" },
+        { "path": "app/dataset/src/libras_translation/acquisition.py", "line": 101, "end_line": 124, "label": "download" }
+      ],
+      "pos": [430, 500],
+      "size": [170, 70]
+    },
+    {
+      "id": "video-processing",
+      "type": "backend",
+      "label": "Serviço video-processing",
+      "sublabel": "Docker isolado",
+      "tag": "somente leitura",
+      "sources": [
+        { "path": "app/docker/video-processing/compose.yaml", "line": 1, "end_line": 21, "label": "montagens" },
+        { "path": "app/docker/video-processing/Dockerfile", "line": 19, "end_line": 29, "label": "imagem" }
+      ],
+      "pos": [430, 300],
+      "size": [180, 74]
+    },
+    {
+      "id": "ffmpeg-tools",
+      "type": "external",
+      "label": "FFprobe / FFmpeg",
+      "sublabel": "inspeção audiovisual",
+      "icon": "external",
+      "sources": [
+        { "path": "app/docker/video-processing/Dockerfile", "line": 14, "end_line": 17, "label": "ferramentas" },
+        { "path": "app/docker/video-processing/Dockerfile", "line": 34, "end_line": 36, "label": "comando" }
+      ],
+      "pos": [650, 100],
+      "size": [170, 64]
+    },
+    {
+      "id": "metadata-validator",
+      "type": "backend",
+      "label": "Validação técnica",
+      "sublabel": "CSV × vídeo real",
+      "sources": [
+        { "path": "app/dataset/src/libras_translation/cli.py", "line": 201, "end_line": 270, "label": "validate-metadata" },
+        { "path": "app/dataset/src/libras_translation/metadata_validation.py", "line": 287, "end_line": 306, "label": "validador" }
+      ],
+      "pos": [650, 300],
+      "size": [180, 74]
+    },
+    {
+      "id": "quality-validator",
+      "type": "backend",
+      "label": "Validação de qualidade",
+      "sublabel": "proveniência e decisão",
+      "sources": [
+        { "path": "app/dataset/src/libras_translation/cli.py", "line": 273, "end_line": 300, "label": "validate-quality" },
+        { "path": "app/dataset/src/libras_translation/dataset_quality_validation.py", "line": 202, "end_line": 210, "label": "artefatos" }
+      ],
+      "pos": [870, 300],
+      "size": [190, 74]
+    },
+    {
+      "id": "derived-artifacts",
+      "type": "database",
+      "label": "Evidências derivadas",
+      "sublabel": "reports/ + manifests/",
+      "icon": "database",
+      "sources": [
+        { "path": "app/dataset/src/libras_translation/cli.py", "line": 219, "end_line": 243, "label": "saída técnica" },
+        { "path": "app/dataset/src/libras_translation/cli.py", "line": 281, "end_line": 300, "label": "saída de qualidade" }
+      ],
+      "pos": [1090, 300],
+      "size": [180, 74]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "Aplicação local e runtime de validação",
+      "wraps": [
+        "libras-cli",
+        "acquisition-manifests",
+        "raw-datasets",
+        "video-processing",
+        "ffmpeg-tools",
+        "metadata-validator",
+        "quality-validator",
+        "derived-artifacts"
+      ],
+      "pad": 28
+    }
+  ],
+  "connections": [
+    { "id": "researcher-to-cli", "from": "researcher", "to": "libras-cli", "label": "executa comandos", "variant": "emphasis" },
+    { "id": "cli-to-huggingface", "from": "libras-cli", "to": "huggingface", "label": "resolve commit / lista / baixa", "fromSide": "top", "toSide": "bottom", "variant": "dashed" },
+    { "id": "cli-to-manifests", "from": "libras-cli", "to": "acquisition-manifests", "label": "registra commit e estado", "fromSide": "bottom", "toSide": "top" },
+    { "id": "cli-to-raw", "from": "libras-cli", "to": "raw-datasets", "label": "grava vídeos e auxiliares", "fromSide": "bottom", "toSide": "top" },
+    { "id": "cli-to-docker", "from": "libras-cli", "to": "video-processing", "label": "docker compose run" },
+    { "id": "docker-to-raw", "from": "video-processing", "to": "raw-datasets", "label": "monta somente leitura", "fromSide": "bottom", "toSide": "right" },
+    { "id": "docker-to-metadata", "from": "video-processing", "to": "metadata-validator", "label": "executa validate-metadata" },
+    { "id": "ffmpeg-to-metadata", "from": "ffmpeg-tools", "to": "metadata-validator", "label": "ffprobe", "fromSide": "bottom", "toSide": "top" },
+    { "id": "docker-to-quality", "from": "video-processing", "to": "quality-validator", "label": "executa validate-quality", "fromSide": "bottom", "toSide": "top", "variant": "dashed" },
+    { "id": "metadata-to-quality", "from": "metadata-validator", "to": "quality-validator", "label": "metadata JSON" },
+    { "id": "quality-to-derived", "from": "quality-validator", "to": "derived-artifacts", "label": "reports + manifests", "variant": "emphasis" }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Reprodutibilidade",
+      "items": [
+        "A aquisição resolve e fixa o commit do dataset.",
+        "Downloads retomáveis registram estado no manifesto."
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "Preservação",
+      "items": [
+        "data/raw é montado como somente leitura no processamento.",
+        "Relatórios e manifests são derivados."
+      ]
+    },
+    {
+      "dot": "rose",
+      "title": "Validação",
+      "items": [
+        "A etapa técnica usa ffprobe/FFmpeg.",
+        "A etapa de qualidade produz a decisão e os artefatos auditáveis."
+      ]
+    }
+  ]
+}

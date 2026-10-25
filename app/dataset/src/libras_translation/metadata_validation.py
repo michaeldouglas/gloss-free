@@ -19,6 +19,15 @@ from .video_metadata import probe_video
 ProbeFunction = Callable[[Path], dict[str, Any]]
 VIDEO_SUFFIXES = {".avi", ".flv", ".m4v", ".mkv", ".mov", ".mp4", ".webm", ".wmv"}
 DEFAULT_FPS_TOLERANCE = 0.01
+DATASET_FILESYSTEM_KEY_COLUMNS = {
+    "minds-libras-raw": "video_id",
+}
+
+
+def filesystem_key_column(dataset: str) -> str:
+    """Return the annotation column that identifies a physical video file."""
+
+    return DATASET_FILESYSTEM_KEY_COLUMNS.get(dataset, "video_name")
 
 
 def _json_default(value: Any) -> Any:
@@ -182,10 +191,13 @@ def _comparison_for_missing_csv() -> dict[str, Any]:
 
 
 def _flatten_result(result: dict[str, Any]) -> dict[str, Any]:
+    csv_record = result.get("csv") or {}
     probe = result["probe"]
     comparison = result["comparison"]
     return {
         "relative_path": result["input"].get("relative_path"),
+        "video_id": csv_record.get("video_id"),
+        "video_name": csv_record.get("video_name"),
         "csv_width": comparison.get("csv_width"),
         "actual_width": probe.get("actual_width"),
         "width_status": comparison.get("width_status"),
@@ -290,10 +302,11 @@ def validate_dataset(
     annotations_csv = Path(annotations_csv).resolve()
     videos_root = Path(videos_root).resolve()
     output_dir = Path(output_dir).resolve()
+    key_column = filesystem_key_column(dataset)
     with annotations_csv.open("r", encoding="utf-8-sig", newline="") as stream:
         reader = csv.DictReader(stream)
         fieldnames = reader.fieldnames or []
-        required = {"video_name", "width", "height", "fps"}
+        required = {"video_name", "width", "height", "fps", key_column}
         missing = sorted(required - set(fieldnames))
         if missing:
             raise ValueError(f"CSV sem as colunas obrigatórias: {', '.join(missing)}")
@@ -301,7 +314,7 @@ def validate_dataset(
 
     rows_by_path: dict[Path, dict[str, str]] = {}
     for record in records:
-        raw_name = (record.get("video_name") or "").strip()
+        raw_name = (record.get(key_column) or "").strip()
         if raw_name:
             candidate = _safe_relative_path(raw_name, videos_root)
             if candidate is not None:
@@ -318,7 +331,7 @@ def validate_dataset(
                     f"CSV de exceções sem as colunas obrigatórias: {', '.join(missing_exception_fields)}"
                 )
             for record in exception_reader:
-                raw_name = (record.get("video_name") or "").strip()
+                raw_name = (record.get(key_column) or "").strip()
                 if raw_name:
                     candidate = _safe_relative_path(raw_name, videos_root)
                     if candidate is not None and candidate not in rows_by_path:
@@ -445,6 +458,7 @@ def validate_dataset(
         "schema_version": "video-metadata-validation.v1",
         "run": {
             "dataset": dataset,
+            "filesystem_key_column": key_column,
             "finished_at_utc": finished_at,
             "input_csv": str(annotations_csv),
             "exceptions_csv": str(exceptions_csv.resolve()) if exceptions_csv else None,

@@ -136,6 +136,38 @@ class MetadataValidationTests(unittest.TestCase):
             self.assertEqual(extra["comparison"]["fps_hypothesis"], "not_in_csv")
             self.assertEqual(result["summary"]["dataset_fps_interpretation"], "rate")
 
+    def test_minds_uses_video_id_as_physical_key_and_preserves_video_name(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            videos = root / "videos"
+            videos.mkdir()
+            physical_name = "01AcontecerSinalizador01-1.mp4"
+            (videos / physical_name).write_bytes(b"fixture")
+            annotations = root / "annotations.csv"
+            annotations.write_text(
+                "video_id,video_name,class,user_id,width,height,fps\n"
+                f"{physical_name},Acontecer_Sinalizador01-1.mp4,Acontecer,Sinalizador01,160,120,50\n",
+                encoding="utf-8",
+            )
+
+            result = validate_dataset(
+                annotations,
+                videos,
+                root / "processed",
+                dataset="minds-libras-raw",
+                probe_function=fake_probe,
+                tool_runner=lambda *args, **kwargs: type(
+                    "Completed", (), {"returncode": 0, "stdout": "ffprobe fixture", "stderr": ""}
+                )(),
+            )
+
+            self.assertEqual(result["run"]["filesystem_key_column"], "video_id")
+            self.assertEqual(result["summary"]["videos_seen"], 1)
+            self.assertEqual(result["results"][0]["csv"]["video_id"], physical_name)
+            self.assertEqual(result["results"][0]["csv"]["video_name"], "Acontecer_Sinalizador01-1.mp4")
+            self.assertEqual(result["results"][0]["comparison"]["fps_hypothesis"], "frame_count")
+            self.assertEqual(result["results"][0]["comparison"]["overall_status"], "match")
+
     def test_probe_exception_is_recorded_per_file_and_does_not_stop_batch(self):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)

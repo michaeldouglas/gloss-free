@@ -111,7 +111,7 @@ specs/003-validar-metadados-video/
 │   ├── test_video_metadata.py
 │   ├── test_metadata_validation.py
 │   └── test_cli.py
-├── notebooks/dataset/01_inventario_v-librasil.ipynb
+├── notebooks/dataset/01_preparacao_inventario_validacao_datasets.ipynb
 ├── data/raw/                         # somente leitura
 ├── data/processed/metadata-validation/
 │   ├── reports/                       # evidências e decisão GO/NO-GO

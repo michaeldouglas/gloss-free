@@ -47,4 +47,15 @@ if ($exitCode -ne 0) {
     Emit-PostMessage "Graphify update failed after a relevant edit (exit $exitCode). Run graphify update . manually before answering graph-based questions." 'Graphify refresh failed after the edit.'
 }
 
-Emit-PostMessage 'Graphify was incrementally refreshed after the relevant edit. The canonical output remains harness/graphify-out/.' 'Canonical Graphify refreshed.'
+$architectureMessage = 'Archify refresh checked; no candidate diagram was published automatically.'
+$architectureScript = Join-Path $root 'scripts/refresh_architecture.ps1'
+if (Test-Path -LiteralPath $architectureScript) {
+    $null = @(& powershell.exe -NoProfile -ExecutionPolicy Bypass -File $architectureScript -Dataset 'code-edit' 2>&1 | Out-String)
+    if ($LASTEXITCODE -ne 0) {
+        $architectureMessage = 'Archify refresh failed; inspect artifacts/architecture/architecture-refresh.json.'
+    } else {
+        $architectureMessage = 'Archify refresh checked; generated diagrams remain under harness/artifacts/architecture/.'
+    }
+}
+
+Emit-PostMessage "Graphify was incrementally refreshed after the relevant edit. The canonical output remains harness/graphify-out/. $architectureMessage" 'Canonical Graphify and architecture state refreshed.'

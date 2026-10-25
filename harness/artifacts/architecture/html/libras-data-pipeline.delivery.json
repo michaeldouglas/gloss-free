@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "3c9108e9-4d17-4d2f-99e9-86ce7f23ad84",
+  "status": "current",
+  "command": "deliver",
+  "type": "architecture",
+  "input": "C:\\Users\\mdbaa\\development\\Dissertacao\\harness\\artifacts\\architecture\\source\\libras-data-pipeline.architecture.json",
+  "output": "C:\\Users\\mdbaa\\development\\Dissertacao\\harness\\artifacts\\architecture\\html\\libras-data-pipeline.html",
+  "specification": {
+    "sha256": "6eed2b37ecdd7b79a3c196ce6671e8ed1544cfe13191170ba4b1892a46250fac",
+    "bytes": 8038
+  },
+  "artifact": {
+    "sha256": "51007bd8b06d4d99b7ea9cb4498caa24914f40c346c8fa3284979aea56cb016f",
+    "bytes": 857540
+  }
+}

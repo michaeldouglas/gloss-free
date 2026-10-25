@@ -15,6 +15,8 @@ from datetime import datetime, timezone
 from pathlib import Path, PurePosixPath
 from typing import Any
 
+from .metadata_validation import filesystem_key_column
+
 
 SEVERITIES = ("CRITICAL", "ERROR", "WARNING", "INFO")
 _VIDEO_SUFFIXES = {".avi", ".flv", ".m4v", ".mkv", ".mov", ".mp4", ".webm", ".wmv"}
@@ -112,6 +114,9 @@ def _filename_check(dataset: str, video_name: str, record: dict[str, Any] | None
     if path.suffix.casefold() not in _VIDEO_SUFFIXES:
         return False, "extensão de vídeo não suportada"
 
+    if dataset != "v-librasil-raw":
+        return None, "extensão válida; chave física MINDS é video_id"
+
     expected_class = _normalise_name((record or {}).get("class"))
     expected_user = str((record or {}).get("user_id") or "").strip()
     if dataset == "v-librasil-raw":
@@ -138,6 +143,30 @@ def _filename_check(dataset: str, video_name: str, record: dict[str, Any] | None
         if expected_user and filename_user != expected_user:
             return False, f"user_id do nome={filename_user!r} difere da registrada={expected_user!r}"
     return None, "extensão válida; convenção MINDS não especificada"
+
+
+def _descriptive_name_check(record: dict[str, Any]) -> tuple[str, str]:
+    """Classify the relation between MINDS physical and descriptive names."""
+
+    video_id = _normalise_name(record.get("video_id"))
+    video_name = _normalise_name(record.get("video_name"))
+    if not video_id or not video_name:
+        return "missing", "video_id ou video_name ausente"
+    if _name_key(video_id) == _name_key(video_name):
+        return "same", "video_name é igual ao video_id"
+
+    id_stem = PurePosixPath(video_id).stem
+    name_stem = PurePosixPath(video_name).stem
+    id_without_numeric_prefix = re.sub(r"^\d+", "", id_stem)
+    if _name_key(id_without_numeric_prefix) == _name_key(name_stem.replace("_", "")):
+        return "deterministic_prefix_and_separator", "video_id adiciona prefixo numérico e remove o separador de video_name"
+
+    expected_class = _name_key(record.get("class"))
+    expected_user = _name_key(record.get("user_id"))
+    name_key = _name_key(name_stem)
+    if expected_class and expected_user and expected_class in name_key and expected_user in name_key:
+        return "components_consistent", "video_name contém class e user_id registrados"
+    return "inconsistent", "video_name não pôde ser relacionado deterministicamente a video_id, class e user_id"
 
 
 def _metadata_map(payload: dict[str, Any]) -> dict[str, dict[str, Any]]:
@@ -184,6 +213,7 @@ def generate_validation_artifacts(
     output_root = Path(output_root).resolve()
     annotations_path = dataset_root / "annotations.csv"
     exceptions_path = dataset_root / "error.csv"
+    key_column = filesystem_key_column(dataset)
     annotations = _read_csv(annotations_path)
     exceptions = _read_csv(exceptions_path)
     metadata = _metadata_map(metadata_payload)
@@ -235,16 +265,25 @@ def generate_validation_artifacts(
     annotation_by_key: dict[str, list[dict[str, Any]]] = defaultdict(list)
     exception_by_key: dict[str, list[dict[str, Any]]] = defaultdict(list)
     for row in annotations:
-        annotation_by_key[_name_key(row.get("video_name"))].append(row)
+        annotation_by_key[_name_key(row.get(key_column))].append(row)
     for row in exceptions:
-        exception_by_key[_name_key(row.get("video_name"))].append(row)
+        exception_by_key[_name_key(row.get(key_column))].append(row)
+
+    descriptive_name_status_by_key: dict[str, tuple[str, str]] = {}
+    descriptive_name_counts: Counter[str] = Counter()
+    if dataset == "minds-libras-raw":
+        for key, rows in annotation_by_key.items():
+            if rows:
+                relation = _descriptive_name_check(rows[0])
+                descriptive_name_status_by_key[key] = relation
+                descriptive_name_counts[relation[0]] += 1
 
     for key, rows in annotation_by_key.items():
         if key and len(rows) > 1:
-            add_issue("CRITICAL", "duplicate_annotation", "video_name aparece mais de uma vez em annotations.csv", key=key, video_name=rows[0].get("video_name", ""), source="annotations.csv", evidence=f"{len(rows)} ocorrências")
+            add_issue("CRITICAL", "duplicate_annotation", f"{key_column} aparece mais de uma vez em annotations.csv", key=key, video_name=rows[0].get("video_name", ""), source="annotations.csv", evidence=f"{len(rows)} ocorrências")
     for key, rows in exception_by_key.items():
         if key and len(rows) > 1:
-            add_issue("CRITICAL", "duplicate_exception", "video_name aparece mais de uma vez em error.csv", key=key, video_name=rows[0].get("video_name", ""), source="error.csv", evidence=f"{len(rows)} ocorrências")
+            add_issue("CRITICAL", "duplicate_exception", f"{key_column} aparece mais de uma vez em error.csv", key=key, video_name=rows[0].get("video_name", ""), source="error.csv", evidence=f"{len(rows)} ocorrências")
 
     for duplicate in physical_duplicates:
         add_issue("CRITICAL", "duplicate_physical_name", "mais de um arquivo físico corresponde ao mesmo caminho lógico", video_name=duplicate["relative_path"], source="videos/", evidence=f"{duplicate['count']} arquivos")
@@ -297,12 +336,23 @@ def generate_validation_artifacts(
         elif comparison.get("overall_status") == "inconclusive":
             add_issue("WARNING", "metadata_inconclusive", "metadados não puderam ser comparados completamente", key=key, video_name=video_name, source="metadata_validation.json", evidence=json.dumps(comparison, ensure_ascii=False, default=str))
 
-        filename_valid, filename_note = _filename_check(dataset, video_name, record)
-        if filename_valid is False:
-            mismatch = "class do nome" in filename_note or "user_id do nome" in filename_note
-            add_issue("CRITICAL" if mismatch else "ERROR", "filename_invalid", filename_note, key=key, video_name=video_name, source=record.get("_source_file", ""), row_number=record.get("_row_number"))
-        elif filename_valid is None:
-            add_issue("INFO", "filename_convention_undefined", filename_note, key=key, video_name=video_name, source=record.get("_source_file", ""), row_number=record.get("_row_number"))
+        if dataset == "minds-libras-raw":
+            filename_valid, filename_note = None, "chave física MINDS validada por video_id"
+            if annotation:
+                descriptive_status, descriptive_note = descriptive_name_status_by_key.get(
+                    key, ("missing", "video_id ou video_name ausente")
+                )
+                if descriptive_status == "missing":
+                    add_issue("ERROR", "descriptive_name_missing", descriptive_note, key=key, video_name=video_name, source="annotations.csv", row_number=annotation.get("_row_number"))
+                elif descriptive_status == "inconsistent":
+                    add_issue("WARNING", "descriptive_name_inconsistent", descriptive_note, key=key, video_name=video_name, source="annotations.csv", row_number=annotation.get("_row_number"))
+        else:
+            filename_valid, filename_note = _filename_check(dataset, video_name, record)
+            if filename_valid is False:
+                mismatch = "class do nome" in filename_note or "user_id do nome" in filename_note
+                add_issue("CRITICAL" if mismatch else "ERROR", "filename_invalid", filename_note, key=key, video_name=video_name, source=record.get("_source_file", ""), row_number=record.get("_row_number"))
+            elif filename_valid is None:
+                add_issue("INFO", "filename_convention_undefined", filename_note, key=key, video_name=video_name, source=record.get("_source_file", ""), row_number=record.get("_row_number"))
 
     codec_counts = Counter(
         str(item.get("probe", {}).get("codec"))
@@ -336,7 +386,14 @@ def generate_validation_artifacts(
             or meta_item.get("input", {}).get("relative_path")
             or (paths[0].relative_to(dataset_root / "videos").as_posix() if paths else "")
         )
-        filename_valid, filename_note = _filename_check(dataset, manifest_video_name, record)
+        if dataset == "minds-libras-raw":
+            filename_valid, filename_note = None, "chave física MINDS validada por video_id"
+            descriptive_status, descriptive_note = descriptive_name_status_by_key.get(
+                key, ("missing", "video_id ou video_name ausente")
+            )
+        else:
+            filename_valid, filename_note = _filename_check(dataset, manifest_video_name, record)
+            descriptive_status, descriptive_note = None, None
         scoped_issues = row_issues.get(key, [])
         severity = _severity_max([issue["severity"] for issue in scoped_issues])
         status = severity.lower() if severity else "valid"
@@ -350,6 +407,8 @@ def generate_validation_artifacts(
         row.update(
             {
                 "dataset": dataset,
+                "filesystem_key_column": key_column,
+                "filesystem_key": record.get(key_column) or (paths[0].name if paths else ""),
                 "video_name": manifest_video_name,
                 "relative_path": str(meta_item.get("input", {}).get("relative_path") or (paths[0].relative_to(dataset_root / "videos").as_posix() if paths else record.get("video_name", ""))),
                 "source_csv": ";".join(source for source, present in (("annotations.csv", bool(annotation)), ("error.csv", bool(exception))) if present),
@@ -366,6 +425,8 @@ def generate_validation_artifacts(
                 "file_exists": file_exists,
                 "file_readable": bool(file_exists and probe.get("status") in {"ok", "partial"}),
                 "filename_valid": filename_valid,
+                "descriptive_name_status": descriptive_status,
+                "descriptive_name_note": descriptive_note,
                 "metadata_valid": bool(file_exists and probe.get("status") in {"ok", "partial"} and comparison.get("overall_status") == "match"),
                 "validation_status": status,
                 "validation_notes": "; ".join(issue["message"] for issue in scoped_issues) or filename_note,
@@ -384,6 +445,19 @@ def generate_validation_artifacts(
     _write_csv(issues_path, issues)
     severity_counts = Counter(issue["severity"] for issue in issues)
     decision = "GO" if not any(severity_counts.get(severity, 0) for severity in ("CRITICAL", "ERROR")) else "NO-GO"
+    annotation_keys = {key for key in annotation_by_key if key}
+    physical_keys = set(physical)
+    key_reconciliation = {
+        "filesystem_key_column": key_column,
+        "csv_records": len(annotations),
+        "physical_files": sum(len(paths) for paths in physical.values()),
+        "csv_key_unique": len(annotation_keys) == len(annotations),
+        "csv_key_duplicates": sum(max(len(rows) - 1, 0) for key, rows in annotation_by_key.items() if key),
+        "physical_key_duplicates": sum(max(item["count"] - 1, 0) for item in physical_duplicates),
+        "matched": len(annotation_keys & physical_keys),
+        "missing": len(annotation_keys - physical_keys),
+        "extra": len(physical_keys - annotation_keys),
+    }
     summary = {
         "schema_version": "dataset-validation-summary.v1",
         "generated_at_utc": datetime.now(timezone.utc).isoformat(),
@@ -404,6 +478,11 @@ def generate_validation_artifacts(
             "by_severity": {severity: severity_counts.get(severity, 0) for severity in SEVERITIES},
             "provenance": dict(provenance_counts),
         },
+        "key_reconciliation": key_reconciliation,
+        "video_name_analysis": {
+            "relation_counts": dict(descriptive_name_counts),
+            "rule": "video_id sem prefixo numérico e video_name sem underscores são comparados após normalização; class e user_id são conferidos como componentes",
+        } if dataset == "minds-libras-raw" else None,
         "artifacts": {
             "report": str(report_path),
             "issues": str(issues_path),
@@ -426,6 +505,10 @@ def generate_validation_artifacts(
         f"- error.csv: {len(exceptions)} registros",
         f"- vídeos físicos: {sum(len(paths) for paths in physical.values())}",
         f"- linhas no manifest validado: {len(manifest_rows)}",
+        f"- chave física CSV: `{key_column}`",
+        f"- chaves correspondentes: {key_reconciliation['matched']}",
+        f"- chaves ausentes: {key_reconciliation['missing']}",
+        f"- arquivos extras: {key_reconciliation['extra']}",
         "",
         "| Severidade | Quantidade |",
         "|---|---:|",
