@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Aprendizagem profunda de representações visuais para tradução de Libras em português escrito sem uso de glosas.">
+<title>Relatório · Libras Research Showroom</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head><body>
+<header class="topbar"><a class="brand" href="../index.html"><span class="brand-mark">∿</span>Pesquisa em tradução de Libras</a>
+<nav aria-label="Navegação principal"><a href="../architecture/index.html">Arquitetura</a><a href="../datasets/index.html">Datasets</a><a href="../validation/index.html">Validação</a><a href="../executions/index.html">Execuções</a></nav></header>
+<main><section class="report-hero"><div><p class="eyebrow">Relatório derivado</p><h1>Execução em foco</h1><p>Uma leitura organizada da última validação registrada pelo notebook, com a decisão primeiro e os detalhes técnicos logo depois.</p></div><div class="report-decision good"><span>Decisão registrada</span><strong>GO</strong><small>minds-libras-raw<br>25/10/2026 às 10:22</small></div></section>
+<section class="report-kpis"><div class="metric"><strong>800</strong><span>vídeos vistos</span></div><div class="metric"><strong>800</strong><span>vídeos aprovados</span></div><div class="metric"><strong>0</strong><span>erros de probe</span></div><div class="metric"><strong>1</strong><span>issues INFO</span></div></section>
+<section class="section report-layout"><article class="report-section"><p class="section-kicker">Resultado técnico</p><h2>O que foi conferido</h2><dl class="report-list"><div><dt>Dimensões</dt><dd>800 largura · 800 altura</dd></div><div><dt>FPS</dt><dd>frame_count</dd></div><div><dt>Comparação por frames</dt><dd>800 correspondências</dd></div><div><dt>Comparação por taxa</dt><dd>0 correspondências</dd></div></dl></article><article class="report-section"><p class="section-kicker">Qualidade</p><h2>Severidades encontradas</h2><div class="severity-grid"><div class="severity severity-critical"><strong>0</strong><span>CRITICAL</span></div><div class="severity severity-error"><strong>0</strong><span>ERROR</span></div><div class="severity severity-warning"><strong>0</strong><span>WARNING</span></div><div class="severity severity-info"><strong>1</strong><span>INFO</span></div></div><p class="muted">As contagens vêm de <code>metadata_summary.json</code> e permanecem auditáveis nos artefatos técnicos.</p></article></section>
+<section class="section report-section report-conclusion"><p class="section-kicker">Leitura principal</p><h2>O campo <code>fps</code> foi interpretado como frame_count.</h2><p>Essa conclusão é específica do dataset desta execução. Ela não deve ser transferida automaticamente para outros datasets.</p></section>
+<details class="section raw-report"><summary>Ver o texto original do relatório</summary><pre># Relatório da execução — minds-libras-raw
+
+- Executado em: 2026-10-25T10:22:44.647529-03:00
+- Dataset: `minds-libras-raw`
+- Decisão da validação de qualidade: **GO**
+
+## Controle utilizado
+
+- Aquisição habilitada: `True`
+- Download forçado: `False`
+- Build Docker forçado: `False`
+- Validação técnica habilitada: `True`
+- Validação de qualidade habilitada: `True`
+- Reexecução forçada: `False`
+
+## Resultado técnico
+
+- Resumo: `dataset=minds-libras-raw, videos_seen=800, videos_ok=800, videos_partial=0, videos_with_probe_error=0, width_matches=800, height_matches=800, fps_rate_matches=0, fps_frame_count_matches=800, fps_none_matches=0, fps_inconclusive=0, fps_hypothesis_counts={&#x27;frame_count&#x27;: 800}, dataset_fps_interpretation=frame_count, fps_tolerance=0.01`
+- Hipóteses de `fps`:
+```text
+ hypothesis  count
+frame_count    800
+```
+
+## Issues e proveniência
+
+- Severidades: `CRITICAL=0, ERROR=0, WARNING=0, INFO=1`
+- Relatórios técnicos: `c:\Users\mdbaa\development\Dissertacao\app\data\processed\metadata-validation\minds-libras-raw\reports`
+- Manifest validado: `c:\Users\mdbaa\development\Dissertacao\app\data\processed\metadata-validation\minds-libras-raw\manifests\minds_libras_validated.parquet`
+
+## Observação
+
+Este resumo é derivado. Os arquivos em `app/data/raw/` permanecem fora do fluxo de escrita.
+</pre></details></main><footer class="footer">Artefato derivado do projeto · dados brutos não publicados</footer>
+</body></html>

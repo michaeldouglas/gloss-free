@@ -1,0 +1,81 @@
+{
+  "schema_version": "showroom.v1",
+  "generated_at": "2026-10-25T15:04:28.271042+00:00",
+  "latest": {
+    "schema_version": "execution-report.v1",
+    "dataset": "minds-libras-raw",
+    "executed_at": "2026-10-25T10:22:44.647529-03:00",
+    "decision": "GO",
+    "technical_summary": {
+      "dataset": "minds-libras-raw",
+      "videos_seen": 800,
+      "videos_ok": 800,
+      "videos_partial": 0,
+      "videos_with_probe_error": 0,
+      "width_matches": 800,
+      "height_matches": 800,
+      "fps_rate_matches": 0,
+      "fps_frame_count_matches": 800,
+      "fps_none_matches": 0,
+      "fps_inconclusive": 0,
+      "fps_hypothesis_counts": {
+        "frame_count": 800
+      },
+      "dataset_fps_interpretation": "frame_count",
+      "fps_tolerance": 0.01
+    },
+    "quality_counts": {
+      "CRITICAL": 0,
+      "ERROR": 0,
+      "WARNING": 0,
+      "INFO": 1
+    },
+    "report": "c:\\Users\\mdbaa\\development\\Dissertacao\\harness\\artifacts\\reports\\executions\\minds-libras-raw_20261025_102244.md"
+  },
+  "datasets": [
+    {
+      "dataset": "minds-libras-raw",
+      "decision": "GO",
+      "generated_at": "2026-10-25T12:36:34.431024+00:00",
+      "videos": 800,
+      "annotations": 800,
+      "manifest_rows": 800,
+      "issues": 1,
+      "severity": {
+        "CRITICAL": 0,
+        "ERROR": 0,
+        "WARNING": 0,
+        "INFO": 1
+      },
+      "matched": 800,
+      "missing": 0,
+      "extra": 0,
+      "key_column": "video_id",
+      "fps": "frame_count"
+    },
+    {
+      "dataset": "v-librasil-raw",
+      "decision": "NO-GO",
+      "generated_at": "2026-10-15T01:16:19.099697+00:00",
+      "videos": 4086,
+      "annotations": 4086,
+      "manifest_rows": 4089,
+      "issues": 12,
+      "severity": {
+        "CRITICAL": 3,
+        "ERROR": 9,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "matched": null,
+      "missing": null,
+      "extra": null,
+      "key_column": null,
+      "fps": null
+    }
+  ],
+  "architecture": [
+    "libras-data-pipeline.html"
+  ],
+  "scope": "Etapa 1 — validação dos metadados existentes"
+}

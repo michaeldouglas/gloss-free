@@ -1,0 +1,10 @@
+{
+  "name": "dissertacao-harness",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "bun test",
+    "check": "bun run scripts/check-infrastructure.ts"
+  },
+  "dependencies": {}
+}

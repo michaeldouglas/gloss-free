@@ -19,6 +19,12 @@
       "skillPath": "archify/SKILL.md",
       "computedHash": "e9ef0923cda908886e667eb48e36b29e81d0a7a7b9fe2bc05f3779be271e5119"
     },
+    "data-storytelling": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "skillPath": "plugins/business-analytics/skills/data-storytelling/SKILL.md",
+      "computedHash": "f015e72bde964f59df0c47b0cc3e713ef9cf0dbeec201e8dd95b472cd8e2e15b"
+    },
     "docker-patterns": {
       "source": "affaan-m/ecc",
       "sourceType": "github",
@@ -30,6 +36,12 @@
       "sourceType": "github",
       "skillPath": "skills/exploratory-data-analysis/SKILL.md",
       "computedHash": "cd1d46f3cba74653d7415b6c68e9b7d7dd8e0c5d5f8da1dd881337cdb30e4b18"
+    },
+    "frontend-design": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "skillPath": "skills/frontend-design/SKILL.md",
+      "computedHash": "106acf230014cbb43ca34e6410371321b56ca742f9ee0442e8ec05bf02eb0384"
     },
     "intel-docs-reader": {
       "source": "michaeldouglas/intel-ai-skills",
@@ -91,11 +103,29 @@
       "skillPath": "skills/.curated/jupyter-notebook/SKILL.md",
       "computedHash": "ed6cf5b159eeb076eaa43007920ae5aca10336ad1e6cec7baf973f3f83a9eb7f"
     },
+    "project-architecture-report": {
+      "source": "gil-1/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/project-architecture-report/SKILL.md",
+      "computedHash": "bf4334229da869b11102bbecc678502484f63aec8c95db7274c22c1ebd245502"
+    },
+    "project-session-management": {
+      "source": "fefogarcia/approved-skills",
+      "sourceType": "github",
+      "skillPath": "skills/project-session-management/SKILL.md",
+      "computedHash": "7ada186cfecccdf4202dc0db9197dadd548246eae9a2f638f1e86649ecddfca0"
+    },
     "statistical-analysis": {
       "source": "k-dense-ai/scientific-agent-skills",
       "sourceType": "github",
       "skillPath": "skills/statistical-analysis/SKILL.md",
       "computedHash": "ae8da5e6b18a54cbcaf91436a50e2018cfeef495d815dee840a1ecd1e33d191a"
+    },
+    "statuskit": {
+      "source": "mimukit/skills",
+      "sourceType": "github",
+      "skillPath": "skills/statuskit/SKILL.md",
+      "computedHash": "6944fe7b2198318961cc0ee3b65cf17c5339d39f174e8dd61e08d02f6002ddfc"
     },
     "systematic-literature-review": {
       "source": "bytedance/deer-flow",
