@@ -15,6 +15,7 @@ services:
     tmpfs:
       - /tmp:size=1g,mode=1777
     volumes:
+      - ../../dataset/src:/workspace/app/dataset/src:ro
       - ../../data/raw:/workspace/app/data/raw:ro
       - ../../data/processed:/workspace/app/data/processed
       - ../../data/manifests:/workspace/app/data/manifests:ro

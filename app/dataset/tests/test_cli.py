@@ -138,7 +138,7 @@ class CliTests(unittest.TestCase):
         self.assertEqual(validator.call_args.kwargs["fps_tolerance"], 0.02)
 
     def test_validate_metadata_returns_nonzero_for_input_or_tool_failure(self):
-        with patch.object(cli, "validate_dataset", side_effect=OSError("ffprobe ausente")):
+        with patch.object(cli, "finalize_vlibrasil", side_effect=OSError("ffprobe ausente")):
             result = self.invoke(
                 [
                     "video",
@@ -161,8 +161,8 @@ class CliTests(unittest.TestCase):
         }
         with TemporaryDirectory() as temporary_directory:
             root = Path(temporary_directory)
-            with patch.object(cli, "validate_dataset"), patch.object(
-                cli, "generate_validation_artifacts_from_file", return_value={"summary": payload["summary"]}
+            with patch.object(
+                cli, "finalize_vlibrasil", return_value={"summary": payload["summary"], "canonical": root / "quality/v-librasil-raw"}
             ) as generator:
                 result = self.invoke(
                     [
@@ -179,7 +179,7 @@ class CliTests(unittest.TestCase):
 
         self.assertEqual(result.exit_code, 2, result.output)
         self.assertIn("NO-GO", result.output)
-        self.assertEqual(generator.call_args.kwargs["dataset"], "v-librasil-raw")
+        self.assertEqual(generator.call_args.args[0].name, "v-librasil-raw")
 
 
 if __name__ == "__main__":

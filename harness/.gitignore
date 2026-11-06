@@ -13,3 +13,4 @@ node_modules/
 Thumbs.db
 graphify-out/*.bak
 graphify-out/cache/
+docs/status/

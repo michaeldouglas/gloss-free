@@ -1152,9 +1152,9 @@
     "semantic_hash": ""
   },
   "specs/003-validar-metadados-video/contracts/validate-metadata.md": {
-    "mtime": 1792931842.58237,
-    "seen": 1792931900.5272868,
-    "ast_hash": "f8f83597f70da6c237a5ea4cf7a88039",
+    "mtime": 1793753777.9344933,
+    "seen": 1793754285.8794441,
+    "ast_hash": "48b2158e86e14b348b7e1c06b7b164f0",
     "semantic_hash": ""
   },
   "specs/003-validar-metadados-video/data-model.md": {
@@ -2382,33 +2382,33 @@
     "semantic_hash": ""
   },
   "artifacts/architecture/architecture-refresh.json": {
-    "mtime": 1792967673.4462,
-    "seen": 1792968209.9243166,
-    "ast_hash": "7c9cd6697eae71f53c8f92339573a5e3",
+    "mtime": 1793935483.5871499,
+    "seen": 1793935637.0196662,
+    "ast_hash": "978d7d812f09a976c2665996d1784d32",
     "semantic_hash": ""
   },
   "artifacts/architecture/html/libras-data-pipeline.browser-check.json": {
-    "mtime": 1792967670.9590628,
-    "seen": 1792968209.9243202,
-    "ast_hash": "631cc46b977ff007e7bc4f3f401b7209",
+    "mtime": 1793935482.398692,
+    "seen": 1793935637.0196757,
+    "ast_hash": "3e058e3f6c170cf0b6c49336e769aae7",
     "semantic_hash": ""
   },
   "artifacts/architecture/html/libras-data-pipeline.delivery.json": {
-    "mtime": 1792967576.1113,
-    "seen": 1792968209.9243224,
-    "ast_hash": "4b14f35728a4270223187fb61f3e8314",
+    "mtime": 1793935389.275981,
+    "seen": 1793935637.0196803,
+    "ast_hash": "af85afbca13dd5a4078bf62f7a42b788",
     "semantic_hash": ""
   },
   "artifacts/architecture/html/libras-data-pipeline.finalize-summary.json": {
-    "mtime": 1792967672.548847,
-    "seen": 1792968209.9243236,
-    "ast_hash": "c26fe99d4d9e176d6887ff8f446436fa",
+    "mtime": 1793935483.1554232,
+    "seen": 1793935637.019684,
+    "ast_hash": "5f47b29b5fdb96fe36b66882d1cc4882",
     "semantic_hash": ""
   },
   "artifacts/architecture/html/libras-data-pipeline.finalize.json": {
-    "mtime": 1792967672.0190024,
-    "seen": 1792968209.9243245,
-    "ast_hash": "33e7c5ff03e9e60d4acc4d6c7db29b32",
+    "mtime": 1793935482.808079,
+    "seen": 1793935637.0196874,
+    "ast_hash": "1ca450f67708e5d363a73d420861f7b3",
     "semantic_hash": ""
   },
   "artifacts/architecture/html/libras-data-pipeline.review-2/libras-data-pipeline.finalize-summary.json": {
@@ -2460,8 +2460,8 @@
     "semantic_hash": ""
   },
   "artifacts/architecture/html/libras-data-pipeline.html": {
-    "mtime": 1792967575.8083098,
-    "seen": 1792968209.9992328,
+    "mtime": 1793935388.9270394,
+    "seen": 1793935637.3053112,
     "ast_hash": "b42117b1a1dc761efa0d4fe58471615b",
     "semantic_hash": ""
   },
@@ -4512,9 +4512,51 @@
     "semantic_hash": ""
   },
   "presentations/decks/2026-10-25-progresso/slides.md": {
-    "mtime": 1792967837.3710697,
-    "seen": 1792968210.000109,
-    "ast_hash": "b510f3b0fdcae797ba48fb098b7bf116",
+    "mtime": 1792968260.2163393,
+    "seen": 1793228532.8048172,
+    "ast_hash": "c99d519be4dac728db969336d35469f7",
+    "semantic_hash": ""
+  },
+  "artifacts/reports/executions/v-librasil-stage1_20261028T234556Z.json": {
+    "mtime": 1793753778.0970101,
+    "seen": 1793754285.769612,
+    "ast_hash": "9b4fdd39b89ce38b9aa21eb31149e28d",
+    "semantic_hash": ""
+  },
+  "artifacts/reports/executions/v-librasil-stage1_20261028T234556Z.md": {
+    "mtime": 1793753778.0970101,
+    "seen": 1793754285.8750398,
+    "ast_hash": "2482d89f4a694b3e2d178ab87504c26e",
+    "semantic_hash": ""
+  },
+  "specs/004-etapa2-eda/contracts/analysis-contract.md": {
+    "mtime": 1793927792.7390606,
+    "seen": 1793927987.4846842,
+    "ast_hash": "294657654ad6f6eb6e23ab91c7c3ad21",
+    "semantic_hash": ""
+  },
+  "specs/004-etapa2-eda/plan.md": {
+    "mtime": 1793927792.7390606,
+    "seen": 1793927987.484689,
+    "ast_hash": "217e7d0fab7a7837fc9ce806054a481e",
+    "semantic_hash": ""
+  },
+  "specs/004-etapa2-eda/spec.md": {
+    "mtime": 1793928015.6081665,
+    "seen": 1793928246.3093944,
+    "ast_hash": "9e3726477526b3b57bff9ca46411a5cb",
+    "semantic_hash": ""
+  },
+  "specs/004-etapa2-eda/tasks.md": {
+    "mtime": 1793935164.262312,
+    "seen": 1793935384.9367008,
+    "ast_hash": "70367b57394bfeefb2ad7761be04358f",
+    "semantic_hash": ""
+  },
+  ".agents/skills/archify/package-lock.json": {
+    "mtime": 1792932858.3972027,
+    "seen": 1793751642.035838,
+    "ast_hash": "b543c691785ec03cc2e30717626cfbe4",
     "semantic_hash": ""
   }
 }

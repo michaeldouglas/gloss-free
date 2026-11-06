@@ -8,6 +8,7 @@ import json
 import os
 import subprocess
 import tempfile
+import unicodedata
 from datetime import datetime, timezone
 from decimal import Decimal, InvalidOperation
 from pathlib import Path, PurePosixPath
@@ -22,6 +23,20 @@ DEFAULT_FPS_TOLERANCE = 0.01
 DATASET_FILESYSTEM_KEY_COLUMNS = {
     "minds-libras-raw": "video_id",
 }
+
+_PUA_NAME_REPLACEMENTS = str.maketrans({"\uf022": '"', "\uf03f": "?", "\uf05c": "\\"})
+
+
+def normalize_filename_key(value: Any) -> str:
+    """Return the comparison key without interpreting backslash as a separator.
+
+    V-LIBRASIL contains names encoded with Private Use characters in the
+    filesystem.  The key is deliberately a string, rather than a Path, so a
+    literal backslash remains part of the filename.
+    """
+
+    text = unicodedata.normalize("NFC", str(value or "")).translate(_PUA_NAME_REPLACEMENTS).strip()
+    return text.casefold()
 
 
 def filesystem_key_column(dataset: str) -> str:
@@ -312,13 +327,26 @@ def validate_dataset(
             raise ValueError(f"CSV sem as colunas obrigatórias: {', '.join(missing)}")
         records = list(reader)
 
-    rows_by_path: dict[Path, dict[str, str]] = {}
+    preflight_toolchain = _toolchain(ffprobe_executable, ffmpeg_executable, tool_runner) if dataset == "v-librasil-raw" else None
+    if preflight_toolchain is not None and preflight_toolchain["ffprobe_exit_code"] != 0:
+        raise ValueError("ffprobe indisponível; use o ambiente Docker de processamento ou informe um executável válido")
+
+    # V-LIBRASIL filenames are literal strings; other datasets retain their
+    # existing safe relative-path join (including MINDS video_id semantics).
+    def csv_key(value):
+        return normalize_filename_key(value) if dataset == "v-librasil-raw" else _safe_relative_path(value, videos_root)
+
+    def physical_key(value):
+        return normalize_filename_key(value.name) if dataset == "v-librasil-raw" else value
+
+    rows_by_key: dict[Any, list[dict[str, str]]] = {}
     for record in records:
-        raw_name = (record.get(key_column) or "").strip()
+        raw_name = record.get(key_column) or ""
         if raw_name:
-            candidate = _safe_relative_path(raw_name, videos_root)
-            if candidate is not None:
-                rows_by_path[candidate] = {**record, "_csv_source": annotations_csv.name}
+            key = csv_key(raw_name)
+            if key is None:
+                continue
+            rows_by_key.setdefault(key, []).append({**record, "_csv_source": annotations_csv.name})
 
     if exceptions_csv is not None and Path(exceptions_csv).is_file():
         exceptions_path = Path(exceptions_csv).resolve()
@@ -331,27 +359,30 @@ def validate_dataset(
                     f"CSV de exceções sem as colunas obrigatórias: {', '.join(missing_exception_fields)}"
                 )
             for record in exception_reader:
-                raw_name = (record.get(key_column) or "").strip()
+                raw_name = record.get(key_column) or ""
                 if raw_name:
-                    candidate = _safe_relative_path(raw_name, videos_root)
-                    if candidate is not None and candidate not in rows_by_path:
-                        rows_by_path[candidate] = {**record, "_csv_source": exceptions_path.name}
+                    key = csv_key(raw_name)
+                    if key is not None and key not in rows_by_key:
+                        rows_by_key.setdefault(key, []).append({**record, "_csv_source": exceptions_path.name})
 
     video_paths = sorted(
         path.resolve()
         for path in videos_root.rglob("*")
         if path.is_file() and path.suffix.lower() in VIDEO_SUFFIXES
     )
+    physical_by_key: dict[str, list[Path]] = {}
+    for video_path in video_paths:
+        physical_by_key.setdefault(physical_key(video_path), []).append(video_path)
     ordered_paths = list(video_paths)
-    for candidate in rows_by_path:
-        if candidate not in ordered_paths:
-            ordered_paths.append(candidate)
 
     results: list[dict[str, Any]] = []
     log_lines: list[str] = []
     tolerance_decimal = Decimal(str(fps_tolerance))
     for video_path in ordered_paths:
-        record = rows_by_path.get(video_path)
+        key = physical_key(video_path)
+        key_records = rows_by_key.get(key, [])
+        collision = dataset == "v-librasil-raw" and (len(key_records) > 1 or len(physical_by_key[key]) > 1)
+        record = (key_records[0] if dataset == "v-librasil-raw" else key_records[-1]) if key_records and not collision else None
         relative = _relative_path(video_path, videos_root)
         input_info: dict[str, Any] = {"relative_path": relative, "sha256": None, "size_bytes": None}
         if video_path.is_file():
@@ -450,10 +481,52 @@ def validate_dataset(
             }
 
         result = {"input": input_info, "csv": record, "probe": probe, "comparison": comparison}
+        if collision:
+            result["comparison"]["normalization_collision"] = True
+            result["comparison"]["overall_status"] = "duplicate"
+            result["comparison"]["fps_hypothesis"] = "inconclusive"
+            result["csv_candidates"] = key_records
         results.append(result)
         log_lines.append(f"{relative}\t{probe.get('status')}\t{comparison.get('overall_status')}\n")
 
+    # Add annotation-only keys after all physical files.  This preserves the
+    # literal filename key and makes missing records explicit without inventing
+    # a filesystem path.
+    for key, key_records in rows_by_key.items():
+        if key in physical_by_key:
+            continue
+        record = key_records[0]
+        relative = str(record.get(key_column) or "") if dataset == "v-librasil-raw" else key.relative_to(videos_root).as_posix()
+        input_info = {"relative_path": relative, "sha256": None, "size_bytes": None}
+        csv_width, csv_width_status = _parse_csv_int(record.get("width"))
+        csv_height, csv_height_status = _parse_csv_int(record.get("height"))
+        csv_fps, csv_fps_status = _parse_csv_decimal(record.get("fps"))
+        fps_comparison = classify_fps_hypotheses(csv_fps, csv_fps_status, None, "missing", None, "unavailable", tolerance=tolerance_decimal)
+        result = {
+            "input": input_info,
+            "csv": record,
+            "probe": {"status": "error", "actual_width": None, "actual_height": None, "actual_fps": None, "actual_frame_count": None, "field_status": {}, "error": {"message": "arquivo de vídeo referenciado no CSV não existe"}},
+            "comparison": {"csv_width": csv_width, "csv_height": csv_height, "csv_fps_raw": record.get("fps"), "csv_fps_numeric": csv_fps, "width_status": "inconclusive", "height_status": "inconclusive", **fps_comparison, "overall_status": "duplicate" if len(key_records) > 1 else "error", "normalization_collision": len(key_records) > 1},
+        }
+        results.append(result)
+        log_lines.append(f"{relative}\terror\terror\n")
+
     finished_at = datetime.now(timezone.utc).isoformat()
+    summary = _summary(results, dataset=dataset, tolerance=fps_tolerance)
+    if dataset == "v-librasil-raw":
+        csv_collisions = {key: len(items) for key, items in rows_by_key.items() if len(items) > 1}
+        physical_collisions = {
+            key: len(items) for key, items in physical_by_key.items() if len(items) > 1
+        }
+        summary["normalization"] = {
+            "unicode": "NFC",
+            "trim": True,
+            "casefold": True,
+            "private_use_replacements": {"U+F022": '"', "U+F03F": "?", "U+F05C": "\\"},
+            "backslash_is_literal": True,
+            "csv_key_collisions": csv_collisions,
+            "physical_key_collisions": physical_collisions,
+        }
     payload = {
         "schema_version": "video-metadata-validation.v1",
         "run": {
@@ -465,10 +538,10 @@ def validate_dataset(
             "input_root": str(videos_root),
             "output_root": str(output_dir),
             "fps_tolerance": fps_tolerance,
-            "toolchain": _toolchain(ffprobe_executable, ffmpeg_executable, tool_runner),
+            "toolchain": preflight_toolchain or _toolchain(ffprobe_executable, ffmpeg_executable, tool_runner),
         },
         "results": results,
-        "summary": _summary(results, dataset=dataset, tolerance=fps_tolerance),
+        "summary": summary,
     }
     _write_json(output_dir / "metadata_validation.json", payload)
     _write_json(output_dir / "toolchain.json", payload["run"]["toolchain"])
