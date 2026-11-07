@@ -93,3 +93,15 @@ manifests/minds_libras_validated.parquet
 
 Os arquivos brutos não devem ser sobrescritos. Processamentos futuros devem
 gravar em `/workspace/app/data/processed` e registrar seus parâmetros e resultados.
+
+## Código e evidência da execução
+
+O Compose monta dataset/src/ como somente leitura sobre o caminho do pacote
+editável da imagem. Assim, uma imagem existente fornece o Python, as dependências
+e o FFmpeg, enquanto as correções atuais da validação vêm do worktree. Mudanças
+nas dependências, no lock ou no Dockerfile ainda exigem reconstruir a imagem.
+
+Para reproduzir uma execução científica, registre o ID/digest da imagem, o commit
+do repositório e os hashes dos módulos utilizados, inclusive quando houver
+alterações locais. Os dados raw continuam montados somente para leitura; a
+publicação do V-LIBRASIL usa staging e gerações derivadas separadas.
