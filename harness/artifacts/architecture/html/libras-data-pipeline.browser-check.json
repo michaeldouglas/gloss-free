@@ -6,7 +6,7 @@
   "status": "fail",
   "visualReview": "not-requested",
   "provenance": "current",
-  "deliveryReceiptId": "7140d69c-d45d-4464-80b9-2c7faa661eb7",
+  "deliveryReceiptId": "643206f4-9d7e-4c8d-b36d-12c0f704be66",
   "artifact": {
     "path": "C:\\Users\\mdbaa\\development\\Dissertacao\\harness\\artifacts\\architecture\\html\\libras-data-pipeline.html",
     "sha256": "51007bd8b06d4d99b7ea9cb4498caa24914f40c346c8fa3284979aea56cb016f",
@@ -29,7 +29,7 @@
         "artifact": "C:\\Users\\mdbaa\\development\\Dissertacao\\harness\\artifacts\\architecture\\html\\libras-data-pipeline.html"
       },
       "evidence": {
-        "reason": "Chrome DevTools protocol timeout failed: Target.getTargets: timed out after 90000ms [ERR_CHROME_CDP_TIMEOUT]\nChrome process: still running.\nChrome stderr:\nCreated TensorFlow Lite XNNPACK delegate for CPU.\nWindows browser startup may have relaunched before connecting to the DevTools pipe. Retry from a non-elevated PowerShell opened normally, outside an elevated or compatibility-mode parent. Archify does not disable browser de-elevation or the sandbox to preserve pipe handles.\nChrome transport: Node v24.3.0, libuv 1.51.1-dev, win32; pid=11864, exitCode=null, signalCode=null.\nChrome read pipe: readable=true, ended=false, destroyed=false, receivedBytes=0, messages=0, bufferedBytes=0.\nChrome write pipe: writable=true, ended=false, destroyed=false, completedWrites=0, writtenBytes=0, bufferedBytes=50."
+        "reason": "Chrome DevTools protocol timeout failed: Target.getTargets: timed out after 90000ms [ERR_CHROME_CDP_TIMEOUT]\nChrome process: still running.\nChrome stderr:\nCreated TensorFlow Lite XNNPACK delegate for CPU.\nWindows browser startup may have relaunched before connecting to the DevTools pipe. Retry from a non-elevated PowerShell opened normally, outside an elevated or compatibility-mode parent. Archify does not disable browser de-elevation or the sandbox to preserve pipe handles.\nChrome transport: Node v24.3.0, libuv 1.51.1-dev, win32; pid=11024, exitCode=null, signalCode=null.\nChrome read pipe: readable=true, ended=false, destroyed=false, receivedBytes=0, messages=0, bufferedBytes=0.\nChrome write pipe: writable=true, ended=false, destroyed=false, completedWrites=0, writtenBytes=0, bufferedBytes=50."
       },
       "supportedFixes": [
         "do not edit or simplify the artifact because this is a browser-startup failure",
@@ -64,5 +64,5 @@
     "receipt": "libras-data-pipeline.browser-check.json",
     "files": []
   },
-  "error": "Chrome DevTools protocol timeout failed: Target.getTargets: timed out after 90000ms [ERR_CHROME_CDP_TIMEOUT]\nChrome process: still running.\nChrome stderr:\nCreated TensorFlow Lite XNNPACK delegate for CPU.\nWindows browser startup may have relaunched before connecting to the DevTools pipe. Retry from a non-elevated PowerShell opened normally, outside an elevated or compatibility-mode parent. Archify does not disable browser de-elevation or the sandbox to preserve pipe handles.\nChrome transport: Node v24.3.0, libuv 1.51.1-dev, win32; pid=11864, exitCode=null, signalCode=null.\nChrome read pipe: readable=true, ended=false, destroyed=false, receivedBytes=0, messages=0, bufferedBytes=0.\nChrome write pipe: writable=true, ended=false, destroyed=false, completedWrites=0, writtenBytes=0, bufferedBytes=50."
+  "error": "Chrome DevTools protocol timeout failed: Target.getTargets: timed out after 90000ms [ERR_CHROME_CDP_TIMEOUT]\nChrome process: still running.\nChrome stderr:\nCreated TensorFlow Lite XNNPACK delegate for CPU.\nWindows browser startup may have relaunched before connecting to the DevTools pipe. Retry from a non-elevated PowerShell opened normally, outside an elevated or compatibility-mode parent. Archify does not disable browser de-elevation or the sandbox to preserve pipe handles.\nChrome transport: Node v24.3.0, libuv 1.51.1-dev, win32; pid=11024, exitCode=null, signalCode=null.\nChrome read pipe: readable=true, ended=false, destroyed=false, receivedBytes=0, messages=0, bufferedBytes=0.\nChrome write pipe: writable=true, ended=false, destroyed=false, completedWrites=0, writtenBytes=0, bufferedBytes=50."
 }

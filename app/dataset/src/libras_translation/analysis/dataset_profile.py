@@ -74,17 +74,24 @@ def validate_manifest_contract(
 
     contract = _contract(dataset)
     expected = {field.name for field in manifest_field_definitions(dataset)}
-    missing = sorted(expected - set(frame.columns))
-    if missing:
-        raise ValueError(f"{dataset}: campos ausentes no manifest: {missing}")
+    actual = set(frame.columns)
+    missing = sorted(expected - actual)
+    extra = sorted(actual - expected)
+    if missing or extra:
+        details = []
+        if missing:
+            details.append(f"campos ausentes={missing}")
+        if extra:
+            details.append(f"campos inesperados={extra}")
+        raise ValueError(f"{dataset}: schema incompatível; " + "; ".join(details))
     if require_expected_rows and len(frame) != contract.expected_rows:
         raise ValueError(f"{dataset}: esperado {contract.expected_rows} registros, encontrado {len(frame)}")
 
-    key = contract.manifest_key_column
-    if frame[key].isna().any():
-        raise ValueError(f"{dataset}: chave física nula")
-    if frame[key].duplicated(keep=False).any():
-        raise ValueError(f"{dataset}: chave física duplicada")
+    for key_name in (contract.physical_key_column, contract.manifest_key_column):
+        if frame[key_name].isna().any():
+            raise ValueError(f"{dataset}: chave física nula em {key_name}")
+        if frame[key_name].duplicated(keep=False).any():
+            raise ValueError(f"{dataset}: chave física duplicada em {key_name}")
     if not frame[contract.validity_column].fillna(False).eq(True).all():
         raise ValueError(f"{dataset}: manifest contém linhas fora do corpus validado")
 
@@ -125,13 +132,19 @@ def sha256_file(path: Path) -> str:
 def build_input_identity(dataset: str, *, settings: Settings | None = None) -> dict[str, Any]:
     path = canonical_manifest_path(dataset, settings)
     frame = load_validated_manifest(dataset, settings=settings)
+    schema = [
+        {"name": column, "dtype": str(frame[column].dtype)}
+        for column in frame.columns
+    ]
     return {
         "dataset": dataset,
         "path": path.as_posix(),
         "sha256": sha256_file(path),
         "size_bytes": path.stat().st_size,
         "row_count": len(frame),
+        "column_count": len(frame.columns),
         "columns": list(frame.columns),
+        "schema": schema,
     }
 
 
@@ -143,6 +156,10 @@ def build_execution_provenance(
     library_versions: dict[str, str],
     executed_at: str | None = None,
     code_commit: str | None = None,
+    run_id: str | None = None,
+    published_artifact_hashes: dict[str, str] | None = None,
+    validation: dict[str, Any] | None = None,
+    decision: str = "not_published",
 ) -> dict[str, Any]:
     """Create the future execution record without writing it."""
 
@@ -157,11 +174,15 @@ def build_execution_provenance(
             code_commit = "unknown"
     return {
         "stage": "stage2_eda",
+        "run_id": run_id,
         "executed_at": executed_at,
         "code_commit": code_commit,
         "inputs": input_identities,
         "parameters": parameters,
         "library_versions": library_versions,
         "output_root": output_root,
+        "decision": decision,
+        "published_artifact_hashes": published_artifact_hashes or {},
+        "validation": validation or {},
         "publication_policy": "publicar atomicamente somente após validação; preservar runs anteriores em archive/<run_id>",
     }

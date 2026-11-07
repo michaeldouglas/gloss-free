@@ -30,12 +30,12 @@ execução antes de qualquer análise.
 
 **Purpose**: Completar os gates que devem bloquear todas as partes analíticas.
 
-- [ ] T007 [P] Completar testes de schema, população, unicidade, validade, chaves e preservação de bytes em `app/dataset/tests/test_analysis_contracts.py` (depende de T003; resultado: falhas determinísticas para inputs inválidos; aceite: schema incompatível, população incorreta e chave duplicada bloqueiam a execução sem mutar o frame).
-- [ ] T008 [P] Consolidar o dicionário analítico e os estados de missingness em `app/dataset/src/libras_translation/analysis/data_dictionary.py` e `specs/004-etapa2-eda/contracts/analysis-contract.md` (depende de T002–T003; resultado: cada campo usado possui unidade, origem, derivação e semântica; aceite: os cinco estados obrigatórios são distinguíveis e nenhum recebe imputação).
-- [ ] T009 [P] Completar a identidade de input e a proveniência em `app/dataset/src/libras_translation/analysis/dataset_profile.py` (depende de T003; resultado: SHA-256, schema, tamanho, linhas, colunas, commit, timestamp, versões e parâmetros são registráveis; aceite: a mesma entrada e configuração produzem identidade reprodutível).
-- [ ] T010 Definir o gate de publicação atômica em `app/dataset/src/libras_translation/analysis/output_contract.py` e `app/dataset/tests/test_analysis_contracts.py` (depende de T004 e T009; resultado: execução privada, validação, archive e `CURRENT.json`; aceite: execução anterior nunca é sobrescrita e falha de validação não promove publicação).
-- [ ] T011 [P] Definir o esquema de tabelas e figuras da etapa em `app/dataset/src/libras_translation/analysis/descriptive_statistics.py`, `app/dataset/src/libras_translation/analysis/distributions.py` e `app/dataset/src/libras_translation/analysis/comparison.py` (depende de T008; resultado: nomes, unidades, denominadores e metadados de saída; aceite: cada figura futura possui tabela correspondente e nenhum campo exige `ffprobe`).
-- [ ] T012 Executar os gates automatizados da aplicação somente quando a implementação for iniciada, usando `uv run python -m unittest discover -s dataset/tests -v` a partir de `app/` (depende de T007–T011; resultado: baseline de testes registrado; aceite: esta tarefa fica pendente até a fase de implementação e não é executada agora).
+- [x] T007 [P] Completar testes de schema, população, unicidade, validade, chaves e preservação de bytes em `app/dataset/tests/test_analysis_contracts.py` (depende de T003; resultado: falhas determinísticas para inputs inválidos; aceite: schema incompatível, população incorreta e chave duplicada bloqueiam a execução sem mutar o frame).
+- [x] T008 [P] Consolidar o dicionário analítico e os estados de missingness em `app/dataset/src/libras_translation/analysis/data_dictionary.py` e `specs/004-etapa2-eda/contracts/analysis-contract.md` (depende de T002–T003; resultado: cada campo usado possui unidade, origem, derivação e semântica; aceite: os cinco estados obrigatórios são distinguíveis e nenhum recebe imputação).
+- [x] T009 [P] Completar a identidade de input e a proveniência em `app/dataset/src/libras_translation/analysis/dataset_profile.py` (depende de T003; resultado: SHA-256, schema, tamanho, linhas, colunas, commit, timestamp, versões e parâmetros são registráveis; aceite: a mesma entrada e configuração produzem identidade reprodutível).
+- [x] T010 Definir o gate de publicação atômica em `app/dataset/src/libras_translation/analysis/output_contract.py` e `app/dataset/tests/test_analysis_contracts.py` (depende de T004 e T009; resultado: execução privada, validação, archive e `CURRENT.json`; aceite: execução anterior nunca é sobrescrita e falha de validação não promove publicação).
+- [x] T011 [P] Definir o esquema de tabelas e figuras da etapa em `app/dataset/src/libras_translation/analysis/descriptive_statistics.py`, `app/dataset/src/libras_translation/analysis/distributions.py` e `app/dataset/src/libras_translation/analysis/comparison.py` (depende de T008; resultado: nomes, unidades, denominadores e metadados de saída; aceite: cada figura futura possui tabela correspondente e nenhum campo exige `ffprobe`).
+- [x] T012 Executar os gates automatizados da aplicação somente quando a implementação for iniciada, usando `uv run python -m unittest discover -s dataset/tests -v` a partir de `app/` (depende de T007–T011; resultado: baseline de testes registrado; aceite: esta tarefa fica pendente até a fase de implementação e não é executada agora).
 
 **Checkpoint**: inputs, semântica, proveniência, publicação e contratos de
 saída prontos para uma execução posterior autorizada.
@@ -53,7 +53,7 @@ entradas; não usar `data/raw/`.
 - [x] T014 [P] [US1] Implementar overview e estatísticas numéricas em `app/dataset/src/libras_translation/analysis/characterization.py` e `app/dataset/src/libras_translation/analysis/descriptive_statistics.py` (depende de T008 e T011; resultado: `n`, missingness, média, mediana, desvio-padrão, mínimo, Q1, Q3, máximo e IQR por variável aplicável; aceite: nenhum valor é imputado e o denominador é gravado).
 - [x] T015 [P] [US1] Implementar frequências categóricas e `class × user_id` em `app/dataset/src/libras_translation/analysis/characterization.py` (depende de T014; resultado: tabelas absolutas e relativas por dataset; aceite: somas, categorias ausentes e proporções são verificáveis).
 - [x] T016 [US1] Publicar tabelas, relatório e proveniência da Parte 1 em `app/dataset/src/libras_translation/analysis/characterization.py` e `app/data/processed/eda/` (depende de T010, T014 e T015; resultado: execução arquivada e publicação corrente; aceite: inputs permanecem com SHA-256 idêntico e `figures/` não é criado como resultado da Parte 1).
-- [ ] T017 [US1] Integrar a execução autorizada da Parte 1 em `app/notebooks/dataset/02_caracterizacao_estatistica_eda.ipynb` (depende de T016; resultado: notebook apenas orquestra e exibe tabelas; aceite: nenhuma lógica científica extensa, `ffprobe` ou acesso a `data/raw/`).
+- [x] T017 [US1] Integrar a execução autorizada da Parte 1 em `app/notebooks/dataset/02_caracterizacao_estatistica_eda.ipynb` (depende de T016; resultado: notebook apenas orquestra e exibe tabelas; aceite: nenhuma lógica científica extensa, `ffprobe` ou acesso a `data/raw/`).
 
 **Checkpoint**: Parte 1 reproduzível e auditável, sem interpretação inferencial.
 
@@ -79,9 +79,9 @@ publicadas com validação; a revisão humana da Parte 2 ainda está pendente.
 **Independent Test**: Comparar matriz e frequências contra denominadores e
 preservar ausências sem imputação.
 
-- [ ] T022 [P] [US3] Estender `app/dataset/tests/test_characterization.py` para cobertura de classes, sinalizadores, combinações e categorias ausentes (depende de T015; resultado: testes de soma, cobertura e semântica de ausência; aceite: zero verdadeiro e ausência estrutural não são confundidos).
-- [ ] T023 [US3] Implementar cobertura e classes incompletas em `app/dataset/src/libras_translation/analysis/characterization.py` (depende de T022; resultado: tabelas de cobertura por classe e sinalizador; aceite: nenhum limiar de balanceamento ou exclusão é aplicado).
-- [ ] T024 [US3] Integrar matriz e tabelas acessíveis da Parte 3 em `app/notebooks/dataset/02_caracterizacao_estatistica_eda.ipynb` (depende de T023; resultado: tabela antecede qualquer heatmap; aceite: `dataset`, denominador e unidade aparecem na interpretação).
+- [x] T022 [P] [US3] Estender `app/dataset/tests/test_characterization.py` para cobertura de classes, sinalizadores, combinações e categorias ausentes (depende de T015; resultado: testes de soma, cobertura e semântica de ausência; aceite: zero verdadeiro e ausência estrutural não são confundidos).
+- [x] T023 [US3] Implementar cobertura e classes incompletas em `app/dataset/src/libras_translation/analysis/characterization.py` (depende de T022; resultado: tabelas de cobertura por classe e sinalizador; aceite: nenhum limiar de balanceamento ou exclusão é aplicado).
+- [x] T024 [US3] Integrar matriz e tabelas acessíveis da Parte 3 em `app/notebooks/dataset/02_caracterizacao_estatistica_eda.ipynb` (depende de T023; resultado: tabela antecede qualquer heatmap; aceite: `dataset`, denominador e unidade aparecem na interpretação).
 
 **Checkpoint**: estrutura cruzada documentada sem decisão de balanceamento.
 
@@ -92,9 +92,9 @@ preservar ausências sem imputação.
 **Independent Test**: Validar campos e unidades contra o dicionário, sem
 reexecutar `ffprobe`.
 
-- [ ] T025 [P] [US4] Criar testes técnicos em `app/dataset/tests/test_technical_distributions.py` para dimensões, resolução, aspect ratio, FPS e codec (depende de T008 e T011; resultado: validação de tipos, unidades e missingness; aceite: o manifest não é modificado).
-- [ ] T026 [US4] Implementar resumos técnicos em `app/dataset/src/libras_translation/analysis/distributions.py` e `app/dataset/src/libras_translation/analysis/data_dictionary.py` (depende de T025; resultado: tabelas de resolução, codec, aspecto e medidas técnicas; aceite: medição nula é `failure_of_measurement`, não zero).
-- [ ] T027 [US4] Integrar propriedades técnicas no notebook `app/notebooks/dataset/02_caracterizacao_estatistica_eda.ipynb` (depende de T026; resultado: visualizações e tabelas futuras; aceite: nenhuma chamada a vídeo físico ou `ffprobe`).
+- [x] T025 [P] [US4] Criar testes técnicos em `app/dataset/tests/test_technical_distributions.py` para dimensões, resolução, aspect ratio, FPS e codec (depende de T008 e T011; resultado: validação de tipos, unidades e missingness; aceite: o manifest não é modificado).
+- [x] T026 [US4] Implementar resumos técnicos em `app/dataset/src/libras_translation/analysis/distributions.py` e `app/dataset/src/libras_translation/analysis/data_dictionary.py` (depende de T025; resultado: tabelas de resolução, codec, aspecto e medidas técnicas; aceite: medição nula é `failure_of_measurement`, não zero).
+- [x] T027 [US4] Integrar propriedades técnicas no notebook `app/notebooks/dataset/02_caracterizacao_estatistica_eda.ipynb` (depende de T026; resultado: visualizações e tabelas futuras; aceite: nenhuma chamada a vídeo físico ou `ffprobe`).
 
 **Checkpoint**: heterogeneidade técnica descrita sem julgamento de qualidade
 linguística ou prontidão para treinamento.
@@ -106,9 +106,9 @@ linguística ou prontidão para treinamento.
 **Independent Test**: Verificar compatibilidade de unidade, campos e
 denominadores em uma tabela comparativa separada por dataset.
 
-- [ ] T028 [P] [US5] Criar testes de compatibilidade e denominadores em `app/dataset/tests/test_comparison.py` (depende de T011 e T025; resultado: diferenças de unidade e semântica são rejeitadas; aceite: nenhum dataset é implicitamente concatenado como uma população única).
-- [ ] T029 [US5] Implementar tabelas de comparação, classes compartilhadas e exclusivas em `app/dataset/src/libras_translation/analysis/comparison.py` (depende de T028; resultado: comparação descritiva auditável; aceite: cada linha mantém `dataset`, denominador e unidade).
-- [ ] T030 [US5] Integrar comparação e limitações no notebook `app/notebooks/dataset/02_caracterizacao_estatistica_eda.ipynb` (depende de T029; resultado: seção comparativa; aceite: não há p-valores, efeitos inferenciais ou alegações causais).
+- [x] T028 [P] [US5] Criar testes de compatibilidade e denominadores em `app/dataset/tests/test_comparison.py` (depende de T011 e T025; resultado: diferenças de unidade e semântica são rejeitadas; aceite: nenhum dataset é implicitamente concatenado como uma população única).
+- [x] T029 [US5] Implementar tabelas de comparação, classes compartilhadas e exclusivas em `app/dataset/src/libras_translation/analysis/comparison.py` (depende de T028; resultado: comparação descritiva auditável; aceite: cada linha mantém `dataset`, denominador e unidade).
+- [x] T030 [US5] Integrar comparação e limitações no notebook `app/notebooks/dataset/02_caracterizacao_estatistica_eda.ipynb` (depende de T029; resultado: seção comparativa; aceite: não há p-valores, efeitos inferenciais ou alegações causais).
 
 **Checkpoint**: comparação descritiva pronta para execução autorizada.
 
@@ -118,9 +118,9 @@ denominadores em uma tabela comparativa separada por dataset.
 
 **Independent Test**: Verificar flags em tabela, critérios e hashes antes/depois.
 
-- [ ] T031 [P] [US6] Criar testes de flags não destrutivas em `app/dataset/tests/test_outlier_flags.py` (depende de T019 e T026; resultado: cobertura IQR, percentil, MAD e regras específicas; aceite: número de linhas e hashes das entradas permanecem iguais).
-- [ ] T032 [US6] Implementar flags de outlier em `app/dataset/src/libras_translation/analysis/distributions.py` ou módulo dedicado sob `app/dataset/src/libras_translation/analysis/` (depende de T031; resultado: critério, limiar, variável, dataset e ação recomendada; aceite: nenhuma remoção, winsorização ou imputação automática).
-- [ ] T033 [US6] Integrar inspeção e limitações de outlier no notebook `app/notebooks/dataset/02_caracterizacao_estatistica_eda.ipynb` (depende de T032; resultado: tabela e figura opcional; aceite: flag estatística não é rotulada automaticamente como erro).
+- [x] T031 [P] [US6] Criar testes de flags não destrutivas em `app/dataset/tests/test_outlier_flags.py` (depende de T019 e T026; resultado: cobertura IQR, percentil, MAD e regras específicas; aceite: número de linhas e hashes das entradas permanecem iguais).
+- [x] T032 [US6] Implementar flags de outlier em `app/dataset/src/libras_translation/analysis/distributions.py` ou módulo dedicado sob `app/dataset/src/libras_translation/analysis/` (depende de T031; resultado: critério, limiar, variável, dataset e ação recomendada; aceite: nenhuma remoção, winsorização ou imputação automática).
+- [x] T033 [US6] Integrar inspeção e limitações de outlier no notebook `app/notebooks/dataset/02_caracterizacao_estatistica_eda.ipynb` (depende de T032; resultado: tabela e figura opcional; aceite: flag estatística não é rotulada automaticamente como erro).
 
 **Checkpoint**: extremos documentados, não excluídos.
 
@@ -131,10 +131,10 @@ denominadores em uma tabela comparativa separada por dataset.
 **Independent Test**: Auditar cada afirmação contra tabela, figura, snapshot,
 proveniência e manifest de execução.
 
-- [ ] T034 [P] [US7] Criar testes de proveniência e rastreabilidade em `app/dataset/tests/test_eda_provenance.py` (depende de T009 e T010; resultado: validação de hashes, versões, parâmetros e outputs; aceite: uma execução repetida é identificável e publicação anterior é preservada).
-- [ ] T035 [US7] Implementar relatório de síntese e mapa de evidências em `app/dataset/src/libras_translation/analysis/` (depende de T016, T021, T024, T027, T030 e T033; resultado: estrutura, heterogeneidade, cobertura, riscos, limitações e implicações futuras; aceite: padrões pós-hoc são rotulados como exploratórios).
-- [ ] T036 [US7] Integrar síntese, limitações e escopo no notebook `app/notebooks/dataset/02_caracterizacao_estatistica_eda.ipynb` (depende de T035; resultado: camada de interpretação sem lógica científica duplicada; aceite: não há decisão implícita de modelagem).
-- [ ] T037 [US7] Validar o pacote publicado em `app/data/processed/eda/` e documentar o quickstart da execução em `specs/004-etapa2-eda/` (depende de T034–T036; resultado: pacote corrente, archive, snapshots e relatório auditáveis; aceite: nenhum output foi produzido antes da autorização formal da EDA).
+- [x] T034 [P] [US7] Criar testes de proveniência e rastreabilidade em `app/dataset/tests/test_eda_provenance.py` (depende de T009 e T010; resultado: validação de hashes, versões, parâmetros e outputs; aceite: uma execução repetida é identificável e publicação anterior é preservada).
+- [x] T035 [US7] Implementar relatório de síntese e mapa de evidências em `app/dataset/src/libras_translation/analysis/` (depende de T016, T021, T024, T027, T030 e T033; resultado: estrutura, heterogeneidade, cobertura, riscos, limitações e implicações futuras; aceite: padrões pós-hoc são rotulados como exploratórios).
+- [x] T036 [US7] Integrar síntese, limitações e escopo no notebook `app/notebooks/dataset/02_caracterizacao_estatistica_eda.ipynb` (depende de T035; resultado: camada de interpretação sem lógica científica duplicada; aceite: não há decisão implícita de modelagem).
+- [x] T037 [US7] Validar o pacote publicado em `app/data/processed/eda/` e documentar o quickstart da execução em `specs/004-etapa2-eda/` (depende de T034–T036; resultado: pacote corrente, archive, snapshots e relatório auditáveis; aceite: nenhum output foi produzido antes da autorização formal da EDA).
 
 **Checkpoint**: Etapa 2 concluída somente após todas as partes, validações e
 síntese atenderem aos critérios de `spec.md`.

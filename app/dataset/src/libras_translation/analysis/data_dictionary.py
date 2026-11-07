@@ -104,8 +104,8 @@ def _definition(dataset: str, field: dict[str, Any]) -> FieldDefinition:
 _V_EXTRA = (
     {"name": "video_id", "description": "Identificador auxiliar na anotação; não é a chave física do V-LIBRASIL.", "data_type": "string", "unit": "identificador", "origin": "annotation", "derivation": "original", "expected_domain": "texto não vazio", "nullable": False, "null_meaning": "missing_real", "analytic_role": "identificador auxiliar"},
     {"name": "video_name", "description": "Nome do arquivo físico associado ao vídeo no V-LIBRASIL.", "data_type": "string", "unit": "nome de arquivo", "origin": "annotation", "derivation": "original", "expected_domain": "nome físico; base de filesystem_key", "nullable": False, "null_meaning": "missing_real", "analytic_role": "referência física"},
-    {"name": "url_page", "description": "URL da página de origem.", "data_type": "string", "unit": "URL", "origin": "annotation", "derivation": "original", "expected_domain": "URL ou texto vazio", "nullable": True, "null_meaning": "not_applicable_or_missing_real", "analytic_role": "proveniência; não medida"},
-    {"name": "url_download", "description": "URL de download declarada.", "data_type": "string", "unit": "URL", "origin": "annotation", "derivation": "original", "expected_domain": "URL ou texto vazio", "nullable": True, "null_meaning": "not_applicable_or_missing_real", "analytic_role": "proveniência; não medida"},
+    {"name": "url_page", "description": "URL da página de origem.", "data_type": "string", "unit": "URL", "origin": "annotation", "derivation": "original", "expected_domain": "URL ou texto vazio", "nullable": True, "null_meaning": "missing_real", "analytic_role": "proveniência; não medida"},
+    {"name": "url_download", "description": "URL de download declarada.", "data_type": "string", "unit": "URL", "origin": "annotation", "derivation": "original", "expected_domain": "URL ou texto vazio", "nullable": True, "null_meaning": "missing_real", "analytic_role": "proveniência; não medida"},
     {"name": "dataset", "description": "Rótulo do dataset de origem.", "data_type": "string", "unit": "identificador", "origin": "validation", "derivation": "derivada do contexto de validação", "expected_domain": "v-librasil-raw", "nullable": False, "null_meaning": "missing_real", "analytic_role": "estratificação/proveniência"},
     {"name": "source_csv", "description": "Arquivo CSV de origem da linha.", "data_type": "string", "unit": "caminho relativo", "origin": "validation", "derivation": "derivada na Etapa 1", "expected_domain": "caminho relativo sob data/raw", "nullable": False, "null_meaning": "missing_real", "analytic_role": "proveniência"},
     {"name": "annotation_row", "description": "Número da linha na anotação de origem.", "data_type": "integer", "unit": "linha", "origin": "validation", "derivation": "derivada na Etapa 1", "expected_domain": "inteiro positivo", "nullable": False, "null_meaning": "missing_real", "analytic_role": "proveniência/reconciliação"},
@@ -146,6 +146,7 @@ _MINDS_EXTRA = (
 
 _ANALYSIS_DERIVED = (
     {"name": "resolution", "description": "Categoria derivada pela concatenação de actual_width e actual_height.", "data_type": "categorical string", "unit": "pixels (larguraxaltura)", "origin": "analysis", "derivation": "actual_width × actual_height; não altera o manifest", "expected_domain": "<largura>x<altura>", "nullable": False, "null_meaning": "failure_of_measurement", "analytic_role": "frequência categórica técnica"},
+    {"name": "aspect_ratio", "description": "Proporção derivada entre actual_width e actual_height.", "data_type": "float", "unit": "razão largura/altura", "origin": "analysis", "derivation": "actual_width / actual_height; não altera o manifest", "expected_domain": "real positivo", "nullable": True, "null_meaning": "failure_of_measurement", "analytic_role": "característica técnica derivada"},
 )
 
 
@@ -161,6 +162,12 @@ MISSINGNESS_POLICY = {
     "failure_of_measurement": "medição técnica não disponível ou não confiável; não converter em zero",
     "zero_true": "zero observado e semanticamente válido; permanece zero",
 }
+
+MISSINGNESS_STATES = tuple(MISSINGNESS_POLICY)
+
+# Zeros in these fields are valid observations and must not be folded into
+# generic missingness. Other technical zeros keep their declared semantics.
+ZERO_TRUE_FIELDS = frozenset({"actual_frame_count", "actual_duration"})
 
 
 def field_definitions(dataset: str) -> tuple[FieldDefinition, ...]:
@@ -194,4 +201,6 @@ def classify_missingness(dataset: str, field: str, value: Any) -> str:
             return "structural_absence" if dataset == "minds-libras-raw" and field == "filename_valid" else definition.null_meaning
     except (TypeError, ValueError):
         pass
+    if field in ZERO_TRUE_FIELDS and pd.api.types.is_number(value) and value == 0:
+        return "zero_true"
     return "available"

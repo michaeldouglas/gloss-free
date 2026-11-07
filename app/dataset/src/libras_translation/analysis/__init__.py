@@ -26,7 +26,16 @@ from .distributions import (
     temporal_extreme_candidates,
     temporal_percentiles,
     validate_part2_outputs,
+    analyze_technical_distributions,
+    derive_aspect_ratio,
+    technical_distribution_statistics,
+    technical_frequency_table,
 )
+from .comparison import compare_class_sets, compare_datasets, compare_numeric_datasets
+from .outliers import flag_dataset_outliers, flag_outliers
+from .synthesis import build_evidence_map, render_synthesis_report
+from .stage2 import load_published_stage2, run_stage2_eda
+from .visualizations import render_stage2_visuals, validate_visual_outputs
 
 __all__ = [
     "DATASET_CONTRACTS",
@@ -50,4 +59,19 @@ __all__ = [
     "temporal_extreme_candidates",
     "temporal_percentiles",
     "validate_part2_outputs",
+    "analyze_technical_distributions",
+    "derive_aspect_ratio",
+    "technical_distribution_statistics",
+    "technical_frequency_table",
+    "compare_class_sets",
+    "compare_datasets",
+    "compare_numeric_datasets",
+    "flag_dataset_outliers",
+    "flag_outliers",
+    "build_evidence_map",
+    "render_synthesis_report",
+    "load_published_stage2",
+    "run_stage2_eda",
+    "render_stage2_visuals",
+    "validate_visual_outputs",
 ]

@@ -34,6 +34,25 @@ class CharacterizationTests(unittest.TestCase):
         self.assertEqual(set(tables["numeric"]["missing_applicable"]), {0})
         self.assertEqual(set(tables["categorical"]["denominator"]), {3})
 
+    def test_class_and_signer_coverage_preserves_incomplete_crossed_structure(self):
+        frame = pd.DataFrame(
+            {
+                "class": ["A", "A", "B", "C"],
+                "user_id": ["u1", "u2", "u1", "u3"],
+                "actual_frame_count": [1, 2, 3, 4],
+                "actual_duration": [1.0, 1.0, 1.0, 1.0],
+                "actual_fps": [30.0] * 4,
+                "actual_width": [640] * 4,
+                "actual_height": [480] * 4,
+                "codec": ["h264"] * 4,
+            }
+        )
+        tables = characterize_dataset(frame, "minds-libras-raw")
+        self.assertEqual(int(tables["class_coverage"]["videos"].sum()), 4)
+        self.assertEqual(int(tables["signer_coverage"]["videos"].sum()), 4)
+        self.assertEqual(int(tables["class_signer_counts"]["count"].sum()), 4)
+        self.assertIn(1, set(tables["class_coverage"]["user_id_unique"]))
+
 
 if __name__ == "__main__":
     unittest.main()

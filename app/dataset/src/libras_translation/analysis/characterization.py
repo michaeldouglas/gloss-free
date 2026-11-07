@@ -26,6 +26,7 @@ from .dataset_profile import (
     load_validated_manifest,
     sha256_file,
 )
+from .output_contract import create_private_run, publish_run_atomically, read_current
 
 
 NUMERIC_FIELDS = (
@@ -271,7 +272,7 @@ def characterize_dataset(frame: pd.DataFrame, dataset: str) -> dict[str, pd.Data
 
 
 def _library_versions() -> dict[str, str]:
-    packages = ("pandas", "numpy", "scipy", "matplotlib", "scikit-learn", "pyarrow")
+    packages = ("pandas", "numpy", "scipy", "matplotlib", "seaborn", "scikit-learn", "pyarrow")
     return {
         package: importlib.metadata.version(package)
         for package in packages
@@ -559,15 +560,9 @@ def run_part1(
     destination = output_root or configured.processed_data_dir / "eda"
     timestamp = executed_at or datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
     run_id = f"{timestamp}-{_git_commit()[:7]}"
-    run_root = destination / "archive" / run_id
-    run_root.mkdir(parents=True, exist_ok=False)
-    for directory in ("reports", "tables", "figures", "snapshots", "provenance"):
-        (run_root / directory).mkdir(parents=True, exist_ok=True)
+    run_root = create_private_run(destination, run_id)
 
-    previous_current_path = destination / "provenance" / "CURRENT.json"
-    previous_current = None
-    if previous_current_path.is_file():
-        previous_current = json.loads(previous_current_path.read_text(encoding="utf-8"))
+    previous_current = read_current(destination)
 
     frames: dict[str, pd.DataFrame] = {}
     tables_by_dataset: dict[str, dict[str, pd.DataFrame]] = {}
@@ -631,8 +626,6 @@ def run_part1(
     execution_path = run_root / "provenance" / "execution.json"
     _write_json(execution_path, execution)
 
-    published = _copy_current(run_root, destination)
-    shutil.copy2(execution_path, destination / "provenance" / "execution.json")
     current = {
         "stage": "stage2_part1_characterization",
         "decision": "COMPLETE WITH NOTES",
@@ -640,11 +633,11 @@ def run_part1(
         "published_at": datetime.now(timezone.utc).isoformat(),
         "execution": f"archive/{run_id}/provenance/execution.json",
         "reports": ["reports/dataset_characterization.md"],
-        "tables": sorted(path.relative_to(destination).as_posix() for path in destination.joinpath("tables").glob("*.csv")),
+        "tables": sorted(path.relative_to(run_root).as_posix() for path in run_root.joinpath("tables").glob("*.csv")),
         "figures": [],
-        "published_files_count": len(published) + 1,
+        "published_files_count": sum(1 for path in run_root.rglob("*") if path.is_file()) + 1,
     }
-    _write_json(destination / "provenance" / "CURRENT.json", current)
+    published = publish_run_atomically(run_root, destination, current)
     return {
         "run_id": run_id,
         "decision": "COMPLETE WITH NOTES",

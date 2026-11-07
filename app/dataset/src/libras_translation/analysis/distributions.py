@@ -31,6 +31,7 @@ from .dataset_profile import (
     load_validated_manifest,
     sha256_file,
 )
+from .output_contract import create_private_run, publish_run_atomically, read_current
 
 
 TEMPORAL_FIELDS = (
@@ -61,6 +62,15 @@ FIGURE_DIRECTORIES = {
     "actual_frame_count": "frame_count_distribution",
     "actual_duration": "duration_distribution",
     "actual_fps": "fps_distribution",
+}
+
+TECHNICAL_NUMERIC_FIELDS = ("actual_width", "actual_height", "actual_fps", "aspect_ratio")
+TECHNICAL_CATEGORICAL_FIELDS = ("resolution", "codec")
+TECHNICAL_FIELD_METADATA = {
+    "actual_width": {"unit": "pixels", "label": "Largura observada"},
+    "actual_height": {"unit": "pixels", "label": "Altura observada"},
+    "actual_fps": FIELD_METADATA["actual_fps"],
+    "aspect_ratio": {"unit": "razão largura/altura", "label": "Proporção de aspecto"},
 }
 
 
@@ -218,6 +228,91 @@ def analyze_temporal_distributions(frames: dict[str, pd.DataFrame]) -> dict[str,
     }
 
 
+def derive_aspect_ratio(frame: pd.DataFrame) -> pd.Series:
+    """Derive width/height without mutating or replacing manifest columns."""
+
+    width = pd.to_numeric(frame["actual_width"], errors="coerce")
+    height = pd.to_numeric(frame["actual_height"], errors="coerce")
+    ratio = width.div(height).replace([np.inf, -np.inf], np.nan)
+    return ratio
+
+
+def _technical_values(frame: pd.DataFrame, variable: str) -> pd.Series:
+    if variable == "aspect_ratio":
+        return derive_aspect_ratio(frame)
+    if variable == "resolution":
+        width = pd.to_numeric(frame["actual_width"], errors="coerce").astype("Int64").astype("string")
+        height = pd.to_numeric(frame["actual_height"], errors="coerce").astype("Int64").astype("string")
+        return (width + "x" + height).where(width.notna() & height.notna())
+    if variable not in frame.columns:
+        raise KeyError(variable)
+    return frame[variable]
+
+
+def technical_distribution_statistics(frame: pd.DataFrame, dataset: str) -> pd.DataFrame:
+    """Summarize technical numeric fields and derived aspect ratio."""
+
+    rows: list[dict[str, Any]] = []
+    denominator = len(frame)
+    for variable in TECHNICAL_NUMERIC_FIELDS:
+        values = pd.to_numeric(_technical_values(frame, variable), errors="coerce")
+        valid = values.dropna()
+        n = int(valid.size)
+        rows.append(
+            {
+                "dataset": dataset,
+                "variable": variable,
+                "unit": TECHNICAL_FIELD_METADATA[variable]["unit"],
+                "denominator": denominator,
+                "n": n,
+                "missing_failure_of_measurement": int(values.isna().sum()),
+                "mean": _safe_float(valid.mean()) if n else None,
+                "median": _safe_float(valid.median()) if n else None,
+                "std_ddof_1": _safe_float(valid.std(ddof=1)) if n > 1 else None,
+                "min": _safe_float(valid.min()) if n else None,
+                "max": _safe_float(valid.max()) if n else None,
+            }
+        )
+    return pd.DataFrame(rows)
+
+
+def technical_frequency_table(frame: pd.DataFrame, dataset: str, variable: str) -> pd.DataFrame:
+    """Return technical category frequencies with missingness explicit."""
+
+    values = _technical_values(frame, variable)
+    denominator = len(frame)
+    normalized = values.astype("object").where(values.notna(), "(failure_of_measurement)")
+    counts = normalized.value_counts(dropna=False).rename_axis("category").reset_index(name="count")
+    counts["category"] = counts["category"].astype(str)
+    counts = counts.sort_values("category", kind="mergesort").reset_index(drop=True)
+    counts.insert(0, "dataset", dataset)
+    counts.insert(1, "variable", variable)
+    counts["denominator"] = denominator
+    counts["relative_frequency"] = counts["count"] / denominator if denominator else 0.0
+    return counts[["dataset", "variable", "category", "count", "relative_frequency", "denominator"]]
+
+
+def analyze_technical_distributions(frames: dict[str, pd.DataFrame]) -> dict[str, pd.DataFrame]:
+    """Build technical summaries while retaining dataset-specific denominators."""
+
+    numeric = pd.concat(
+        [technical_distribution_statistics(frame, dataset) for dataset, frame in frames.items()],
+        ignore_index=True,
+    )
+    categorical = pd.concat(
+        [
+            technical_frequency_table(frame, dataset, variable)
+            for dataset, frame in frames.items()
+            for variable in TECHNICAL_CATEGORICAL_FIELDS
+        ],
+        ignore_index=True,
+    )
+    return {
+        "technical_distribution_statistics": numeric,
+        "technical_frequency_tables": categorical,
+    }
+
+
 def _slug(value: str) -> str:
     return value.replace("_", "-").replace(" ", "-").lower()
 
@@ -257,7 +352,7 @@ def _render_one_figure(values: pd.Series, dataset: str, variable: str, figure_ty
     elif figure_type == "boxplot":
         axis.boxplot(
             numeric,
-            vert=False,
+            orientation="horizontal",
             showfliers=True,
             patch_artist=True,
             boxprops={"facecolor": "#8ecae6"},
@@ -642,13 +737,17 @@ def run_part2(
     destination = output_root or configured.processed_data_dir / "eda"
     timestamp = executed_at or datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")
     run_id = f"{timestamp}-{_git_commit()[:7]}"
-    run_root = destination / "archive" / run_id
-    run_root.mkdir(parents=True, exist_ok=False)
-    for directory in ("reports", "tables", "figures", "snapshots", "provenance"):
-        (run_root / directory).mkdir(parents=True, exist_ok=True)
+    run_root = create_private_run(destination, run_id)
 
-    current_path = destination / "provenance" / "CURRENT.json"
-    previous_current = json.loads(current_path.read_text(encoding="utf-8")) if current_path.is_file() else None
+    previous_current = read_current(destination)
+    # Part 2 advances the publication without dropping the validated Part 1
+    # evidence. Provenance is rebuilt below; analytical files are copied into
+    # the private run and then replaced by the new Part 2 artifacts as needed.
+    if previous_current:
+        for directory in ("reports", "tables", "figures", "snapshots"):
+            source = destination / directory
+            if source.is_dir():
+                shutil.copytree(source, run_root / directory, dirs_exist_ok=True)
     frames: dict[str, pd.DataFrame] = {}
     identities: list[dict[str, Any]] = []
     input_hashes_before: dict[str, str] = {}
@@ -717,29 +816,18 @@ def run_part2(
     execution_path = run_root / "provenance" / "execution.json"
     _write_json(execution_path, execution)
 
-    published = _copy_part2_current(run_root, destination)
-    shutil.copy2(execution_path, destination / "provenance" / "execution.json")
     current = {
         "stage": "stage2_part2_temporal_distributions",
         "decision": "COMPLETE WITH NOTES",
         "run_id": run_id,
         "published_at": datetime.now(timezone.utc).isoformat(),
         "execution": f"archive/{run_id}/provenance/execution.json",
-        "reports": sorted(
-            path.relative_to(destination).as_posix()
-            for path in destination.joinpath("reports").glob("*.md")
-        ),
-        "tables": sorted(
-            path.relative_to(destination).as_posix()
-            for path in destination.joinpath("tables").glob("*.csv")
-        ),
-        "figures": sorted(
-            path.relative_to(destination).as_posix()
-            for path in destination.joinpath("figures").rglob("*.png")
-        ),
-        "published_files_count": len(published) + 1,
+        "reports": sorted(path.relative_to(run_root).as_posix() for path in run_root.joinpath("reports").glob("*.md")),
+        "tables": sorted(path.relative_to(run_root).as_posix() for path in run_root.joinpath("tables").glob("*.csv")),
+        "figures": sorted(path.relative_to(run_root).as_posix() for path in run_root.joinpath("figures").rglob("*.png")),
+        "published_files_count": sum(1 for path in run_root.rglob("*") if path.is_file()) + 1,
     }
-    _write_json(destination / "provenance" / "CURRENT.json", current)
+    published = publish_run_atomically(run_root, destination, current)
     return {
         "run_id": run_id,
         "decision": current["decision"],

@@ -11,6 +11,12 @@ from libras_translation.analysis.distributions import (
     temporal_extreme_candidates,
     temporal_percentiles,
 )
+from libras_translation.analysis.distributions import (
+    analyze_technical_distributions,
+    derive_aspect_ratio,
+    technical_distribution_statistics,
+    technical_frequency_table,
+)
 
 
 def _frame() -> pd.DataFrame:
@@ -70,6 +76,26 @@ class DistributionTests(unittest.TestCase):
         )
         for table in analysis.values():
             self.assertEqual(set(table["dataset"]), {"v-librasil-raw", "minds-libras-raw"})
+
+    def test_technical_summaries_are_derived_without_mutating_manifest(self):
+        frame = _frame().assign(actual_width=[640, 640, 1280, 1280, 0], actual_height=[480, 480, 720, 720, 0], codec=["h264", "h264", "h265", None, "h265"])
+        original = frame.copy(deep=True)
+        ratios = derive_aspect_ratio(frame)
+        self.assertAlmostEqual(float(ratios.iloc[0]), 4 / 3)
+        self.assertTrue(pd.isna(ratios.iloc[4]))
+        stats = technical_distribution_statistics(frame, "minds-libras-raw")
+        self.assertEqual(set(stats["denominator"]), {5})
+        self.assertIn("aspect_ratio", set(stats["variable"]))
+        frequencies = technical_frequency_table(frame, "minds-libras-raw", "codec")
+        self.assertEqual(int(frequencies["count"].sum()), 5)
+        self.assertIn("(failure_of_measurement)", set(frequencies["category"]))
+        pd.testing.assert_frame_equal(frame, original)
+
+    def test_combined_technical_analysis_keeps_datasets_separate(self):
+        frame = _frame().assign(actual_width=[640, 640, 1280, 1280, 1280], actual_height=[480, 480, 720, 720, 720], codec=["h264"] * 5)
+        result = analyze_technical_distributions({"v-librasil-raw": frame, "minds-libras-raw": frame.copy(deep=True)})
+        self.assertEqual(set(result["technical_distribution_statistics"]["dataset"]), {"v-librasil-raw", "minds-libras-raw"})
+        self.assertEqual(set(result["technical_frequency_tables"]["denominator"]), {5})
 
 
 if __name__ == "__main__":

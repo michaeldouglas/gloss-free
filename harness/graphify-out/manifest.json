@@ -2382,33 +2382,33 @@
     "semantic_hash": ""
   },
   "artifacts/architecture/architecture-refresh.json": {
-    "mtime": 1793935483.5871499,
-    "seen": 1793935637.0196662,
-    "ast_hash": "978d7d812f09a976c2665996d1784d32",
+    "mtime": 1794074267.1823132,
+    "seen": 1794074318.5434313,
+    "ast_hash": "02f03170f51b993a732d45febff16e8b",
     "semantic_hash": ""
   },
   "artifacts/architecture/html/libras-data-pipeline.browser-check.json": {
-    "mtime": 1793935482.398692,
-    "seen": 1793935637.0196757,
-    "ast_hash": "3e058e3f6c170cf0b6c49336e769aae7",
+    "mtime": 1794074266.7436612,
+    "seen": 1794074318.5434353,
+    "ast_hash": "041460539c0acc81efcfc48b74834d21",
     "semantic_hash": ""
   },
   "artifacts/architecture/html/libras-data-pipeline.delivery.json": {
-    "mtime": 1793935389.275981,
-    "seen": 1793935637.0196803,
-    "ast_hash": "af85afbca13dd5a4078bf62f7a42b788",
+    "mtime": 1794078039.3922288,
+    "seen": 1794078134.5026388,
+    "ast_hash": "ec0198a736c26f59b9350db270c02e45",
     "semantic_hash": ""
   },
   "artifacts/architecture/html/libras-data-pipeline.finalize-summary.json": {
-    "mtime": 1793935483.1554232,
-    "seen": 1793935637.019684,
-    "ast_hash": "5f47b29b5fdb96fe36b66882d1cc4882",
+    "mtime": 1794078041.8731332,
+    "seen": 1794078134.5026414,
+    "ast_hash": "ee739322b18ea8966ec3411414c38834",
     "semantic_hash": ""
   },
   "artifacts/architecture/html/libras-data-pipeline.finalize.json": {
-    "mtime": 1793935482.808079,
-    "seen": 1793935637.0196874,
-    "ast_hash": "1ca450f67708e5d363a73d420861f7b3",
+    "mtime": 1794078041.7826562,
+    "seen": 1794078134.502643,
+    "ast_hash": "f6c075c765f9811770e8ff37106eeb70",
     "semantic_hash": ""
   },
   "artifacts/architecture/html/libras-data-pipeline.review-2/libras-data-pipeline.finalize-summary.json": {
@@ -2460,8 +2460,8 @@
     "semantic_hash": ""
   },
   "artifacts/architecture/html/libras-data-pipeline.html": {
-    "mtime": 1793935388.9270394,
-    "seen": 1793935637.3053112,
+    "mtime": 1794078038.4928463,
+    "seen": 1794078134.547757,
     "ast_hash": "b42117b1a1dc761efa0d4fe58471615b",
     "semantic_hash": ""
   },
@@ -4548,9 +4548,15 @@
     "semantic_hash": ""
   },
   "specs/004-etapa2-eda/tasks.md": {
-    "mtime": 1793935164.262312,
-    "seen": 1793935384.9367008,
-    "ast_hash": "70367b57394bfeefb2ad7761be04358f",
+    "mtime": 1794064470.698868,
+    "seen": 1794064558.8153174,
+    "ast_hash": "bf18f8620b3dce459acab60a76080e4b",
+    "semantic_hash": ""
+  },
+  "specs/004-etapa2-eda/quickstart.md": {
+    "mtime": 1794066454.9067135,
+    "seen": 1794066481.4902575,
+    "ast_hash": "d9941857f5b59e3f4b12cd035370dba8",
     "semantic_hash": ""
   },
   ".agents/skills/archify/package-lock.json": {

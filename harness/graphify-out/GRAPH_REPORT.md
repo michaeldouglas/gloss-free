@@ -1,17 +1,17 @@
-# Graph Report - harness  (2026-11-05)
+# Graph Report - harness  (2026-11-07)
 
 ## Corpus Check
-- 730 files · ~2,090,301 words
+- 731 files · ~2,090,499 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 143 file(s) not represented in the graph (top: .csv 48, .woff 20, .ttf 20)
 
 ## Summary
-- 15992 nodes · 57881 edges · 483 communities (428 shown, 55 thin omitted)
+- 15998 nodes · 57886 edges · 491 communities (433 shown, 58 thin omitted)
 - Extraction: 86% EXTRACTED · 14% INFERRED · 0% AMBIGUOUS · INFERRED: 8111 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `78a34e74`
+- Built from commit: `bacdbe52`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -33,7 +33,7 @@
 - n
 - geometry.mjs
 - live-browser.js
-- o
+- w
 - t
 - compileWorkflowInternal
 - qt
@@ -56,8 +56,8 @@
 - diagram-5JPMMYFP-DJ2Ej2SN.js
 - SlideWrapper-kXUqpAiV.js
 - connectSSE
-- a
-- chunk-LJKG65JO-Cw2eiejW.js
+- k
+- erDiagram-VZDIDQZ7-CI6jIzSw.js
 - tn
 - vn
 - extraction_template.yaml
@@ -65,7 +65,7 @@
 - chunk-GBM4U3XT-BLNtb0L5.js
 - setup
 - architecture-delta.mjs
-- blt
+- blockDiagram-JBWBOGDQ-BCViervI.js
 - setLiveState
 - LA
 - UKSIWDDN.js
@@ -82,7 +82,7 @@
 - validate_data.py
 - finalize.mjs
 - initPageChat
-- "../../node_modules/.pnpm/layout-base@2.0.1/node_modules/layout-base/layout-base.js"
+- vennDiagram-UQOODVD3-Zam_uJrZ.js
 - xychartDiagram-CU35J34J-D3_rp0jc.js
 - el
 - steps
@@ -90,8 +90,8 @@
 - render-waterfall.mjs
 - applyEditing
 - sequenceDiagram-HDG3M3BC-C-XH1nJC.js
-- v
-- z
+- p
+- createLinkingError
 - render-sequence.mjs
 - elk-V4PLJRSU-BPyaOoU3.js
 - stateDiagram-v2-MYRXERYP-BFCpBCKR.js
@@ -99,36 +99,36 @@
 - sankeyDiagram-KZ7VQICK-Du2Lcx6L.js
 - Tasks: Estruturar Projeto App
 - YAYTP6L5.js
-- chunk-5QBFSAUC-CPbiQGNu.js
+- chunk-LJKG65JO-Cw2eiejW.js
 - new-work.md
 - createRouter
 - Search Strategies for ML / Statistics Literature
 - peekChar
 - after_converge
-- zo
+- parse
 - vt
 - render.mjs
 - BibTeX Citation Template
 - initGlobalBar
 - ur
 - katex-SWIXSOGD-RbLBhLZk.js
-- an
+- constructor
 - L4LY553T.js
-- arxiv_search.py
+- _UrllibResponse
 - path-semantics.mjs
 - test_vlibrasil_closeout.py
 - hooks.test.ts
 - brand-marks.mjs
 - ca
 - metadata_validation.py
-- r
+- t
 - handleManualEditActivity
 - _common.py
 - review_template.md
 - Effect Sizes and Power Analysis
 - performSelfAnalysis
 - quadrantDiagram-2IDJRW6B-CTnr6__e.js
-- getNode
+- gf
 - live.md
 - slidev/SKILL.md
 - core.py
@@ -140,7 +140,7 @@
 - scripts
 - _tabular.py
 - Session Management Best Practices
-- fn
+- authoring-contract.md
 - sources.mjs
 - gv
 - _n
@@ -183,14 +183,14 @@
 - Responsive Design
 - validate_review_pack.py
 - speckit-analyze/SKILL.md
-- n
+- hh
 - Y
-- cose-bilkent-7SFLS5CW--3U2wuqy.js
+- architectureDiagram-X7FUPT5M-COs9MoIY.js
 - checkIsTarget
 - Implementation Plan: Padronizar Aprovação de Slug
 - reader.js
 - yv
-- ts
+- n
 - "../../node_modules/.pnpm/vscode-jsonrpc@9.0.3/node_modules/vscode-jsonrpc/lib/common/is.js"
 - mountSvelteComponentVariant
 - openvino_installer.py
@@ -202,7 +202,7 @@
 - Handle `generate`
 - interface
 - interface
-- Review Workflow Data Schema
+- citation_tracker.py
 - createLiveBrowserDomHelpers
 - json
 - Export Options
@@ -222,60 +222,69 @@
 - read_openvino_docs.py
 - fetch
 - portable-path.mjs
-- Operate mode depth (and Read notes)
+- test_relevance_evaluator.py
 - The Toolkit
 - "../../node_modules/.pnpm/vscode-languageserver-protocol@3.18.4/node_modules/vscode-languageserver-protocol/lib/common/protocol.notebook.js"
 - Ha
-- Icons
+- animate.md
 - kn
 - Phase 0: Grill-Me Intake (3 forcing questions, one at a time)
 - Impeccable Asset Producer
 - createLiveBrowserSessionState
 - paper_context_artifacts.py
 - statuskit
-- Systematic Literature Review Skill
+- chunk-UETRLHRR-DkQUTw0g.js
 - iOS platform
 - "../../node_modules/.pnpm/vscode-jsonrpc@9.0.3/node_modules/vscode-jsonrpc/lib/common/messages.js"
-- P
+- s
 - impeccable/SKILL.md
-- Click Markers
-- "../../node_modules/.pnpm/layout-base@1.0.2/node_modules/layout-base/layout-base.js"
+- generate-validators.mjs
+- tokenizeInternal
 - re
 - project-inventory.ts
-- Android platform
+- New visual work
 - create-new-feature.ts
 - presentations/package.json
 - Impeccable Finish Reviewer
-- ki
+- prisma_flow_md.py
 - Authoring contract
-- Cenários de uso e testes
-- Diagnostic Scan
+- Contrato metodológico e estrutural — Etapa 2
+- hs
 - Mermaid Diagrams
 - Presenter Timer
 - Slide Scope Styles
 - data-storytelling — detailed patterns and worked examples
-- Entidades
+- kind
 - onAnnotDown
 - Workflow
-- Impeccable Documenter
+- validate_coverage_questions
 - Litreview — Academic Literature Orientation
 - Per-Slide Frontmatter
 - UI/UX Pro Max - Design Intelligence
 - Slide Hooks
 - EJ5KOXYD.js
-- Code Block Max Height
+- speckit-checklist/SKILL.md
 - Notes Auto Ruby
+- rc
+- open-artifact.mjs
+- Generate Report
+- Monaco Editor
 - Exploratory Data Analysis Report
+- Importing Slides
 - Review Protocol
 - ML / Statistics Venue Tier Reference
 - Project Session Management Skill
 - Paper-Context Evidence Map Template
 - Template Variables
 - Feature Reference
+- CatalogSummaryLineEndingsTest
 - Ia
 - browser-check.mjs
+- Quickstart — Etapa 2 EDA
 - Microscopy and Scientific Imaging Formats
 - Exploratory Data Analysis
+- Frontmatter Merging
+- TestStackFlagWithDesignSystem
 - Search Budget Allocation — Quick / Standard / Deep + Cross-Search Intelligence
 - Animations
 - Headmatter Configuration
@@ -283,7 +292,9 @@
 - CatalogRefreshTest
 - CliTests
 - s
-- t
+- cu
+- ro
+- isSubtype
 - Proteomics and Metabolomics Formats
 - Statistical Analysis
 - libras-translation
@@ -352,7 +363,7 @@
 - Video Processing Specialist
 - Quickstart: Validar Metadados Técnicos de Vídeo
 - Viewer Runtime reference
-- Input
+- row
 - Design Engineering
 - Common Cognitive Load Violations
 - Prose Hygiene (no AI tells)
@@ -361,7 +372,6 @@
 - Entidades
 - Quickstart: Estruturar Projeto App
 - Persona-Based Design Testing
-- Extract Flow
 - Shape
 - Search Strategy
 - Adversarial Literature Checklist
@@ -390,7 +400,6 @@
 - Shiki Magic Move
 - Global Layers
 - speckit-clarify/SKILL.md
-- speckit-implement/SKILL.md
 - PDF Translation Coordinator
 - Harness da dissertação
 - Quickstart de Validação: Padronizar Aprovação de Slug
@@ -398,7 +407,6 @@
 - Anti-Patterns
 - Checkpoint (grill-me forcing-options moment)
 - Project Architecture Report
-- resume.ts
 - Screening Template
 - Generate PDF when Building
 - Code Groups
@@ -409,7 +417,7 @@
 - Zoom Slides
 - Remote Access
 - subrule
-- pathlib
+- csv
 - Relatório da execução — minds-libras-raw
 - Relatório da execução — minds-libras-raw
 - Relatório da execução — minds-libras-raw
@@ -476,57 +484,57 @@
 10. `_t()` - 334 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `BranchDecision` --references--> `action()`  [INFERRED]
-  specs/001-padronizar-aprovacao-slug/data-model.md → .agents/skills/intel-openvino-model-converter/scripts/model_converter.py
 - `Transform` --references--> `scale()`  [INFERRED]
   .agents/skills/slidev/references/core-components.md → presentations/components/DataComparison.vue
+- `Evidence and schema` --references--> `sources()`  [INFERRED]
+  .agents/skills/archify/references/authoring-defaults.md → presentations/docs/apresentacoes/2026-10-25-baseline/assets/chunk-6NZQATR6-DvoMvPU_.js
+- `Reader and export` --references--> `sources()`  [INFERRED]
+  .agents/skills/archify/renderers/class/README.md → presentations/docs/apresentacoes/2026-10-25-baseline/assets/chunk-6NZQATR6-DvoMvPU_.js
 - `Runtime validation` --references--> `sources()`  [INFERRED]
   .agents/skills/archify/schemas/README.md → presentations/docs/apresentacoes/2026-10-25-baseline/assets/chunk-6NZQATR6-DvoMvPU_.js
 - `Loading Performance` --references--> `optional()`  [INFERRED]
   .agents/skills/impeccable/reference/optimize.md → presentations/docs/apresentacoes/2026-10-25-baseline/assets/chunk-II7VFZ6N-DAmTOYV2.js
-- `Update awareness` --references--> `update()`  [INFERRED]
-  .agents/skills/archify/SKILL.md → presentations/docs/apresentacoes/2026-10-25-baseline/assets/chunk-II7VFZ6N-DAmTOYV2.js
 
 ## Import Cycles
 - None detected.
 
-## Communities (483 total, 55 thin omitted)
+## Communities (491 total, 58 thin omitted)
 
 ### Community 0 - "_t"
 Cohesion: 0.03
-Nodes (245): Tf(), _2e(), _3e(), _4e(), _9e(), a4e(), ab(), aj() (+237 more)
+Nodes (246): Tf(), _6e(), a4e(), a5e(), ab(), ae(), ake(), ale() (+238 more)
 
 ### Community 1 - "shiki-DSwSl4kt.js"
 Cohesion: 0.01
-Nodes (369): qd(), constructor(), aa(), activated(), $_addEventListeners(), Ae(), af(), ap() (+361 more)
+Nodes (390): Directive reference, Wh(), limit(), _a(), aa(), ac(), activated(), $_addEventListeners() (+382 more)
 
 ### Community 2 - "chunk-OHNBJXQ2-DaDYlfgg.js"
 Cohesion: 0.01
-Nodes (257): $a(), Cs(), Ea(), El(), Kl(), Za(), Wa(), aa() (+249 more)
+Nodes (290): El(), Kl(), Ls(), n(), Vu(), aa(), ac(), ae() (+282 more)
 
 ### Community 3 - "chunk-II7VFZ6N-DAmTOYV2.js"
 Cohesion: 0.01
-Nodes (137): addDocument(), addEntry(), addHiddenNodes(), am(), appendChild(), appendChildren(), AT_LEAST_ONE_SEP(), AT_LEAST_ONE_SEP1() (+129 more)
+Nodes (138): addDocument(), addEntry(), addHiddenNodes(), am(), appendChild(), appendChildren(), AT_LEAST_ONE(), AT_LEAST_ONE1() (+130 more)
 
 ### Community 4 - "vue-Cc_VwK2l.js"
 Cohesion: 0.03
-Nodes (203): Eo(), jo(), kt(), lt(), ni(), no(), rt(), sc() (+195 more)
+Nodes (212): Mn(), Eo(), jo(), lt(), ni(), no(), Pa(), sc() (+204 more)
 
 ### Community 5 - "chunk-LJKG65JO-Cw2eiejW.js"
 Cohesion: 0.02
-Nodes (102): clear(), constructor(), fe(), ge(), getConfig(), getConfigField(), getDataStructures(), getNode() (+94 more)
+Nodes (97): i(), insert(), n(), r(), t(), updateVal(), measureText(), renderChoice() (+89 more)
 
 ### Community 6 - "index-iXOycd7m.js"
 Cohesion: 0.02
-Nodes (184): Only animate transform and opacity, _a(), add(), addIn(), Ai(), Ao(), arc(), as() (+176 more)
+Nodes (190): Only animate transform and opacity, _a(), add(), addIn(), Ai(), Ao(), arc(), as() (+182 more)
 
 ### Community 7 - ""../../node_modules/.pnpm/elkjs@0.9.3/node_modules/elkjs/lib/elk.bundled.js""
 Cohesion: 0.02
-Nodes (516): Z(), "../../node_modules/.pnpm/elkjs@0.9.3/node_modules/elkjs/lib/elk.bundled.js"(), _6e(), a2e(), a8e(), aa(), ace(), ade() (+508 more)
+Nodes (480): Z(), je(), "../../node_modules/.pnpm/elkjs@0.9.3/node_modules/elkjs/lib/elk.bundled.js"(), _3e(), a7e(), a8e(), aa(), ace() (+472 more)
 
 ### Community 8 - "_r"
 Cohesion: 0.05
-Nodes (224): aat(), adt(), ai(), ak(), aot(), ape(), b0e(), b2e() (+216 more)
+Nodes (199): adt(), aot(), ape(), are(), b0e(), b2e(), b6e(), b_e() (+191 more)
 
 ### Community 9 - "render-architecture.mjs"
 Cohesion: 0.02
@@ -534,7 +542,7 @@ Nodes (203): DEFAULT_GRID, gridLayout(), resolveComponentPos(), validateGridPlac
 
 ### Community 10 - "shortcuts-DNVANo7H.js"
 Cohesion: 0.04
-Nodes (71): Dr(), Gn(), Ja(), r(), o(), i(), t(), u() (+63 more)
+Nodes (84): Dr(), vt(), Wt(), setup(), so(), Ca(), Gn(), Ja() (+76 more)
 
 ### Community 11 - "chunk-6NZQATR6-DvoMvPU_.js"
 Cohesion: 0.01
@@ -542,15 +550,15 @@ Nodes (63): As(), Au(), Bc(), bd(), children(), Cl(), constructor(), De() (+55 m
 
 ### Community 12 - "_r"
 Cohesion: 0.05
-Nodes (310): _0e(), _5e(), _7e(), a1e(), a5e(), a9e(), abe(), act() (+302 more)
+Nodes (284): _0e(), _7e(), a2e(), a3e(), a6e(), a9e(), act(), aet() (+276 more)
 
 ### Community 13 - "usecaseDiagram-WIC6AC6W-eKah0XPF.js"
 Cohesion: 0.02
-Nodes (85): Jn(), AT_LEAST_ONE(), AT_LEAST_ONE1(), AT_LEAST_ONE2(), AT_LEAST_ONE3(), AT_LEAST_ONE4(), AT_LEAST_ONE5(), AT_LEAST_ONE6() (+77 more)
+Nodes (80): AT_LEAST_ONE(), AT_LEAST_ONE1(), AT_LEAST_ONE2(), AT_LEAST_ONE3(), AT_LEAST_ONE4(), AT_LEAST_ONE5(), AT_LEAST_ONE6(), AT_LEAST_ONE7() (+72 more)
 
 ### Community 14 - "n"
 Cohesion: 0.03
-Nodes (76): a(), ao(), awaitBuilderState(), awaitDocumentState(), bo(), checkSourceFrameTypes(), Co(), constructor() (+68 more)
+Nodes (85): a(), awaitBuilderState(), awaitDocumentState(), bo(), _c(), checkSourceFrameTypes(), Co(), constructor() (+77 more)
 
 ### Community 15 - "geometry.mjs"
 Cohesion: 0.06
@@ -560,21 +568,21 @@ Nodes (128): slideTitleOffRoutes(), validateArchitecture(), busRouteConflict(), 
 Cohesion: 0.03
 Nodes (133): agentHasWorkInFlight(), applyGlobalBarLabelState(), applyLiveBarPreference(), applyParamDefaults(), applyParamValue(), applyPlaceholderSizingStyles(), applySavedParamValues(), averageRgb01() (+125 more)
 
-### Community 17 - "o"
-Cohesion: 0.05
-Nodes (175): _8e(), a7e(), ae(), aje(), b3e(), bc(), be(), bg() (+167 more)
+### Community 17 - "w"
+Cohesion: 0.04
+Nodes (144): aae(), alt(), ame(), aye(), b3e(), bft(), bge(), bh() (+136 more)
 
 ### Community 18 - "t"
-Cohesion: 0.07
-Nodes (70): ds(), fc(), u(), ko(), nt(), Qn(), tt(), Xn() (+62 more)
+Cohesion: 0.08
+Nodes (66): ds(), fc(), u(), ko(), nt(), Qn(), tt(), Xr() (+58 more)
 
 ### Community 19 - "compileWorkflowInternal"
 Cohesion: 0.05
 Nodes (132): throwDiagnosticError(), workflow(), anchor(), collectLabelRouteClearance(), defaultFromSide(), defaultToSide(), joinRoutePoints(), pointRectDistance() (+124 more)
 
 ### Community 20 - "qt"
-Cohesion: 0.07
-Nodes (46): c(), wp(), Ae(), at(), De(), et(), ie(), v() (+38 more)
+Cohesion: 0.06
+Nodes (54): Dh(), dirty(), Dt(), et(), ge(), has(), ue(), c() (+46 more)
 
 ### Community 21 - "archify.mjs"
 Cohesion: 0.06
@@ -586,39 +594,39 @@ Nodes (111): acquireOperation(), assertBoundedRegularFile(), assertCacheTargetAb
 
 ### Community 23 - "dagre-WMVPSHVI-CFMM0grN.js"
 Cohesion: 0.03
-Nodes (129): ac(), B(), $c(), f(), a(), H(), $i(), Kt() (+121 more)
+Nodes (119): ac(), B(), $c(), f(), a(), H(), $i(), Kt() (+111 more)
 
 ### Community 24 - "md-B-SsjALw.js"
-Cohesion: 0.03
-Nodes (90): bt(), kn(), W(), lr(), Q(), r(), Qt(), vt() (+82 more)
+Cohesion: 0.04
+Nodes (68): Za(), lr(), Wa(), es(), Y(), aa(), Ai(), at() (+60 more)
 
 ### Community 26 - "generated-validators.mjs"
 Cohesion: 0.03
 Nodes (114): func3(), pattern10, pattern11, pattern12, pattern13, pattern133, pattern14, pattern15 (+106 more)
 
 ### Community 27 - "swimlanes-7KI25NP3-B2B6gYJ_.js"
-Cohesion: 0.06
-Nodes (119): Jt(), pt(), b(), c(), d(), f(), g(), h() (+111 more)
+Cohesion: 0.08
+Nodes (102): bc(), K(), V(), A(), ae(), an(), At(), b() (+94 more)
 
 ### Community 28 - "visit"
 Cohesion: 0.04
 Nodes (95): Notebook Structure, accDescrStatement(), accTitleStatement(), actorDeclarationOnly(), actorDraft(), actorItem(), actorName(), actorOccurrence() (+87 more)
 
 ### Community 29 - "enableRecording"
-Cohesion: 0.04
-Nodes (54): Bs(), Hs(), Zc(), Xc(), AT_LEAST_ONE(), AT_LEAST_ONE1(), AT_LEAST_ONE2(), AT_LEAST_ONE3() (+46 more)
+Cohesion: 0.05
+Nodes (41): Cs(), as(), atLeastOneInternalRecord(), atLeastOneSepFirstInternalRecord(), ba(), buildDuplicateFoundError(), buildEmptyRepetitionError(), computeLookaheadFunc() (+33 more)
 
 ### Community 30 - "chunk-VTNK77LY-BvwWh2gb.js"
 Cohesion: 0.03
-Nodes (55): Monorepo notes, ut(), a(), begin(), blockquote(), blockTokens(), checkbox(), code() (+47 more)
+Nodes (57): Monorepo notes, ut(), begin(), blockquote(), blockTokens(), checkbox(), code(), codespan() (+49 more)
 
 ### Community 31 - "chunk-VFTINRM2-D1PLwKSP.js"
-Cohesion: 0.03
-Nodes (144): Yn(), t(), Fn(), Be(), gt(), Hn(), I(), ie() (+136 more)
+Cohesion: 0.05
+Nodes (84): Yn(), Fn(), s(), _e(), he(), I(), F(), vt() (+76 more)
 
 ### Community 32 - "chunk-PIRVTUE5-DxeGTFAp.js"
-Cohesion: 0.04
-Nodes (86): Ge(), Qe(), A(), C(), d(), f(), el(), f() (+78 more)
+Cohesion: 0.06
+Nodes (52): pe(), Ge(), Qe(), r(), el(), Hl(), c(), l() (+44 more)
 
 ### Community 33 - "cli.mjs"
 Cohesion: 0.05
@@ -642,27 +650,27 @@ Nodes (76): bandedLayout(), DEFAULT_ER_GRID, entityHeight(), erGridLayout(), gri
 
 ### Community 38 - "diagram-5JPMMYFP-DJ2Ej2SN.js"
 Cohesion: 0.04
-Nodes (63): or(), addConnector(), addConnectorMapping(), addEdgeMapping(), addLink(), addNodeFromVertex(), addSingleLink(), addSubGraph() (+55 more)
+Nodes (62): addConnector(), addConnectorMapping(), addEdgeMapping(), addLink(), addNodeFromVertex(), addSingleLink(), addSubGraph(), addSubgraphMapping() (+54 more)
 
 ### Community 39 - "SlideWrapper-kXUqpAiV.js"
-Cohesion: 0.03
-Nodes (86): K(), it(), setup(), Be(), Ie(), J(), Le(), q() (+78 more)
+Cohesion: 0.04
+Nodes (69): K(), setup(), $e(), Ke(), qe(), Xe(), ce(), acceptsInput() (+61 more)
 
 ### Community 40 - "connectSSE"
 Cohesion: 0.06
 Nodes (87): applySavedSessionMeta(), buildParamsPanel(), checkpointPayload(), clampVariantIndex(), closedClipPath(), commitAcceptedVariantToDom(), completeParameterGenerationIfReady(), completeParameterPublication() (+79 more)
 
-### Community 41 - "a"
-Cohesion: 0.03
-Nodes (182): a(), ag(), age(), are(), ase(), au(), av(), az() (+174 more)
+### Community 41 - "k"
+Cohesion: 0.07
+Nodes (76): _8e(), abe(), ad(), ak(), an(), b4e(), be(), bqe() (+68 more)
 
-### Community 42 - "chunk-LJKG65JO-Cw2eiejW.js"
-Cohesion: 0.02
-Nodes (101): "../../node_modules/.pnpm/cose-base@2.2.0/node_modules/cose-base/cose-base.js"(), de(), fe(), he(), J(), me(), pe(), q() (+93 more)
+### Community 42 - "erDiagram-VZDIDQZ7-CI6jIzSw.js"
+Cohesion: 0.03
+Nodes (49): b(), f(), g(), h(), s(), m(), o(), O() (+41 more)
 
 ### Community 43 - "tn"
-Cohesion: 0.12
-Nodes (46): Ge(), e(), n(), tn(), A(), ae(), b(), C() (+38 more)
+Cohesion: 0.06
+Nodes (81): "../../node_modules/.pnpm/layout-base@1.0.2/node_modules/layout-base/layout-base.js"(), a(), e(), i(), o(), p(), r(), u() (+73 more)
 
 ### Community 44 - "vn"
 Cohesion: 0.07
@@ -674,31 +682,31 @@ Nodes (42): architecture_summary, arxiv_id, arxiv_version, authors, baselines, c
 
 ### Community 46 - "reduce"
 Cohesion: 0.03
-Nodes (88): Ms(), ac(), addToResyncTokens(), al(), BACKTRACK(), buildFullFollowKeyStack(), buildLookaheadForAlternation(), buildLookaheadForOptional() (+80 more)
+Nodes (94): Bs(), Hs(), Zc(), Xc(), ac(), addToResyncTokens(), al(), atLeastOneInternalLogic() (+86 more)
 
 ### Community 47 - "chunk-GBM4U3XT-BLNtb0L5.js"
 Cohesion: 0.04
-Nodes (48): Am(), au(), bh(), ch(), Dm(), du(), Em(), fh() (+40 more)
+Nodes (38): au(), b(), bh(), cm(), du(), fh(), fu(), Hc() (+30 more)
 
 ### Community 48 - "setup"
 Cohesion: 0.04
-Nodes (85): Br(), Do(), er(), Gr(), t(), Kr(), qr(), ae() (+77 more)
+Nodes (88): Br(), Do(), er(), Gr(), t(), Kr(), qr(), ae() (+80 more)
 
 ### Community 49 - "architecture-delta.mjs"
 Cohesion: 0.07
 Nodes (66): addNodeMarker(), addState(), annotateArchitectureSideSvg(), architectureDeltaChangeRows(), ArchitectureDeltaError, BOUNDARY_FIELDS, boundaryChangeMap(), boundaryElements() (+58 more)
 
-### Community 50 - "blt"
-Cohesion: 0.09
-Nodes (44): a3e(), a6e(), a_e(), aae(), ane(), b4e(), blt(), bu() (+36 more)
+### Community 50 - "blockDiagram-JBWBOGDQ-BCViervI.js"
+Cohesion: 0.03
+Nodes (41): de(), fe(), he(), J(), me(), pe(), q(), v() (+33 more)
 
 ### Community 51 - "setLiveState"
 Cohesion: 0.10
 Nodes (57): abortSvelteComponentInjection(), beginNewLiveConfiguration(), cancelEditing(), cancelEditingToPicking(), cancelInsertConfigure(), cleanup(), cleanupAcceptedSession(), clearHandled() (+49 more)
 
 ### Community 52 - "LA"
-Cohesion: 0.04
-Nodes (85): addToResyncTokens(), atLeastOneSepFirstInternalLogic(), BACKTRACK(), br(), buildFullFollowKeyStack(), canPerformInRuleRecovery(), canRecoverWithSingleTokenDeletion(), canRecoverWithSingleTokenInsertion() (+77 more)
+Cohesion: 0.06
+Nodes (56): ar(), addToResyncTokens(), atLeastOneInternalLogic(), atLeastOneSepFirstInternalLogic(), attemptInRepetitionRecovery(), BACKTRACK(), buildFullFollowKeyStack(), canPerformInRuleRecovery() (+48 more)
 
 ### Community 53 - "UKSIWDDN.js"
 Cohesion: 0.07
@@ -709,8 +717,8 @@ Cohesion: 0.04
 Nodes (66): attributeText(), autoViewBox(), bands, buildLayoutReport(), busGroups, busPaths, cliArgs, compartments() (+58 more)
 
 ### Community 55 - "Implementation Plan: Etapa 2 — Caracterização estatística e análise exploratória dos datasets"
-Cohesion: 0.06
-Nodes (29): Contrato de saída, Contrato metodológico e estrutural — Etapa 2, Dependências e separação de responsabilidades, Entradas e semântica das chaves, Limites da Etapa 2, Missingness, Política de população e exceções, Pré-condição de entrada (+21 more)
+Cohesion: 0.11
+Nodes (18): Complexity Tracking, Constitution Check, Código e notebooks, Estrutura de implementação, Implementation Plan: Etapa 2 — Caracterização estatística e análise exploratória dos datasets, Missingness, outliers e inferência, Ordem de execução planejada, Parte 1 — Caracterização geral (+10 more)
 
 ### Community 56 - "atomic-output.mjs"
 Cohesion: 0.07
@@ -721,8 +729,8 @@ Cohesion: 0.08
 Nodes (53): appendEvidenceCleanupWarning(), appendEvidencePublicationFailure(), baseReceipt(), beginVisualEvidenceWrite(), CAPTURE_VIEWPORTS, CHROME_NO_SANDBOX_ENV, CHROME_STARTUP_TIMEOUT_MS, contactSheetHtml() (+45 more)
 
 ### Community 59 - "DesignSystemGenerator"
-Cohesion: 0.06
-Nodes (13): DesignSystemGenerator, _resolve_dial(), apply_decision_rules(), _object_without_duplicates(), parse_decision_rules(), _validate_action(), TestReasoningMatch, read_rows() (+5 more)
+Cohesion: 0.05
+Nodes (19): Act on the receipt, Assemble and review, Plan and asset review, Plan, capture, serve, DesignSystemGenerator, _resolve_dial(), apply_decision_rules(), _object_without_duplicates() (+11 more)
 
 ### Community 60 - "M"
 Cohesion: 0.14
@@ -733,8 +741,8 @@ Cohesion: 0.03
 Nodes (34): ansi_ljust(), _button_outline_text_color(), _contrast_ratio(), _derive_dark_palette(), _detect_page_type(), _filter_anti_patterns_for_mode(), format_ascii_box(), add_wrapped() (+26 more)
 
 ### Community 63 - "B"
-Cohesion: 0.04
-Nodes (42): bc(), build(), buildDocuments(), _c(), cleanUpDeleted(), create(), createAsync(), createLangiumDocument() (+34 more)
+Cohesion: 0.05
+Nodes (38): bc(), build(), buildDocuments(), cleanUpDeleted(), create(), createAsync(), createLangiumDocument(), createTextDocumentGetter() (+30 more)
 
 ### Community 64 - "modern-screenshot.umd.js"
 Cohesion: 0.08
@@ -745,8 +753,8 @@ Cohesion: 0.06
 Nodes (55): assignArcLevels(), assignTracks(), bracketOf, brackets, bracketTargets, canvasWidth, countCrossings(), depth (+47 more)
 
 ### Community 66 - "validate_data.py"
-Cohesion: 0.06
-Nodes (44): read_rows(), TestAccessibilityGuidance, TestChartsTypographyAndIcons, TestCurrentReactGuidance, TestSemanticColors, TestGeneratedCatalogContract, _catalog_date(), _check_app_interface_contract() (+36 more)
+Cohesion: 0.07
+Nodes (43): read_rows(), TestAccessibilityGuidance, TestChartsTypographyAndIcons, TestCurrentReactGuidance, TestSemanticColors, _catalog_date(), _check_app_interface_contract(), _check_catalog_contract() (+35 more)
 
 ### Community 67 - "finalize.mjs"
 Cohesion: 0.07
@@ -756,13 +764,13 @@ Nodes (66): childPath, normalize(), startDeliveryUpdateCheck(), unavailable(), a
 Cohesion: 0.09
 Nodes (48): armPageChatForTyping(), attachSteerFocusDebug(), attachSteerFocusGuard(), buildSteerProcessingDots(), clearSteerAwaitTimer(), clearSteerFocusRecoverTimer(), collapsePageChat(), expandPageChat() (+40 more)
 
-### Community 69 - ""../../node_modules/.pnpm/layout-base@2.0.1/node_modules/layout-base/layout-base.js""
-Cohesion: 0.29
-Nodes (10): getEdges(), getNodes(), "../../node_modules/.pnpm/layout-base@2.0.1/node_modules/layout-base/layout-base.js"(), a(), e(), i(), o(), p() (+2 more)
+### Community 69 - "vennDiagram-UQOODVD3-Zam_uJrZ.js"
+Cohesion: 0.08
+Nodes (51): t(), un(), gn(), Kn(), He(), Ae(), C(), A() (+43 more)
 
 ### Community 70 - "xychartDiagram-CU35J34J-D3_rp0jc.js"
 Cohesion: 0.06
-Nodes (42): ou(), a(), ru(), pt(), C(), calculateHorizontalSpace(), calculateOffsetByRotation(), calculateSpace() (+34 more)
+Nodes (43): A(), ou(), a(), ru(), pt(), C(), calculateHorizontalSpace(), calculateOffsetByRotation() (+35 more)
 
 ### Community 71 - "el"
 Cohesion: 0.07
@@ -785,16 +793,16 @@ Cohesion: 0.08
 Nodes (34): addManualContextText(), applyEditing(), buildLocatorForLeaf(), canRestoreManualEditElement(), collectManualContextPieces(), walk(), contextElementForManualEdit(), copyEditContainerContext() (+26 more)
 
 ### Community 76 - "sequenceDiagram-HDG3M3BC-C-XH1nJC.js"
+Cohesion: 0.06
+Nodes (36): D(), activationCount(), addActor(), addALink(), addBox(), addDetails(), addLinks(), addMessage() (+28 more)
+
+### Community 77 - "p"
 Cohesion: 0.05
-Nodes (42): i(), n(), o(), r(), s(), t(), a(), activationCount() (+34 more)
+Nodes (155): _1e(), _4e(), a1e(), aat(), aft(), age(), att(), b1e() (+147 more)
 
-### Community 77 - "v"
-Cohesion: 0.09
-Nodes (64): _1e(), ame(), ant(), b1e(), br(), cue(), db(), dx() (+56 more)
-
-### Community 78 - "z"
-Cohesion: 0.11
-Nodes (29): Handle `steer`, createLinkingError(), deserialize(), doLink(), doParse(), error(), getAllSubTypes(), getAllTypes() (+21 more)
+### Community 78 - "createLinkingError"
+Cohesion: 0.36
+Nodes (12): createLinkingError(), doLink(), getCandidate(), getCandidates(), getLinkedNode(), loadAstNode(), nn(), resolveMultiReference() (+4 more)
 
 ### Community 79 - "render-sequence.mjs"
 Cohesion: 0.06
@@ -802,7 +810,7 @@ Nodes (57): autoViewBox(), legendLayout(), arrowClass, automaticHeight, composit
 
 ### Community 80 - "elk-V4PLJRSU-BPyaOoU3.js"
 Cohesion: 0.05
-Nodes (70): At(), Et(), Mt(), Qe(), Rt(), St(), Ut(), Ee() (+62 more)
+Nodes (68): At(), Et(), Jt(), Mt(), Qe(), Rt(), St(), Ut() (+60 more)
 
 ### Community 81 - "stateDiagram-v2-MYRXERYP-BFCpBCKR.js"
 Cohesion: 0.07
@@ -824,13 +832,13 @@ Nodes (42): Content Quality, Implementation Readiness, Requirement Completeness,
 Cohesion: 0.08
 Nodes (41): NATIVE, u(), Ge(), E(), h(), I(), k(), L() (+33 more)
 
-### Community 86 - "chunk-5QBFSAUC-CPbiQGNu.js"
-Cohesion: 0.24
-Nodes (13): b(), f(), g(), h(), s(), m(), o(), O() (+5 more)
+### Community 86 - "chunk-LJKG65JO-Cw2eiejW.js"
+Cohesion: 0.06
+Nodes (37): addLink(), addNodeFromVertex(), addSingleLink(), addSubGraph(), addVertex(), clear(), constructor(), countChar() (+29 more)
 
 ### Community 87 - "new-work.md"
-Cohesion: 0.05
-Nodes (36): Audit Health Score, Detailed Findings by Severity, Executive Summary, Generate Report, Patterns & Systemic Issues, Platform Conformance Verdict, Positive Findings, Recommended Actions (+28 more)
+Cohesion: 0.03
+Nodes (54): Adaptation Strategies, Assess Adaptation Challenge, Implement & Verify, Orientation & foldables, Phone → Tablet (iPad / large screens), Platform → platform (iOS ↔ Android), Web → native (porting a website or web app), Android platform (+46 more)
 
 ### Community 88 - "createRouter"
 Cohesion: 0.13
@@ -848,49 +856,45 @@ Nodes (45): alternative(), assertion(), atom(), atomEscape(), bi(), characterCla
 Cohesion: 0.08
 Nodes (25): command, description, enabled, extension, optional, priority, command, description (+17 more)
 
-### Community 92 - "zo"
+### Community 92 - "parse"
 Cohesion: 0.08
-Nodes (34): _a(), ac(), Ca(), ct(), dc(), eo(), Ga(), Hn() (+26 more)
+Nodes (49): qd(), cleanup(), enterRCDATA(), fastForwardTo(), handleAttrNameEnd(), handleAttrStart(), handleInAttrValue(), handleTagName() (+41 more)
 
 ### Community 93 - "vt"
-Cohesion: 0.09
-Nodes (24): ht(), st(), nt(), Qe(), run(), stop(), tt(), ut() (+16 more)
+Cohesion: 0.18
+Nodes (14): dt(), ft(), d(), u(), Ge(), ht(), mt(), a() (+6 more)
 
 ### Community 94 - "render.mjs"
 Cohesion: 0.06
-Nodes (56): compileExplainerChart(), pieLegend(), fileName(), parseExplainerDiff(), fail(), finishHunk(), startFile(), sourceLines() (+48 more)
+Nodes (54): fileName(), parseExplainerDiff(), fail(), finishHunk(), startFile(), sourceLines(), escapeHtml(), inlineError() (+46 more)
 
 ### Community 95 - "BibTeX Citation Template"
-Cohesion: 0.08
-Nodes (21): APA 7th Edition Citation Template, Citation Format Rules, In-text citations, Quality checks before finalizing, Reference list entry for arXiv preprints, Report Structure, Special cases, BibTeX Citation Template (+13 more)
+Cohesion: 0.07
+Nodes (25): Examples, Notes, Overview, Phase 1: Plan, Phase 2: Search arXiv, Phase 3: Extract metadata in parallel, Phase 4: Synthesize and format, Phase 5: Save and present (+17 more)
 
 ### Community 96 - "initGlobalBar"
 Cohesion: 0.09
 Nodes (40): agentStatusText(), barPaletteForTheme(), brandMarkSvg(), buildDesignHeader(), cursorForInsertAxis(), designPanelCss(), detectPageTheme(), ensureAgentPollTooltip() (+32 more)
 
 ### Community 97 - "ur"
-Cohesion: 0.14
-Nodes (14): bn(), buildLookaheadForOptional(), dr(), fr(), gr(), Ir(), ur(), validate() (+6 more)
+Cohesion: 0.27
+Nodes (10): $n(), bn(), Ir(), validate(), validateAmbiguousAlternationAlternatives(), validateEmptyOrAlternatives(), validateNoLeftRecursion(), validateSomeNonEmptyLookaheadPath() (+2 more)
 
 ### Community 98 - "katex-SWIXSOGD-RbLBhLZk.js"
 Cohesion: 0.05
-Nodes (22): An(), bn(), endGroup(), endGroups(), extend(), fontMetrics(), havingBaseSizing(), havingBaseStyle() (+14 more)
+Nodes (23): $r(), An(), bn(), endGroup(), endGroups(), extend(), fontMetrics(), havingBaseSizing() (+15 more)
 
-### Community 99 - "an"
-Cohesion: 0.15
-Nodes (29): Pa(), an(), A(), b(), C(), d(), E(), ee() (+21 more)
+### Community 99 - "constructor"
+Cohesion: 0.06
+Nodes (42): $a(), Ea(), co(), ja(), La(), Va(), Xa(), constructor() (+34 more)
 
 ### Community 100 - "L4LY553T.js"
 Cohesion: 0.13
 Nodes (14): addPlot(), Je(), K(), O(), oe(), ot(), plotData(), re() (+6 more)
 
-### Community 101 - "arxiv_search.py"
-Cohesion: 0.12
-Nodes (8): _build_parser(), _build_search_query(), main(), _normalise_arxiv_id(), _parse_entry(), search(), _UrllibRequestsShim, _UrllibResponse
-
 ### Community 102 - "path-semantics.mjs"
 Cohesion: 0.15
-Nodes (39): resolvedSidecarNamespace(), visualEvidenceOwnershipMatches(), absolutePath(), compareFutureLocations(), compareKnownEntries(), compareUnmaterializedNames(), containedBy(), futureWindowsNameRisk() (+31 more)
+Nodes (39): visualEvidenceOwnershipMatches(), absolutePath(), compareFutureLocations(), compareKnownEntries(), compareUnmaterializedNames(), containedBy(), futureWindowsNameRisk(), hasStableIdentity() (+31 more)
 
 ### Community 103 - "test_vlibrasil_closeout.py"
 Cohesion: 0.31
@@ -905,16 +909,16 @@ Cohesion: 0.09
 Nodes (37): asUrl(), BASIC_HTML_REFERENCES, beforeDeadline(), captureBrandReference(), captureRemoteBrand(), captureTimeoutMilliseconds(), checkedFetch(), COLLECTIONS (+29 more)
 
 ### Community 106 - "ca"
-Cohesion: 0.07
-Nodes (32): Na(), Br(), buildKeywordPattern(), buildKeywordToken(), buildTerminalToken(), ca(), da(), di() (+24 more)
+Cohesion: 0.09
+Nodes (26): Na(), Br(), buildKeywordPattern(), buildKeywordToken(), ca(), da(), di(), fa() (+18 more)
 
 ### Community 107 - "metadata_validation.py"
 Cohesion: 0.08
 Nodes (32): _aggregate_fps_interpretation(), classify_fps_hypotheses(), _comparison_for_missing_csv(), _flatten_result(), _json_default(), _parse_csv_decimal(), _parse_csv_int(), _relative_path() (+24 more)
 
-### Community 108 - "r"
-Cohesion: 0.17
-Nodes (17): a(), ar(), c(), cm(), fn(), g(), h(), Ir() (+9 more)
+### Community 108 - "t"
+Cohesion: 0.14
+Nodes (33): a(), ar(), c(), i(), fn(), g(), gh(), h() (+25 more)
 
 ### Community 109 - "handleManualEditActivity"
 Cohesion: 0.19
@@ -933,32 +937,32 @@ Cohesion: 0.05
 Nodes (37): A Priori Power Analysis (Planning), Adjusted R², ANOVA, APA Style Guidelines, Bayes Factor (BF), Bayesian Evidence (Not an Effect Size), Bootstrap Confidence Intervals, Categorical Data Analysis (+29 more)
 
 ### Community 113 - "performSelfAnalysis"
-Cohesion: 0.06
-Nodes (37): at(), atLeastOneInternalRecord(), atLeastOneSepFirstInternalRecord(), Be(), buildLookaheadForAlternation(), computeLookaheadFunc(), consumeInternalRecord(), disableRecording() (+29 more)
+Cohesion: 0.08
+Nodes (32): gi(), Ai(), at(), atLeastOneInternalRecord(), atLeastOneSepFirstInternalRecord(), Be(), computeLookaheadFunc(), consumeInternalRecord() (+24 more)
 
 ### Community 114 - "quadrantDiagram-2IDJRW6B-CTnr6__e.js"
 Cohesion: 0.09
 Nodes (29): A(), b(), build(), C(), calculateSpace(), clear(), constructor(), D() (+21 more)
 
-### Community 115 - "getNode"
+### Community 115 - "gf"
 Cohesion: 0.16
-Nodes (21): add(), cacheForContext(), clear(), delete(), dispose(), find(), findAll(), findChildren() (+13 more)
+Nodes (41): _2e(), _9e(), aj(), ax(), bt(), d0e(), d9e(), e8e() (+33 more)
 
 ### Community 116 - "live.md"
-Cohesion: 0.06
-Nodes (31): Repository evidence, Apply at system scale, Audit before choosing, Choose a strategy, Contrast and perception, Live-mode signature params, Verify, Visitor mode (+23 more)
+Cohesion: 0.05
+Nodes (40): Repository evidence, Apply at system scale, Audit before choosing, Choose a strategy, Contrast and perception, Live-mode signature params, Verify, Visitor mode (+32 more)
 
 ### Community 117 - "slidev/SKILL.md"
 Cohesion: 0.04
-Nodes (35): Auto-generate, Custom URL, Local Image, Open Graph Image, Available Options, Configuration, SEO Meta Tags, Dynamic (Click-based) (+27 more)
+Nodes (35): Behavior, Click Markers, Requirements, Syntax, Auto-generate, Custom URL, Local Image, Open Graph Image (+27 more)
 
 ### Community 118 - "core.py"
 Cohesion: 0.03
 Nodes (42): BM25, _contains_phrase(), detect_domain(), _domain_keywords(), _exact_match_diagnostic(), _exact_row_identity(), _exact_stack_identifier(), _file_signature() (+34 more)
 
 ### Community 119 - "ss"
-Cohesion: 0.08
-Nodes (29): Bo(), i(), et(), i(), gs(), is(), n(), Ko() (+21 more)
+Cohesion: 0.09
+Nodes (27): Bo(), i(), et(), gs(), Ie(), is(), n(), Ko() (+19 more)
 
 ### Community 120 - "Literature Review (ML / Statistics)"
 Cohesion: 0.06
@@ -973,8 +977,8 @@ Cohesion: 0.12
 Nodes (19): Bb(), Db(), documentationLinkRenderer(), documentationTagRenderer(), Eb(), Fb(), findNameInGlobalScope(), findNameInLocalSymbols() (+11 more)
 
 ### Community 123 - "generate-validators.mjs"
-Cohesion: 0.07
-Nodes (27): bin, archify, description, devDependencies, ajv@^8.17.1, simple-icons@16.28.0, engines, node (+19 more)
+Cohesion: 0.12
+Nodes (17): bin, archify, description, devDependencies, ajv@^8.17.1, simple-icons@16.28.0, engines, node (+9 more)
 
 ### Community 124 - "scripts"
 Cohesion: 0.12
@@ -988,21 +992,21 @@ Nodes (21): audit_distributions(), on_header(), audit_missingness_and_leakage(),
 Cohesion: 0.06
 Nodes (33): Advanced Techniques, ❌ Bad Next Actions (Vague), Common Patterns, Git Checkpoint Timing, ✅ Good Next Actions (Concrete), Good Session Management, Integration with Tools, Maintenance Patterns (+25 more)
 
-### Community 127 - "fn"
-Cohesion: 0.13
-Nodes (36): bg(), Bh(), cg(), eg(), fg(), fn(), gg(), Gh() (+28 more)
+### Community 127 - "authoring-contract.md"
+Cohesion: 0.07
+Nodes (20): Bundled Viewer catalogs, Authoring defaults, Composition and meaning, Evidence and schema, Layout and routing, Presentation and modes, Agent decision path, Brand marks (+12 more)
 
 ### Community 128 - "sources.mjs"
-Cohesion: 0.10
-Nodes (39): failureDetails(), launchTarget(), launchTimeout(), openArtifact(), OPENERS, openLoopbackUrl(), chartFromData(), deriveRepository() (+31 more)
+Cohesion: 0.11
+Nodes (35): chartFromData(), compileExplainerChart(), pieLegend(), deriveRepository(), digest(), fail(), gitBytes(), imageMime() (+27 more)
 
 ### Community 129 - "gv"
-Cohesion: 0.06
-Nodes (50): aa(), Ar(), ay(), buildKeywordTokens(), buildTerminalTokens(), buildTokens(), computeRuleType(), convert() (+42 more)
+Cohesion: 0.05
+Nodes (56): aa(), Ar(), ay(), buildKeywordTokens(), buildTerminalToken(), buildTerminalTokens(), buildTokens(), computeRuleType() (+48 more)
 
 ### Community 130 - "_n"
-Cohesion: 0.03
-Nodes (198): a0e(), ac(), ad(), af(), att(), aye(), bd(), bi() (+190 more)
+Cohesion: 0.02
+Nodes (311): _5e(), a(), a0e(), ac(), af(), ag(), ai(), ar() (+303 more)
 
 ### Community 131 - "Implementation Plan: Validar Metadados Técnicos de Vídeo"
 Cohesion: 0.06
@@ -1049,8 +1053,8 @@ Cohesion: 0.10
 Nodes (31): AT(), ax(), BT(), cy(), DE(), DT(), ensureBeforeEOL(), fE() (+23 more)
 
 ### Community 142 - "ds"
-Cohesion: 0.14
-Nodes (29): cu(), ds(), eae(), f4e(), fh(), frt(), gj(), h1e() (+21 more)
+Cohesion: 0.11
+Nodes (51): a_e(), ane(), at(), aut(), bwe(), cne(), dc(), ds() (+43 more)
 
 ### Community 143 - ""../../node_modules/.pnpm/vscode-languageserver-types@3.18.4/node_modules/vscode-languageserver-types/lib/esm/main.js""
 Cohesion: 0.21
@@ -1105,8 +1109,8 @@ Cohesion: 0.20
 Nodes (9): ACM — Numbered, mostly NeurIPS-adjacent, Always include, APA (7th Edition) — Author-year, most stats, arXiv-only papers, Citation Styles Reference, IEEE — Bracketed numbers, engineering / vision, Nature — Superscript numbers, ML common, Style decision flowchart (+1 more)
 
 ### Community 156 - "iterator"
-Cohesion: 0.09
-Nodes (22): count(), entries(), every(), findIndex(), forEach(), head(), includes(), indexOf() (+14 more)
+Cohesion: 0.06
+Nodes (43): add(), cacheForContext(), clear(), count(), delete(), dispose(), entries(), every() (+35 more)
 
 ### Community 157 - ""../../node_modules/.pnpm/vscode-languageserver-protocol@3.18.4/node_modules/vscode-languageserver-protocol/lib/common/utils/is.js""
 Cohesion: 0.24
@@ -1126,7 +1130,7 @@ Nodes (26): 10) Validate and report assurance, 1) Define protocol and domain ada
 
 ### Community 161 - "finalize"
 Cohesion: 0.12
-Nodes (26): applyActorProperty(), applyClassDefinitions(), applyClassesAndStyles(), applyDeclarationMetadata(), applyMetadataAssignments(), applyStandaloneElementMetadata(), collectBoundary(), collectElement() (+18 more)
+Nodes (25): applyActorProperty(), applyClassDefinitions(), applyClassesAndStyles(), applyDeclarationMetadata(), applyMetadataAssignments(), applyStandaloneElementMetadata(), collectBoundary(), collectElement() (+17 more)
 
 ### Community 184 - "htmlBuilder"
 Cohesion: 0.17
@@ -1149,28 +1153,28 @@ Cohesion: 0.11
 Nodes (19): rounded(), Narrative mapping, Pitfalls, Scan mode (approach C: auto-extract, then confirm descriptive language), Schema, Step 1: Find the design assets, Step 2: Auto-extract what can be auto-extracted, Step 2b: Stage the frontmatter (+11 more)
 
 ### Community 189 - "Responsive Design"
-Cohesion: 0.06
-Nodes (32): Assess Adaptation Challenge, Breakpoints: Content-Driven, Content Adaptation, Desktop Adaptation (Mobile → Desktop), Detect Input Method, Not Just Screen Size, Email Adaptation (Web → Email), Implement Adaptations, Layout Adaptation Patterns (+24 more)
+Cohesion: 0.08
+Nodes (25): Assess Adaptation Challenge, Breakpoints: Content-Driven, Content Adaptation, Desktop Adaptation (Mobile → Desktop), Detect Input Method, Not Just Screen Size, Email Adaptation (Web → Email), Implement Adaptations, Layout Adaptation Patterns (+17 more)
 
 ### Community 190 - "validate_review_pack.py"
-Cohesion: 0.18
-Nodes (20): meaningful(), split_ids(), unresolved_high_priority_novelty_questions(), validate_coverage_questions(), main(), parse_non_negative(), parse_prisma(), parse_table() (+12 more)
+Cohesion: 0.27
+Nodes (16): main(), parse_non_negative(), parse_prisma(), parse_table(), read_json(), read_text(), require_columns(), section() (+8 more)
 
 ### Community 191 - "speckit-analyze/SKILL.md"
 Cohesion: 0.15
 Nodes (12): 7. Provide Next Actions, 8. Offer Remediation, 9. Check for extension hooks, Analysis Guidelines, Context, Context Efficiency, Goal, Operating Constraints (+4 more)
 
-### Community 192 - "n"
-Cohesion: 0.24
-Nodes (12): b(), d(), Mu(), n(), Nu(), a(), p(), u() (+4 more)
+### Community 192 - "hh"
+Cohesion: 0.11
+Nodes (24): Am(), d(), Dm(), Em(), f(), hh(), Hl(), Im() (+16 more)
 
 ### Community 193 - "Y"
 Cohesion: 0.21
 Nodes (26): ag(), Bg(), Cg(), Dg(), Eg(), Fg(), Hg(), Ig() (+18 more)
 
-### Community 194 - "cose-bilkent-7SFLS5CW--3U2wuqy.js"
-Cohesion: 0.17
-Nodes (12): t(), d(), f(), g(), h(), m(), "../../node_modules/.pnpm/cose-base@1.0.3/node_modules/cose-base/cose-base.js"(), "../../node_modules/.pnpm/cytoscape-cose-bilkent@4.1.0_cytoscape@3.34.0/node_modules/cytoscape-cose-bilkent/cytoscape-cose-bilkent.js"() (+4 more)
+### Community 194 - "architectureDiagram-X7FUPT5M-COs9MoIY.js"
+Cohesion: 0.04
+Nodes (39): clear(), constructor(), fe(), ge(), getConfig(), getConfigField(), getDataStructures(), getEdges() (+31 more)
 
 ### Community 195 - "checkIsTarget"
 Cohesion: 0.16
@@ -1188,9 +1192,9 @@ Nodes (26): applyTheme(), cropDiagramPreviews(), ensureDiagramReadability(), exp
 Cohesion: 0.15
 Nodes (15): bv(), cv(), dv(), ev(), fv(), hv(), lv(), mv() (+7 more)
 
-### Community 199 - "ts"
-Cohesion: 0.18
-Nodes (13): as(), cs(), ds(), initRecognizerEngine(), is(), ls(), ns(), os() (+5 more)
+### Community 199 - "n"
+Cohesion: 0.08
+Nodes (31): a(), n(), br(), buildLookaheadForAlternation(), buildLookaheadForOptional(), consume(), Cr(), dr() (+23 more)
 
 ### Community 200 - ""../../node_modules/.pnpm/vscode-jsonrpc@9.0.3/node_modules/vscode-jsonrpc/lib/common/is.js""
 Cohesion: 0.32
@@ -1209,8 +1213,8 @@ Cohesion: 0.21
 Nodes (13): _alpha(), _array(), check_homogeneity_of_variance(), check_linearity(), check_normality(), check_normality_per_group(), check_regression_diagnostics(), _clean() (+5 more)
 
 ### Community 204 - "po"
-Cohesion: 0.18
-Nodes (10): go(), jo(), n(), po(), So(), r(), To(), n() (+2 more)
+Cohesion: 0.13
+Nodes (14): go(), jo(), n(), po(), qs(), So(), r(), To() (+6 more)
 
 ### Community 205 - "stage1_review.py"
 Cohesion: 0.10
@@ -1221,8 +1225,8 @@ Cohesion: 0.08
 Nodes (23): Accessibility in Visualizations, Analytics and Data Analysis, Analytics Implementation, Code Organization, Core Dependencies, Data Analysis with Pandas, Data Manipulation Best Practices, Data Validation (+15 more)
 
 ### Community 207 - "diagrams.mjs"
-Cohesion: 0.06
-Nodes (56): checkExplainerHtml(), decode(), decodeURIComponentSafe(), isExplainerHtml(), scanHtml(), attrs(), changesPreview(), compileExplainerDiagram() (+48 more)
+Cohesion: 0.05
+Nodes (59): checkExplainerHtml(), decode(), decodeURIComponentSafe(), isExplainerHtml(), scanHtml(), attrs(), changesPreview(), compileExplainerDiagram() (+51 more)
 
 ### Community 208 - "Handle `generate`"
 Cohesion: 0.12
@@ -1236,17 +1240,17 @@ Nodes (6): interface, default_prompt, display_name, short_description, policy, a
 Cohesion: 0.29
 Nodes (6): interface, default_prompt, display_name, icon_large, icon_small, short_description
 
-### Community 211 - "Review Workflow Data Schema"
-Cohesion: 0.13
-Nodes (14): Fit Classes, Instruction, Prompt: Source Intake Triage, Required Output, Rules, Corpus Adequacy Rule, Evidence States, Required Identifiers (+6 more)
+### Community 211 - "citation_tracker.py"
+Cohesion: 0.33
+Nodes (15): action_close(), action_list(), action_record_cited(), action_record_papers_received(), action_record_search(), action_start(), action_status(), load_session() (+7 more)
 
 ### Community 212 - "createLiveBrowserDomHelpers"
 Cohesion: 0.10
 Nodes (24): collectEditableTextRows(), visit(), createLiveBrowserDomHelpers(), activeElementDeep(), cloneWithoutChrome(), copyTextViaSelection(), cssId(), liveUiRoot() (+16 more)
 
 ### Community 213 - "json"
-Cohesion: 0.04
-Nodes (73): load(), main(), load(), main(), context(), load(), main(), action() (+65 more)
+Cohesion: 0.03
+Nodes (64): load(), main(), load(), main(), context(), load(), main(), build_report() (+56 more)
 
 ### Community 214 - "Export Options"
 Cohesion: 0.08
@@ -1305,8 +1309,8 @@ Cohesion: 0.22
 Nodes (20): actOnAgentTarget(), agentTargetBusyReason(), agentTargetOverlayGone(), agentTargetTaken(), claimAgentTarget(), claimAndActOnAgentTarget(), declineAgentTargetBusy(), declineAgentTargetUnresolvable() (+12 more)
 
 ### Community 229 - "read_openvino_docs.py"
-Cohesion: 0.05
-Nodes (18): default_cache_dir(), _download(), ensure_snapshot(), _excerpt(), _extract_archive(), _HtmlTextParser, inspect_cache(), main() (+10 more)
+Cohesion: 0.15
+Nodes (11): default_cache_dir(), _download(), ensure_snapshot(), _excerpt(), _extract_archive(), _HtmlTextParser, inspect_cache(), main() (+3 more)
 
 ### Community 230 - "fetch"
 Cohesion: 0.18
@@ -1316,9 +1320,9 @@ Nodes (26): callFunction(), consume(), consumeSpaces(), expect(), fetch(), forma
 Cohesion: 0.29
 Nodes (12): assertProfile(), classifySemanticCollision(), collisionError(), createSemanticIndex(), findSemanticCollision(), pathError(), PORTABLE_PATH_PROFILES, PortablePathError (+4 more)
 
-### Community 232 - "Operate mode depth (and Read notes)"
-Cohesion: 0.22
-Nodes (9): Color, Components, Layout, Motion, Operate mode depth (and Read notes), Product constraints, Product permissions, The product slop test (+1 more)
+### Community 232 - "test_relevance_evaluator.py"
+Cohesion: 0.12
+Nodes (3): TestFixtureValidation, TestMetricMath, TestThresholdGate
 
 ### Community 233 - "The Toolkit"
 Cohesion: 0.09
@@ -1329,12 +1333,12 @@ Cohesion: 0.60
 Nodes (5): "../../node_modules/.pnpm/vscode-languageserver-protocol@3.18.4/node_modules/vscode-languageserver-protocol/lib/common/protocol.notebook.js"(), i(), n(), r(), s()
 
 ### Community 235 - "Ha"
-Cohesion: 0.16
-Nodes (11): eo(), Ga(), Ha(), r(), Ja(), n(), lo(), oo() (+3 more)
+Cohesion: 0.17
+Nodes (10): eo(), Ga(), Ha(), Ja(), n(), lo(), oo(), n() (+2 more)
 
-### Community 236 - "Icons"
-Cohesion: 0.29
-Nodes (6): Browse Icons, Icons, Installation, Popular Collections, Styling, Usage
+### Community 236 - "animate.md"
+Cohesion: 0.12
+Nodes (14): Accessibility and control, Choose material by meaning, Find the job, Implement to the runtime, Set the motion thesis, Timing and easing, Verify, Visitor mode (+6 more)
 
 ### Community 237 - "kn"
 Cohesion: 0.40
@@ -1345,8 +1349,8 @@ Cohesion: 0.50
 Nodes (4): Phase 0: Grill-Me Intake (3 forcing questions, one at a time), Q1 (root) — Research question specificity, Q2 (depends on Q1) — Framework hint, Q3 (depends on Q1) — Tentative depth
 
 ### Community 239 - "Impeccable Asset Producer"
-Cohesion: 0.15
-Nodes (12): Act on the receipt, Assemble and review, Plan and asset review, Plan, capture, serve, Core Rule, Decision Comps, Impeccable Asset Producer, Input Contract (+4 more)
+Cohesion: 0.22
+Nodes (7): Core Rule, Decision Comps, Impeccable Asset Producer, Input Contract, Output Contract, Review handoff, The job
 
 ### Community 240 - "createLiveBrowserSessionState"
 Cohesion: 0.19
@@ -1360,41 +1364,41 @@ Nodes (15): _build_parser(), _context_md(), _decision_json(), _evidence_table_md
 Cohesion: 0.10
 Nodes (20): sync(), The declaration offer, 1. Preflight, degrading per source and never failing wholesale, 2. Survey, collecting signals read-only, 3. Rank and crown one finish-first move, 4. Output: the dashboard, then one crowned move, 5. Write the status snapshot, the default rather than an offer, `critical` is the one thing that outranks finish-first (+12 more)
 
-### Community 243 - "Systematic Literature Review Skill"
-Cohesion: 0.18
-Nodes (11): Examples, Notes, Overview, Phase 1: Plan, Phase 2: Search arXiv, Phase 3: Extract metadata in parallel, Phase 4: Synthesize and format, Phase 5: Save and present (+3 more)
+### Community 243 - "chunk-UETRLHRR-DkQUTw0g.js"
+Cohesion: 0.26
+Nodes (14): b(), c(), d(), f(), g(), h(), l(), m() (+6 more)
 
 ### Community 244 - "iOS platform"
 Cohesion: 0.22
 Nodes (9): Color & materials, Components & controls, iOS platform, Layout & structure, Motion, The iOS slop test, Touch targets, Typography (+1 more)
 
-### Community 246 - "P"
-Cohesion: 0.38
-Nodes (6): Ar(), buildDuplicateFoundError(), buildEmptyRepetitionError(), jr(), kr(), P()
+### Community 246 - "s"
+Cohesion: 0.17
+Nodes (10): ch(), Ir(), i(), s(), Sh(), vh(), Xs(), yh() (+2 more)
 
 ### Community 247 - "impeccable/SKILL.md"
-Cohesion: 0.07
-Nodes (26): Accessibility and control, Choose material by meaning, Find the job, Implement to the runtime, Set the motion thesis, Timing and easing, Verify, Visitor mode (+18 more)
+Cohesion: 0.06
+Nodes (28): Before you finish, Scope is sovereign, The amplification, The skeleton test, Why it reads flat, Craft floor, Refuse, Verify (+20 more)
 
-### Community 248 - "Click Markers"
-Cohesion: 0.40
-Nodes (4): Behavior, Click Markers, Requirements, Syntax
+### Community 248 - "generate-validators.mjs"
+Cohesion: 0.18
+Nodes (10): ajv, diagramTypes, __dirname, output, portableOutputWrappers, RESERVED_TYPE_NAMES, root, schemaIds (+2 more)
 
-### Community 249 - ""../../node_modules/.pnpm/layout-base@1.0.2/node_modules/layout-base/layout-base.js""
-Cohesion: 0.42
-Nodes (8): "../../node_modules/.pnpm/layout-base@1.0.2/node_modules/layout-base/layout-base.js"(), a(), e(), i(), o(), p(), r(), u()
+### Community 249 - "tokenizeInternal"
+Cohesion: 0.20
+Nodes (10): computeNewColumn(), handleModes(), I(), kt(), match(), matchLength(), ot(), tokenize() (+2 more)
 
 ### Community 250 - "re"
-Cohesion: 0.08
-Nodes (36): deduplicate(), filter_min_citations(), filter_year(), format_markdown(), load_papers(), main(), merge_records(), normalize_arxiv_id() (+28 more)
+Cohesion: 0.06
+Nodes (40): default_output(), find_repo_root(), load_template(), main(), parse_args(), slugify(), update_title(), deduplicate() (+32 more)
 
 ### Community 251 - "project-inventory.ts"
 Cohesion: 0.18
 Nodes (18): collectManifests(), collectPackageJson(), collectSymbols(), exists(), extensionSummary(), extractSymbols(), FileRecord, groupBy() (+10 more)
 
-### Community 252 - "Android platform"
-Cohesion: 0.25
-Nodes (8): Android platform, Color & theming, Components & motion, Layout & structure, The Android slop test, Touch targets, Typography, Verifying the build
+### Community 252 - "New visual work"
+Cohesion: 0.20
+Nodes (10): 1. Decide what is already true, 2. Ask what will change the work, 4. Commit the world, 5. Record the decision, 6. Build with full commitment, 7. Inspect and finish, Both paths, Code-led (+2 more)
 
 ### Community 253 - "create-new-feature.ts"
 Cohesion: 0.12
@@ -1408,21 +1412,21 @@ Nodes (18): dependencies, @fontsource/atkinson-hyperlegible@5.3.0, @fontsource/c
 Cohesion: 0.29
 Nodes (6): Checks, in order, Disposition, Impeccable Finish Reviewer, Input Contract, Output Contract, Verdict Pass
 
-### Community 256 - "ki"
-Cohesion: 0.33
-Nodes (7): Ai(), Di(), getBaseCstVisitorConstructor(), getBaseCstVisitorConstructorWithDefaults(), ki(), Mi(), Ni()
+### Community 256 - "prisma_flow_md.py"
+Cohesion: 0.31
+Nodes (6): _build_parser(), _extract_counts(), main(), _parse_non_negative_int(), _render_flow_markdown(), _validate_consistency()
 
 ### Community 257 - "Authoring contract"
 Cohesion: 0.06
-Nodes (36): icon(), Authoring contract, Composition repair, Engineering profile default, Executable geometry rules, Explicit `via` coordinates, Hand-placed fallback, Label repair (+28 more)
+Nodes (37): icon(), Authoring contract, Composition repair, Engineering profile default, Executable geometry rules, Explicit `via` coordinates, Hand-placed fallback, Label repair (+29 more)
 
-### Community 258 - "Cenários de uso e testes"
-Cohesion: 0.29
-Nodes (7): Cenários de uso e testes, User Story 1 — Caracterizar as populações validadas (Priority: P1) 🎯 MVP, User Story 2 — Explorar distribuições temporais e técnicas (Priority: P1), User Story 3 — Caracterizar classes e sinalizadores (Priority: P1), User Story 4 — Comparar descritivamente os datasets (Priority: P2), User Story 5 — Documentar observações atípicas sem exclusão (Priority: P2), User Story 6 — Produzir uma síntese científica rastreável (Priority: P2)
+### Community 258 - "Contrato metodológico e estrutural — Etapa 2"
+Cohesion: 0.06
+Nodes (28): Contrato de saída, Contrato metodológico e estrutural — Etapa 2, Dependências e separação de responsabilidades, Entradas e semântica das chaves, Limites da Etapa 2, Missingness, Política de população e exceções, Pré-condição de entrada (+20 more)
 
-### Community 259 - "Diagnostic Scan"
-Cohesion: 0.33
-Nodes (6): 1. Accessibility (VoiceOver / TalkBack), 2. Performance, 3. Appearance & Theming, 4. Platform Conformance (CRITICAL), 5. Adaptivity, Diagnostic Scan
+### Community 259 - "hs"
+Cohesion: 0.22
+Nodes (10): av(), buildAlternationAmbiguityError(), buildAlternationPrefixAmbiguityError(), buildEarlyExitMessage(), buildMismatchTokenMessage(), buildNoViableAltMessage(), gs(), hs() (+2 more)
 
 ### Community 260 - "Mermaid Diagrams"
 Cohesion: 0.33
@@ -1440,29 +1444,29 @@ Nodes (5): Global Styles, Nested CSS with UnoCSS, Scoped by Default, Slide Scope
 Cohesion: 0.11
 Nodes (17): data-storytelling — detailed patterns and worked examples, Framework 1: The Problem-Solution Story, Framework 2: The Trend Story, Framework 3: The Comparison Story, Handling Uncertainty, Headlines That Work, Presentation Templates, Story Frameworks (+9 more)
 
-### Community 264 - "Entidades"
-Cohesion: 0.33
-Nodes (5): BranchDecision, Entidades, Modelo de Dados: Padronizar Aprovação de Slug, SlugProposal, Transições
+### Community 264 - "kind"
+Cohesion: 0.09
+Nodes (21): kind(), Timeline, Axis, Cards, Event Timeline Renderer, Input, Tested size, 3. Choose the right amount of invention (+13 more)
 
 ### Community 265 - "onAnnotDown"
 Cohesion: 0.12
 Nodes (28): applyPlaceholderDimensions(), beginEditPin(), buildAnnotationsForCapture(), buildInsertPlaceholderSnapshotFromDom(), buildPickedAnchorSnapshot(), buildPinElement(), cancelEditingPin(), captureAndEmit() (+20 more)
 
 ### Community 266 - "Workflow"
-Cohesion: 0.12
-Nodes (16): 1. Frame The Review, 2. Register Sources, 4. Assess Corpus Adequacy, 5. Extract Evidence, 6. Code And Synthesize, 7. Draft The Report, 8. Audit Citations, 9. Update Project Knowledge (+8 more)
+Cohesion: 0.06
+Nodes (30): Fit Classes, Instruction, Prompt: Source Intake Triage, Required Output, Rules, Corpus Adequacy Rule, Evidence States, Required Identifiers (+22 more)
 
-### Community 267 - "Impeccable Documenter"
-Cohesion: 0.40
-Nodes (4): Impeccable Documenter, Input Contract, Output Contract, Workflow
+### Community 267 - "validate_coverage_questions"
+Cohesion: 0.50
+Nodes (4): meaningful(), split_ids(), unresolved_high_priority_novelty_questions(), validate_coverage_questions()
 
 ### Community 268 - "Litreview — Academic Literature Orientation"
 Cohesion: 0.14
 Nodes (14): Agent Integrity Rules (Research-Pack Convention), Anti-Patterns To Reject, Cross-Search Intelligence, DOCX Technical Requirements, Error Handling, Free-lane URL templates (exact), Litreview — Academic Literature Orientation, Output (+6 more)
 
 ### Community 269 - "Per-Slide Frontmatter"
-Cohesion: 0.06
-Nodes (35): 1. Decide what is already true, 2. Ask what will change the work, 4. Commit the world, 5. Record the decision, 6. Build with full commitment, 7. Inspect and finish, Both paths, Code-led (+27 more)
+Cohesion: 0.08
+Nodes (25): After approval: the comp becomes a spec, Generate three compositional options, One approval point, Plates and provenance, Visualize: Direction Comps & Asset Production, Background, Click Count, Draggable Positions (+17 more)
 
 ### Community 270 - "UI/UX Pro Max - Design Intelligence"
 Cohesion: 0.11
@@ -1476,17 +1480,37 @@ Nodes (4): Available Hooks, Important, Slide Hooks, Use Cases
 Cohesion: 0.26
 Nodes (13): A(), b(), d(), E(), k(), L(), N(), q() (+5 more)
 
-### Community 273 - "Code Block Max Height"
-Cohesion: 0.40
-Nodes (4): Code Block Max Height, Usage, Use Case, With Line Highlighting Placeholder
+### Community 273 - "speckit-checklist/SKILL.md"
+Cohesion: 0.25
+Nodes (7): Anti-Examples: What NOT To Do, Checklist Purpose: "Unit Tests for English", Example Checklist Types & Sample Items, Execution Steps, Post-Execution Checks, Pre-Execution Checks, User Input
 
 ### Community 274 - "Notes Auto Ruby"
 Cohesion: 0.40
 Nodes (4): Configuration, Example, Notes Auto Ruby, Use Case
 
+### Community 275 - "rc"
+Cohesion: 0.29
+Nodes (8): Ms(), ec(), nc(), oc(), Ps(), rc(), sc(), tc()
+
+### Community 276 - "open-artifact.mjs"
+Cohesion: 0.48
+Nodes (6): failureDetails(), launchTarget(), launchTimeout(), openArtifact(), OPENERS, openLoopbackUrl()
+
+### Community 277 - "Generate Report"
+Cohesion: 0.29
+Nodes (7): Audit Health Score, Detailed Findings by Severity, Executive Summary, Generate Report, Patterns & Systemic Issues, Platform Conformance Verdict, Positive Findings
+
+### Community 278 - "Monaco Editor"
+Cohesion: 0.33
+Nodes (5): Basic Usage, Configuration, Diff Editor, Editor Height, Monaco Editor
+
 ### Community 279 - "Exploratory Data Analysis Report"
 Cohesion: 0.12
 Nodes (16): Analysis status, Data dictionary and measurement context, Distributions and outlier sensitivity, Exploratory comparisons and multiplicity, Exploratory Data Analysis Report, Key findings, Limitations, Missingness, censoring, and detection limits (+8 more)
+
+### Community 280 - "Importing Slides"
+Cohesion: 0.33
+Nodes (5): Basic Import, Frontmatter Priority, Import Specific Slides, Importing Slides, Reuse Slides
 
 ### Community 281 - "Review Protocol"
 Cohesion: 0.12
@@ -1513,12 +1537,16 @@ Cohesion: 0.12
 Nodes (16): Animation & Interaction, Basic Syntax, Code & Editor, Core References, Diagrams & Math, Editor & Tools, Export & Build, Feature Reference (+8 more)
 
 ### Community 288 - "Ia"
-Cohesion: 0.08
-Nodes (23): Aa(), Ae(), Da(), De(), Ge(), He(), o(), Ia() (+15 more)
+Cohesion: 0.13
+Nodes (15): Aa(), Ae(), Da(), De(), Ge(), He(), o(), Ia() (+7 more)
 
 ### Community 289 - "browser-check.mjs"
 Cohesion: 0.26
 Nodes (14): activate(), evaluate(), EXPLAINER_VIEWPORTS, explainerObservation(), explainerObservationDiagnostics(), expression(), inspectExplainerBrowser(), inspectNativePreviewLayout() (+6 more)
+
+### Community 290 - "Quickstart — Etapa 2 EDA"
+Cohesion: 0.33
+Nodes (5): Execução controlada, Pré-condições, Quickstart — Etapa 2 EDA, Testes, Verificações mínimas
 
 ### Community 291 - "Microscopy and Scientific Imaging Formats"
 Cohesion: 0.12
@@ -1527,6 +1555,10 @@ Nodes (15): Authoritative sources, DICOM, Exact capability matrix, Imaging EDA r
 ### Community 292 - "Exploratory Data Analysis"
 Cohesion: 0.13
 Nodes (14): 1. Confirm authorization and root, 2. Manifest before content analysis, 3. Run the narrowest automated tool, 4. Add scientific context, 5. Create the report scaffold, Citing Scientific Agent Skills, Exact capability matrix, Exploratory Data Analysis (+6 more)
+
+### Community 293 - "Frontmatter Merging"
+Cohesion: 0.40
+Nodes (4): Example, Frontmatter Merging, Priority Rule, Result
 
 ### Community 295 - "Search Budget Allocation — Quick / Standard / Deep + Cross-Search Intelligence"
 Cohesion: 0.12
@@ -1545,12 +1577,20 @@ Cohesion: 0.12
 Nodes (15): 1. Initialize Convergence Context, 2. Load Artifacts (Progressive Disclosure), 3. Build the Intent Inventory, 4. Assess the Codebase and Classify Findings, 5. Assign Severity, 6. Present the In-Session Findings Summary, 7. Append Convergence Tasks (or report converged), 8. Provide Next Actions (Handoff) (+7 more)
 
 ### Community 301 - "s"
-Cohesion: 0.27
-Nodes (14): f(), lh(), m(), s(), b(), C(), D(), E() (+6 more)
+Cohesion: 0.53
+Nodes (9): s(), b(), C(), D(), O(), S(), T(), w() (+1 more)
 
-### Community 302 - "t"
-Cohesion: 0.13
-Nodes (27): cu(), b(), d(), f(), g(), h(), m(), p() (+19 more)
+### Community 302 - "cu"
+Cohesion: 0.40
+Nodes (11): cu(), b(), d(), f(), g(), h(), m(), p() (+3 more)
+
+### Community 303 - "ro"
+Cohesion: 0.50
+Nodes (4): ao(), io(), ro(), so()
+
+### Community 304 - "isSubtype"
+Cohesion: 0.50
+Nodes (4): getAllSubTypes(), getAllTypes(), isInstance(), isSubtype()
 
 ### Community 307 - "Proteomics and Metabolomics Formats"
 Cohesion: 0.13
@@ -1577,8 +1617,8 @@ Cohesion: 0.22
 Nodes (16): consumeArg(), consumeArgs(), countExpansion(), expandAfterFuture(), expandMacro(), expandMacroAsText(), expandNextToken(), expandOnce() (+8 more)
 
 ### Community 317 - "Vt"
-Cohesion: 0.08
-Nodes (29): computeNewColumn(), dn(), dt(), et(), gn(), handleModes(), hn(), I() (+21 more)
+Cohesion: 0.09
+Nodes (26): r(), decorateNode(), Ar(), buildDuplicateFoundError(), buildEmptyRepetitionError(), dn(), et(), gn() (+18 more)
 
 ### Community 318 - "PipeCdp"
 Cohesion: 0.20
@@ -1625,12 +1665,12 @@ Cohesion: 0.24
 Nodes (10): detectGuideLanguage(), formatScenarioList(), listScenarioRecipes(), localized(), normalized(), publicGuideData(), RAW_RECIPES, recommendScenario() (+2 more)
 
 ### Community 333 - "Delivery contract"
-Cohesion: 0.07
-Nodes (27): Architecture layout repair, Choose the repair scope, One coherent repair, Agent decision path, Brand marks, A new candidate at an existing output path, Automated browser evidence, Delivery contract (+19 more)
+Cohesion: 0.08
+Nodes (25): Architecture layout repair, Choose the repair scope, One coherent repair, A new candidate at an existing output path, Automated browser evidence, Delivery contract, Failed finalize and candidate repair, Handoff receipt (+17 more)
 
 ### Community 334 - "Explainer authoring"
-Cohesion: 0.14
-Nodes (13): Charts, Choose the form by the shape of the information, Delivery, Directive reference, Draft, Explainer authoring, Inline links and sources, Panel replacement (+5 more)
+Cohesion: 0.18
+Nodes (10): Charts, Choose the form by the shape of the information, Delivery, Draft, Explainer authoring, Inline links and sources, Panel replacement, Panels and layout (+2 more)
 
 ### Community 344 - "Corpus Adequacy Assessment"
 Cohesion: 0.15
@@ -1653,8 +1693,8 @@ Cohesion: 0.15
 Nodes (12): Assumptions, Edge Cases, Feature Specification: [FEATURE NAME], Functional Requirements, Key Entities *(include if feature involves data)*, Measurable Outcomes, Requirements *(mandatory)*, Success Criteria *(mandatory)* (+4 more)
 
 ### Community 351 - "sources"
-Cohesion: 0.03
-Nodes (66): row(), kind(), Bundled Viewer catalogs, Architecture, Class, Dataflow, Mode placement, Sequence (+58 more)
+Cohesion: 0.09
+Nodes (29): Architecture, Class, Dataflow, Mode placement, Sequence, Tree, Waterfall, Workflow (+21 more)
 
 ### Community 358 - "Chemistry and Molecular Formats"
 Cohesion: 0.17
@@ -1697,8 +1737,8 @@ Cohesion: 0.18
 Nodes (10): Analyze Data Quality, Automated Test Guidance, Core Checks, Defaults, Output Standards, Related Skills, Severity, Specific Check Guidance (+2 more)
 
 ### Community 381 - "validatePortablePath"
-Cohesion: 0.11
-Nodes (34): Compact native diagrams, architecture(), classDiagram(), dataflow(), erd(), lifecycle(), sequence(), timeline() (+26 more)
+Cohesion: 0.18
+Nodes (24): Compact native diagrams, architecture(), classDiagram(), dataflow(), erd(), lifecycle(), sequence(), timeline() (+16 more)
 
 ### Community 382 - "Data Storytelling"
 Cohesion: 0.18
@@ -1824,9 +1864,9 @@ Nodes (9): Executar a validação, Executar testes determinísticos, Ler os resu
 Cohesion: 0.09
 Nodes (21): Canonical exports, Embedded reading addresses, Exploration, Motion and presentation, Reach Share Card, Route Share Card, Truth boundary, Viewer Runtime reference (+13 more)
 
-### Community 430 - "Input"
-Cohesion: 0.10
-Nodes (23): ERD, Schema lookup, Cardinality ink, Domain bands, Entity-Relationship Renderer, Input, Reading a schema, The legend band (+15 more)
+### Community 430 - "row"
+Cohesion: 0.09
+Nodes (26): row(), ERD, Schema lookup, Class and Interface Renderer, Input, Layout, Reader and export, Relationships (+18 more)
 
 ### Community 435 - "Design Engineering"
 Cohesion: 0.04
@@ -1859,10 +1899,6 @@ Nodes (8): Baixar uma amostra limitada, Limites do projeto, Listar um dataset se
 ### Community 455 - "Persona-Based Design Testing"
 Cohesion: 0.25
 Nodes (8): 1. Impatient Power User: "Alex", 2. Confused First-Timer: "Jordan", 3. Accessibility-Dependent User: "Sam", 4. Deliberate Stress Tester: "Riley", 5. Distracted Mobile User: "Casey", Persona-Based Design Testing, Project-Specific Personas, Selecting Personas
-
-### Community 456 - "Extract Flow"
-Cohesion: 0.25
-Nodes (7): Extract Flow, Step 1: Discover the Design System, Step 2: Identify Patterns, Step 3: Plan Extraction, Step 4: Extract & Enrich, Step 5: Migrate, Step 6: Document
 
 ### Community 457 - "Shape"
 Cohesion: 0.22
@@ -1902,7 +1938,7 @@ Nodes (7): Block Components, Comark Syntax, Enable, Image Attributes, Inline Com
 
 ### Community 469 - "optional"
 Cohesion: 0.13
-Nodes (18): Anti-Examples: What NOT To Do, Checklist Purpose: "Unit Tests for English", Example Checklist Types & Sample Items, Execution Steps, Post-Execution Checks, Pre-Execution Checks, User Input, Outline (+10 more)
+Nodes (18): Outline, Post-Execution Checks, Pre-Execution Checks, Scope Guard, User Input, Completion Report, Done When, Mandatory Post-Execution Hooks (+10 more)
 
 ### Community 470 - "package.json"
 Cohesion: 0.25
@@ -1976,10 +2012,6 @@ Nodes (6): Conditional Rendering, Example: Footer, Export Note, Global Layers, L
 Cohesion: 0.29
 Nodes (6): Completion Report, Done When, Mandatory Post-Execution Hooks, Outline, Pre-Execution Checks, User Input
 
-### Community 499 - "speckit-implement/SKILL.md"
-Cohesion: 0.29
-Nodes (6): Completion Report, Done When, Mandatory Post-Execution Hooks, Outline, Pre-Execution Checks, User Input
-
 ### Community 502 - "PDF Translation Coordinator"
 Cohesion: 0.29
 Nodes (6): Before mutation, Execution, PDF Translation Coordinator, Role, Scope, Validation and handoff
@@ -2007,10 +2039,6 @@ Nodes (6): 3-4 sentence recon summary, Checkpoint (grill-me forcing-options mome
 ### Community 549 - "Project Architecture Report"
 Cohesion: 0.33
 Nodes (5): Project Architecture Report, Quick Start, Required HTML Sections, Style, Workflow
-
-### Community 550 - "resume.ts"
-Cohesion: 0.29
-Nodes (3): colorEnabled, lines, phaseIndex
 
 ### Community 551 - "Screening Template"
 Cohesion: 0.33
@@ -2050,11 +2078,11 @@ Nodes (5): Enable Remote Access, Password Protection, Remote Access, Remote Tunn
 
 ### Community 567 - "subrule"
 Cohesion: 0.07
-Nodes (37): Outline, ACTION(), after(), assign(), assignWithoutOverride(), before(), construct(), constructInfix() (+29 more)
+Nodes (38): ACTION(), after(), assign(), assignWithoutOverride(), before(), construct(), constructInfix(), consume() (+30 more)
 
-### Community 569 - "pathlib"
-Cohesion: 0.05
-Nodes (26): clean(), extract_front_matter(), main(), read_front_matter(), resolve_source_path(), clean(), extract_pdf_text(), main() (+18 more)
+### Community 569 - "csv"
+Cohesion: 0.10
+Nodes (16): clean(), extract_front_matter(), main(), read_front_matter(), resolve_source_path(), clean(), extract_pdf_text(), main() (+8 more)
 
 ### Community 570 - "Relatório da execução — minds-libras-raw"
 Cohesion: 0.33
@@ -2206,23 +2234,23 @@ Nodes (4): Calculating Effect Sizes, Confidence Intervals for Effect Sizes, Effe
 
 ## Knowledge Gaps
 - **27 isolated node(s):** `unicodedata`, `uuid`, `rich_console`, `rich_progress`, `rich_table` (+22 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 4582 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **55 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 4587 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **58 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `error()` connect `z` to `chunk-II7VFZ6N-DAmTOYV2.js`, `build-showroom.ts`, `render-architecture.mjs`, `live.md`, `archify.mjs`, `sources`?**
+- **Why does `error()` connect `live.md` to `chunk-II7VFZ6N-DAmTOYV2.js`, `build-showroom.ts`, `render-architecture.mjs`, `createLinkingError`, `archify.mjs`, `sources`?**
   _High betweenness centrality (0.091) - this node is a cross-community bridge._
 - **Are the 1979 inferred relationships involving `"../../node_modules/.pnpm/elkjs@0.9.3/node_modules/elkjs/lib/elk.bundled.js"()` (e.g. with `_0e()` and `_1e()`) actually correct?**
   _`"../../node_modules/.pnpm/elkjs@0.9.3/node_modules/elkjs/lib/elk.bundled.js"()` has 1979 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `unicodedata`, `uuid`, `rich_console` to the rest of the system?**
   _27 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `_t` be split into smaller, more focused modules?**
-  _Cohesion score 0.031448645031783205 - nodes in this community are weakly interconnected._
-- **Why does `action()` connect `json` to `Handle `generate``, `Entidades`, `validatePortablePath`, `sources`?**
+  _Cohesion score 0.03125933300149328 - nodes in this community are weakly interconnected._
+- **Why does `action()` connect `kind` to `Handle `generate``, `json`, `validatePortablePath`?**
   _High betweenness centrality (0.090) - this node is a cross-community bridge._
 - **Are the 6 inferred relationships involving `_n()` (e.g. with `chunk-II7VFZ6N-DAmTOYV2.js` and `yn()`) actually correct?**
   _`_n()` has 6 INFERRED edges - model-reasoned connections that need verification._
 - **Should `shiki-DSwSl4kt.js` be split into smaller, more focused modules?**
-  _Cohesion score 0.01045683288673943 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.010199556541019957 - nodes in this community are weakly interconnected._
