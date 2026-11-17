@@ -15,6 +15,7 @@ from .config import DATASETS, PROJECT_ROOT, Settings
 from .dataset_quality_validation import generate_validation_artifacts_from_file
 from .infrastructure.huggingface_client import HuggingFaceClient
 from .metadata_validation import DEFAULT_FPS_TOLERANCE, validate_dataset
+from .vlibrasil_publication import finalize_vlibrasil
 
 DATASET_CHOICES = (*DATASETS, "all")
 console = Console()
@@ -242,13 +243,25 @@ def validate_video_metadata(
     exceptions_path = exceptions if exceptions.is_absolute() else dataset_root / exceptions
     output_dir = output or settings.processed_data_dir / "metadata-validation" / name
 
+    if name == "v-librasil-raw" and output_dir.resolve() == (settings.processed_data_dir / "metadata-validation" / name).resolve():
+        try:
+            closed = finalize_vlibrasil(dataset_root, settings.processed_data_dir / "metadata-validation",
+                                        ffprobe_executable=ffprobe_executable, fps_tolerance=fps_tolerance)
+        except (OSError, ValueError, RuntimeError) as exc:
+            _report_error(name, exc)
+            raise typer.Exit(code=1) from exc
+        console.print(f"V-LIBRASIL: geração coerente publicada em {closed['canonical']}; revisão humana pendente.")
+        if closed["summary"]["decision"] != "GO":
+            raise typer.Exit(code=2)
+        return
+
     try:
         payload = validate_dataset(
             annotations_path,
             dataset_root / "videos",
             output_dir,
             dataset=name,
-            exceptions_csv=exceptions_path if exceptions_path.is_file() else None,
+            exceptions_csv=None if name == "v-librasil-raw" else exceptions_path if exceptions_path.is_file() else None,
             ffprobe_executable=ffprobe_executable,
             fps_tolerance=fps_tolerance,
         )
@@ -305,6 +318,18 @@ def validate_dataset_quality(
     metadata_json = technical_output / "metadata_validation.json"
     derived_root = (output_root or settings.processed_data_dir / "metadata-validation").resolve()
 
+    if name == "v-librasil-raw":
+        console.print("V-LIBRASIL: nova inspeção completa em staging; resultados legados não são reutilizados.")
+        try:
+            closed = finalize_vlibrasil(dataset_root, derived_root, fps_tolerance=fps_tolerance)
+        except (OSError, ValueError, RuntimeError) as exc:
+            _report_error(name, exc)
+            raise typer.Exit(code=1) from exc
+        console.print(f"V-LIBRASIL: {closed['summary']['decision']} — {closed['canonical']}; revisão humana pendente, sem decisão global Etapa 1.")
+        if closed["summary"]["decision"] != "GO":
+            raise typer.Exit(code=2)
+        return
+
     try:
         if not metadata_json.is_file():
             annotations_path = dataset_root / "annotations.csv"
@@ -314,7 +339,7 @@ def validate_dataset_quality(
                 dataset_root / "videos",
                 technical_output,
                 dataset=name,
-                exceptions_csv=exceptions_path if exceptions_path.is_file() else None,
+                exceptions_csv=None if name == "v-librasil-raw" else exceptions_path if exceptions_path.is_file() else None,
                 fps_tolerance=fps_tolerance,
             )
         result = generate_validation_artifacts_from_file(

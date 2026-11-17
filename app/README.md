@@ -1,4 +1,4 @@
-# Libras Translation — aquisição de datasets
+# Aquisição de datasets
 
 Nesta etapa, tudo que implementa e testa o download dos datasets está em `dataset/`. A raiz mantém a configuração do projeto; `data/` mantém os vídeos e manifestos. Modelos e treinamento ficam fora do escopo atual.
 
@@ -142,3 +142,48 @@ app/
 O grafo de conhecimento do projeto é centralizado em `../harness/graphify-out/`; não mantenha um `graphify-out/` separado nesta pasta.
 
 Quando uma etapa de preparação for implementada, seus resultados intermediários e preparados serão adicionados sob `data/`, com uma decisão explícita sobre formatos, rastreabilidade e licenças.
+
+## Fechamento canônico do V-LIBRASIL na Etapa 1
+
+O V-LIBRASIL usa uma geração completa em
+data/processed/metadata-validation/v-librasil-raw/. Esse diretório contém o
+JSON técnico, os CSVs, reports/ e manifests/v_librasil_validated.parquet.
+Os antigos relatórios V-LIBRASIL na raiz de metadata-validation/ ficam apenas
+em superseded/ depois da publicação; não são fontes atuais.
+
+O comando video validate-quality --dataset v-librasil-raw faz uma nova
+inspeção completa, sem reutilizar a execução legada. Para esse dataset,
+validate-metadata com destino canônico também publica a geração completa.
+Um --output diferente do canônico continua permitindo produzir somente
+metadados técnicos em staging. Em Windows sem FFmpeg local, use a imagem
+Docker de processamento com o código atualizado, entrada raw somente leitura
+e destino derivado separado. O arquivo validation.log e o toolchain.json
+registram a execução e as ferramentas.
+
+metadata_match é um estado de comparação (match, mismatch, inconclusive,
+missing ou duplicate). technical_valid verifica o vídeo observado e independe
+de igualdade com o CSV. dataset_valid exige schema, identidade única, nome
+consistente, validade técnica, metadados compatíveis e ausência de bloqueios.
+Essas flags não comprovam qualidade linguística nem aptidão para treinamento.
+
+A chave de comparação preserva a barra invertida como caractere literal:
+NFC, mapeamento U+F022/U+F03F/U+F05C, strip e casefold. Os nomes originais
+continuam nos artefatos. Colisões nas anotações e no filesystem são explícitas,
+sem escolher um candidato como correspondência válida.
+
+As três exceções de error.csv ficam em reports/documented_exceptions.csv,
+fora das linhas do manifest de annotations.csv. O resumo distingue quantidade
+de issues, arquivos físicos afetados, anotações afetadas e arquivos ilegíveis.
+
+publication.json identifica a geração e contém os hashes dos artefatos.
+A publicação valida o staging inteiro e usa renomeação de diretórios com
+rollback para falhas síncronas; o registro de execução é substituído por último.
+No Windows pode existir uma breve ausência do caminho canônico entre duas
+renomeações, mas não uma mistura de gerações. Uma interrupção abrupta pode
+exigir recuperar a geração anterior em superseded/ e inspecionar o lock antes
+de repetir; não se promete transação ACID entre diretório e registro.
+
+O resultado permanece pending_human_review para o V-LIBRASIL. A execução não
+emite decisão global da Etapa 1, não processa o MINDS-Libras e não inicia EDA,
+Etapa 2 ou treinamento. Os sete eixos do relatório são um agrupamento operacional
+dos requisitos existentes; cada status inclui justificativa e evidências.

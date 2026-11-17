@@ -1,7 +1,7 @@
 {
   "repo_id": "ibmectech/v-librasil-raw",
   "commit": "d2d3e5e95574c4e0c5c20a7d82a24d52063e12d5",
-  "acquired_at_utc": "2026-10-04T01:28:37.411699+00:00",
+  "acquired_at_utc": "2026-11-02T12:57:58.542926+00:00",
   "files": {
     "videos/Abacaxi_Articulador1.mp4": {
       "remote_path": "videos/Abacaxi_Articulador1.mp4",
@@ -28609,38 +28609,38 @@
   "auxiliary_files": {
     ".gitattributes": {
       "remote_path": ".gitattributes",
-      "local_path": "C:\\Users\\mdbaa\\development\\Dissertacao\\app\\data\\raw\\v-librasil-raw\\.gitattributes",
+      "local_path": null,
       "expected_size_bytes": 2504,
-      "status": "skipped_existing",
+      "status": "pending",
       "error": null
     },
     "annotations.csv": {
       "remote_path": "annotations.csv",
-      "local_path": "C:\\Users\\mdbaa\\development\\Dissertacao\\app\\data\\raw\\v-librasil-raw\\annotations.csv",
+      "local_path": null,
       "expected_size_bytes": 871412,
-      "status": "skipped_existing",
+      "status": "pending",
       "error": null
     },
     "error.csv": {
       "remote_path": "error.csv",
-      "local_path": "C:\\Users\\mdbaa\\development\\Dissertacao\\app\\data\\raw\\v-librasil-raw\\error.csv",
+      "local_path": null,
       "expected_size_bytes": 671,
-      "status": "skipped_existing",
+      "status": "pending",
       "error": null
     },
     "README.md": {
       "remote_path": "README.md",
-      "local_path": "C:\\Users\\mdbaa\\development\\Dissertacao\\app\\data\\raw\\v-librasil-raw\\README.md",
+      "local_path": null,
       "expected_size_bytes": 2739,
-      "status": "skipped_existing",
+      "status": "pending",
       "error": null
     },
     "videos": {
       "remote_path": "videos",
-      "local_path": "C:\\Users\\mdbaa\\development\\Dissertacao\\app\\data\\raw\\v-librasil-raw\\videos",
+      "local_path": null,
       "expected_size_bytes": null,
-      "status": "failed",
-      "error": "Falha de rede/armazenamento após tentativas: RemoteEntryNotFoundError: 404 Client Error. (Request ID: Root=1-6ac1abcc-41acd72c6bd78b22311eebf9;5a16819f-ae3a-4a25-95cd-fe4971de8b51)\n\nEntry Not Found for url: https://huggingface.co/datasets/ibmectech/v-librasil-raw/resolve/d2d3e5e95574c4e0c5c20a7d82a24d52063e12d5/videos."
+      "status": "pending",
+      "error": null
     }
   }
 }
