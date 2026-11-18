@@ -88,7 +88,7 @@ O layout canônico futuro é:
 app/data/processed/eda/
 ├── reports/       # publicação corrente
 ├── tables/        # publicação corrente
-├── figures/       # publicação corrente; vazio até a execução autorizada
+├── figures/       # publicação corrente após execução autorizada
 ├── snapshots/     # snapshots públicos/reprodutíveis
 └── provenance/    # manifest de execução e CURRENT.json
 ```
@@ -130,3 +130,8 @@ das entradas; e identidade reprodutível para a mesma entrada/configuração.
 Este contrato prepara caracterização descritiva e EDA. Não autoriza conclusões
 linguísticas, inferenciais ou causais, não trata frames como amostras, e não
 substitui a validação técnica da Etapa 1.
+
+
+## Documentation/provenance closeout
+
+O run analítico canônico permanece 20261107T190651Z-bacdbe5. Ajustes posteriores nos relatórios e no mapa de evidências são marcados como documentation/provenance closeout, identificados e preservados com seus hashes originais; não alteram os manifests de entrada, tabelas, figuras ou resultados analíticos. human_review_status = approved em 2026-11-17; stage2_status = completed; stage2_decision = COMPLETE WITH NOTES. O fechamento global foi registrado após aprovação humana.
