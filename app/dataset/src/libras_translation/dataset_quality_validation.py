@@ -209,6 +209,11 @@ def generate_validation_artifacts(
 ) -> dict[str, Any]:
     """Validate provenance and write reports plus one immutable-derived manifest."""
 
+    if dataset == "v-librasil-raw":
+        from .vlibrasil_validation import generate_vlibrasil_artifacts
+        return generate_vlibrasil_artifacts(dataset_root=dataset_root, metadata_payload=metadata_payload,
+                                            output_root=output_root, metadata_json=metadata_json)
+
     dataset_root = Path(dataset_root).resolve()
     output_root = Path(output_root).resolve()
     annotations_path = dataset_root / "annotations.csv"

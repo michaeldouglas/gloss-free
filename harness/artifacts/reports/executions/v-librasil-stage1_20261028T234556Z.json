@@ -1,0 +1,588 @@
+{
+  "schema_version": "v-librasil-stage1-human-review.v1",
+  "derived_projection": true,
+  "source": {
+    "summary": "app/data/processed/metadata-validation/v-librasil-raw/reports/metadata_summary.json",
+    "sha256": "2f268253d408880610363c3c431294aad81d749065024c8bf7306dea5bdf181a",
+    "publication": "app/data/processed/metadata-validation/v-librasil-raw/publication.json",
+    "generation_id": "20261028T234556Z-12866758"
+  },
+  "review_status": "pending_human_review",
+  "global_stage1_decision": null,
+  "summary": {
+    "schema_version": "dataset-validation-summary.v1",
+    "dataset": "v-librasil-raw",
+    "generated_at_utc": "2026-10-28T23:46:00.231716+00:00",
+    "decision": "GO",
+    "decision_scope": "Somente integridade V-LIBRASIL; sem decisão global Etapa 1",
+    "review_status": "pending_human_review",
+    "dataset_valid": true,
+    "source": {
+      "annotations_csv": "data/raw/v-librasil-raw/annotations.csv",
+      "error_csv": "data/raw/v-librasil-raw/error.csv",
+      "metadata_validation": "data/processed/metadata-validation/v-librasil-raw/metadata_validation.json"
+    },
+    "counts": {
+      "annotations": 4086,
+      "exceptions": 3,
+      "physical_videos": 4086,
+      "manifest_rows": 4086,
+      "valid": 4086,
+      "issues": 3,
+      "by_severity": {
+        "CRITICAL": 0,
+        "ERROR": 0,
+        "WARNING": 0,
+        "INFO": 3
+      },
+      "affected_files": 0,
+      "affected_annotations": 0,
+      "unreadable_files": 0,
+      "provenance": {
+        "error_rows": 3,
+        "error_in_annotations": 0,
+        "error_with_physical_file": 0,
+        "error_missing_file": 3,
+        "documented_exceptions": 3
+      }
+    },
+    "key_reconciliation": {
+      "csv_records": 4086,
+      "matched": 4086,
+      "missing": 0,
+      "extra": 0,
+      "normalized_duplicate_annotations": 0,
+      "normalized_duplicate_physical": 0,
+      "filesystem_key_column": "video_name"
+    },
+    "validity_contract": {
+      "metadata_match": "match/mismatch/inconclusive/missing/duplicate; unique join, dimensions and independent fps hypotheses",
+      "technical_valid": "readable video stream, positive observed dimensions/fps/duration and codec, independent of CSV agreement",
+      "dataset_valid": "valid annotation schema and name, unique join, technical_valid, metadata_match=match and no blocking issues"
+    },
+    "artifacts": {
+      "report": "reports/metadata_validation_report.md",
+      "issues": "reports/metadata_issues.csv",
+      "manifest": "manifests/v_librasil_validated.parquet",
+      "exceptions": "reports/documented_exceptions.csv"
+    },
+    "source_integrity": {
+      "before": {
+        "annotations.csv": "7bce21c874c12279c0c22c1a2318b5f1845dbe0714a30aad714382c246c3144e",
+        "error.csv": "87434173f604ed97f4ea56e3d9e148594cd055f209c3a0a1c03346c59da9d0d7"
+      },
+      "after": {
+        "annotations.csv": "7bce21c874c12279c0c22c1a2318b5f1845dbe0714a30aad714382c246c3144e",
+        "error.csv": "87434173f604ed97f4ea56e3d9e148594cd055f209c3a0a1c03346c59da9d0d7"
+      },
+      "video_inventory_before": "8505b4d00fa7b7c45abcd037157a6c58058ca6922c28785d1cf79322dbe29cb7",
+      "video_inventory_after": "8505b4d00fa7b7c45abcd037157a6c58058ca6922c28785d1cf79322dbe29cb7",
+      "video_count_before": 4086,
+      "video_count_after": 4086,
+      "physical_inventory_unchanged_during_publication": true,
+      "evidence": [
+        "source_integrity.before.json",
+        "source_integrity.after.json"
+      ]
+    },
+    "stage1_review": {
+      "schema_version": "v-librasil-stage1-review.v2",
+      "dataset": "v-librasil-raw",
+      "scope": "V-LIBRASIL Stage 1 closeout; pending human review; no global Stage 1 decision",
+      "source_artifacts": {
+        "technical": "data/processed/metadata-validation/v-librasil-raw/metadata_validation.json",
+        "quality_summary": "data/processed/metadata-validation/v-librasil-raw/reports/metadata_summary.json",
+        "manifest": "data/processed/metadata-validation/v-librasil-raw/manifests/v_librasil_validated.parquet",
+        "annotations": "data/raw/v-librasil-raw/annotations.csv",
+        "filesystem": "data/raw/v-librasil-raw/videos/"
+      },
+      "definitions": {
+        "metadata_match": "unique physical correspondence, matching width/height and at least one FPS hypothesis",
+        "technical_valid": "readable video stream with positive observed width, height, FPS, duration and codec; frame count can be unavailable",
+        "dataset_valid": "required fields, unique correspondence, technical_valid, metadata_match=match and no blocking issue"
+      },
+      "reconciliation": {
+        "expected_annotations": 4086,
+        "annotations_recalculated": 4086,
+        "physical_files_recalculated": 4086,
+        "matched": 4086,
+        "missing": 0,
+        "extras": 0,
+        "duplicates_after_normalization": 0,
+        "collisions": {
+          "video_name": {},
+          "video_id": {},
+          "physical": {},
+          "class_user_conflicts": {}
+        }
+      },
+      "validity_counts": {
+        "metadata_match": 4086,
+        "technical_valid": 4086,
+        "dataset_valid": 4086,
+        "unreadable_files": 0
+      },
+      "schema": {
+        "required_columns": [
+          "video_id",
+          "video_name",
+          "class",
+          "user_id",
+          "width",
+          "height",
+          "fps",
+          "url_page",
+          "url_download"
+        ],
+        "issues": []
+      },
+      "fps_analysis": {
+        "tolerance": 0.01,
+        "total_annotations": 4086,
+        "coverage": 1.0,
+        "confidence": "high",
+        "hypothesis_winner": "actual_frame_count",
+        "candidate_winner": "actual_frame_count",
+        "rate_source_counts": {
+          "avg_frame_rate": 4086
+        },
+        "frame_count_source_counts": {
+          "nb_frames": 4086
+        },
+        "confidence_thresholds": {
+          "high_coverage": 1.0,
+          "high_exclusive": 1.0,
+          "moderate_coverage": 0.95,
+          "moderate_exclusive": 0.95
+        },
+        "csv_fps_matches_actual_fps": 0,
+        "csv_fps_matches_actual_frame_count": 4086,
+        "exclusive_actual_fps": 0,
+        "exclusive_actual_frame_count": 4086,
+        "matches_both": 0,
+        "matches_neither": 0,
+        "inconclusive": 0,
+        "invalid_declared_values": 0,
+        "evaluable_both_hypotheses": 4086,
+        "confidence_rule": "high requires 100% dual coverage and exclusive match; moderate requires >=95% dual coverage and exclusive match, strictly exclusive; otherwise low/undetermined"
+      },
+      "fps": {
+        "tolerance": 0.01,
+        "total_annotations": 4086,
+        "coverage": 1.0,
+        "confidence": "high",
+        "hypothesis_winner": "actual_frame_count",
+        "candidate_winner": "actual_frame_count",
+        "rate_source_counts": {
+          "avg_frame_rate": 4086
+        },
+        "frame_count_source_counts": {
+          "nb_frames": 4086
+        },
+        "confidence_thresholds": {
+          "high_coverage": 1.0,
+          "high_exclusive": 1.0,
+          "moderate_coverage": 0.95,
+          "moderate_exclusive": 0.95
+        },
+        "csv_fps_matches_actual_fps": 0,
+        "csv_fps_matches_actual_frame_count": 4086,
+        "exclusive_actual_fps": 0,
+        "exclusive_actual_frame_count": 4086,
+        "matches_both": 0,
+        "matches_neither": 0,
+        "inconclusive": 0,
+        "invalid_declared_values": 0,
+        "evaluable_both_hypotheses": 4086,
+        "confidence_rule": "high requires 100% dual coverage and exclusive match; moderate requires >=95% dual coverage and exclusive match, strictly exclusive; otherwise low/undetermined"
+      },
+      "special_name_families": {
+        "Frente\\Á Frente_Articulador": {
+          "rows": 3,
+          "matched_unique": 3,
+          "normalized_prefix": "frente\\á frente_articulador",
+          "names": [
+            "Frente\\Á Frente_Articulador3.mp4",
+            "Frente\\Á Frente_Articulador2.mp4",
+            "Frente\\Á Frente_Articulador1.mp4"
+          ]
+        },
+        "Cérebro (de \"ervilha\")_Articulador": {
+          "rows": 3,
+          "matched_unique": 3,
+          "normalized_prefix": "cérebro (de \"ervilha\")_articulador",
+          "names": [
+            "Cérebro (de \"ervilha\")_Articulador3.mp4",
+            "Cérebro (de \"ervilha\")_Articulador2.mp4",
+            "Cérebro (de \"ervilha\")_Articulador1.mp4"
+          ]
+        },
+        "O quê?_Articulador": {
+          "rows": 3,
+          "matched_unique": 3,
+          "normalized_prefix": "o quê?_articulador",
+          "names": [
+            "O quê?_Articulador3.mp4",
+            "O quê?_Articulador2.mp4",
+            "O quê?_Articulador1.mp4"
+          ]
+        }
+      },
+      "issues": {
+        "issues_total": 3,
+        "affected_files": 0,
+        "affected_annotations": 0,
+        "by_severity": {
+          "CRITICAL": 0,
+          "ERROR": 0,
+          "WARNING": 0,
+          "INFO": 3
+        }
+      },
+      "documented_exceptions": [
+        {
+          "video_name": "Congelar_Articulador3.mp4",
+          "observed": true,
+          "in_annotations": false,
+          "physical_file_exists": false,
+          "documented": true
+        },
+        {
+          "video_name": "Criança_Articulador3.mp4",
+          "observed": true,
+          "in_annotations": false,
+          "physical_file_exists": false,
+          "documented": true
+        },
+        {
+          "video_name": "Poesia_Articulador2.mp4",
+          "observed": true,
+          "in_annotations": false,
+          "physical_file_exists": false,
+          "documented": true
+        }
+      ],
+      "requirements": [
+        {
+          "id": "1",
+          "title": "1. Input reading and preservation",
+          "status": "PASS",
+          "justification": "Hashes tabulares e inventário físico antes/depois são iguais.",
+          "evidence": [
+            "data/raw/v-librasil-raw/annotations.csv",
+            "data/raw/v-librasil-raw/videos/"
+          ],
+          "specification_mapping": [
+            "FR-001",
+            "FR-008",
+            "SC-008"
+          ]
+        },
+        {
+          "id": "2",
+          "title": "2. Schema and required values",
+          "status": "PASS",
+          "justification": "0 ocorrências em nove colunas obrigatórias.",
+          "evidence": [
+            "data/raw/v-librasil-raw/annotations.csv"
+          ],
+          "specification_mapping": [
+            "FR-001",
+            "FR-003",
+            "FR-006"
+          ]
+        },
+        {
+          "id": "3",
+          "title": "3. Keys and uniqueness",
+          "status": "PASS",
+          "justification": "Colisões: 0; video_name/video_id/class+user foram avaliados.",
+          "evidence": [
+            "data/raw/v-librasil-raw/annotations.csv",
+            "data/raw/v-librasil-raw/videos/"
+          ],
+          "specification_mapping": [
+            "FR-014",
+            "FR-017",
+            "SC-007"
+          ]
+        },
+        {
+          "id": "4",
+          "title": "4. CSV/filesystem reconciliation",
+          "status": "PASS",
+          "justification": "4086 anotações, 4086 arquivos físicos, 4086 correspondências, 0 ausentes, 0 extras e 0 duplicados.",
+          "evidence": [
+            "data/raw/v-librasil-raw/annotations.csv",
+            "data/raw/v-librasil-raw/videos/"
+          ],
+          "specification_mapping": [
+            "FR-011",
+            "FR-014",
+            "SC-001",
+            "SC-007"
+          ]
+        },
+        {
+          "id": "5",
+          "title": "5. Technical metadata and FPS",
+          "status": "PASS",
+          "justification": "4086/4086 tecnicamente válidos; FPS high.",
+          "evidence": [
+            "data/processed/metadata-validation/v-librasil-raw/metadata_validation.json"
+          ],
+          "specification_mapping": [
+            "FR-002",
+            "FR-007",
+            "FR-011",
+            "SC-001",
+            "SC-003"
+          ]
+        },
+        {
+          "id": "6",
+          "title": "6. Filename convention",
+          "status": "PASS",
+          "justification": "0 nomes inválidos; None permanece como PARTIAL.",
+          "evidence": [
+            "data/processed/metadata-validation/v-librasil-raw/manifests/v_librasil_validated.parquet"
+          ],
+          "specification_mapping": [
+            "FR-017"
+          ]
+        },
+        {
+          "id": "7",
+          "title": "7. Provenance and derived manifest",
+          "status": "PASS",
+          "justification": "Exceções observadas=True; manifest consistente=True; 3 issues e 0 arquivos afetados.",
+          "evidence": [
+            "data/processed/metadata-validation/v-librasil-raw/reports/metadata_summary.json",
+            "data/processed/metadata-validation/v-librasil-raw/manifests/v_librasil_validated.parquet"
+          ],
+          "specification_mapping": [
+            "FR-014",
+            "FR-018",
+            "SC-007",
+            "SC-008"
+          ]
+        }
+      ],
+      "review_axes": [
+        {
+          "id": "1",
+          "title": "1. Input reading and preservation",
+          "status": "PASS",
+          "justification": "Hashes tabulares e inventário físico antes/depois são iguais.",
+          "evidence": [
+            "data/raw/v-librasil-raw/annotations.csv",
+            "data/raw/v-librasil-raw/videos/"
+          ],
+          "specification_mapping": [
+            "FR-001",
+            "FR-008",
+            "SC-008"
+          ]
+        },
+        {
+          "id": "2",
+          "title": "2. Schema and required values",
+          "status": "PASS",
+          "justification": "0 ocorrências em nove colunas obrigatórias.",
+          "evidence": [
+            "data/raw/v-librasil-raw/annotations.csv"
+          ],
+          "specification_mapping": [
+            "FR-001",
+            "FR-003",
+            "FR-006"
+          ]
+        },
+        {
+          "id": "3",
+          "title": "3. Keys and uniqueness",
+          "status": "PASS",
+          "justification": "Colisões: 0; video_name/video_id/class+user foram avaliados.",
+          "evidence": [
+            "data/raw/v-librasil-raw/annotations.csv",
+            "data/raw/v-librasil-raw/videos/"
+          ],
+          "specification_mapping": [
+            "FR-014",
+            "FR-017",
+            "SC-007"
+          ]
+        },
+        {
+          "id": "4",
+          "title": "4. CSV/filesystem reconciliation",
+          "status": "PASS",
+          "justification": "4086 anotações, 4086 arquivos físicos, 4086 correspondências, 0 ausentes, 0 extras e 0 duplicados.",
+          "evidence": [
+            "data/raw/v-librasil-raw/annotations.csv",
+            "data/raw/v-librasil-raw/videos/"
+          ],
+          "specification_mapping": [
+            "FR-011",
+            "FR-014",
+            "SC-001",
+            "SC-007"
+          ]
+        },
+        {
+          "id": "5",
+          "title": "5. Technical metadata and FPS",
+          "status": "PASS",
+          "justification": "4086/4086 tecnicamente válidos; FPS high.",
+          "evidence": [
+            "data/processed/metadata-validation/v-librasil-raw/metadata_validation.json"
+          ],
+          "specification_mapping": [
+            "FR-002",
+            "FR-007",
+            "FR-011",
+            "SC-001",
+            "SC-003"
+          ]
+        },
+        {
+          "id": "6",
+          "title": "6. Filename convention",
+          "status": "PASS",
+          "justification": "0 nomes inválidos; None permanece como PARTIAL.",
+          "evidence": [
+            "data/processed/metadata-validation/v-librasil-raw/manifests/v_librasil_validated.parquet"
+          ],
+          "specification_mapping": [
+            "FR-017"
+          ]
+        },
+        {
+          "id": "7",
+          "title": "7. Provenance and derived manifest",
+          "status": "PASS",
+          "justification": "Exceções observadas=True; manifest consistente=True; 3 issues e 0 arquivos afetados.",
+          "evidence": [
+            "data/processed/metadata-validation/v-librasil-raw/reports/metadata_summary.json",
+            "data/processed/metadata-validation/v-librasil-raw/manifests/v_librasil_validated.parquet"
+          ],
+          "specification_mapping": [
+            "FR-014",
+            "FR-018",
+            "SC-007",
+            "SC-008"
+          ]
+        }
+      ]
+    },
+    "fps_analysis": {
+      "tolerance": 0.01,
+      "total_annotations": 4086,
+      "coverage": 1.0,
+      "confidence": "high",
+      "hypothesis_winner": "actual_frame_count",
+      "candidate_winner": "actual_frame_count",
+      "rate_source_counts": {
+        "avg_frame_rate": 4086
+      },
+      "frame_count_source_counts": {
+        "nb_frames": 4086
+      },
+      "confidence_thresholds": {
+        "high_coverage": 1.0,
+        "high_exclusive": 1.0,
+        "moderate_coverage": 0.95,
+        "moderate_exclusive": 0.95
+      },
+      "csv_fps_matches_actual_fps": 0,
+      "csv_fps_matches_actual_frame_count": 4086,
+      "exclusive_actual_fps": 0,
+      "exclusive_actual_frame_count": 4086,
+      "matches_both": 0,
+      "matches_neither": 0,
+      "inconclusive": 0,
+      "invalid_declared_values": 0,
+      "evaluable_both_hypotheses": 4086,
+      "confidence_rule": "high requires 100% dual coverage and exclusive match; moderate requires >=95% dual coverage and exclusive match, strictly exclusive; otherwise low/undetermined"
+    },
+    "generation_id": "20261028T234556Z-12866758",
+    "source_hashes": {
+      "annotations.csv": "7bce21c874c12279c0c22c1a2318b5f1845dbe0714a30aad714382c246c3144e",
+      "error.csv": "87434173f604ed97f4ea56e3d9e148594cd055f209c3a0a1c03346c59da9d0d7"
+    }
+  },
+  "minds_preservation": {
+    "artifacts_checked": 10,
+    "artifacts_unchanged": true,
+    "registry_unchanged_semantically": true,
+    "registry_comparison_note": "PowerShell serialized the baseline datetime in the local offset; its instant and all other fields match.",
+    "artifacts": [
+      {
+        "path": "app/data/processed/metadata-validation/minds-libras-raw/fps_hypotheses_summary.csv",
+        "length": 35,
+        "sha256_before": "81801CE08715A21C4ECCB80BCE677297C5CCC6965A3FAA2A008E37A68B3B6C7B",
+        "sha256_after": "81801CE08715A21C4ECCB80BCE677297C5CCC6965A3FAA2A008E37A68B3B6C7B"
+      },
+      {
+        "path": "app/data/processed/metadata-validation/minds-libras-raw/metadata_comparison.csv",
+        "length": 76964,
+        "sha256_before": "1F3BC630257FC4DD49AC97C7C045F007A285223DC42565F46DBA402A1E47D9CE",
+        "sha256_after": "1F3BC630257FC4DD49AC97C7C045F007A285223DC42565F46DBA402A1E47D9CE"
+      },
+      {
+        "path": "app/data/processed/metadata-validation/minds-libras-raw/metadata_validation.json",
+        "length": 2042096,
+        "sha256_before": "B30259F7576B58EC7CDFB3E364C899FF50049661D219426FF57F58D8CFCDB7D8",
+        "sha256_after": "B30259F7576B58EC7CDFB3E364C899FF50049661D219426FF57F58D8CFCDB7D8"
+      },
+      {
+        "path": "app/data/processed/metadata-validation/minds-libras-raw/toolchain.json",
+        "length": 371,
+        "sha256_before": "CB506ECFEB60E68176D021EF01ED1047FD9ACDCE9594F43D691A45FACE671B5E",
+        "sha256_after": "CB506ECFEB60E68176D021EF01ED1047FD9ACDCE9594F43D691A45FACE671B5E"
+      },
+      {
+        "path": "app/data/processed/metadata-validation/minds-libras-raw/validation.log",
+        "length": 29720,
+        "sha256_before": "1F965045D02326D0B268D12C5E3B998CDC6B5F6A5038333759975710E7CF8156",
+        "sha256_after": "1F965045D02326D0B268D12C5E3B998CDC6B5F6A5038333759975710E7CF8156"
+      },
+      {
+        "path": "app/data/processed/metadata-validation/minds-libras-raw/video_metadata.csv",
+        "length": 175929,
+        "sha256_before": "F7EC6B488BDA946C36299E07E9EB321A6FD63329C3F44E9725E71546A504E029",
+        "sha256_after": "F7EC6B488BDA946C36299E07E9EB321A6FD63329C3F44E9725E71546A504E029"
+      },
+      {
+        "path": "app/data/processed/metadata-validation/minds-libras-raw/manifests/minds_libras_validated.parquet",
+        "length": 44397,
+        "sha256_before": "913C4C185EF4FAE21BFDED0A78C4C8360A31F2CBA51284DF45F97AEC13596E0A",
+        "sha256_after": "913C4C185EF4FAE21BFDED0A78C4C8360A31F2CBA51284DF45F97AEC13596E0A"
+      },
+      {
+        "path": "app/data/processed/metadata-validation/minds-libras-raw/reports/metadata_issues.csv",
+        "length": 188,
+        "sha256_before": "A818B0DEE1F1ED11E0E246B4E84C1DE36FD8D4CD9A3F77C32C60F113A31A4FDA",
+        "sha256_after": "A818B0DEE1F1ED11E0E246B4E84C1DE36FD8D4CD9A3F77C32C60F113A31A4FDA"
+      },
+      {
+        "path": "app/data/processed/metadata-validation/minds-libras-raw/reports/metadata_summary.json",
+        "length": 1658,
+        "sha256_before": "C719934143BC44E87AF77B84AB69CB59F8E48688AEB8530E53F354ED10C58548",
+        "sha256_after": "C719934143BC44E87AF77B84AB69CB59F8E48688AEB8530E53F354ED10C58548"
+      },
+      {
+        "path": "app/data/processed/metadata-validation/minds-libras-raw/reports/metadata_validation_report.md",
+        "length": 959,
+        "sha256_before": "7F505CEB877F2FFFBFAE0F50534CFEB196395CD9206341D09DAAF9989AC2F793",
+        "sha256_after": "7F505CEB877F2FFFBFAE0F50534CFEB196395CD9206341D09DAAF9989AC2F793"
+      }
+    ]
+  },
+  "checks": {
+    "application_tests": "40 passed",
+    "harness_tests": "12 passed",
+    "bun_check": "passed",
+    "artifact_hashes_verified": 19
+  }
+}

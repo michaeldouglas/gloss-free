@@ -83,7 +83,7 @@ class DatasetQualityValidationTests(unittest.TestCase):
 
             codes = {issue["code"] for issue in result["issues"]}
             self.assertIn("silent_missing_file", codes)
-            self.assertIn("known_missing_file", codes)
+            self.assertIn("exception_inconsistent", codes)
             self.assertIn("unregistered_physical_file", codes)
             self.assertEqual(result["summary"]["decision"], "NO-GO")
             self.assertTrue((output_root / "reports" / "metadata_validation_report.md").is_file())
@@ -93,7 +93,7 @@ class DatasetQualityValidationTests(unittest.TestCase):
             self.assertTrue(manifest.is_file())
             stored = json.loads((output_root / "reports" / "metadata_summary.json").read_text(encoding="utf-8"))
             self.assertEqual(stored["decision"], "NO-GO")
-            self.assertEqual(stored["counts"]["manifest_rows"], 5)
+            self.assertEqual(stored["counts"]["manifest_rows"], 2)
             self.assertEqual(before, (dataset_root / "videos" / "valid_Articulador1.mp4").read_bytes())
 
             import pandas as pd
@@ -193,7 +193,7 @@ class DatasetQualityValidationTests(unittest.TestCase):
                 output_root=root / "quality",
             )
 
-            self.assertTrue(any(issue["code"] == "exception_reason_inconsistent" for issue in result["issues"]))
+            self.assertTrue(any(issue["code"] == "exception_inconsistent" for issue in result["issues"]))
             self.assertTrue(any(issue["code"] == "error_csv_missing" for issue in result["issues"]) is False)
 
 
