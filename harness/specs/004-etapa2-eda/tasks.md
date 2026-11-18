@@ -5,12 +5,20 @@
 **Prerequisites**: `plan.md`, `spec.md` e `contracts/analysis-contract.md`.
 
 **Tests**: Incluídos porque a especificação exige resultados determinísticos,
-preservação dos inputs e cobertura automatizada dos contratos. Nenhuma tarefa
-abaixo autoriza executar EDA durante esta formalização.
+preservação dos inputs e cobertura automatizada dos contratos. Os resultados
+do run canônico são usados como evidência histórica; esta revisão documental
+não reexecuta testes nem EDA.
 
-**Organization**: As tarefas seguem a ordem das sete partes analíticas. As
-tarefas T001–T006 são preparação estrutural realmente revisada nesta sessão;
-elas não significam que a análise dos datasets esteja concluída.
+**Organization**: As tarefas seguem a ordem das sete partes analíticas.
+T001–T006 descrevem preparação estrutural. Os checkboxes foram reconciliados
+com os critérios e com os artefatos efetivamente publicados em
+`20261107T190651Z-bacdbe5`; não são, isoladamente, critério de fechamento
+humano da Etapa 2.
+
+**Documentation/provenance closeout (2026-11-17)**: os textos das tarefas e
+as evidências foram reconciliados sem nova execução. Todos os critérios de
+entrega estão cobertos por código, testes e/ou artefatos registrados no run;
+a revisão humana da síntese foi aprovada em 2026-11-17; Stage 2 está completed.
 
 ## Phase 1: Setup — preparação estrutural
 
@@ -18,11 +26,11 @@ elas não significam que a análise dos datasets esteja concluída.
 execução antes de qualquer análise.
 
 - [x] T001 Registrar o fechamento canônico da Etapa 1 em `docs/status/0001-status-harness-2026-11-05.md`, com `global_stage1_decision = GO`, `stage1_status = completed`, V-LIBRASIL = GO e MINDS-Libras = GO; resultado: status atual corrigido sem editar relatórios históricos; aceite: o snapshot não afirma mais que a Etapa 1 aguarda revisão.
-- [x] T002 Reconciliar `specs/004-etapa2-eda/contracts/analysis-contract.md` com `spec.md` e `plan.md`; resultado: um contrato normativo único para unidade, chaves, população, missingness e outputs; aceite: nenhuma regra duplicada ou conflitante e execução EDA continua explicitamente não autorizada.
+- [x] T002 Reconciliar `specs/004-etapa2-eda/contracts/analysis-contract.md` com `spec.md` e `plan.md`; resultado: um contrato normativo único para unidade, chaves, população, missingness e outputs; aceite: contrato normativo mantém regras alinhadas; execução autorizada registrada no run canônico, fora desta formalização.
 - [x] T003 Revisar `app/dataset/src/libras_translation/analysis/data_dictionary.py` e `app/dataset/src/libras_translation/analysis/dataset_profile.py`; resultado: mapeamento documentado dos campos e das chaves físicas por dataset; aceite: 4.086 e 800 são referências de contrato, não contagens calculadas nesta tarefa.
-- [x] T004 Revisar `app/dataset/src/libras_translation/analysis/output_contract.py` e `app/data/processed/eda/`; resultado: layout corrente, `archive/<run_id>` e `provenance/CURRENT.json` alinhados ao contrato; aceite: `figures/` permanece vazio até execução autorizada e nenhum output é produzido agora.
+- [x] T004 Revisar `app/dataset/src/libras_translation/analysis/output_contract.py` e `app/data/processed/eda/`; resultado: layout corrente, `archive/<run_id>` e `provenance/CURRENT.json` alinhados ao contrato; aceite: outputs só são publicados após autorização e cada run é preservado no archive. O run canônico autorizado publica figuras.
 - [x] T005 Revisar `app/dataset/tests/test_analysis_contracts.py` e `app/dataset/tests/test_characterization.py`; resultado: lacunas de contrato e de caracterização identificadas para tarefas futuras; aceite: nenhum teste de dataset é executado durante a formalização.
-- [x] T006 Revisar `app/notebooks/dataset/02_caracterizacao_estatistica_eda.ipynb`; resultado: notebook confirmado como camada futura de execução, inspeção, visualização e interpretação; aceite: o notebook permanece sem execução, estatísticas, gráficos, `ffprobe` ou leitura de `data/raw/`.
+- [x] T006 Revisar `app/notebooks/dataset/02_caracterizacao_estatistica_eda.ipynb`; resultado: notebook inspecionado como camada de execução, inspeção, visualização e interpretação; aceite: os outputs salvos correspondem ao run canônico e o notebook não substitui os artefatos de proveniência. Esta revisão não executou o notebook.
 
 **Checkpoint**: documentação e contrato alinhados; nenhuma EDA executada.
 
@@ -35,10 +43,10 @@ execução antes de qualquer análise.
 - [x] T009 [P] Completar a identidade de input e a proveniência em `app/dataset/src/libras_translation/analysis/dataset_profile.py` (depende de T003; resultado: SHA-256, schema, tamanho, linhas, colunas, commit, timestamp, versões e parâmetros são registráveis; aceite: a mesma entrada e configuração produzem identidade reprodutível).
 - [x] T010 Definir o gate de publicação atômica em `app/dataset/src/libras_translation/analysis/output_contract.py` e `app/dataset/tests/test_analysis_contracts.py` (depende de T004 e T009; resultado: execução privada, validação, archive e `CURRENT.json`; aceite: execução anterior nunca é sobrescrita e falha de validação não promove publicação).
 - [x] T011 [P] Definir o esquema de tabelas e figuras da etapa em `app/dataset/src/libras_translation/analysis/descriptive_statistics.py`, `app/dataset/src/libras_translation/analysis/distributions.py` e `app/dataset/src/libras_translation/analysis/comparison.py` (depende de T008; resultado: nomes, unidades, denominadores e metadados de saída; aceite: cada figura futura possui tabela correspondente e nenhum campo exige `ffprobe`).
-- [x] T012 Executar os gates automatizados da aplicação somente quando a implementação for iniciada, usando `uv run python -m unittest discover -s dataset/tests -v` a partir de `app/` (depende de T007–T011; resultado: baseline de testes registrado; aceite: esta tarefa fica pendente até a fase de implementação e não é executada agora).
+- [x] T012 Executar os gates automatizados da aplicação durante a implementação, usando o comando registrado em `archive/20261107T190651Z-bacdbe5/provenance/execution.json` (depende de T007–T011; resultado: status `passed` registrado na proveniência do run canônico). Nenhum teste foi executado no documentation closeout.
 
 **Checkpoint**: inputs, semântica, proveniência, publicação e contratos de
-saída prontos para uma execução posterior autorizada.
+saída fundamentaram a execução canônica; o gate final de revisão humana foi satisfeito.
 
 ## Phase 3: User Story 1 — Caracterização geral (Priority: P1) 🎯 MVP
 
@@ -53,7 +61,7 @@ entradas; não usar `data/raw/`.
 - [x] T014 [P] [US1] Implementar overview e estatísticas numéricas em `app/dataset/src/libras_translation/analysis/characterization.py` e `app/dataset/src/libras_translation/analysis/descriptive_statistics.py` (depende de T008 e T011; resultado: `n`, missingness, média, mediana, desvio-padrão, mínimo, Q1, Q3, máximo e IQR por variável aplicável; aceite: nenhum valor é imputado e o denominador é gravado).
 - [x] T015 [P] [US1] Implementar frequências categóricas e `class × user_id` em `app/dataset/src/libras_translation/analysis/characterization.py` (depende de T014; resultado: tabelas absolutas e relativas por dataset; aceite: somas, categorias ausentes e proporções são verificáveis).
 - [x] T016 [US1] Publicar tabelas, relatório e proveniência da Parte 1 em `app/dataset/src/libras_translation/analysis/characterization.py` e `app/data/processed/eda/` (depende de T010, T014 e T015; resultado: execução arquivada e publicação corrente; aceite: inputs permanecem com SHA-256 idêntico e `figures/` não é criado como resultado da Parte 1).
-- [x] T017 [US1] Integrar a execução autorizada da Parte 1 em `app/notebooks/dataset/02_caracterizacao_estatistica_eda.ipynb` (depende de T016; resultado: notebook apenas orquestra e exibe tabelas; aceite: nenhuma lógica científica extensa, `ffprobe` ou acesso a `data/raw/`).
+- [x] T017 [US1] Integrar a execução autorizada da Parte 1 em `app/notebooks/dataset/02_caracterizacao_estatistica_eda.ipynb` (depende de T016; resultado: notebook orquestra módulos e exibe tabelas; aceite: sem lógica científica extensa, `ffprobe` ou uso de `data/raw/` como fonte analítica).
 
 **Checkpoint**: Parte 1 reproduzível e auditável, sem interpretação inferencial.
 
@@ -70,7 +78,7 @@ alterar observações.
 - [x] T021 [US2] Integrar tabelas, figuras e interpretação da Parte 2 no notebook `app/notebooks/dataset/02_caracterizacao_estatistica_eda.ipynb` (depende de T020; resultado: notebook executa a Parte 2 do início ao fim e ordena passo a passo, tabela, figura, candidatos e interpretação; aceite: padrões são rotulados como exploratórios e não há erros de execução).
 
 **Checkpoint**: distribuições temporais executadas no notebook canônico e
-publicadas com validação; a revisão humana da Parte 2 ainda está pendente.
+publicadas com validação; a revisão humana final aprovou o fechamento em 2026-11-17.
 
 ## Phase 5: User Story 3 — Classes e sinalizadores (Priority: P1)
 
@@ -94,7 +102,7 @@ reexecutar `ffprobe`.
 
 - [x] T025 [P] [US4] Criar testes técnicos em `app/dataset/tests/test_technical_distributions.py` para dimensões, resolução, aspect ratio, FPS e codec (depende de T008 e T011; resultado: validação de tipos, unidades e missingness; aceite: o manifest não é modificado).
 - [x] T026 [US4] Implementar resumos técnicos em `app/dataset/src/libras_translation/analysis/distributions.py` e `app/dataset/src/libras_translation/analysis/data_dictionary.py` (depende de T025; resultado: tabelas de resolução, codec, aspecto e medidas técnicas; aceite: medição nula é `failure_of_measurement`, não zero).
-- [x] T027 [US4] Integrar propriedades técnicas no notebook `app/notebooks/dataset/02_caracterizacao_estatistica_eda.ipynb` (depende de T026; resultado: visualizações e tabelas futuras; aceite: nenhuma chamada a vídeo físico ou `ffprobe`).
+- [x] T027 [US4] Integrar propriedades técnicas no notebook `app/notebooks/dataset/02_caracterizacao_estatistica_eda.ipynb` (depende de T026; resultado: tabelas e figuras técnicas presentes na galeria salva; aceite: nenhuma chamada a vídeo físico ou `ffprobe`).
 
 **Checkpoint**: heterogeneidade técnica descrita sem julgamento de qualidade
 linguística ou prontidão para treinamento.
@@ -110,7 +118,7 @@ denominadores em uma tabela comparativa separada por dataset.
 - [x] T029 [US5] Implementar tabelas de comparação, classes compartilhadas e exclusivas em `app/dataset/src/libras_translation/analysis/comparison.py` (depende de T028; resultado: comparação descritiva auditável; aceite: cada linha mantém `dataset`, denominador e unidade).
 - [x] T030 [US5] Integrar comparação e limitações no notebook `app/notebooks/dataset/02_caracterizacao_estatistica_eda.ipynb` (depende de T029; resultado: seção comparativa; aceite: não há p-valores, efeitos inferenciais ou alegações causais).
 
-**Checkpoint**: comparação descritiva pronta para execução autorizada.
+**Checkpoint**: comparação descritiva publicada, mantendo as populações separadas.
 
 ## Phase 8: User Story 6 — Observações atípicas (Priority: P2)
 
@@ -132,53 +140,55 @@ denominadores em uma tabela comparativa separada por dataset.
 proveniência e manifest de execução.
 
 - [x] T034 [P] [US7] Criar testes de proveniência e rastreabilidade em `app/dataset/tests/test_eda_provenance.py` (depende de T009 e T010; resultado: validação de hashes, versões, parâmetros e outputs; aceite: uma execução repetida é identificável e publicação anterior é preservada).
-- [x] T035 [US7] Implementar relatório de síntese e mapa de evidências em `app/dataset/src/libras_translation/analysis/` (depende de T016, T021, T024, T027, T030 e T033; resultado: estrutura, heterogeneidade, cobertura, riscos, limitações e implicações futuras; aceite: padrões pós-hoc são rotulados como exploratórios).
-- [x] T036 [US7] Integrar síntese, limitações e escopo no notebook `app/notebooks/dataset/02_caracterizacao_estatistica_eda.ipynb` (depende de T035; resultado: camada de interpretação sem lógica científica duplicada; aceite: não há decisão implícita de modelagem).
-- [x] T037 [US7] Validar o pacote publicado em `app/data/processed/eda/` e documentar o quickstart da execução em `specs/004-etapa2-eda/` (depende de T034–T036; resultado: pacote corrente, archive, snapshots e relatório auditáveis; aceite: nenhum output foi produzido antes da autorização formal da EDA).
+- [x] T035 [US7] Consolidar relatório de síntese e mapa de evidências a partir dos artefatos publicados (depende de T016, T021, T024, T027, T030 e T033; resultado: achados e limites das Partes 1–6 apontam a artefatos; aceite: padrões pós-hoc são exploratórios). Fechamento documental sem novo cálculo.
+- [x] T036 [US7] Integrar síntese, limitações e escopo no notebook `app/notebooks/dataset/02_caracterizacao_estatistica_eda.ipynb` (depende de T035; resultado: Markdown mapeia as sete partes e o run canônico sem lógica científica duplicada; aceite: outputs numéricos preservados e sem decisão implícita de modelagem).
+- [x] T037 [US7] Validar documentalmente o pacote publicado e registrar quickstart/proveniência em `specs/004-etapa2-eda/` (depende de T034–T036; resultado: pacote corrente, archive, snapshots e relatório auditáveis; aceite: run autorizado continua canônico e correções posteriores são marcadas como documentação/proveniência).
 
 **Checkpoint**: Etapa 2 concluída somente após todas as partes, validações e
 síntese atenderem aos critérios de `spec.md`.
+
+## Final Human Review Gate
+
+**Status**: satisfied. Revisão humana do saneamento aprovada em 2026-11-17.
+**Stage 2**: `completed` — decisão `COMPLETE WITH NOTES`.
+**Run analítico canônico**: `20261107T190651Z-bacdbe5`.
+Este gate registra aprovação de fechamento; não adiciona tarefa analítica.
 
 ## Dependencies & Execution Order
 
 ### Phase Dependencies
 
-- **Phase 1**: concluída nesta formalização; apenas documentação e inspeção.
-- **Phase 2**: bloqueia todas as partes analíticas.
-- **Phases 3–6**: dependem da Phase 2; Partes 1–4 podem ser implementadas em
-  grupos separados após os gates, mas a execução de cada parte continua
-  autorizada somente pela governança do projeto.
-- **Phase 7**: depende dos contratos de entrada e das partes anteriores para
-  comparar variáveis compatíveis.
-- **Phase 8**: depende dos resumos temporais e técnicos das Phases 3 e 6.
-- **Phase 9**: depende de todas as partes e dos testes de proveniência.
+- **Phase 1**: preparação estrutural registrada.
+- **Phase 2**: gates e contratos implementados; resultado dos testes consta na
+  proveniência do run canônico.
+- **Phases 3–6**: Partes 1–4 executadas nos manifests validados.
+- **Phase 7**: comparação publicada, mantendo os datasets separados.
+- **Phase 8**: flags e candidatos publicados sem remoção de observações.
+- **Phase 9**: síntese e mapa reconciliados documentalmente; revisão humana
+  satisfeita em 2026-11-17.
 
 ### Parallel Opportunities
 
-- T007–T009 podem ser desenvolvidas em paralelo em arquivos distintos.
-- T013, T018, T022 e T025 podem ser preparadas em paralelo como testes
-  independentes após os gates comuns.
-- T019 e T023 podem avançar em paralelo após seus contratos específicos.
-- A integração do notebook deve ocorrer após cada módulo produzir tabelas
-  estáveis; não deve antecipar execução no notebook.
+T007–T009, T013/T018/T022/T025 e T019/T023 admitem implementação paralela
+conforme suas dependências. As integrações do notebook e da síntese foram
+concluídas após publicação das tabelas correspondentes.
 
-## Implementation Strategy
+## Implementation Strategy and Current State
 
-1. Manter a Phase 1 como evidência documental já revisada.
-2. Completar os gates da Phase 2 sem ler `data/raw/` e sem executar EDA.
-3. Entregar a Parte 1 como MVP e validar seus denominadores e hashes.
-4. Adicionar distribuições, fatores cruzados e propriedades técnicas.
-5. Adicionar comparação, flags de outliers e síntese rastreável.
-6. Somente após autorização explícita executar a análise no ambiente do
-   aplicativo e publicar artefatos derivados.
+A execução analítica foi encerrada no run canônico
+`20261107T190651Z-bacdbe5`, decisão `COMPLETE WITH NOTES`. Revisão humana
+aprovada em 2026-11-17; `stage2_status = completed`. Nenhum run novo foi
+criado neste fechamento documental.
 
 ## Notes
 
-- Todas as tarefas pendentes permanecem `[ ]`; os itens `[x]` representam
-  preparação/inspeção documental realizada nesta sessão, não execução da EDA.
+- As 37 tarefas permanecem `[x]` após reconciliação de evidências e critérios.
 - Nenhuma tarefa permite treinamento, inferência, split, balanceamento,
   imputação, remoção de outliers, reexecução de `ffprobe` ou escrita em
   `data/raw/`.
+- `human_review_status = approved` em 2026-11-17; Stage 2 está completed com
+  decisão `COMPLETE WITH NOTES`.
+- `Dataset Readiness Report = FUTURE WORK — NOT IMPLEMENTED`.
 - O contrato existente é a fonte única para unidade, chaves, população,
   missingness e publicação; `spec.md` e `plan.md` definem objetivos e execução
   sem criar um contrato paralelo.

@@ -4,14 +4,13 @@
 
 **Input**: Feature specification from `/specs/004-etapa2-eda/spec.md`
 
+## Estado atual e closeout
+
+A execução analítica foi encerrada no run canônico `20261107T190651Z-bacdbe5`, com decisão `COMPLETE WITH NOTES`. Revisão humana aprovada em 2026-11-17; `stage2_status = completed`. O closeout de documentação/proveniência não recalculou nem republicou a análise.
+
 ## Summary
 
-Executar, somente após autorização posterior, uma caracterização descritiva e
-uma análise exploratória reprodutível de V-LIBRASIL e MINDS-Libras. A execução
-consumirá exclusivamente os manifests Parquet validados da Etapa 1, manterá os
-datasets separados, preservará a unidade vídeo e publicará tabelas, figuras,
-relatórios e proveniência em uma execução versionada. Esta formalização não
-executa EDA, não calcula estatísticas, não gera gráficos e não altera dados.
+A execução canônica autorizada caracterizou V-LIBRASIL e MINDS-Libras com os manifests Parquet validados da Etapa 1, mantendo os datasets separados e o vídeo como unidade. Tabelas, figuras, relatórios e proveniência estão publicados em `20261107T190651Z-bacdbe5`. O plano abaixo registra o desenho pretendido; o closeout atual não reexecuta EDA nem altera dados.
 
 ## Technical Context
 
@@ -338,7 +337,7 @@ deve reexecutar `ffprobe`.
 app/data/processed/eda/
 ├── reports/       # publicação corrente
 ├── tables/        # publicação corrente
-├── figures/       # publicação corrente; vazio até a execução autorizada
+├── figures/       # figuras da publicação analítica corrente após autorização
 ├── snapshots/     # snapshots públicos/reprodutíveis
 ├── provenance/    # CURRENT.json e execução corrente
 └── archive/       # execuções anteriores por run_id
