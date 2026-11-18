@@ -4,9 +4,22 @@
 
 **Created**: 2026-11-05
 
-**Status**: Draft
+**Status**: Complete
+
+**Execution state**: Stage 2 completed with decision `COMPLETE WITH NOTES`; human review approved on 2026-11-17. Canonical run: `20261107T190651Z-bacdbe5`.
 
 **Input**: Formalização da Etapa 2 a partir dos manifests validados da Etapa 1.
+
+## Documentation/provenance closeout
+
+O relatório rastreado `artifacts/reports/executions/stage2-eda-documentation-closeout-2026-11-17.md` consolida evidências publicadas para as sete partes. Esse saneamento não cria run analítico nem altera resultados. `Dataset Readiness Report = FUTURE WORK — NOT IMPLEMENTED`.
+
+## Quickstart de revisão
+
+1. Confira `app/data/processed/eda/provenance/CURRENT.json`; o run analítico canônico permanece `20261107T190651Z-bacdbe5`.
+2. Consulte o closeout versionado em `artifacts/reports/executions/stage2-eda-documentation-closeout-2026-11-17.md` e a síntese/mapa locais referenciados por `CURRENT.json`.
+3. Para valores analíticos, use somente tabelas/figuras do run atual e o histórico explicitamente citado; não execute o notebook para esta revisão.
+4. A revisão humana foi aprovada em 2026-11-17; o estado `Complete` e a conclusão da Etapa 2 estão registrados.
 
 ## Objetivo e escopo científico
 
